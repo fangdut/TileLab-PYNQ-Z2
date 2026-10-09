@@ -1,12 +1,12 @@
 {
   "version": "V1.53.1",
   "files": 6477,
-  "github_uploaded": false,
-  "uncompressed_bytes": 429909485,
+  "github_uploaded": true,
+  "uncompressed_bytes": 429910295,
   "sha256": {
     ".gitattributes": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
     ".gitignore": "ac5fb5cf65c9c763333471fb2af650dfd470df1fa5d4b70d26a66ad98ea8bf8f",
-    "GITHUB_PUBLICATION.md": "d8e200f94db2383f00d139cec3ecc1eacc5a5be91b8c36b5730de4a52ac41887",
+    "GITHUB_PUBLICATION.md": "35e1dbc0a274b6c8ac60f696c78fd8b923c429593718ba4598cd038fdd06db2d",
     "project/pynq_z2_tile_v1_53/constraints/pynq_z2.xdc": "9d519916c2dfaee5d090686352eb6988b712588af8bdd47f72060eb075f53bbc",
     "project/pynq_z2_tile_v1_53/data/calibration_hdmi/calib_000.png": "d6df160730796b7dbe02448e9c9505de2147da14e7d657e92f221e7400e2db63",
     "project/pynq_z2_tile_v1_53/data/calibration_hdmi/calib_001.png": "fac4d59c78c88057d5195bbb2c2afcc8238b8f23a816158c5ced9f210bb43931",
@@ -6469,7 +6469,7 @@
     "project/pynq_z2_tile_v1_53/validation/reference_rgb/real_067_original.png": "3ea8ac5041a6d20f58f0065e9416c94e12edc88d9383c8b74cbd931d5fd71658",
     "project/pynq_z2_tile_v1_53/启动以太网工作站.bat": "f3055f332d1d2ea9b0fd2d3c6e7d1cd9a05ef4f186519f310b2fba9e21f73df5",
     "project/pynq_z2_tile_v1_53/启动检测工作站.bat": "4cad31f4e14de534b19ad9e4792b3098ff29ea0fe97b98df9f012745faaac021",
-    "README.md": "c8c2011e41a3367a5e50c94229b504e89b4d837077a679f007cc12832d048d5e",
+    "README.md": "992460ca815a1f0abbae310a8e6197a27aa3640f6f392980698e83c9c6a238f7",
     "submission_documents/assets/board_capture.png": "80d96284c49052c1b465472f84f6e63645b2735d01cf6b050ae0062a958fc7f4",
     "submission_documents/assets/board_mask.png": "f294d62ee0686dd756b3f5afe9a971501c7d5aecb66db45ffd6bdb1b494aeeb3",
     "submission_documents/assets/evidence_flow.png": "fc43e544dfea5514161c03560dc449d4ac503cade487b02e5d2c62ae81eb8cb0",
@@ -6481,5 +6481,7 @@
     "submission_documents/README.md": "6f884ff87d97a838bb5e2ab61138f8843e313684f09f68fdefaf355ed25009f4",
     "submission_documents/TileLab_比赛技术报告_模板版.docx": "852b225a526d41558981f5df0c89e549cdfb0b564ad1de09d685d73a2442c66d",
     "submission_documents/tools/build_report.py": "114e9bec6320df1f673b27e8b99131728b18cc557efafb89f18aff0709065b55"
-  }
+  },
+  "github_repository": "https://github.com/fangdut/TileLab-PYNQ-Z2",
+  "github_verified_base_commit": "ec120a3eccc7ea5bf8fb605d8a5c45bfb486cc3e"
 }

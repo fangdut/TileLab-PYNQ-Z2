@@ -1,5 +1,7 @@
 # TileLab 最终提交修订 V1.53.1
 
+公开仓库：[TileLab-PYNQ-Z2](https://github.com/fangdut/TileLab-PYNQ-Z2)。
+
 [完整工程与使用说明](project/pynq_z2_tile_v1_53/README.md)
 
 - [比赛模板技术报告](submission_documents/TileLab_比赛技术报告_模板版.docx)
