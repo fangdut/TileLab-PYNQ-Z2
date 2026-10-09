@@ -1,6 +1,9 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>V1.53 验证记录</title>
-<style>body{font:16px/1.8 system-ui;max-width:1050px;margin:40px auto;background:#eef5f5;color:#183749}main{background:white;padding:32px;border-radius:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}</style>
-<main><a href="/">返回工作站</a><h1>V1.53 · 播放器状态读取与采集控制分离</h1>
-<p>播放器状态使用独立的串行访问锁，文件读取等待不再占住采集控制。暂停、开始、取图、保存和板端确认可以继续；并发状态查询不会同时修改播放器进度判断。输入命令更新元数据时也遵循同一顺序，避免交叉写坏请求身份。</p>
-<p>慢读取通过隔离环境注入等待进行验证。实际工作站验证的是 Windows 文件读取被拒绝时采集仍继续、解除后恢复确认。状态 HTTP 请求本身仍可能等待文件，当前不是完全异步的遥测缓存。FPGA 和 Vitis 沿用 V1.42。</p><pre id="r">读取中</pre></main>
-<script>fetch('/api/benchmark').then(r=>{if(!r.ok)throw Error('本版验收尚未完成');return r.json()}).then(s=>document.querySelector('#r').textContent=JSON.stringify(s,null,2)).catch(e=>document.querySelector('#r').textContent=e.message)</script></html>
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>TileLab 当前实板验证</title>
+<style>body{font:16px/1.8 system-ui;max-width:1050px;margin:40px auto;background:#eef5f5;color:#183749}main{background:white;padding:32px;border-radius:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}.note{padding:18px;background:#fff2dc;border-radius:12px}a{color:#00796b}</style>
+<main><a href="/">返回工作站</a><h1>TileLab · V1.53.1 提交验证记录</h1>
+<p>本页读取本次 V1.53 实板验收记录。V1.53.1 仅修正验证入口与说明；PL 和 ARM 二进制沿用已验证的 V1.52，检测计算在 FPGA，Vitis 程序负责传输与控制。</p>
+<p>播放器状态通过后台线程读取并缓存，采集控制读取快照；过期或读取失败会撤销“已就绪”的声明。该机制避免状态文件读取占住采集控制。</p>
+<p>已验证 720p60 HDMI、连续运动、按产品保存最佳帧、原图/掩码校验和断线重传。50 张已校准纹理瓷砖中，17 张裂纹图均触发候选，33 张正常图均未触发；这是指定样本结果。</p>
+<p class="note">适用范围：已校准材质的比赛原型。独立大理石 24 张仅 1 张触发，像素召回约 1.92%；尚不能宣称通用瓷砖检测或工厂准确率。输入是真实照片的连续运动回放，未验证真实相机和现场流水线。</p>
+<details><summary>完整原始验收摘要与证据哈希</summary><pre id="r">读取中</pre></details></main>
+<script>fetch('/api/benchmark').then(r=>{if(!r.ok)throw Error('当前验证记录不可用，请检查交付文件；不会替换为历史结果');return r.json()}).then(s=>document.querySelector('#r').textContent=JSON.stringify(s,null,2)).catch(e=>document.querySelector('#r').textContent=e.message)</script></html>

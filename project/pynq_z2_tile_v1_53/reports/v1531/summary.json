@@ -1,0 +1,60 @@
+{
+  "release": "1.53.1",
+  "passed": true,
+  "scope": "Validation page repair; unchanged detector and firmware",
+  "inherited_core_summary": "reports/v153/final_validation_summary.json",
+  "parent_manifest_sha256": "c93ef5efe0a484fc67f8adf49a62110d7eb5d3e41b14aba82aa883be7e47c66a",
+  "changed_parent_files": [
+    "README.md",
+    "docs/TileLab_最终提交版_技术与教学手册.pdf",
+    "docs/TileLab_演示视频详细拍摄方案.pdf",
+    "host/benchmark.html",
+    "host/workstation.py"
+  ],
+  "host_tests": {
+    "total": 438,
+    "passed": 437,
+    "skipped": 1,
+    "skip_reason": "Optional native word-RLE decoder unavailable"
+  },
+  "board_motion": {
+    "passed": true,
+    "automatic_archives": 20,
+    "unique_product_ids": 20,
+    "measured_input_fps": 60.085154792665385,
+    "source_center_error_max_px": 10,
+    "error_deltas": {
+      "gaps": 0,
+      "invalid": 0,
+      "dropped": 0,
+      "ack_errors": 0,
+      "descriptor_crc_errors": 0
+    }
+  },
+  "browser_current_report_loaded": true,
+  "pdf_addendum_rendered_and_visually_reviewed": true,
+  "inherited_pdf_page_content_streams_unchanged": true,
+  "inherited_pdf_annotations_preserved": true,
+  "github_uploaded": false,
+  "recognition_scope": "Calibrated selected texture; NOT universal or factory accepted",
+  "source_sha256": {
+    "README.md": "e88e1a836e96bacf21f6fce25f924e6cab2f790679cabaf3e0fc51c8ee9d800d",
+    "docs/TileLab_最终提交版_技术与教学手册.pdf": "fe02a1e21c75ec9fcb995ef181d516f3dde98c0eaceed45dc0754838a6f4e86d",
+    "docs/TileLab_演示视频详细拍摄方案.pdf": "8b42e30940dcf5bf6e36f898125d9508be37a5696f34a232f158a35d9d4f2a6c",
+    "docs/accepted_v153/TileLab_最终提交版_技术与教学手册.pdf": "34de6e64f8b17c05239d674602fbb9043b2e0e863c3a1cb79928b07c60a029b9",
+    "docs/accepted_v153/TileLab_演示视频详细拍摄方案.pdf": "db90fa2f228a3a791582e4135633c7fe5bbfff93215b139226ad14198b41ec96",
+    "docs/tools/apply_submission_addendum.py": "842b350d27bfe52c63a495911e05f9a79665e9d84dd28fd381ad4d73f4d89bb7",
+    "host/benchmark.html": "78050974c40483481c7d819338a9449ab1f81df664f03cf0bbfa856e1134ef7e",
+    "host/test_submission_validation.py": "bbc3fbe11b5d772e4be3dfb61babf374238f37c9eb1df41d88706a46a68e1a11",
+    "host/workstation.py": "2a7daeb64c1bab7a92d837325035c7ed6a86362c65a46edd75512b5c2f5e23f9",
+    "reports/accepted_baseline/V1_53_DELIVERY_MANIFEST.json": "c93ef5efe0a484fc67f8adf49a62110d7eb5d3e41b14aba82aa883be7e47c66a",
+    "reports/v1531/film_addendum.png": "2ecb3a8c1d3b18daf8125ec285eada3bd864f10331ef43b83e2b0621acfc106e",
+    "reports/v1531/host_tests.log": "01b079288c9fb3c99bcd2ab3c4041a5cc4a8cb49c82deba9f0cfdf4457bfc3be",
+    "reports/v1531/manual_addendum.png": "ae100392d48fa4e182a3af3326cf5f54f683282703d57ea4ef5227069baf29fc",
+    "reports/v1531/motion_console.log": "2ecfe8bca2a2381e1a5cafda74ee83334da2ce84b0f48010a2aaa3d59e0b1222",
+    "reports/v1531/pdf_addendum.json": "806919fe17ed5fe70adbc51e90db6cfc2686ba3d86ec612f276242da91d38186",
+    "reports/v1531/submission_motion/summary.json": "78f5fc3e026009acc334690468b4d3a75f2674c741a2f33d1041e90ea884e465",
+    "scripts/board_submission_patch_acceptance.py": "d3d01bb80f02bb678a39dfe0da3787773af479a56b4783c9538851ff60d0ed55",
+    "scripts/seal_submission_patch.py": "1d0d918c8881a74e36dad1ae9a77cdbf9284c054c15b15068588b2dda3dc417a"
+  }
+}

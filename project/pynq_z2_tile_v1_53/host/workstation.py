@@ -675,7 +675,7 @@ class Station:
             age=time.time()-self.last_update if self.last_update else None
             return copy.deepcopy(dict(mode='LIVE_HARDWARE',enabled=self.enabled,busy=self.busy,error=self.error,threshold=self.threshold,
                 stimulus=stimulus,stimulus_status=input_status,display_pending=self.display_pending,recipes=self.recipe_catalog,requested_recipe=self.recipe_id,applied_threshold=((self.frame['config_word']>>8)&255 if self.frame else None),
-                workstation_release='1.53.0-submission-candidate',requested_low_gate=(self.bridge.low_gate if isinstance(self.bridge,EthernetBridge) else False),requested_wide_weak=(self.bridge.wide_weak if isinstance(self.bridge,EthernetBridge) else False),capture_recovery=(self.board_stats or {}).get('capture_recovery'),capture_health=self.capture_health_state(),manual_waiting=self.manual,recovery=self.recovery.snapshot(time.monotonic()),preview_frozen=self.preview_frozen,
+                workstation_release='1.53.1',requested_low_gate=(self.bridge.low_gate if isinstance(self.bridge,EthernetBridge) else False),requested_wide_weak=(self.bridge.wide_weak if isinstance(self.bridge,EthernetBridge) else False),capture_recovery=(self.board_stats or {}).get('capture_recovery'),capture_health=self.capture_health_state(),manual_waiting=self.manual,recovery=self.recovery.snapshot(time.monotonic()),preview_frozen=self.preview_frozen,
                 preview_rate_fps=self.preview_policy.fps,preview_rate_supported=self.preview_rate_supported,preview_policy=self.preview_policy.snapshot(),
                 confirmation_journal=dict(error=self.journal_error),synchronization_warning=self.synchronization_warning,
                 transport_totals=(dict(received_bytes=self.bridge.transport.total_received_bytes,requests=self.bridge.transport.requests_sent) if isinstance(self.bridge,EthernetBridge) else None),
@@ -843,17 +843,19 @@ def handler(station):
             try:
                 if u.path=='/':return self.send((ROOT/'host/workstation.html').read_bytes(),'text/html; charset=utf-8')
                 if u.path=='/api/benchmark':
-                    p=station.root/'reports/v148/validation_summary.json'
+                    p=station.root/'reports/v153/final_validation_summary.json'
                     if not p.exists():return self.send({'error':'Benchmark is not ready'},code=503)
                     result=json.loads(p.read_text(encoding='utf-8'))
-                    return self.send(result)
+                    if not isinstance(result,dict) or result.get('version')!='V1.53':
+                        return self.send({'error':'Unexpected validation record; historical results are not substituted'},code=503)
+                    return self.send(dict(result,delivery_release='1.53.1',validation_origin='Board-tested V1.53 core; V1.53.1 validation-page correction only'))
                 if u.path=='/api/benchmark-image':
                     idx=int(q.get('id',['-1'])[0])
                     if not 0<=idx<10000:raise ValueError('Invalid benchmark image')
-                    p=station.root/'reports/v132/real_board'/f'real_{idx:03d}_original.png'
+                    p=station.root/'reports/v153/real_board'/f'real_{idx:03d}_original.png'
                     if not p.exists():raise ValueError('Benchmark image not found')
                     return self.send(p.read_bytes(),'image/png')
-                if u.path=='/weak-comparison.png':return self.send((station.root/'reports/weak_crack/comparison.png').read_bytes(),'image/png')
+                if u.path=='/weak-comparison.png':return self.send({'error':'Historical illustration is not part of current validation; use /benchmark'},code=410)
                 if u.path=='/review_session.js':return self.send((ROOT/'host/review_session.js').read_bytes(),'text/javascript; charset=utf-8')
                 if u.path=='/status_channel.js':return self.send((ROOT/'host/status_channel.js').read_bytes(),'text/javascript; charset=utf-8')
                 if u.path=='/benchmark':return self.send((station.root/'host/benchmark.html').read_bytes(),'text/html; charset=utf-8')
