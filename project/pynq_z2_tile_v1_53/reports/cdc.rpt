@@ -1,0 +1,25 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue Sep 29 20:21:22 2026
+| Host         : LAPTOP-UOC8IVHM running 64-bit major release  (build 9200)
+| Command      : report_cdc -file D:/Vivado/pynq_z2_tile_v1_52/reports/cdc.rpt
+| Design       : system_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+Severity  Source Clock                                                                                Destination Clock                                                                           CDC Type                 Exceptions               Endpoints  Safe  Unsafe  Unknown  No ASYNC_REG  
+--------  ------------------------------------------------------------------------------------------  ------------------------------------------------------------------------------------------  -----------------------  -----------------------  ---------  ----  ------  -------  ------------  
+Info      PixelClk_int                                                                                PixelClkIO                                                                                  Safely Timed             None                            38    38       0        0             0  
+Info      clk_fpga_0                                                                                  PixelClk_int                                                                                No Common Primary Clock  Max Delay Datapath Only          8     8       0        0             0  
+Info      clk_fpga_1                                                                                  PixelClk_int                                                                                No Common Primary Clock  False Path                       4     4       0        0             0  
+Info      dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK  PixelClk_int                                                                                No Common Primary Clock  Max Delay Datapath Only          9     9       0        0             0  
+Info      PixelClk_int                                                                                clk_fpga_0                                                                                  No Common Primary Clock  Max Delay Datapath Only          9     9       0        0             0  
+Info      input port clock                                                                            clk_fpga_0                                                                                  No Common Primary Clock  False Path                       1     1       0        0             0  
+Info      PixelClk_int                                                                                clk_fpga_1                                                                                  No Common Primary Clock  False Path                       4     4       0        0             0  
+Info      PixelClk_int                                                                                dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK  No Common Primary Clock  Max Delay Datapath Only          2     2       0        0             0  
+

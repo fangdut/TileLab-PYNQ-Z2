@@ -1,0 +1,47 @@
+{
+  "kind": "SYNTHETIC_CONTROLLED_FIXTURE_NOT_REAL_TILE",
+  "width": 1280,
+  "height": 720,
+  "tile_width": 500,
+  "tile_height": 500,
+  "background_rgb": [
+    8,
+    8,
+    8
+  ],
+  "speed_px_per_second": 480,
+  "source_fps": 60,
+  "source_period": 720,
+  "tiles": [
+    {
+      "index": 0,
+      "level": 70,
+      "crack_level": null,
+      "defect": false,
+      "sha256": "08c14bdc51c770de1fc149ce1e347a6fb739fa9d3e6b606cd912304f1a329ecf"
+    },
+    {
+      "index": 1,
+      "level": 70,
+      "crack_level": 15,
+      "defect": true,
+      "sha256": "a4f18a506103b0c138c4542e69c13435cde52eb8ca6eb60b71f5012648a97437"
+    },
+    {
+      "index": 2,
+      "level": 110,
+      "crack_level": null,
+      "defect": false,
+      "sha256": "bb3f2dbdba88bf8a6e399e22bf0149a5e14ea3a60d2d24ade13518879f3c72df"
+    },
+    {
+      "index": 3,
+      "level": 110,
+      "crack_level": 55,
+      "defect": true,
+      "sha256": "d1cf0295ce3d2f2f31bbb4fb57931a7d2407ae138792e17dc7a2fec252e7f288"
+    }
+  ],
+  "x_formula": "((source_frame*8-index*1440+500)%5760+5760)%5760-500",
+  "scope": "Engineering presence-gate regression only; no industrial accuracy claim"
+}

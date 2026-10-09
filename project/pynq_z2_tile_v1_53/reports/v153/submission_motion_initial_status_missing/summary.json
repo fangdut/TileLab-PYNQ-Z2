@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "scope": "120s real-photo synthetic conveyor; actual PL/TCP/PNG/archive; no physical camera or monitor human confirmation",
+  "observations": [],
+  "evidence": [],
+  "error": "Traceback (most recent call last):\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_submission_acceptance.py\", line 14, in main\n    c.ok('recipe',value='mvtec_hdmi_wide_weak_v152');c.ok('wire_mode',value='packed');c.ok('preview_rate',value=2)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_v153_helpers.py\", line 81, in ok\n    assert result['status'] == 200, result\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'op': 'recipe', 'status': 400, 'milliseconds': 15.999999945051968, 'response': {'error': '双尺度弱裂纹配方需要 V1.52 或更新固件；请先连接并读取板端状态'}}\n"
+}

@@ -1,0 +1,48 @@
+from pathlib import Path
+import hashlib,zipfile,json,re,shutil,datetime
+p=Path(__file__).resolve().parent.parent;ws=p/(p.name+'.sdk')
+sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest()
+required=[p/(p.name+'.xpr'),ws/'system.bit',ws/'system.xsa',ws/'system.ltx',ws/'hdmi_platform/export/hdmi_platform/hdmi_platform.xpfm',ws/'hdmi_platform/zynq_fsbl/build/fsbl.elf',ws/'hdmi_monitor/build/hdmi_monitor.elf',ws/'hdmi_monitor/_ide/psinit/ps7_init.tcl']
+for f in required:assert f.is_file() and f.stat().st_size>0,f
+required += [ws/'hdmi_benchmark/build/hdmi_benchmark.elf',ws/'benchmark_sources/main.c']
+for f in required:assert f.is_file() and f.stat().st_size>0,f
+assert sha(ws/'benchmark_sources/main.c')==sha(ws/'hdmi_benchmark/src/main.c')
+assert (ws/'hdmi_benchmark/build/hdmi_benchmark.elf').stat().st_mtime >= (ws/'benchmark_sources/main.c').stat().st_mtime
+assert 'set(USER_COMPILE_OPTIMIZATION_LEVEL -O2)' in (ws/'hdmi_benchmark/src/UserConfig.cmake').read_text()
+commands=json.loads((ws/'hdmi_benchmark/build/compile_commands.json').read_text())
+assert all('-O2' in c['command'] and '-O0' not in c['command'] for c in commands)
+assert 'PASS FRAME CRC: 22 complete frames' in (p/'reports/detection_full.log').read_text()
+assert sha(ws/'app_sources/main.c')==sha(ws/'hdmi_monitor/src/main.c'), 'Canonical and built application sources differ'
+assert (ws/'hdmi_monitor/build/hdmi_monitor.elf').stat().st_mtime>=max((ws/'app_sources/main.c').stat().st_mtime,(ws/'hdmi_monitor/src/main.c').stat().st_mtime), 'ELF older than software source'
+with zipfile.ZipFile(ws/'system.xsa') as z:
+ bits=[n for n in z.namelist() if n.endswith('.bit')];assert len(bits)==1
+ assert z.read(bits[0])==(ws/'system.bit').read_bytes()
+assert sha(ws/'system.xsa')==sha(ws/'hdmi_platform/hw/system.xsa')
+sources=list((p/'rtl').glob('*.v'))
+custom=p/(p.name+'.runs')/'system_bypass_0_synth_1/system_bypass_0.dcp'
+assert custom.stat().st_mtime>=max(f.stat().st_mtime for f in sources if f.name!='status_cdc.v')
+assert (ws/'system.bit').stat().st_mtime>=custom.stat().st_mtime
+t=(p/'reports/timing_summary.rpt').read_text();assert 'All user specified timing constraints are met.' in t
+m=re.search(r'WNS\(ns\).*?\n\s*-.*?\n\s*([\d.-]+)\s+([\d.-]+)\s+\d+\s+\d+\s+([\d.-]+)',t,re.S);assert m
+wns,tns,whs=map(float,m.groups());counts={};u=(p/'reports/utilization.rpt').read_text()
+for label in ['Slice LUTs','Slice Registers','Block RAM Tile','DSPs']:
+ m=re.search(r'\|\s*'+re.escape(label)+r'\s*\|\s*(\d+(?:\.\d+)?)',u);assert m;counts[label]=float(m[1])
+drc=(p/'reports/drc.rpt').read_text();assert 'REQP-1839' not in drc and 'REQP-1840' not in drc
+assert not re.search(r'\|\s*\S+\s*\|\s*(?:Error|Critical Warning)',drc)
+for name,marker in [('detection_full.log','PASS DETECTION: 20275200'),('detection_small.log','PASS RESET:'),('config_test.log','PASS CONFIG:'),('candidate_test.log','PASS CANDIDATE:'),('brightness_test.log','PASS BRIGHTNESS UNIT:')]:
+ s=(p/'reports'/name).read_text(encoding='utf8');assert marker in s;assert not re.search(r'(?m)^(Fatal:|ERROR:)',s)
+assert 'PASS INTEGRATED STATS: 22 complete frames' in (p/'reports/detection_full.log').read_text(encoding='utf8')
+assert 'PASS BRIGHTNESS INTEGRATED: 22 complete frames' in (p/'reports/detection_full.log').read_text(encoding='utf8')
+assert 'PASS BBOX:' in (p/'reports/bbox_test.log').read_text()
+assert json.loads((p/'reports/native_monitor.json').read_text())['result']=='PASS'
+assert json.loads((p/'reports/native_monitor.json').read_text())['source_sha256']==sha(ws/'app_sources/main.c')
+ltx=json.loads((ws/'system.ltx').read_text());cores=[c for d in ltx['ltx_root']['ltx_data'] for c in d.get('debug_cores',[]) if c.get('type')=='ILA_V3'];assert len(cores)==1
+widths={}
+for pin in cores[0]['pins']:i=pin['portIndex'];widths[i]=widths.get(i,0)+abs(pin['leftIndex']-pin['rightIndex'])+1
+assert widths=={0:32,1:32,2:16,3:16,4:1,5:1,6:1,7:24,8:3,9:1,10:16,11:16,12:32},widths
+hwh=list((p/(p.name+'.gen')).rglob('system.hwh'));assert hwh;shutil.copy2(hwh[0],ws/'system.hwh')
+boardfile=p/'reports/NEW_VERSION_BOARD_ACCEPTANCE_NOT_RUN.json';board=json.loads(boardfile.read_text(encoding='utf8')) if boardfile.exists() else {}
+if board:assert board['bit_sha256']==sha(ws/'system.bit') and board['elf_sha256']==sha(ws/'hdmi_monitor/build/hdmi_monitor.elf')
+assert not board, 'Offline release must not inherit old board acceptance'
+manifest={'verification_status':'OFFLINE_VERIFIED_BOARD_PENDING','hardware_family':'V0.9 bright-dark bbox RTL; Tile V1.1 shares this hardware', 'project':p.name,'date':datetime.date.today().isoformat(),'board_tested':bool(board),'board_acceptance_passed':board.get('result')=='PASS','wns_ns':wns,'whs_ns':whs,'tns_ns':tns,'resources':counts,'full_frame_verified_pixels':20275200,'ila_widths':widths,'artifacts':[{'path':f.relative_to(p).as_posix(),'sha256':sha(f),'bytes':f.stat().st_size} for f in required+sources+[ws/'app_sources/main.c',ws/'system.hwh',p/'constraints/pynq_z2.xdc']]}
+(p/'DELIVERY_MANIFEST.json').write_text(json.dumps(manifest,indent=2),encoding='utf8');print(json.dumps({k:v for k,v in manifest.items() if k!='artifacts'},indent=2));print('PASS DELIVERY')

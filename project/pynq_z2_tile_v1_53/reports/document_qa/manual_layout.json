@@ -1,0 +1,374 @@
+[
+  {
+    "page": 5,
+    "title": "这本手册如何使用",
+    "content_height": 306.4,
+    "bottom": 411.49
+  },
+  {
+    "page": 6,
+    "title": "A1  最终交付范围",
+    "content_height": 492.0,
+    "bottom": 225.88999999999996
+  },
+  {
+    "page": 7,
+    "title": "A2  当前结果与适用边界",
+    "content_height": 399.1,
+    "bottom": 318.78999999999996
+  },
+  {
+    "page": 8,
+    "title": "A3  双尺度弱裂纹如何计算",
+    "content_height": 403.1,
+    "bottom": 314.78999999999996
+  },
+  {
+    "page": 9,
+    "title": "A4  为什么拒绝盲目降阈值",
+    "content_height": 371.5,
+    "bottom": 346.39
+  },
+  {
+    "page": 10,
+    "title": "A5  输入状态不会拖住采集",
+    "content_height": 389.09999999999997,
+    "bottom": 328.78999999999985
+  },
+  {
+    "page": 11,
+    "title": "A6  从交付包开始操作",
+    "content_height": 512.1,
+    "bottom": 205.79
+  },
+  {
+    "page": 12,
+    "title": "01  项目要交付什么",
+    "content_height": 353.9,
+    "bottom": 363.99
+  },
+  {
+    "page": 13,
+    "title": "02  需求如何分层",
+    "content_height": 451.3,
+    "bottom": 266.59000000000003
+  },
+  {
+    "page": 14,
+    "title": "03  三层架构与职责边界",
+    "content_height": 483.0,
+    "bottom": 234.89000000000001
+  },
+  {
+    "page": 15,
+    "title": "04  当前输入与未来摄像机",
+    "content_height": 421.9,
+    "bottom": 295.99
+  },
+  {
+    "page": 16,
+    "title": "05  一帧图像怎样变成红框",
+    "content_height": 336.7,
+    "bottom": 381.19000000000005
+  },
+  {
+    "page": 17,
+    "title": "06  灰度：用整数保留亮度",
+    "content_height": 408.0,
+    "bottom": 309.89
+  },
+  {
+    "page": 18,
+    "title": "07  滑动窗口与行缓存",
+    "content_height": 393.1,
+    "bottom": 324.7900000000001
+  },
+  {
+    "page": 19,
+    "title": "08  高斯与 Sobel：保留的基础算子",
+    "content_height": 400.8,
+    "bottom": 317.09000000000003
+  },
+  {
+    "page": 20,
+    "title": "09  四方向对向暗谷",
+    "content_height": 419.4,
+    "bottom": 298.49
+  },
+  {
+    "page": 21,
+    "title": "10  双阈值与四级弱裂纹支持",
+    "content_height": 335.1,
+    "bottom": 382.7900000000001
+  },
+  {
+    "page": 22,
+    "title": "11  ROI、形态学与配置生效",
+    "content_height": 373.3,
+    "bottom": 344.59000000000003
+  },
+  {
+    "page": 23,
+    "title": "12  从掩码生成最多八个局部框",
+    "content_height": 535.5,
+    "bottom": 182.38999999999996
+  },
+  {
+    "page": 24,
+    "title": "13  不停带取图与最佳证据",
+    "content_height": 416.5,
+    "bottom": 301.39
+  },
+  {
+    "page": 25,
+    "title": "14  检测结果应该怎样解读",
+    "content_height": 429.0,
+    "bottom": 288.8900000000001
+  },
+  {
+    "page": 26,
+    "title": "15  硬件在每个时钟做什么",
+    "content_height": 424.4,
+    "bottom": 293.49
+  },
+  {
+    "page": 27,
+    "title": "16  HDMI 时序与像素对齐",
+    "content_height": 392.5,
+    "bottom": 325.39
+  },
+  {
+    "page": 28,
+    "title": "17  本工程的时钟树",
+    "content_height": 534.7,
+    "bottom": 183.19000000000003
+  },
+  {
+    "page": 29,
+    "title": "18  CDC：异步数据为什么不能直接接",
+    "content_height": 446.9,
+    "bottom": 270.99
+  },
+  {
+    "page": 30,
+    "title": "19  复位：共享入口与同步释放",
+    "content_height": 369.59999999999997,
+    "bottom": 348.28999999999996
+  },
+  {
+    "page": 31,
+    "title": "20  时序约束与 V1.32 的修正",
+    "content_height": 487.6,
+    "bottom": 230.28999999999994
+  },
+  {
+    "page": 32,
+    "title": "21  DMA 与帧尾：把连续数据写入 DDR",
+    "content_height": 426.9,
+    "bottom": 290.99
+  },
+  {
+    "page": 33,
+    "title": "22  板端软件到底是什么产品",
+    "content_height": 445.09999999999997,
+    "bottom": 272.7900000000001
+  },
+  {
+    "page": 34,
+    "title": "23  DDR、队列与事件生命周期",
+    "content_height": 535.4,
+    "bottom": 182.48999999999998
+  },
+  {
+    "page": 35,
+    "title": "24  为什么需要以太网",
+    "content_height": 332.8,
+    "bottom": 385.09000000000003
+  },
+  {
+    "page": 36,
+    "title": "25  无损编码：省字节不等于省时间",
+    "content_height": 460.7,
+    "bottom": 257.19000000000005
+  },
+  {
+    "page": 37,
+    "title": "26  CRC、帧身份和证据一致性",
+    "content_height": 520.3,
+    "bottom": 197.59
+  },
+  {
+    "page": 38,
+    "title": "27  故障检测、恢复与中断安全",
+    "content_height": 418.4,
+    "bottom": 299.49
+  },
+  {
+    "page": 39,
+    "title": "28  从预览到人工复核",
+    "content_height": 389.6,
+    "bottom": 328.2900000000001
+  },
+  {
+    "page": 40,
+    "title": "29  为什么打开记录时重新校验",
+    "content_height": 407.3,
+    "bottom": 310.59000000000003
+  },
+  {
+    "page": 41,
+    "title": "30  两个人同时复核会怎样",
+    "content_height": 460.7,
+    "bottom": 257.18999999999994
+  },
+  {
+    "page": 42,
+    "title": "31  播放器同步与“假正常”",
+    "content_height": 452.29999999999995,
+    "bottom": 265.59000000000003
+  },
+  {
+    "page": 43,
+    "title": "32  存储空间如何受控",
+    "content_height": 494.2,
+    "bottom": 223.69000000000003
+  },
+  {
+    "page": 44,
+    "title": "33  什么才算通过测试",
+    "content_height": 437.3,
+    "bottom": 280.59000000000003
+  },
+  {
+    "page": 45,
+    "title": "34  本版实现与验收入口",
+    "content_height": 452.5,
+    "bottom": 265.39
+  },
+  {
+    "page": 46,
+    "title": "35  实际证据与截图质量",
+    "content_height": 347.3,
+    "bottom": 370.59000000000003
+  },
+  {
+    "page": 47,
+    "title": "36  产品优势、缺点与改进优先级",
+    "content_height": 485.2,
+    "bottom": 232.69000000000003
+  },
+  {
+    "page": 48,
+    "title": "37  接线、上电与显示设置",
+    "content_height": 616.1999999999999,
+    "bottom": 101.69000000000003
+  },
+  {
+    "page": 49,
+    "title": "38  打开、构建与下载",
+    "content_height": 533.4,
+    "bottom": 184.49000000000004
+  },
+  {
+    "page": 50,
+    "title": "39  从一个像素追到源码",
+    "content_height": 455.1,
+    "bottom": 262.78999999999996
+  },
+  {
+    "page": 51,
+    "title": "40  从事件追到软件与测试",
+    "content_height": 507.09999999999997,
+    "bottom": 210.79
+  },
+  {
+    "page": 52,
+    "title": "41  日常测试与故障定位",
+    "content_height": 436.1,
+    "bottom": 281.78999999999996
+  },
+  {
+    "page": 53,
+    "title": "42  学习模板：每项技术都问六件事",
+    "content_height": 394.0,
+    "bottom": 323.89
+  },
+  {
+    "page": 54,
+    "title": "43  教学一：位宽、移位与定点数",
+    "content_height": 425.4,
+    "bottom": 292.48999999999995
+  },
+  {
+    "page": 55,
+    "title": "44  教学二：暗谷与生长手算",
+    "content_height": 489.7,
+    "bottom": 228.18999999999997
+  },
+  {
+    "page": 56,
+    "title": "45  教学三：吞吐、延迟与运动模糊",
+    "content_height": 400.8,
+    "bottom": 317.09000000000003
+  },
+  {
+    "page": 57,
+    "title": "46  教学四：握手、所有权与事务",
+    "content_height": 408.09999999999997,
+    "bottom": 309.78999999999985
+  },
+  {
+    "page": 58,
+    "title": "47  术语课堂：数字与图像",
+    "content_height": 556.7,
+    "bottom": 161.18999999999997
+  },
+  {
+    "page": 59,
+    "title": "48  术语课堂：硬件与时序",
+    "content_height": 556.7,
+    "bottom": 161.18999999999997
+  },
+  {
+    "page": 60,
+    "title": "49  术语课堂：接口与实现工具",
+    "content_height": 556.7,
+    "bottom": 161.18999999999997
+  },
+  {
+    "page": 61,
+    "title": "50  术语课堂：软件、证据与测量",
+    "content_height": 556.7,
+    "bottom": 161.18999999999997
+  },
+  {
+    "page": 62,
+    "title": "51  四周学习与实验路线",
+    "content_height": 477.9,
+    "bottom": 239.99000000000004
+  },
+  {
+    "page": 63,
+    "title": "52  答辩问题与合格回答",
+    "content_height": 503.1,
+    "bottom": 214.79
+  },
+  {
+    "page": 64,
+    "title": "53  数据来源与可复现边界",
+    "content_height": 523.6,
+    "bottom": 194.29000000000002
+  },
+  {
+    "page": 65,
+    "title": "54  参考资料与依据",
+    "content_height": 284.0,
+    "bottom": 433.89
+  },
+  {
+    "page": 66,
+    "title": "55  参考资料与依据（续）",
+    "content_height": 272.6,
+    "bottom": 445.2900000000001
+  }
+]

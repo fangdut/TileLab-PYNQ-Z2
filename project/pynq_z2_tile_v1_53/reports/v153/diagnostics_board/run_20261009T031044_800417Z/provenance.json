@@ -1,0 +1,41 @@
+{
+  "source_sha256": {
+    "scripts/board_v153_helpers.py": "673f8dae4fc041d2cdd49dbe7da82efea673eed946dadf5a99bc24d86eb7df52",
+    "host/workstation.py": "26edccdf6135974540f017ab1560b37b782f336b32fa83b39568ed32b7be90b8",
+    "host/tcp_transport.py": "1a54733ca2d1fde9bcde8e732dd82105e1afc021619bd6d1ccf0aad000e83b29",
+    "host/recipes.py": "b35150a9bc964fc50d2e4a7f26d236fe9b0a8dd1f89ed16e091eea8091464ba1",
+    "host/recipes.json": "82c285cb6edf59dd78b48a99ad25ea0b4ee2a6710c41e621d7be00588889fcaf",
+    "host/preview_policy.py": "a7ff484c4946391544f0cad6da33c7e29d3a61b1408150cdbdfd7f5c9ba9711b",
+    "host/event_identity.py": "933ae975ac5b2245bae869b334407be9c38df6c14a131769670c1c8779ae7cd7",
+    "host/capture_health.py": "95c4689354ca03cd1af4d44429154bc7334ad79dabd0162792d1cd140e3c0b29",
+    "host/dma_recovery.py": "83ec9a0d9dc2622e77f9ac9062d76a944ed58ac7aaf8b6b8a8ff103595c886da",
+    "host/word_rle.py": "16e87b1f526481e2275125169f355901c51148f9a0f164b721e7a180f4a23f90",
+    "host/packed_pixels.py": "f65ab62bae2c92c3827a5b59170ec82a452dd224447355f6b8fbe7a86f0ef927",
+    "host/ConveyorStimulus.cs": "022994cd097b030ad7b0c5c829bbfae54c7aa712252dc238de977c0584215f56",
+    "data/dark_gate/manifest.json": "900bd0f8550ad7368e3b8a1df773d33cd9170f14a57c343f99d48ad369360c6b",
+    "data/dark_gate/tile_0.png": "08c14bdc51c770de1fc149ce1e347a6fb739fa9d3e6b606cd912304f1a329ecf",
+    "data/dark_gate/tile_1.png": "a4f18a506103b0c138c4542e69c13435cde52eb8ca6eb60b71f5012648a97437",
+    "data/dark_gate/tile_2.png": "bb3f2dbdba88bf8a6e399e22bf0149a5e14ea3a60d2d24ade13518879f3c72df",
+    "data/dark_gate/tile_3.png": "d1cf0295ce3d2f2f31bbb4fb57931a7d2407ae138792e17dc7a2fec252e7f288"
+  },
+  "startup_programmed_proof": {
+    "path": "D:\\Vivado\\pynq_z2_tile_v1_53\\reports\\programmed_v153.json",
+    "marker_sha256": "d8f42d25ca6dcf41e05cf6886a6e3cf4b3dc518561b045dd5bf450f55389938a",
+    "record": {
+      "active_application": "hdmi_ethernet",
+      "configured_address": "192.168.33.10",
+      "boot_id": 2398464874,
+      "programmed_at": "2026-10-09T02:22:55.635380+00:00",
+      "sha256": {
+        "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+        "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+        "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+      }
+    },
+    "artifact_sha256": {
+      "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+      "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+      "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+    }
+  }
+}

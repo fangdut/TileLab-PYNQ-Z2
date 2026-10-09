@@ -1,0 +1,6 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>V1.53 验证记录</title>
+<style>body{font:16px/1.8 system-ui;max-width:1050px;margin:40px auto;background:#eef5f5;color:#183749}main{background:white;padding:32px;border-radius:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}</style>
+<main><a href="/">返回工作站</a><h1>V1.53 · 播放器状态读取与采集控制分离</h1>
+<p>播放器状态使用独立的串行访问锁，文件读取等待不再占住采集控制。暂停、开始、取图、保存和板端确认可以继续；并发状态查询不会同时修改播放器进度判断。输入命令更新元数据时也遵循同一顺序，避免交叉写坏请求身份。</p>
+<p>慢读取通过隔离环境注入等待进行验证。实际工作站验证的是 Windows 文件读取被拒绝时采集仍继续、解除后恢复确认。状态 HTTP 请求本身仍可能等待文件，当前不是完全异步的遥测缓存。FPGA 和 Vitis 沿用 V1.42。</p><pre id="r">读取中</pre></main>
+<script>fetch('/api/benchmark').then(r=>{if(!r.ok)throw Error('本版验收尚未完成');return r.json()}).then(s=>document.querySelector('#r').textContent=JSON.stringify(s,null,2)).catch(e=>document.querySelector('#r').textContent=e.message)</script></html>

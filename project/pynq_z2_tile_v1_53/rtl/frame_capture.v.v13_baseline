@@ -1,0 +1,82 @@
+// One requested full-resolution frame to AXI DMA. Native video cannot pause.
+// On backpressure pixels are dropped and the frame is explicitly INVALID.
+// Held AXIS words remain stable until READY, including on the error path.
+// Software must reset DMA/FIFO after an invalid frame or a timeout.
+module frame_capture #(parameter WIDTH=1280,HEIGHT=720)(
+ // IP integrator's HDMI IP labels this recovered clock nominally 100 MHz;
+ // the real 720p clock remains 74.25 MHz and is constrained by HDMI input XDC.
+ (* X_INTERFACE_PARAMETER="XIL_INTERFACENAME pixel_clk, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 100000000" *)
+ (* X_INTERFACE_INFO="xilinx.com:signal:clock:1.0 pixel_clk CLK" *) input wire pixel_clk,
+ input wire control_clk,reset,input wire [31:0] request,
+ input wire [23:0] rgb,input wire de,vs,mask,input wire [31:0] config_word,
+ (* X_INTERFACE_INFO="xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output reg [31:0] m_axis_tdata=0,
+ (* X_INTERFACE_INFO="xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output reg m_axis_tvalid=0,
+ (* X_INTERFACE_INFO="xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) input wire m_axis_tready,
+ (* X_INTERFACE_INFO="xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) output reg m_axis_tlast=0,
+ output wire [31:0] cap_seq,cap_count,cap_min,cap_max,cap_status,cap_config);
+ wire req;
+ xpm_cdc_single #(.DEST_SYNC_FF(4),.INIT_SYNC_FF(1),.SRC_INPUT_REG(0)) req_cdc(
+ .src_clk(control_clk),.src_in(request[0]),.dest_clk(pixel_clk),.dest_out(req));
+ reg seen=0,active=0,bad=0,pv=0,pd=0,token=0;
+ reg [15:0] x=0,y=0,xmin=0,xmax=0,ymin=0,ymax=0;
+ reg [31:0] frame_id=0,count=0,pixels=0,frame_config=0;
+ reg [191:0] completed=0,held=0;reg publish=0,send=0;wire received;
+ wire accept_pixel=de && x<WIDTH && y<HEIGHT;
+ wire last_pixel=accept_pixel && x==WIDTH-1 && y==HEIGHT-1;
+ wire [31:0] next_count=count+(mask?32'd1:32'd0);
+ wire [15:0] nxmin=mask && (count==0 || x<xmin)?x:xmin;
+ wire [15:0] nxmax=mask && (count==0 || x>xmax)?x:xmax;
+ wire [15:0] nymin=mask && (count==0 || y<ymin)?y:ymin;
+ wire [15:0] nymax=mask && (count==0 || y>ymax)?y:ymax;
+ wire drop_pixel=m_axis_tvalid && !m_axis_tready;
+ wire alarm=next_count>=32 && ((nxmax-nxmin)>=23 || (nymax-nymin)>=23);
+ always @(posedge pixel_clk)begin
+  publish<=0;
+  if(m_axis_tvalid && m_axis_tready)m_axis_tvalid<=0;
+  if(reset)begin
+   pv<=0;pd<=0;x<=0;y<=0;active<=0;bad<=0;m_axis_tvalid<=0;
+   count<=0;pixels<=0;seen<=req;
+  end else begin
+   pv<=vs;pd<=de;
+   if(vs && !pv)begin
+    frame_id<=frame_id+1'b1;x<=0;y<=0;
+    if(active)begin
+     completed<={frame_config,32'h80000000|{31'b0,token},32'b0,32'b0,count,frame_id};publish<=1;active<=0;
+    end
+    if(req!=seen && !active && !send && !received)begin
+     seen<=req;token<=req;active<=1;bad<=0;count<=0;pixels<=0;
+     xmin<=0;xmax<=0;ymin<=0;ymax<=0;frame_config<=config_word;
+    end
+   end else begin
+    if(de)x<=x+1'b1;else x<=0;
+    if(pd && !de)y<=y+1'b1;
+    if(active && accept_pixel)begin
+     pixels<=pixels+1'b1;count<=next_count;xmin<=nxmin;xmax<=nxmax;ymin<=nymin;ymax<=nymax;
+     if(pixels==0)frame_config<=config_word;
+     if(drop_pixel)bad<=1;
+     else begin
+      // Little-endian memory bytes B,G,R,mask. Native HDMI bus is R,B,G.
+      m_axis_tdata<={{7'b0,mask},rgb[23:16],rgb[7:0],rgb[15:8]};
+      m_axis_tvalid<=1;m_axis_tlast<=last_pixel;
+     end
+     if(last_pixel)begin
+      active<=0;
+      completed<={frame_config,
+        {(bad|drop_pixel|(pixels!=WIDTH*HEIGHT-1)),27'b0,alarm,1'b1,1'b0,token},
+        next_count!=0?{nymax,nxmax}:32'b0,next_count!=0?{nymin,nxmin}:32'b0,next_count,frame_id};
+      publish<=1;
+     end
+    end
+   end
+  end
+ end
+ always @(posedge pixel_clk)begin
+  if(send && received)send<=0;
+  if(publish && !send && !received)begin held<=completed;send<=1;end
+ end
+ wire [191:0] snapshot;
+ xpm_cdc_handshake #(.DEST_EXT_HSK(0),.DEST_SYNC_FF(4),.SRC_SYNC_FF(4),.WIDTH(192),.INIT_SYNC_FF(1))
+ transfer(.src_clk(pixel_clk),.src_in(held),.src_send(send),.src_rcv(received),
+ .dest_clk(control_clk),.dest_out(snapshot),.dest_req(),.dest_ack(1'b0));
+ assign {cap_config,cap_status,cap_max,cap_min,cap_count,cap_seq}=snapshot;
+endmodule

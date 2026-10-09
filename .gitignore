@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pid
+*.lock
+*.tmp
+*.o
+*.d
+*.wdb
+.Xil/
+**/host/runtime/
+**/review_records/
+**/*display_command.txt
+**/*display_status.json

@@ -1,0 +1,909 @@
+{
+  "passed": true,
+  "revision": "V1.53",
+  "mode": "board",
+  "started_utc": "2026-10-09T03:10:44.801417+00:00",
+  "run_directory": "D:\\Vivado\\pynq_z2_tile_v1_53\\reports\\v153\\diagnostics_board\\run_20261009T031044_800417Z",
+  "scope": "Bounded physical Station diagnostics integration",
+  "limitations": [
+    "Physical status replies may finish before Pause starts; observed thread overlap does not prove a blocked physical TCP wait.",
+    "The loopback mode deterministically withholds a response; its timing is not board throughput or a real-link latency measurement.",
+    "CRC and complete image transport do not measure detector accuracy; the detector and firmware are inherited.",
+    "Loopback descriptor-CRC verification is a sender protocol declaration; real header/pixel CRC validation uses production EventTCP.",
+    "Pause response is separate from waiting for an already admitted transfer to finish.",
+    "No new external-monitor visual confirmation or physical HDMI hotplug test."
+  ],
+  "source_sha256": {
+    "scripts/board_v153_helpers.py": "673f8dae4fc041d2cdd49dbe7da82efea673eed946dadf5a99bc24d86eb7df52",
+    "host/workstation.py": "26edccdf6135974540f017ab1560b37b782f336b32fa83b39568ed32b7be90b8",
+    "host/tcp_transport.py": "1a54733ca2d1fde9bcde8e732dd82105e1afc021619bd6d1ccf0aad000e83b29",
+    "host/recipes.py": "b35150a9bc964fc50d2e4a7f26d236fe9b0a8dd1f89ed16e091eea8091464ba1",
+    "host/recipes.json": "82c285cb6edf59dd78b48a99ad25ea0b4ee2a6710c41e621d7be00588889fcaf",
+    "host/preview_policy.py": "a7ff484c4946391544f0cad6da33c7e29d3a61b1408150cdbdfd7f5c9ba9711b",
+    "host/event_identity.py": "933ae975ac5b2245bae869b334407be9c38df6c14a131769670c1c8779ae7cd7",
+    "host/capture_health.py": "95c4689354ca03cd1af4d44429154bc7334ad79dabd0162792d1cd140e3c0b29",
+    "host/dma_recovery.py": "83ec9a0d9dc2622e77f9ac9062d76a944ed58ac7aaf8b6b8a8ff103595c886da",
+    "host/word_rle.py": "16e87b1f526481e2275125169f355901c51148f9a0f164b721e7a180f4a23f90",
+    "host/packed_pixels.py": "f65ab62bae2c92c3827a5b59170ec82a452dd224447355f6b8fbe7a86f0ef927",
+    "host/ConveyorStimulus.cs": "022994cd097b030ad7b0c5c829bbfae54c7aa712252dc238de977c0584215f56",
+    "data/dark_gate/manifest.json": "900bd0f8550ad7368e3b8a1df773d33cd9170f14a57c343f99d48ad369360c6b",
+    "data/dark_gate/tile_0.png": "08c14bdc51c770de1fc149ce1e347a6fb739fa9d3e6b606cd912304f1a329ecf",
+    "data/dark_gate/tile_1.png": "a4f18a506103b0c138c4542e69c13435cde52eb8ca6eb60b71f5012648a97437",
+    "data/dark_gate/tile_2.png": "bb3f2dbdba88bf8a6e399e22bf0149a5e14ea3a60d2d24ade13518879f3c72df",
+    "data/dark_gate/tile_3.png": "d1cf0295ce3d2f2f31bbb4fb57931a7d2407ae138792e17dc7a2fec252e7f288"
+  },
+  "startup_programmed_proof": {
+    "path": "D:\\Vivado\\pynq_z2_tile_v1_53\\reports\\programmed_v153.json",
+    "marker_sha256": "d8f42d25ca6dcf41e05cf6886a6e3cf4b3dc518561b045dd5bf450f55389938a",
+    "record": {
+      "active_application": "hdmi_ethernet",
+      "configured_address": "192.168.33.10",
+      "boot_id": 2398464874,
+      "programmed_at": "2026-10-09T02:22:55.635380+00:00",
+      "sha256": {
+        "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+        "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+        "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+      }
+    },
+    "artifact_sha256": {
+      "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+      "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+      "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+    }
+  },
+  "boot_id": 2398464874,
+  "firmware_version": 76544,
+  "windows": [
+    {
+      "index": 0,
+      "status_requests": [
+        {
+          "seconds": 0.03100000007543713,
+          "outcome": "accepted",
+          "milliseconds": 0.0,
+          "error": null
+        },
+        {
+          "seconds": 0.375,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 0.7029999999795109,
+          "outcome": "accepted",
+          "milliseconds": 31.00000007543713,
+          "error": null
+        },
+        {
+          "seconds": 1.0150000000139698,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 1.312000000034459,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 1.6560000000754371,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 1.922000000020489,
+          "outcome": "accepted",
+          "milliseconds": 0.0,
+          "error": null
+        },
+        {
+          "seconds": 2.187000000034459,
+          "outcome": "accepted",
+          "milliseconds": 0.0,
+          "error": null
+        },
+        {
+          "seconds": 2.4679999999934807,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 2.827999999979511,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.125,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.422000000020489,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.687000000034459,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 3.952999999979511,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        }
+      ],
+      "live_pair_retained": true,
+      "seconds": 4.327999999979511,
+      "captures": 8,
+      "paused_stays_stopped": true
+    },
+    {
+      "index": 1,
+      "status_requests": [
+        {
+          "seconds": 0.10999999998603016,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 0.4380000000819564,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 0.7190000000409782,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 1.0,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 1.2820000000065193,
+          "outcome": "accepted",
+          "milliseconds": 0.0,
+          "error": null
+        },
+        {
+          "seconds": 1.547000000020489,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 1.875,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 2.172000000020489,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 2.4380000000819564,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 2.73499999998603,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.0320000000065193,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.297000000020489,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 3.6410000000614673,
+          "outcome": "busy_rejected",
+          "milliseconds": 15.999999945051968,
+          "error": "Wait for current transfer or diagnostics before requesting status"
+        },
+        {
+          "seconds": 3.922000000020489,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        }
+      ],
+      "live_pair_retained": true,
+      "seconds": 4.329000000027008,
+      "captures": 8,
+      "paused_stays_stopped": true
+    },
+    {
+      "index": 2,
+      "status_requests": [
+        {
+          "seconds": 0.125,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 0.4220000000204891,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 0.6870000000344589,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 0.9530000000959262,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 1.2190000000409782,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 1.562000000034459,
+          "outcome": "accepted",
+          "milliseconds": 16.00000006146729,
+          "error": null
+        },
+        {
+          "seconds": 1.859000000054948,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 2.125,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 2.406000000075437,
+          "outcome": "accepted",
+          "milliseconds": 15.999999945051968,
+          "error": null
+        },
+        {
+          "seconds": 2.797000000020489,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.094000000040978,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.422000000020489,
+          "outcome": "accepted",
+          "milliseconds": 15.000000013969839,
+          "error": null
+        },
+        {
+          "seconds": 3.719000000040978,
+          "outcome": "accepted",
+          "milliseconds": 0.0,
+          "error": null
+        },
+        {
+          "seconds": 3.984000000054948,
+          "outcome": "accepted",
+          "milliseconds": 0.0,
+          "error": null
+        }
+      ],
+      "live_pair_retained": true,
+      "seconds": 4.39000000001397,
+      "captures": 8,
+      "paused_stays_stopped": true
+    }
+  ],
+  "live_evidence": [
+    {
+      "frame": {
+        "frame_id": 171562,
+        "candidate_pixels": 0,
+        "boxes": [],
+        "alarm": false,
+        "config_word": 2213763591,
+        "status_word": 4,
+        "device_frames": 171563,
+        "transfer_ms": 47,
+        "width": 1280,
+        "height": 720,
+        "acquired_at": "2026-10-09T03:10:45.865548+00:00",
+        "transport": "ETHERNET_TCP",
+        "source": "HDMI",
+        "algorithm": "FPGA_VALLEY17_HYST4_SUPPORT3_GRID32",
+        "region_areas": [],
+        "region_overflow": false,
+        "event_id": 1925,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "event_reason": 3,
+        "recovery_generation": 0,
+        "captured_ms": 2870520,
+        "queue_depth": 1,
+        "event_total": 169,
+        "events_dropped": 0,
+        "board_captures": 171563,
+        "invalid_frames": 0,
+        "capture_gaps": 0,
+        "product_id": 0,
+        "product_flags": 0,
+        "selection_score": 64256,
+        "selection_full_tile": true,
+        "selection": "LIVE_PREVIEW",
+        "selection_metric": "CENTER_DISTANCE_X2",
+        "selection_center_distance_x2": 64256,
+        "selection_center_error_px": 32128.0,
+        "request_ms": 40.02140008378774,
+        "header_wait_ms": 37.233400042168796,
+        "payload_ms": 0.27630000840872526,
+        "payload_MB_s": 159.0879430411625,
+        "goodput_MB_s": 1.1718568781070067,
+        "decode_ms": 1.3134999899193645,
+        "wire_payload_bytes": 43956,
+        "uncompressed_bytes": 3686400,
+        "wire_codec": "WORD_RLE",
+        "wire_saving_percent": 98.8076171875,
+        "pixel_crc_verified": true,
+        "pixel_crc32": 2279090018,
+        "header_crc_verified": true,
+        "descriptor_crc_verified": true,
+        "crc_ms": 1.1982000432908535,
+        "total_request_ms": 40.03480006940663,
+        "retry_count": 0,
+        "reconnects": 1,
+        "applied_threshold": 90,
+        "applied_low_threshold": 45,
+        "weak_support_enabled": true,
+        "weak_passes": 4,
+        "low_gate_enabled": false,
+        "wide_weak_enabled": false,
+        "applied_product_gate_sum": 320,
+        "recipe_id": "mvtec_hdmi_weak_v124",
+        "recipe_name": "本机 HDMI 瓷砖 · 四级弱裂纹增强",
+        "recipe_sha256": "9f38669978c64e85f9bcb67037a4fe66a4ed08e5bef2ce17dd5b8ed96fb62007",
+        "recipe_attribution": "MATCHED_CAPTURED_THRESHOLD_GROWTH_PRODUCT_GATE_AND_SCALE_NOT_REQUEST_TIME",
+        "recipe_calibration_sha256": "365da3a3e0481f41f5f98d406f385509d156f176ee2140942f09e09c546ccc5d"
+      },
+      "check": {
+        "frame_id": 171562,
+        "event_id": 1925,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "complete_720p_frame": true,
+        "crc3": true,
+        "reconstructed_pixel_crc_matches": true,
+        "candidate_count_matches": true,
+        "image_sha256": "975cc7b74739f4be69d600187a5b9cdc2adcaf131e6aee08cf85961d0169acb0",
+        "mask_sha256": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573",
+        "passed": true
+      },
+      "files": {
+        "original": "live_0_original.png",
+        "mask": "live_0_mask.png"
+      },
+      "sha256": {
+        "original": "975cc7b74739f4be69d600187a5b9cdc2adcaf131e6aee08cf85961d0169acb0",
+        "mask": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573"
+      }
+    },
+    {
+      "frame": {
+        "frame_id": 171819,
+        "candidate_pixels": 0,
+        "boxes": [],
+        "alarm": false,
+        "config_word": 2213763591,
+        "status_word": 4,
+        "device_frames": 171820,
+        "transfer_ms": 31,
+        "width": 1280,
+        "height": 720,
+        "acquired_at": "2026-10-09T03:10:50.148382+00:00",
+        "transport": "ETHERNET_TCP",
+        "source": "HDMI",
+        "algorithm": "FPGA_VALLEY17_HYST4_SUPPORT3_GRID32",
+        "region_areas": [],
+        "region_overflow": false,
+        "event_id": 1933,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "event_reason": 3,
+        "recovery_generation": 0,
+        "captured_ms": 2874803,
+        "queue_depth": 1,
+        "event_total": 169,
+        "events_dropped": 0,
+        "board_captures": 171820,
+        "invalid_frames": 0,
+        "capture_gaps": 0,
+        "product_id": 0,
+        "product_flags": 0,
+        "selection_score": 64256,
+        "selection_full_tile": true,
+        "selection": "LIVE_PREVIEW",
+        "selection_metric": "CENTER_DISTANCE_X2",
+        "selection_center_distance_x2": 64256,
+        "selection_center_error_px": 32128.0,
+        "request_ms": 37.967000040225685,
+        "header_wait_ms": 35.08429997600615,
+        "payload_ms": 0.40010001976042986,
+        "payload_MB_s": 127.97799917795481,
+        "goodput_MB_s": 1.4430003045312538,
+        "decode_ms": 1.3151000021025538,
+        "wire_payload_bytes": 51204,
+        "uncompressed_bytes": 3686400,
+        "wire_codec": "WORD_RLE",
+        "wire_saving_percent": 98.61100260416666,
+        "pixel_crc_verified": true,
+        "pixel_crc32": 928597420,
+        "header_crc_verified": true,
+        "descriptor_crc_verified": true,
+        "crc_ms": 1.1675000423565507,
+        "total_request_ms": 37.98200003802776,
+        "retry_count": 0,
+        "reconnects": 1,
+        "applied_threshold": 90,
+        "applied_low_threshold": 45,
+        "weak_support_enabled": true,
+        "weak_passes": 4,
+        "low_gate_enabled": false,
+        "wide_weak_enabled": false,
+        "applied_product_gate_sum": 320,
+        "recipe_id": "mvtec_hdmi_weak_v124",
+        "recipe_name": "本机 HDMI 瓷砖 · 四级弱裂纹增强",
+        "recipe_sha256": "9f38669978c64e85f9bcb67037a4fe66a4ed08e5bef2ce17dd5b8ed96fb62007",
+        "recipe_attribution": "MATCHED_CAPTURED_THRESHOLD_GROWTH_PRODUCT_GATE_AND_SCALE_NOT_REQUEST_TIME",
+        "recipe_calibration_sha256": "365da3a3e0481f41f5f98d406f385509d156f176ee2140942f09e09c546ccc5d"
+      },
+      "check": {
+        "frame_id": 171819,
+        "event_id": 1933,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "complete_720p_frame": true,
+        "crc3": true,
+        "reconstructed_pixel_crc_matches": true,
+        "candidate_count_matches": true,
+        "image_sha256": "bbff80a6a338b1d3a8ee0c0991f2a3089cca7c7530eddb2391dd0958bfe7c565",
+        "mask_sha256": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573",
+        "passed": true
+      },
+      "files": {
+        "original": "live_1_original.png",
+        "mask": "live_1_mask.png"
+      },
+      "sha256": {
+        "original": "bbff80a6a338b1d3a8ee0c0991f2a3089cca7c7530eddb2391dd0958bfe7c565",
+        "mask": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573"
+      }
+    },
+    {
+      "frame": {
+        "frame_id": 172082,
+        "candidate_pixels": 0,
+        "boxes": [],
+        "alarm": false,
+        "config_word": 2213763591,
+        "status_word": 4,
+        "device_frames": 172083,
+        "transfer_ms": 47,
+        "width": 1280,
+        "height": 720,
+        "acquired_at": "2026-10-09T03:10:54.533562+00:00",
+        "transport": "ETHERNET_TCP",
+        "source": "HDMI",
+        "algorithm": "FPGA_VALLEY17_HYST4_SUPPORT3_GRID32",
+        "region_areas": [],
+        "region_overflow": false,
+        "event_id": 1941,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "event_reason": 3,
+        "recovery_generation": 0,
+        "captured_ms": 2879187,
+        "queue_depth": 1,
+        "event_total": 169,
+        "events_dropped": 0,
+        "board_captures": 172083,
+        "invalid_frames": 0,
+        "capture_gaps": 0,
+        "product_id": 0,
+        "product_flags": 0,
+        "selection_score": 724,
+        "selection_full_tile": false,
+        "selection": "LIVE_PREVIEW",
+        "selection_metric": "CENTER_DISTANCE_X2",
+        "selection_center_distance_x2": 724,
+        "selection_center_error_px": 362.0,
+        "request_ms": 40.62880005221814,
+        "header_wait_ms": 36.96629998739809,
+        "payload_ms": 0.2946000313386321,
+        "payload_MB_s": 173.80853548227512,
+        "goodput_MB_s": 1.3742019106959833,
+        "decode_ms": 2.18990002758801,
+        "wire_payload_bytes": 51204,
+        "uncompressed_bytes": 3686400,
+        "wire_codec": "WORD_RLE",
+        "wire_saving_percent": 98.61100260416666,
+        "pixel_crc_verified": true,
+        "pixel_crc32": 1000008135,
+        "header_crc_verified": true,
+        "descriptor_crc_verified": true,
+        "crc_ms": 1.1780000058934093,
+        "total_request_ms": 40.6464000698179,
+        "retry_count": 0,
+        "reconnects": 1,
+        "applied_threshold": 90,
+        "applied_low_threshold": 45,
+        "weak_support_enabled": true,
+        "weak_passes": 4,
+        "low_gate_enabled": false,
+        "wide_weak_enabled": false,
+        "applied_product_gate_sum": 320,
+        "recipe_id": "mvtec_hdmi_weak_v124",
+        "recipe_name": "本机 HDMI 瓷砖 · 四级弱裂纹增强",
+        "recipe_sha256": "9f38669978c64e85f9bcb67037a4fe66a4ed08e5bef2ce17dd5b8ed96fb62007",
+        "recipe_attribution": "MATCHED_CAPTURED_THRESHOLD_GROWTH_PRODUCT_GATE_AND_SCALE_NOT_REQUEST_TIME",
+        "recipe_calibration_sha256": "365da3a3e0481f41f5f98d406f385509d156f176ee2140942f09e09c546ccc5d"
+      },
+      "check": {
+        "frame_id": 172082,
+        "event_id": 1941,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "complete_720p_frame": true,
+        "crc3": true,
+        "reconstructed_pixel_crc_matches": true,
+        "candidate_count_matches": true,
+        "image_sha256": "84cb3fdf70fb03c6ec3357b606c76830a88bab35c7e9f9ed35d6c707c8ac9325",
+        "mask_sha256": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573",
+        "passed": true
+      },
+      "files": {
+        "original": "live_2_original.png",
+        "mask": "live_2_mask.png"
+      },
+      "sha256": {
+        "original": "84cb3fdf70fb03c6ec3357b606c76830a88bab35c7e9f9ed35d6c707c8ac9325",
+        "mask": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573"
+      }
+    }
+  ],
+  "manual_evidence": [
+    {
+      "frame": {
+        "frame_id": 172378,
+        "candidate_pixels": 0,
+        "boxes": [],
+        "alarm": false,
+        "config_word": 2213763591,
+        "status_word": 4,
+        "device_frames": 172379,
+        "transfer_ms": 31,
+        "width": 1280,
+        "height": 720,
+        "acquired_at": "2026-10-09T03:10:59.465357+00:00",
+        "transport": "ETHERNET_TCP",
+        "source": "HDMI",
+        "algorithm": "FPGA_VALLEY17_HYST4_SUPPORT3_GRID32",
+        "region_areas": [],
+        "region_overflow": false,
+        "event_id": 1950,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "event_reason": 3,
+        "recovery_generation": 0,
+        "captured_ms": 2884120,
+        "queue_depth": 1,
+        "event_total": 169,
+        "events_dropped": 0,
+        "board_captures": 172379,
+        "invalid_frames": 0,
+        "capture_gaps": 0,
+        "product_id": 0,
+        "product_flags": 0,
+        "selection_score": 64256,
+        "selection_full_tile": true,
+        "selection": "LIVE_PREVIEW",
+        "selection_metric": "CENTER_DISTANCE_X2",
+        "selection_center_distance_x2": 64256,
+        "selection_center_error_px": 32128.0,
+        "request_ms": 42.5499000120908,
+        "header_wait_ms": 39.585899910889566,
+        "payload_ms": 0.008900067768990993,
+        "payload_MB_s": 0.8988695600580764,
+        "goodput_MB_s": 0.00020204673351834,
+        "decode_ms": 1.5981999458745122,
+        "wire_payload_bytes": 8,
+        "uncompressed_bytes": 3686400,
+        "wire_codec": "WORD_RLE",
+        "wire_saving_percent": 99.99978298611111,
+        "pixel_crc_verified": true,
+        "pixel_crc32": 358103366,
+        "header_crc_verified": true,
+        "descriptor_crc_verified": true,
+        "crc_ms": 1.356900087557733,
+        "total_request_ms": 42.56779991555959,
+        "retry_count": 0,
+        "reconnects": 1,
+        "applied_threshold": 90,
+        "applied_low_threshold": 45,
+        "weak_support_enabled": true,
+        "weak_passes": 4,
+        "low_gate_enabled": false,
+        "wide_weak_enabled": false,
+        "applied_product_gate_sum": 320,
+        "recipe_id": "mvtec_hdmi_weak_v124",
+        "recipe_name": "本机 HDMI 瓷砖 · 四级弱裂纹增强",
+        "recipe_sha256": "9f38669978c64e85f9bcb67037a4fe66a4ed08e5bef2ce17dd5b8ed96fb62007",
+        "recipe_attribution": "MATCHED_CAPTURED_THRESHOLD_GROWTH_PRODUCT_GATE_AND_SCALE_NOT_REQUEST_TIME",
+        "recipe_calibration_sha256": "365da3a3e0481f41f5f98d406f385509d156f176ee2140942f09e09c546ccc5d",
+        "reason": "manual",
+        "origin": "FPGA_HDMI_CAPTURE",
+        "image_sha256": "cabe04a576198c38e501e169b30f8d650fafab1d6352e915724aba1f11a94d1a",
+        "mask_sha256": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573",
+        "id": "pl_2398464874_1950",
+        "created": "2026-10-09T03:10:59.497081+00:00",
+        "review": "pending",
+        "note": "",
+        "review_revision": 0
+      },
+      "check": {
+        "frame_id": 172378,
+        "event_id": 1950,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "complete_720p_frame": true,
+        "crc3": true,
+        "reconstructed_pixel_crc_matches": true,
+        "candidate_count_matches": true,
+        "image_sha256": "cabe04a576198c38e501e169b30f8d650fafab1d6352e915724aba1f11a94d1a",
+        "mask_sha256": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573",
+        "passed": true
+      },
+      "files": {
+        "original": "manual_original.png",
+        "mask": "manual_mask.png"
+      },
+      "sha256": {
+        "original": "cabe04a576198c38e501e169b30f8d650fafab1d6352e915724aba1f11a94d1a",
+        "mask": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573"
+      }
+    }
+  ],
+  "pause_measurements": [
+    {
+      "window": 0,
+      "pause_http_ms": 30.999999959021807,
+      "pause_and_inflight_completion_ms": 30.999999959021807,
+      "concurrent_status_outcome": "accepted",
+      "status_thread_overlap": true
+    },
+    {
+      "window": 1,
+      "pause_http_ms": 0.0,
+      "pause_and_inflight_completion_ms": 62.999999965541065,
+      "concurrent_status_outcome": "accepted",
+      "status_thread_overlap": true
+    },
+    {
+      "window": 2,
+      "pause_http_ms": 15.000000013969839,
+      "pause_and_inflight_completion_ms": 77.9999999795109,
+      "concurrent_status_outcome": "accepted",
+      "status_thread_overlap": true
+    }
+  ],
+  "before": {
+    "magic": 1414089779,
+    "version": 76544,
+    "boot_id": 2398464874,
+    "heartbeat": 788580464,
+    "head": 1924,
+    "tail": 1924,
+    "depth": 0,
+    "events": 169,
+    "dropped": 0,
+    "captured": 171534,
+    "invalid": 0,
+    "ack": 1924,
+    "request": 1755,
+    "reason": 2,
+    "request_ack": 1755,
+    "threshold": 90,
+    "enabled": 1,
+    "gaps": 0,
+    "frames": 171534,
+    "last_seq": 171534,
+    "active": 1,
+    "config": 2213763591,
+    "error_status": 0,
+    "ack_errors": 0,
+    "products_completed": 392,
+    "defective_products": 169,
+    "current_product_id": 0,
+    "product_flags": 0,
+    "orphaned_products": 0,
+    "best_updates": 2440,
+    "dma_max_batch": 1,
+    "tcp_write_failures": 0,
+    "tcp_output_failures": 0,
+    "tcp_connections": 15,
+    "tcp_max_retransmits": 1,
+    "tcp_max_no_progress_ms": 1080,
+    "tcp_timeouts": 1,
+    "compression_probe_bypasses": 26,
+    "descriptor_crc_errors": 0,
+    "descriptor_verified_frames": 171534,
+    "last_descriptor_crc32": 2484986143,
+    "capture_health": {
+      "state": "HEALTHY",
+      "ready": true,
+      "dma_age_ms": 15,
+      "valid_age_ms": 15,
+      "dma_status": 69640,
+      "dma_control": 65539,
+      "message": "完整图像采集正常"
+    },
+    "capture_recovery": {
+      "state": "RUNNING",
+      "attempts": 0,
+      "successes": 0,
+      "failures": 0,
+      "reason": "尚无恢复",
+      "reason_code": 0,
+      "last_dma_status": 0,
+      "interrupted_product_observations": 0,
+      "discarded_packets": 0,
+      "waiting_new_product": false,
+      "max_attempts": 3,
+      "reset_timeout_ms": 1000,
+      "verify_timeout_ms": 3000,
+      "last_duration_ms": 0
+    },
+    "observed_at": "2026-10-09T03:10:45.366615+00:00"
+  },
+  "status_accepted": 41,
+  "status_busy_rejected": 1,
+  "status_during_manual": {
+    "outcome": "busy_rejected",
+    "milliseconds": 15.999999945051968
+  },
+  "manual_record_id": "pl_2398464874_1950",
+  "after": {
+    "magic": 1414089779,
+    "version": 76544,
+    "boot_id": 2398464874,
+    "heartbeat": 792124669,
+    "head": 1950,
+    "tail": 1950,
+    "depth": 0,
+    "events": 169,
+    "dropped": 0,
+    "captured": 172382,
+    "invalid": 0,
+    "ack": 1950,
+    "request": 1781,
+    "reason": 2,
+    "request_ack": 1781,
+    "threshold": 90,
+    "enabled": 1,
+    "gaps": 0,
+    "frames": 172382,
+    "last_seq": 172382,
+    "active": 1,
+    "config": 2213763591,
+    "error_status": 0,
+    "ack_errors": 0,
+    "products_completed": 394,
+    "defective_products": 169,
+    "current_product_id": 0,
+    "product_flags": 0,
+    "orphaned_products": 0,
+    "best_updates": 2440,
+    "dma_max_batch": 1,
+    "tcp_write_failures": 0,
+    "tcp_output_failures": 0,
+    "tcp_connections": 15,
+    "tcp_max_retransmits": 1,
+    "tcp_max_no_progress_ms": 1080,
+    "tcp_timeouts": 1,
+    "compression_probe_bypasses": 26,
+    "descriptor_crc_errors": 0,
+    "descriptor_verified_frames": 172382,
+    "last_descriptor_crc32": 2357583589,
+    "capture_health": {
+      "state": "HEALTHY",
+      "ready": true,
+      "dma_age_ms": 10,
+      "valid_age_ms": 10,
+      "dma_status": 69640,
+      "dma_control": 65539,
+      "message": "完整图像采集正常"
+    },
+    "capture_recovery": {
+      "state": "RUNNING",
+      "attempts": 0,
+      "successes": 0,
+      "failures": 0,
+      "reason": "尚无恢复",
+      "reason_code": 0,
+      "last_dma_status": 0,
+      "interrupted_product_observations": 0,
+      "discarded_packets": 0,
+      "waiting_new_product": false,
+      "max_attempts": 3,
+      "reset_timeout_ms": 1000,
+      "verify_timeout_ms": 3000,
+      "last_duration_ms": 0
+    },
+    "observed_at": "2026-10-09T03:10:59.507504+00:00"
+  },
+  "error_deltas": {
+    "gaps": 0,
+    "invalid": 0,
+    "dropped": 0,
+    "ack_errors": 0,
+    "descriptor_crc_errors": 0
+  },
+  "final_control": {
+    "enabled": false,
+    "busy": false,
+    "captures": 1630,
+    "manual_waiting": false,
+    "pending_operation": null,
+    "pending_confirmation": false,
+    "capture_control": {
+      "phase": "IDLE",
+      "admitted": 1630,
+      "cancelled_before_capture": 0,
+      "intent_epoch": 15
+    }
+  },
+  "manual_saved_and_confirmation_completed": true,
+  "sources_unchanged": true,
+  "programmed_artifacts_unchanged": true,
+  "cleanup_errors": [],
+  "finished_utc": "2026-10-09T03:10:59.674014+00:00"
+}

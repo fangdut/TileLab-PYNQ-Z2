@@ -1,0 +1,111 @@
+{
+  "passed": false,
+  "scope": "New to this project; no threshold selection on these 24 images. Cross-material holdout, not factory validation.",
+  "limitations": "24 cracked marble images only; no normal-image false alarm rate; resize changes physical scale; physical sample identity unavailable.",
+  "manifest_sha256": "42ff9161255b87673c41c418ea9ce8be233b8b3e834278dbd7343c54b36a4e7a",
+  "fixed_parameters": {
+    "high": 90,
+    "low": 45,
+    "passes": 4,
+    "minimum_support": 3,
+    "seed_radius": 8,
+    "weak_radii": [
+      8,
+      16
+    ]
+  },
+  "programming": {
+    "path": "D:\\Vivado\\pynq_z2_tile_v1_53\\reports\\programmed_v153.json",
+    "marker_sha256": "d8f42d25ca6dcf41e05cf6886a6e3cf4b3dc518561b045dd5bf450f55389938a",
+    "record": {
+      "active_application": "hdmi_ethernet",
+      "configured_address": "192.168.33.10",
+      "boot_id": 2398464874,
+      "programmed_at": "2026-10-09T02:22:55.635380+00:00",
+      "sha256": {
+        "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+        "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+        "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+      }
+    },
+    "artifact_sha256": {
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\hdmi_ethernet\\build\\hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+    }
+  },
+  "items": [
+    {
+      "index": 0,
+      "source": "01",
+      "request_id": "c7ffd349818c3cf1d61bf6ee5568385d",
+      "barcode": 28672,
+      "frame": {
+        "frame_id": 41458,
+        "candidate_pixels": 0,
+        "boxes": [],
+        "alarm": false,
+        "config_word": 2347981319,
+        "status_word": 4,
+        "device_frames": 41460,
+        "transfer_ms": 62,
+        "width": 1280,
+        "height": 720,
+        "acquired_at": "2026-10-09T02:34:37.480969+00:00",
+        "transport": "ETHERNET_TCP",
+        "source": "HDMI",
+        "algorithm": "FPGA_DUALSCALE_VALLEY17_R16_HYST4_SUPPORT3_GRID32",
+        "region_areas": [],
+        "region_overflow": false,
+        "event_id": 206,
+        "boot_id": 2398464874,
+        "firmware_version": 76544,
+        "event_reason": 3,
+        "recovery_generation": 0,
+        "captured_ms": 702139,
+        "queue_depth": 1,
+        "event_total": 36,
+        "events_dropped": 0,
+        "board_captures": 41460,
+        "invalid_frames": 0,
+        "capture_gaps": 0,
+        "product_id": 105,
+        "product_flags": 17,
+        "selection_score": 0,
+        "selection_full_tile": true,
+        "selection": "LIVE_PREVIEW",
+        "selection_metric": "CENTER_DISTANCE_X2",
+        "selection_center_distance_x2": 0,
+        "selection_center_error_px": 0.0,
+        "request_ms": 66.213000100106,
+        "header_wait_ms": 44.976500095799565,
+        "payload_ms": 18.633599975146353,
+        "payload_MB_s": 54.107204262448555,
+        "goodput_MB_s": 15.849872879865247,
+        "decode_ms": 1.4380000066012144,
+        "wire_payload_bytes": 1008212,
+        "uncompressed_bytes": 3686400,
+        "wire_codec": "WORD_RLE",
+        "wire_saving_percent": 72.65049913194444,
+        "pixel_crc_verified": true,
+        "pixel_crc32": 4006619984,
+        "header_crc_verified": true,
+        "descriptor_crc_verified": true,
+        "crc_ms": 1.164900022558868,
+        "total_request_ms": 66.23320002108812,
+        "retry_count": 0,
+        "reconnects": 0
+      },
+      "mask_mismatch": 0,
+      "rgb_mismatch": 2755440,
+      "boxes_exact": true,
+      "tp": 0,
+      "fp": 0,
+      "fn": 445,
+      "image_sha256": "12b4503222ac35f24be327efe5aa55673d119463cea26170317d4799d21b3b87",
+      "mask_sha256": "5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573",
+      "passed": false
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_v153_holdout.py\", line 56, in main\n    assert measured['passed'],measured\n           ~~~~~~~~^^^^^^^^^^\nAssertionError: {'index': 0, 'source': '01', 'request_id': 'c7ffd349818c3cf1d61bf6ee5568385d', 'barcode': 28672, 'frame': {'frame_id': 41458, 'candidate_pixels': 0, 'boxes': [], 'alarm': False, 'config_word': 2347981319, 'status_word': 4, 'device_frames': 41460, 'transfer_ms': 62, 'width': 1280, 'height': 720, 'acquired_at': '2026-10-09T02:34:37.480969+00:00', 'transport': 'ETHERNET_TCP', 'source': 'HDMI', 'algorithm': 'FPGA_DUALSCALE_VALLEY17_R16_HYST4_SUPPORT3_GRID32', 'region_areas': [], 'region_overflow': False, 'event_id': 206, 'boot_id': 2398464874, 'firmware_version': 76544, 'event_reason': 3, 'recovery_generation': 0, 'captured_ms': 702139, 'queue_depth': 1, 'event_total': 36, 'events_dropped': 0, 'board_captures': 41460, 'invalid_frames': 0, 'capture_gaps': 0, 'product_id': 105, 'product_flags': 17, 'selection_score': 0, 'selection_full_tile': True, 'selection': 'LIVE_PREVIEW', 'selection_metric': 'CENTER_DISTANCE_X2', 'selection_center_distance_x2': 0, 'selection_center_error_px': 0.0, 'request_ms': 66.213000100106, 'header_wait_ms': 44.976500095799565, 'payload_ms': 18.633599975146353, 'payload_MB_s': 54.107204262448555, 'goodput_MB_s': 15.849872879865247, 'decode_ms': 1.4380000066012144, 'wire_payload_bytes': 1008212, 'uncompressed_bytes': 3686400, 'wire_codec': 'WORD_RLE', 'wire_saving_percent': 72.65049913194444, 'pixel_crc_verified': True, 'pixel_crc32': 4006619984, 'header_crc_verified': True, 'descriptor_crc_verified': True, 'crc_ms': 1.164900022558868, 'total_request_ms': 66.23320002108812, 'retry_count': 0, 'reconnects': 0}, 'mask_mismatch': 0, 'rgb_mismatch': 2755440, 'boxes_exact': True, 'tp': 0, 'fp': 0, 'fn': 445, 'image_sha256': '12b4503222ac35f24be327efe5aa55673d119463cea26170317d4799d21b3b87', 'mask_sha256': '5a3edd16f25275294c505b94a23948cd89e034c3f877002f6adb2635a0c7e573', 'passed': False}\n"
+}

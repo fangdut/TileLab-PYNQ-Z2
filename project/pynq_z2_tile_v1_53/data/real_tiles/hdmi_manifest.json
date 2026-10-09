@@ -1,0 +1,2464 @@
+{
+  "provenance": "REAL_MVTEC_PHOTO_COMPOSITE",
+  "license": "CC BY-NC-SA 4.0",
+  "source": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+  "items": [
+    {
+      "index": 0,
+      "id": "6621d769324f6e05d583835f",
+      "label": "crack",
+      "image": "hdmi/real_000.png",
+      "alarm": true,
+      "candidate_pixels": 41156,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 5045,
+      "pixel_fp": 36111,
+      "pixel_fn": 1697,
+      "iou": 0.11772804704454765
+    },
+    {
+      "index": 1,
+      "id": "6621d769324f6e05d583835e",
+      "label": "crack",
+      "image": "hdmi/real_001.png",
+      "alarm": true,
+      "candidate_pixels": 33947,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3504,
+      "pixel_fp": 30443,
+      "pixel_fn": 700,
+      "iou": 0.10113429734176119
+    },
+    {
+      "index": 2,
+      "id": "6621d769324f6e05d583835a",
+      "label": "crack",
+      "image": "hdmi/real_002.png",
+      "alarm": true,
+      "candidate_pixels": 45851,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4550,
+      "pixel_fp": 41301,
+      "pixel_fn": 2317,
+      "iou": 0.09446105298123235
+    },
+    {
+      "index": 3,
+      "id": "6621d769324f6e05d583835c",
+      "label": "crack",
+      "image": "hdmi/real_003.png",
+      "alarm": true,
+      "candidate_pixels": 34799,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4497,
+      "pixel_fp": 30302,
+      "pixel_fn": 2504,
+      "iou": 0.1205533067045546
+    },
+    {
+      "index": 4,
+      "id": "6621d769324f6e05d5838362",
+      "label": "crack",
+      "image": "hdmi/real_004.png",
+      "alarm": true,
+      "candidate_pixels": 45410,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 1591,
+      "pixel_fp": 43819,
+      "pixel_fn": 867,
+      "iou": 0.03437992955463837
+    },
+    {
+      "index": 5,
+      "id": "6621d769324f6e05d5838363",
+      "label": "crack",
+      "image": "hdmi/real_005.png",
+      "alarm": true,
+      "candidate_pixels": 41749,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 1224,
+      "pixel_fp": 40525,
+      "pixel_fn": 2539,
+      "iou": 0.027637283236994218
+    },
+    {
+      "index": 6,
+      "id": "6621d769324f6e05d5838368",
+      "label": "crack",
+      "image": "hdmi/real_006.png",
+      "alarm": true,
+      "candidate_pixels": 35558,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4534,
+      "pixel_fp": 31024,
+      "pixel_fn": 4552,
+      "iou": 0.11303914235851409
+    },
+    {
+      "index": 7,
+      "id": "6621d769324f6e05d5838365",
+      "label": "crack",
+      "image": "hdmi/real_007.png",
+      "alarm": true,
+      "candidate_pixels": 40954,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4684,
+      "pixel_fp": 36270,
+      "pixel_fn": 2158,
+      "iou": 0.10864724438671368
+    },
+    {
+      "index": 8,
+      "id": "6621d769324f6e05d5838369",
+      "label": "crack",
+      "image": "hdmi/real_008.png",
+      "alarm": true,
+      "candidate_pixels": 38237,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 2196,
+      "pixel_fp": 36041,
+      "pixel_fn": 2798,
+      "iou": 0.05351529182405264
+    },
+    {
+      "index": 9,
+      "id": "6621d769324f6e05d583836a",
+      "label": "crack",
+      "image": "hdmi/real_009.png",
+      "alarm": true,
+      "candidate_pixels": 48404,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4105,
+      "pixel_fp": 44299,
+      "pixel_fn": 1908,
+      "iou": 0.08159087295277469
+    },
+    {
+      "index": 10,
+      "id": "6621d769324f6e05d5838361",
+      "label": "crack",
+      "image": "hdmi/real_010.png",
+      "alarm": true,
+      "candidate_pixels": 44308,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4094,
+      "pixel_fp": 40214,
+      "pixel_fn": 4888,
+      "iou": 0.08321814781689568
+    },
+    {
+      "index": 11,
+      "id": "6621d769324f6e05d5838364",
+      "label": "crack",
+      "image": "hdmi/real_011.png",
+      "alarm": true,
+      "candidate_pixels": 41215,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 2213,
+      "pixel_fp": 39002,
+      "pixel_fn": 1001,
+      "iou": 0.052420883077506156
+    },
+    {
+      "index": 12,
+      "id": "6621d769324f6e05d5838367",
+      "label": "crack",
+      "image": "hdmi/real_012.png",
+      "alarm": true,
+      "candidate_pixels": 43048,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 5223,
+      "pixel_fp": 37825,
+      "pixel_fn": 2131,
+      "iou": 0.1156068084729631
+    },
+    {
+      "index": 13,
+      "id": "6621d769324f6e05d5838366",
+      "label": "crack",
+      "image": "hdmi/real_013.png",
+      "alarm": true,
+      "candidate_pixels": 39294,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 2695,
+      "pixel_fp": 36599,
+      "pixel_fn": 2442,
+      "iou": 0.06457255127467894
+    },
+    {
+      "index": 14,
+      "id": "6621d769324f6e05d5838360",
+      "label": "crack",
+      "image": "hdmi/real_014.png",
+      "alarm": true,
+      "candidate_pixels": 37820,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 2156,
+      "pixel_fp": 35664,
+      "pixel_fn": 1915,
+      "iou": 0.05425946898200579
+    },
+    {
+      "index": 15,
+      "id": "6621d769324f6e05d583835d",
+      "label": "crack",
+      "image": "hdmi/real_015.png",
+      "alarm": true,
+      "candidate_pixels": 38147,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 1298,
+      "pixel_fp": 36849,
+      "pixel_fn": 783,
+      "iou": 0.03334189571024917
+    },
+    {
+      "index": 16,
+      "id": "6621d769324f6e05d583835b",
+      "label": "crack",
+      "image": "hdmi/real_016.png",
+      "alarm": true,
+      "candidate_pixels": 34918,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3428,
+      "pixel_fp": 31490,
+      "pixel_fn": 1806,
+      "iou": 0.09334495153033438
+    },
+    {
+      "index": 17,
+      "id": "6621d769324f6e05d58383b1",
+      "label": "glue_strip",
+      "image": "hdmi/real_017.png",
+      "alarm": true,
+      "candidate_pixels": 29424,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 339,
+      "pixel_fp": 29085,
+      "pixel_fn": 15445,
+      "iou": 0.0075553277318415836
+    },
+    {
+      "index": 18,
+      "id": "6621d769324f6e05d58383b0",
+      "label": "glue_strip",
+      "image": "hdmi/real_018.png",
+      "alarm": true,
+      "candidate_pixels": 27217,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 298,
+      "pixel_fp": 26919,
+      "pixel_fn": 20630,
+      "iou": 0.006228185675172947
+    },
+    {
+      "index": 19,
+      "id": "6621d769324f6e05d58383ab",
+      "label": "glue_strip",
+      "image": "hdmi/real_019.png",
+      "alarm": true,
+      "candidate_pixels": 35208,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 146,
+      "pixel_fp": 35062,
+      "pixel_fn": 19257,
+      "iou": 0.0026806205820251536
+    },
+    {
+      "index": 20,
+      "id": "6621d769324f6e05d58383ae",
+      "label": "glue_strip",
+      "image": "hdmi/real_020.png",
+      "alarm": true,
+      "candidate_pixels": 23583,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3928,
+      "pixel_fp": 19655,
+      "pixel_fn": 84793,
+      "iou": 0.03624418690484978
+    },
+    {
+      "index": 21,
+      "id": "6621d769324f6e05d58383b4",
+      "label": "glue_strip",
+      "image": "hdmi/real_021.png",
+      "alarm": true,
+      "candidate_pixels": 36880,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 398,
+      "pixel_fp": 36482,
+      "pixel_fn": 45804,
+      "iou": 0.004813506845338881
+    },
+    {
+      "index": 22,
+      "id": "6621d769324f6e05d58383b5",
+      "label": "glue_strip",
+      "image": "hdmi/real_022.png",
+      "alarm": true,
+      "candidate_pixels": 38989,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 108,
+      "pixel_fp": 38881,
+      "pixel_fn": 13815,
+      "iou": 0.002045299598515264
+    },
+    {
+      "index": 23,
+      "id": "6621d769324f6e05d58383ba",
+      "label": "glue_strip",
+      "image": "hdmi/real_023.png",
+      "alarm": true,
+      "candidate_pixels": 31589,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 922,
+      "pixel_fp": 30667,
+      "pixel_fn": 43213,
+      "iou": 0.012325873639742253
+    },
+    {
+      "index": 24,
+      "id": "6621d769324f6e05d58383b7",
+      "label": "glue_strip",
+      "image": "hdmi/real_024.png",
+      "alarm": true,
+      "candidate_pixels": 42015,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 691,
+      "pixel_fp": 41324,
+      "pixel_fn": 34477,
+      "iou": 0.009033624431313078
+    },
+    {
+      "index": 25,
+      "id": "6621d769324f6e05d58383bb",
+      "label": "glue_strip",
+      "image": "hdmi/real_025.png",
+      "alarm": true,
+      "candidate_pixels": 35813,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 1026,
+      "pixel_fp": 34787,
+      "pixel_fn": 31496,
+      "iou": 0.015243132419141572
+    },
+    {
+      "index": 26,
+      "id": "6621d769324f6e05d58383bc",
+      "label": "glue_strip",
+      "image": "hdmi/real_026.png",
+      "alarm": true,
+      "candidate_pixels": 41364,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 536,
+      "pixel_fp": 40828,
+      "pixel_fn": 11799,
+      "iou": 0.010082200026334105
+    },
+    {
+      "index": 27,
+      "id": "6621d769324f6e05d58383b3",
+      "label": "glue_strip",
+      "image": "hdmi/real_027.png",
+      "alarm": true,
+      "candidate_pixels": 32510,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 212,
+      "pixel_fp": 32298,
+      "pixel_fn": 41132,
+      "iou": 0.002878791993699248
+    },
+    {
+      "index": 28,
+      "id": "6621d769324f6e05d58383b6",
+      "label": "glue_strip",
+      "image": "hdmi/real_028.png",
+      "alarm": true,
+      "candidate_pixels": 39407,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 330,
+      "pixel_fp": 39077,
+      "pixel_fn": 24498,
+      "iou": 0.005163915186605117
+    },
+    {
+      "index": 29,
+      "id": "6621d769324f6e05d58383b9",
+      "label": "glue_strip",
+      "image": "hdmi/real_029.png",
+      "alarm": true,
+      "candidate_pixels": 31622,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 195,
+      "pixel_fp": 31427,
+      "pixel_fn": 26589,
+      "iou": 0.0033498823246465447
+    },
+    {
+      "index": 30,
+      "id": "6621d769324f6e05d58383b8",
+      "label": "glue_strip",
+      "image": "hdmi/real_030.png",
+      "alarm": true,
+      "candidate_pixels": 36883,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 89,
+      "pixel_fp": 36794,
+      "pixel_fn": 5261,
+      "iou": 0.0021118071374335613
+    },
+    {
+      "index": 31,
+      "id": "6621d769324f6e05d58383b2",
+      "label": "glue_strip",
+      "image": "hdmi/real_031.png",
+      "alarm": true,
+      "candidate_pixels": 33779,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 150,
+      "pixel_fp": 33629,
+      "pixel_fn": 12078,
+      "iou": 0.003271038227533419
+    },
+    {
+      "index": 32,
+      "id": "6621d769324f6e05d58383af",
+      "label": "glue_strip",
+      "image": "hdmi/real_032.png",
+      "alarm": true,
+      "candidate_pixels": 36015,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 88,
+      "pixel_fp": 35927,
+      "pixel_fn": 12008,
+      "iou": 0.0018324552818441164
+    },
+    {
+      "index": 33,
+      "id": "6621d769324f6e05d58383ac",
+      "label": "glue_strip",
+      "image": "hdmi/real_033.png",
+      "alarm": true,
+      "candidate_pixels": 44556,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 216,
+      "pixel_fp": 44340,
+      "pixel_fn": 8280,
+      "iou": 0.004088121735180559
+    },
+    {
+      "index": 34,
+      "id": "6621d769324f6e05d58383ad",
+      "label": "glue_strip",
+      "image": "hdmi/real_034.png",
+      "alarm": true,
+      "candidate_pixels": 26114,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 234,
+      "pixel_fp": 25880,
+      "pixel_fn": 39043,
+      "iou": 0.003591325567475482
+    },
+    {
+      "index": 35,
+      "id": "6621d769324f6e05d5838381",
+      "label": "good",
+      "image": "hdmi/real_035.png",
+      "alarm": true,
+      "candidate_pixels": 37457,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 37457,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 36,
+      "id": "6621d769324f6e05d5838380",
+      "label": "good",
+      "image": "hdmi/real_036.png",
+      "alarm": true,
+      "candidate_pixels": 38374,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 38374,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 37,
+      "id": "6621d769324f6e05d583837a",
+      "label": "good",
+      "image": "hdmi/real_037.png",
+      "alarm": true,
+      "candidate_pixels": 38476,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 38476,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 38,
+      "id": "6621d769324f6e05d583837d",
+      "label": "good",
+      "image": "hdmi/real_038.png",
+      "alarm": true,
+      "candidate_pixels": 39810,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 39810,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 39,
+      "id": "6621d769324f6e05d5838385",
+      "label": "good",
+      "image": "hdmi/real_039.png",
+      "alarm": true,
+      "candidate_pixels": 38809,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 38809,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 40,
+      "id": "6621d769324f6e05d5838386",
+      "label": "good",
+      "image": "hdmi/real_040.png",
+      "alarm": true,
+      "candidate_pixels": 37428,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 37428,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 41,
+      "id": "6621d769324f6e05d583838b",
+      "label": "good",
+      "image": "hdmi/real_041.png",
+      "alarm": true,
+      "candidate_pixels": 42129,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 42129,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 42,
+      "id": "6621d769324f6e05d5838388",
+      "label": "good",
+      "image": "hdmi/real_042.png",
+      "alarm": true,
+      "candidate_pixels": 42048,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 42048,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 43,
+      "id": "6621d769324f6e05d583838e",
+      "label": "good",
+      "image": "hdmi/real_043.png",
+      "alarm": true,
+      "candidate_pixels": 44864,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 44864,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 44,
+      "id": "6621d769324f6e05d5838391",
+      "label": "good",
+      "image": "hdmi/real_044.png",
+      "alarm": true,
+      "candidate_pixels": 28064,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 28064,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 45,
+      "id": "6621d769324f6e05d5838384",
+      "label": "good",
+      "image": "hdmi/real_045.png",
+      "alarm": true,
+      "candidate_pixels": 38631,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 38631,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 46,
+      "id": "6621d769324f6e05d5838387",
+      "label": "good",
+      "image": "hdmi/real_046.png",
+      "alarm": true,
+      "candidate_pixels": 41102,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 41102,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 47,
+      "id": "6621d769324f6e05d583838a",
+      "label": "good",
+      "image": "hdmi/real_047.png",
+      "alarm": true,
+      "candidate_pixels": 48681,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 48681,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 48,
+      "id": "6621d769324f6e05d5838389",
+      "label": "good",
+      "image": "hdmi/real_048.png",
+      "alarm": true,
+      "candidate_pixels": 42045,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 42045,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 49,
+      "id": "6621d769324f6e05d5838382",
+      "label": "good",
+      "image": "hdmi/real_049.png",
+      "alarm": true,
+      "candidate_pixels": 43370,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 43370,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 50,
+      "id": "6621d769324f6e05d583837f",
+      "label": "good",
+      "image": "hdmi/real_050.png",
+      "alarm": true,
+      "candidate_pixels": 37282,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 37282,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 51,
+      "id": "6621d769324f6e05d583837b",
+      "label": "good",
+      "image": "hdmi/real_051.png",
+      "alarm": true,
+      "candidate_pixels": 44246,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 44246,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 52,
+      "id": "6621d769324f6e05d583837c",
+      "label": "good",
+      "image": "hdmi/real_052.png",
+      "alarm": true,
+      "candidate_pixels": 35432,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 35432,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 53,
+      "id": "6621d769324f6e05d5838395",
+      "label": "good",
+      "image": "hdmi/real_053.png",
+      "alarm": true,
+      "candidate_pixels": 44373,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 44373,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 54,
+      "id": "6621d769324f6e05d5838394",
+      "label": "good",
+      "image": "hdmi/real_054.png",
+      "alarm": true,
+      "candidate_pixels": 46526,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 46526,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 55,
+      "id": "6621d769324f6e05d583838f",
+      "label": "good",
+      "image": "hdmi/real_055.png",
+      "alarm": true,
+      "candidate_pixels": 37480,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 37480,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 56,
+      "id": "6621d769324f6e05d5838390",
+      "label": "good",
+      "image": "hdmi/real_056.png",
+      "alarm": true,
+      "candidate_pixels": 37743,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 37743,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 57,
+      "id": "6621d769324f6e05d583838d",
+      "label": "good",
+      "image": "hdmi/real_057.png",
+      "alarm": true,
+      "candidate_pixels": 33333,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 33333,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 58,
+      "id": "6621d769324f6e05d583838c",
+      "label": "good",
+      "image": "hdmi/real_058.png",
+      "alarm": true,
+      "candidate_pixels": 41360,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 41360,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 59,
+      "id": "6621d769324f6e05d5838396",
+      "label": "good",
+      "image": "hdmi/real_059.png",
+      "alarm": true,
+      "candidate_pixels": 40976,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 40976,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 60,
+      "id": "6621d769324f6e05d5838393",
+      "label": "good",
+      "image": "hdmi/real_060.png",
+      "alarm": true,
+      "candidate_pixels": 44464,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 44464,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 61,
+      "id": "6621d769324f6e05d5838398",
+      "label": "good",
+      "image": "hdmi/real_061.png",
+      "alarm": true,
+      "candidate_pixels": 41213,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 41213,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 62,
+      "id": "6621d769324f6e05d583839a",
+      "label": "good",
+      "image": "hdmi/real_062.png",
+      "alarm": true,
+      "candidate_pixels": 32106,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 32106,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 63,
+      "id": "6621d769324f6e05d5838383",
+      "label": "good",
+      "image": "hdmi/real_063.png",
+      "alarm": true,
+      "candidate_pixels": 29748,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 29748,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 64,
+      "id": "6621d769324f6e05d583837e",
+      "label": "good",
+      "image": "hdmi/real_064.png",
+      "alarm": true,
+      "candidate_pixels": 41946,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 41946,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 65,
+      "id": "6621d769324f6e05d5838397",
+      "label": "good",
+      "image": "hdmi/real_065.png",
+      "alarm": true,
+      "candidate_pixels": 34371,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 34371,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 66,
+      "id": "6621d769324f6e05d5838392",
+      "label": "good",
+      "image": "hdmi/real_066.png",
+      "alarm": true,
+      "candidate_pixels": 43192,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 43192,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 67,
+      "id": "6621d769324f6e05d5838399",
+      "label": "good",
+      "image": "hdmi/real_067.png",
+      "alarm": true,
+      "candidate_pixels": 37693,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 0,
+      "pixel_fp": 37693,
+      "pixel_fn": 0,
+      "iou": 0.0
+    },
+    {
+      "index": 68,
+      "id": "6621d769324f6e05d583839f",
+      "label": "gray_stroke",
+      "image": "hdmi/real_068.png",
+      "alarm": true,
+      "candidate_pixels": 30512,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 144,
+      "pixel_fp": 30368,
+      "pixel_fn": 4387,
+      "iou": 0.004126192727585317
+    },
+    {
+      "index": 69,
+      "id": "6621d769324f6e05d583839e",
+      "label": "gray_stroke",
+      "image": "hdmi/real_069.png",
+      "alarm": true,
+      "candidate_pixels": 31106,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 234,
+      "pixel_fp": 30872,
+      "pixel_fn": 10033,
+      "iou": 0.0056880332531174796
+    },
+    {
+      "index": 70,
+      "id": "6621d769324f6e05d583839b",
+      "label": "gray_stroke",
+      "image": "hdmi/real_070.png",
+      "alarm": true,
+      "candidate_pixels": 32838,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 91,
+      "pixel_fp": 32747,
+      "pixel_fn": 6018,
+      "iou": 0.0023419806464896028
+    },
+    {
+      "index": 71,
+      "id": "6621d769324f6e05d583839c",
+      "label": "gray_stroke",
+      "image": "hdmi/real_071.png",
+      "alarm": true,
+      "candidate_pixels": 35355,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 523,
+      "pixel_fp": 34832,
+      "pixel_fn": 12065,
+      "iou": 0.01102910164487558
+    },
+    {
+      "index": 72,
+      "id": "6621d769324f6e05d58383a2",
+      "label": "gray_stroke",
+      "image": "hdmi/real_072.png",
+      "alarm": true,
+      "candidate_pixels": 37462,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 343,
+      "pixel_fp": 37119,
+      "pixel_fn": 12085,
+      "iou": 0.006922719841766404
+    },
+    {
+      "index": 73,
+      "id": "6621d769324f6e05d58383a3",
+      "label": "gray_stroke",
+      "image": "hdmi/real_073.png",
+      "alarm": true,
+      "candidate_pixels": 42755,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 614,
+      "pixel_fp": 42141,
+      "pixel_fn": 10052,
+      "iou": 0.011627246387789497
+    },
+    {
+      "index": 74,
+      "id": "6621d769324f6e05d58383a8",
+      "label": "gray_stroke",
+      "image": "hdmi/real_074.png",
+      "alarm": true,
+      "candidate_pixels": 39502,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 454,
+      "pixel_fp": 39048,
+      "pixel_fn": 11364,
+      "iou": 0.008925411866472693
+    },
+    {
+      "index": 75,
+      "id": "6621d769324f6e05d58383a5",
+      "label": "gray_stroke",
+      "image": "hdmi/real_075.png",
+      "alarm": true,
+      "candidate_pixels": 27088,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 286,
+      "pixel_fp": 26802,
+      "pixel_fn": 13534,
+      "iou": 0.0070405199153168235
+    },
+    {
+      "index": 76,
+      "id": "6621d769324f6e05d58383a9",
+      "label": "gray_stroke",
+      "image": "hdmi/real_076.png",
+      "alarm": true,
+      "candidate_pixels": 27110,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 102,
+      "pixel_fp": 27008,
+      "pixel_fn": 6434,
+      "iou": 0.003040782256141188
+    },
+    {
+      "index": 77,
+      "id": "6621d769324f6e05d58383aa",
+      "label": "gray_stroke",
+      "image": "hdmi/real_077.png",
+      "alarm": true,
+      "candidate_pixels": 36952,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 504,
+      "pixel_fp": 36448,
+      "pixel_fn": 10046,
+      "iou": 0.010723860589812333
+    },
+    {
+      "index": 78,
+      "id": "6621d769324f6e05d58383a1",
+      "label": "gray_stroke",
+      "image": "hdmi/real_078.png",
+      "alarm": true,
+      "candidate_pixels": 32239,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 407,
+      "pixel_fp": 31832,
+      "pixel_fn": 15093,
+      "iou": 0.00859883376996535
+    },
+    {
+      "index": 79,
+      "id": "6621d769324f6e05d58383a4",
+      "label": "gray_stroke",
+      "image": "hdmi/real_079.png",
+      "alarm": true,
+      "candidate_pixels": 38962,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 825,
+      "pixel_fp": 38137,
+      "pixel_fn": 16544,
+      "iou": 0.014863258026159334
+    },
+    {
+      "index": 80,
+      "id": "6621d769324f6e05d58383a7",
+      "label": "gray_stroke",
+      "image": "hdmi/real_080.png",
+      "alarm": true,
+      "candidate_pixels": 34523,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 180,
+      "pixel_fp": 34343,
+      "pixel_fn": 6258,
+      "iou": 0.004413820161349648
+    },
+    {
+      "index": 81,
+      "id": "6621d769324f6e05d58383a6",
+      "label": "gray_stroke",
+      "image": "hdmi/real_081.png",
+      "alarm": true,
+      "candidate_pixels": 42116,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 427,
+      "pixel_fp": 41689,
+      "pixel_fn": 7383,
+      "iou": 0.008626436897715105
+    },
+    {
+      "index": 82,
+      "id": "6621d769324f6e05d58383a0",
+      "label": "gray_stroke",
+      "image": "hdmi/real_082.png",
+      "alarm": true,
+      "candidate_pixels": 33066,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 959,
+      "pixel_fp": 32107,
+      "pixel_fn": 16692,
+      "iou": 0.019273282688210942
+    },
+    {
+      "index": 83,
+      "id": "6621d769324f6e05d583839d",
+      "label": "gray_stroke",
+      "image": "hdmi/real_083.png",
+      "alarm": true,
+      "candidate_pixels": 35379,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 168,
+      "pixel_fp": 35211,
+      "pixel_fn": 4336,
+      "iou": 0.004230139745688027
+    },
+    {
+      "index": 84,
+      "id": "6621d769324f6e05d58383c3",
+      "label": "oil",
+      "image": "hdmi/real_084.png",
+      "alarm": true,
+      "candidate_pixels": 38102,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 7168,
+      "pixel_fp": 30934,
+      "pixel_fn": 48438,
+      "iou": 0.08282874971111624
+    },
+    {
+      "index": 85,
+      "id": "6621d769324f6e05d58383c2",
+      "label": "oil",
+      "image": "hdmi/real_085.png",
+      "alarm": true,
+      "candidate_pixels": 35164,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4407,
+      "pixel_fp": 30757,
+      "pixel_fn": 27841,
+      "iou": 0.06994682961669708
+    },
+    {
+      "index": 86,
+      "id": "6621d769324f6e05d58383bd",
+      "label": "oil",
+      "image": "hdmi/real_086.png",
+      "alarm": true,
+      "candidate_pixels": 35390,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 5722,
+      "pixel_fp": 29668,
+      "pixel_fn": 39925,
+      "iou": 0.07597424151895373
+    },
+    {
+      "index": 87,
+      "id": "6621d769324f6e05d58383c0",
+      "label": "oil",
+      "image": "hdmi/real_087.png",
+      "alarm": true,
+      "candidate_pixels": 36747,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4539,
+      "pixel_fp": 32208,
+      "pixel_fn": 30200,
+      "iou": 0.0677999014145518
+    },
+    {
+      "index": 88,
+      "id": "6621d769324f6e05d58383c6",
+      "label": "oil",
+      "image": "hdmi/real_088.png",
+      "alarm": true,
+      "candidate_pixels": 38100,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4140,
+      "pixel_fp": 33960,
+      "pixel_fn": 28761,
+      "iou": 0.06191950464396285
+    },
+    {
+      "index": 89,
+      "id": "6621d769324f6e05d58383c7",
+      "label": "oil",
+      "image": "hdmi/real_089.png",
+      "alarm": true,
+      "candidate_pixels": 35556,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3551,
+      "pixel_fp": 32005,
+      "pixel_fn": 27352,
+      "iou": 0.05644751065047371
+    },
+    {
+      "index": 90,
+      "id": "6621d769324f6e05d58383cc",
+      "label": "oil",
+      "image": "hdmi/real_090.png",
+      "alarm": true,
+      "candidate_pixels": 36875,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4788,
+      "pixel_fp": 32087,
+      "pixel_fn": 30659,
+      "iou": 0.07089762193857908
+    },
+    {
+      "index": 91,
+      "id": "6621d769324f6e05d58383c9",
+      "label": "oil",
+      "image": "hdmi/real_091.png",
+      "alarm": true,
+      "candidate_pixels": 31147,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4748,
+      "pixel_fp": 26399,
+      "pixel_fn": 35909,
+      "iou": 0.07080649009782868
+    },
+    {
+      "index": 92,
+      "id": "6621d769324f6e05d58383cd",
+      "label": "oil",
+      "image": "hdmi/real_092.png",
+      "alarm": true,
+      "candidate_pixels": 30581,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3526,
+      "pixel_fp": 27055,
+      "pixel_fn": 30552,
+      "iou": 0.0576775227782049
+    },
+    {
+      "index": 93,
+      "id": "6621d769324f6e05d58383ce",
+      "label": "oil",
+      "image": "hdmi/real_093.png",
+      "alarm": true,
+      "candidate_pixels": 33199,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4508,
+      "pixel_fp": 28691,
+      "pixel_fn": 31963,
+      "iou": 0.06918142475676008
+    },
+    {
+      "index": 94,
+      "id": "6621d769324f6e05d58383c5",
+      "label": "oil",
+      "image": "hdmi/real_094.png",
+      "alarm": true,
+      "candidate_pixels": 28115,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3561,
+      "pixel_fp": 24554,
+      "pixel_fn": 28770,
+      "iou": 0.06259998242067329
+    },
+    {
+      "index": 95,
+      "id": "6621d769324f6e05d58383c8",
+      "label": "oil",
+      "image": "hdmi/real_095.png",
+      "alarm": true,
+      "candidate_pixels": 35917,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4301,
+      "pixel_fp": 31616,
+      "pixel_fn": 24907,
+      "iou": 0.07071221886097594
+    },
+    {
+      "index": 96,
+      "id": "6621d769324f6e05d58383cb",
+      "label": "oil",
+      "image": "hdmi/real_096.png",
+      "alarm": true,
+      "candidate_pixels": 38061,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4431,
+      "pixel_fp": 33630,
+      "pixel_fn": 26991,
+      "iou": 0.06811473897804833
+    },
+    {
+      "index": 97,
+      "id": "6621d769324f6e05d58383ca",
+      "label": "oil",
+      "image": "hdmi/real_097.png",
+      "alarm": true,
+      "candidate_pixels": 40861,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4848,
+      "pixel_fp": 36013,
+      "pixel_fn": 27260,
+      "iou": 0.07116748139340291
+    },
+    {
+      "index": 98,
+      "id": "6621d769324f6e05d58383c4",
+      "label": "oil",
+      "image": "hdmi/real_098.png",
+      "alarm": true,
+      "candidate_pixels": 37307,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 5253,
+      "pixel_fp": 32054,
+      "pixel_fn": 36073,
+      "iou": 0.07158626328699919
+    },
+    {
+      "index": 99,
+      "id": "6621d769324f6e05d58383c1",
+      "label": "oil",
+      "image": "hdmi/real_099.png",
+      "alarm": true,
+      "candidate_pixels": 28220,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 6072,
+      "pixel_fp": 22148,
+      "pixel_fn": 52678,
+      "iou": 0.07505747978936439
+    },
+    {
+      "index": 100,
+      "id": "6621d769324f6e05d58383be",
+      "label": "oil",
+      "image": "hdmi/real_100.png",
+      "alarm": true,
+      "candidate_pixels": 35998,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 6798,
+      "pixel_fp": 29200,
+      "pixel_fn": 47675,
+      "iou": 0.08124484600767272
+    },
+    {
+      "index": 101,
+      "id": "6621d769324f6e05d58383bf",
+      "label": "oil",
+      "image": "hdmi/real_101.png",
+      "alarm": true,
+      "candidate_pixels": 39683,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 7889,
+      "pixel_fp": 31794,
+      "pixel_fn": 41163,
+      "iou": 0.09758058531034312
+    },
+    {
+      "index": 102,
+      "id": "6621d769324f6e05d583836d",
+      "label": "rough",
+      "image": "hdmi/real_102.png",
+      "alarm": true,
+      "candidate_pixels": 43864,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 1777,
+      "pixel_fp": 42087,
+      "pixel_fn": 21829,
+      "iou": 0.027050066217100755
+    },
+    {
+      "index": 103,
+      "id": "6621d769324f6e05d583836b",
+      "label": "rough",
+      "image": "hdmi/real_103.png",
+      "alarm": true,
+      "candidate_pixels": 43053,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3147,
+      "pixel_fp": 39906,
+      "pixel_fn": 27746,
+      "iou": 0.044449780364129436
+    },
+    {
+      "index": 104,
+      "id": "6621d769324f6e05d583836c",
+      "label": "rough",
+      "image": "hdmi/real_104.png",
+      "alarm": true,
+      "candidate_pixels": 35943,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 2704,
+      "pixel_fp": 33239,
+      "pixel_fn": 48895,
+      "iou": 0.03187250996015936
+    },
+    {
+      "index": 105,
+      "id": "6621d769324f6e05d583836e",
+      "label": "rough",
+      "image": "hdmi/real_105.png",
+      "alarm": true,
+      "candidate_pixels": 41088,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 633,
+      "pixel_fp": 40455,
+      "pixel_fn": 9605,
+      "iou": 0.01248693113447616
+    },
+    {
+      "index": 106,
+      "id": "6621d769324f6e05d5838371",
+      "label": "rough",
+      "image": "hdmi/real_106.png",
+      "alarm": true,
+      "candidate_pixels": 43660,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 11724,
+      "pixel_fp": 31936,
+      "pixel_fn": 71143,
+      "iou": 0.10212276682665088
+    },
+    {
+      "index": 107,
+      "id": "6621d769324f6e05d5838372",
+      "label": "rough",
+      "image": "hdmi/real_107.png",
+      "alarm": true,
+      "candidate_pixels": 38035,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 2684,
+      "pixel_fp": 35351,
+      "pixel_fn": 20609,
+      "iou": 0.04576768296841962
+    },
+    {
+      "index": 108,
+      "id": "6621d769324f6e05d5838377",
+      "label": "rough",
+      "image": "hdmi/real_108.png",
+      "alarm": true,
+      "candidate_pixels": 39960,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 2047,
+      "pixel_fp": 37913,
+      "pixel_fn": 18188,
+      "iou": 0.03520327440324689
+    },
+    {
+      "index": 109,
+      "id": "6621d769324f6e05d5838374",
+      "label": "rough",
+      "image": "hdmi/real_109.png",
+      "alarm": true,
+      "candidate_pixels": 36907,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3298,
+      "pixel_fp": 33609,
+      "pixel_fn": 26303,
+      "iou": 0.05217528872013922
+    },
+    {
+      "index": 110,
+      "id": "6621d769324f6e05d5838378",
+      "label": "rough",
+      "image": "hdmi/real_110.png",
+      "alarm": true,
+      "candidate_pixels": 35510,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4507,
+      "pixel_fp": 31003,
+      "pixel_fn": 34234,
+      "iou": 0.06462204634090388
+    },
+    {
+      "index": 111,
+      "id": "6621d769324f6e05d5838379",
+      "label": "rough",
+      "image": "hdmi/real_111.png",
+      "alarm": true,
+      "candidate_pixels": 29147,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 7469,
+      "pixel_fp": 21678,
+      "pixel_fn": 63949,
+      "iou": 0.08022901091346567
+    },
+    {
+      "index": 112,
+      "id": "6621d769324f6e05d5838370",
+      "label": "rough",
+      "image": "hdmi/real_112.png",
+      "alarm": true,
+      "candidate_pixels": 35883,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 3089,
+      "pixel_fp": 32794,
+      "pixel_fn": 27291,
+      "iou": 0.04889669800867445
+    },
+    {
+      "index": 113,
+      "id": "6621d769324f6e05d5838373",
+      "label": "rough",
+      "image": "hdmi/real_113.png",
+      "alarm": true,
+      "candidate_pixels": 35267,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4122,
+      "pixel_fp": 31145,
+      "pixel_fn": 21261,
+      "iou": 0.07291961505802434
+    },
+    {
+      "index": 114,
+      "id": "6621d769324f6e05d5838376",
+      "label": "rough",
+      "image": "hdmi/real_114.png",
+      "alarm": true,
+      "candidate_pixels": 35229,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 6308,
+      "pixel_fp": 28921,
+      "pixel_fn": 45898,
+      "iou": 0.07775463162695527
+    },
+    {
+      "index": 115,
+      "id": "6621d769324f6e05d5838375",
+      "label": "rough",
+      "image": "hdmi/real_115.png",
+      "alarm": true,
+      "candidate_pixels": 24246,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 1583,
+      "pixel_fp": 22663,
+      "pixel_fn": 63203,
+      "iou": 0.018101979439444704
+    },
+    {
+      "index": 116,
+      "id": "6621d769324f6e05d583836f",
+      "label": "rough",
+      "image": "hdmi/real_116.png",
+      "alarm": true,
+      "candidate_pixels": 38334,
+      "boxes": [
+        [
+          390,
+          110,
+          889,
+          609
+        ]
+      ],
+      "region_overflow": false,
+      "pixel_tp": 4257,
+      "pixel_fp": 34077,
+      "pixel_fn": 29557,
+      "iou": 0.06270345112017793
+    }
+  ]
+}

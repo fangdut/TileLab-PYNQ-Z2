@@ -1,0 +1,39 @@
+{
+  "passed": false,
+  "scope": "New to this project; no threshold selection on these 24 images. Cross-material holdout, not factory validation.",
+  "limitations": "24 cracked marble images only; no normal-image false alarm rate; resize changes physical scale; physical sample identity unavailable.",
+  "manifest_sha256": "42ff9161255b87673c41c418ea9ce8be233b8b3e834278dbd7343c54b36a4e7a",
+  "fixed_parameters": {
+    "high": 90,
+    "low": 45,
+    "passes": 4,
+    "minimum_support": 3,
+    "seed_radius": 8,
+    "weak_radii": [
+      8,
+      16
+    ]
+  },
+  "programming": {
+    "path": "D:\\Vivado\\pynq_z2_tile_v1_53\\reports\\programmed_v153.json",
+    "marker_sha256": "d8f42d25ca6dcf41e05cf6886a6e3cf4b3dc518561b045dd5bf450f55389938a",
+    "record": {
+      "active_application": "hdmi_ethernet",
+      "configured_address": "192.168.33.10",
+      "boot_id": 2398464874,
+      "programmed_at": "2026-10-09T02:22:55.635380+00:00",
+      "sha256": {
+        "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+        "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+        "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+      }
+    },
+    "artifact_sha256": {
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\hdmi_ethernet\\build\\hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+    }
+  },
+  "items": [],
+  "error": "Traceback (most recent call last):\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_v153_holdout.py\", line 29, in main\n    reg.empty(bridge,90,4,boot);before=bridge.stats()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_v153_real.py\", line 102, in empty\n    frame,_,_=capture(bridge,high,boot);bridge.ack(frame)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_v153_real.py\", line 85, in capture\n    frame,image,mask=bridge.capture(threshold)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\host\\workstation.py\", line 401, in capture\n    packet=self.call(self.transport.capture,request.threshold,**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\host\\workstation.py\", line 405, in call\n    try:return fn(*args,**kw)\n               ^^^^^^^^^^^^^^\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\host\\tcp_transport.py\", line 142, in capture\n    if wide_weak and (not enhance or passes!=4 or self.peer_version<WIDE_WEAK_VERSION):raise ValueError('Wide weak support requires V1.52 firmware and four-pass growth')\n                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Wide weak support requires V1.52 firmware and four-pass growth\n"
+}

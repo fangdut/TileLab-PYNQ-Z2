@@ -1,0 +1,63 @@
+{
+  "version": 4,
+  "default": "mvtec_hdmi_weak_v124",
+  "recipes": [
+    {
+      "id": "synthetic_v16",
+      "name": "合成表面 · 弱裂纹增强",
+      "threshold": 36,
+      "requires_weak_support": true,
+      "description": "两级邻域支持；高阈值 36、低阈值 18。合成演示参数，真实纹理需单独标定。",
+      "calibration_sha256": null
+    },
+    {
+      "id": "synthetic_dark_v137",
+      "name": "暗色合成瓷砖 · 低亮度产品门禁",
+      "threshold": 36,
+      "requires_weak_support": true,
+      "weak_passes": 2,
+      "low_gate": true,
+      "description": "仅用于按材质标定的暗色合成演示：产品亮度加权和 R+2G+B 门槛由 320 降为 160；不属于通用产品分割。裂纹高/低阈值仍为 36/18，两级邻域支持。需以太网及 V1.37 固件，先连接读取状态。",
+      "calibration_sha256": null,
+      "scope": "Synthetic dark material demonstration; not factory validation or a universal segmentation algorithm"
+    },
+    {
+      "id": "mvtec_hdmi_weak_v124",
+      "name": "本机 HDMI 瓷砖 · 四级弱裂纹增强",
+      "threshold": 90,
+      "requires_weak_support": true,
+      "weak_passes": 4,
+      "description": "高阈值 90、低阈值 45；四级 3×3 邻域支持。阈值仅用 230 张历史正常实采图标定，算法配方已在 V1.24 实板回归通过，仅适用于当前材质与显示尺度。",
+      "calibration_sha256": "365da3a3e0481f41f5f98d406f385509d156f176ee2140942f09e09c546ccc5d",
+      "scope": "Current HDMI material and 500px texture scale; historical development, not independent factory accuracy"
+    },
+    {
+      "id": "mvtec_hdmi_wide_weak_v152",
+      "name": "本机 HDMI 瓷砖 · 双尺度弱裂纹增强",
+      "threshold": 90,
+      "requires_weak_support": true,
+      "weak_passes": 4,
+      "wide_weak": true,
+      "description": "保持半径 8 的强裂纹种子；弱支持同时参考半径 8 和半径 16 的对向灰度谷值。仅适用于 V1.52 固件与当前 HDMI 材质，先观察实板误报。",
+      "calibration_sha256": "78886954c5afd33a15e9d9fa9a539b6784f9a141c20f26de1d966bcbb0cb81f9",
+      "scope": "Historical development gate passed; no independent factory accuracy claim"
+    },
+    {
+      "id": "mvtec_hdmi_weak_v16",
+      "name": "本机 HDMI 瓷砖 · 弱裂纹增强",
+      "threshold": 89,
+      "requires_weak_support": true,
+      "description": "高阈值 89、低阈值 45；两级 3×3 邻域支持至少 3 点。已检查 230 张历史实采正常训练图；历史回归不代表盲测准确率。",
+      "calibration_sha256": "5c79edce1e958f72d4b9f100fb86fb7437a3a202746549eff4cbeee19e690059",
+      "scope": "Current HDMI pipeline at 500px texture scale; historical regression architecture selection"
+    },
+    {
+      "id": "mvtec_hdmi_baseline_v16",
+      "name": "本机 HDMI 瓷砖 · 原检测规则对照",
+      "threshold": 89,
+      "requires_weak_support": false,
+      "description": "关闭弱点补全，保留原单阈值规则。用于同一输入对照；不能保证适用于其他材料。",
+      "calibration_sha256": "9b7cd730fb12c86b5710ef58dc065fa769ece6ec1f28bc0e401f01fdf28fef3a"
+    }
+  ]
+}

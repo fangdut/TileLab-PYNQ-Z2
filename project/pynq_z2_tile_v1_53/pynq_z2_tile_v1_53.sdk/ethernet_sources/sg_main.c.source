@@ -1,0 +1,108 @@
+/* V1.5: ARM transports PL product/best-frame decisions; no image detection.
+ * SG ring has 32 pre-posted descriptors and 48 individually owned DDR slots.
+ * Queue, current best frame and DMA each hold independent ownership references.
+ */
+#include <string.h>
+#include "xil_io.h"
+#include "xil_cache.h"
+#include "xil_printf.h"
+#include "xiltimer.h"
+#include "event_queue.h"
+#include "network.h"
+#define DMA 0x40400000u
+#define CAP0 0x41290000u
+#define BD_BASE 0x10010000u
+#define BD_COUNT 32u
+#define PACKET_BYTES (FRAME_BYTES+DESC_WORDS*4u)
+EventQueue queue;
+static unsigned threshold=0,commit=0,cursor=0,last_seq=0;
+static uint64_t dma_used=0;
+static int best_slot=-1;
+static uint32_t best[DESC_WORDS];
+static XTime last_done;
+static void config(unsigned t){
+ commit^=0x80000000u;threshold=t;
+ Xil_Out32(0x41210000u,0x00500050u);Xil_Out32(0x41210008u,0x027f04afu);
+ queue.meta[M_CONFIG]=commit|0x00f30007u|(t<<8);Xil_Out32(0x41200008u,queue.meta[M_CONFIG]);
+}
+static unsigned free_slot(void){
+ unsigned i;uint64_t used=dma_used|queue.slot_used|(best_slot>=0?(1ULL<<best_slot):0);
+ for(i=0;i<FRAME_SLOTS;i++)if(!(used&(1ULL<<i)))return i;
+ return FRAME_SLOTS;
+}
+static unsigned reset_dma(void){
+ XTime t,now;XTime_GetTime(&t);Xil_Out32(DMA+0x30,4);
+ do{XTime_GetTime(&now);if(now-t>COUNTS_PER_SECOND)return 0;}while(Xil_In32(DMA+0x30)&4);
+ return 1;
+}
+static unsigned ring_start(void){
+ unsigned n,i,s;volatile uint32_t *bd;
+ if(!reset_dma()){return 0;}
+ dma_used=0;cursor=0;
+ for(n=0;n<BD_COUNT;n++){
+  bd=(volatile uint32_t*)(BD_BASE+n*64);s=free_slot();if(s>=FRAME_SLOTS)return 0;dma_used|=1ULL<<s;
+  for(i=0;i<16;i++)bd[i]=0;
+  bd[0]=BD_BASE+((n+1)%BD_COUNT)*64;bd[2]=FRAME_BASE+s*FRAME_STRIDE;bd[6]=PACKET_BYTES;
+ }
+ queue_barrier();Xil_Out32(DMA+0x38,BD_BASE);Xil_Out32(DMA+0x3c,0);
+ Xil_Out32(DMA+0x34,0x7000);Xil_Out32(DMA+0x30,1);
+ Xil_Out32(DMA+0x44,0);Xil_Out32(DMA+0x40,BD_BASE+(BD_COUNT-1)*64);
+ Xil_Out32(CAP0+8,2);queue.meta[M_ACTIVE]=1;XTime_GetTime(&last_done);return 1;
+}
+static void finish_product(void){
+ queue.meta[40]++; /* products completed, including good products */
+ if(best_slot>=0){
+  queue.meta[M_EVENTS]++;queue.meta[41]++;best[8]=1;best[38]|=32; /* completed product */
+  if(!queue_publish(&queue,(unsigned)best_slot,best))queue.meta[M_DROPPED]++;
+  best_slot=-1;
+ }
+}
+static void consume(unsigned slot,volatile uint32_t *trailer,XTime now){
+ uint32_t w[DESC_WORDS];unsigned i,req=queue.meta[M_REQUEST],reason=queue.meta[M_REASON];
+ for(i=0;i<DESC_WORDS;i++)w[i]=trailer[i];
+ if(w[0]!=0x54465334u || w[35]!=FRAME_BYTES || (w[6]|w[9])&0x80000000u){queue.meta[M_INVALID]++;return;}
+ w[1]=FRAME_BASE+slot*FRAME_STRIDE;w[34]=queue.meta[M_BOOT];w[36]=(uint32_t)(now/(COUNTS_PER_SECOND/1000));
+ queue.meta[M_CAPTURED]++;queue.meta[M_LAST_SEQ]=w[2];
+ if(last_seq && w[2]>last_seq+1)queue.meta[M_GAPS]+=w[2]-last_seq-1;
+ last_seq=w[2];queue.meta[42]=w[37];queue.meta[43]=w[38];
+ if(w[38]&2){if(best_slot>=0){queue.meta[44]++;finish_product();}}
+ if(w[38]&8){best_slot=(int)slot;memcpy(best,w,sizeof(best));queue.meta[45]++;}
+ if(w[38]&4)finish_product();
+ if(req!=queue.meta[M_REQUEST_ACK]){
+  w[8]=reason==1?2:3;
+  if(queue_publish(&queue,slot,w))queue.meta[M_REQUEST_ACK]=req;
+ }
+}
+static void acquisition(void){
+ unsigned n,status,s,newslot;volatile uint32_t *bd;XTime now;
+ for(n=0;n<BD_COUNT;n++){
+  bd=(volatile uint32_t*)(BD_BASE+cursor*64);status=bd[7];
+  if(!(status&0x80000000u))break;
+  queue_barrier();s=(bd[2]-FRAME_BASE)/FRAME_STRIDE;dma_used&=~(1ULL<<s);XTime_GetTime(&now);last_done=now;
+  if((status&0x70000000u) || (status&0x03ffffffu)!=PACKET_BYTES || (status&0x0c000000u)!=0x0c000000u)queue.meta[M_INVALID]++;
+  else consume(s,(volatile uint32_t*)(bd[2]+FRAME_BYTES),now);
+  newslot=free_slot();if(newslot>=FRAME_SLOTS){queue.meta[M_ERRORS]=0xbad00001;return;}
+  dma_used|=1ULL<<newslot;bd[2]=FRAME_BASE+newslot*FRAME_STRIDE;bd[7]=0;queue_barrier();
+  Xil_Out32(DMA+0x40,BD_BASE+cursor*64);cursor=(cursor+1)%BD_COUNT;
+ }
+ if(n>queue.meta[46])queue.meta[46]=n;
+ status=Xil_In32(DMA+0x34);
+ if(status&0x770){queue.meta[M_ERRORS]=status;queue.meta[M_ACTIVE]=0;}
+ queue.meta[M_FRAMES]=Xil_In32(0x41200000u);
+}
+static void apply_recipe_if_idle(void){
+ unsigned t=queue.meta[M_THRESHOLD];
+ /* PL product identity is authoritative. Do not mix thresholds within a tile. */
+ if(t>=1 && t<=255 && t!=threshold && (queue.meta[42]==0 || (queue.meta[43]&4)))config(t);
+}
+int main(void){
+ uint32_t boot;Xil_DCacheDisable();boot=Xil_In32(0x100000f0u);
+ if(!boot || Xil_In32(0x100000f4u)!=(uint32_t)~boot){xil_printf("Boot identity missing: use this version's programming script\r\n");return 1;}
+ queue_init(&queue,(volatile uint32_t*)0x10000000u,(volatile uint32_t*)0x10001000u,boot);
+ Xil_Out32(CAP0+8,0);config(36);tile_network_start();
+ if(!ring_start()){xil_printf("SG ring initialization failed\r\n");return 1;}
+ queue.meta[M_ENABLE]=1;
+ xil_printf("Tile V1.5 PL products/best-frame; SG32 slots48; TCP9133\r\n");
+ for(;;){queue_ack(&queue);acquisition();apply_recipe_if_idle();tile_network_poll();queue.meta[M_HEARTBEAT]++;}
+}
+int tile_network_maintenance_safe(void){return 1;}

@@ -1,0 +1,3279 @@
+{
+  "origin": "PROCEDURAL_SYNTHETIC",
+  "note": "96 synthetic inputs and masks, not camera photographs or real-world accuracy",
+  "items": [
+    {
+      "id": "tile_000",
+      "image": "synthetic/tile_000.png",
+      "truth": "synthetic/tile_000_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092200,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 90,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_001",
+      "image": "synthetic/tile_001.png",
+      "truth": "synthetic/tile_001_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        727,
+        130,
+        859,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092201,
+      "width": 1,
+      "nuisance": "plain",
+      "brightness": 90,
+      "candidate_pixels": 581,
+      "boxes": [
+        [
+          727,
+          130,
+          859,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 1.0,
+        "iou": 1.0
+      }
+    },
+    {
+      "id": "tile_002",
+      "image": "synthetic/tile_002.png",
+      "truth": "synthetic/tile_002_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092202,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 130,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_003",
+      "image": "synthetic/tile_003.png",
+      "truth": "synthetic/tile_003_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        552,
+        130,
+        691,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092203,
+      "width": 2,
+      "nuisance": "plain",
+      "brightness": 130,
+      "candidate_pixels": 1031,
+      "boxes": [
+        [
+          552,
+          130,
+          691,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1031,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 1.0,
+        "iou": 1.0
+      }
+    },
+    {
+      "id": "tile_004",
+      "image": "synthetic/tile_004.png",
+      "truth": "synthetic/tile_004_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092204,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 175,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_005",
+      "image": "synthetic/tile_005.png",
+      "truth": "synthetic/tile_005_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        491,
+        130,
+        665,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092205,
+      "width": 3,
+      "nuisance": "plain",
+      "brightness": 175,
+      "candidate_pixels": 1031,
+      "boxes": [
+        [
+          491,
+          130,
+          665,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1031,
+        "fp": 0,
+        "fn": 577,
+        "pixel_recall": 0.6411691542288557,
+        "pixel_precision": 1.0,
+        "iou": 0.6411691542288557
+      }
+    },
+    {
+      "id": "tile_006",
+      "image": "synthetic/tile_006.png",
+      "truth": "synthetic/tile_006_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092206,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_007",
+      "image": "synthetic/tile_007.png",
+      "truth": "synthetic/tile_007_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        673,
+        130,
+        803,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092207,
+      "width": 5,
+      "nuisance": "plain",
+      "brightness": 220,
+      "candidate_pixels": 1181,
+      "boxes": [
+        [
+          673,
+          130,
+          803,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1181,
+        "fp": 0,
+        "fn": 1554,
+        "pixel_recall": 0.4318098720292505,
+        "pixel_precision": 1.0,
+        "iou": 0.4318098720292505
+      }
+    },
+    {
+      "id": "tile_008",
+      "image": "synthetic/tile_008.png",
+      "truth": "synthetic/tile_008_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092208,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 90,
+      "candidate_pixels": 4,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 4,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_009",
+      "image": "synthetic/tile_009.png",
+      "truth": "synthetic/tile_009_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        743,
+        130,
+        885,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092209,
+      "width": 8,
+      "nuisance": "faint_pattern",
+      "brightness": 90,
+      "candidate_pixels": 364,
+      "boxes": [
+        [
+          743,
+          130,
+          885,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 364,
+        "fp": 0,
+        "fn": 4007,
+        "pixel_recall": 0.08327613818348203,
+        "pixel_precision": 1.0,
+        "iou": 0.08327613818348203
+      }
+    },
+    {
+      "id": "tile_010",
+      "image": "synthetic/tile_010.png",
+      "truth": "synthetic/tile_010_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092210,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 130,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_011",
+      "image": "synthetic/tile_011.png",
+      "truth": "synthetic/tile_011_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        757,
+        130,
+        871,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092211,
+      "width": 1,
+      "nuisance": "faint_pattern",
+      "brightness": 130,
+      "candidate_pixels": 587,
+      "boxes": [
+        [
+          757,
+          100,
+          1136,
+          620
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 6,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.989778534923339,
+        "iou": 0.989778534923339
+      }
+    },
+    {
+      "id": "tile_012",
+      "image": "synthetic/tile_012.png",
+      "truth": "synthetic/tile_012_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092212,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 175,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_013",
+      "image": "synthetic/tile_013.png",
+      "truth": "synthetic/tile_013_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        613,
+        130,
+        742,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092213,
+      "width": 2,
+      "nuisance": "faint_pattern",
+      "brightness": 175,
+      "candidate_pixels": 1031,
+      "boxes": [
+        [
+          613,
+          130,
+          742,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1031,
+        "fp": 0,
+        "fn": 16,
+        "pixel_recall": 0.9847182425978988,
+        "pixel_precision": 1.0,
+        "iou": 0.9847182425978988
+      }
+    },
+    {
+      "id": "tile_014",
+      "image": "synthetic/tile_014.png",
+      "truth": "synthetic/tile_014_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092214,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 220,
+      "candidate_pixels": 5,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 5,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_015",
+      "image": "synthetic/tile_015.png",
+      "truth": "synthetic/tile_015_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        674,
+        130,
+        796,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092215,
+      "width": 3,
+      "nuisance": "faint_pattern",
+      "brightness": 220,
+      "candidate_pixels": 1033,
+      "boxes": [
+        [
+          674,
+          130,
+          796,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1033,
+        "fp": 0,
+        "fn": 573,
+        "pixel_recall": 0.6432129514321295,
+        "pixel_precision": 1.0,
+        "iou": 0.6432129514321295
+      }
+    },
+    {
+      "id": "tile_016",
+      "image": "synthetic/tile_016.png",
+      "truth": "synthetic/tile_016_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092216,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 90,
+      "candidate_pixels": 280,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 280,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_017",
+      "image": "synthetic/tile_017.png",
+      "truth": "synthetic/tile_017_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        702,
+        129,
+        848,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092217,
+      "width": 5,
+      "nuisance": "dark_stain",
+      "brightness": 90,
+      "candidate_pixels": 1376,
+      "boxes": [
+        [
+          300,
+          129,
+          848,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1138,
+        "fp": 238,
+        "fn": 1585,
+        "pixel_recall": 0.41792141020932794,
+        "pixel_precision": 0.8270348837209303,
+        "iou": 0.38432961837217156
+      }
+    },
+    {
+      "id": "tile_018",
+      "image": "synthetic/tile_018.png",
+      "truth": "synthetic/tile_018_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092218,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 130,
+      "candidate_pixels": 427,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 427,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_019",
+      "image": "synthetic/tile_019.png",
+      "truth": "synthetic/tile_019_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        661,
+        129,
+        818,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092219,
+      "width": 8,
+      "nuisance": "dark_stain",
+      "brightness": 130,
+      "candidate_pixels": 732,
+      "boxes": [
+        [
+          300,
+          129,
+          818,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 448,
+        "fp": 284,
+        "fn": 4030,
+        "pixel_recall": 0.10004466279589103,
+        "pixel_precision": 0.6120218579234973,
+        "iou": 0.09407811843763125
+      }
+    },
+    {
+      "id": "tile_020",
+      "image": "synthetic/tile_020.png",
+      "truth": "synthetic/tile_020_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092220,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 175,
+      "candidate_pixels": 237,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 237,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_021",
+      "image": "synthetic/tile_021.png",
+      "truth": "synthetic/tile_021_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        604,
+        130,
+        733,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092221,
+      "width": 1,
+      "nuisance": "dark_stain",
+      "brightness": 175,
+      "candidate_pixels": 1009,
+      "boxes": [
+        [
+          300,
+          130,
+          733,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 428,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.5758176412289395,
+        "iou": 0.5758176412289395
+      }
+    },
+    {
+      "id": "tile_022",
+      "image": "synthetic/tile_022.png",
+      "truth": "synthetic/tile_022_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092222,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 220,
+      "candidate_pixels": 278,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 278,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_023",
+      "image": "synthetic/tile_023.png",
+      "truth": "synthetic/tile_023_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        626,
+        130,
+        743,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092223,
+      "width": 2,
+      "nuisance": "dark_stain",
+      "brightness": 220,
+      "candidate_pixels": 1269,
+      "boxes": [
+        [
+          300,
+          130,
+          743,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1029,
+        "fp": 240,
+        "fn": 32,
+        "pixel_recall": 0.9698397737983034,
+        "pixel_precision": 0.8108747044917257,
+        "iou": 0.7909300538047656
+      }
+    },
+    {
+      "id": "tile_024",
+      "image": "synthetic/tile_024.png",
+      "truth": "synthetic/tile_024_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092224,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 90,
+      "candidate_pixels": 40,
+      "boxes": [
+        [
+          849,
+          179,
+          1051,
+          401
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 40,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_025",
+      "image": "synthetic/tile_025.png",
+      "truth": "synthetic/tile_025_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        556,
+        130,
+        677,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092225,
+      "width": 3,
+      "nuisance": "reflection",
+      "brightness": 90,
+      "candidate_pixels": 1036,
+      "boxes": [
+        [
+          556,
+          130,
+          1002,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1032,
+        "fp": 4,
+        "fn": 480,
+        "pixel_recall": 0.6825396825396826,
+        "pixel_precision": 0.9961389961389961,
+        "iou": 0.6807387862796834
+      }
+    },
+    {
+      "id": "tile_026",
+      "image": "synthetic/tile_026.png",
+      "truth": "synthetic/tile_026_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092226,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 130,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_027",
+      "image": "synthetic/tile_027.png",
+      "truth": "synthetic/tile_027_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        456,
+        130,
+        608,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092227,
+      "width": 5,
+      "nuisance": "reflection",
+      "brightness": 130,
+      "candidate_pixels": 465,
+      "boxes": [
+        [
+          456,
+          130,
+          1051,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 420,
+        "fp": 45,
+        "fn": 2289,
+        "pixel_recall": 0.15503875968992248,
+        "pixel_precision": 0.9032258064516129,
+        "iou": 0.15250544662309368
+      }
+    },
+    {
+      "id": "tile_028",
+      "image": "synthetic/tile_028.png",
+      "truth": "synthetic/tile_028_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092228,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 175,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_029",
+      "image": "synthetic/tile_029.png",
+      "truth": "synthetic/tile_029_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        692,
+        128,
+        814,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092229,
+      "width": 8,
+      "nuisance": "reflection",
+      "brightness": 175,
+      "candidate_pixels": 499,
+      "boxes": [
+        [
+          692,
+          128,
+          814,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 499,
+        "fp": 0,
+        "fn": 4046,
+        "pixel_recall": 0.10979097909790979,
+        "pixel_precision": 1.0,
+        "iou": 0.10979097909790979
+      }
+    },
+    {
+      "id": "tile_030",
+      "image": "synthetic/tile_030.png",
+      "truth": "synthetic/tile_030_truth.png",
+      "split": "calibration",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092230,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_031",
+      "image": "synthetic/tile_031.png",
+      "truth": "synthetic/tile_031_truth.png",
+      "split": "calibration",
+      "truth_box": [
+        622,
+        130,
+        758,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092231,
+      "width": 1,
+      "nuisance": "reflection",
+      "brightness": 220,
+      "candidate_pixels": 581,
+      "boxes": [
+        [
+          622,
+          130,
+          758,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 1.0,
+        "iou": 1.0
+      }
+    },
+    {
+      "id": "tile_032",
+      "image": "synthetic/tile_032.png",
+      "truth": "synthetic/tile_032_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092232,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 90,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_033",
+      "image": "synthetic/tile_033.png",
+      "truth": "synthetic/tile_033_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        544,
+        130,
+        707,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092233,
+      "width": 2,
+      "nuisance": "plain",
+      "brightness": 90,
+      "candidate_pixels": 1030,
+      "boxes": [
+        [
+          544,
+          130,
+          707,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1030,
+        "fp": 0,
+        "fn": 16,
+        "pixel_recall": 0.9847036328871893,
+        "pixel_precision": 1.0,
+        "iou": 0.9847036328871893
+      }
+    },
+    {
+      "id": "tile_034",
+      "image": "synthetic/tile_034.png",
+      "truth": "synthetic/tile_034_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092234,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 130,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_035",
+      "image": "synthetic/tile_035.png",
+      "truth": "synthetic/tile_035_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        479,
+        129,
+        622,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092235,
+      "width": 3,
+      "nuisance": "plain",
+      "brightness": 130,
+      "candidate_pixels": 1037,
+      "boxes": [
+        [
+          479,
+          129,
+          622,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1037,
+        "fp": 0,
+        "fn": 540,
+        "pixel_recall": 0.657577679137603,
+        "pixel_precision": 1.0,
+        "iou": 0.657577679137603
+      }
+    },
+    {
+      "id": "tile_036",
+      "image": "synthetic/tile_036.png",
+      "truth": "synthetic/tile_036_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092236,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 175,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_037",
+      "image": "synthetic/tile_037.png",
+      "truth": "synthetic/tile_037_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        685,
+        129,
+        850,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092237,
+      "width": 5,
+      "nuisance": "plain",
+      "brightness": 175,
+      "candidate_pixels": 483,
+      "boxes": [
+        [
+          685,
+          129,
+          850,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 483,
+        "fp": 0,
+        "fn": 2273,
+        "pixel_recall": 0.17525399129172714,
+        "pixel_precision": 1.0,
+        "iou": 0.17525399129172714
+      }
+    },
+    {
+      "id": "tile_038",
+      "image": "synthetic/tile_038.png",
+      "truth": "synthetic/tile_038_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092238,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_039",
+      "image": "synthetic/tile_039.png",
+      "truth": "synthetic/tile_039_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        619,
+        129,
+        743,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092239,
+      "width": 8,
+      "nuisance": "plain",
+      "brightness": 220,
+      "candidate_pixels": 1188,
+      "boxes": [
+        [
+          619,
+          129,
+          743,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1188,
+        "fp": 0,
+        "fn": 3271,
+        "pixel_recall": 0.2664274501009195,
+        "pixel_precision": 1.0,
+        "iou": 0.2664274501009195
+      }
+    },
+    {
+      "id": "tile_040",
+      "image": "synthetic/tile_040.png",
+      "truth": "synthetic/tile_040_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092240,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 90,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_041",
+      "image": "synthetic/tile_041.png",
+      "truth": "synthetic/tile_041_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        570,
+        130,
+        691,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092241,
+      "width": 1,
+      "nuisance": "faint_pattern",
+      "brightness": 90,
+      "candidate_pixels": 587,
+      "boxes": [
+        [
+          570,
+          100,
+          1136,
+          620
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 6,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.989778534923339,
+        "iou": 0.989778534923339
+      }
+    },
+    {
+      "id": "tile_042",
+      "image": "synthetic/tile_042.png",
+      "truth": "synthetic/tile_042_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092242,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 130,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_043",
+      "image": "synthetic/tile_043.png",
+      "truth": "synthetic/tile_043_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        661,
+        130,
+        791,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092243,
+      "width": 2,
+      "nuisance": "faint_pattern",
+      "brightness": 130,
+      "candidate_pixels": 1092,
+      "boxes": [
+        [
+          661,
+          130,
+          791,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1092,
+        "fp": 0,
+        "fn": 2,
+        "pixel_recall": 0.9981718464351006,
+        "pixel_precision": 1.0,
+        "iou": 0.9981718464351006
+      }
+    },
+    {
+      "id": "tile_044",
+      "image": "synthetic/tile_044.png",
+      "truth": "synthetic/tile_044_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092244,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 175,
+      "candidate_pixels": 6,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 6,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_045",
+      "image": "synthetic/tile_045.png",
+      "truth": "synthetic/tile_045_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        596,
+        130,
+        740,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092245,
+      "width": 3,
+      "nuisance": "faint_pattern",
+      "brightness": 175,
+      "candidate_pixels": 445,
+      "boxes": [
+        [
+          596,
+          130,
+          740,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 445,
+        "fp": 0,
+        "fn": 1132,
+        "pixel_recall": 0.2821813570069753,
+        "pixel_precision": 1.0,
+        "iou": 0.2821813570069753
+      }
+    },
+    {
+      "id": "tile_046",
+      "image": "synthetic/tile_046.png",
+      "truth": "synthetic/tile_046_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092246,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_047",
+      "image": "synthetic/tile_047.png",
+      "truth": "synthetic/tile_047_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        556,
+        129,
+        674,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092247,
+      "width": 5,
+      "nuisance": "faint_pattern",
+      "brightness": 220,
+      "candidate_pixels": 450,
+      "boxes": [
+        [
+          556,
+          100,
+          1136,
+          620
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 445,
+        "fp": 5,
+        "fn": 2297,
+        "pixel_recall": 0.16229029905178702,
+        "pixel_precision": 0.9888888888888889,
+        "iou": 0.16199490353112486
+      }
+    },
+    {
+      "id": "tile_048",
+      "image": "synthetic/tile_048.png",
+      "truth": "synthetic/tile_048_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092248,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 90,
+      "candidate_pixels": 428,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 428,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_049",
+      "image": "synthetic/tile_049.png",
+      "truth": "synthetic/tile_049_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        724,
+        129,
+        880,
+        582
+      ],
+      "crack": true,
+      "seed": 2026092249,
+      "width": 8,
+      "nuisance": "dark_stain",
+      "brightness": 90,
+      "candidate_pixels": 1458,
+      "boxes": [
+        [
+          300,
+          129,
+          880,
+          582
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1175,
+        "fp": 283,
+        "fn": 3254,
+        "pixel_recall": 0.26529690675095957,
+        "pixel_precision": 0.8058984910836763,
+        "iou": 0.24936332767402378
+      }
+    },
+    {
+      "id": "tile_050",
+      "image": "synthetic/tile_050.png",
+      "truth": "synthetic/tile_050_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092250,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 130,
+      "candidate_pixels": 241,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 241,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_051",
+      "image": "synthetic/tile_051.png",
+      "truth": "synthetic/tile_051_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        654,
+        130,
+        776,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092251,
+      "width": 1,
+      "nuisance": "dark_stain",
+      "brightness": 130,
+      "candidate_pixels": 1008,
+      "boxes": [
+        [
+          300,
+          130,
+          776,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 580,
+        "fp": 428,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.5753968253968254,
+        "iou": 0.5753968253968254
+      }
+    },
+    {
+      "id": "tile_052",
+      "image": "synthetic/tile_052.png",
+      "truth": "synthetic/tile_052_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092252,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 175,
+      "candidate_pixels": 277,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 277,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_053",
+      "image": "synthetic/tile_053.png",
+      "truth": "synthetic/tile_053_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        631,
+        130,
+        789,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092253,
+      "width": 2,
+      "nuisance": "dark_stain",
+      "brightness": 175,
+      "candidate_pixels": 1317,
+      "boxes": [
+        [
+          300,
+          130,
+          789,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1080,
+        "fp": 237,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.8200455580865603,
+        "iou": 0.8200455580865603
+      }
+    },
+    {
+      "id": "tile_054",
+      "image": "synthetic/tile_054.png",
+      "truth": "synthetic/tile_054_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092254,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 220,
+      "candidate_pixels": 428,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 428,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_055",
+      "image": "synthetic/tile_055.png",
+      "truth": "synthetic/tile_055_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        661,
+        130,
+        802,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092255,
+      "width": 3,
+      "nuisance": "dark_stain",
+      "brightness": 220,
+      "candidate_pixels": 719,
+      "boxes": [
+        [
+          300,
+          130,
+          802,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 441,
+        "fp": 278,
+        "fn": 1073,
+        "pixel_recall": 0.2912813738441215,
+        "pixel_precision": 0.6133518776077886,
+        "iou": 0.24609375
+      }
+    },
+    {
+      "id": "tile_056",
+      "image": "synthetic/tile_056.png",
+      "truth": "synthetic/tile_056_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092256,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 90,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_057",
+      "image": "synthetic/tile_057.png",
+      "truth": "synthetic/tile_057_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        628,
+        130,
+        736,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092257,
+      "width": 5,
+      "nuisance": "reflection",
+      "brightness": 90,
+      "candidate_pixels": 1183,
+      "boxes": [
+        [
+          628,
+          130,
+          1051,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1137,
+        "fp": 46,
+        "fn": 1592,
+        "pixel_recall": 0.41663613045071457,
+        "pixel_precision": 0.9611158072696534,
+        "iou": 0.4097297297297297
+      }
+    },
+    {
+      "id": "tile_058",
+      "image": "synthetic/tile_058.png",
+      "truth": "synthetic/tile_058_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092258,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 130,
+      "candidate_pixels": 2,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_059",
+      "image": "synthetic/tile_059.png",
+      "truth": "synthetic/tile_059_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        590,
+        129,
+        738,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092259,
+      "width": 8,
+      "nuisance": "reflection",
+      "brightness": 130,
+      "candidate_pixels": 1183,
+      "boxes": [
+        [
+          590,
+          129,
+          738,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1183,
+        "fp": 0,
+        "fn": 3262,
+        "pixel_recall": 0.26614173228346455,
+        "pixel_precision": 1.0,
+        "iou": 0.26614173228346455
+      }
+    },
+    {
+      "id": "tile_060",
+      "image": "synthetic/tile_060.png",
+      "truth": "synthetic/tile_060_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092260,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 175,
+      "candidate_pixels": 35,
+      "boxes": [
+        [
+          849,
+          179,
+          1051,
+          401
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 35,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_061",
+      "image": "synthetic/tile_061.png",
+      "truth": "synthetic/tile_061_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        504,
+        130,
+        631,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092261,
+      "width": 1,
+      "nuisance": "reflection",
+      "brightness": 175,
+      "candidate_pixels": 585,
+      "boxes": [
+        [
+          504,
+          130,
+          981,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 4,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.9931623931623932,
+        "iou": 0.9931623931623932
+      }
+    },
+    {
+      "id": "tile_062",
+      "image": "synthetic/tile_062.png",
+      "truth": "synthetic/tile_062_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092262,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_063",
+      "image": "synthetic/tile_063.png",
+      "truth": "synthetic/tile_063_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        525,
+        130,
+        666,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092263,
+      "width": 2,
+      "nuisance": "reflection",
+      "brightness": 220,
+      "candidate_pixels": 405,
+      "boxes": [
+        [
+          525,
+          130,
+          666,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 405,
+        "fp": 0,
+        "fn": 656,
+        "pixel_recall": 0.3817153628652215,
+        "pixel_precision": 1.0,
+        "iou": 0.3817153628652215
+      }
+    },
+    {
+      "id": "tile_064",
+      "image": "synthetic/tile_064.png",
+      "truth": "synthetic/tile_064_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092264,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 90,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_065",
+      "image": "synthetic/tile_065.png",
+      "truth": "synthetic/tile_065_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        710,
+        130,
+        816,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092265,
+      "width": 3,
+      "nuisance": "plain",
+      "brightness": 90,
+      "candidate_pixels": 404,
+      "boxes": [
+        [
+          710,
+          130,
+          816,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 404,
+        "fp": 0,
+        "fn": 1107,
+        "pixel_recall": 0.2673726009265387,
+        "pixel_precision": 1.0,
+        "iou": 0.2673726009265387
+      }
+    },
+    {
+      "id": "tile_066",
+      "image": "synthetic/tile_066.png",
+      "truth": "synthetic/tile_066_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092266,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 130,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_067",
+      "image": "synthetic/tile_067.png",
+      "truth": "synthetic/tile_067_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        669,
+        130,
+        796,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092267,
+      "width": 5,
+      "nuisance": "plain",
+      "brightness": 130,
+      "candidate_pixels": 1137,
+      "boxes": [
+        [
+          669,
+          130,
+          796,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1137,
+        "fp": 0,
+        "fn": 1562,
+        "pixel_recall": 0.4212671359762875,
+        "pixel_precision": 1.0,
+        "iou": 0.4212671359762875
+      }
+    },
+    {
+      "id": "tile_068",
+      "image": "synthetic/tile_068.png",
+      "truth": "synthetic/tile_068_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092268,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 175,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_069",
+      "image": "synthetic/tile_069.png",
+      "truth": "synthetic/tile_069_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        555,
+        129,
+        683,
+        582
+      ],
+      "crack": true,
+      "seed": 2026092269,
+      "width": 8,
+      "nuisance": "plain",
+      "brightness": 175,
+      "candidate_pixels": 1204,
+      "boxes": [
+        [
+          555,
+          129,
+          683,
+          582
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1204,
+        "fp": 0,
+        "fn": 3314,
+        "pixel_recall": 0.266489597166888,
+        "pixel_precision": 1.0,
+        "iou": 0.266489597166888
+      }
+    },
+    {
+      "id": "tile_070",
+      "image": "synthetic/tile_070.png",
+      "truth": "synthetic/tile_070_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092270,
+      "width": 0,
+      "nuisance": "plain",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_071",
+      "image": "synthetic/tile_071.png",
+      "truth": "synthetic/tile_071_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        705,
+        130,
+        845,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092271,
+      "width": 1,
+      "nuisance": "plain",
+      "brightness": 220,
+      "candidate_pixels": 581,
+      "boxes": [
+        [
+          705,
+          130,
+          845,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 1.0,
+        "iou": 1.0
+      }
+    },
+    {
+      "id": "tile_072",
+      "image": "synthetic/tile_072.png",
+      "truth": "synthetic/tile_072_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092272,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 90,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_073",
+      "image": "synthetic/tile_073.png",
+      "truth": "synthetic/tile_073_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        677,
+        130,
+        793,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092273,
+      "width": 2,
+      "nuisance": "faint_pattern",
+      "brightness": 90,
+      "candidate_pixels": 430,
+      "boxes": [
+        [
+          677,
+          130,
+          793,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 430,
+        "fp": 0,
+        "fn": 633,
+        "pixel_recall": 0.4045155221072437,
+        "pixel_precision": 1.0,
+        "iou": 0.4045155221072437
+      }
+    },
+    {
+      "id": "tile_074",
+      "image": "synthetic/tile_074.png",
+      "truth": "synthetic/tile_074_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092274,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 130,
+      "candidate_pixels": 5,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 5,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_075",
+      "image": "synthetic/tile_075.png",
+      "truth": "synthetic/tile_075_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        589,
+        130,
+        755,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092275,
+      "width": 3,
+      "nuisance": "faint_pattern",
+      "brightness": 130,
+      "candidate_pixels": 1026,
+      "boxes": [
+        [
+          589,
+          130,
+          755,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1026,
+        "fp": 0,
+        "fn": 607,
+        "pixel_recall": 0.6282914880587875,
+        "pixel_precision": 1.0,
+        "iou": 0.6282914880587875
+      }
+    },
+    {
+      "id": "tile_076",
+      "image": "synthetic/tile_076.png",
+      "truth": "synthetic/tile_076_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092276,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 175,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_077",
+      "image": "synthetic/tile_077.png",
+      "truth": "synthetic/tile_077_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        684,
+        129,
+        816,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092277,
+      "width": 5,
+      "nuisance": "faint_pattern",
+      "brightness": 175,
+      "candidate_pixels": 1135,
+      "boxes": [
+        [
+          684,
+          100,
+          1136,
+          620
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1130,
+        "fp": 5,
+        "fn": 1654,
+        "pixel_recall": 0.40589080459770116,
+        "pixel_precision": 0.9955947136563876,
+        "iou": 0.4051631409107207
+      }
+    },
+    {
+      "id": "tile_078",
+      "image": "synthetic/tile_078.png",
+      "truth": "synthetic/tile_078_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092278,
+      "width": 0,
+      "nuisance": "faint_pattern",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_079",
+      "image": "synthetic/tile_079.png",
+      "truth": "synthetic/tile_079_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        720,
+        130,
+        869,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092279,
+      "width": 8,
+      "nuisance": "faint_pattern",
+      "brightness": 220,
+      "candidate_pixels": 1194,
+      "boxes": [
+        [
+          720,
+          130,
+          869,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1194,
+        "fp": 0,
+        "fn": 3167,
+        "pixel_recall": 0.27379041504242146,
+        "pixel_precision": 1.0,
+        "iou": 0.27379041504242146
+      }
+    },
+    {
+      "id": "tile_080",
+      "image": "synthetic/tile_080.png",
+      "truth": "synthetic/tile_080_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092280,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 90,
+      "candidate_pixels": 239,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 239,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_081",
+      "image": "synthetic/tile_081.png",
+      "truth": "synthetic/tile_081_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        748,
+        130,
+        885,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092281,
+      "width": 1,
+      "nuisance": "dark_stain",
+      "brightness": 90,
+      "candidate_pixels": 1008,
+      "boxes": [
+        [
+          300,
+          130,
+          885,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 580,
+        "fp": 428,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.5753968253968254,
+        "iou": 0.5753968253968254
+      }
+    },
+    {
+      "id": "tile_082",
+      "image": "synthetic/tile_082.png",
+      "truth": "synthetic/tile_082_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092282,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 130,
+      "candidate_pixels": 280,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 280,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_083",
+      "image": "synthetic/tile_083.png",
+      "truth": "synthetic/tile_083_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        707,
+        130,
+        841,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092283,
+      "width": 2,
+      "nuisance": "dark_stain",
+      "brightness": 130,
+      "candidate_pixels": 727,
+      "boxes": [
+        [
+          300,
+          130,
+          841,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 488,
+        "fp": 239,
+        "fn": 607,
+        "pixel_recall": 0.445662100456621,
+        "pixel_precision": 0.671251719394773,
+        "iou": 0.3658170914542729
+      }
+    },
+    {
+      "id": "tile_084",
+      "image": "synthetic/tile_084.png",
+      "truth": "synthetic/tile_084_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092284,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 175,
+      "candidate_pixels": 428,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 428,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_085",
+      "image": "synthetic/tile_085.png",
+      "truth": "synthetic/tile_085_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        553,
+        130,
+        690,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092285,
+      "width": 3,
+      "nuisance": "dark_stain",
+      "brightness": 175,
+      "candidate_pixels": 1302,
+      "boxes": [
+        [
+          300,
+          130,
+          690,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1029,
+        "fp": 273,
+        "fn": 482,
+        "pixel_recall": 0.6810059563203177,
+        "pixel_precision": 0.7903225806451613,
+        "iou": 0.5767937219730942
+      }
+    },
+    {
+      "id": "tile_086",
+      "image": "synthetic/tile_086.png",
+      "truth": "synthetic/tile_086_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092286,
+      "width": 0,
+      "nuisance": "dark_stain",
+      "brightness": 220,
+      "candidate_pixels": 241,
+      "boxes": [
+        [
+          300,
+          250,
+          520,
+          430
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 241,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_087",
+      "image": "synthetic/tile_087.png",
+      "truth": "synthetic/tile_087_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        627,
+        129,
+        757,
+        581
+      ],
+      "crack": true,
+      "seed": 2026092287,
+      "width": 5,
+      "nuisance": "dark_stain",
+      "brightness": 220,
+      "candidate_pixels": 1618,
+      "boxes": [
+        [
+          300,
+          129,
+          757,
+          581
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1190,
+        "fp": 428,
+        "fn": 1601,
+        "pixel_recall": 0.42637047653170906,
+        "pixel_precision": 0.7354758961681088,
+        "iou": 0.36968002485243867
+      }
+    },
+    {
+      "id": "tile_088",
+      "image": "synthetic/tile_088.png",
+      "truth": "synthetic/tile_088_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092288,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 90,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_089",
+      "image": "synthetic/tile_089.png",
+      "truth": "synthetic/tile_089_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        469,
+        128,
+        610,
+        582
+      ],
+      "crack": true,
+      "seed": 2026092289,
+      "width": 8,
+      "nuisance": "reflection",
+      "brightness": 90,
+      "candidate_pixels": 1182,
+      "boxes": [
+        [
+          469,
+          128,
+          610,
+          582
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1182,
+        "fp": 0,
+        "fn": 3323,
+        "pixel_recall": 0.26237513873473917,
+        "pixel_precision": 1.0,
+        "iou": 0.26237513873473917
+      }
+    },
+    {
+      "id": "tile_090",
+      "image": "synthetic/tile_090.png",
+      "truth": "synthetic/tile_090_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092290,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 130,
+      "candidate_pixels": 50,
+      "boxes": [
+        [
+          849,
+          179,
+          1051,
+          401
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 50,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": 0.0,
+        "iou": 0.0
+      }
+    },
+    {
+      "id": "tile_091",
+      "image": "synthetic/tile_091.png",
+      "truth": "synthetic/tile_091_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        714,
+        130,
+        831,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092291,
+      "width": 1,
+      "nuisance": "reflection",
+      "brightness": 130,
+      "candidate_pixels": 583,
+      "boxes": [
+        [
+          714,
+          130,
+          858,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 581,
+        "fp": 2,
+        "fn": 0,
+        "pixel_recall": 1.0,
+        "pixel_precision": 0.9965694682675815,
+        "iou": 0.9965694682675815
+      }
+    },
+    {
+      "id": "tile_092",
+      "image": "synthetic/tile_092.png",
+      "truth": "synthetic/tile_092_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092292,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 175,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_093",
+      "image": "synthetic/tile_093.png",
+      "truth": "synthetic/tile_093_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        518,
+        130,
+        654,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092293,
+      "width": 2,
+      "nuisance": "reflection",
+      "brightness": 175,
+      "candidate_pixels": 1062,
+      "boxes": [
+        [
+          518,
+          130,
+          1051,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1028,
+        "fp": 34,
+        "fn": 49,
+        "pixel_recall": 0.9545032497678737,
+        "pixel_precision": 0.967984934086629,
+        "iou": 0.9252925292529253
+      }
+    },
+    {
+      "id": "tile_094",
+      "image": "synthetic/tile_094.png",
+      "truth": "synthetic/tile_094_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": null,
+      "crack": false,
+      "seed": 2026092294,
+      "width": 0,
+      "nuisance": "reflection",
+      "brightness": 220,
+      "candidate_pixels": 0,
+      "boxes": [],
+      "alarm": false,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "pixel_recall": null,
+        "pixel_precision": null,
+        "iou": null
+      }
+    },
+    {
+      "id": "tile_095",
+      "image": "synthetic/tile_095.png",
+      "truth": "synthetic/tile_095_truth.png",
+      "split": "heldout_synthetic",
+      "truth_box": [
+        724,
+        130,
+        883,
+        580
+      ],
+      "crack": true,
+      "seed": 2026092295,
+      "width": 3,
+      "nuisance": "reflection",
+      "brightness": 220,
+      "candidate_pixels": 1028,
+      "boxes": [
+        [
+          724,
+          130,
+          883,
+          580
+        ]
+      ],
+      "alarm": true,
+      "threshold": 12,
+      "algorithm": "pl_local_contrast_v1",
+      "provenance": "OFFLINE_REFERENCE",
+      "limitations": "single global box; not CCL",
+      "metrics": {
+        "tp": 1028,
+        "fp": 0,
+        "fn": 605,
+        "pixel_recall": 0.6295162278015921,
+        "pixel_precision": 1.0,
+        "iou": 0.6295162278015921
+      }
+    }
+  ]
+}

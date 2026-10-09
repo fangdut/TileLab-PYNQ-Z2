@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "name": "live state refresh completes while archive is pending; late archive cannot restore old enabled state",
+      "passed": true
+    },
+    {
+      "name": "same channel coalesces polls and archive errors do not label live connection offline",
+      "passed": true
+    },
+    {
+      "name": "changed filter rejects an old response even when aborted fetch still delivers; old finally cannot clear new request",
+      "passed": true
+    },
+    {
+      "name": "invalidated action-era live reply cannot overwrite newer control intent",
+      "passed": true
+    },
+    {
+      "name": "old-filter failures cannot replace current successful result",
+      "passed": true
+    },
+    {
+      "name": "inventory age advances while list is delayed; current storage settings have priority",
+      "passed": true
+    },
+    {
+      "name": "preview-rate poll epoch is captured at request start",
+      "passed": true
+    },
+    {
+      "name": "bounded timeout clears channel and allows a later recovery without an unhandled rejection",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "host/status_channel.js": "4d0450577bb7b4871449df952a5e3d4a57cfe4f3e281449353a4c83278abe601",
+    "host/workstation.html": "bca690ee3722bf0fc13ee322014a969b28794f964d979e7ab544a4a2d454a318",
+    "scripts/test_status_ui.js": "0704ba693a52c1097949991dee74b1a82e6b157f93211c819347f938a73f988e"
+  },
+  "scope": "Production JavaScript in Node VM; not a visual browser or hardware test"
+}

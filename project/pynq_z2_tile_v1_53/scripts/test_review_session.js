@@ -1,0 +1,27 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');const path=require('node:path');const vm=require('node:vm');const crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..');const ReviewSession=require(path.join(root,'host/review_session.js'));
+const outcomes=[];
+function check(name,fn){fn();outcomes.push({name,passed:true});}
+check('opening requires verified images before submission',()=>{const s=new ReviewSession();s.begin('A');assert.equal(s.canSubmit(),false);});
+check('completion of current pair permits submission',()=>{const s=new ReviewSession(),t=s.begin('A');s.bindRevision(t,0);assert.equal(s.complete(t),true);assert.equal(s.canSubmit(),true);});
+check('switching records aborts prior request',()=>{const s=new ReviewSession(),a=s.begin('A');s.begin('B');assert.equal(a.signal.aborted,true);assert.equal(s.canSubmit(),false);});
+check('late prior completion cannot enable another record',()=>{const s=new ReviewSession(),a=s.begin('A');s.begin('B');assert.equal(s.complete(a),false);assert.equal(s.canSubmit(),false);});
+check('A B A sequence rejects the first A response',()=>{const s=new ReviewSession(),a=s.begin('A');s.begin('B');const fresh=s.begin('A');assert.equal(s.complete(a),false);assert.equal(s.complete(fresh),true);});
+check('retrying same identity has a new request token',()=>{const s=new ReviewSession(),a=s.begin('A');const b=s.begin('A');assert.notEqual(a.epoch,b.epoch);assert.equal(s.isCurrent(a),false);});
+check('late old failure does not invalidate current success',()=>{const s=new ReviewSession(),a=s.begin('A'),b=s.begin('B');s.bindRevision(b,7);s.complete(b);assert.equal(s.fail(a),false);assert.equal(s.canSubmit(),true);});
+check('current load or submit failure disables submission',()=>{const s=new ReviewSession(),t=s.begin('A');s.complete(t);assert.equal(s.fail(t),true);assert.equal(s.canSubmit(),false);});
+check('closing invalidates late responses and aborts fetch',()=>{const s=new ReviewSession(),t=s.begin('A');s.complete(t);s.close();assert.equal(t.signal.aborted,true);assert.equal(s.complete(t),false);assert.equal(s.canSubmit(),false);});
+check('invalid identity does not cancel a valid active review',()=>{const s=new ReviewSession(),t=s.begin('A');assert.throws(()=>s.begin(null));assert.equal(s.isCurrent(t),true);});
+check('tokens cannot be mutated into another identity',()=>{const s=new ReviewSession(),t=s.begin('A');assert.equal(Object.isFrozen(t),true);assert.equal(s.isCurrent({id:t.id,epoch:t.epoch,signal:t.signal}),false);});
+check('verified images without a revision cannot submit',()=>{const s=new ReviewSession(),t=s.begin('A');s.complete(t);assert.equal(s.canSubmit(),false);assert.throws(()=>s.submission());});
+check('submission binds exact record and observed revision',()=>{const s=new ReviewSession(),t=s.begin('A');s.bindRevision(t,4);s.complete(t);assert.deepEqual(s.submission(),{id:'A',expected_revision:4});assert.equal(Object.isFrozen(s.submission()),true);});
+check('late metadata cannot bind a different review',()=>{const s=new ReviewSession(),a=s.begin('A'),b=s.begin('B');assert.equal(s.bindRevision(a,99),false);assert.equal(s.revision,null);s.bindRevision(b,2);});
+check('revision cannot silently advance after page refresh',()=>{const s=new ReviewSession(),t=s.begin('A');s.bindRevision(t,2);assert.throws(()=>s.bindRevision(t,3));assert.equal(s.revision,2);});
+check('closing clears the observed revision',()=>{const s=new ReviewSession(),t=s.begin('A');s.bindRevision(t,2);s.close();assert.equal(s.revision,null);assert.throws(()=>s.submission());});
+check('invalid revisions never permit submission',()=>{for(const value of [null,true,-1,0.5,'1',Number.MAX_SAFE_INTEGER+1]){const s=new ReviewSession(),t=s.begin('A');assert.throws(()=>s.bindRevision(t,value));assert.equal(s.revision,null);}});
+check('conflict disables a formerly verified submission',()=>{const s=new ReviewSession(),t=s.begin('A');s.bindRevision(t,2);s.complete(t);s.fail(t);assert.throws(()=>s.submission());assert.equal(s.revision,2);});
+check('explicit new review can adopt latest revision',()=>{const s=new ReviewSession(),a=s.begin('A');s.bindRevision(a,2);const b=s.begin('A');s.bindRevision(b,3);s.complete(b);assert.equal(s.submission().expected_revision,3);});
+const html=fs.readFileSync(path.join(root,'host/workstation.html'),'utf8');const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];assert.equal(scripts.length,1);new vm.Script(scripts[0][1],{filename:'actual_workstation_inline.js'});
+const result={passed:true,tests:outcomes.length,cases:outcomes,actual_inline_script_syntax:true,session_source_sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'host/review_session.js'))).digest('hex')};
+const out=path.join(root,'reports/v148');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'review_session_native.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result));

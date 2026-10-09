@@ -1,0 +1,39 @@
+{
+  "source_sha256": {
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_v153_real.py": "747435d3d6e5a20e6b309d935e4d75052a23a08f657fa294c23ed724843613ce",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\data\\real_tiles\\manifest.json": "688a2dd402cd31fc7e117a7c0532082522911a69e571e1e93197fafe06376177",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\data\\real_tiles\\hdmi_manifest.json": "aceaf752bccc22b647bc6d287083931e08a9a00ccbe8796effa94f4e37bb832e",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\workstation.py": "59093388235d5d287541db14f570c70fd2f2eec55a908924ae158b142519f976",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\tcp_transport.py": "1a54733ca2d1fde9bcde8e732dd82105e1afc021619bd6d1ccf0aad000e83b29",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\event_identity.py": "933ae975ac5b2245bae869b334407be9c38df6c14a131769670c1c8779ae7cd7",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\capture_health.py": "95c4689354ca03cd1af4d44429154bc7334ad79dabd0162792d1cd140e3c0b29",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\dma_recovery.py": "83ec9a0d9dc2622e77f9ac9062d76a944ed58ac7aaf8b6b8a8ff103595c886da",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\word_rle.py": "16e87b1f526481e2275125169f355901c51148f9a0f164b721e7a180f4a23f90",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\packed_pixels.py": "f65ab62bae2c92c3827a5b59170ec82a452dd224447355f6b8fbe7a86f0ef927",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\recipes.py": "b35150a9bc964fc50d2e4a7f26d236fe9b0a8dd1f89ed16e091eea8091464ba1",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\host\\recipes.json": "82c285cb6edf59dd78b48a99ad25ea0b4ee2a6710c41e621d7be00588889fcaf",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\models\\weak_reference.py": "51e66f2f9c52658022a067f1794a2fd115760e5cd68526f33546d46e47313d13",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\models\\valley_reference.py": "491e5ffa7b356ef0c7dde264ae066b49fd730e9567a8679e82f67a9a2b3a75b4",
+    "D:\\Vivado\\pynq_z2_tile_v1_53\\models\\regions_reference.py": "7aa7ed8d333be85e4bf02402514bbf236b64d0d501cdbe7d1ab4f96ea1baab3e"
+  },
+  "startup_programmed_proof": {
+    "path": "D:\\Vivado\\pynq_z2_tile_v1_53\\reports\\programmed_v153.json",
+    "marker_sha256": "d8f42d25ca6dcf41e05cf6886a6e3cf4b3dc518561b045dd5bf450f55389938a",
+    "record": {
+      "active_application": "hdmi_ethernet",
+      "configured_address": "192.168.33.10",
+      "boot_id": 2398464874,
+      "programmed_at": "2026-10-09T02:22:55.635380+00:00",
+      "sha256": {
+        "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+        "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+        "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+      }
+    },
+    "artifact_sha256": {
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+      "D:\\Vivado\\pynq_z2_tile_v1_53\\pynq_z2_tile_v1_53.sdk\\hdmi_ethernet\\build\\hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+    }
+  }
+}

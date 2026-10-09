@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "name": "pending new source never claims published/adopted despite old READY",
+      "passed": true
+    },
+    {
+      "name": "successful publish waits for exact player adoption",
+      "passed": true
+    },
+    {
+      "name": "write failure leaves old source visible and retry enabled",
+      "passed": true
+    },
+    {
+      "name": "focused selector is not overwritten by polling",
+      "passed": true
+    },
+    {
+      "name": "missing telemetry stays explicitly unconfirmed",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "host/workstation.html": "bca690ee3722bf0fc13ee322014a969b28794f964d979e7ab544a4a2d454a318",
+    "scripts/test_display_ui.js": "19d8c00bef3ed38478020c83c83bf1ecdeacb167246f686e5835e59fb186fb8d"
+  },
+  "scope": "Actual inline source in Node VM"
+}

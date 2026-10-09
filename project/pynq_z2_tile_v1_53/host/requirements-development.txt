@@ -1,0 +1,5 @@
+# review_server.py itself needs only Python 3.10+ standard library.
+# These dependencies are for OFFLINE dataset/reference generation only.
+numpy
+Pillow
+imageio-ffmpeg==0.6.0

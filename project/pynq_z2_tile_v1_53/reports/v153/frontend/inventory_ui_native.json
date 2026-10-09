@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "tests": 10,
+  "cases": [
+    {
+      "name": "fresh complete scan labels disk space by its observation time",
+      "passed": true
+    },
+    {
+      "name": "cached age is taken from backend without resetting observation time",
+      "passed": true
+    },
+    {
+      "name": "dirty or expired complete snapshot is distinct from incomplete enumeration",
+      "passed": true
+    },
+    {
+      "name": "refresh failure retains last values age and scan completeness",
+      "passed": true
+    },
+    {
+      "name": "unindexed and temporary counts are not described as recovered evidence",
+      "passed": true
+    },
+    {
+      "name": "unknown snapshot never fabricates zero usage free space or complete scan",
+      "passed": true
+    },
+    {
+      "name": "invalid numeric snapshot fields display unknown rather than zero",
+      "passed": true
+    },
+    {
+      "name": "configuration limit changes without pretending cached disk bytes changed",
+      "passed": true
+    },
+    {
+      "name": "successful refresh clears previous warning and admits a real zero observation",
+      "passed": true
+    },
+    {
+      "name": "failure explanation uses bounded plain text and does not become markup",
+      "passed": true
+    }
+  ],
+  "html_sha256": "bca690ee3722bf0fc13ee322014a969b28794f964d979e7ab544a4a2d454a318",
+  "browser_rendered": false,
+  "snapshot_contract": [
+    "snapshot_age_seconds",
+    "snapshot_cached",
+    "snapshot_stale",
+    "snapshot_observed_at",
+    "snapshot_refresh_error"
+  ]
+}

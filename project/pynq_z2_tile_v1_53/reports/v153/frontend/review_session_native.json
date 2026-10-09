@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "tests": 19,
+  "cases": [
+    {
+      "name": "opening requires verified images before submission",
+      "passed": true
+    },
+    {
+      "name": "completion of current pair permits submission",
+      "passed": true
+    },
+    {
+      "name": "switching records aborts prior request",
+      "passed": true
+    },
+    {
+      "name": "late prior completion cannot enable another record",
+      "passed": true
+    },
+    {
+      "name": "A B A sequence rejects the first A response",
+      "passed": true
+    },
+    {
+      "name": "retrying same identity has a new request token",
+      "passed": true
+    },
+    {
+      "name": "late old failure does not invalidate current success",
+      "passed": true
+    },
+    {
+      "name": "current load or submit failure disables submission",
+      "passed": true
+    },
+    {
+      "name": "closing invalidates late responses and aborts fetch",
+      "passed": true
+    },
+    {
+      "name": "invalid identity does not cancel a valid active review",
+      "passed": true
+    },
+    {
+      "name": "tokens cannot be mutated into another identity",
+      "passed": true
+    },
+    {
+      "name": "verified images without a revision cannot submit",
+      "passed": true
+    },
+    {
+      "name": "submission binds exact record and observed revision",
+      "passed": true
+    },
+    {
+      "name": "late metadata cannot bind a different review",
+      "passed": true
+    },
+    {
+      "name": "revision cannot silently advance after page refresh",
+      "passed": true
+    },
+    {
+      "name": "closing clears the observed revision",
+      "passed": true
+    },
+    {
+      "name": "invalid revisions never permit submission",
+      "passed": true
+    },
+    {
+      "name": "conflict disables a formerly verified submission",
+      "passed": true
+    },
+    {
+      "name": "explicit new review can adopt latest revision",
+      "passed": true
+    }
+  ],
+  "actual_inline_script_syntax": true,
+  "session_source_sha256": "45ed503b0bbcff895a372e611ca78e9b4160d80d4b74f5eb6de841bed4bb98fe"
+}

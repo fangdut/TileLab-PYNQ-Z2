@@ -1,0 +1,12 @@
+from pathlib import Path
+p=Path(__file__).resolve().parents[1]/'host/workstation.html';s=p.read_text(encoding='utf-8')
+s=s.replace('<option value="video">流水线视频 · 循环播放</option>','<option value="station_6">空传送带 · 产品离站</option><option value="video">匀速流水线 · 480 像素/秒</option><option value="fast">匀速流水线 · 960 像素/秒</option><option value="ultrafast">匀速流水线 · 1920 像素/秒</option>')
+s=s.replace('板端在报警开始时留图，连续 3 张有效采集帧无报警后重新触发。暂停只停止电脑接收，板端仍检测和缓存。','V1.4 在 FPGA 中识别产品经过，选择缺陷完整、接近画面中心的代表帧，离站后留存。暂停只停止电脑接收。')
+s=s.replace('<span>帧号<b id="frameId">—</b></span>','<span>产品号<b id="productId">—</b></span><span>帧号<b id="frameId">—</b></span>')
+s=s.replace("$('frameId').textContent=f.frame_id;","$('frameId').textContent=f.frame_id;$('productId').textContent=f.product_id||'—';")
+s=s.replace("id.textContent='帧 '+r.frame_id;","id.textContent=r.product_id?'产品 '+r.product_id+' · 帧 '+r.frame_id:'历史帧 '+r.frame_id;")
+s=s.replace("card.append(im,body);","const picture=document.createElement('div');picture.style.cssText='position:relative;aspect-ratio:16/9;overflow:hidden';im.style.height='100%';picture.append(im);for(const b of r.boxes||[]){const box=document.createElement('div');box.style.cssText=`position:absolute;border:2px solid #ff414d;left:${b[0]/12.8}%;top:${b[1]/7.2}%;width:${(b[2]-b[0]+1)/12.8}%;height:${(b[3]-b[1]+1)/7.2}%`;picture.append(box)}card.append(picture,body);")
+s=s.replace("(r.reason==='manual'?'手动留图':'候选自动留图')","(r.reason==='manual'?'手动留图':r.selection==='FPGA_PRODUCT_BEST_FRAME'?'FPGA 最佳证据帧':'历史报警留图')")
+s=s.replace("$('reviewTitle').textContent='复核 · 帧 '+r.frame_id;","$('reviewTitle').textContent=(r.product_id?'复核 · 产品 '+r.product_id:'复核')+' · 帧 '+r.frame_id;")
+s=s.replace('以太网可选固件须另行接线验收。','V1.4 使用以太网实板传输；历史记录保留原版本含义。')
+p.write_text(s,encoding='utf-8')

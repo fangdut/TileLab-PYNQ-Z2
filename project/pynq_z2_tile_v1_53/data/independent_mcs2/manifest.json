@@ -1,0 +1,311 @@
+{
+  "dataset": "MCS2 RGB",
+  "source": "https://github.com/MachineLearningVisionRG/mcs2-dataset",
+  "license": "CC BY 4.0",
+  "attribution": "Vrochidou et al., Fusion of Thermal and RGB Images for Automated Deep Learning Based Marble Crack Detection, AIIoT 2023, DOI 10.1109/AIIoT58121.2023.10174288",
+  "downloaded_at": "2026-10-09T02:26:19.503200+00:00",
+  "archive_sha256": "35e5c990d75f04988ddc57b5e07baad0cdd6873fb736a262aa139c69be3a392b",
+  "fixed_before_inspection": {
+    "high": 90,
+    "low": 45,
+    "passes": 4,
+    "minimum_support": 3,
+    "seed_radius": 8,
+    "weak_radii": [
+      8,
+      16
+    ]
+  },
+  "independence": "New to this project; no threshold selection on these 24 images. Cross-material holdout, not factory validation.",
+  "limitations": "24 cracked marble images only; no normal-image false alarm rate; resize changes physical scale; physical sample identity unavailable.",
+  "items": [
+    {
+      "index": 0,
+      "source_name": "01",
+      "original_size": [
+        698,
+        528
+      ],
+      "label": "crack",
+      "image_sha256": "de5a065936e68186e5e7080beaec3258155d04c9d6b7f051e675cc238d1fca26",
+      "mask_sha256": "5c2c251d84a988b829b88e93b4442c8f3a3fd108ddfb6b2df47f7b2f0d8f3e1a",
+      "scene_sha256": "f32f2243d83894d4cc95e3b8c1e3a3162b9a360d7cdcca284d16efb932481755"
+    },
+    {
+      "index": 1,
+      "source_name": "02",
+      "original_size": [
+        698,
+        528
+      ],
+      "label": "crack",
+      "image_sha256": "22ffd1dbd77b535310cd27ef411ff03ed13bbddc280c01f2843ea425be09fe7a",
+      "mask_sha256": "b1930cd36b2ff0874f3b241cb52f00a8cd287a63c4df97390082a7410bcafa6a",
+      "scene_sha256": "fd78bae77c2a998849affb366e233b0fc3d976155ccbb5db41fc85192e7706eb"
+    },
+    {
+      "index": 2,
+      "source_name": "03",
+      "original_size": [
+        567,
+        456
+      ],
+      "label": "crack",
+      "image_sha256": "f34a06ff5ad1c380e7815f267cd499ac85f5f487d23982e3849039974230032b",
+      "mask_sha256": "bdbd867add6a8f97b3057831f07734fac64984da460342b69446091ddba56f86",
+      "scene_sha256": "d6c43efc587a5b6368d348ca7c5386dfa0006ee95ab4b41dd2de65fb59529b13"
+    },
+    {
+      "index": 3,
+      "source_name": "04",
+      "original_size": [
+        509,
+        395
+      ],
+      "label": "crack",
+      "image_sha256": "5ecb641ad8e6f282e0338cf3e171db553d35b7ac4b333caac5a85e0be7bca916",
+      "mask_sha256": "4cff2be044bf3fd01422f8cc9f2c0006870d0b40bc641fdfdf46e9155528c2ad",
+      "scene_sha256": "fbddbc6efb2e0b63f5c84bd119695e094d3ba6d89eb29bb78140c7efb3461ca8"
+    },
+    {
+      "index": 4,
+      "source_name": "05",
+      "original_size": [
+        800,
+        582
+      ],
+      "label": "crack",
+      "image_sha256": "6a4db8de203eb5f1d64d2db0f770707d2470c3a0402d9c703263fba562ff7aa3",
+      "mask_sha256": "e38826c50c4a0cb2e192395c2e1152aa16f18908dd3837ec7bacabc9adc1e226",
+      "scene_sha256": "63137af05858688fd2f8a7a7e6202c72d6157823268faf4b3fe294c0071891eb"
+    },
+    {
+      "index": 5,
+      "source_name": "06",
+      "original_size": [
+        800,
+        582
+      ],
+      "label": "crack",
+      "image_sha256": "3042760c9dd6e5362bcc96602ad527430b4267878bed6ead1da6fa14ed274cf4",
+      "mask_sha256": "f9846207c5451773ff5cf6bec3796158f7ef247e1fb3a4b0d7373f85c82a278e",
+      "scene_sha256": "913a54c5102e93529dd5aef9d7c8732a6c6e6713e84c3004dfbbddf2dedb690c"
+    },
+    {
+      "index": 6,
+      "source_name": "07",
+      "original_size": [
+        825,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "992a645438bb117da2b149230e93ed3cb04f256db525bb390142d0578a055bb5",
+      "mask_sha256": "7e4d2e876b131f26ec7bd80bdea9f9000804156c9bdd68f7083208135466a770",
+      "scene_sha256": "1df49118176d393ba40aa097fc4813df7ac08510ef034312b6287d93ad34cdd2"
+    },
+    {
+      "index": 7,
+      "source_name": "08",
+      "original_size": [
+        800,
+        580
+      ],
+      "label": "crack",
+      "image_sha256": "bbe286c43f31e06990594a479d2e75c2d93fab9a6e464da0c4b29801e52f8ea0",
+      "mask_sha256": "e057abb33eab6ee2f57ee948834bae8c28598a2359583c62fe748f91efa450ca",
+      "scene_sha256": "60c829157f5d9cb822d6b2ae6c89df3c5bee4f73d8a04bf169df01e413196ef8"
+    },
+    {
+      "index": 8,
+      "source_name": "09",
+      "original_size": [
+        698,
+        528
+      ],
+      "label": "crack",
+      "image_sha256": "a077490e0fa331089d183b2712862e1d8905c96e619a4cbe30bd611b36e8397b",
+      "mask_sha256": "7a847f38f842e413fdd31d7d7fe7dead526a79ebdce9337a3b9c5a9248e8827a",
+      "scene_sha256": "2ce8a43d606397ae7dfd1cf73642c11fcc13fcc96eb41b1f5111b6dd5578e437"
+    },
+    {
+      "index": 9,
+      "source_name": "10",
+      "original_size": [
+        820,
+        597
+      ],
+      "label": "crack",
+      "image_sha256": "931262f7608fee36cf0420e1b355c3756a9811abcb72a46f5dd4f89d41bae9d6",
+      "mask_sha256": "6be379842903aaf1c6e5f22544fea3d5f52396f87fdb58f5e713323707272120",
+      "scene_sha256": "0dd9d320e1b5993c9b392a80e07d1cd168cb8f1d8987aa4e92bb7864b8f69c68"
+    },
+    {
+      "index": 10,
+      "source_name": "11",
+      "original_size": [
+        825,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "8f1bf4b1733ed5a02373459919edda3efc4104dc36c84d2fa1e7e457147cc686",
+      "mask_sha256": "541c82a91de8e7edfbef5efca96925f329718200b5e05a87f468fb2edb41492e",
+      "scene_sha256": "a65c1066300bbcae24c92ef0ec4ac72ce33dacc3a4dfd2c3b6dd1541b1479d5a"
+    },
+    {
+      "index": 11,
+      "source_name": "12",
+      "original_size": [
+        789,
+        530
+      ],
+      "label": "crack",
+      "image_sha256": "4a4a90f8634421f7e826f16dd1d90d16bc3a83691a573f183633f42da8fcc9d0",
+      "mask_sha256": "37a7ce24a6fc39c677c0735e752093967b1cb274841c0fb11ac05183953f0532",
+      "scene_sha256": "e6372fc3e75415b4cbcd1f5b2cdd8838b7e3b2efe06eb46a83f6b33cdd56032a"
+    },
+    {
+      "index": 12,
+      "source_name": "13",
+      "original_size": [
+        826,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "4e4d5a776e51bcc1aa9af58a4b066e963b73cfb4b67616158f2d9bea5f439637",
+      "mask_sha256": "7154954863a33cbc61c261e478998263084ff67d0685962a4e36815539095ac2",
+      "scene_sha256": "b2c35d40307c36ad098b97bd74740b9343b82d0d3e9631ca724f693b3630a89f"
+    },
+    {
+      "index": 13,
+      "source_name": "14",
+      "original_size": [
+        825,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "f8ed0d943bffec2bd175a33a7a83d746ad0edfb3562cac3a0b352f7642609b15",
+      "mask_sha256": "e0d504929f9de80988dfe1227c4dc02018f1bb2d8272ff29b4301ed61750b204",
+      "scene_sha256": "fdfa9b5c7e12ade37b99638280049ea403dc488f2f98bf1fa256be3b8063658c"
+    },
+    {
+      "index": 14,
+      "source_name": "15",
+      "original_size": [
+        825,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "366c39473784f3702b12466da95a57dafe1272d30bec054cdae0451db24a25aa",
+      "mask_sha256": "de69b0c3dd33dfc570698985f5f0b0599282b22a04637eab75e4d47d87626fe2",
+      "scene_sha256": "75041aa10d250d9351c0d7eafea3073e4dbb119ee3613a1df5c2951881d4e7af"
+    },
+    {
+      "index": 15,
+      "source_name": "16",
+      "original_size": [
+        874,
+        638
+      ],
+      "label": "crack",
+      "image_sha256": "c22fbd1677a7ababed951f27541f53e9daf6ab66cc60c234e3441068c95764e3",
+      "mask_sha256": "540702552b213a1c2d611969f84461fece9eb2c0653032f5ddd3ba0b4daa78d8",
+      "scene_sha256": "f828be3e4a2b9b50ba3a8503180506974d2089abffb0942e07ab960aa194cb09"
+    },
+    {
+      "index": 16,
+      "source_name": "17",
+      "original_size": [
+        825,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "48233fb33717eb91916d381408f70259572e761c1f7ae275d197a390a176a65b",
+      "mask_sha256": "6f42d2b8c0f3a246335a5d64be6f7408c864e129ef3a69c4ab2f0452538abde6",
+      "scene_sha256": "c30228536766390312fb9785a881ae1457928853f27ec13ce533e6c52735ada1"
+    },
+    {
+      "index": 17,
+      "source_name": "18",
+      "original_size": [
+        826,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "218a82fb3d36f538b27728af65ea2d2803b3f70066e2e411843262a2e138e27d",
+      "mask_sha256": "976ee3ed3c6b54854e451f495a5c52c544b636099f41246db1f11d2b6ab36690",
+      "scene_sha256": "cc2490aa787259bd7214fa7fd2bab2f224cc4b4d6433970220a54be88bdd76a3"
+    },
+    {
+      "index": 18,
+      "source_name": "19",
+      "original_size": [
+        824,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "fa3570c5539dfcc13d83eebd8da5a69b6d429c9d21dbcde18e00bf28bd0404db",
+      "mask_sha256": "6ac7aafd400ca86da169aa05dcd6ca725d3db290ae5ba8b7ed3e7e4d58c34cd1",
+      "scene_sha256": "53c251c64abb8fd75cd876771933397bac219e8e8f8e89c5ac8f64810fbd1e2f"
+    },
+    {
+      "index": 19,
+      "source_name": "20",
+      "original_size": [
+        825,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "aa7ac1cc4f54def16527523b69a640273061950401551e09b88886b4706a69fd",
+      "mask_sha256": "9b1af6aeaed8b6c71a2fb618d253a23ace79a2e2837a8d61af74db9338779501",
+      "scene_sha256": "5f0440ae1fd8dfe0579cde0b21d5637b4012814ae90ae284e6414b863d5c25ce"
+    },
+    {
+      "index": 20,
+      "source_name": "21",
+      "original_size": [
+        749,
+        545
+      ],
+      "label": "crack",
+      "image_sha256": "e0b762bb2359455cb8ee2163fdabb012a48b64a8db28703be7951512e53b8aa9",
+      "mask_sha256": "cf256b03a867ea16435c294bc848cae91bf2c27ed7754a5146166d74b8257265",
+      "scene_sha256": "8db8fe8a8042caa57c1af5cbf7a522b3424fe7c69e6db95d0c85ca57ef2b06f8"
+    },
+    {
+      "index": 21,
+      "source_name": "22",
+      "original_size": [
+        750,
+        545
+      ],
+      "label": "crack",
+      "image_sha256": "24b25caa4380ccbd37107ab61ee8856929e22873aaf08f5c5233e58cd344a87a",
+      "mask_sha256": "a1ccddc904bd21eec6a0ec3561f86e1d2750edce24a1e6a608a9b0d6ac10b5d4",
+      "scene_sha256": "fe179a064c58e0b3134156368f35e10b0e3fd39e592a016b83b62d01a4b90ab3"
+    },
+    {
+      "index": 22,
+      "source_name": "23",
+      "original_size": [
+        825,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "90070504264a0612100fedf504e1913b4a38630d288fd3e52e286da13d52c9d1",
+      "mask_sha256": "59115f29962b00c387b07e718259181de6e8595605a2239b03819139a559e05f",
+      "scene_sha256": "165ae3d7bd3096399c12f803028e5cc44f91839f64c96eeaa670662cd4d51f04"
+    },
+    {
+      "index": 23,
+      "source_name": "24",
+      "original_size": [
+        824,
+        600
+      ],
+      "label": "crack",
+      "image_sha256": "c83c777ffee66dbb89db38ed62f9c1e2ba4b56054ed4328c6bbf1400213fcb18",
+      "mask_sha256": "780215b43ece849b424f2a1bdd3054f9bdb37600208d4728b330426472d6fb19",
+      "scene_sha256": "6961b8716ac1920f8721480f4b6804c3385b0475be65d32faf1d93f699df866f"
+    }
+  ]
+}

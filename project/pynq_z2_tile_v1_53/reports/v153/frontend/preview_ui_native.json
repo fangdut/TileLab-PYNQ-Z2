@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "tests": 11,
+  "cases": [
+    {
+      "name": "actual inline JavaScript parses and selector provides 2/5/unlimited",
+      "passed": true
+    },
+    {
+      "name": "server value overrides selector and counters are not claimed as measured fps",
+      "passed": true
+    },
+    {
+      "name": "legacy unsupported channel stays disabled and uses server unlimited value",
+      "passed": true
+    },
+    {
+      "name": "missing or invalid server fields never confirm a selected setting",
+      "passed": true
+    },
+    {
+      "name": "valid selection sends strict numeric action then reads authoritative current state",
+      "passed": true
+    },
+    {
+      "name": "failed action response restores the service value instead of optimistic selection",
+      "passed": true
+    },
+    {
+      "name": "lost action response still adopts a successful server-side update from readback",
+      "passed": true
+    },
+    {
+      "name": "failed action and readback recover last confirmed value with explicit uncertainty",
+      "passed": true
+    },
+    {
+      "name": "late polls from before and during change cannot undo newly confirmed value",
+      "passed": true
+    },
+    {
+      "name": "invalid selection and unsupported channel never send an action",
+      "passed": true
+    },
+    {
+      "name": "timed-out request is reported and bounded timer is cleared",
+      "passed": true
+    }
+  ],
+  "actual_inline_script_syntax": true,
+  "hardware_access": false,
+  "html_sha256": "bca690ee3722bf0fc13ee322014a969b28794f964d979e7ab544a4a2d454a318"
+}

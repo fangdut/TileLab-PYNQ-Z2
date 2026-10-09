@@ -1,0 +1,5386 @@
+{
+  "passed": false,
+  "scope": "120s real-photo synthetic conveyor; actual PL/TCP/PNG/archive; no physical camera or monitor human confirmation",
+  "observations": [
+    {
+      "seconds": 0.34399999992456287,
+      "captures": 515,
+      "frames": 91041,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "WAITING",
+        "progressing": false,
+        "drawn_frames": 10,
+        "drawn_source_frame": 9,
+        "no_progress_seconds": 0,
+        "message": "已采用运动源，等待观察新的绘制帧",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91025
+    },
+    {
+      "seconds": 0.8589999999385327,
+      "captures": 516,
+      "frames": 91076,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 39,
+        "drawn_source_frame": 40,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91058
+    },
+    {
+      "seconds": 1.3589999999385327,
+      "captures": 517,
+      "frames": 91108,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 57,
+        "drawn_source_frame": 60,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91090
+    },
+    {
+      "seconds": 1.890999999945052,
+      "captures": 518,
+      "frames": 91140,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 78,
+        "drawn_source_frame": 84,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91122
+    },
+    {
+      "seconds": 2.405999999959022,
+      "captures": 519,
+      "frames": 91172,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 114,
+        "drawn_source_frame": 125,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91154
+    },
+    {
+      "seconds": 2.9219999999040738,
+      "captures": 520,
+      "frames": 91203,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 141,
+        "drawn_source_frame": 155,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91185
+    },
+    {
+      "seconds": 3.4219999999040738,
+      "captures": 521,
+      "frames": 91235,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 164,
+        "drawn_source_frame": 187,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91216
+    },
+    {
+      "seconds": 3.9369999999180436,
+      "captures": 522,
+      "frames": 91254,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 188,
+        "drawn_source_frame": 219,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91248
+    },
+    {
+      "seconds": 4.468999999924563,
+      "captures": 523,
+      "frames": 91299,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 212,
+        "drawn_source_frame": 251,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91280
+    },
+    {
+      "seconds": 4.968999999924563,
+      "captures": 525,
+      "frames": 91326,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 237,
+        "drawn_source_frame": 283,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91320
+    },
+    {
+      "seconds": 5.5,
+      "captures": 526,
+      "frames": 91358,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 261,
+        "drawn_source_frame": 313,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91352
+    },
+    {
+      "seconds": 6.0,
+      "captures": 527,
+      "frames": 91389,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 285,
+        "drawn_source_frame": 346,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91383
+    },
+    {
+      "seconds": 6.515999999945052,
+      "captures": 528,
+      "frames": 91420,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 309,
+        "drawn_source_frame": 376,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91414
+    },
+    {
+      "seconds": 7.030999999959022,
+      "captures": 529,
+      "frames": 91452,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 332,
+        "drawn_source_frame": 405,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91446
+    },
+    {
+      "seconds": 7.546999999904074,
+      "captures": 530,
+      "frames": 91484,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 358,
+        "drawn_source_frame": 435,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91478
+    },
+    {
+      "seconds": 8.061999999918044,
+      "captures": 531,
+      "frames": 91514,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 384,
+        "drawn_source_frame": 466,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91510
+    },
+    {
+      "seconds": 8.561999999918044,
+      "captures": 532,
+      "frames": 91540,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 406,
+        "drawn_source_frame": 494,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91541
+    },
+    {
+      "seconds": 9.061999999918044,
+      "captures": 532,
+      "frames": 91571,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 433,
+        "drawn_source_frame": 526,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91541
+    },
+    {
+      "seconds": 9.577999999979511,
+      "captures": 533,
+      "frames": 91603,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 459,
+        "drawn_source_frame": 558,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91572
+    },
+    {
+      "seconds": 10.093999999924563,
+      "captures": 534,
+      "frames": 91635,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 492,
+        "drawn_source_frame": 597,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91604
+    },
+    {
+      "seconds": 10.608999999938533,
+      "captures": 535,
+      "frames": 91667,
+      "depth": 1,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 519,
+        "drawn_source_frame": 627,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91636
+    },
+    {
+      "seconds": 11.140999999945052,
+      "captures": 537,
+      "frames": 91695,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 547,
+        "drawn_source_frame": 658,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91676
+    },
+    {
+      "seconds": 11.640999999945052,
+      "captures": 538,
+      "frames": 91726,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 570,
+        "drawn_source_frame": 688,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91708
+    },
+    {
+      "seconds": 12.140999999945052,
+      "captures": 539,
+      "frames": 91757,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 596,
+        "drawn_source_frame": 719,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91739
+    },
+    {
+      "seconds": 12.655999999959022,
+      "captures": 540,
+      "frames": 91788,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 622,
+        "drawn_source_frame": 30,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91770
+    },
+    {
+      "seconds": 13.155999999959022,
+      "captures": 541,
+      "frames": 91820,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 650,
+        "drawn_source_frame": 60,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91802
+    },
+    {
+      "seconds": 13.671999999904074,
+      "captures": 542,
+      "frames": 91840,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 679,
+        "drawn_source_frame": 92,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91834
+    },
+    {
+      "seconds": 14.171999999904074,
+      "captures": 543,
+      "frames": 91872,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 689,
+        "drawn_source_frame": 103,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91866
+    },
+    {
+      "seconds": 14.686999999918044,
+      "captures": 544,
+      "frames": 91903,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 723,
+        "drawn_source_frame": 141,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91897
+    },
+    {
+      "seconds": 15.202999999979511,
+      "captures": 545,
+      "frames": 91934,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 750,
+        "drawn_source_frame": 171,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91928
+    },
+    {
+      "seconds": 15.718999999924563,
+      "captures": 546,
+      "frames": 91965,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 781,
+        "drawn_source_frame": 204,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91959
+    },
+    {
+      "seconds": 16.25,
+      "captures": 547,
+      "frames": 91997,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 807,
+        "drawn_source_frame": 233,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 91991
+    },
+    {
+      "seconds": 16.765999999945052,
+      "captures": 549,
+      "frames": 92036,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 834,
+        "drawn_source_frame": 264,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92031
+    },
+    {
+      "seconds": 17.265999999945052,
+      "captures": 550,
+      "frames": 92067,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 858,
+        "drawn_source_frame": 295,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92063
+    },
+    {
+      "seconds": 17.765999999945052,
+      "captures": 551,
+      "frames": 92093,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 882,
+        "drawn_source_frame": 324,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92094
+    },
+    {
+      "seconds": 18.296999999904074,
+      "captures": 551,
+      "frames": 92124,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 911,
+        "drawn_source_frame": 356,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92094
+    },
+    {
+      "seconds": 18.811999999918044,
+      "captures": 552,
+      "frames": 92156,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 939,
+        "drawn_source_frame": 387,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92125
+    },
+    {
+      "seconds": 19.311999999918044,
+      "captures": 553,
+      "frames": 92187,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 967,
+        "drawn_source_frame": 417,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92157
+    },
+    {
+      "seconds": 19.82799999997951,
+      "captures": 554,
+      "frames": 92220,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 995,
+        "drawn_source_frame": 448,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92189
+    },
+    {
+      "seconds": 20.343999999924563,
+      "captures": 555,
+      "frames": 92251,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1031,
+        "drawn_source_frame": 488,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92221
+    },
+    {
+      "seconds": 20.843999999924563,
+      "captures": 556,
+      "frames": 92282,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1057,
+        "drawn_source_frame": 518,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92252
+    },
+    {
+      "seconds": 21.375,
+      "captures": 557,
+      "frames": 92313,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1086,
+        "drawn_source_frame": 549,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92283
+    },
+    {
+      "seconds": 21.875,
+      "captures": 558,
+      "frames": 92336,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1111,
+        "drawn_source_frame": 578,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92314
+    },
+    {
+      "seconds": 22.405999999959022,
+      "captures": 559,
+      "frames": 92365,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1138,
+        "drawn_source_frame": 609,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92346
+    },
+    {
+      "seconds": 22.921999999904074,
+      "captures": 561,
+      "frames": 92405,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1164,
+        "drawn_source_frame": 640,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92349
+    },
+    {
+      "seconds": 23.421999999904074,
+      "captures": 562,
+      "frames": 92427,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1190,
+        "drawn_source_frame": 672,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92409
+    },
+    {
+      "seconds": 23.95299999997951,
+      "captures": 563,
+      "frames": 92459,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1215,
+        "drawn_source_frame": 702,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92441
+    },
+    {
+      "seconds": 24.468999999924563,
+      "captures": 564,
+      "frames": 92490,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1248,
+        "drawn_source_frame": 20,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92472
+    },
+    {
+      "seconds": 24.968999999924563,
+      "captures": 565,
+      "frames": 92521,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1274,
+        "drawn_source_frame": 51,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92503
+    },
+    {
+      "seconds": 25.5,
+      "captures": 566,
+      "frames": 92553,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1298,
+        "drawn_source_frame": 80,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92535
+    },
+    {
+      "seconds": 26.0,
+      "captures": 567,
+      "frames": 92585,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1327,
+        "drawn_source_frame": 113,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92567
+    },
+    {
+      "seconds": 26.515999999945052,
+      "captures": 568,
+      "frames": 92617,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1356,
+        "drawn_source_frame": 144,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92599
+    },
+    {
+      "seconds": 27.030999999959022,
+      "captures": 569,
+      "frames": 92648,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1365,
+        "drawn_source_frame": 154,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92630
+    },
+    {
+      "seconds": 27.530999999959022,
+      "captures": 570,
+      "frames": 92680,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1392,
+        "drawn_source_frame": 185,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92661
+    },
+    {
+      "seconds": 28.061999999918044,
+      "captures": 571,
+      "frames": 92712,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1419,
+        "drawn_source_frame": 217,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92693
+    },
+    {
+      "seconds": 28.561999999918044,
+      "captures": 572,
+      "frames": 92744,
+      "depth": 1,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1445,
+        "drawn_source_frame": 249,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92725
+    },
+    {
+      "seconds": 29.07799999997951,
+      "captures": 574,
+      "frames": 92775,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1469,
+        "drawn_source_frame": 278,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92756
+    },
+    {
+      "seconds": 29.57799999997951,
+      "captures": 575,
+      "frames": 92806,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1499,
+        "drawn_source_frame": 312,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92788
+    },
+    {
+      "seconds": 30.108999999938533,
+      "captures": 576,
+      "frames": 92837,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1526,
+        "drawn_source_frame": 344,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92819
+    },
+    {
+      "seconds": 30.608999999938533,
+      "captures": 577,
+      "frames": 92856,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1550,
+        "drawn_source_frame": 377,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92850
+    },
+    {
+      "seconds": 31.125,
+      "captures": 578,
+      "frames": 92888,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1574,
+        "drawn_source_frame": 407,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92882
+    },
+    {
+      "seconds": 31.655999999959022,
+      "captures": 579,
+      "frames": 92920,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1603,
+        "drawn_source_frame": 438,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92914
+    },
+    {
+      "seconds": 32.171999999904074,
+      "captures": 580,
+      "frames": 92952,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1629,
+        "drawn_source_frame": 470,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92946
+    },
+    {
+      "seconds": 32.686999999918044,
+      "captures": 581,
+      "frames": 92982,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1654,
+        "drawn_source_frame": 500,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 92977
+    },
+    {
+      "seconds": 33.20299999997951,
+      "captures": 582,
+      "frames": 93014,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1677,
+        "drawn_source_frame": 533,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93008
+    },
+    {
+      "seconds": 33.71899999992456,
+      "captures": 583,
+      "frames": 93045,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1704,
+        "drawn_source_frame": 564,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93039
+    },
+    {
+      "seconds": 34.23399999993853,
+      "captures": 584,
+      "frames": 93077,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1734,
+        "drawn_source_frame": 596,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93071
+    },
+    {
+      "seconds": 34.73399999993853,
+      "captures": 586,
+      "frames": 93110,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1763,
+        "drawn_source_frame": 626,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93111
+    },
+    {
+      "seconds": 35.23399999993853,
+      "captures": 586,
+      "frames": 93142,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1790,
+        "drawn_source_frame": 655,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93111
+    },
+    {
+      "seconds": 35.76599999994505,
+      "captures": 587,
+      "frames": 93173,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1827,
+        "drawn_source_frame": 696,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93143
+    },
+    {
+      "seconds": 36.28099999995902,
+      "captures": 588,
+      "frames": 93204,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1845,
+        "drawn_source_frame": 717,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93174
+    },
+    {
+      "seconds": 36.78099999995902,
+      "captures": 589,
+      "frames": 93236,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1872,
+        "drawn_source_frame": 30,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93205
+    },
+    {
+      "seconds": 37.296999999904074,
+      "captures": 590,
+      "frames": 93268,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1894,
+        "drawn_source_frame": 60,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93237
+    },
+    {
+      "seconds": 37.811999999918044,
+      "captures": 591,
+      "frames": 93300,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1926,
+        "drawn_source_frame": 100,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93269
+    },
+    {
+      "seconds": 38.32799999997951,
+      "captures": 592,
+      "frames": 93319,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1943,
+        "drawn_source_frame": 122,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93301
+    },
+    {
+      "seconds": 38.84399999992456,
+      "captures": 593,
+      "frames": 93351,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1963,
+        "drawn_source_frame": 154,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93333
+    },
+    {
+      "seconds": 39.35899999993853,
+      "captures": 594,
+      "frames": 93382,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 1987,
+        "drawn_source_frame": 184,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93364
+    },
+    {
+      "seconds": 39.875,
+      "captures": 595,
+      "frames": 93414,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2022,
+        "drawn_source_frame": 224,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93395
+    },
+    {
+      "seconds": 40.375,
+      "captures": 596,
+      "frames": 93446,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2049,
+        "drawn_source_frame": 255,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93427
+    },
+    {
+      "seconds": 40.89099999994505,
+      "captures": 598,
+      "frames": 93473,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2073,
+        "drawn_source_frame": 284,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93428
+    },
+    {
+      "seconds": 41.40599999995902,
+      "captures": 599,
+      "frames": 93508,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2097,
+        "drawn_source_frame": 313,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93490
+    },
+    {
+      "seconds": 41.921999999904074,
+      "captures": 600,
+      "frames": 93539,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2120,
+        "drawn_source_frame": 342,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93521
+    },
+    {
+      "seconds": 42.436999999918044,
+      "captures": 601,
+      "frames": 93573,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2144,
+        "drawn_source_frame": 372,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93552
+    },
+    {
+      "seconds": 42.936999999918044,
+      "captures": 602,
+      "frames": 93601,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2169,
+        "drawn_source_frame": 406,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93583
+    },
+    {
+      "seconds": 43.436999999918044,
+      "captures": 603,
+      "frames": 93633,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2193,
+        "drawn_source_frame": 436,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93615
+    },
+    {
+      "seconds": 43.936999999918044,
+      "captures": 604,
+      "frames": 93665,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2210,
+        "drawn_source_frame": 456,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93647
+    },
+    {
+      "seconds": 44.45299999997951,
+      "captures": 605,
+      "frames": 93697,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2237,
+        "drawn_source_frame": 487,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93679
+    },
+    {
+      "seconds": 44.96899999992456,
+      "captures": 606,
+      "frames": 93728,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2269,
+        "drawn_source_frame": 519,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93710
+    },
+    {
+      "seconds": 45.46899999992456,
+      "captures": 607,
+      "frames": 93760,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2296,
+        "drawn_source_frame": 549,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93741
+    },
+    {
+      "seconds": 45.98399999993853,
+      "captures": 608,
+      "frames": 93779,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2321,
+        "drawn_source_frame": 578,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93773
+    },
+    {
+      "seconds": 46.5,
+      "captures": 609,
+      "frames": 93811,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2347,
+        "drawn_source_frame": 608,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93805
+    },
+    {
+      "seconds": 47.01599999994505,
+      "captures": 611,
+      "frames": 93842,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2371,
+        "drawn_source_frame": 638,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93836
+    },
+    {
+      "seconds": 47.51599999994505,
+      "captures": 612,
+      "frames": 93874,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2401,
+        "drawn_source_frame": 670,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93868
+    },
+    {
+      "seconds": 48.046999999904074,
+      "captures": 613,
+      "frames": 93904,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2430,
+        "drawn_source_frame": 702,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93899
+    },
+    {
+      "seconds": 48.561999999918044,
+      "captures": 614,
+      "frames": 93936,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2455,
+        "drawn_source_frame": 11,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93930
+    },
+    {
+      "seconds": 49.07799999997951,
+      "captures": 615,
+      "frames": 93968,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2481,
+        "drawn_source_frame": 42,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93962
+    },
+    {
+      "seconds": 49.57799999997951,
+      "captures": 616,
+      "frames": 94000,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2506,
+        "drawn_source_frame": 73,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 93994
+    },
+    {
+      "seconds": 50.09399999992456,
+      "captures": 617,
+      "frames": 94032,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2533,
+        "drawn_source_frame": 103,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94026
+    },
+    {
+      "seconds": 50.60899999993853,
+      "captures": 618,
+      "frames": 94063,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2571,
+        "drawn_source_frame": 145,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94057
+    },
+    {
+      "seconds": 51.125,
+      "captures": 619,
+      "frames": 94094,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2591,
+        "drawn_source_frame": 166,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94088
+    },
+    {
+      "seconds": 51.64099999994505,
+      "captures": 620,
+      "frames": 94125,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "UNCONFIRMED",
+        "progressing": null,
+        "message": "输入身份未确认，暂不判断绘制进展"
+      },
+      "frame_id": 94119
+    },
+    {
+      "seconds": 52.14099999994505,
+      "captures": 621,
+      "frames": 94157,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2647,
+        "drawn_source_frame": 228,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94151
+    },
+    {
+      "seconds": 52.671999999904074,
+      "captures": 622,
+      "frames": 94190,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2673,
+        "drawn_source_frame": 260,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94148
+    },
+    {
+      "seconds": 53.186999999918044,
+      "captures": 623,
+      "frames": 94222,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2701,
+        "drawn_source_frame": 293,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94191
+    },
+    {
+      "seconds": 53.686999999918044,
+      "captures": 624,
+      "frames": 94241,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2728,
+        "drawn_source_frame": 324,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94223
+    },
+    {
+      "seconds": 54.20299999997951,
+      "captures": 625,
+      "frames": 94272,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2757,
+        "drawn_source_frame": 355,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94254
+    },
+    {
+      "seconds": 54.71899999992456,
+      "captures": 626,
+      "frames": 94303,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2785,
+        "drawn_source_frame": 387,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94285
+    },
+    {
+      "seconds": 55.23399999993853,
+      "captures": 627,
+      "frames": 94335,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2814,
+        "drawn_source_frame": 419,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94317
+    },
+    {
+      "seconds": 55.75,
+      "captures": 628,
+      "frames": 94367,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2843,
+        "drawn_source_frame": 450,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94349
+    },
+    {
+      "seconds": 56.26599999994505,
+      "captures": 629,
+      "frames": 94399,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2869,
+        "drawn_source_frame": 480,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94381
+    },
+    {
+      "seconds": 56.78099999995902,
+      "captures": 630,
+      "frames": 94430,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2899,
+        "drawn_source_frame": 511,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94412
+    },
+    {
+      "seconds": 57.296999999904074,
+      "captures": 631,
+      "frames": 94461,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2927,
+        "drawn_source_frame": 542,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94443
+    },
+    {
+      "seconds": 57.796999999904074,
+      "captures": 632,
+      "frames": 94496,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2960,
+        "drawn_source_frame": 580,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94474
+    },
+    {
+      "seconds": 58.32799999997951,
+      "captures": 633,
+      "frames": 94525,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 2987,
+        "drawn_source_frame": 612,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94506
+    },
+    {
+      "seconds": 58.82799999997951,
+      "captures": 635,
+      "frames": 94553,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3013,
+        "drawn_source_frame": 643,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94509
+    },
+    {
+      "seconds": 59.32799999997951,
+      "captures": 636,
+      "frames": 94587,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3021,
+        "drawn_source_frame": 653,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94569
+    },
+    {
+      "seconds": 59.82799999997951,
+      "captures": 637,
+      "frames": 94618,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3057,
+        "drawn_source_frame": 693,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94600
+    },
+    {
+      "seconds": 60.34399999992456,
+      "captures": 638,
+      "frames": 94649,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3082,
+        "drawn_source_frame": 1,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94631
+    },
+    {
+      "seconds": 60.84399999992456,
+      "captures": 639,
+      "frames": 94680,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3105,
+        "drawn_source_frame": 30,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94662
+    },
+    {
+      "seconds": 61.34399999992456,
+      "captures": 640,
+      "frames": 94700,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3127,
+        "drawn_source_frame": 58,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94694
+    },
+    {
+      "seconds": 61.85899999993853,
+      "captures": 641,
+      "frames": 94732,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3162,
+        "drawn_source_frame": 99,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94726
+    },
+    {
+      "seconds": 62.375,
+      "captures": 642,
+      "frames": 94763,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3181,
+        "drawn_source_frame": 120,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94758
+    },
+    {
+      "seconds": 62.89099999994505,
+      "captures": 643,
+      "frames": 94795,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3211,
+        "drawn_source_frame": 152,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94789
+    },
+    {
+      "seconds": 63.39099999994505,
+      "captures": 644,
+      "frames": 94826,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3238,
+        "drawn_source_frame": 184,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94820
+    },
+    {
+      "seconds": 63.89099999994505,
+      "captures": 645,
+      "frames": 94858,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3264,
+        "drawn_source_frame": 214,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94852
+    },
+    {
+      "seconds": 64.40599999995902,
+      "captures": 646,
+      "frames": 94890,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3294,
+        "drawn_source_frame": 246,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94884
+    },
+    {
+      "seconds": 64.92199999990407,
+      "captures": 648,
+      "frames": 94921,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3320,
+        "drawn_source_frame": 278,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94915
+    },
+    {
+      "seconds": 65.43699999991804,
+      "captures": 649,
+      "frames": 94953,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3343,
+        "drawn_source_frame": 308,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94947
+    },
+    {
+      "seconds": 65.96899999992456,
+      "captures": 650,
+      "frames": 94984,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3368,
+        "drawn_source_frame": 341,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 94978
+    },
+    {
+      "seconds": 66.48399999993853,
+      "captures": 651,
+      "frames": 95015,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3390,
+        "drawn_source_frame": 372,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95009
+    },
+    {
+      "seconds": 67.0,
+      "captures": 652,
+      "frames": 95047,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3418,
+        "drawn_source_frame": 405,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95041
+    },
+    {
+      "seconds": 67.51599999994505,
+      "captures": 653,
+      "frames": 95079,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3442,
+        "drawn_source_frame": 436,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95073
+    },
+    {
+      "seconds": 68.03099999995902,
+      "captures": 654,
+      "frames": 95111,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3470,
+        "drawn_source_frame": 467,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95105
+    },
+    {
+      "seconds": 68.54699999990407,
+      "captures": 655,
+      "frames": 95142,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3495,
+        "drawn_source_frame": 499,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95136
+    },
+    {
+      "seconds": 69.04699999990407,
+      "captures": 656,
+      "frames": 95173,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3520,
+        "drawn_source_frame": 531,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95167
+    },
+    {
+      "seconds": 69.56199999991804,
+      "captures": 657,
+      "frames": 95204,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3537,
+        "drawn_source_frame": 552,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95198
+    },
+    {
+      "seconds": 70.07799999997951,
+      "captures": 658,
+      "frames": 95235,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3560,
+        "drawn_source_frame": 582,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95230
+    },
+    {
+      "seconds": 70.59399999992456,
+      "captures": 659,
+      "frames": 95261,
+      "depth": 1,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3592,
+        "drawn_source_frame": 615,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95227
+    },
+    {
+      "seconds": 71.09399999992456,
+      "captures": 660,
+      "frames": 95289,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3622,
+        "drawn_source_frame": 647,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95270
+    },
+    {
+      "seconds": 71.59399999992456,
+      "captures": 661,
+      "frames": 95320,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3649,
+        "drawn_source_frame": 678,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95302
+    },
+    {
+      "seconds": 72.125,
+      "captures": 662,
+      "frames": 95351,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3674,
+        "drawn_source_frame": 706,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95333
+    },
+    {
+      "seconds": 72.65599999995902,
+      "captures": 663,
+      "frames": 95382,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3703,
+        "drawn_source_frame": 18,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95364
+    },
+    {
+      "seconds": 73.15599999995902,
+      "captures": 664,
+      "frames": 95414,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3729,
+        "drawn_source_frame": 51,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95396
+    },
+    {
+      "seconds": 73.67199999990407,
+      "captures": 665,
+      "frames": 95446,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3753,
+        "drawn_source_frame": 81,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95428
+    },
+    {
+      "seconds": 74.17199999990407,
+      "captures": 666,
+      "frames": 95478,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3781,
+        "drawn_source_frame": 112,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95460
+    },
+    {
+      "seconds": 74.68699999991804,
+      "captures": 667,
+      "frames": 95509,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3808,
+        "drawn_source_frame": 143,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95491
+    },
+    {
+      "seconds": 75.20299999997951,
+      "captures": 668,
+      "frames": 95540,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3835,
+        "drawn_source_frame": 173,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95522
+    },
+    {
+      "seconds": 75.71899999992456,
+      "captures": 669,
+      "frames": 95572,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3862,
+        "drawn_source_frame": 203,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95553
+    },
+    {
+      "seconds": 76.23399999993853,
+      "captures": 670,
+      "frames": 95591,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3890,
+        "drawn_source_frame": 236,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95585
+    },
+    {
+      "seconds": 76.73399999993853,
+      "captures": 672,
+      "frames": 95632,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3917,
+        "drawn_source_frame": 267,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95589
+    },
+    {
+      "seconds": 77.26599999994505,
+      "captures": 673,
+      "frames": 95666,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3949,
+        "drawn_source_frame": 306,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95648
+    },
+    {
+      "seconds": 77.78099999995902,
+      "captures": 674,
+      "frames": 95698,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3972,
+        "drawn_source_frame": 337,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95680
+    },
+    {
+      "seconds": 78.28099999995902,
+      "captures": 675,
+      "frames": 95717,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 3997,
+        "drawn_source_frame": 369,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95711
+    },
+    {
+      "seconds": 78.79699999990407,
+      "captures": 676,
+      "frames": 95748,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4025,
+        "drawn_source_frame": 402,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95742
+    },
+    {
+      "seconds": 79.31199999991804,
+      "captures": 677,
+      "frames": 95780,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4050,
+        "drawn_source_frame": 432,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95774
+    },
+    {
+      "seconds": 79.82799999997951,
+      "captures": 678,
+      "frames": 95812,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4077,
+        "drawn_source_frame": 462,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95806
+    },
+    {
+      "seconds": 80.34399999992456,
+      "captures": 679,
+      "frames": 95843,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4096,
+        "drawn_source_frame": 485,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95838
+    },
+    {
+      "seconds": 80.85899999993853,
+      "captures": 680,
+      "frames": 95875,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4122,
+        "drawn_source_frame": 517,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95869
+    },
+    {
+      "seconds": 81.39099999994505,
+      "captures": 681,
+      "frames": 95907,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4148,
+        "drawn_source_frame": 549,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95900
+    },
+    {
+      "seconds": 81.89099999994505,
+      "captures": 682,
+      "frames": 95938,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4165,
+        "drawn_source_frame": 570,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95932
+    },
+    {
+      "seconds": 82.39099999994505,
+      "captures": 683,
+      "frames": 95970,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4189,
+        "drawn_source_frame": 603,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95964
+    },
+    {
+      "seconds": 82.92199999990407,
+      "captures": 685,
+      "frames": 96001,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4217,
+        "drawn_source_frame": 637,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 95995
+    },
+    {
+      "seconds": 83.42199999990407,
+      "captures": 686,
+      "frames": 96033,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4241,
+        "drawn_source_frame": 667,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96027
+    },
+    {
+      "seconds": 83.93699999991804,
+      "captures": 687,
+      "frames": 96064,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4268,
+        "drawn_source_frame": 695,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96058
+    },
+    {
+      "seconds": 84.46899999992456,
+      "captures": 688,
+      "frames": 96095,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4298,
+        "drawn_source_frame": 8,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96089
+    },
+    {
+      "seconds": 84.98399999993853,
+      "captures": 689,
+      "frames": 96127,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4320,
+        "drawn_source_frame": 40,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96121
+    },
+    {
+      "seconds": 85.48399999993853,
+      "captures": 690,
+      "frames": 96159,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4346,
+        "drawn_source_frame": 74,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96153
+    },
+    {
+      "seconds": 86.0,
+      "captures": 691,
+      "frames": 96191,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4362,
+        "drawn_source_frame": 96,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96185
+    },
+    {
+      "seconds": 86.5,
+      "captures": 692,
+      "frames": 96221,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4394,
+        "drawn_source_frame": 137,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96216
+    },
+    {
+      "seconds": 87.01599999994505,
+      "captures": 693,
+      "frames": 96253,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4419,
+        "drawn_source_frame": 168,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96247
+    },
+    {
+      "seconds": 87.53099999995902,
+      "captures": 694,
+      "frames": 96283,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4445,
+        "drawn_source_frame": 198,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96278
+    },
+    {
+      "seconds": 88.03099999995902,
+      "captures": 694,
+      "frames": 96309,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4473,
+        "drawn_source_frame": 230,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96278
+    },
+    {
+      "seconds": 88.54699999990407,
+      "captures": 695,
+      "frames": 96341,
+      "depth": 1,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4498,
+        "drawn_source_frame": 258,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96310
+    },
+    {
+      "seconds": 89.07799999997951,
+      "captures": 697,
+      "frames": 96369,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4522,
+        "drawn_source_frame": 288,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96350
+    },
+    {
+      "seconds": 89.57799999997951,
+      "captures": 698,
+      "frames": 96400,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4547,
+        "drawn_source_frame": 318,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96382
+    },
+    {
+      "seconds": 90.07799999997951,
+      "captures": 699,
+      "frames": 96431,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4575,
+        "drawn_source_frame": 350,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96413
+    },
+    {
+      "seconds": 90.59399999992456,
+      "captures": 700,
+      "frames": 96463,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4602,
+        "drawn_source_frame": 382,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96444
+    },
+    {
+      "seconds": 91.10899999993853,
+      "captures": 701,
+      "frames": 96494,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4630,
+        "drawn_source_frame": 413,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96476
+    },
+    {
+      "seconds": 91.625,
+      "captures": 702,
+      "frames": 96526,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4656,
+        "drawn_source_frame": 445,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96508
+    },
+    {
+      "seconds": 92.14099999994505,
+      "captures": 703,
+      "frames": 96558,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4673,
+        "drawn_source_frame": 465,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96540
+    },
+    {
+      "seconds": 92.64099999994505,
+      "captures": 704,
+      "frames": 96589,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4703,
+        "drawn_source_frame": 498,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96571
+    },
+    {
+      "seconds": 93.17199999990407,
+      "captures": 705,
+      "frames": 96620,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4732,
+        "drawn_source_frame": 530,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96602
+    },
+    {
+      "seconds": 93.67199999990407,
+      "captures": 706,
+      "frames": 96639,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4758,
+        "drawn_source_frame": 559,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96633
+    },
+    {
+      "seconds": 94.18699999991804,
+      "captures": 707,
+      "frames": 96672,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4787,
+        "drawn_source_frame": 590,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96665
+    },
+    {
+      "seconds": 94.70299999997951,
+      "captures": 709,
+      "frames": 96712,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4813,
+        "drawn_source_frame": 619,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96667
+    },
+    {
+      "seconds": 95.20299999997951,
+      "captures": 710,
+      "frames": 96734,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4846,
+        "drawn_source_frame": 656,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96728
+    },
+    {
+      "seconds": 95.71899999992456,
+      "captures": 711,
+      "frames": 96765,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4872,
+        "drawn_source_frame": 686,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96759
+    },
+    {
+      "seconds": 96.21899999992456,
+      "captures": 712,
+      "frames": 96796,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4900,
+        "drawn_source_frame": 717,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96790
+    },
+    {
+      "seconds": 96.75,
+      "captures": 713,
+      "frames": 96827,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4932,
+        "drawn_source_frame": 30,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96821
+    },
+    {
+      "seconds": 97.25,
+      "captures": 714,
+      "frames": 96859,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4959,
+        "drawn_source_frame": 61,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96853
+    },
+    {
+      "seconds": 97.76599999994505,
+      "captures": 715,
+      "frames": 96891,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 4986,
+        "drawn_source_frame": 92,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96885
+    },
+    {
+      "seconds": 98.26599999994505,
+      "captures": 716,
+      "frames": 96922,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5011,
+        "drawn_source_frame": 122,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96917
+    },
+    {
+      "seconds": 98.76599999994505,
+      "captures": 717,
+      "frames": 96954,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5038,
+        "drawn_source_frame": 153,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96948
+    },
+    {
+      "seconds": 99.29699999990407,
+      "captures": 718,
+      "frames": 96985,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5062,
+        "drawn_source_frame": 184,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 96979
+    },
+    {
+      "seconds": 99.81199999991804,
+      "captures": 719,
+      "frames": 97017,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5085,
+        "drawn_source_frame": 214,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97011
+    },
+    {
+      "seconds": 100.32799999997951,
+      "captures": 720,
+      "frames": 97049,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5111,
+        "drawn_source_frame": 245,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97043
+    },
+    {
+      "seconds": 100.84399999992456,
+      "captures": 722,
+      "frames": 97080,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5136,
+        "drawn_source_frame": 275,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97074
+    },
+    {
+      "seconds": 101.35899999993853,
+      "captures": 723,
+      "frames": 97112,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5163,
+        "drawn_source_frame": 309,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97106
+    },
+    {
+      "seconds": 101.875,
+      "captures": 724,
+      "frames": 97142,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5190,
+        "drawn_source_frame": 341,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97137
+    },
+    {
+      "seconds": 102.375,
+      "captures": 725,
+      "frames": 97173,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5209,
+        "drawn_source_frame": 361,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97168
+    },
+    {
+      "seconds": 102.875,
+      "captures": 725,
+      "frames": 97199,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5235,
+        "drawn_source_frame": 392,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97168
+    },
+    {
+      "seconds": 103.375,
+      "captures": 726,
+      "frames": 97231,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5260,
+        "drawn_source_frame": 421,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97200
+    },
+    {
+      "seconds": 103.90599999995902,
+      "captures": 727,
+      "frames": 97263,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5287,
+        "drawn_source_frame": 453,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97232
+    },
+    {
+      "seconds": 104.42199999990407,
+      "captures": 728,
+      "frames": 97294,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5313,
+        "drawn_source_frame": 483,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97264
+    },
+    {
+      "seconds": 104.93699999991804,
+      "captures": 729,
+      "frames": 97325,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5337,
+        "drawn_source_frame": 511,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97295
+    },
+    {
+      "seconds": 105.45299999997951,
+      "captures": 730,
+      "frames": 97356,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5373,
+        "drawn_source_frame": 551,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97326
+    },
+    {
+      "seconds": 105.98399999993853,
+      "captures": 731,
+      "frames": 97388,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5398,
+        "drawn_source_frame": 579,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97357
+    },
+    {
+      "seconds": 106.5,
+      "captures": 732,
+      "frames": 97420,
+      "depth": 1,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5426,
+        "drawn_source_frame": 609,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97389
+    },
+    {
+      "seconds": 107.0,
+      "captures": 734,
+      "frames": 97448,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5452,
+        "drawn_source_frame": 640,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97429
+    },
+    {
+      "seconds": 107.51599999994505,
+      "captures": 735,
+      "frames": 97479,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5476,
+        "drawn_source_frame": 673,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97461
+    },
+    {
+      "seconds": 108.03099999995902,
+      "captures": 736,
+      "frames": 97510,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5505,
+        "drawn_source_frame": 707,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97492
+    },
+    {
+      "seconds": 108.54699999990407,
+      "captures": 737,
+      "frames": 97544,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5529,
+        "drawn_source_frame": 16,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97523
+    },
+    {
+      "seconds": 109.06199999991804,
+      "captures": 738,
+      "frames": 97573,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5554,
+        "drawn_source_frame": 44,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97555
+    },
+    {
+      "seconds": 109.56199999991804,
+      "captures": 739,
+      "frames": 97602,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5581,
+        "drawn_source_frame": 76,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97584
+    },
+    {
+      "seconds": 110.09399999992456,
+      "captures": 740,
+      "frames": 97634,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5609,
+        "drawn_source_frame": 108,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97616
+    },
+    {
+      "seconds": 110.59399999992456,
+      "captures": 741,
+      "frames": 97666,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5643,
+        "drawn_source_frame": 148,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97648
+    },
+    {
+      "seconds": 111.125,
+      "captures": 742,
+      "frames": 97697,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5671,
+        "drawn_source_frame": 179,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97679
+    },
+    {
+      "seconds": 111.64099999994505,
+      "captures": 743,
+      "frames": 97729,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5699,
+        "drawn_source_frame": 212,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97710
+    },
+    {
+      "seconds": 112.15599999995902,
+      "captures": 744,
+      "frames": 97761,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5709,
+        "drawn_source_frame": 223,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97742
+    },
+    {
+      "seconds": 112.67199999990407,
+      "captures": 746,
+      "frames": 97789,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5737,
+        "drawn_source_frame": 254,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97748
+    },
+    {
+      "seconds": 113.18699999991804,
+      "captures": 747,
+      "frames": 97812,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5762,
+        "drawn_source_frame": 286,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97806
+    },
+    {
+      "seconds": 113.70299999997951,
+      "captures": 748,
+      "frames": 97844,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5785,
+        "drawn_source_frame": 315,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97838
+    },
+    {
+      "seconds": 114.21899999992456,
+      "captures": 749,
+      "frames": 97875,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5812,
+        "drawn_source_frame": 347,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97869
+    },
+    {
+      "seconds": 114.71899999992456,
+      "captures": 750,
+      "frames": 97906,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5842,
+        "drawn_source_frame": 379,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97900
+    },
+    {
+      "seconds": 115.23399999993853,
+      "captures": 751,
+      "frames": 97938,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5872,
+        "drawn_source_frame": 412,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97932
+    },
+    {
+      "seconds": 115.73399999993853,
+      "captures": 752,
+      "frames": 97970,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5898,
+        "drawn_source_frame": 441,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97964
+    },
+    {
+      "seconds": 116.23399999993853,
+      "captures": 753,
+      "frames": 98001,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5926,
+        "drawn_source_frame": 472,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 97996
+    },
+    {
+      "seconds": 116.73399999993853,
+      "captures": 754,
+      "frames": 98033,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5954,
+        "drawn_source_frame": 504,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 98027
+    },
+    {
+      "seconds": 117.25,
+      "captures": 755,
+      "frames": 98064,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 5983,
+        "drawn_source_frame": 535,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 98058
+    },
+    {
+      "seconds": 117.75,
+      "captures": 756,
+      "frames": 98096,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 6016,
+        "drawn_source_frame": 577,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 98090
+    },
+    {
+      "seconds": 118.28099999995902,
+      "captures": 757,
+      "frames": 98128,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 6041,
+        "drawn_source_frame": 606,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 98122
+    },
+    {
+      "seconds": 118.78099999995902,
+      "captures": 759,
+      "frames": 98158,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 6069,
+        "drawn_source_frame": 638,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 98153
+    },
+    {
+      "seconds": 119.28099999995902,
+      "captures": 759,
+      "frames": 98184,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 6097,
+        "drawn_source_frame": 669,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 98153
+    },
+    {
+      "seconds": 119.79699999990407,
+      "captures": 760,
+      "frames": 98215,
+      "depth": 0,
+      "stats": {
+        "gaps": 0,
+        "invalid": 0,
+        "dropped": 0,
+        "ack_errors": 0,
+        "descriptor_crc_errors": 0
+      },
+      "motion": {
+        "state": "PROGRESSING",
+        "progressing": true,
+        "drawn_frames": 6112,
+        "drawn_source_frame": 687,
+        "no_progress_seconds": 0.0,
+        "message": "本机运动源绘制持续前进；物理输出以板端图像为准",
+        "scope": "LOCAL_WPF_DRAWING_NOT_HDMI_SCANOUT"
+      },
+      "frame_id": 98185
+    }
+  ],
+  "evidence": [],
+  "error": "Traceback (most recent call last):\n  File \"D:\\Vivado\\pynq_z2_tile_v1_53\\scripts\\board_submission_acceptance.py\", line 32, in main\n    assert row['reason']=='automatic' and row['selection']=='FPGA_PRODUCT_BEST_FRAME' and row['selection_full_tile'] and row['alarm']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

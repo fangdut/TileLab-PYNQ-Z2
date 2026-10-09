@@ -1,0 +1,24 @@
+param([string]$Python='python',[string]$ToolRoot='D:/2025.2')
+$ErrorActionPreference='Stop'
+$root=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..')).Replace('\','/')
+$name=Split-Path -Leaf $root
+& $Python ($root+'/scripts/test_monitor_native.py')
+if($LASTEXITCODE -ne 0){throw 'Native monitor test failure'}
+if(Test-Path -LiteralPath ($root+'/host/test_host.py')){
+ & $Python -m unittest discover -s ($root+'/host') -p test_host.py -v
+ if($LASTEXITCODE -ne 0){throw 'Host tests failed'}
+}
+& (Join-Path $PSScriptRoot 'run_v09_tests.ps1') -Python $Python -Vivado ($ToolRoot+'/Vivado/bin/vivado.bat')
+if($LASTEXITCODE -ne 0){throw 'Regression failure'}
+$testDir=Get-ChildItem -LiteralPath ($root+'/reports') -Directory -Filter 'regression_*' | Sort-Object Name | Select-Object -Last 1
+foreach($pair in @(@('detection_32','detection_small'),@('detection_1280','detection_full'),@('candidate','candidate_test'),@('brightness','brightness_test'),@('config','config_test'),@('bbox','bbox_test'))){
+ Copy-Item -LiteralPath ($testDir.FullName+'/'+$pair[0]+'.log') -Destination ($root+'/reports/'+$pair[1]+'.log') -Force
+}
+$script=if(Test-Path -LiteralPath ($root+'/'+$name+'.xpr')){'rebuild.tcl'}else{'create_project.tcl'}
+& ($ToolRoot+'/Vivado/bin/vivado.bat') -mode batch -log ($root+'/reports/rebuild_console.log') -nojournal -source ($root+'/scripts/'+$script)
+if($LASTEXITCODE -ne 0){throw 'Vivado build failed'}
+& ($ToolRoot+'/Vitis/bin/vitis.bat') -s ($root+'/'+$name+'.sdk/build_vitis.py')
+if($LASTEXITCODE -ne 0){throw 'Vitis build failed'}
+& $Python ($root+'/scripts/verify_delivery.py')
+if($LASTEXITCODE -ne 0){throw 'Delivery verification failed'}
+Write-Output 'OFFLINE build verified. New hardware still requires board acceptance.'

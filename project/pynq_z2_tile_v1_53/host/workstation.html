@@ -1,0 +1,267 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TileLab · 表面质量检测工作站</title>
+<style>
+:root{--nav:#122c34;--ink:#183740;--muted:#6c8188;--line:#dfe7e9;--bg:#f3f6f6;--teal:#007e7a;--red:#cd4141;--amber:#a56c16}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px 'Segoe UI','Microsoft YaHei',sans-serif}button,input,textarea,select{font:inherit}button,a{transition:background .15s,color .15s}button{cursor:pointer;border:1px solid var(--line);background:white;color:var(--ink);padding:10px 14px;border-radius:9px}button:hover{background:#edf5f4}button:disabled{opacity:.45;cursor:not-allowed}button.primary{background:var(--teal);color:white;border-color:var(--teal)}button.primary:hover{background:#006967}button.danger{color:var(--red)}a{color:var(--teal);text-decoration:none}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #80c7c2;outline-offset:2px}.app{display:grid;grid-template-columns:204px 1fr;min-height:100vh}.sidebar{background:var(--nav);color:#eff8f8;padding:30px 20px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}.brand{font-size:23px;font-weight:700;letter-spacing:-.5px;display:flex;align-items:center;gap:10px}.mark{width:29px;height:29px;border:2px solid #58c8bf;transform:rotate(-8deg);display:inline-grid;place-items:center}.mark:after{content:'';width:13px;height:13px;border-left:2px solid #58c8bf;border-bottom:2px solid #58c8bf}.brand-sub{font-size:11px;letter-spacing:1.6px;color:#94b6bd;margin:12px 0 35px}.nav{display:grid;gap:9px}.nav button{text-align:left;border:0;color:#a9c4ca;background:none;padding:14px 12px}.nav button.active{color:white;background:#224650;box-shadow:inset 3px 0 #55c6be}.nav span{margin-right:9px}.side-bottom{margin-top:auto;border-top:1px solid #31505a;padding-top:18px;font-size:12px;color:#90b1b9;line-height:1.8}.side-bottom b{display:block;color:#dcebed}.main{min-width:0;padding:28px 32px 20px;max-width:1700px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;gap:20px}.eyebrow{font-size:11px;letter-spacing:1.5px;color:var(--muted);font-weight:600}h1{font-size:26px;letter-spacing:-.5px;margin:7px 0 0}h2{font-size:16px;margin:0}.chip{display:inline-flex;align-items:center;gap:6px;background:#edf1f2;border-radius:30px;padding:7px 10px;font-size:12px;color:var(--muted)}.chip.ok{background:#e2f3ee;color:#00756b}.chip.bad{background:#fce9e7;color:var(--red)}.dot{width:7px;height:7px;background:currentColor;border-radius:50%}.top-right{display:flex;align-items:center;gap:10px}.clock{font-size:12px;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:21px}.metric{background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px 19px}.metric-label{font-size:12px;color:var(--muted)}.metric-num{font-size:30px;line-height:1.5;font-weight:650;font-variant-numeric:tabular-nums}.metric-note{font-size:11px;color:var(--muted)}.workspace{display:grid;grid-template-columns:minmax(450px,1fr) 292px;gap:20px}.panel{background:white;border:1px solid var(--line);border-radius:13px;overflow:hidden}.panel-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.panel-head small{display:block;color:var(--muted);margin-top:5px;font-size:11px}.preview{position:relative;aspect-ratio:16/9;background:#14272c;overflow:hidden}.preview canvas{display:block;width:100%;height:100%;object-fit:contain}.empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#9fb9c1;gap:13px;text-align:center;padding:30px}.empty strong{font-size:17px;color:#d2e2e6;font-weight:500}.empty-icon{width:64px;height:45px;border:1px solid #54727b;border-radius:7px;position:relative}.empty-icon:after{content:'';width:18px;height:18px;border:1px solid #54727b;border-radius:50%;position:absolute;left:21px;top:12px}.preview-tag{position:absolute;left:14px;top:14px;background:#0d2429db;color:#d3efed;font-size:11px;padding:7px 10px;border:1px solid #4d6b70;border-radius:5px}.live-bottom{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;gap:12px}.tiny{font-size:11px;color:var(--muted);line-height:1.8}.toggles{display:flex;gap:16px;font-size:12px;color:var(--muted)}label{cursor:pointer}input[type=checkbox]{accent-color:var(--teal)}.info-strip{padding:11px 18px;background:#f7faf9;border-top:1px solid var(--line);display:flex;gap:23px;font-size:12px;color:var(--muted)}.info-strip b{color:var(--ink);font-weight:600;margin-left:5px}.controls{padding:19px}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px}.buttons .wide{grid-column:1/-1}.control-label{display:flex;justify-content:space-between;margin:22px 0 10px;font-size:12px}.threshold{display:flex;gap:10px;align-items:center}input[type=range]{width:100%;accent-color:var(--teal)}input[type=number]{width:61px;padding:7px;border:1px solid var(--line);border-radius:6px}select{padding:10px 9px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--ink);width:100%}.footnote{font-size:11px;color:var(--muted);line-height:1.7;margin:12px 0 0}.mini-status{padding:15px 18px;background:#f8fafb;border-top:1px solid var(--line);display:grid;gap:10px}.status-line{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.status-line b{font-weight:500;color:var(--ink)}.warning{margin-top:17px;padding:11px 15px;border:1px solid #ecdcbf;border-radius:9px;background:#fffaf1;font-size:12px;color:#825e28;line-height:1.7}.error{background:#fff0ee;color:#ae3030;border-color:#efc9c3;display:none}.events{margin-top:20px}.event-tools{display:flex;gap:9px;align-items:center}.event-tools input{width:180px;padding:8px 10px;border:1px solid var(--line);border-radius:7px}.event-tools select{width:132px;padding:8px}.event-tools a{font-size:12px}.cards{padding:18px 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:15px}.event-card{text-align:left;padding:0;overflow:hidden;border-radius:10px;background:#fff}.thumb{height:132px;width:100%;object-fit:cover;background:#152e36;display:block}.card-body{padding:12px}.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.event-id{font-size:13px;font-weight:600}.badge{font-size:10px;border-radius:5px;padding:4px 6px;background:#fff3db;color:#936419}.badge.confirmed_crack{background:#fce6e4;color:#b43e39}.badge.false_alarm{background:#e8f3ef;color:#337866}.badge.needs_recheck{background:#e9edf9;color:#5266a3}.no-records{padding:42px;text-align:center;color:var(--muted);grid-column:1/-1;font-size:13px}.footer{display:flex;justify-content:space-between;gap:15px;font-size:11px;color:#839298;margin-top:20px}.logs{padding:20px}.logrow{padding:13px 0;border-bottom:1px solid var(--line);font-size:13px;display:flex;gap:20px}.logrow time{color:var(--muted);width:100px;flex-shrink:0}dialog{border:1px solid var(--line);border-radius:15px;padding:0;width:min(1050px,93vw);max-height:93vh;box-shadow:0 24px 90px #102f3960}dialog::backdrop{background:#0e23299e;backdrop-filter:blur(3px)}.review-body{display:grid;grid-template-columns:1fr 270px}.review-picture{background:#172c32;display:grid;place-items:center;padding:14px}.review-picture canvas{width:100%;height:auto}.review-fields{padding:22px}.review-fields label{font-size:12px;display:block;margin:14px 0 8px}.review-fields textarea{width:100%;height:112px;resize:vertical;padding:10px;border:1px solid var(--line);border-radius:7px}.detail{white-space:pre-line;font-size:11px;color:var(--muted);line-height:1.8;word-break:break-all;margin-top:18px}.dialog-footer{border-top:1px solid var(--line);padding:15px 20px;display:flex;justify-content:flex-end;gap:10px}.toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--nav);color:white;padding:12px 22px;border-radius:8px;z-index:10;display:none}.hidden{display:none!important}@media(max-width:1100px){.app{grid-template-columns:165px 1fr}.sidebar{padding:24px 14px}.main{padding:22px 20px}.workspace{grid-template-columns:1fr}.control-panel .controls{display:grid;grid-template-columns:1fr 1fr;gap:16px}.control-label{margin-top:0}.metrics{gap:9px}.metric{padding:13px}.review-body{grid-template-columns:1fr}.event-tools input{width:130px}}@media(max-width:740px){.app{grid-template-columns:1fr}.sidebar{position:static;height:auto;padding:15px}.brand-sub,.side-bottom{display:none}.nav{display:flex;margin-top:12px}.nav button{padding:10px}.main{padding:15px}.metrics{grid-template-columns:repeat(2,1fr)}.top{align-items:flex-start}.top-right{flex-direction:column}.workspace{display:block}.control-panel{margin-top:15px}.panel-head{flex-wrap:wrap}.event-tools{flex-wrap:wrap}.footer{display:block}.review-body{display:block}.info-strip{gap:9px;flex-wrap:wrap}}
+.events>.panel-head{flex-wrap:wrap}.event-tools{flex-wrap:wrap}.event-tools select{width:auto;min-width:132px}
+#captureHealth{display:block;margin:0 0 17px}#captureHealth.healthy{background:#eaf5f1;border-color:#bddfd5;color:#236c60}
+#reviewIntegrity{display:block;margin:14px 18px}
+</style>
+<div class="app"><aside class="sidebar"><div class="brand"><i class="mark"></i>TileLab</div><div class="brand-sub">FPGA INSPECTION STATION</div><nav class="nav"><button class="active" data-view="work"><span>◫</span>检测工作台</button><button data-view="review"><span>▤</span>缺陷复核</button><button data-view="logs"><span>≋</span>运行记录</button></nav><div class="side-bottom"><b>PYNQ-Z2 · Tile V1.53</b>识别在 FPGA<br>图像来自 HDMI 实际采集<br><br>输入类型：合成素材 / 真实照片<br>用途：工程验证与竞赛演示</div></aside>
+<main class="main"><header class="top"><div><div class="eyebrow">QUALITY CONTROL / 工位 01</div><h1 id="pageTitle">表面质量检测工作台</h1></div><div class="top-right"><span class="clock" id="clock"></span><span class="chip" id="connection"><i class="dot"></i>等待开发板数据</span></div></header>
+<section class="metrics"><div class="metric"><div class="metric-label">已采样图像</div><div class="metric-num" id="nCapture">0</div><div class="metric-note">本次会话 · 非产品计数</div></div><div class="metric"><div class="metric-label">待复核事件</div><div class="metric-num" id="nPending">—</div><div class="metric-note">等待人工判断</div></div><div class="metric"><div class="metric-label">确认缺陷</div><div class="metric-num" id="nDefect">—</div><div class="metric-note">来自已保存的人工结论</div></div><div class="metric"><div class="metric-label">误报标记</div><div class="metric-num" id="nFalse">—</div><div class="metric-note">用于后续算法改进</div></div></section>
+<div class="panel" style="margin-bottom:18px"><div class="info-strip" style="flex-wrap:wrap"><span>板端待取<b id="queueDepth">— / 12</b></span><span>板端事件<b id="eventTotal">—</b></span><span>已通过瓷砖<b id="productTotal">—</b></span><span>队列满丢失<b id="queueDropped">—</b></span><span>无效采集<b id="invalidFrames">—</b></span><span>本帧区域<b id="regionCount">— / 8</b></span></div><p class="footnote" style="margin:0;padding:0 18px 12px">计数为最近一次板端读取的快照，网口通道在接收与确认后刷新；暂停接收时不实时更新。</p><div id="queueWarning" style="padding:12px 18px;display:none;color:#b43e39;background:#fff0e9" role="alert"></div></div><div id="workView"><div class="warning" id="captureHealth" role="status">等待采集健康状态</div><div class="workspace"><section class="panel"><div class="panel-head"><div><h2>工位画面</h2><small>开发板实际采集 · 1280 × 720 · 原图与 PL 坐标同帧</small></div><span class="chip" id="verdict">尚无图像</span></div><div class="preview"><canvas id="live" width="1280" height="720"></canvas><div class="empty" id="empty"><div class="empty-icon"></div><strong>连接后，工位画面将在这里出现</strong><span>点击「开始采集」接收板端事件和抽样预览<br>不会用演示图片填充实时画面</span></div><div class="preview-tag" id="previewIdentity" role="status">等待开发板画面</div></div><div class="live-bottom"><div class="tiny" id="frameText">等待第一张硬件图像</div><div class="toggles"><label><input type="checkbox" id="showBoxes" checked> 红框</label><label><input type="checkbox" id="showMask"> 掩码</label></div></div><div class="info-strip"><span>产品号<b id="productId">—</b></span><span>帧号<b id="frameId">—</b></span><span>候选像素<b id="area">—</b></span><span>传输耗时<b id="duration">—</b></span></div></section>
+<aside class="panel control-panel"><div class="panel-head"><h2>采集控制</h2><span class="chip" id="runState">待机</span></div><div class="controls"><div><div class="buttons"><button class="primary wide" id="start">开始采集</button><button id="pause">冻结预览</button><button id="capture">板端抓拍</button><button class="wide danger" id="stop">停止接收</button><button class="wide" id="resumePending" hidden>恢复待确认</button></div><div class="control-label"><label for="previewRate">普通预览取图上限</label></div><select id="previewRate" aria-label="普通预览取图上限" aria-describedby="previewRateStatus previewRateNote" disabled><option value="2">2 帧/秒 · 省流</option><option value="5">5 帧/秒 · 较流畅</option><option value="0">不限 · 对照</option></select><p class="footnote" id="previewRateStatus" role="status" aria-live="polite">等待服务端确认预览设置</p><p class="footnote" id="previewRateNote">仅限制普通预览向开发板请求整帧的频率，不改变 FPGA 检测帧率；网页显示还受刷新与传输耗时影响。报警队列优先接收，空闲时每 200 ms 检查一次，轮询等待可达 200 ms，另加网络与处理时间。人工抓拍不受此上限限制；冻结预览仍接收报警事件。</p><div class="control-label"><label for="storageMode">证据存储</label></div><select id="storageMode" aria-label="证据存储"><option value="preview">仅预览 · 不自动存图</option><option value="archive">自动留图 · 满额转仅预览</option></select><div class="control-label"><label for="storageLimit">存档上限（MiB）</label></div><div class="threshold"><input id="storageLimit" type="number" min="16" max="102400" value="1024" aria-label="存档容量上限"><button id="applyStorage">应用存储设置</button></div><p class="footnote" id="storageUsage"></p><p class="footnote" id="storageSnapshot" role="status">等待最近盘点时间</p><p class="footnote" id="storageInventory" role="status"></p><p class="footnote" id="storageNotice">仅预览会接收并确认板端事件，但不自动保存；红框和检测继续。手动留图仍占用存档容量。满额不删除旧记录。</p><div class="control-label"><label for="recipe">材料参数</label><a href="/benchmark" target="_blank">传输与检测验证 ↗</a></div><select id="recipe" aria-label="材料参数"><option value="synthetic_v16">合成演示与低纹理表面</option><option value="mvtec_tile_v15">MVTec 纹理瓷砖标定</option><option value="custom">自定义参数</option></select><p class="footnote" id="recipeNote"></p><p class="footnote" id="recipeApplied"></p><p class="footnote" id="recipeSourceHint"></p><div class="control-label"><span>裂痕高阈值（低阈值自动取一半）</span><b id="tLabel">36</b></div><div class="threshold"><input id="threshold" type="range" min="1" max="255" value="36" aria-label="阈值"><input id="thresholdNum" type="number" min="1" max="255" value="36" aria-label="阈值数值"></div><p class="footnote">高阈值找强响应，低阈值为其一半；材料参数选择两级或四级邻域支持，每级至少 3 点。参数在瓷砖间隙提交。</p></div><div><div class="control-label"><span>HDMI 测试输入</span><span class="tiny">合成 / 真实照片</span></div><select id="stimulus" aria-label="测试输入"><option value="station_0">正常瓷砖 · 静止</option><option value="station_1">细裂痕 · 静止</option><option value="station_2">反光干扰 · 静止</option><option value="station_3">较宽裂痕 · 静止</option><option value="station_4">两个分离裂纹</option><option value="station_5">孤立小点干扰</option><option value="burst">短事件压力测试</option><option value="station_6">空传送带 · 产品离站</option><option value="video">匀速流水线 · 480 像素/秒</option><option value="fast">匀速流水线 · 960 像素/秒</option><option value="ultrafast">匀速流水线 · 1920 像素/秒</option><option value="real_000">真实瓷砖 · 裂纹 001</option><option value="real_001">真实瓷砖 · 裂纹 002</option><option value="real_005">真实瓷砖 · 旧版漏检的裂纹样本</option><option value="real_035">真实瓷砖 · 正常 001（参数对照）</option><option value="real_036">真实瓷砖 · 正常 002（参数对照）</option><option value="real_video">真实照片合成流水线 · 480 像素/秒</option><option value="holdout_video">外部大理石照片连续移动（未调参）</option><option value="holdout_000">外部测试照片 000</option><option value="dark_video">暗色产品门禁对照 · 合成 · 480 像素/秒</option></select><p class="footnote" id="stimulusStatus" role="status">等待播放器状态；输入请求与实际播放分别确认。</p><p id="motionStatus" role="status"></p><p class="footnote">运动源预加载照片后匀速渲染，无 H264 解码停顿；真实照片运动默认高阈值 90、四级传播；可选旧两级参数进行对照。V1.53 在 FPGA 中识别产品经过，优先选择瓷砖完整入镜的帧，再优先居中，最后比较候选面积，离站后留存。冻结预览保持后台接收；停止接收会消耗有限的板端事件缓存。</p></div></div><div style="padding:0 24px"><div class="control-label"><label for="compression">网口传输</label></div><select id="compression" aria-label="网口传输"><option value="rle">自适应游程压缩 · 兼容模式</option><option value="packed">无损打包 · 省流优先</option><option value="raw">原始数据对照</option></select><p class="footnote">默认保留原游程/原始策略；省流模式额外压紧掩码，难压缩画面减少 21.875% 字节。取图耗时随输入和传输开销变化，请查看实测。切换用于后续请求，下面显示当前图像的实际编码。</p><p class="footnote" id="wireInfo">等待传输数据</p></div><div class="mini-status"><div class="status-line"><span>图像通道</span><b id="transportName">USB JTAG · 板端事件缓存</b></div><div class="status-line"><span>FPGA 输入处理帧率估计 · 2 秒窗口</span><b id="fps">等待采样</b></div><div class="status-line"><span>当前传输</span><b id="transfer">空闲</b></div></div></aside></div><div class="warning">冻结预览时后台仍按存储设置接收事件，没有事件就不传整帧；只有“停止接收”才停止取图。停止后板端最多缓存 12 个事件，满后会丢失。板端抓拍读取待取事件或新抽样帧，不是保存冻结画面。预览优先显示历史待取事件，可能落后于显示器。FPGA 检测持续运行。电脑红框使用这一张图对应的 PL 坐标；HDMI 直通显示仍使用上一帧坐标。当前仍为候选检测，需人工复核。</div></div>
+<div class="warning error" id="error" role="alert"></div><div class="warning" id="syncWarning" role="status" hidden></div>
+<section class="panel events" id="events"><div class="panel-head"><div><h2>缺陷事件与复核</h2><small>保留原图、掩码、帧号、参数和校验值 · 默认查看自动证据 · 手动与测试截图可切换查看 · 存储模式与容量见采集控制</small></div><div class="event-tools"><input id="search" placeholder="搜索产品号、帧号或备注" aria-label="搜索记录"><select id="archiveKind" aria-label="记录类型"><option value="automatic">自动缺陷与最佳图</option><option value="manual">手动与测试截图</option><option value="all">全部记录</option></select><select id="filter" aria-label="审核状态筛选"><option value="all">全部状态</option><option value="pending">待复核</option><option value="confirmed_crack">确认裂痕</option><option value="false_alarm">误报</option><option value="needs_recheck">需复查</option></select><a href="/api/export?format=csv">导出全部 CSV</a><a href="/api/export">全部 JSON</a></div></div><div class="panel-head"><span class="tiny" id="pageInfo">读取存档</span><div><button id="pagePrev">上一页</button> <button id="pageNext">下一页</button></div></div><p class="footnote" id="archiveRefresh" role="status" style="padding:0 20px">等待存档列表；实时状态独立更新。</p><div class="cards" id="cards"><div class="no-records">尚无保存的检测事件。候选报警后将在这里留下对应原图。</div></div></section>
+<section class="panel hidden" id="logsView"><div class="panel-head"><h2>运行记录</h2><span class="tiny">本次会话</span></div><div class="logs" id="logs"></div><div class="controls tiny">运行边界：合成视频用于可重复验证；最多显示 8 个 FPGA 区域框，32×32 网格会合并邻近缺陷。板端保留 12 张待确认帧，队列满时计数告警。V1.53 使用以太网实板传输；历史记录保留原版本含义。</div></section>
+<footer class="footer"><span>算法：四方向暗谷 + 双阈值 + 可选两级/四级邻域支持 / 全部在 FPGA</span><span>工程原型 · 支持材料参数标定 · 跨材质与细裂纹仍需验证</span></footer></main></div>
+<dialog id="review"><div class="panel-head"><div><h2 id="reviewTitle">事件复核</h2><small id="reviewSub"></small></div><button id="closeReview" aria-label="关闭复核">✕</button></div><div class="warning" id="reviewIntegrity" role="status">等待本次存档读取校验</div><div class="review-body"><div class="review-picture"><canvas id="recordCanvas" width="1280" height="720"></canvas></div><div class="review-fields"><div id="reviewLatest" class="detail" role="status" style="white-space:pre-wrap;margin-bottom:18px;padding:14px;background:#eef7f5;border-radius:10px"></div><label for="reviewStatus">人工结论</label><select id="reviewStatus"><option value="pending">待复核</option><option value="confirmed_crack">确认裂痕</option><option value="false_alarm">误报</option><option value="needs_recheck">需复查</option></select><label for="reviewNote">复核备注</label><textarea id="reviewNote" maxlength="2000" placeholder="例如：砖边引起误报，或需要补拍确认"></textarea><a id="originalLink" target="_blank">查看原始图像 ↗</a><label><input type="checkbox" id="reviewMask"> 叠加硬件缺陷掩膜</label><div class="detail" id="reviewDetail"></div></div></div><div class="dialog-footer"><button id="reloadReview" hidden>读取最新结论并保留草稿</button><button id="retryReview" hidden>重新读取并校验</button><button id="cancelReview">取消</button><button class="primary" id="saveReview">保存复核结论</button></div></dialog><div id="toast" class="toast" role="status"></div>
+<script src="/review_session.js"></script>
+<script src="/status_channel.js"></script>
+<script>
+const $=id=>document.getElementById(id),labels={pending:'待复核',confirmed_crack:'确认裂痕',false_alarm:'误报',needs_recheck:'需复查'};let state=null,lastFrame='',liveImage=null,liveFrame=null,maskImage=null,selected=null,recordImage=null,recordMask=null,view='work',cardSignature='',toastTimer,pageOffset=0,searchTimer;
+function toast(t){$('toast').textContent=t;$('toast').style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').style.display='none',3500)}
+const reviewSession=new ReviewSession();
+let wasPreviewFrozen=false;
+async function post(path,data){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const j=await r.json();if(!r.ok){const e=Error(j.error||'操作失败');e.code=j.code;e.current=j.current;throw e}return j}
+async function act(op,extra={}){liveChannel.invalidate();try{await post('/api/action',{op,...extra})}catch(e){toast(e.message)}finally{liveChannel.invalidate();await refresh();refreshArchive()}}
+// BEGIN PREVIEW RATE CONTROL — tested from this actual inline implementation.
+let previewRateEpoch=0,previewRatePending=false,previewRateConfirmed=null,previewRateWarning='',previewRateUncertain=false;
+function validPreviewRate(value){return Number.isInteger(value)&&[0,2,5].includes(value)}
+function previewRateText(value){return value===0?'不限':value+' 帧/秒'}
+function renderPreviewRate(snapshot,epoch=previewRateEpoch){
+ if(epoch!==previewRateEpoch||previewRatePending)return;
+ const control=$('previewRate'),message=$('previewRateStatus');
+ if(!validPreviewRate(snapshot?.preview_rate_fps)||typeof snapshot?.preview_rate_supported!=='boolean'){
+  control.disabled=true;message.textContent='服务端尚未提供有效的预览限速设置；未确认任何新档位。';return;
+ }
+ previewRateConfirmed={preview_rate_fps:snapshot.preview_rate_fps,preview_rate_supported:snapshot.preview_rate_supported,preview_policy:snapshot.preview_policy};
+ control.value=String(snapshot.preview_rate_fps);control.disabled=!snapshot.preview_rate_supported;
+ const policy=snapshot.preview_policy||{};
+ const counters=Number.isSafeInteger(policy.preview_requests)&&Number.isSafeInteger(policy.priority_requests)?` · 本次普通预览请求 ${policy.preview_requests}，优先请求 ${policy.priority_requests}`:'';
+ const description=snapshot.preview_rate_supported?`${previewRateUncertain?'最近确认上限':'服务端当前上限'}：${previewRateText(snapshot.preview_rate_fps)}${counters}。这是请求上限与累计次数，不是实测帧率。`:'当前图像通道不支持预览限速，保持不限；FPGA 检测继续。';
+ message.textContent=(previewRateWarning?previewRateWarning+' ':'')+description;
+ message.style.color=previewRateWarning?'#a45c24':'';
+}
+async function previewRateRequest(path,options={}){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),5000);
+ try{
+  const response=await fetch(path,{...options,cache:'no-store',signal:controller.signal});
+  const value=await response.json();
+  if(!response.ok)throw Error(value.error||'预览设置请求失败');
+  return value;
+ }catch(error){if(error.name==='AbortError')throw Error('预览设置请求超时');throw error}
+ finally{clearTimeout(timer)}
+}
+async function changePreviewRate(raw){
+ if(previewRatePending)return;
+ const value=Number(raw);
+ if(!validPreviewRate(value)||!previewRateConfirmed?.preview_rate_supported){renderPreviewRate(previewRateConfirmed);return;}
+ previewRatePending=true;previewRateEpoch++;$('previewRate').disabled=true;
+ $('previewRateStatus').textContent=`正在请求 ${previewRateText(value)}；等待服务端确认。`;
+ let failure='',fresh=null;
+ try{await previewRateRequest('/api/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({op:'preview_rate',value})})}
+ catch(error){failure=error.message||'设置请求失败'}
+ // A failed response can still follow a successful server update. Read back
+ // the authoritative value instead of assuming either the requested or old one.
+ try{
+  fresh=await previewRateRequest('/api/live');
+  if(!validPreviewRate(fresh.preview_rate_fps)||typeof fresh.preview_rate_supported!=='boolean')throw Error('服务端返回了无效的预览设置');
+ }catch(error){fresh=null;failure=failure||error.message||'状态回读失败'}
+ previewRatePending=false;previewRateEpoch++;
+ // Both epochs invalidate polls that began before/during this action. A late
+ // pre-change state response must not undo the value just read from the server.
+ previewRateWarning=fresh?(failure?'设置请求未确认，已重新读取服务端当前值。':''):'服务端当前值未能确认；选择器恢复到最近确认值，等待重连。';
+ previewRateUncertain=!fresh;
+ renderPreviewRate(fresh||previewRateConfirmed);
+ toast(failure?'预览设置：'+failure:fresh?'普通预览上限已确认：'+previewRateText(fresh.preview_rate_fps):'等待服务端确认');
+}
+// END PREVIEW RATE CONTROL
+function formatTime(s){return new Date(s).toLocaleString('zh-CN',{hour12:false})}
+function draw(canvas,img,boxes=[]){const c=canvas.getContext('2d');c.clearRect(0,0,1280,720);if(!img)return;c.drawImage(img,0,0,1280,720);c.strokeStyle='#ff414d';c.lineWidth=4;c.font='bold 17px Segoe UI';for(const b of boxes){let [x,y,x1,y1]=b;c.strokeRect(x-5,y-5,x1-x+10,y1-y+10);const ly=Math.max(2,y-32);c.fillStyle='#e33f4a';c.fillRect(x-5,ly,128,25);c.fillStyle='white';c.fillText('候选裂痕 '+(boxes.indexOf(b)+1),x+4,ly+18)}}
+function updatePreviewMetadata(){if(!liveFrame)return;const f=liveFrame;$('empty').classList.add('hidden');$('verdict').className='chip '+(f.alarm?'bad':'ok');$('verdict').textContent=f.alarm?'候选异常 · 需复核':'本帧未触发候选';$('frameId').textContent=f.frame_id;$('productId').textContent=f.product_id||'—';$('area').textContent=f.candidate_pixels.toLocaleString();$('duration').textContent=(f.transfer_ms/1000).toFixed(2)+' 秒';$('live').dataset.frameKey=f.frame_id+'_'+f.acquired_at;updatePreviewIdentity()}
+function updatePreviewIdentity(){if(!liveFrame)return;const age=Math.max(0,(Date.now()-Date.parse(liveFrame.acquired_at))/1000);const held=state?.preview_stale||age>2;const kind=liveFrame.selection==='FPGA_PRODUCT_BEST_FRAME'?'产品最佳证据帧':'实时抽样帧';$('previewIdentity').textContent=(state?.preview_frozen&&state?.enabled&&!state?.error?'预览已冻结 · 后台接收运行 / ':held?'保留画面 · 非当前实时 / ':'')+kind+' · 帧 '+liveFrame.frame_id;$('previewIdentity').style.borderColor=held?'#e1ad62':'#4d6b70';$('frameText').textContent=`主机接收 ${formatTime(liveFrame.acquired_at)} · ${age.toFixed(1)} 秒前；图像、红框、帧号同步显示`}
+function paintLive(){updatePreviewMetadata();draw($('live'),liveImage,$('showBoxes').checked?(liveFrame?.boxes||[]):[]);if($('showMask').checked&&maskImage){const c=$('live').getContext('2d');c.save();c.globalAlpha=.35;c.globalCompositeOperation='screen';c.drawImage(maskImage,0,0,1280,720);c.restore()}}
+function loadImage(url){return new Promise((res,rej)=>{const im=new Image();im.onload=()=>res(im);im.onerror=rej;im.src=url})}
+async function loadArchiveImage(r,mask,token){
+ const response=await fetch('/api/image?id='+encodeURIComponent(r.id)+'&mask='+(mask?1:0),{cache:'no-store',signal:token.signal});
+ if(!response.ok){let detail;try{detail=await response.json()}catch{}throw Error(detail?.error||'存档读取失败，请重试')}
+ const expected=mask?r.mask_sha256:r.image_sha256;
+ if(response.headers.get('X-Archive-Integrity')!=='sha256-verified'||response.headers.get('X-Archive-SHA256')!==expected)throw Error('本次存档读取校验未确认，拒绝显示');
+ const blob=await response.blob();if(token.signal.aborted)throw new DOMException('Review cancelled','AbortError');
+ const url=URL.createObjectURL(blob);
+ try{return await new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(Error('已存图像无法解码，文件保持不变'));image.src=url})}
+ finally{URL.revokeObjectURL(url)}
+}
+function reviewFailure(token,message){
+ if(!reviewSession.fail(token))return;
+ recordImage=null;recordMask=null;draw($('recordCanvas'),null);$('saveReview').disabled=true;$('reviewMask').disabled=true;
+ $('reviewIntegrity').className='warning error';$('reviewIntegrity').textContent=message+'。未修改文件或原复核结论。';$('retryReview').hidden=false;$('retryReview').disabled=false;
+}
+function closeReview(){reviewSession.close();selected=null;recordImage=null;recordMask=null;$('review').close()}
+// BEGIN LIVE AND ARCHIVE REFRESH
+let archiveState=null,archiveReceivedAt=0,archiveMessage='等待存档列表',archiveQuery='';
+const liveChannel=new StatusChannel((value,previewEpoch)=>{
+ state=value;
+ if(previewEpoch===previewRateEpoch&&!previewRatePending){previewRateWarning='';previewRateUncertain=false}
+ render(previewEpoch);
+},error=>{
+ $('connection').className='chip bad';$('connection').textContent='实时状态暂未刷新：'+error.message;
+ if(state)state.preview_stale=true;updatePreviewIdentity();
+});
+const archiveChannel=new StatusChannel(value=>{
+ archiveState=value;archiveReceivedAt=Date.now();archiveMessage='';renderArchive();
+},error=>{archiveMessage=error.message;renderArchive()});
+function refresh(){return liveChannel.poll('/api/live',previewRateEpoch)}
+function refreshArchive(){
+ const query=new URLSearchParams({offset:String(pageOffset),limit:'24',review:$('filter').value,query:$('search').value,kind:$('archiveKind').value}).toString();
+ if(query!==archiveQuery){archiveQuery=query;archiveChannel.invalidate();archiveState=null;archiveMessage='正在读取当前筛选';renderArchive()}
+ return archiveChannel.poll('/api/archive?'+query);
+}
+function invalidateArchive(){archiveChannel.invalidate();archiveState=null;archiveMessage='正在读取当前筛选';renderArchive()}
+function archiveDisplayStorage(){
+ const inventory=archiveState?.storage_inventory||{},elapsed=archiveReceivedAt?Math.max(0,(Date.now()-archiveReceivedAt)/1000):0;
+ const storage={...inventory,...(state?.storage||{})};
+ if(Number.isFinite(inventory.snapshot_age_seconds)){
+  storage.snapshot_age_seconds=inventory.snapshot_age_seconds+elapsed;
+  storage.snapshot_stale=!!inventory.snapshot_stale||!!archiveMessage||storage.snapshot_age_seconds>=5;
+ }
+ if(Number.isFinite(storage.used_bytes)&&Number.isFinite(storage.max_bytes))storage.at_limit=storage.used_bytes>=storage.max_bytes;
+ return storage;
+}
+function renderArchive(){
+ const st=archiveDisplayStorage();renderArchiveInventory(st);
+ $('nPending').textContent=archiveState?.archive?.pending??'—';
+ $('nDefect').textContent=archiveState?.archive?.confirmed??'—';
+ $('nFalse').textContent=archiveState?.archive?.false_alarm??'—';
+ const age=archiveReceivedAt?Math.max(0,(Date.now()-archiveReceivedAt)/1000):null;
+ $('archiveRefresh').textContent=(archiveMessage?archiveMessage+'。':'')+(archiveState?`存档列表 ${age.toFixed(1)} 秒前读取；记录和复核统计是该次快照。`:'当前筛选的存档列表与复核统计尚未确认。')+'实时采集状态独立刷新。';
+ $('archiveRefresh').style.color=archiveMessage?'#a45c24':'';
+ renderCards();
+}
+// END LIVE AND ARCHIVE REFRESH
+
+// BEGIN ARCHIVE INVENTORY DISPLAY
+function renderArchiveInventory(st){
+ const complete=st.scan_complete===true,known=typeof st.scan_complete==='boolean';
+ const valid=value=>typeof value==='number'&&Number.isFinite(value)&&value>=0;
+ const amount=(value,divisor)=>valid(value)?(value/divisor).toFixed(1):'未知';
+ const count=value=>Number.isInteger(value)&&value>=0?String(value):'未知';
+ const ageKnown=valid(st.snapshot_age_seconds);
+ const observed=typeof st.snapshot_observed_at==='string'&&Number.isFinite(Date.parse(st.snapshot_observed_at))?st.snapshot_observed_at:null;
+ const timeKnown=ageKnown&&observed!==null&&typeof st.snapshot_cached==='boolean'&&typeof st.snapshot_stale==='boolean';
+ const error=typeof st.snapshot_refresh_error==='string'?st.snapshot_refresh_error.trim().slice(0,200):'';
+ $('storageUsage').textContent=`最近盘点${known&&!complete?'已统计至少':'占用'} ${amount(st.used_bytes,1048576)} MiB / 配置上限 ${valid(st.max_archive_mib)&&st.max_archive_mib>0?st.max_archive_mib:'未知'} MiB · 本次未存自动事件 ${count(st.not_archived_events)} · 盘点时磁盘空闲 ${amount(st.free_disk_bytes,1073741824)} GiB`;
+ const timing=$('storageSnapshot');
+ timing.textContent=timeKnown?`最近盘点：${st.snapshot_age_seconds.toFixed(1)} 秒前（状态返回时）；${st.snapshot_cached?'缓存展示':'本次刷新'}。盘点时间 ${observed}。`:'最近盘点时间或快照时效尚未确认；以上数值不代表此刻目录占用。';
+ if(st.snapshot_stale===true)timing.textContent+=' 快照已过期或存档已有变化，当前用量尚未重新确认。';
+ if(error)timing.textContent+=` 刷新失败：${error}。保留上次盘点值和原盘点时间，不代表当前磁盘空闲。`;
+ timing.textContent+=' 新增留图仍会独立检查最新容量。';
+ timing.style.color=error?'#b43e39':!timeKnown||st.snapshot_stale===true?'#a45c24':'';
+ const out=$('storageInventory');
+ if(!known){out.textContent='等待存档目录清单；尚未确认统计是否完整，也未完成图像内容校验。';out.style.color='#a45c24';return;}
+ const counts=`未登记 PNG ${count(st.unindexed_png_count)} 个 · 临时文件 ${count(st.temp_file_count)} 个 · 其他文件 ${amount(st.auxiliary_bytes,1048576)} MiB`;
+ out.textContent=(complete?'该次目录清单完成；':'该次目录清单不完整，列出的字节仅是该次清点的已知下限。新增留图重新检查仍不完整时将被阻止；')+counts+'。文件全部保留；目录统计不等于图像内容校验，也不表示已恢复证据。';
+ if(!complete)out.textContent+=` 该次未完成项 ${count(st.scan_issue_count)} 个，请查看存档检查记录。`;
+ out.style.color=!complete||st.unindexed_png_count||st.temp_file_count?'#a45c24':'';
+}
+// END ARCHIVE INVENTORY DISPLAY
+
+// BEGIN STIMULUS PUBLICATION DISPLAY
+function renderStimulus(s){const pending=s.display_pending;$('stimulus').disabled=!!pending;
+if(document.activeElement!==$('stimulus'))$('stimulus').value=pending?.value??s.stimulus;const ss=s.stimulus_status||{};$('stimulusStatus').textContent=(pending?`正在保存输入请求 ${pending.value} [${pending.request_id.slice(0,8)}]，尚未确认命令发布。当前已发布：`:'')+`请求 ${ss.requested??'未知'} [${ss.request_id?.slice(0,8)??'无编号'}] · 播放器报告 ${ss.observed??'未知'} [${ss.observed_request_id?.slice(0,8)??'未采用'}] · ${ss.age_seconds==null?'无有效时间':ss.age_seconds.toFixed(1)+' 秒前'}。${ss.message||'等待状态'}`;$('stimulusStatus').style.color=ss.ready&&!pending?'#087d80':'#a45c24';const motion=ss.motion||{};$('motionStatus').textContent='画面进度：'+(motion.message||'等待观察');$('motionStatus').style.color=motion.state==='STALLED'?'#c34138':motion.progressing?'#087d80':'#a45c24';
+}
+// END STIMULUS PUBLICATION DISPLAY
+
+function render(previewEpoch=previewRateEpoch){const s=state;
+renderPreviewRate(s,previewEpoch);
+if(document.activeElement!==$('compression'))$('compression').value=s.wire_mode||(s.compression_enabled?'rle':'raw');
+const wf=liveFrame;$('wireInfo').textContent=wf?.wire_payload_bytes?`显示帧 ${(wf.wire_payload_bytes/1048576).toFixed(2)} MiB · 减少 ${wf.wire_saving_percent.toFixed(1)}% · ${({WORD_RLE:'游程无损压缩',BGR24_MASK1:'彩色原图 + 位掩码无损打包',RAW32:'原始传输'}[wf.wire_codec]||'未知编码')}；${wf.pixel_crc_verified?'FPGA 整帧 CRC 已通过':'未提供 FPGA 整帧 CRC'} · ${wf.header_crc_verified?'帧号/坐标校验已通过':'未提供响应头校验'} · ${wf.descriptor_crc_verified?'PL 描述校验已通过':'未提供 PL 描述校验'}；采集恢复代次 ${wf.recovery_generation==null?'历史版本未记录':wf.recovery_generation}。`:'等待传输数据';
+const st=archiveDisplayStorage();if(document.activeElement!==$('storageMode'))$('storageMode').value=st.mode||'preview';if(document.activeElement!==$('storageLimit'))$('storageLimit').value=st.max_archive_mib||1024;
+renderArchive();
+$('storageNotice').textContent=st.warning||((st.mode==='preview'?'仅预览：自动事件不保存，红框和检测继续；手动留图受容量上限约束。':'自动留图：保存后才确认；容量达到上限会转为仅预览并显示未存事件数。')+(st.at_limit?' 最近盘点占用达到当前配置上限，旧数据不会自动删除。':''));
+$('storageNotice').style.color=st.warning||st.at_limit?'#b43e39':'';
+
+const menu=$('recipe'),menuData=JSON.stringify((s.recipes||[]).map(r=>[r.id,r.name]));
+if(menu.dataset.catalog!==menuData){
+ const options=(s.recipes||[]).map(r=>{const o=document.createElement('option');o.value=r.id;o.textContent=r.name;return o});
+ const custom=document.createElement('option');custom.value='custom';custom.textContent='自定义参数';
+ menu.replaceChildren(...options,custom);menu.dataset.catalog=menuData;menu.value=s.requested_recipe;
+}
+if(document.activeElement!==$('recipe'))$('recipe').value=s.requested_recipe;const rec=(s.recipes||[]).find(r=>r.id===s.requested_recipe);$('recipeNote').textContent=rec?.description||'自定义阈值；需验证误报和漏检';$('recipeApplied').textContent=`请求高阈值 ${s.threshold} · 实采高/低 ${s.applied_threshold??'—'}/${s.frame?.applied_low_threshold??'—'} · 实采传播 ${s.frame?.weak_passes??'—'} 级 · 产品亮度和门槛：请求 ≥${s.requested_low_gate?160:320} / 实采 ≥${s.frame?.applied_product_gate_sum??'未记录'} · 切换在瓷砖间隙生效`;const suggested=s.stimulus==='dark_video'?'synthetic_dark_v137':s.stimulus==='real_video'?'mvtec_hdmi_weak_v124':s.stimulus?.startsWith('real_')?'mvtec_hdmi_weak_v124':null;const advice=(s.recipes||[]).find(r=>r.id===suggested);$('recipeSourceHint').textContent=advice&&s.requested_recipe!==suggested&&s.requested_recipe!=='mvtec_hdmi_baseline_v16'?'当前输入建议：'+advice.name+'（阈值 '+advice.threshold+'）。请在材料参数中选择。':'';const q=liveFrame||{},bs=s.board_stats||{};$('transportName').textContent=s.transport==='ETHERNET_TCP'?'以太网 TCP':'USB JTAG · 事件缓存';$('productTotal').textContent=s.board_stats?.products_completed??'—';$('queueDepth').textContent=(bs.depth??q.queue_depth??'—')+' / 12';$('eventTotal').textContent=bs.events??q.event_total??'—';$('queueDropped').textContent=bs.dropped??(bs.dropped??q.events_dropped??0)??'—';$('invalidFrames').textContent=bs.invalid??q.invalid_frames??'—';$('regionCount').textContent=(q.boxes?.length??'—')+' / 8';const warning=((bs.dropped??q.events_dropped??0)?'板端队列曾满，有 '+(bs.dropped??q.events_dropped??0)+' 个事件未能留存。请加快传输或降低事件频率。 ':'')+(q.region_overflow?'当前帧超过 8 个合格区域，未显示全部框。':'');$('queueWarning').textContent=warning;$('queueWarning').style.display=warning?'block':'none';renderStimulus(s);if(!['threshold','thresholdNum'].includes(document.activeElement?.id)){$('threshold').value=s.threshold;$('thresholdNum').value=s.threshold;$('tLabel').textContent=s.threshold;}$('clock').textContent=new Date().toLocaleString('zh-CN',{hour12:false});$('nCapture').textContent=s.captures;
+const recovering=!!s.recovery?.active;
+$('applyStorage').disabled=s.busy;
+$('resumePending').hidden=!s.pending_operation;
+$('resumePending').disabled=s.busy||s.enabled||recovering||!!s.confirmation_journal?.error;
+const syncText=s.synchronization_warning||(s.pending_confirmation?'已有事件等待确认：恢复会先核对板卡启动号和队列，保留已存截图，不直接抓取下一张。':'');
+const ch=s.capture_health||{};const healthWaiting=ch.supported&&!ch.ready&&!ch.stale;
+$('captureHealth').textContent=ch.supported?`${ch.stale?'最近状态（当前未刷新）：':''}${ch.message} · 最近完整帧：${ch.valid_age_ms==null?'尚未收到':(ch.valid_age_ms/1000).toFixed(2)+' 秒前'}。${!ch.ready?'已排队证据仍可取回。':''}${s.capture_recovery?` 自动恢复 ${s.capture_recovery.successes}/${s.capture_recovery.attempts} 次（本次启动最多 ${s.capture_recovery.max_attempts} 次）；${s.capture_recovery.state==='FAILED'?s.capture_recovery.reason:s.capture_recovery.waiting_new_product?'自动留图等待下一块瓷砖完整开始':'新图验证通过后继续采集'}。`:''}`:'当前通道尚未提供采集健康信息（网口模式支持）';
+$('captureHealth').className='warning'+(healthWaiting&&ch.state!=='WAIT_FIRST'?' error':ch.ready&&!ch.stale?' healthy':'');
+$('syncWarning').hidden=!syncText;$('syncWarning').textContent=syncText;
+if(wasPreviewFrozen&&!s.preview_frozen)lastFrame='';wasPreviewFrozen=!!s.preview_frozen;
+$('pause').textContent=s.preview_frozen?'恢复预览':'冻结预览';$('pause').disabled=!s.frame;$('stop').disabled=!s.enabled&&!s.busy&&!recovering;
+$('connection').className='chip'+(recovering?'':s.board_connected?' ok':s.error?' bad':'');$('connection').textContent=recovering?'● 网络恢复中':s.board_connected?(healthWaiting?'● 网络在线 · 采集待检查':'● 开发板数据已接通'):s.error?'● 采集需要检查':'● 等待开发板数据';$('runState').textContent=recovering?'等待重连':(s.enabled||s.manual_waiting)&&healthWaiting?'等待完整图像':s.enabled?(s.preview_frozen?'后台接收事件':'采集中'):s.busy?'传输中':'接收已暂停';$('start').disabled=s.enabled||!!s.confirmation_journal?.error;$('capture').disabled=s.busy||s.manual_waiting||recovering||!!s.pending_operation||!!s.confirmation_journal?.error;$('transfer').textContent=recovering?`重试 ${s.recovery.attempts} · 剩余 ${s.recovery.remaining_seconds.toFixed(1)} 秒`:s.busy?({DIAGNOSTIC:'正在读取手动诊断状态',CHECK:'正在检查板端状态',CONFIGURE:'正在提交板端参数',CAPTURE:'正在读取已开始的图像',SAVE:'正在保存已接收的图像',STORAGE:'正在检查和保存存储设置',RECONCILE:'正在核对待确认身份',ACK:'正在确认已处理事件',STATUS:'正在读取确认后状态'}[s.capture_control?.phase]||'正在处理当前请求'):s.pending_confirmation?'已暂停 · 有待确认事件':'空闲';$('fps').textContent=s.processing_fps==null?'等待足够板端采样':s.processing_fps+' 帧/秒';$('error').style.display=s.error?'block':'none';$('error').textContent=s.error?(recovering?'网络暂时中断，正在自动恢复：':'采集接收已暂停：')+s.error:'';
+if(s.frame&&(!s.preview_frozen||!liveFrame)){const f=s.frame;const key=f.frame_id+'_'+f.acquired_at;if(key!==lastFrame){lastFrame=key;Promise.all([loadImage('/api/image?frame='+encodeURIComponent(key)),loadImage('/api/image?mask=1&frame='+encodeURIComponent(key))]).then(([a,b])=>{if(key!==lastFrame||(state?.preview_frozen&&liveFrame))return;liveFrame=f;liveImage=a;maskImage=b;paintLive()}).catch(()=>{if(key===lastFrame){lastFrame='';toast('图像更新未完成，正在重新获取对应帧')}})}}
+updatePreviewIdentity();
+if(!s.enabled&&!s.busy&&!recovering&&!s.error){$('connection').className='chip';$('connection').textContent='● 接收已暂停 · 保留快照'}
+if(s.processing_fps!=null&&(!s.enabled||!s.board_connected))$('fps').textContent=s.processing_fps+' 帧/秒 · 最近测量值';
+const frag=document.createDocumentFragment();for(const l of s.log){const div=document.createElement('div');div.className='logrow';const t=document.createElement('time');t.textContent=new Date(l.time).toLocaleTimeString('zh-CN',{hour12:false});const text=document.createElement('span');text.textContent=l.text;div.append(t,text);frag.append(div)}$('logs').replaceChildren(frag);if(!s.log.length)$('logs').textContent='开始采集后，这里将记录连接、留图及参数操作。';}
+function renderCards(){if(!archiveState){cardSignature='';$('pageInfo').textContent='正在等待当前筛选的存档列表';$('pagePrev').disabled=$('pageNext').disabled=true;$('cards').textContent='存档尚未刷新，实时采集状态继续更新。';return}const rows=archiveState.records||[];$('pageInfo').textContent=`共 ${archiveState.records_total} 条 · 第 ${Math.floor(pageOffset/24)+1} / ${Math.max(1,Math.ceil(archiveState.records_total/24))} 页`;$('pagePrev').disabled=pageOffset===0;$('pageNext').disabled=pageOffset+24>=archiveState.records_total;const sig=JSON.stringify(rows.map(r=>[r.id,r.review,r.note,r.review_revision]));if(sig===cardSignature)return;cardSignature=sig;const frag=document.createDocumentFragment();for(const r of rows){const card=document.createElement('button');card.className='event-card';const im=document.createElement('img');im.className='thumb';im.loading='lazy';im.src='/api/image?id='+encodeURIComponent(r.id);im.alt='开发板保存的帧 '+r.frame_id;const body=document.createElement('div');body.className='card-body';const top=document.createElement('div');top.className='card-top';const id=document.createElement('span');id.className='event-id';id.textContent=r.product_id?'产品 '+r.product_id+' · 帧 '+r.frame_id:'历史帧 '+r.frame_id;const badge=document.createElement('span');badge.className='badge '+r.review;badge.textContent=labels[r.review];top.append(id,badge);const small=document.createElement('div');small.className='tiny';small.textContent=formatTime(r.created)+' · '+r.candidate_pixels+' 像素 · '+(r.reason==='manual'?'手动留图':r.selection==='FPGA_PRODUCT_BEST_FRAME'?'FPGA 最佳证据帧':'历史报警留图');body.append(top,small);const picture=document.createElement('div');picture.style.cssText='position:relative;aspect-ratio:16/9;overflow:hidden';im.style.height='100%';picture.append(im);for(const b of r.boxes||[]){const box=document.createElement('div');box.style.cssText=`position:absolute;border:2px solid #ff414d;left:${b[0]/12.8}%;top:${b[1]/7.2}%;width:${(b[2]-b[0]+1)/12.8}%;height:${(b[3]-b[1]+1)/7.2}%`;picture.append(box)}card.append(picture,body);card.onclick=()=>openReview(r.id);frag.append(card)}if(!rows.length){const d=document.createElement('div');d.className='no-records';d.textContent=archiveState?.records?.length?'没有符合筛选条件的记录。':'尚无保存的检测事件。候选报警后将在这里留下对应原图。';frag.append(d)}$('cards').replaceChildren(frag)}
+function showSavedReview(r,prefix='打开时已保存'){
+ $('reviewLatest').textContent=prefix+' · 修订 '+r.review_revision+'\n结论：'+(labels[r.review]||r.review)+'\n备注：'+(r.note||'（无）');
+}
+async function openReview(id,{preserveDraft=false,refreshRecord=true}={}){
+ const previous=selected?.id===id?selected:null;
+ const draft=preserveDraft&&previous?{review:$('reviewStatus').value,note:$('reviewNote').value}:null;
+ const token=reviewSession.begin(id);selected={id};$('reviewTitle').textContent='复核 · 正在读取记录';$('reviewSub').textContent='';$('reviewLatest').textContent='读取当前已保存结论…';
+ $('reviewStatus').value=draft?.review??'pending';$('reviewNote').value=draft?.note??'';
+ $('reviewMask').checked=false;$('reviewMask').disabled=true;$('saveReview').disabled=true;$('retryReview').hidden=true;$('reloadReview').hidden=true;
+ $('reviewIntegrity').className='warning';$('reviewIntegrity').textContent='正在读取复核修订、原图和掩码，核对保存时的文件校验值…';
+ recordImage=null;recordMask=null;draw($('recordCanvas'),null);if(!$('review').open)$('review').showModal();
+ try{
+  let r=previous;
+  if(refreshRecord||!Number.isSafeInteger(r?.review_revision)){
+   const response=await fetch('/api/record?id='+encodeURIComponent(id),{cache:'no-store',signal:token.signal});
+   r=await response.json();if(!response.ok)throw Error(r.error||'记录读取失败');
+  }
+  if(!reviewSession.isCurrent(token))return;
+  if(r.id!==id)throw Error('复核记录身份不一致');
+  if(!reviewSession.bindRevision(token,r.review_revision))return;
+  selected=Object.freeze({...r});$('reviewTitle').textContent=(r.product_id?'复核 · 产品 '+r.product_id:'复核')+' · 帧 '+r.frame_id;
+  $('reviewSub').textContent=formatTime(r.created)+' · '+r.origin+' · 复核修订 '+r.review_revision;
+  $('reviewStatus').value=draft?.review??r.review;$('reviewNote').value=draft?.note??r.note;
+  showSavedReview(r);$('originalLink').href='/api/image?id='+encodeURIComponent(id);
+ $('reviewDetail').textContent=`${r.reason==='manual'?'手动留图':'FPGA 候选自动留图'} · ${r.alarm?'本帧触发报警':'本帧无报警'}\n采集恢复代次 ${r.recovery_generation==null?"历史版本未记录":r.recovery_generation===0?"0（本次启动尚未恢复）":r.recovery_generation+"（第 "+r.recovery_generation+" 次恢复后）"}\n中心偏差 ${r.selection_center_error_px==null?"历史版本未记录":r.selection_center_error_px+" 像素"}\n坐标 ${JSON.stringify(r.boxes)}\n材料参数 ${r.recipe_name||"历史参数"}\n参数指纹 ${r.recipe_sha256||"未记录"}\n阈值 ${(r.config_word>>8)&255}\n采集时 FPGA 整帧 CRC ${r.pixel_crc_verified===true?"已验证 0x"+r.pixel_crc32.toString(16).padStart(8,"0"):"历史数据未提供"}\n采集时帧号/产品号/坐标传输校验 ${r.header_crc_verified===true?"已验证":"历史数据未提供"}\n采集时 PL → ARM 描述校验 ${r.descriptor_crc_verified?"固件已核对 FPGA 校验值":"历史数据未提供"}\n保存时原图 SHA256 ${r.image_sha256}`;
+  const [a,b]=await Promise.all([loadArchiveImage(r,false,token),loadArchiveImage(r,true,token)]);
+  if(!reviewSession.complete(token))return;
+  recordImage=a;recordMask=b;paintReview();$('saveReview').disabled=false;$('reviewMask').disabled=false;
+  $('reviewIntegrity').className='warning healthy';$('reviewIntegrity').textContent='本次读取：原图和掩码 SHA256 均与保存时一致。提交前会再次检查文件和复核修订。'+(draft&&refreshRecord?' 已读取最新结论，输入框保留你的草稿；请对照后再决定是否提交。':'');
+ }catch(error){if(reviewSession.isCurrent(token)&&error.name!=='AbortError')reviewFailure(token,error.message||'存档读取失败')}
+}
+function paintReview(){draw($('recordCanvas'),recordImage,selected?.boxes||[]);if($('reviewMask').checked&&recordMask){const c=$('recordCanvas').getContext('2d');c.save();c.globalAlpha=.65;c.globalCompositeOperation='screen';c.drawImage(recordMask,0,0,1280,720);c.restore()}}
+$('reviewMask').onchange=paintReview;
+$('compression').onchange=e=>act('wire_mode',{value:e.target.value});
+$('previewRate').onchange=e=>changePreviewRate(e.target.value);
+$('recipe').onchange=e=>{if(e.target.value!=='custom')act('recipe',{value:e.target.value})};$('start').onclick=()=>act('start');$('resumePending').onclick=()=>act('resume_pending');$('pause').onclick=()=>act('freeze_preview',{enabled:!state?.preview_frozen});$('stop').onclick=()=>act('pause');$('capture').onclick=()=>act('capture');$('stimulus').onchange=e=>act('display',{value:e.target.value});
+function threshold(v){v=Number(v);if(!Number.isInteger(v)||v<1||v>255)return toast('请输入 1～255 的整数');$('threshold').value=v;$('thresholdNum').value=v;$('tLabel').textContent=v;act('threshold',{value:v})}
+$('applyStorage').onclick=async()=>{try{await post('/api/action',{op:'storage',mode:$('storageMode').value,max_archive_mib:Number($('storageLimit').value)});toast('存储设置已生效');liveChannel.invalidate();archiveChannel.invalidate();await refresh();refreshArchive()}catch(e){toast(e.message)}};
+$('threshold').oninput=e=>{$('thresholdNum').value=e.target.value;$('tLabel').textContent=e.target.value};$('threshold').onchange=e=>threshold(e.target.value);$('thresholdNum').onchange=e=>threshold(e.target.value);$('showBoxes').onchange=paintLive;$('showMask').onchange=paintLive;$('filter').onchange=$('archiveKind').onchange=()=>{pageOffset=0;invalidateArchive();refreshArchive()};$('search').oninput=()=>{pageOffset=0;invalidateArchive();clearTimeout(searchTimer);searchTimer=setTimeout(refreshArchive,250)};$('pagePrev').onclick=()=>{pageOffset=Math.max(0,pageOffset-24);invalidateArchive();refreshArchive()};$('pageNext').onclick=()=>{pageOffset+=24;invalidateArchive();refreshArchive()};$('closeReview').onclick=$('cancelReview').onclick=closeReview;
+$('review').addEventListener('cancel',e=>{e.preventDefault();closeReview()});
+$('review').addEventListener('close',()=>{if(!$('review').open)reviewSession.close()});
+$('retryReview').onclick=()=>{if(selected)openReview(selected.id,{preserveDraft:true,refreshRecord:false})};
+$('reloadReview').onclick=()=>{if(selected)openReview(selected.id,{preserveDraft:true,refreshRecord:true})};
+$('saveReview').onclick=async()=>{
+ if(!selected||!reviewSession.canSubmit())return;const token=reviewSession.token;const submission=reviewSession.submission();$('saveReview').disabled=true;
+ try{await post('/api/review',{...submission,review:$('reviewStatus').value,note:$('reviewNote').value});if(reviewSession.isCurrent(token)){closeReview();toast('复核结论已保存')}archiveChannel.invalidate();await refreshArchive()}
+ catch(e){if(reviewSession.isCurrent(token)){
+  if(e.code==='REVIEW_CONFLICT'){
+   reviewSession.fail(token);$('saveReview').disabled=true;$('retryReview').hidden=true;$('reloadReview').hidden=false;
+   $('reviewIntegrity').className='warning error';$('reviewIntegrity').textContent=e.message+'。原图和草稿保留，未覆盖已保存结论。';
+   if(e.current)showSavedReview(e.current,'发现较新的已保存结论');
+  }else reviewFailure(token,'提交前检查未完成：'+e.message)
+ }}
+};
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{view=b.dataset.view;document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('active',x===b));$('workView').classList.toggle('hidden',view!=='work');$('events').classList.toggle('hidden',view==='logs');$('logsView').classList.toggle('hidden',view!=='logs');$('pageTitle').textContent={work:'表面质量检测工作台',review:'缺陷事件人工复核',logs:'检测工作站运行记录'}[view]});refresh();refreshArchive();setInterval(refresh,1000);setInterval(refreshArchive,3000);
+</script></html>
+
+

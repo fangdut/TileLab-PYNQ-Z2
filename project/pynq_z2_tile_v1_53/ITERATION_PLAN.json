@@ -1,0 +1,19 @@
+{
+  "version": "V1.53",
+  "phase": "ENGINEERING_FROZEN_SUBMISSION_CANDIDATE",
+  "scope": "HOST_ONLY",
+  "baseline": "D:\\Vivado\\pynq_z2_tile_v1_52",
+  "backup": "D:\\Vivado\\_baseline_backups\\tile_v1_52_before_v1_53.zip",
+  "backup_sha256": "bf3a1a583586f9092b0a35bd41f932031bd925720e73089932772c8d818bf46f",
+  "baseline_manifest_sha256": "f1623fe99bbed97fadcec23bf2703f178589a1bb13a0d5c90669639058befcab",
+  "baseline_source_files_verified": 975,
+  "backup_files": 1033,
+  "created_at": "2026-09-29T23:43:39.003298+08:00",
+  "hardware": "Inherited unchanged PL/ARM from sealed V1.52; actually programmed and tested on 2026-10-09 with V1.53 host. No new routed-image build claimed.",
+  "inherited_hardware_sha256": {
+    "system.bit": "b19e8380daf6373caad0e0bfbb0c30e9aa5ab5de97333807d2e13cae2ac2c043",
+    "system.xsa": "c7084b310d856cabea3c476e012b3b47487722a2d5d6eacf6444a60a4cb5d2be",
+    "system.ltx": "1d4792ca4c0d20d6c25abe473cbeaebea0b786bb51a94a62038b121ec233f859",
+    "hdmi_ethernet/build/hdmi_ethernet.elf": "49f610819ea4584c6bedc0016a490a24a9972c8b4a9a08fe20078b07bcb9f047"
+  }
+}
