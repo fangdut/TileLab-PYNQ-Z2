@@ -1,8 +1,8 @@
 {
   "version": "V1.53.1",
-  "files": 6466,
+  "files": 6477,
   "github_uploaded": false,
-  "uncompressed_bytes": 427769053,
+  "uncompressed_bytes": 429909485,
   "sha256": {
     ".gitattributes": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
     ".gitignore": "ac5fb5cf65c9c763333471fb2af650dfd470df1fa5d4b70d26a66ad98ea8bf8f",
@@ -6469,6 +6469,17 @@
     "project/pynq_z2_tile_v1_53/validation/reference_rgb/real_067_original.png": "3ea8ac5041a6d20f58f0065e9416c94e12edc88d9383c8b74cbd931d5fd71658",
     "project/pynq_z2_tile_v1_53/启动以太网工作站.bat": "f3055f332d1d2ea9b0fd2d3c6e7d1cd9a05ef4f186519f310b2fba9e21f73df5",
     "project/pynq_z2_tile_v1_53/启动检测工作站.bat": "4cad31f4e14de534b19ad9e4792b3098ff29ea0fe97b98df9f012745faaac021",
-    "README.md": "4d009e5a2c2c927642c2b3d8a372090f4982b20b2ceb1eb2fb1643f7621dfeee"
+    "README.md": "c8c2011e41a3367a5e50c94229b504e89b4d837077a679f007cc12832d048d5e",
+    "submission_documents/assets/board_capture.png": "80d96284c49052c1b465472f84f6e63645b2735d01cf6b050ae0062a958fc7f4",
+    "submission_documents/assets/board_mask.png": "f294d62ee0686dd756b3f5afe9a971501c7d5aecb66db45ffd6bdb1b494aeeb3",
+    "submission_documents/assets/evidence_flow.png": "fc43e544dfea5514161c03560dc449d4ac503cade487b02e5d2c62ae81eb8cb0",
+    "submission_documents/assets/evidence_sources.json": "e890a4471346f0fe84284e68080a014e00409a39658ef5cda59b3c8ea73c34d3",
+    "submission_documents/assets/pl.png": "e38277d8e67b09248f38385dfcda59deff3e7738d95299abe3b444f67540fd0c",
+    "submission_documents/assets/system.png": "572b09dee14c0ef2442da9f2c7c3c325c9a8b026fdd772c38887d4fea18c6565",
+    "submission_documents/assets/workstation_review.jpg": "c0717e27942b8c44985f81d2f1e1d7be35a167fbb28a1bdfa9aa0784a2de8b61",
+    "submission_documents/document_qa.json": "3ac57c1b93d061522090ac0a58ad0b21bb02e8ba806b25f7fe462866a080f177",
+    "submission_documents/README.md": "6f884ff87d97a838bb5e2ab61138f8843e313684f09f68fdefaf355ed25009f4",
+    "submission_documents/TileLab_比赛技术报告_模板版.docx": "852b225a526d41558981f5df0c89e549cdfb0b564ad1de09d685d73a2442c66d",
+    "submission_documents/tools/build_report.py": "114e9bec6320df1f673b27e8b99131728b18cc557efafb89f18aff0709065b55"
   }
 }

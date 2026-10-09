@@ -2,6 +2,7 @@
 
 [完整工程与使用说明](project/pynq_z2_tile_v1_53/README.md)
 
+- [比赛模板技术报告](submission_documents/TileLab_比赛技术报告_模板版.docx)
 - [技术与教学手册](project/pynq_z2_tile_v1_53/docs/TileLab_最终提交版_技术与教学手册.pdf)
 - [演示视频详细拍摄方案](project/pynq_z2_tile_v1_53/docs/TileLab_演示视频详细拍摄方案.pdf)
 - [V1.53 实板核心验收](project/pynq_z2_tile_v1_53/reports/v153/final_validation_summary.json)
