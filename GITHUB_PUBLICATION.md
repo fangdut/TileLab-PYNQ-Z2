@@ -7,3 +7,5 @@
 **彩绘／多材质准确率未通过验收，也没有V164本次实板验收。** 当前项目入口、失败样本和限制见根目录README及项目`reports/v164`。不要把历史提交文档或旧固件视为本次通过证明。
 
 原发布记录与原文件清单保存在 `project/pynq_z2_tile_v1_53/reports/history/v153_entrypoints/`。当前文件清单不包含自身，上传成功以实际Git远端提交核验为准。
+
+V165参照原型另存于 `single-tile-reference-v165` 分支，基于V164快照继续开发；新参照算法尚未部署上板，V164分支仍保留原快照。当前参照验证与限制见 `reports/v165/STATUS.json`。

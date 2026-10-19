@@ -1,0 +1,13 @@
+{
+  "vectors": 8192,
+  "seed": 16520261019,
+  "scope": "Pixel arithmetic only; full signed offset/gain ranges, no registration/DDR/board proof",
+  "oracle_function_sha256": "30f51b973aa8ce5857864e3cc725c41431af31409d26e612ea2e9dc9d3f0fab3",
+  "rtl_sha256": "837929d888f160e41e8a63de53933768a871de3e3de8d6933484e25d727d4b81",
+  "testbench_sha256": "2ca44215f111591712db6895832c4358480670e65e79222a4a897cc590cee570",
+  "generator_sha256": "858119c0d79019e1a6552aa91403861fc8f8eba7474f7e6f404fc00a223f5993",
+  "sha256": {
+    "expected.mem": "84a3c2fa5f56fafd81fd3fc218c2e60d72773d37df75b80f85b0d7317062d031",
+    "input.mem": "2134a95c29b9c31dd1289106f969317efe55cfb12a44d9133dfe5dcde217adcb"
+  }
+}

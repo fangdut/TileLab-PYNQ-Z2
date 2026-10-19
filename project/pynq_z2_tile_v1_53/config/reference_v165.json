@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "version": "V1.65-reference-prototype",
+  "scope": "OFFLINE_REFERENCE_PROTOTYPE_NOT_DEPLOYED_TO_FPGA",
+  "reference_mode_authorized": true,
+  "new_model_training": false,
+  "frame_size": [
+    1280,
+    720
+  ],
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "search_shift_px": 8,
+  "allowed_shift_px": 4,
+  "minimum_registration_correlation": 0.9,
+  "minimum_peak_margin": 0.002,
+  "maximum_quadrant_drift_px": 0.8,
+  "minimum_gain": 0.8,
+  "maximum_gain": 1.25,
+  "maximum_offset": 20,
+  "maximum_new_saturation_fraction": 0.015,
+  "maximum_median_residual": 6,
+  "maximum_p90_residual": 16,
+  "maximum_strong_fraction": 0.15,
+  "high": 18,
+  "low": 9,
+  "edge_tolerance_cap": 24,
+  "minimum_component_pixels": 12,
+  "minimum_component_span": 12,
+  "minimum_component_seeds": 3,
+  "resampling_model": "REFERENCE_FEATURE_FORWARD_REGISTRATION_AND_MATCHED_BILINEAR_ROUNDTRIP",
+  "registration_sampling": "DENSE_BOUNDARY_NORMAL_PROFILES_AND_QUARTER_PIXEL_LOCAL_GRID"
+}

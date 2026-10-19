@@ -97,4 +97,4 @@ $env:TILE_SIM_OUT='D:/TileBuild/SingleTileCore01'
 
 目录名与旧 SDK 部分二进制沿用历史工程，旧 `system.bit`、旧 ELF、`reports/v153`、`reports/accepted_baseline` 和上级 `submission_documents` 都是历史留档，不能作为本版下载入口或验收依据。旧入口 `scripts/activate_current.py` 与 `host/start_station.ps1` 已转到新版本受检入口。
 
-下一阶段先解决单片彩绘／多材质的成像标定与独立验证。是否允许每种花色用良品参照，尚待使用者确认。尚未实现良品参照抑制模块，不声称已解决彩绘误报。之后才扩展多砖墙面，再决定是否训练新模型。
+使用者已确认按花色做良品参照标定。V165分支新增离线参照原型与独立整数差分RTL，见 [参照原型说明](README_REFERENCE_V165.md) 与 [当前报告](reports/v165/reference_report.html)。完整板端接入、同花色真实良品／裂纹配对和高准确率验收尚未完成。V164下载包与历史验证不包含新参照算法；之后才扩展多砖墙面，再决定是否训练新模型。

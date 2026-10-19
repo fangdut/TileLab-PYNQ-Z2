@@ -1,4 +1,8 @@
-# TileLab 单片瓷砖工程 V1.64
+# TileLab 单片瓷砖：V164工程与V165参照原型
+
+使用者已确认按花色做良品参照标定。最新研究在 `single-tile-reference-v165` 分支：[参照原型运行说明](project/pynq_z2_tile_v1_53/README_REFERENCE_V165.md)、[图文结果](project/pynq_z2_tile_v1_53/reports/v165/reference_report.html)。已新增离线参照算法与独立整数差分RTL；**尚未接入完整板端，当前下载产物仍为V164**。没有新分类模型训练，没有真实彩绘裂纹准确率验收。
+
+`single-tile-v164` 分支保留此前工程快照；以下V164验证与其报告属于该阶段的历史证据。当前研究状态以 `reports/v165/STATUS.json` 为准。
 
 目标：先完成单片检测，再考虑多砖墙面与新模型训练。目标材料包含彩绘与多种材质。
 
