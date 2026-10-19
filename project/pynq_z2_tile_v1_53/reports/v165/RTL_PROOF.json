@@ -1,0 +1,23 @@
+{
+  "scope": "Independent paired-pixel arithmetic simulation plus out-of-context synthesis, NOT full FPGA integration or routed timing",
+  "vectors": 8192,
+  "rtl_simulation_passed": true,
+  "reset_and_backpressure": true,
+  "oracle_function_sha256": "30f51b973aa8ce5857864e3cc725c41431af31409d26e612ea2e9dc9d3f0fab3",
+  "rtl_sha256": "837929d888f160e41e8a63de53933768a871de3e3de8d6933484e25d727d4b81",
+  "testbench_sha256": "2ca44215f111591712db6895832c4358480670e65e79222a4a897cc590cee570",
+  "vector_hashes": {
+    "expected.mem": "84a3c2fa5f56fafd81fd3fc218c2e60d72773d37df75b80f85b0d7317062d031",
+    "input.mem": "2134a95c29b9c31dd1289106f969317efe55cfb12a44d9133dfe5dcde217adcb"
+  },
+  "equivalent_regenerated_vectors_verified": true,
+  "ooc_resources": {
+    "lut": 135,
+    "registers": 295,
+    "dsp": 3,
+    "bram": 0
+  },
+  "clock_skew_estimation_warning": true,
+  "full_system_timing_or_resource_claim": false,
+  "board_integrated": false
+}

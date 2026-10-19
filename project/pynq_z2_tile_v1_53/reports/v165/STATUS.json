@@ -1,0 +1,74 @@
+{
+  "version": "V1.65-reference-prototype",
+  "reference_mode_authorized": true,
+  "new_classifier_training": false,
+  "scope": "Offline good-reference prototype and experimental paired-pixel RTL only",
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "current_deployed_hardware": "V1.64 unchanged",
+  "real_good_crack_pairs": 0,
+  "independent_real_material_validation_count": 0,
+  "policy_sha256": "4137bb5045bab5d05b9cc307d2fedc25aba9fc9f2c8d80dd59d93a2dff305586",
+  "normal_synthetic": {
+    "cases": 36,
+    "compared": 35,
+    "rejected": 1,
+    "alarms": 2,
+    "no_candidate": 33,
+    "expectations_met": 33,
+    "naive_alarms": 23
+  },
+  "artificial_lines": {
+    "cases": 24,
+    "compared": 24,
+    "rejected": 0,
+    "alarms": 24,
+    "no_candidate": 0,
+    "expectations_met": 24,
+    "naive_alarms": 24
+  },
+  "reject_stress": {
+    "cases": 30,
+    "compared": 0,
+    "rejected": 30,
+    "alarms": 0,
+    "no_candidate": 0,
+    "expectations_met": 30,
+    "naive_alarms": 30
+  },
+  "real_identity_diagnostics": {
+    "cases": 33,
+    "compared": 33,
+    "rejected": 0,
+    "alarms": 0,
+    "no_candidate": 33,
+    "expectations_met": 33,
+    "naive_alarms": 0
+  },
+  "real_cross_instance_stress": {
+    "scope": "REAL_UNMODIFIED_NORMAL_PHOTOS_CROSS_INSTANCE_STRESS_NOT_VERIFIED_SAME_PATTERN_OR_POSE",
+    "accuracy_qualified": false,
+    "reference_id": "6621d769324f6e05d5838381",
+    "reference_sha256": "eb281bedabb2474d44c3a3becd6f3a57ead3790f3be01fb4ed43b5a353f16a13",
+    "policy_sha256": "4137bb5045bab5d05b9cc307d2fedc25aba9fc9f2c8d80dd59d93a2dff305586",
+    "algorithm_sha256": "095bed4fea35b82208321aa7cabc0adbde4d6e07c88fb0cd8abd9cff3a0fbef0",
+    "cases": 32,
+    "compared": 0,
+    "rejected": 32,
+    "candidate_alarms": 0,
+    "no_candidate": 0,
+    "interpretation": "A single per-category photo is not automatically a spatially matching per-pattern template; reject rate must not be hidden as zero false alarms"
+  },
+  "remaining_failure_cases": [
+    "floral_normal_jpeg92",
+    "geometry_normal_jpeg92",
+    "stripes_normal_jpeg92"
+  ],
+  "limitations": [
+    "JPEG color-edge artifacts:2 candidate alarms and1 rejection in6 constructed JPEG inputs",
+    "All32 different real good tiles were rejected against one unmatched category reference; not a zero-FPR result",
+    "No real same-pattern good/crack pairs; no actual optical validation",
+    "Registration, reference DDR transport, frame identity pairing and regional logic are not integrated into the FPGA release",
+    "Difference candidates can also be stain, dirt or glaze changes; not semantic crack classification"
+  ]
+}
