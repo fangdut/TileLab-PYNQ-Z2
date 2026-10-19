@@ -1,0 +1,11 @@
+test_captured_evidence_uses_complete_roi_and_actual_config (test_single_tile.SingleTileTests.test_captured_evidence_uses_complete_roi_and_actual_config) ... ok
+test_current_socket_success_and_repeat_preflight (test_single_tile.SingleTileTests.test_current_socket_success_and_repeat_preflight) ... ok
+test_fixed_station_has_no_legacy_recipe_or_threshold_controls (test_single_tile.SingleTileTests.test_fixed_station_has_no_legacy_recipe_or_threshold_controls) ... ok
+test_profile_mismatch_never_sends_configuration (test_single_tile.SingleTileTests.test_profile_mismatch_never_sends_configuration) ... ok
+test_profile_tampering_rejected (test_single_tile.SingleTileTests.test_profile_tampering_rejected) ... ok
+test_reconnected_peer_is_not_trusted (test_single_tile.SingleTileTests.test_reconnected_peer_is_not_trusted) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.612s
+
+OK

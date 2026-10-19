@@ -1,0 +1,36 @@
+{
+  "profile_id": 850465077,
+  "profile_sha256": "32b11135949034894c4965a59320198d6f43e5adf2664d3060133a1692c2e9be",
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "candidate_pixels": 5592,
+  "regions": {
+    "boxes": [
+      [
+        513,
+        110,
+        889,
+        609
+      ]
+    ],
+    "areas": [
+      5592
+    ],
+    "trusted": [
+      5500
+    ],
+    "overflow": false
+  },
+  "alarm": true,
+  "scope": "OFFLINE_SOFTWARE_REFERENCE_NOT_A_BOARD_TEST",
+  "accuracy_qualified": false,
+  "input_sha256": "733613bfc3ce0537629bda71b74d312a85e95ce9a6f9d3630605f763b3c24e14",
+  "model_sha256": "04a64355c233598a330a8b49ae566be9b323ebcd3a08dc55f3a41b8e08c2ec36",
+  "seconds": 6.132064199948218,
+  "explicit_square_resize": false,
+  "decision": "crack_candidate"
+}

@@ -1,0 +1,17 @@
+{
+  "actual_c_source_fragments": true,
+  "scope": "Native C MMIO-stub check; not full firmware execution or board acceptance",
+  "predicate_checks": 28672,
+  "roi_config_and_profile_reply": true,
+  "all_exact": true,
+  "firmware_version": 78336,
+  "profile_id": 850465077,
+  "source_sha256": {
+    "main.c": "83a309d35232b2c28be6f492683a9edb060ff406112e0887851c19c8e8caa482",
+    "network.c": "157bb7543e578e4274906eb35d945f371ab0d773f21729e97c874d21ba0170e1",
+    "event_queue.h": "06e30eb42ff80af608cd14ff407f54fc200be0a05f15ec75f44529dbd61402a2",
+    "model_identity_v156.h": "9d0d8b8ab5e1aadc226daf6b95b05192575848fbbf25b64a32d9c3cf7dd9f14f",
+    "single_tile_profile.h": "4756f2431c22443cc623cd72a17010169d3f6857018bf6cad647cdf27fe71804"
+  },
+  "fixture_sha256": "fd34266c36e0d7d981ad39f2a4ca5924664c6aaa44babe78059d964682cfb6e9"
+}

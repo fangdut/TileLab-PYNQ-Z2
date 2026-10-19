@@ -1,0 +1,28 @@
+{
+  "scope": "Offline native/NumPy integer differential verification, not board or accuracy",
+  "vectors": 16384,
+  "all_exact": true,
+  "library_sha256": "8c7172344fca70a73d4c32bac7a981e8873fd27aab40beb1dc71499466871ecf",
+  "models": [
+    {
+      "model_sha256": "04a64355c233598a330a8b49ae566be9b323ebcd3a08dc55f3a41b8e08c2ec36",
+      "vectors": 4096,
+      "exact": true
+    },
+    {
+      "model_sha256": "769218e8c3da737bce1062c1c3c844a935608c11822cc919421a73fe8f02ba46",
+      "vectors": 4096,
+      "exact": true
+    },
+    {
+      "model_sha256": "2fb2908142ad910024c00b1a07668d66ee48c55915510baffe0784b8b9bfbfcc",
+      "vectors": 4096,
+      "exact": true
+    },
+    {
+      "model_sha256": "b5053c2de94520e176cce18658c4afac8860577f34a9c8d30b3f418d2ff857b2",
+      "vectors": 4096,
+      "exact": true
+    }
+  ]
+}

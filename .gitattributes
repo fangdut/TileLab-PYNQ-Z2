@@ -1,1 +1,5 @@
 * -text
+# Exact generated vectors are retained as bytes, without enormous review diffs.
+*.mem -diff
+**/reports/v159/core_vectors02/* linguist-generated=true
+**/releases/v164/* linguist-generated=true

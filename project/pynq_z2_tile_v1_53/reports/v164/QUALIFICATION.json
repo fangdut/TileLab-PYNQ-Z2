@@ -1,0 +1,137 @@
+{
+  "release": "V1.64",
+  "qualified": false,
+  "requested_materials": [
+    "painted",
+    "multiple_materials"
+  ],
+  "accuracy_qualified": false,
+  "current_board_accepted": false,
+  "independent_material_validation_count": 0,
+  "profile_sha256": "32b11135949034894c4965a59320198d6f43e5adf2664d3060133a1692c2e9be",
+  "blockers": [
+    "Painted/multiple-material single-tile accuracy is unqualified; no independent target-material test set",
+    "Historical calibrated HDMI captures and original input photos produce materially different results",
+    "Weakest crack coverage remains2.684%; image-level detection must not conceal under-segmentation",
+    "No V164 physical board/optical validation",
+    "Per-pattern good-reference option is pending user selection; not implemented"
+  ],
+  "proposed_future_acceptance_gates": {
+    "scope": "Per supported material, independent source-grouped evaluation, frozen operating point",
+    "positive_images_at_least": 100,
+    "negative_images_at_least": 400,
+    "image_recall_wilson95_lower_at_least": 0.95,
+    "image_fpr_wilson95_upper_at_most": 0.01,
+    "small_crack_coverage_guard_required": true
+  },
+  "development_replays": {
+    "historical_acquired": {
+      "scope": "EXPOSED_DEVELOPMENT_OOF_NOT_INDEPENDENT_NOT_CURRENT_BOARD_TEST",
+      "input_kind": "historical_acquired",
+      "qualified": false,
+      "requested_materials": [
+        "painted",
+        "multiple_materials"
+      ],
+      "requested_materials_qualified": false,
+      "profile_sha256": "32b11135949034894c4965a59320198d6f43e5adf2664d3060133a1692c2e9be",
+      "image_positive": 17,
+      "image_negative": 33,
+      "localized_crack_detections": 17,
+      "missed_crack_images": 0,
+      "normal_false_alarms": 0,
+      "normal_image_fpr": 0.0,
+      "pixel_precision": 0.9619965878320211,
+      "pixel_recall": 0.6535414650744872,
+      "worst_crack_pixel_recall": 0.026840287005049163,
+      "gt_pixels": 94043,
+      "roi_excluded_gt_pixels": 0,
+      "seconds": 67.63846970000304,
+      "source_oof_scope": "Repeatedly exposed development OOF; excludes complete held-out images from fitting, but architecture and operating point were selected using this development set. Not independent validation.",
+      "source_summary_sha256": "dd5f2b999f3d47f345d59f0183b7f2cb4b7727adcab43fae235affc901f38d01"
+    },
+    "stimulus": {
+      "scope": "EXPOSED_DEVELOPMENT_OOF_NOT_INDEPENDENT_NOT_BOARD",
+      "qualified": false,
+      "requested_materials": [
+        "painted",
+        "multiple_materials"
+      ],
+      "requested_materials_qualified": false,
+      "profile_sha256": "32b11135949034894c4965a59320198d6f43e5adf2664d3060133a1692c2e9be",
+      "image_positive": 17,
+      "image_negative": 33,
+      "localized_crack_detections": 16,
+      "missed_crack_images": 1,
+      "normal_false_alarms": 2,
+      "normal_image_fpr": 0.06060606060606061,
+      "pixel_precision": 0.875456741190314,
+      "pixel_recall": 0.6012568718564911,
+      "worst_crack_pixel_recall": 0.06776508105235185,
+      "gt_pixels": 94043,
+      "roi_excluded_gt_pixels": 0,
+      "seconds": 66.14717889996246,
+      "source_oof_scope": "Repeatedly exposed development OOF; excludes complete held-out images from fitting, but architecture and operating point were selected using this development set. Not independent validation.",
+      "input_kind": "stimulus",
+      "source_summary_sha256": "ce09f0854ef79ec54243ac4155457d7f88ba0c6ceda2cd158afa208a82b18ca0"
+    }
+  },
+  "engineering_verification": {
+    "scope": "Engineering verification only; not physical board or target-material accuracy acceptance",
+    "application_version": "V1.64",
+    "firmware_version": 78336,
+    "model_id": 3496688539,
+    "profile_sha256": "32b11135949034894c4965a59320198d6f43e5adf2664d3060133a1692c2e9be",
+    "hardware": {
+      "setup_slack_ns": 0.021,
+      "hold_slack_ns": 0.024,
+      "drc_errors": 0,
+      "cdc_critical": 0,
+      "cdc_warning": 0,
+      "routing_errors": 0,
+      "bus_skew_min_slack_ns": 9.036,
+      "nominal_pixel_clock_mhz": 74.25,
+      "nominal_hdmi_input_fps": 60,
+      "physical_fps_measured_this_release": false,
+      "lut": 32970,
+      "registers": 42898,
+      "slices": 11461,
+      "slices_available": 13300,
+      "bram_tiles": 121.5,
+      "bram_tiles_available": 140,
+      "dsp": 2,
+      "ila": false
+    },
+    "software_tests": {
+      "run": 485,
+      "passed": 484,
+      "skipped": 1,
+      "skip_reason": "Optional native word-RLE decoder unavailable"
+    },
+    "core_rtl": {
+      "configurations": 160,
+      "pixels": 1228800,
+      "exact_feature_and_score_packets": 491520,
+      "passed": true
+    },
+    "firmware_native_predicate_checks": 28672,
+    "native_numpy_differential_vectors": 16384,
+    "bit_xsa_elf_matched": true,
+    "current_board_accepted": false,
+    "accuracy_target_met": false,
+    "artifact_sha256": {
+      "bus_skew.rpt": "9f8fc3b951948f6d2bb2334c8a2ec73b6203470d480d3dc5e729f407c2096034",
+      "cdc.rpt": "fd3383f43be44a0fdf1233e7ca4b0d82dbc74a3f056f051b434091f39e714827",
+      "drc.rpt": "8b2fe4749eaf8ac54624d9efd7ada0d82dcbaf48fb9d19c4a89a68b6c63bdbf9",
+      "hdmi_ethernet.elf": "79e0384536fcabdbc4b474c8ed371a4fc3b8557370e058881a6ed0e467b7240b",
+      "implementation_status.txt": "856fbc30c7b4be73a1469ef1cfd30e748d570291b8cc7d9b7d43f76b841d430d",
+      "methodology.rpt": "ca9898760bf2885164941317818078759f550171b02fc4b9f99f55b316a6e613",
+      "ps7_init.tcl": "695ae8bb11521d6058e8c527bee71e4531c6a9d982b5ed0516d811e5ab5aea0d",
+      "route_status.rpt": "fc27f5c55f8e63f52b61d75e6f0d0e120060a2717310f76e9a57ab4cc1217579",
+      "system.bit": "f0f36b99c6874c7aa11f59c1cf908008b9848b7db50578c591a486408d5cf396",
+      "system.xsa": "096180b8a325e8a17ae31128fd086da957d2a486b3a077fcef80866b99726272",
+      "timing_summary.rpt": "269d821d80a5c664fab8451a43790b962d498abf236aebe6614aecc08d4fa329",
+      "utilization.rpt": "f25eeb731e65996fbd4f4a48b3e24cd9abc2eb92df735fe90e807b4d8dfadabd"
+    }
+  }
+}

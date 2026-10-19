@@ -1,0 +1,26 @@
+name: Single-tile source and software checks
+on:
+  push:
+    branches: [main, 'single-tile-*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  software:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: project/pynq_z2_tile_v1_53
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: project/pynq_z2_tile_v1_53/host/requirements.txt
+      - run: python -m pip install -r host/requirements.txt
+      - run: python scripts/check_single_tile_sources.py
+      - run: python scripts/update_package_manifest.py --verify
+      - run: python -m unittest discover -s host -v
+      - run: python -m unittest discover -s tools/single_tile -p test_reference.py -v
+      - run: python -m unittest discover -s tests -v

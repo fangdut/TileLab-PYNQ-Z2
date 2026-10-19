@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-19T11:37:39.204781+00:00",
+  "algorithm_id": "0xd06b3b9b",
+  "firmware_version": "0x13100",
+  "algorithm_unchanged_since_freeze": true,
+  "core": {
+    "output_pixels": 1228800,
+    "configurations": 160,
+    "exact_feature_packets": 491520,
+    "exact_q16_scores": 491520,
+    "channels": "Native RBG explicitly converted to RGB before color arithmetic",
+    "latency_unchanged": true
+  },
+  "host": {
+    "tests": 479,
+    "passed": 478,
+    "skipped": 1
+  },
+  "firmware": {
+    "protocol_checks": 14336,
+    "config_checks": 96,
+    "actual_c_source": true,
+    "arm_elf_compiled": false
+  },
+  "full_fpga_implementation": false,
+  "new_bitstream": false,
+  "board_programmed": false,
+  "strict_weakest5_oof_guard_met": false,
+  "promoted": false,
+  "evidence_sha256": {
+    "core_passed.txt": "e68e08213c7dd305d981fff70364b310d45e9e8857a863d6bfd012c71e5137b5",
+    "passed.txt": "4825acd1af1ceb09eb7b3a823c00f20002d6bb0f9452d39e7a2c2344c76abe9c",
+    "host_regression02.log": "4e3a191378c0da07bfb7c9fc601a3d858bbdbecc47251c5a288be24829386d48",
+    "proof.json": "fde71bcadb05dc5f9f198af8b0f9a46ebfeea2790957d651f77027a6b0bfbb78",
+    "summary.json": "d5fcd0f42e969712caacec89c5e3e71918da2391d70948cbe79f3e46e8f829a2"
+  }
+}

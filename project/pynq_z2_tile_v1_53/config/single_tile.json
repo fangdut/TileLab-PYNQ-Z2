@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "application_version": "V1.64",
+  "firmware_version": 78336,
+  "model_id": 3496688539,
+  "model_sha256": "04a64355c233598a330a8b49ae566be9b323ebcd3a08dc55f3a41b8e08c2ec36",
+  "frame": {
+    "width": 1280,
+    "height": 720,
+    "fps": 60
+  },
+  "tile_rect": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "inspection_roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "fixture": "Single aligned500x500 textured ceramic surface in a fixed one-slot fixture; dark uniform surroundings. No wall segmentation or automatic tile-count claim.",
+  "material": "Existing calibrated textured ceramic domain; plain/painted/other materials require separate qualification.",
+  "recipe_id": "single_tile_v164_integer_boost",
+  "threshold": 90,
+  "passes": 4,
+  "enhance": true,
+  "wide_weak": true,
+  "ridge": true,
+  "pixel_boost": true,
+  "low_gate": false,
+  "high_q16": 32768,
+  "gate_q16": -393216,
+  "support": 5,
+  "min_trusted": 16,
+  "evidence_shift": 2,
+  "profile_sha256": "32b11135949034894c4965a59320198d6f43e5adf2664d3060133a1692c2e9be",
+  "profile_id": 850465077
+}

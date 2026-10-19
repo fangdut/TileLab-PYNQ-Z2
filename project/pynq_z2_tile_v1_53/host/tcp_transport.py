@@ -4,7 +4,7 @@ from capture_health import decode_health
 from dma_recovery import decode_recovery
 from word_rle import decode as decode_rle
 from packed_pixels import decode as decode_packed
-MAGIC=0x544c5033;FRAME_BYTES=3686400;LOW_GATE_VERSION=0x12500;WIDE_WEAK_VERSION=0x12b00
+MAGIC=0x544c5033;FRAME_BYTES=3686400;LOW_GATE_VERSION=0x12500;WIDE_WEAK_VERSION=0x12b00;RIDGE_VERSION=0x12c00;SUPPORT_VERSION=0x12d00;BOOST_VERSION=0x13100;BOOST_MODEL_ID=0xd06b3b9b
 META_NAMES=('magic','version','boot_id','heartbeat','head','tail','depth','events','dropped','captured','invalid','ack','request','reason','request_ack','threshold','enabled','gaps','frames','last_seq','active','config','error_status','ack_errors')
 class RequestDeadlineExceeded(TimeoutError):
  """One logical exchange exhausted its budget; no fresh retry window."""
@@ -98,6 +98,18 @@ class EventTCP:
     _,_,peer=self._exchange(3,0)
     if peer[0]!=0x54494c33 or peer[1]<LOW_GATE_VERSION:
      raise ValueError('Low product gate requires firmware >= 1.37 on the current connection')
+   if op in (1,5) and b&960:
+    _,peer_status,peer=self._exchange(3,0)
+    if peer[0]!=0x54494c33 or peer[1]<(BOOST_VERSION if b&512 else SUPPORT_VERSION if b&384 else RIDGE_VERSION):
+     raise ValueError('Directional/support profile requires compatible candidate firmware on the current connection')
+    if b&512 and (peer_status[37]!=BOOST_MODEL_ID or peer_status[38]!=BOOST_MODEL_ID):raise ValueError('FPGA model identity mismatch on the current connection')
+    contract=getattr(self,'single_tile_contract',None)
+    if contract is not None:
+     from single_tile_profile import validate_wire_contract
+     _,profile_status,profile_meta=self._exchange(6,0)
+     identity=validate_wire_contract(contract,profile_status,profile_meta)
+     if identity['boot_id']!=peer[2]:raise ValueError('Board restarted during single-tile preflight')
+
    self._receive_timeout=2 if op==1 and self.first_frame else self.read_idle_timeout
    started=time.perf_counter()
    self.bytes_received=0;self.stage='send';self._socket_timeout(self._receive_timeout)
@@ -137,20 +149,31 @@ class EventTCP:
    if words[44]==0x54494c33:self.peer_version=version
    self.stage='idle';return payload,list(words[4:44]),list(words[44:])
   except Exception:self.close();raise
- def capture(self,threshold,enhance=True,passes=2,low_gate=False,wide_weak=False):
-  if type(enhance) is not bool or type(passes) is not int or passes not in (2,4) or (not enhance and passes!=2) or type(low_gate) is not bool or type(wide_weak) is not bool:raise ValueError('Invalid bounded growth/product gate mode')
-  if wide_weak and (not enhance or passes!=4 or self.peer_version<WIDE_WEAK_VERSION):raise ValueError('Wide weak support requires V1.52 firmware and four-pass growth')
+ def _support_profile(self,threshold,enhance,passes,wide_weak,ridge,wide_line,directional_growth,pixel_boost=False):
+  if type(pixel_boost) is not bool or (pixel_boost and (wide_line or directional_growth or threshold!=90 or not enhance or passes!=4 or not wide_weak or not ridge or self.peer_version<BOOST_VERSION)):raise ValueError('Integer boost requires exclusive 0x13100 profile, T90 and four-pass wide/mean support')
+  if type(wide_line) is not bool or type(directional_growth) is not bool:raise ValueError('Invalid support profile flag')
+  if wide_line and directional_growth:raise ValueError('Support profiles are mutually exclusive')
+  if passes==8 and not directional_growth:raise ValueError('Eight passes require directional growth')
+  if wide_line or directional_growth:
+   if threshold!=90 or not enhance or not wide_weak or not ridge or passes!=(8 if directional_growth else 4) or self.peer_version<SUPPORT_VERSION:raise ValueError('Fixed support profile requires 0x12d00 candidate firmware and T90 settings')
+ def capture(self,threshold,enhance=True,passes=2,low_gate=False,wide_weak=False,ridge=False,wide_line=False,directional_growth=False,pixel_boost=False):
+  self._support_profile(threshold,enhance,passes,wide_weak,ridge,wide_line,directional_growth,pixel_boost)
+  if type(ridge) is not bool or (ridge and (threshold!=90 or not enhance or passes not in (4,8) or not wide_weak or self.peer_version<RIDGE_VERSION)):raise ValueError('Invalid directional mean profile/version')
+  if type(enhance) is not bool or type(passes) is not int or passes not in (2,4,8) or (not enhance and passes!=2) or type(low_gate) is not bool or type(wide_weak) is not bool:raise ValueError('Invalid bounded growth/product gate mode')
+  if wide_weak and (not enhance or passes not in (4,8) or self.peer_version<WIDE_WEAK_VERSION):raise ValueError('Wide weak support requires V1.52 firmware and four-pass growth')
   compression=self.compression;packed=self.packed
   capability=8 if compression and packed and self.peer_version>=0x11900 else 0
-  t=time.monotonic();raw,d,m=self.exchange(1,threshold,(0 if enhance else 1)|(2 if compression else 0)|(4 if passes==4 else 0)|capability|(16 if low_gate else 0)|(32 if wide_weak else 0));return raw,d,m,round((time.monotonic()-t)*1000)
+  t=time.monotonic();raw,d,m=self.exchange(1,threshold,(0 if enhance else 1)|(2 if compression else 0)|(4 if passes in (4,8) else 0)|capability|(16 if low_gate else 0)|(32 if wide_weak else 0)|(64 if ridge else 0)|(128 if wide_line else 0)|(256 if directional_growth else 0)|(512 if pixel_boost else 0));return raw,d,m,round((time.monotonic()-t)*1000)
  def ack(self,boot,event):
   _,_,meta=self.exchange(2,boot,event)
   if meta[0]!=0x54494c33 or meta[2]!=boot or meta[4]!=event:
    self.close();raise ValueError('ACK response identity mismatch; saved evidence retained')
- def configure(self,threshold,enhance=True,passes=2,low_gate=False,wide_weak=False):
-  if type(threshold) is not int or not 1<=threshold<=255 or type(enhance) is not bool or type(passes) is not int or passes not in (2,4) or (not enhance and passes!=2) or type(low_gate) is not bool or type(wide_weak) is not bool:raise ValueError('Invalid inspection parameters')
-  if wide_weak and (not enhance or passes!=4 or self.peer_version<WIDE_WEAK_VERSION):raise ValueError('Wide weak support requires V1.52 firmware and four-pass growth')
-  self.exchange(5,threshold,(0 if enhance else 1)|(4 if passes==4 else 0)|(16 if low_gate else 0)|(32 if wide_weak else 0))
+ def configure(self,threshold,enhance=True,passes=2,low_gate=False,wide_weak=False,ridge=False,wide_line=False,directional_growth=False,pixel_boost=False):
+  self._support_profile(threshold,enhance,passes,wide_weak,ridge,wide_line,directional_growth,pixel_boost)
+  if type(ridge) is not bool or (ridge and (threshold!=90 or not enhance or passes not in (4,8) or not wide_weak or self.peer_version<RIDGE_VERSION)):raise ValueError('Invalid directional mean profile/version')
+  if type(threshold) is not int or not 1<=threshold<=255 or type(enhance) is not bool or type(passes) is not int or passes not in (2,4,8) or (not enhance and passes!=2) or type(low_gate) is not bool or type(wide_weak) is not bool:raise ValueError('Invalid inspection parameters')
+  if wide_weak and (not enhance or passes not in (4,8) or self.peer_version<WIDE_WEAK_VERSION):raise ValueError('Wide weak support requires V1.52 firmware and four-pass growth')
+  self.exchange(5,threshold,(0 if enhance else 1)|(4 if passes in (4,8) else 0)|(16 if low_gate else 0)|(32 if wide_weak else 0)|(64 if ridge else 0)|(128 if wide_line else 0)|(256 if directional_growth else 0)|(512 if pixel_boost else 0))
  def stats(self):
   _,d,m=self.exchange(3,0)
   if m[0]!=0x54494c33:raise ValueError('Invalid board status identity')
@@ -161,6 +184,7 @@ class EventTCP:
   if m[1]>=0x00010e00:result.update(descriptor_crc_errors=d[13],descriptor_verified_frames=d[14],last_descriptor_crc32=d[15])
   if m[1]>=0x11300:result['capture_health']=decode_health(d[:6],m[1])
   if m[1]>=0x11400:result['capture_recovery']=decode_recovery(d[23:37])
+  if m[1]>=BOOST_VERSION:result.update(pl_model_id=d[37],expected_model_id=d[38],model_identity_matches=bool(d[37] and d[37]==d[38]))
   return result
  def diagnostics(self):
   _,d,_=self.exchange(4,0)

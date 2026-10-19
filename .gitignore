@@ -11,3 +11,16 @@ __pycache__/
 **/review_records/
 **/*display_command.txt
 **/*display_status.json
+
+# Generated build workspaces and local machine outputs
+**/.venv/
+**/build_local/
+**/runtime/
+**/*.jou
+**/vivado*.log
+**/pynq_z2_tile_v1_53.cache/
+**/pynq_z2_tile_v1_53.gen/
+**/pynq_z2_tile_v1_53.runs/
+**/pynq_z2_tile_v1_53.sim/
+**/reports/review_test_*/
+**/dfx_runtime.txt

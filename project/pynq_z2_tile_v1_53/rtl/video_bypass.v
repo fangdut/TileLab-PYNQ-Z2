@@ -23,11 +23,13 @@ module video_bypass #(parameter WIDTH=1280,HEIGHT=720,H_TOTAL=1650)(
  .rgb_out(core_original),.de_out(core_de),.hs_out(core_hs),.vs_out(core_vs),
  .frame_count(),.frame_pixels(),.frame_lines(),.line_pixels(),.format_ok(),.mode_active(),
  .pixel_reset(pixel_reset),.window_valid(),.gray_out(core_gray),.edge_out(core_edge),.smooth_out(core_smooth));
- wire [7:0] valley_score,valley_wide_score;
- dual_scale_valley #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL)) valley(
+ wire [7:0] valley_score,valley_wide_score,valley_short_mean,valley_long_mean,valley_line;
+ wire [3:0] direction_weak;wire signed [31:0] model_score;wire model_valid;
+ boost_frontend_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL)) valley(
  .clk(pixel_clk),.reset(pixel_reset),.gray(core_gray),.rgb(core_original),.de(core_de),.hs(core_hs),.vs(core_vs),
- .rgb_out(original),.de_out(de),.hs_out(hs),.vs_out(vs),.score(valley_score),.score_wide(valley_wide_score));
- raster_delay #(.WIDTH(24),.WORDS(16*H_TOTAL+18)) aux_delay(
+ .rgb_out(original),.de_out(de),.hs_out(hs),.vs_out(vs),.score(valley_score),.score_wide(valley_wide_score),
+ .score_short(valley_short_mean),.score_long(valley_long_mean),.score_wide_line(valley_line),.direction_weak(direction_weak),.model_score(model_score),.model_valid(model_valid));
+ raster_delay #(.WIDTH(24),.WORDS(16*H_TOTAL+18+11)) aux_delay(
  .clk(pixel_clk),.reset(pixel_reset),.din({core_gray,core_edge,core_smooth}),.dout({gray,edgep,smooth}));
  wire [95:0] cfg;
  config_bridge bridge(control_clk,pixel_clk,config_request,roi_min_request,roi_max_request,cfg);
@@ -51,34 +53,61 @@ module video_bypass #(parameter WIDTH=1280,HEIGHT=720,H_TOTAL=1650)(
  .count_ref(brightness_count_ref),.sum_ref(brightness_sum_ref),.seq_ref(brightness_seq_ref),
  .config_ref(brightness_config_ref),.min_ref(brightness_min_ref),.max_ref(brightness_max_ref));
  // bit19 selects strict dark (<T) versus strict bright (>T) candidates.
- wire mask=de && roi_ok && ((config_active[19] && config_active[17:16]!=3) ? intensity<config_active[15:8] : intensity>config_active[15:8]);
+ // V1.54 bit28 enables the fixed directional-mean research profile.
+ // It supplements V8 seeds; clearing bit28 retains the V1.52 mask exactly.
+ wire ridge_enable=config_active[28] && config_active[24] && config_active[23] && config_active[17:16]==3;
+ // Fixed research operating points require the V1.54 T90/four/wide profile.
+ wire profile_base=ridge_enable && config_active[27] && config_active[25] && config_active[15:8]==8'd90;
+ // Both reserved support bits select V1.56 only with all fixed-profile guards.
+ wire boost_enable=config_active[29] && config_active[30] && profile_base;
+ wire learned_input=boost_enable && model_valid && de && roi_ok && model_score>=32'sd32768;
+ wire model_gate_input=model_valid && model_score>=-32'sd393216;
+ wire wide_line_enable=config_active[29] && !config_active[30] && profile_base;
+ wire directional_enable=config_active[30] && !config_active[29] && profile_base;
+ wire mask=de && roi_ok && (((config_active[19] && config_active[17:16]!=3) ? intensity<config_active[15:8] : intensity>config_active[15:8]) ||
+  (ridge_enable && (valley_short_mean>8'd40 || valley_long_mean>8'd48)) || (wide_line_enable && valley_line>8'd60));
  // V1.6 bit24 enables weak-crack support. Ceil(T/2) avoids 8-bit overflow.
  wire grow_enable=config_active[24] && config_active[23] && config_active[17:16]==3;
  wire [7:0] low_threshold={1'b0,config_active[15:9]}+{7'b0,config_active[8]};
  // bit27 opts into wider weak support. Strong seeds, thresholds and stage
  // count are unchanged. Clearing it reproduces the original mask algorithm.
  wire [7:0] weak_intensity=(grow_enable && config_active[27] && valley_wide_score>intensity)?valley_wide_score:intensity;
- wire weak_mask=de && roi_ok && weak_intensity>low_threshold;
+ wire weak_mask=de && roi_ok && (weak_intensity>low_threshold ||
+  (ridge_enable && (valley_short_mean>8'd20 || valley_long_mean>8'd24)) || (wide_line_enable && valley_line>8'd30));
  wire [23:0] preview=config_active[2:0]==1?{3{gray}}:config_active[2:0]==2?{3{edgep}}:config_active[2:0]==3?{3{smooth}}:original;
  // bit18: 0 opening (AND then OR), 1 closing (OR then AND).
- wire m1,d1,h1,v1,w1,w2;wire [52:0] side1;
- raster_morph #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(53)) pass1(
- pixel_clk,pixel_reset,config_active[18],mask,de,hs,vs,{original,config_active[2:0],roi_ok,mask,preview},m1,d1,h1,v1,side1,grow_enable,weak_mask,w1);
- wire m2,d2,h2,v2;wire [53:0] side2;
- raster_morph #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54)) pass2(
- pixel_clk,pixel_reset,!config_active[18],m1,d1,h1,v1,{side1[52:29],m1,side1[28:0]},m2,d2,h2,v2,side2,grow_enable,w1,w2);
- // V1.24 bit25 adds two bounded support stages. With bit25 clear they
- // copy each center bit, retaining the original two-stage mask at equal latency.
  wire extra_grow=grow_enable && config_active[25];
- wire m3,w3,d3,h3,v3,m_final,w_final,d_final,h_final,v_final;
- wire [53:0] side3,side_final;
- raster_morph #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass3(
- pixel_clk,pixel_reset,1'b0,m2,d2,h2,v2,side2,m3,d3,h3,v3,side3,extra_grow,w2,w3);
- raster_morph #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass4(
- pixel_clk,pixel_reset,1'b0,m3,d3,h3,v3,side3,m_final,d_final,h_final,v_final,side_final,extra_grow,w3,w_final);
+ wire [3:0] dir0=(de && roi_ok)?direction_weak:4'b0;
+ wire m1,d1,h1,v1,w1;wire [52:0] side1;wire [3:0] dir1;wire learned1,gate1;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(53),.BYPASS_WHEN_NOT_GROW(0),.FILTER_LEARNED(1),.MIN_SUPPORT(5)) pass1(
+ pixel_clk,pixel_reset,config_active[18],mask,de,hs,vs,{original,config_active[2:0],roi_ok,mask,preview},m1,d1,h1,v1,side1,grow_enable,weak_mask,w1,directional_enable,dir0,dir1,learned_input,model_gate_input,learned1,gate1);
+ wire m2,d2,h2,v2,w2;wire [53:0] side2;wire [3:0] dir2;wire learned2,gate2;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(0)) pass2(
+ pixel_clk,pixel_reset,!config_active[18],m1,d1,h1,v1,{side1[52:29],m1,side1[28:0]},m2,d2,h2,v2,side2,grow_enable,w1,w2,directional_enable,dir1,dir2,learned1,gate1,learned2,gate2);
+ wire m3,d3,h3,v3,w3;wire [53:0] side3;wire [3:0] dir3;wire learned3,gate3;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass3(
+ pixel_clk,pixel_reset,1'b0,m2,d2,h2,v2,side2,m3,d3,h3,v3,side3,extra_grow,w2,w3,directional_enable,dir2,dir3,learned2,gate2,learned3,gate3);
+ wire m4,d4,h4,v4,w4;wire [53:0] side4;wire [3:0] dir4;wire learned4,gate4;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass4(
+ pixel_clk,pixel_reset,1'b0,m3,d3,h3,v3,side3,m4,d4,h4,v4,side4,extra_grow,w3,w4,directional_enable,dir3,dir4,learned3,gate3,learned4,gate4);
+ wire m5,d5,h5,v5,w5;wire [53:0] side5;wire [3:0] dir5;wire learned5,gate5;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass5(
+ pixel_clk,pixel_reset,1'b0,m4,d4,h4,v4,side4,m5,d5,h5,v5,side5,directional_enable,w4,w5,directional_enable,dir4,dir5,learned4,gate4,learned5,gate5);
+ wire m6,d6,h6,v6,w6;wire [53:0] side6;wire [3:0] dir6;wire learned6,gate6;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass6(
+ pixel_clk,pixel_reset,1'b0,m5,d5,h5,v5,side5,m6,d6,h6,v6,side6,directional_enable,w5,w6,directional_enable,dir5,dir6,learned5,gate5,learned6,gate6);
+ wire m7,d7,h7,v7,w7;wire [53:0] side7;wire [3:0] dir7;wire learned7,gate7;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass7(
+ pixel_clk,pixel_reset,1'b0,m6,d6,h6,v6,side6,m7,d7,h7,v7,side7,directional_enable,w6,w7,directional_enable,dir6,dir7,learned6,gate6,learned7,gate7);
+ wire m8,d8,h8,v8,w8;wire [53:0] side8;wire [3:0] dir8;wire learned8,gate8;
+ raster_learned_v156 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.H_TOTAL(H_TOTAL),.SIDE_WIDTH(54),.BYPASS_WHEN_NOT_GROW(1)) pass8(
+ pixel_clk,pixel_reset,1'b0,m7,d7,h7,v7,side7,m8,d8,h8,v8,side8,directional_enable,w7,w8,directional_enable,dir7,dir8,learned7,gate7,learned8,gate8);
+ wire m_final=m8,d_final=d8,h_final=h8,v_final=v8;wire [53:0] side_final=side8;
  // bit22 bypasses erosion/dilation while retaining identical raster latency.
  // The raw candidate is carried alongside the original pixels in side_final[24].
- wire final_mask=(grow_enable?m_final:(config_active[22]?side_final[24]:m_final)) && side_final[25];
+ wire learned_final=(m_final && gate8) || learned8;
+ wire selected_final=boost_enable?learned_final:m_final;
+ wire final_mask=(grow_enable?selected_final:(config_active[22]?side_final[24]:m_final)) && side_final[25];
  assign capture_rgb=side_final[53:30];assign capture_de=d_final;assign capture_vs=v_final;assign capture_mask=final_mask;
  wire [2:0] shown_mode=side_final[28:26];
  wire [23:0] shown=shown_mode==4?{24{side_final[24]}}:
@@ -92,8 +121,8 @@ module video_bypass #(parameter WIDTH=1280,HEIGHT=720,H_TOTAL=1650)(
  wire [511:0] region_boxes;wire [255:0] region_areas;wire [31:0] region_seq,region_status;
  assign capture_region_boxes=region_boxes;assign capture_region_areas=region_areas;
  assign capture_region_seq=region_seq;assign capture_region_status=region_status;
- region_grid #(.WIDTH(WIDTH),.HEIGHT(HEIGHT)) regions(
- .clk(pixel_clk),.control_clk(control_clk),.reset(pixel_reset),.de(d_final),.vs(v_final),.mask(final_mask),
+ region_quality_v157 #(.WIDTH(WIDTH),.HEIGHT(HEIGHT),.MIN_TRUSTED(16),.EVIDENCE_SHIFT(2)) regions(
+ .clk(pixel_clk),.control_clk(control_clk),.reset(pixel_reset),.de(d_final),.vs(v_final),.mask(final_mask),.trusted_mask(learned8),.quality_enable(boost_enable),
  .boxes(region_boxes),.areas(region_areas),.result_seq(region_seq),.result_status(region_status),.snapshot_ref(regions_ref));
  reg [15:0] box_x=0,box_y=0;reg box_pd=0,box_pv=0;
  always @(posedge pixel_clk)begin

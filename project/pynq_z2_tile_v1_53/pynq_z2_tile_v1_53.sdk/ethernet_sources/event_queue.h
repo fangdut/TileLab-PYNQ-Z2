@@ -1,6 +1,8 @@
 #ifndef TILE_EVENT_QUEUE_H
 #define TILE_EVENT_QUEUE_H
 #include <stdint.h>
+#include "model_identity_v156.h"
+#include "single_tile_profile.h"
 #define QUEUE_CAPACITY 12u
 #define DESC_WORDS 40u
 #define FRAME_BYTES 3686400u
@@ -27,7 +29,17 @@
 #define M_PRODUCT_GATE_APPLIED 87u
 #define M_WIDE_WEAK_REQUEST 88u /* zero=radius-8 only, one=radius-8/16 weak support */
 #define M_WIDE_WEAK_APPLIED 89u
-#define META_WORDS 90u
+#define M_RIDGE_REQUEST 90u /* fixed directional-mean profile, opt-in */
+#define M_RIDGE_APPLIED 91u
+#define M_WIDE_LINE_REQUEST 92u
+#define M_WIDE_LINE_APPLIED 93u
+#define M_DIRECTIONAL_REQUEST 94u
+#define M_DIRECTIONAL_APPLIED 95u
+#define M_BOOST_REQUEST 96u
+#define M_BOOST_APPLIED 97u
+#define M_PL_MODEL 98u
+#define M_EXPECTED_MODEL 99u
+#define META_WORDS 100u
 enum {M_MAGIC,M_VERSION,M_BOOT,M_HEARTBEAT,M_HEAD,M_TAIL,M_DEPTH,M_EVENTS,M_DROPPED,M_CAPTURED,M_INVALID,M_ACK,M_REQUEST,M_REASON,M_REQUEST_ACK,M_THRESHOLD,M_ENABLE,M_GAPS,M_FRAMES,M_LAST_SEQ,M_ACTIVE,M_CONFIG,M_ERRORS,M_ACK_ERRORS};
 typedef struct {volatile uint32_t *meta,*desc;uint64_t slot_used;uint32_t head,tail,last_ack,incident,quiet;unsigned read_pos,write_pos;unsigned char refs[FRAME_SLOTS];} EventQueue;
 static inline volatile uint32_t *queue_front(const EventQueue *q){return q->desc+q->read_pos*DESC_WORDS;}
@@ -42,7 +54,7 @@ static inline void queue_init(EventQueue *q,volatile uint32_t *m,volatile uint32
  for(i=0;i<META_WORDS;i++){m[i]=0;}
  for(i=0;i<FRAME_SLOTS;i++)q->refs[i]=0;
  for(i=0;i<QUEUE_CAPACITY*DESC_WORDS;i++){d[i]=0;}
- m[M_VERSION]=0x00012b00u;m[M_BOOT]=boot;m[M_THRESHOLD]=36;m[M_ENABLE]=0;queue_barrier();m[M_MAGIC]=TILE_MAGIC;
+ m[M_EXPECTED_MODEL]=TILE_MODEL_ID;m[M_VERSION]=TILE_SINGLE_FIRMWARE_VERSION;m[M_BOOT]=boot;m[M_THRESHOLD]=90;m[M_ENABLE]=0;m[M_DETECT_MODE_REQUEST]=2;m[M_WIDE_WEAK_REQUEST]=1;m[M_RIDGE_REQUEST]=1;m[M_BOOST_REQUEST]=1;queue_barrier();m[M_MAGIC]=TILE_MAGIC;
 }
 static inline void queue_reject_ack(EventQueue *q){
  /* Consume a rejected mailbox request without remembering a future event.
