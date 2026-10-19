@@ -14,6 +14,7 @@
 #include "xil_cache.h"
 #include "xil_mmu.h"
 #include "xil_printf.h"
+#include "xil_io.h"
 #include "event_queue.h"
 #include "network.h"
 #include "word_rle.h"
@@ -113,23 +114,36 @@ static err_t received(void *arg,struct tcp_pcb *pcb,struct pbuf *p,err_t err){
  if(rx_used<16){return ERR_OK;}
  rx_used=0;
  if(rx[0]!=PROTO || active || waiting || encoding){abort_client();return ERR_ABRT;}
+ queue.meta[M_PL_MODEL]=Xil_In32(0x43c00100u);
  memset(header,0,sizeof(header));
- if(rx[1]==1 && rx[2]>=1 && rx[2]<=255 && rx[3]<=63 && (rx[3]&5)!=5 &&
+ /* V164 single-fixture firmware freezes the detector profile. Legacy mode
+  * changes are rejected before any configuration state is written. */
+ if((rx[1]==1u || rx[1]==5u) &&
+    (rx[2]!=90u || (rx[1]==5u ? rx[3]!=612u :
+     ((rx[3]&~10u)!=612u || ((rx[3]&8u) && !(rx[3]&2u)))))){
+  reply(2,0);return ERR_OK;
+ }
+
+ if(rx[1]==1 && rx[2]>=1 && rx[2]<=255 && rx[3]<=1023 && (rx[3]&5)!=5 &&
+    ((rx[3]&384)!=384) && (!(rx[3]&512) || ((rx[3]&484)==100 && rx[2]==90 && !(rx[3]&1) && queue.meta[M_PL_MODEL]==TILE_MODEL_ID)) && (!(rx[3]&384) || ((rx[3]&100)==100 && rx[2]==90 && !(rx[3]&1))) &&
+    (!(rx[3]&64) || (rx[2]==90 && (rx[3]&36)==36 && !(rx[3]&1))) &&
     (!(rx[3]&8) || (rx[3]&2)) && (!(rx[3]&32) || ((rx[3]&4) && !(rx[3]&1)))){
   // Bits 0=disable growth, 1=RLE, 2=four-pass, 3=accept PACK25,
   // 4=low product gate, 5=radius-16 weak support (requires four-pass growth).
+  // 6=directional mean candidate (fixed T90, wide support and four-pass).
   // Older clients never set bit 3 and keep RAW32/WORD_RLE responses.
   // Apply together with the threshold only at the existing product gap.
   want_rle=(rx[3]>>1)&1;want_packed=(rx[3]>>3)&1;reply_codec=0;
   queue.meta[M_THRESHOLD]=rx[2];queue.meta[M_DETECT_MODE_REQUEST]=(rx[3]&4)?2:(rx[3]&1);queue.meta[M_PRODUCT_GATE_REQUEST]=(rx[3]>>4)&1;
-  queue.meta[M_WIDE_WEAK_REQUEST]=(rx[3]>>5)&1;queue.meta[M_ENABLE]=1;waiting=1;
+  queue.meta[M_WIDE_WEAK_REQUEST]=(rx[3]>>5)&1;queue.meta[M_RIDGE_REQUEST]=(rx[3]>>6)&1;queue.meta[M_WIDE_LINE_REQUEST]=(rx[3]>>7)&1;queue.meta[M_DIRECTIONAL_REQUEST]=(rx[3]>>8)&1;queue.meta[M_BOOST_REQUEST]=(rx[3]>>9)&1;queue.meta[M_ENABLE]=1;waiting=1;
   if(queue.head==queue.tail){queue.meta[M_REASON]=2;queue.meta[M_REQUEST]=queue.meta[M_REQUEST_ACK]+1;}
  }else if(rx[1]==5 && rx[2]>=1 && rx[2]<=255 &&
-  (rx[3]==0 || rx[3]==1 || rx[3]==4 || rx[3]==16 || rx[3]==17 || rx[3]==20 || rx[3]==36 || rx[3]==52)){
+  (rx[3]==0 || rx[3]==1 || rx[3]==4 || rx[3]==16 || rx[3]==17 || rx[3]==20 || rx[3]==36 || rx[3]==52 ||
+   (rx[2]==90 && (rx[3]==100 || rx[3]==116 || rx[3]==228 || rx[3]==244 || rx[3]==356 || rx[3]==372 || ((rx[3]==612 || rx[3]==628) && queue.meta[M_PL_MODEL]==TILE_MODEL_ID))))){
   /* Configure inspection without requesting a full preview frame. The main
    * loop still commits threshold/support mode only between physical tiles. */
   queue.meta[M_THRESHOLD]=rx[2];queue.meta[M_DETECT_MODE_REQUEST]=(rx[3]&4)?2:(rx[3]&1);queue.meta[M_PRODUCT_GATE_REQUEST]=(rx[3]>>4)&1;
-  queue.meta[M_WIDE_WEAK_REQUEST]=(rx[3]>>5)&1;queue.meta[M_ENABLE]=1;
+  queue.meta[M_WIDE_WEAK_REQUEST]=(rx[3]>>5)&1;queue.meta[M_RIDGE_REQUEST]=(rx[3]>>6)&1;queue.meta[M_WIDE_LINE_REQUEST]=(rx[3]>>7)&1;queue.meta[M_DIRECTIONAL_REQUEST]=(rx[3]>>8)&1;queue.meta[M_BOOST_REQUEST]=(rx[3]>>9)&1;queue.meta[M_ENABLE]=1;
   reply(1,0);
  }else if(rx[1]==2){
   /* Reject future/stale/wrong-boot requests before touching the ACK mailbox.
@@ -144,8 +158,20 @@ static err_t received(void *arg,struct tcp_pcb *pcb,struct pbuf *p,err_t err){
   for(n=0;n<40;n++)header[4+n]=queue.meta[24+n];
   /* V1.32 status-only overlay. Op4 keeps the original timing diagnostics;
    * frame descriptors and the 276-byte CRC-protected header are unchanged. */
+  header[4+37]=queue.meta[M_PL_MODEL];header[4+38]=TILE_MODEL_ID;
   for(n=0;n<6;n++)header[4+n]=queue.meta[M_HEALTH_BASE+n];
   for(n=0;n<14;n++)header[4+23+n]=queue.meta[M_RECOVERY_BASE+n];
+  reply(1,0);
+ }
+
+ else if(rx[1]==6){
+  uint32_t lo=Xil_In32(0x41210000u),hi=Xil_In32(0x41210008u);
+  header[4]=TILE_SINGLE_PROFILE_ID;header[5]=lo;header[6]=hi;
+  header[7]=queue.meta[M_PL_MODEL];header[8]=TILE_SINGLE_SIDE;
+  header[9]=TILE_SINGLE_FIRMWARE_VERSION;
+  header[10]=(lo==TILE_SINGLE_ROI_MIN && hi==TILE_SINGLE_ROI_MAX && queue.meta[M_PL_MODEL]==TILE_MODEL_ID);
+  /* GPIO echoes are request-register readback; frame config is checked again
+   * in every delivered evidence packet after PL frame-boundary application. */
   reply(1,0);
  }
  else if(rx[1]==4){for(n=0;n<40;n++)header[4+n]=queue.meta[24+n];reply(1,0);}

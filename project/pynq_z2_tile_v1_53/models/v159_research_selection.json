@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-19T11:13:30.222118+00:00",
+  "scope": "FULL-FIT color + color-specific hard-negative research model. Partial improvement: both old50 OOF recall/precision improve and old391 OOF alarms do not increase. Not promoted: aspirational weakest>=5% OOF guard not met. All old408 images and fresh128 normals are training inputs. Fresh normal hard-negative sampling reuses recorded teacher-fold0 mining; this is not validation or a new blind test. No reserved data read; no RTL/board claim.",
+  "trees": 256,
+  "depth": 3,
+  "features": 14,
+  "training_samples": 1218626,
+  "color_manifest_sha256": "d72224647e0c770e54fc833011537a89f73dd08934a43a976fd08115419856a2",
+  "mined_training_sha256": "33f60958be27482dbbb0804b6554ad9651ca1c09ceeab5c900a8f7c621674f00",
+  "profile": {
+    "high_q16": 32768,
+    "gate_q16": -393216,
+    "support": 5,
+    "min_region_trusted": 16,
+    "evidence_shift": 2
+  },
+  "promoted": false,
+  "source_sha256": "888deb323ae47b091698dd350ea7cdeebdd2fa9410c6d235a8ac06857cd1d2be",
+  "color_negative_sha256": "0ce66c6cb34be296e193ae10c116161a711d8a7dcd11bd6527d8d581273c5eb3",
+  "development_selection_sha256": "56149c8c146edaf5693f9a471e7eb8c2029cd11be550dbc3e8d38a0b86f1767f",
+  "model_sha256": "04a64355c233598a330a8b49ae566be9b323ebcd3a08dc55f3a41b8e08c2ec36",
+  "integer_proof": {
+    "integer_exact": true,
+    "vectors": 130000,
+    "max_logit_error": 0.00025603781496696953
+  }
+}

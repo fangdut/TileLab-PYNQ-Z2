@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 6,
   "default": "mvtec_hdmi_weak_v124",
   "recipes": [
     {
@@ -58,6 +58,61 @@
       "requires_weak_support": false,
       "description": "关闭弱点补全，保留原单阈值规则。用于同一输入对照；不能保证适用于其他材料。",
       "calibration_sha256": "9b7cd730fb12c86b5710ef58dc065fa769ece6ec1f28bc0e401f01fdf28fef3a"
+    },
+    {
+      "id": "mvtec_hdmi_directional_mean_v154_candidate",
+      "name": "本机 HDMI 瓷砖 · 方向均值增强（V1.54 候选）",
+      "threshold": 90,
+      "requires_weak_support": true,
+      "weak_passes": 4,
+      "wide_weak": true,
+      "ridge": true,
+      "description": "候选配方：保留原 90/45；短方向均值 40/20、长方向均值 48/24。历史开发集离线与 RTL 通过，尚未完成新实板验收。需 0x12c00 配套候选 BIT/ELF；手动改阈值会退出此固定配方。",
+      "calibration_sha256": "8d61120794f1035bf32fa5eaec018c363941527566e4db542306b7e082bbcf02",
+      "scope": "OFFLINE EXPOSED DEVELOPMENT AND RTL ONLY; candidate hardware not board-accepted; not universal material detection"
+    },
+    {
+      "id": "mvtec_hdmi_conservative_v155_candidate",
+      "name": "本机 HDMI 瓷砖 · 稳健宽线增强（V1.55 研究候选）",
+      "threshold": 90,
+      "requires_weak_support": true,
+      "weak_passes": 4,
+      "wide_weak": true,
+      "ridge": true,
+      "wide_line": true,
+      "directional_growth": false,
+      "description": "固定参数研究候选；需 0x12d00 配套 BIT/ELF，尚无新实板验收。增加短方向宽线响应，保持四级支持。",
+      "scope": "OFFLINE DEVELOPMENT/RESERVED SOURCE AND RTL CANDIDATE; not board accepted or factory validated",
+      "calibration_sha256": null
+    },
+    {
+      "id": "mvtec_hdmi_sensitive_v155_candidate",
+      "name": "本机 HDMI 瓷砖 · 高敏方向延伸（V1.55 研究候选）",
+      "threshold": 90,
+      "requires_weak_support": true,
+      "weak_passes": 8,
+      "wide_weak": true,
+      "ridge": true,
+      "wide_line": false,
+      "directional_growth": true,
+      "description": "固定参数研究候选；需 0x12d00 配套 BIT/ELF，尚无新实板验收。高敏模式提高召回，也增加纹理误报。",
+      "scope": "OFFLINE DEVELOPMENT/RESERVED SOURCE AND RTL CANDIDATE; not board accepted or factory validated",
+      "calibration_sha256": null
+    },
+    {
+      "id": "single_tile_v164_integer_boost",
+      "name": "单片固定视野 · V159 冻结检测器",
+      "threshold": 90,
+      "requires_weak_support": true,
+      "weak_passes": 4,
+      "low_gate": false,
+      "wide_weak": true,
+      "ridge": true,
+      "pixel_boost": true,
+      "calibration_sha256": "3be8f539af4077a5f7202b7ea79651e56cd437b6f5eff0349d288a1dde40c7ff",
+      "evidence": "Frozen color + hard-negative research candidate, partial OOF improvement. No board acceptance. New512 evaluation pending at freeze; retain raw pixel evidence.",
+      "model_id": 3496688539,
+      "description": "500×500 单片视野、固定参数。当前是工程候选；彩绘/多材质准确率待验证，无报警需复核。"
     }
   ]
 }

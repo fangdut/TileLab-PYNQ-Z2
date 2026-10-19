@@ -1,4 +1,4 @@
-/* V1.52: ARM transports PL decisions; optional wide weak support is set by
+/* V1.55 candidate: ARM transports PL decisions; directional mean and wide support are set by
  * one PL configuration bit at a physical product gap, never computed by ARM.
  * SG ring has 32 pre-posted descriptors and 48 individually owned DDR slots.
  * Queue, current best frame and DMA each hold independent ownership references.
@@ -30,14 +30,19 @@ static CaptureHealth capture_health;
 static TileDmaRecovery dma_recovery;
 void tile_capture_health(uint64_t now);
 static void config(unsigned t){
+ queue.meta[M_PL_MODEL]=Xil_In32(0x43c00100u);
  commit^=0x80000000u;threshold=t;
- Xil_Out32(0x41210000u,0x00500050u);Xil_Out32(0x41210008u,0x027f04afu);
+ Xil_Out32(0x41210000u,TILE_SINGLE_ROI_MIN);Xil_Out32(0x41210008u,TILE_SINGLE_ROI_MAX);
  queue.meta[M_DETECT_MODE_APPLIED]=(queue.meta[M_DETECT_MODE_REQUEST]<=2u)?queue.meta[M_DETECT_MODE_REQUEST]:0u;
  queue.meta[M_PRODUCT_GATE_APPLIED]=queue.meta[M_PRODUCT_GATE_REQUEST]==1u;
  queue.meta[M_WIDE_WEAK_APPLIED]=queue.meta[M_WIDE_WEAK_REQUEST]==1u && queue.meta[M_DETECT_MODE_APPLIED]==2u;
+ queue.meta[M_RIDGE_APPLIED]=queue.meta[M_RIDGE_REQUEST]==1u && queue.meta[M_WIDE_WEAK_APPLIED] && t==90u;
+ queue.meta[M_WIDE_LINE_APPLIED]=queue.meta[M_WIDE_LINE_REQUEST]==1u && !queue.meta[M_DIRECTIONAL_REQUEST] && queue.meta[M_RIDGE_APPLIED];
+ queue.meta[M_DIRECTIONAL_APPLIED]=queue.meta[M_DIRECTIONAL_REQUEST]==1u && !queue.meta[M_WIDE_LINE_REQUEST] && queue.meta[M_RIDGE_APPLIED];
+ queue.meta[M_BOOST_APPLIED]=queue.meta[M_BOOST_REQUEST]==1u && !queue.meta[M_WIDE_LINE_REQUEST] && !queue.meta[M_DIRECTIONAL_REQUEST] && queue.meta[M_RIDGE_APPLIED] && queue.meta[M_PL_MODEL]==TILE_MODEL_ID;
  queue.meta[M_CONFIG]=commit|0x00f30007u|(queue.meta[M_DETECT_MODE_APPLIED]==1u?0:0x01000000u)|
   (queue.meta[M_DETECT_MODE_APPLIED]==2u?0x02000000u:0u)|(queue.meta[M_PRODUCT_GATE_APPLIED]?0x04000000u:0u)|
-  (queue.meta[M_WIDE_WEAK_APPLIED]?0x08000000u:0u)|(t<<8);
+  (queue.meta[M_WIDE_WEAK_APPLIED]?0x08000000u:0u)|(queue.meta[M_RIDGE_APPLIED]?0x10000000u:0u)|(queue.meta[M_WIDE_LINE_APPLIED]?0x20000000u:0u)|(queue.meta[M_DIRECTIONAL_APPLIED]?0x40000000u:0u)|(queue.meta[M_BOOST_APPLIED]?0x60000000u:0u)|(t<<8);
  Xil_Out32(0x41200008u,queue.meta[M_CONFIG]);
 }
 static unsigned free_slot(void){
@@ -170,10 +175,12 @@ static void apply_recipe_if_idle(void){
  unsigned t=queue.meta[M_THRESHOLD];
  /* PL product identity is authoritative. Do not mix thresholds within a tile. */
  if(t>=1 && t<=255 && queue.meta[M_DETECT_MODE_REQUEST]<=2u && queue.meta[M_PRODUCT_GATE_REQUEST]<=1u &&
-  queue.meta[M_WIDE_WEAK_REQUEST]<=1u &&
+  queue.meta[M_WIDE_WEAK_REQUEST]<=1u && queue.meta[M_RIDGE_REQUEST]<=1u && queue.meta[M_WIDE_LINE_REQUEST]<=1u && queue.meta[M_DIRECTIONAL_REQUEST]<=1u &&
   (t!=threshold || queue.meta[M_DETECT_MODE_REQUEST]!=queue.meta[M_DETECT_MODE_APPLIED] ||
    queue.meta[M_PRODUCT_GATE_REQUEST]!=queue.meta[M_PRODUCT_GATE_APPLIED] ||
-   queue.meta[M_WIDE_WEAK_REQUEST]!=queue.meta[M_WIDE_WEAK_APPLIED]) &&
+   queue.meta[M_WIDE_WEAK_REQUEST]!=queue.meta[M_WIDE_WEAK_APPLIED] ||
+   queue.meta[M_RIDGE_REQUEST]!=queue.meta[M_RIDGE_APPLIED] ||
+   queue.meta[M_WIDE_LINE_REQUEST]!=queue.meta[M_WIDE_LINE_APPLIED] || queue.meta[M_DIRECTIONAL_REQUEST]!=queue.meta[M_DIRECTIONAL_APPLIED]) &&
   (queue.meta[42]==0 || (queue.meta[43]&4)))config(t);
 }
 int main(void){

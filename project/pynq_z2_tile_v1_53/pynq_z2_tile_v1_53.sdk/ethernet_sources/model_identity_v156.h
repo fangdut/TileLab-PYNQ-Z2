@@ -1,0 +1,4 @@
+#ifndef TILE_MODEL_IDENTITY_V156_H
+#define TILE_MODEL_IDENTITY_V156_H
+#define TILE_MODEL_ID 0xd06b3b9bu
+#endif

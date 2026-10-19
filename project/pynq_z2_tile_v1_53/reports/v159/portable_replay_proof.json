@@ -1,0 +1,27 @@
+{
+  "scope": "Independent portable 720p RGB frame path replay vs industrial-strip holdout path. Three diagnostic NORMAL cases: old alarm and largest old raw candidate counts. Same model; no new independent sample.",
+  "all_exact": true,
+  "rows": [
+    {
+      "id": "1fe6b97808baf036",
+      "mask_sha256": "d8b443032200e143b1c49820b6d78c32d519553a3f63a38f48e8bc31da084f0a",
+      "candidate_pixels": 0,
+      "regions_exact": true,
+      "mask_exact": true
+    },
+    {
+      "id": "820a7c191db38920",
+      "mask_sha256": "78a2112dc6565fc74da7dc2834cb3038e81bcf8bc45d4a9a0e495c440eff51c7",
+      "candidate_pixels": 284,
+      "regions_exact": true,
+      "mask_exact": true
+    },
+    {
+      "id": "2a2f225a6903956b",
+      "mask_sha256": "28fbcd2611cc460378949232268b82cdb52601e1ceacb2c734adc7e02d443f7d",
+      "candidate_pixels": 251,
+      "regions_exact": true,
+      "mask_exact": true
+    }
+  ]
+}

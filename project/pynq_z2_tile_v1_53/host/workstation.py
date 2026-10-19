@@ -334,11 +334,20 @@ class Bridge:
         if sum(areas)>d[3]:raise ValueError('Region areas exceed captured mask')
         if f['config_word']&(1<<25) and (not f['config_word']&(1<<24) or m[1]<0x11800):raise ValueError('Four-pass captured mode/version mismatch')
         if f['config_word']&(1<<27) and (not f['config_word']&(1<<25) or not f['config_word']&(1<<24) or m[1]<0x12b00):raise ValueError('Wide weak captured mode/version mismatch')
+        if f['config_word']&(1<<28) and (not f['config_word']&(1<<27) or not f['config_word']&(1<<25) or not f['config_word']&(1<<24) or m[1]<0x12c00):raise ValueError('Directional mean captured mode/version mismatch')
+        cfg=f['config_word'];support=(cfg>>29)&3
+        if support and (m[1]<(0x13100 if support==3 else 0x12d00) or (cfg&0x1b830000)!=0x1b830000 or (cfg>>8)&255!=90):raise ValueError('Fixed support captured mode/version mismatch')
         if f['config_word']&(1<<26) and m[1]<0x12500:raise ValueError('Low product gate captured mode/version mismatch')
         f.update(boxes=boxes,region_areas=areas,alarm=bool(n or d[9]&256),region_overflow=bool(d[9]&256),
           event_id=d[0],boot_id=d[34],firmware_version=m[1],**identity,captured_ms=d[36],queue_depth=m[6],
           event_total=m[7],events_dropped=m[8],board_captures=m[9],invalid_frames=m[10],capture_gaps=m[17],
           algorithm=('FPGA_DUALSCALE_VALLEY17_R16_HYST4_SUPPORT3_GRID32' if f['config_word']&(1<<27) else ('FPGA_VALLEY17_HYST4_SUPPORT3_GRID32' if f['config_word']&(1<<25) else 'FPGA_VALLEY17_HYST2_SUPPORT3_GRID32')) if f['config_word']&(1<<24) else 'FPGA_VALLEY17_GRID32_REGIONS8',transport='USB_JTAG_EVENT_QUEUE')
+        if f['config_word']&(1<<28):f['algorithm']='FPGA_MEAN7_MEAN15_VALLEY8_16_HYST4_SUPPORT3_GRID32'
+        if support:
+            f['algorithm']='FPGA_MEAN7_MEAN15_WIDELINE7_HYST4_GRID32' if support==1 else 'FPGA_MEAN7_MEAN15_DIRECTIONAL_HYST8_GRID32'
+            f['support_profile']='conservative' if support==1 else 'sensitive'
+            if support==3:f.update(algorithm='FPGA_INT_BOOST256_D3_Q16_FILTER5_GATE_LEGACY4_GRID32_EVIDENCE16_FRACTION1OF4',support_profile='integer_boost_region_evidence')
+        f.update(region_evidence_enabled=support==3,region_min_trusted=16 if support==3 else None,region_evidence_fraction='1/4' if support==3 else None)
         if m[1]>=0x00010400:
             f.update(product_id=d[37],product_flags=d[38],selection_score=d[39]&0x7fffffff,selection_full_tile=bool(d[39]&0x80000000),selection='FPGA_PRODUCT_BEST_FRAME' if d[38]&32 else 'LIVE_PREVIEW')
         if m[1]>=0x00010500:
@@ -370,21 +379,25 @@ class InspectionRequest:
     passes:int
     low_gate:bool
     wide_weak:bool=False
+    ridge:bool=False
+    wide_line:bool=False
+    directional_growth:bool=False
+    pixel_boost:bool=False
 
 
 class EthernetBridge:
     def __init__(self,address):
         from tcp_transport import EventTCP
-        self.transport=EventTCP(address);self.enhance=True;self.passes=2;self.low_gate=False;self.wide_weak=False;self.check_capture_health=True
+        self.transport=EventTCP(address);self.enhance=True;self.passes=2;self.low_gate=False;self.wide_weak=False;self.ridge=False;self.wide_line=False;self.directional_growth=False;self.pixel_boost=False;self.check_capture_health=True
         self._inspection_request=ContextVar('inspection_request',default=None)
     def request_parameters(self,threshold):
         request=self._inspection_request.get()
-        return request if request is not None else InspectionRequest(threshold,self.enhance,self.passes,self.low_gate,self.wide_weak)
+        return request if request is not None else InspectionRequest(threshold,self.enhance,self.passes,self.low_gate,self.wide_weak,getattr(self,'ridge',False),getattr(self,'wide_line',False),getattr(self,'directional_growth',False),getattr(self,'pixel_boost',False))
     def bind_request(self,operation,threshold):
         # Station calls this while holding its control lock, then invokes the
         # returned callback after releasing it. Freeze ALL fields together.
         if operation not in ('capture','configure'):raise ValueError('Unknown inspection request')
-        request=InspectionRequest(threshold,self.enhance,self.passes,self.low_gate,self.wide_weak)
+        request=InspectionRequest(threshold,self.enhance,self.passes,self.low_gate,self.wide_weak,getattr(self,'ridge',False),getattr(self,'wide_line',False),getattr(self,'directional_growth',False),getattr(self,'pixel_boost',False))
         callback=getattr(self,operation)
         def invoke():
             # A scoped value preserves legacy capture/configure(threshold)
@@ -398,6 +411,10 @@ class EthernetBridge:
         request=self.request_parameters(threshold)
         kwargs=dict(enhance=request.enhance,passes=request.passes,low_gate=request.low_gate)
         if request.wide_weak: kwargs['wide_weak']=True
+        if request.ridge: kwargs['ridge']=True
+        if request.wide_line: kwargs['wide_line']=True
+        if request.directional_growth: kwargs['directional_growth']=True
+        if request.pixel_boost: kwargs['pixel_boost']=True
         packet=self.call(self.transport.capture,request.threshold,**kwargs)
         f,img,mask=Bridge.decode_event(*packet)
         f.update(transport='ETHERNET_TCP',**self.transport.last_timing);return f,img,mask
@@ -410,6 +427,10 @@ class EthernetBridge:
         request=self.request_parameters(threshold)
         kwargs=dict(enhance=request.enhance,passes=request.passes,low_gate=request.low_gate)
         if request.wide_weak: kwargs['wide_weak']=True
+        if request.ridge: kwargs['ridge']=True
+        if request.wide_line: kwargs['wide_line']=True
+        if request.directional_growth: kwargs['directional_growth']=True
+        if request.pixel_boost: kwargs['pixel_boost']=True
         self.call(self.transport.configure,request.threshold,**kwargs)
     def close(self):self.transport.close()
 
@@ -792,14 +813,28 @@ class Station:
             elif op=='threshold':
                 n=body.get('value')
                 if type(n) is not int or not 1<=n<=255:raise ValueError('Threshold must be 1..255')
+                if isinstance(self.bridge,EthernetBridge):self.bridge.ridge=False;self.bridge.wide_line=False;self.bridge.directional_growth=False;self.bridge.pixel_boost=False
                 self.threshold=n;self.recipe_id='custom';self.add_log(f'阈值 {n} 已请求；在瓷砖间隙应用到 FPGA，当前瓷砖继续使用原参数')
             elif op=='recipe':
                 recipe=next((r for r in self.recipe_catalog if r['id']==body.get('value')),None)
                 if recipe is None:raise ValueError('Unknown material recipe')
-                if recipe.get('weak_passes',2)==4 and not isinstance(self.bridge,EthernetBridge):
+                if recipe.get('weak_passes',2) in (4,8) and not isinstance(self.bridge,EthernetBridge):
                     raise ValueError('四级弱裂纹配方需要以太网控制连接；JTAG 调试通道不发送该模式请求')
                 low_gate=recipe.get('low_gate',False)
                 wide_weak=recipe.get('wide_weak',False)
+                ridge=recipe.get('ridge',False)
+                wide_line=recipe.get('wide_line',False);directional_growth=recipe.get('directional_growth',False)
+                pixel_boost=recipe.get('pixel_boost',False)
+                if pixel_boost:
+                    version=(self.board_stats or {}).get('version')
+                    if not isinstance(self.bridge,EthernetBridge) or type(version) is not int or version<0x13100 or not (self.board_stats or {}).get('model_identity_matches') or (self.board_stats or {}).get('pl_model_id')!=recipe.get('model_id'):raise ValueError('V1.59 颜色与难负样本候选配方需要匹配的 FPGA 模型和 0x13100 固件；请先读取板端状态')
+                if wide_line or directional_growth:
+                    version=(self.board_stats or {}).get('version')
+                    if not isinstance(self.bridge,EthernetBridge) or type(version) is not int or version<0x12d00:raise ValueError('V1.55 候选配方需要 0x12d00 配套固件；请先读取当前板端状态')
+                if ridge:
+                    version=(self.board_stats or {}).get('version')
+                    if not isinstance(self.bridge,EthernetBridge) or type(version) is not int or version<0x12c00:
+                        raise ValueError('方向均值候选配方需要 0x12c00 候选固件；请先读取当前板端状态')
                 if wide_weak:
                     if not isinstance(self.bridge,EthernetBridge):raise ValueError('双尺度弱裂纹配方需要以太网控制连接')
                     version=(self.board_stats or {}).get('version')
@@ -811,7 +846,7 @@ class Station:
                     if type(version) is not int or version<0x12500:
                         raise ValueError('低亮度产品门禁需要 V1.37 或更新固件；请先连接并读取板端状态')
                 if isinstance(self.bridge,EthernetBridge):
-                    self.bridge.enhance=recipe.get('requires_weak_support',True);self.bridge.passes=recipe.get('weak_passes',2);self.bridge.low_gate=low_gate;self.bridge.wide_weak=wide_weak
+                    self.bridge.enhance=recipe.get('requires_weak_support',True);self.bridge.passes=recipe.get('weak_passes',2);self.bridge.low_gate=low_gate;self.bridge.wide_weak=wide_weak;self.bridge.ridge=ridge;self.bridge.wide_line=wide_line;self.bridge.directional_growth=directional_growth;self.bridge.pixel_boost=pixel_boost
                 self.threshold=recipe['threshold'];self.recipe_id=recipe['id'];self.add_log('材料参数已请求：'+recipe['name']+'；等待瓷砖间隙应用')
             elif op=='compression':
                 enabled=body.get('enabled')

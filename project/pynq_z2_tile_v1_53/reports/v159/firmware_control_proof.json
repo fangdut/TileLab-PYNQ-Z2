@@ -1,0 +1,15 @@
+{
+  "actual_c_source": true,
+  "legacy_predicate_checks": 7168,
+  "new_predicate_checks": 7168,
+  "config_checks": 96,
+  "all_exact": true,
+  "model_id": 3496688539,
+  "source_sha256": {
+    "main.c": "629d3afbfd17cce1f5f2cc401ae776078b7c2aaaac780125bef889a229326ff7",
+    "network.c": "3c390053e024dab0f31063a1d4998268cfc2fc635dd9e13923ea2530ff464cc2",
+    "event_queue.h": "a0b1f16fffd542089022af11df6dd686f842a1e446f5b91cd59ae0b2d56c5ea1",
+    "model_identity_v156.h": "9d0d8b8ab5e1aadc226daf6b95b05192575848fbbf25b64a32d9c3cf7dd9f14f"
+  },
+  "fixture_sha256": "f8538aade311d4dd53aa5bdcbf8ce1dbb1a6bc079bb7557248c1a1c1d8aa50f6"
+}

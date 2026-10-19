@@ -66,7 +66,12 @@ class PlayerReadControlTests(unittest.TestCase):
                 self.assertTrue(entered.wait(2))
                 writer=threading.Thread(target=lambda:published.append(s.action(dict(op='display',value='real_video'))));writer.start()
                 deadline=time.monotonic()+1
-                while 'real_video' not in (s.root/'host/display_command.txt').read_text():
+                while True:
+                    # Windows may briefly deny a new reader during atomic
+                    # replacement. Keep the original deadline and assertions.
+                    try:command=(s.root/'host/display_command.txt').read_text()
+                    except PermissionError:command=''
+                    if 'real_video' in command:break
                     self.assertLess(time.monotonic(),deadline);time.sleep(.002)
                 self.assertTrue(writer.is_alive());self.fixture.pause_http(s,server);self.assertIsNotNone(s.display_pending)
             finally:

@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-19T11:29:59.703529+00:00",
+  "scope": "First fixed fresh512 NORMAL image/group holdout evaluation of frozen V159 vs frozen V157. Same-source and gray images only, so this tests hard-negative/retrained model generalization, not RGB color robustness, crack recall, physical product independence or board performance. No retuning after disclosure.",
+  "profile_sha256": "3be8f539af4077a5f7202b7ea79651e56cd437b6f5eff0349d288a1dde40c7ff",
+  "data_manifest_sha256": "c52a606284a96e53f07c8e3ba4636d7a00ca05ea73a7b5d7bbd7936070770346",
+  "script_sha256": "7bcb0904c4b57134803262b01a23322e2489b0226cca8c01f0c8966588d99699",
+  "images": 512,
+  "model_id": 3496688539
+}

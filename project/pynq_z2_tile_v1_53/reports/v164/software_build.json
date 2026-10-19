@@ -1,0 +1,28 @@
+{
+  "profile_sha256": "76e820cda7368ddc0fda9427e13a153306b0eb18f2ef418f558b56fec4e9d883",
+  "scope": "Candidate software compilation, no programming or board acceptance",
+  "workspace": "D:\\Vivado\\TileLab_SingleTile_V164_Software01.sdk",
+  "source_sha256": {
+    "capture_health.h": "1dc35ccb19f9f1f3c13575932a91cee58f7cd668b8885551f457e8cf8cccfdd6",
+    "descriptor_crc.h": "cfed6012424022750085613297c35a76d5ba7cff6701ad4f4bb3f2e7e0e57f92",
+    "dma_recovery.h": "5b2237645e32e6a06fd84d51fd2d310d0289b7f3df2d7198f10b017576fa5bca",
+    "event_identity.h": "5a23d4feea5891b78bd5314cf2ddfbc359c98bf350feb123a06430b90c42de13",
+    "event_queue.h": "06e30eb42ff80af608cd14ff407f54fc200be0a05f15ec75f44529dbd61402a2",
+    "header_crc.h": "f3532e9fdb608f9a69de7b9a4e9a2e6d37d16715c4daf6d59f902591f3709789",
+    "lscript.ld": "dcbb3f14190f1d4b1ad6f5eac1af8cc93becaa54349def16512843f7057d30fb",
+    "main.c": "83a309d35232b2c28be6f492683a9edb060ff406112e0887851c19c8e8caa482",
+    "model_identity_v156.h": "9d0d8b8ab5e1aadc226daf6b95b05192575848fbbf25b64a32d9c3cf7dd9f14f",
+    "network.c": "157bb7543e578e4274906eb35d945f371ab0d773f21729e97c874d21ba0170e1",
+    "network.h": "98a0e5322a27d97e6046551d80713d6de2cba196cca88ac8d0054baed32d2394",
+    "packed_pixels.h": "b256d1dd82e9b9b5fb85f5f5357ab59ef8c16a94818cf8b363bfadd1960c3226",
+    "packed_stream.h": "0cbce96b1c68902e251fae8cdc0be5157c4bdfe0e8a345b9c64f010d3c593be7",
+    "rle_probe.h": "e89c08de63ed98e11f414ceda66fab9af2a31e228a27bd2e3a3f892acf1dc69b",
+    "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec",
+    "sg_main.c.source": "acf771c8d210b4a04d56d25c9131786346fe9347bcac2905a181abc7bdb2e5b8",
+    "single_tile_profile.h": "4756f2431c22443cc623cd72a17010169d3f6857018bf6cad647cdf27fe71804",
+    "word_rle.h": "73367696499ea2c03a8cb8e1da09e0a63efa2537106907719b300531149e7e5b"
+  },
+  "xsa_sha256": "096180b8a325e8a17ae31128fd086da957d2a486b3a077fcef80866b99726272",
+  "elf_sha256": "79e0384536fcabdbc4b474c8ed371a4fc3b8557370e058881a6ed0e467b7240b",
+  "compiled": true
+}

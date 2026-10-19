@@ -1,12 +1,14 @@
 set root [file normalize [file join [file dirname [info script]] ..]]
 cd $root
 open_project $root/pynq_z2_tile_v1_53.xpr
+add_files -norecurse [glob $root/rtl/*.v]
+update_compile_order -fileset sources_1
 # Vivado may leave a module-reference OOC checkpoint marked current after an
 # internal child RTL file changes. Compare source mtimes explicitly so a top-only
 # rebuild cannot silently reuse the stale custom video checkpoint.
 set custom_changed 0
 foreach {run sources} {
- system_bypass_0_synth_1 {axis_gray.v raster_delay.v sobel3x3.v gaussian3x3.v video_stats.v window3x3.v video_core.v directional_valley.v config_bridge.v candidate_stats.v brightness_stats.v raster_morph.v region_grid.v video_bypass.v}
+ system_bypass_0_synth_1 {axis_gray.v raster_delay.v sobel3x3.v gaussian3x3.v video_stats.v window3x3.v video_core.v directional_valley.v dual_scale_valley.v directional_mean_valley.v mean_dual_scale_valley.v wide_line_window_v155.v wide_line_dual_valley_v155.v raster_directional_v155.v config_bridge.v candidate_stats.v brightness_stats.v raster_morph.v region_grid.v video_bypass.v}
  system_regions_regs_0_synth_1 {region_axi.v}
  system_capture_0_synth_1 {frame_capture_sg.v product_tracker.v}
  system_status_0_synth_1 {status_cdc.v}
@@ -48,3 +50,5 @@ write_debug_probes -force $root/pynq_z2_tile_v1_53.sdk/system.ltx
 write_hw_platform -fixed -include_bit -force -file $root/pynq_z2_tile_v1_53.sdk/system.xsa
 file copy -force $root/pynq_z2_tile_v1_53.runs/impl_1/system_wrapper.bit $root/pynq_z2_tile_v1_53.sdk/system.bit
 close_project
+
+

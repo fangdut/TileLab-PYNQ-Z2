@@ -1,7 +1,7 @@
 // Read-only, single outstanding AXI-Lite peripheral. Writes return SLVERR.
 // 0x00 frame sequence, 0x04 status (count[3:0], overflow[8], invalid[31]),
 // 0x08..0x47 eight {ymin,xmin}/{ymax,xmax}, 0x48..0x67 eight areas.
-module region_axi(
+module region_axi #(parameter MODEL_ID=32'hd06b3b9b)(
  (* X_INTERFACE_PARAMETER="XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn" *)
  input wire s_axi_aclk,input wire s_axi_aresetn,
  input wire [831:0] snapshot,
@@ -24,6 +24,12 @@ module region_axi(
    if(s_axi_arvalid && s_axi_arready)begin
     s_axi_rvalid<=1;s_axi_rdata<=0;
     if(s_axi_araddr[11:2]<26)s_axi_rdata<=snapshot[s_axi_araddr[11:2]*32+:32];
+    else if(s_axi_araddr[11:2]==64)s_axi_rdata<=MODEL_ID;
+    else if(s_axi_araddr[11:2]==65)s_axi_rdata<=32'h00013100;
+    else if(s_axi_araddr[11:2]==66)s_axi_rdata<=32'd32768;
+    else if(s_axi_araddr[11:2]==67)s_axi_rdata<=-32'sd393216;
+    else if(s_axi_araddr[11:2]==68)s_axi_rdata<=32'd16;
+    else if(s_axi_araddr[11:2]==69)s_axi_rdata<=32'd2;
    end
   end
  end

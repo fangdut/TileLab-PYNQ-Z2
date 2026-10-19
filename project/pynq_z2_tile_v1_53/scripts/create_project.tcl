@@ -110,6 +110,7 @@ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 crc_gpio
 set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_ALL_INPUTS {1}] [get_bd_cells crc_gpio]
 apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master {/ps7/M_AXI_GP0} Clk_master {/ps7/FCLK_CLK0 (100 MHz)} Clk_slave {/ps7/FCLK_CLK0 (100 MHz)} Clk_xbar {/ps7/FCLK_CLK0 (100 MHz)}} [get_bd_intf_pins crc_gpio/S_AXI]
 net bypass/mask_crc_ref crc_gpio/gpio_io_i
+if {![info exists ::env(TILE_NO_ILA)]} {
 create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 video_ila
 # Vivado 2025.2 ILA bd.tcl init explicitly defaults to AXI monitoring. Force
 # Native before manual probes, or AXI propagation silently resizes/truncates them.
@@ -117,6 +118,7 @@ set_property CONFIG.C_MONITOR_TYPE {Native} [get_bd_cells video_ila]
 set_property -dict [list CONFIG.C_NUM_OF_PROBES {13} CONFIG.C_DATA_DEPTH {1024} CONFIG.C_PROBE0_WIDTH {32} CONFIG.C_PROBE1_WIDTH {32} CONFIG.C_PROBE2_WIDTH {16} CONFIG.C_PROBE3_WIDTH {16} CONFIG.C_PROBE4_WIDTH {1} CONFIG.C_PROBE5_WIDTH {1} CONFIG.C_PROBE6_WIDTH {1} CONFIG.C_PROBE7_WIDTH {24} CONFIG.C_PROBE8_WIDTH {3} CONFIG.C_PROBE9_WIDTH {1} CONFIG.C_PROBE10_WIDTH {16} CONFIG.C_PROBE11_WIDTH {16} CONFIG.C_PROBE12_WIDTH {32}] [get_bd_cells video_ila]
 net hdmi_rx/PixelClk video_ila/clk
 foreach {pin probe} {frame_count 0 frame_pixels 1 frame_lines 2 line_pixels 3 de_out 4 vs_out 5 format_ok 6 rgb_out 7 mode_active 8 window_valid 9 out_x 10 out_y 11 config_active 12} {net bypass/$pin video_ila/probe$probe}
+}
 assign_bd_address
 set_property offset 0x41200000 [get_bd_addr_segs ps7/Data/SEG_frame_gpio_Reg]
 set_property offset 0x41210000 [get_bd_addr_segs ps7/Data/SEG_roi_gpio_Reg]
@@ -130,9 +132,11 @@ set_property offset 0x41280000 [get_bd_addr_segs ps7/Data/SEG_crc_gpio_Reg]
 source $root/scripts/add_capture.tcl
 validate_bd_design
 if {[get_property CONFIG.C_EXT_RESET_HIGH [get_bd_cells capture_ready_reset]]!=1 || [get_property CONFIG.C_AUX_RESET_HIGH [get_bd_cells capture_ready_reset]]!=1} {error "Capture FIFO reset polarity incorrect"}
+if {![info exists ::env(TILE_NO_ILA)]} {
 if {[get_property CONFIG.C_MONITOR_TYPE [get_bd_cells video_ila]] ne "Native" || [get_property CONFIG.C_NUM_OF_PROBES [get_bd_cells video_ila]]!=13} {error "ILA is not a 13-probe Native monitor"}
 foreach {idx width} {0 32 1 32 2 16 3 16 4 1 5 1 6 1 7 24 8 3 9 1 10 16 11 16 12 32} {
  if {[get_property CONFIG.C_PROBE${idx}_WIDTH [get_bd_cells video_ila]]!=$width} {error "ILA probe$idx width incorrect"}
+}
 }
 save_bd_design
 generate_target all [get_files system.bd]
@@ -141,8 +145,8 @@ set_property top system_wrapper [current_fileset]
 update_compile_order -fileset sources_1
 write_bd_tcl -force $root/scripts/system_generated.tcl
 if {[info exists ::env(TILE_PREPARE_ONLY)]} {close_project;exit}
-# Two independent IP jobs fit this16GB machine; implementation stays one job.
-launch_runs synth_1 -jobs 2
+# Serialize IP synthesis to keep memory bounded and avoid shared startup races.
+launch_runs synth_1 -jobs 1
 wait_on_run synth_1
 if {[get_property PROGRESS [get_runs synth_1]] ne "100%"} {error "Synthesis failed"}
 launch_runs impl_1 -to_step write_bitstream -jobs 1
@@ -158,7 +162,7 @@ file mkdir $root/pynq_z2_tile_v1_53.sdk
 report_cdc -details -file $root/reports/cdc_details.rpt
 report_methodology -file $root/reports/methodology.rpt
 report_bus_skew -file $root/reports/bus_skew.rpt
-write_debug_probes -force $root/pynq_z2_tile_v1_53.sdk/system.ltx
+if {![info exists ::env(TILE_NO_ILA)]} {write_debug_probes -force $root/pynq_z2_tile_v1_53.sdk/system.ltx}
 write_hw_platform -fixed -include_bit -force -file $root/pynq_z2_tile_v1_53.sdk/system.xsa
 file copy -force $root/pynq_z2_tile_v1_53.runs/impl_1/system_wrapper.bit $root/pynq_z2_tile_v1_53.sdk/system.bit
 close_project
