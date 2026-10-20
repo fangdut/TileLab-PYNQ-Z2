@@ -37,3 +37,5 @@ C服务工具输出原文：“PASS: 99 actual-C assertions; fragmented upload, 
 上传失败工具输出：“Failed to connect to github.com port 443”。读取电脑既有系统代理后，仅在git命令中使用该代理重试，没有修改系统网络设置，推送成功并建立PR #4。
 
 文档检查发现内部README把当前入口加在历史说明末尾；将入口移到开头并重新生成源快照。Windows CRLF曾被git默认空白检查逐行报告，保留原始证据字节，使用cr-at-eol模式检查新增手写源文件，未为消除提示而改写已封存文件。
+
+2026-10-20，用户明确回复：“同意采用 MIT（推荐）”。随后将MIT许可正式用于原创TileLab代码与文档，保留第三方文件声明；同步更新许可证范围、许可状态、README、完整发布包及文件哈希。此次授权不改变实体准确率未验收的状态，也未改变算法、RTL、BIT、XSA或ELF。

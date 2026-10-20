@@ -27,6 +27,9 @@ def main():
     for name in ('hdmi_display.ps1','StimulusCommand.cs','ConveyorStimulus.cs'):shutil.copy2(a.player/'host'/name,demo/'host'/name)
     shutil.copytree(a.player/'data/reference_v167',demo/'data/reference_v167');shutil.copy2(a.player/'manifest.json',demo/'manifest.json');(demo/'host/display_command.txt').write_text('ref_000\n')
     shutil.copy2(R/'README_REFERENCE_V167.md',a.out/'README.md');shutil.copy2(R/'scripts/reference_v167/start.ps1',a.out/'start.ps1')
+    license_names=('LICENSE','LICENSE_SCOPE.md','THIRD_PARTY_NOTICES.md')
+    license_root=next(root for root in (R.parents[1],R.parent) if all((root/name).is_file() for name in license_names))
+    for name in license_names:shutil.copy2(license_root/name,a.out/name)
     records={}
     for f in a.out.rglob('*'):
         if not f.is_file():continue

@@ -1,8 +1,8 @@
 {
   "archive": "tilelab_reference_v167_r2.zip",
-  "sha256": "b48caeb2023fbd2989d9373c0662f7e87bc2e8d8c5f9bc6bb2e3851da3559aae",
-  "bytes": 63191541,
-  "files": 374,
+  "sha256": "a6d97a843e25fe602ba2b77b920dd47b60ea8b2e3c35c9d42140c53638f20c28",
+  "bytes": 63193776,
+  "files": 376,
   "clean_extraction_integrity_passed": true,
   "clean_extraction_unit_tests": 8,
   "physical_accuracy_qualified": false,
@@ -15,7 +15,10 @@
   },
   "clean_extraction_runtime_identical_files": 153,
   "release_source_binding_verified": true,
-  "license_authorization_pending": true,
+  "license_authorization_pending": false,
   "portable_original174_replay_passed": true,
-  "portable_original174_exact_results_match": true
+  "portable_original174_exact_results_match": true,
+  "license": "MIT",
+  "license_scope": "LICENSE_SCOPE.md",
+  "license_approved_on": "2026-10-20"
 }

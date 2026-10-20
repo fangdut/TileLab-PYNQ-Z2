@@ -1,8 +1,12 @@
 {
-  "applied_license": null,
-  "user_authorization_pending": true,
-  "proposal": "license_proposal.txt",
-  "guide_section": "Archived 2026 AMD guide 3.3.3.3",
+  "applied_license": "MIT",
+  "user_authorization_pending": false,
+  "authorization_date": "2026-10-20",
+  "authorization": "Explicit project owner approval in chat: 同意采用 MIT（推荐）",
+  "license_file": "LICENSE",
+  "scope_file": "LICENSE_SCOPE.md",
+  "paths_relative_to": "repository or release package root",
   "third_party_licenses_preserved": true,
-  "formal_submission_ready": false
+  "formal_submission_ready": false,
+  "physical_accuracy_qualified": false
 }
