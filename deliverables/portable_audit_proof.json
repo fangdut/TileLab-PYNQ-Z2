@@ -1,0 +1,32 @@
+{
+  "scope": "CLEAN_EXTRACTED_PACKAGE_SOFTWARE_AUDIT_NOT_BOARD_ACCURACY",
+  "cases": 174,
+  "all_inputs_and_detection_results_equal_recorded_original174": true,
+  "historical_photo_dependency_removed": true,
+  "groups": {
+    "localized_candidate": {
+      "n": 72,
+      "alarms": 71,
+      "rejected": 0,
+      "passed": 71,
+      "min_coverage": 0.0
+    },
+    "no_candidate": {
+      "n": 72,
+      "alarms": 0,
+      "rejected": 0,
+      "passed": 72,
+      "min_coverage": null
+    },
+    "not_clean": {
+      "n": 30,
+      "alarms": 0,
+      "rejected": 30,
+      "passed": 30,
+      "min_coverage": null
+    }
+  },
+  "summary_sha256": "520c59fc54edc34aac8d79befee7ecabe2a3cacf232bc7ffdb8d777636b87caa",
+  "script_sha256": "4dad4ae8f2f937f0335aadfc4c873a7ca63a1bad19f55997f2c108b224279e41",
+  "procedural_generator_sha256": "e7ea4a317cc6694b0ab157c5228300a52b87ab8a5a026d3a15766518e6e1a042"
+}

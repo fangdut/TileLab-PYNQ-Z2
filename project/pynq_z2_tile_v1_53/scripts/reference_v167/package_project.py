@@ -12,7 +12,7 @@ def main():
     shutil.copy2(R/'host/test_reference_v167.py',host/'test_reference_v167.py')
     for name in ('create_project.tcl','add_capture.tcl','ps7_preset.tcl','build_single_tile.tcl','program_single_tile_verified.tcl'):
         dest=project/'scripts'/name;dest.parent.mkdir(exist_ok=True);shutil.copy2(R/'scripts'/name,dest)
-    shutil.copytree(R/'scripts/reference_v167',project/'scripts/reference_v167',ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
+    shutil.copytree(R/'scripts/reference_v167',project/'scripts/reference_v167',ignore=shutil.ignore_patterns('__pycache__','*.pyc','check_migration.py'))
     sdk=project/'pynq_z2_tile_v1_53.sdk';sdk.mkdir();shutil.copytree(R/'pynq_z2_tile_v1_53.sdk/ethernet_sources',sdk/'ethernet_sources')
     for name in ('build_ethernet.py','reserve_boot_id.py'):shutil.copy2(R/'pynq_z2_tile_v1_53.sdk'/name,sdk/name)
     (project/'config').mkdir();shutil.copy2(R/'config/reference_v165.json',project/'config/reference_v165.json')

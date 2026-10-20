@@ -61,4 +61,6 @@ python scripts/reference_v167/prepare_video_build.py --hls D:/tilelab_build/hls0
 
 在`project/host`运行`python -m unittest test_reference_v167 -v`。C服务测试需要GCC：`python project/scripts/reference_v167/test_service.py --compiler gcc --out new_test_directory`。HLS构建包括C仿真与完整图RTL联合仿真，不能跳过失败后继续生成发布版。
 
+在发布包根目录重跑程序算法审计：`python project/scripts/reference_v167/audit_algorithm.py --set original174 --out audit_original01`，或使用`--set fresh108 --seed-offset 3000000`复现本报告的新增108例。两者只依赖包内程序生成数据，不需要旧照片目录；每次选择新的输出目录。它们明确使用软件差分替身，不算实板或真实准确率。旧`benchmark.py`等模块作为历史依赖保留，不是本版本独立运行入口；早期V166等价迁移脚本不纳入当前发布包。
+
 `PACKAGE_MANIFEST.json`列出发布文件哈希；部署清单另外绑定BIT、XSA、ELF、源代码和时序报告。技术报告逐项列明已通过及未通过内容。正式报名信息、赛事模板与实体准确率验收仍须按参赛队和赛事实际要求核对，工程脚本不代替这些手续。

@@ -4,12 +4,12 @@ import argparse,sys,json,hashlib,datetime
 import numpy as np
 from PIL import Image
 R=Path(__file__).resolve().parents[2];sys.path.insert(0,str(R/'tools/reference_tile'))
-import frame_v167 as new,reference_tile as base,benchmark,stress_v166
+import frame_v167 as new,reference_tile as base,stress_v166,procedural_cases
 import holdout
 def main():
     p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--set',choices=['original174','opened108','fresh108'],required=True);p.add_argument('--seed-offset',type=int,default=2000000);a=p.parse_args();a.out.mkdir(parents=True,exist_ok=False)
     declaration=dict(scope='FRESH_PROCEDURAL_EVALUATION_NOT_BOARD_NOT_REAL_PHYSICAL_ACCURACY' if a.set=='fresh108' else 'DEVELOPMENT_REPLAY_NOT_BLIND_NOT_BOARD_NOT_REAL_PHYSICAL_ACCURACY',set=a.set,implementation=new.implementation(),policy=new.policy(),created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),case_count=174 if a.set=='original174' else 108,seed_offset=a.seed_offset if a.set=='fresh108' else 0,generator_sha256=base.sha(Path(holdout.__file__)));(a.out/'declaration.json').write_text(json.dumps(declaration,indent=2)+'\n');rows=[]
-    cases=([dict(c,group=c['cohort']) for c in benchmark.make_cases() if c['style']!='mvtec']+list(stress_v166.cases())) if a.set=='original174' else list(holdout.cases(declaration['seed_offset']))
+    cases=([dict(c,group=c['cohort']) for c in procedural_cases.make_cases()]+list(stress_v166.cases())) if a.set=='original174' else list(holdout.cases(declaration['seed_offset']))
     for c in cases:
         r,pair,aligned,_=new.prepare(c['reference'],c['current']);mask=None
         if pair is not None:
