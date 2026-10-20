@@ -1,0 +1,12 @@
+{
+  "new_real_images_downloaded": 0,
+  "new_real_paired_samples": 0,
+  "existing_replay": "Original repository MVTec photos,17 crack and33 good, already used for development/training; original metadata/license remains DATA_PROVENANCE_V164.md",
+  "synthetic": "Procedural fixtures from fixtures.py; artificial line GT never counted as real cracks",
+  "searched_candidate": {
+    "url": "https://data.mendeley.com/datasets/47x6jdbr5j/1",
+    "license_as_published": "CC BY4.0",
+    "limitation_as_published": "1600 images from limited physical samples; independent tile IDs and good/crack pairing not established",
+    "public_api_metadata_attempt": "HTTP403; no files downloaded, not evaluated or included in accuracy counts"
+  }
+}

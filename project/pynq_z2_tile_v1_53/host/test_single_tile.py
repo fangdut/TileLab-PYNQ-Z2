@@ -1,8 +1,9 @@
 """The fixed fixture must fail closed across firmware changes and reconnects."""
 from pathlib import Path
-import copy,json,struct,tempfile,unittest,zlib
+import copy,io,json,struct,tempfile,unittest,zlib
 from unittest.mock import patch
 import numpy as np
+from PIL import Image
 from tcp_transport import EventTCP,BOOST_MODEL_ID
 from single_tile_profile import load,roi_words,validate_frame,validate_wire_contract
 from single_tile_station import SingleTileBridge,SingleTileStation
@@ -67,6 +68,19 @@ class SingleTileTests(unittest.TestCase):
             with self.assertRaises(ValueError):validate_frame(self.p,f,bad)
         for change in [dict(config_word=0x7bf35907),dict(firmware_version=0x13100),dict(boxes=[[389,110,889,609]])]:
             with self.assertRaises(ValueError):validate_frame(self.p,f|change,mask)
+    def test_real_bridge_png_mask_contract_and_outside_roi_rejection(self):
+        bridge=SingleTileBridge('127.0.0.1');mask=np.zeros((720,1280),np.uint8);mask[110,390]=255
+        frame=dict(firmware_version=0x13200,config_word=0x7bf35a07,boxes=[[390,110,390,110]],alarm=True)
+        try:
+            for outside in (False,True):
+                if outside:mask[109,390]=255
+                buffer=io.BytesIO();Image.fromarray(mask).save(buffer,format='PNG');encoded=buffer.getvalue()
+                with patch.object(bridge,'_ensure_peer'),patch('workstation.EthernetBridge.capture',return_value=(frame.copy(),b'original-png',encoded)):
+                    if outside:
+                        with self.assertRaises(ValueError):bridge.capture(90)
+                    else:
+                        f,image,result=bridge.capture(90);self.assertIs(result,encoded);self.assertEqual(f['inspection_roi'],[390,110,889,609])
+        finally:bridge.close()
     def test_fixed_station_has_no_legacy_recipe_or_threshold_controls(self):
         with tempfile.TemporaryDirectory() as tmp:
             import shutil

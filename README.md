@@ -1,8 +1,8 @@
-# TileLab 单片瓷砖：V164工程与V165参照原型
+# TileLab 单片瓷砖：V166参照改进与实板验证
 
-使用者已确认按花色做良品参照标定。最新研究在 `single-tile-reference-v165` 分支：[参照原型运行说明](project/pynq_z2_tile_v1_53/README_REFERENCE_V165.md)、[图文结果](project/pynq_z2_tile_v1_53/reports/v165/reference_report.html)。已新增离线参照算法与独立整数差分RTL；**尚未接入完整板端，当前下载产物仍为V164**。没有新分类模型训练，没有真实彩绘裂纹准确率验收。
+最新研究在 `single-tile-reference-v166` 分支：[V166运行与验收说明](project/pynq_z2_tile_v1_53/README_REFERENCE_V166.md)、[图文结果与实板证据](project/pynq_z2_tile_v1_53/reports/v166/reference_report.html)。按花色良品参照、固定视野与光照推进，改进了JPEG误报并保留弱线失败。实际板测包括V164检测器的50张HDMI回放和独立新窗口算术自检；**完整V166参照视频算法尚未集成，彩绘／多材质独立准确率尚未验收**。没有新分类模型训练。
 
-`single-tile-v164` 分支保留此前工程快照；以下V164验证与其报告属于该阶段的历史证据。当前研究状态以 `reports/v165/STATUS.json` 为准。
+`single-tile-v164`、`single-tile-reference-v165` 分支保留此前快照；以下V164验证与其报告属于该阶段的历史证据。当前研究状态以 `reports/v166/STATUS.json` 为准。原V164部署包保持原字节；脱离外接显示器依赖的HDMI通路另存在 `releases/v166_headless_transport`，不是V166参照检测算法。
 
 目标：先完成单片检测，再考虑多砖墙面与新模型训练。目标材料包含彩绘与多种材质。
 

@@ -1,0 +1,22 @@
+test_bundle_integrity_pattern_identity_and_recalibration (test_reference_tile.ReferenceTileTests.test_bundle_integrity_pattern_identity_and_recalibration) ... ok
+test_flat_surface_uses_fixture_boundary (test_reference_tile.ReferenceTileTests.test_flat_surface_uses_fixture_boundary) ... ok
+test_fractional_resampling_keeps_edges_without_discarding_line (test_reference_tile.ReferenceTileTests.test_fractional_resampling_keeps_edges_without_discarding_line) ... ok
+test_identical_print_is_not_a_defect (test_reference_tile.ReferenceTileTests.test_identical_print_is_not_a_defect) ... ok
+test_integer_rounding_signed_offsets_clipping_and_strict_threshold (test_reference_tile.ReferenceTileTests.test_integer_rounding_signed_offsets_clipping_and_strict_threshold) ... ok
+test_invalid_images_never_become_normal_decisions (test_reference_tile.ReferenceTileTests.test_invalid_images_never_become_normal_decisions) ... ok
+test_new_artificial_line_and_edge_pixels_are_inspected (test_reference_tile.ReferenceTileTests.test_new_artificial_line_and_edge_pixels_are_inspected) ... ok
+test_no_implicit_image_resizing (test_reference_tile.ReferenceTileTests.test_no_implicit_image_resizing) ... ok
+test_run_components_preserve_diagonal_connectivity (test_reference_tile.ReferenceTileTests.test_run_components_preserve_diagonal_connectivity) ... ok
+test_small_translation_and_global_cast_keep_normal_print (test_reference_tile.ReferenceTileTests.test_small_translation_and_global_cast_keep_normal_print) ... ok
+test_full_roi_edge_line_coverage (test_v166.V166Tests.test_full_roi_edge_line_coverage) ... ok
+test_isoluminant_thin_change_is_not_erased (test_v166.V166Tests.test_isoluminant_thin_change_is_not_erased) ... ok
+test_jpeg_pattern_edges_keep_normal_and_one_pixel_luma_line (test_v166.V166Tests.test_jpeg_pattern_edges_keep_normal_and_one_pixel_luma_line) ... ok
+test_new_bundles_are_integrity_bound (test_v166.V166Tests.test_new_bundles_are_integrity_bound) ... ok
+test_reciprocal_mean_is_exact_over_all_nine_pixel_sums (test_v166.V166Tests.test_reciprocal_mean_is_exact_over_all_nine_pixel_sums) ... ok
+test_rejects_are_in_denominator_and_fail_the_gate (test_v166.V166Tests.test_rejects_are_in_denominator_and_fail_the_gate) ... ok
+test_synthetic_empty_and_self_comparison_evidence_cannot_qualify (test_v166.V166Tests.test_synthetic_empty_and_self_comparison_evidence_cannot_qualify) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 13.804s
+
+OK

@@ -1,0 +1,28 @@
+{
+  "edge_half_scale": "No new normal alarms, but weak grain line remains missed",
+  "edge_quarter_scale": "Restores weak line but causes3 new normal alarms",
+  "directional_allowance_probe": "Restores all test lines but causes1 normal alarm; not adopted",
+  "timing_history": [
+    {
+      "run": "BIST01",
+      "setup_ns": -6.708,
+      "programmed": false
+    },
+    {
+      "run": "BIST02",
+      "setup_ns": -2.202,
+      "programmed": false
+    },
+    {
+      "run": "BIST03",
+      "status": "cancelled before completion; no board claim"
+    },
+    {
+      "run": "BIST04",
+      "setup_ns": 0.279,
+      "hold_ns": 0.014,
+      "programmed": true
+    }
+  ],
+  "invalid_initial_programming_record": "First V164 cold attempt programmed hardware but Tcl AXI map verification failed; old batch returned0 and wrote an invalid success record. It is not accepted as successful startup proof; the corrected tool now requires transcript and verified memory map."
+}

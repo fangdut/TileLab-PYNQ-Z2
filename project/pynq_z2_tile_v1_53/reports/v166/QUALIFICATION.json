@@ -1,0 +1,65 @@
+{
+  "version": "V1.66",
+  "gates": {
+    "positive_physical_tiles_at_least": 100,
+    "negative_physical_tiles_at_least": 400,
+    "image_recall_wilson95_lower_at_least": 0.95,
+    "image_fpr_wilson95_upper_at_most": 0.01,
+    "negative_reject_wilson95_upper_at_most": 0.01,
+    "negative_alarm_or_reject_wilson95_upper_at_most": 0.01,
+    "minimum_positive_pixel_coverage": 0.8
+  },
+  "evidence_errors": [
+    "Human source/label review is missing",
+    "No real independent samples supplied"
+  ],
+  "per_material": {
+    "pending_same_pattern_material": {
+      "negative": 0,
+      "positive": 0,
+      "negative_alarms": 0,
+      "negative_rejects": 0,
+      "localized_positive": 0,
+      "positive_miss_or_reject": 0,
+      "minimum_positive_pixel_coverage": 0.0,
+      "image_recall_wilson95": [
+        0.0,
+        1.0
+      ],
+      "image_fpr_wilson95": [
+        0.0,
+        1.0
+      ],
+      "negative_reject_wilson95": [
+        0.0,
+        1.0
+      ],
+      "negative_alarm_or_reject_wilson95": [
+        0.0,
+        1.0
+      ],
+      "gates": {
+        "positive_count": false,
+        "negative_count": false,
+        "recall": false,
+        "fpr": false,
+        "reject": false,
+        "operational_failure": false,
+        "crack_coverage": false
+      },
+      "passed": false
+    }
+  },
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "board_accepted": false,
+  "qualified": false,
+  "unconditional_blockers": [
+    "Reference algorithm and 3x3 window/DDR path are not integrated into the deployed FPGA; no physical board acceptance"
+  ],
+  "implementation": {
+    "reference_v166.py": "75f87881959309ecc52647113385f82b7a55a51b9b93e953a992801065f258fa",
+    "reference_tile.py": "095bed4fea35b82208321aa7cabc0adbde4d6e07c88fb0cd8abd9cff3a0fbef0"
+  },
+  "rows": []
+}

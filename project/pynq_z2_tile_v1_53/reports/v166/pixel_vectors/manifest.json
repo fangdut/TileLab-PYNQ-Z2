@@ -1,0 +1,17 @@
+{
+  "vectors": 8192,
+  "board_vectors": 2048,
+  "implementation": {
+    "reference_v166.py": "75f87881959309ecc52647113385f82b7a55a51b9b93e953a992801065f258fa",
+    "reference_tile.py": "095bed4fea35b82208321aa7cabc0adbde4d6e07c88fb0cd8abd9cff3a0fbef0"
+  },
+  "generator_sha256": "c284bf5b6eafbcb63bf0f29260837453cd8867d97ae8861af447fab0f76c7bb0",
+  "rtl_sha256": "da72074d5e126b036c6ce5312868b85f0d62c4b3f8b741825b903053f17836cd",
+  "testbench_sha256": "14a96bb95d5e07b63e1b99c3c0b2e600465cf34a01362fbf85511340b4c8a5c4",
+  "sha256": {
+    "board_expected.mem": "d779a7087e7edd4dbc9ced2d133a698eabee3298d42f00b4ac062df58b71b6ce",
+    "board_input.mem": "d4d926789b65a2bb1b5bfd53d24ec149914cf10d56a6c6209ba0189e1fac47ce",
+    "expected.mem": "4c9b48cd538bfc3680a0f88b10a599d9adf9577693b39d384f79e307ddce4eda",
+    "input.mem": "91481c9faad5245d5fd1cf5d14f7c85cacdfdc8003d3d38fa9fa1e973c8ece4c"
+  }
+}
