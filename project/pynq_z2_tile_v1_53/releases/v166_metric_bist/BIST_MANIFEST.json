@@ -1,0 +1,20 @@
+{
+  "scope": "ARITHMETIC_BIST_ONLY_NOT_APPLICATION_NOT_VIDEO_NOT_REFERENCE_DDR",
+  "files": {
+    "bist_wrapper.bit": "0f4b111eadb026b24a3607ce516de78be364277f447ef53877749e7ec6bbf78e",
+    "bus_skew.rpt": "1cef83056d46bb261ab7d1a54636761c0257e655f72967b853777ffeedc5da58",
+    "cdc.rpt": "e9ed9b9472d0364dc1b446a29969d5206f6d5995f10cf9de12191942bff8b97c",
+    "drc.rpt": "01f7afd435d2f26cdf7e071315df5700f0128c69b40ebcabc51889fca1e258e3",
+    "implementation_status.txt": "5755e5b198925a792eef48fac7ca51c8a36a52632968e828963a8b4e6cf676f5",
+    "methodology.rpt": "9b651ea49e01826df50fcc8520a0d02993a9df8edddfa1eb5ef3787603c50428",
+    "metric_bist.ltx": "c4562561bf62cddd992a7603e601cc33fc4452ec542f3714059dfea9e414b9e5",
+    "route_status.rpt": "776b073988d2e7d32561274ed3def0a4f8e87fcde3a4ea73261c5a325c201495",
+    "timing_summary.rpt": "af5ca2874455635742d8276072f40b023aa45f86b6320a78cc116d1d3984bbcd",
+    "utilization.rpt": "b9ef28c534ea7435204aeb1787261113b1de8a2fc619bfbdba2f1574b59f468b"
+  },
+  "rtl_sha256": "da72074d5e126b036c6ce5312868b85f0d62c4b3f8b741825b903053f17836cd",
+  "bist_sha256": "cc61d342dbb1e7639c8eacba959402f2f0a092bb68d0617dcc91d3c5e42c54ea",
+  "unique_windows": 2048,
+  "simulated_vectors": 8192,
+  "accuracy_qualified": false
+}

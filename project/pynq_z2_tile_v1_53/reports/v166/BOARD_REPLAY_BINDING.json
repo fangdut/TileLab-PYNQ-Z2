@@ -1,0 +1,11 @@
+{
+  "scope": "V164_ARITHMETIC_ONLY_HEADLESS_TRANSPORT_NOT_REFERENCE_MODE",
+  "source_sha256": {
+    "scripts/reference_v166/replay_board.py": "b27ef56395d3032f356bf555f82cc3b9b495d3e4ee9dcd5c25f00a3117693f49",
+    "host/single_tile_station.py": "540cc4e0dd331c73d7e2f38505615670481f413c70b84a07c12b6c01261c7262",
+    "tools/single_tile/detector.py": "89212d144335d6fe67f9ff0a5be2f57c9cdf4d065bbf84ea6ea681e45647afcd"
+  },
+  "archive_sha256": "2033297768bfe7f59a688cb26755549461fcbb1a732e417519c8c30cf9738716",
+  "capture_count": 50,
+  "independent_real_target_validation_count": 0
+}

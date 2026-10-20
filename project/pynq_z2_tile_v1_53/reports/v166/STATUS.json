@@ -1,0 +1,128 @@
+{
+  "version": "V1.66-reference-prototype",
+  "qualified": false,
+  "accuracy_qualified": false,
+  "new_classifier_training": false,
+  "reference_video_integrated": false,
+  "real_independent_same_pattern_good_crack_pairs": 0,
+  "supported_real_materials_qualified": [],
+  "software_scope": "Offline per-pattern good-reference prototype",
+  "synthetic_development": {
+    "ARTIFICIAL_LUMA_LINES": {
+      "cases": 36,
+      "alarms": 35,
+      "rejected": 0,
+      "no_candidate": 1,
+      "localized": 35,
+      "minimum_pixel_coverage": 0.0
+    },
+    "ISOLUMINANT_COLOR_CHANGE_LIMIT": {
+      "cases": 12,
+      "alarms": 12,
+      "rejected": 0,
+      "no_candidate": 0,
+      "localized": 12,
+      "minimum_pixel_coverage": 0.6984126984126984
+    },
+    "NORMAL_COMBINED_PERTURBATIONS": {
+      "cases": 36,
+      "alarms": 0,
+      "rejected": 0,
+      "no_candidate": 36,
+      "localized": 0,
+      "minimum_pixel_coverage": null
+    },
+    "PROCEDURAL_ARTIFICIAL_LINE": {
+      "cases": 24,
+      "alarms": 24,
+      "rejected": 0,
+      "no_candidate": 0,
+      "localized": 24,
+      "minimum_pixel_coverage": 1.0
+    },
+    "PROCEDURAL_NORMAL_CAPTURE_SIMULATION": {
+      "cases": 36,
+      "alarms": 0,
+      "rejected": 0,
+      "no_candidate": 36,
+      "localized": 0,
+      "minimum_pixel_coverage": null
+    },
+    "PROCEDURAL_REJECT_OR_REVIEW_STRESS": {
+      "cases": 30,
+      "alarms": 0,
+      "rejected": 30,
+      "no_candidate": 0,
+      "localized": 0,
+      "minimum_pixel_coverage": null
+    }
+  },
+  "synthetic_failures": [
+    "grain_line_5"
+  ],
+  "synthetic_coverage_guard_passed": false,
+  "v164_headless_transport_board_replay": {
+    "images": 50,
+    "mask_mismatch_pixels": 0,
+    "alarm_and_boxes_exact": true,
+    "existing_development_crack_photos": 17,
+    "existing_development_normal_photos": 33,
+    "crack_alarms": 17,
+    "normal_alarms": 0,
+    "all_packet_descriptor_pixel_crc_passed": true,
+    "independent_accuracy": false,
+    "input_fps_counter_estimate": 60.00057835934026,
+    "counter_measurement_seconds": 142.748624,
+    "median_transfer_ms": 78
+  },
+  "independent_metric_hardware": {
+    "unique_windows": 2048,
+    "repeated_runs": 3,
+    "window_mismatches": 0,
+    "clock_mhz": 100,
+    "simulation_vectors": 8192,
+    "setup_slack_ns": 0.279,
+    "hold_slack_ns": 0.014,
+    "drc_errors": 0,
+    "route_errors": 0,
+    "cdc_critical": 0,
+    "cdc_warning": 0,
+    "minimum_bus_skew_slack_ns": 8.932,
+    "lut": 1674,
+    "registers": 1970,
+    "bram_tiles": 28.5,
+    "dsp": 4,
+    "resource_scope": "Entire isolated BIST including ROM and VIO, not the metric core alone and not the full video project"
+  },
+  "current_board": {
+    "video_transport_restored": true,
+    "cold_initialization_verified": true,
+    "boot_id": 3545707308,
+    "detector": "V164 frozen classifier with headless HDMI HPD ECO",
+    "reference_mode": false,
+    "restore_smoke_images": 2,
+    "restore_mask_mismatch_pixels": 0
+  },
+  "acceptance_gates": {
+    "positive_physical_tiles_at_least": 100,
+    "negative_physical_tiles_at_least": 400,
+    "image_recall_wilson95_lower_at_least": 0.95,
+    "image_fpr_wilson95_upper_at_most": 0.01,
+    "negative_reject_wilson95_upper_at_most": 0.01,
+    "negative_alarm_or_reject_wilson95_upper_at_most": 0.01,
+    "minimum_positive_pixel_coverage": 0.8
+  },
+  "remaining_blockers": [
+    "One20-level-contrast1px compressed artificial grain line is missed",
+    "Minimum synthetic color-line GT coverage69.84% remains below80%",
+    "No independent real same-pattern good/crack dataset; no camera/tile/illumination optical validation",
+    "The full V166 reference DDR/window generation/registration/photometry/region pipeline is not integrated into the video bitstream"
+  ],
+  "evidence": {
+    "development": "MECHANISM_FINAL.json",
+    "board_replay": "BOARD_REPLAY.json",
+    "metric_hardware": "METRIC_BOARD_PROOF.json",
+    "qualification": "QUALIFICATION.json",
+    "restoration": "RESTORE_SMOKE.json"
+  }
+}

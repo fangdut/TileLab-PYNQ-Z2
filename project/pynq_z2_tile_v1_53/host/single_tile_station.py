@@ -2,7 +2,9 @@
 from pathlib import Path
 from http.server import ThreadingHTTPServer
 from urllib.parse import urlparse
-import argparse,json,webbrowser
+import argparse,io,json,webbrowser
+import numpy as np
+from PIL import Image
 import workstation
 from single_tile_profile import load,validate_wire_contract,validate_frame
 ROOT=Path(__file__).resolve().parents[1]
@@ -21,7 +23,13 @@ class SingleTileBridge(workstation.EthernetBridge):
         if self.transport.peer_version!=self.profile['firmware_version']:self.stats()
     def configure(self,threshold):self._request(threshold);self._ensure_peer();return super().configure(threshold)
     def capture(self,threshold):
-        self._request(threshold);self._ensure_peer();frame,image,mask=super().capture(threshold);validate_frame(self.profile,frame,mask);return frame,image,mask
+        self._request(threshold);self._ensure_peer();frame,image,mask=super().capture(threshold)
+        # EthernetBridge returns encoded PNG evidence, not a NumPy mask.
+        # Decode only for contract validation; preserve the original PNG bytes.
+        with Image.open(io.BytesIO(mask)) as bitmap:
+            if bitmap.format!='PNG' or bitmap.mode!='L':raise ValueError('Expected hardware grayscale PNG mask')
+            validate_frame(self.profile,frame,np.asarray(bitmap)>0)
+        return frame,image,mask
     def stats(self):
         stats=super().stats();_,d,m=self.call(self.transport.exchange,6,0);contract=validate_wire_contract(self.profile,d,m)
         if contract['boot_id']!=stats['boot_id']:raise ValueError('Board restarted during status read; retry status')
