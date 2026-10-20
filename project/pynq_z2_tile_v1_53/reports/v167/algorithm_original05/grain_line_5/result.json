@@ -1,0 +1,167 @@
+{
+  "id": "grain_line_5",
+  "kind": "localized_candidate",
+  "group": "ARTIFICIAL_LUMA_LINES",
+  "passed": false,
+  "coverage": 0.0,
+  "pixel_precision": null,
+  "gt_pixels": 441,
+  "predicted_pixels": 0,
+  "tp": 0,
+  "parameters": {
+    "contrast": 20,
+    "width": 1,
+    "bright": false,
+    "edge": false,
+    "capture": {
+      "jpeg": 95
+    }
+  },
+  "version": "V1.67-host-prepared-FPGA-frame",
+  "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "declared_roi_pixels": 250000,
+  "inspected_pixels": 250000,
+  "alarm": false,
+  "manual_review_required": true,
+  "reference_array_sha256": "0f4a2bf310ce82f29ee420e98b3a9bce00571474e9a99467f9f4459cd54b4ee4",
+  "current_array_sha256": "6cea6c71487f4f398473124fb3250c09758150caf48e0c306935cc97ef675dae",
+  "registration": {
+    "dx": 0.0,
+    "dy": 0.0,
+    "correlation": 0.999944413843016,
+    "peak_margin": 0.9924890227662846,
+    "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+    "boundary_axes": [
+      {
+        "shift": 0.0,
+        "correlation": 0.999944413843016,
+        "peak_margin": 0.9924890227662846,
+        "edges": [
+          {
+            "correlation": 0.9999479438469857,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9999408838390464,
+            "drift": 0.0
+          }
+        ]
+      },
+      {
+        "shift": 0.0,
+        "correlation": 0.9999543197122286,
+        "peak_margin": 1.006165417789422,
+        "edges": [
+          {
+            "correlation": 0.9999595419887197,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9999490974357375,
+            "drift": 0.0
+          }
+        ]
+      }
+    ],
+    "quadrant_drifts": [
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9924375414848328
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9950852394104004
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.995102047920227
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.993972897529602
+      }
+    ],
+    "pattern_correlation": 0.9932927489280701
+  },
+  "resampling_transfer": {
+    "x_weights": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "y_weights": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+  },
+  "new_saturation_fraction": 0.0,
+  "photometric": {
+    "gains": [
+      1.0520505587501356,
+      0.9544023176722508,
+      0.9046617595513494
+    ],
+    "offsets": [
+      -6.876532494304001,
+      5.480371163454691,
+      11.296880476691214
+    ],
+    "gain_q8": [
+      269,
+      244,
+      232
+    ],
+    "offset_integer": [
+      -7,
+      5,
+      11
+    ],
+    "fit_modes": [
+      "reference_stratified_affine",
+      "reference_stratified_affine",
+      "reference_stratified_affine"
+    ],
+    "populated_reference_levels": [
+      7,
+      6,
+      6
+    ]
+  },
+  "preparation_seconds": 0.37923640001099557,
+  "paired_sha256": "d29fa259ca1d7f5afe00a96beeaf5b455aba03753b21a1e39ab4bf869cd8fb5d",
+  "status": "COMPARED",
+  "hardware": {
+    "output_crc_verified": true,
+    "paired_sha256": "d29fa259ca1d7f5afe00a96beeaf5b455aba03753b21a1e39ab4bf869cd8fb5d",
+    "pl_id": 376440321,
+    "firmware": 91904,
+    "test_double": true
+  },
+  "residual": {
+    "median": 1.0,
+    "p90": 3.0,
+    "strong_fraction": 0.0
+  },
+  "completion": {
+    "initial_pixels": 0,
+    "completed_pixels": 0,
+    "can_create_new_image_alarm": false
+  },
+  "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+  "regions": [],
+  "candidate_pixels": 0
+}

@@ -1,0 +1,14 @@
+{
+  "version": "V1.67.2",
+  "engineering_pipeline_passed": true,
+  "physical_accuracy_qualified": false,
+  "physical_independent_specimens": 0,
+  "weak_single_pixel_misses_preserved": true,
+  "scope": "SINGLE_TILE_SAME_PATTERN_REFERENCE_FIXED_FIXTURE",
+  "partition": {
+    "alignment": "HOST",
+    "full_frame_score": "PL",
+    "components": "HOST"
+  },
+  "board_records_sha256": "511dd31c6b7e326139a394a04276bc33bd4fe1009713bc07c2a16abbd342dfa3"
+}

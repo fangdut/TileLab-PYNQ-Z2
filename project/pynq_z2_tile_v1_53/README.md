@@ -1,3 +1,7 @@
+# 当前版本：V1.67.2完整参照工程
+
+入口与重新构建请见[当前版本说明](README_REFERENCE_V167.md)，设计报告位于[reports/v167](reports/v167/design_report.pdf)。完整HDMI/DDR/PL差分链路已上板验证，配准和区域分析在电脑运行。实体瓷砖准确率尚未独立验收。以下保留历史版本说明。
+
 # TileLab V1.64：单片瓷砖工程候选
 
 **最新V166进展：** [参照差分改进与实板验证](README_REFERENCE_V166.md)、[当前状态](reports/v166/STATUS.json)、[图文报告](reports/v166/reference_report.html)。本页后续V164离线结果为历史快照；本轮已完成独立窗口算术实板自检及V164检测器的50张HDMI回放，并修复了无外接显示器时的热插拔与PNG取图校验问题。完整V166参照视频算法与目标材料独立准确率仍未验收。

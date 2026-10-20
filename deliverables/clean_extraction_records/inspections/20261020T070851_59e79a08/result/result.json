@@ -1,0 +1,111 @@
+{
+  "version": "V1.67-host-prepared-FPGA-frame",
+  "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "declared_roi_pixels": 250000,
+  "inspected_pixels": 0,
+  "alarm": null,
+  "manual_review_required": true,
+  "reference_array_sha256": "8285f1da5830027360e1f1e94a081aefd520e611029815226004fb92d5105a79",
+  "current_array_sha256": "260e1de4f27356e86d2a26def098ae4e42bded0c238d733a55f278fea777268b",
+  "registration": {
+    "dx": 6.0,
+    "dy": 0.0,
+    "correlation": 0.9999971989206733,
+    "peak_margin": 0.9940521519272186,
+    "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+    "boundary_axes": [
+      {
+        "shift": 6.0,
+        "correlation": 0.9999999908001933,
+        "peak_margin": 0.9943053289678772,
+        "edges": [
+          {
+            "correlation": 0.9999999853298368,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9999999962705499,
+            "drift": 0.0
+          }
+        ]
+      },
+      {
+        "shift": 0.0,
+        "correlation": 0.9999971989206733,
+        "peak_margin": 0.9940521519272186,
+        "edges": [
+          {
+            "correlation": 1.0000000066587942,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9999943911825525,
+            "drift": 0.0
+          }
+        ]
+      }
+    ],
+    "quadrant_drifts": []
+  },
+  "status": "REJECTED_INPUT",
+  "decision": "REVIEW_INPUT_OR_EXTENSIVE_SURFACE_CHANGE",
+  "reason": "translation_exceeds_fixture_tolerance",
+  "preparation_seconds": 0.16982270003063604,
+  "pattern": "floral",
+  "calibration_sha256": "f21e24d278876e705768cdefaa7d901bda467870c8002d76dbd24b33489e2389",
+  "capture": {
+    "frame_id": 51487,
+    "candidate_pixels": 0,
+    "boxes": [],
+    "alarm": false,
+    "config_word": 2079545863,
+    "status_word": 4,
+    "device_frames": 51486,
+    "transfer_ms": 109.27939997054636,
+    "width": 1280,
+    "height": 720,
+    "acquired_at": "2026-10-20T07:08:51.972818+00:00",
+    "transport": "ETHERNET_TCP",
+    "source": "HDMI",
+    "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+    "region_areas": [],
+    "region_overflow": false,
+    "event_id": 30,
+    "boot_id": 1159366197,
+    "firmware_version": 91904,
+    "event_reason": 3,
+    "recovery_generation": 0,
+    "captured_ms": 869888,
+    "queue_depth": 1,
+    "event_total": 0,
+    "events_dropped": 0,
+    "board_captures": 51487,
+    "invalid_frames": 0,
+    "capture_gaps": 0,
+    "support_profile": null,
+    "region_evidence_enabled": false,
+    "region_min_trusted": null,
+    "region_evidence_fraction": null,
+    "product_id": 3,
+    "product_flags": 17,
+    "selection_score": 12,
+    "selection_full_tile": true,
+    "selection": "LIVE_PREVIEW",
+    "selection_metric": "CENTER_DISTANCE_X2",
+    "selection_center_distance_x2": 12,
+    "selection_center_error_px": 6.0,
+    "pixel_crc_verified": true,
+    "header_crc_verified": true,
+    "descriptor_crc_verified": true,
+    "pixel_crc32": 1782056852,
+    "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+  }
+}

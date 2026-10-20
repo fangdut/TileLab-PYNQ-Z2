@@ -1,0 +1,3807 @@
+{
+  "scope": "ACTUAL_HDMI_REFERENCE_PIPELINE_PROCEDURAL_NOT_PHYSICAL_TILE_ACCURACY",
+  "passed": true,
+  "accuracy_qualified": false,
+  "preparation_partition": "HOST",
+  "metric_partition": "PL",
+  "components_partition": "HOST",
+  "implementation_sha256": {
+    "frame_v167.py": "09d2a14dbea0c974cff57432cb1c8d460ed5f92702a217b14e149190956e454f",
+    "registration_v167.py": "b9b4192333a3c8ce898da7f64d2d3fda88a2e08ccef923748de33b128a503c41",
+    "photometric_v167.py": "20f77076521b5ca50ed25a925791f9f6d84c628b7880c2ec1c317b423bbbf4fa",
+    "reference_v166.py": "75f87881959309ecc52647113385f82b7a55a51b9b93e953a992801065f258fa",
+    "reference_tile.py": "095bed4fea35b82208321aa7cabc0adbde4d6e07c88fb0cd8abd9cff3a0fbef0"
+  },
+  "programming": {
+    "programmed": true,
+    "boot_id": 1488262539,
+    "address": "192.168.33.10",
+    "deployment_sha256": "6f99630dd4c02e2688f2a66615bd002f60aa0520a1f5a230b20f2a0aaaa9a7dc",
+    "startup_checks": true,
+    "video_verified": false,
+    "score_verified": false
+  },
+  "programming_record_sha256": "2f600ea59fb1cf925978861c213f0645cc15335bca9a9fdc5ecfc50187dce96d",
+  "replay_script_sha256": "b2e4abccde9a488f72a15cc13bba89f04d7d9f2c737fefbf0d5e5ae8a9eb32b7",
+  "rows": [
+    {
+      "source": {
+        "source": "ref_000",
+        "style": "floral",
+        "kind": "reference",
+        "image_sha256": "87cd9664cf3ed13a3ac18f6d74b36b3d1aa061fc64d6d26efdafff54fb27d70b",
+        "reference_source": "ref_000",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.5076401999685913,
+      "result": {
+        "status": "CALIBRATED",
+        "pattern": "floral",
+        "reference": {
+          "bundle": "calibrations/floral/20261020T062712_f765817c",
+          "bundle_sha256": "c26d85e88c59864f1ffe18c29d2832d0498c4878a3fcf8160fe6f7c8fe043811",
+          "capture": "captures/20261020T062712_f765817c",
+          "capture_identity": {
+            "frame_id": 1960,
+            "candidate_pixels": 0,
+            "boxes": [],
+            "alarm": false,
+            "config_word": 2079545863,
+            "status_word": 4,
+            "device_frames": 1959,
+            "transfer_ms": 1172.1894000074826,
+            "width": 1280,
+            "height": 720,
+            "acquired_at": "2026-10-20T06:27:14.148566+00:00",
+            "transport": "ETHERNET_TCP",
+            "source": "HDMI",
+            "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+            "region_areas": [],
+            "region_overflow": false,
+            "event_id": 1,
+            "boot_id": 1488262539,
+            "firmware_version": 91904,
+            "event_reason": 3,
+            "recovery_generation": 0,
+            "captured_ms": 44946,
+            "queue_depth": 1,
+            "event_total": 0,
+            "events_dropped": 0,
+            "board_captures": 1960,
+            "invalid_frames": 0,
+            "capture_gaps": 0,
+            "support_profile": null,
+            "region_evidence_enabled": false,
+            "region_min_trusted": null,
+            "region_evidence_fraction": null,
+            "product_id": 2,
+            "product_flags": 17,
+            "selection_score": 0,
+            "selection_full_tile": true,
+            "selection": "LIVE_PREVIEW",
+            "selection_metric": "CENTER_DISTANCE_X2",
+            "selection_center_distance_x2": 0,
+            "selection_center_error_px": 0.0,
+            "pixel_crc_verified": true,
+            "header_crc_verified": true,
+            "descriptor_crc_verified": true,
+            "pixel_crc32": 3484430562,
+            "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+          }
+        },
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\captures\\20261020T062712_f765817c\\input.png"
+      }
+    },
+    {
+      "source": {
+        "source": "ref_001",
+        "style": "floral",
+        "kind": "good",
+        "image_sha256": "b6ca0910a63f404a49c96335bc745a8b23d15641458bae9439bad2946efb71ad",
+        "reference_source": "ref_000",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.337292400014121,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": false,
+        "manual_review_required": true,
+        "reference_array_sha256": "8285f1da5830027360e1f1e94a081aefd520e611029815226004fb92d5105a79",
+        "current_array_sha256": "32096dc78b25f3d88d88bea677a85cae6635666787a57eea5cf6409d32f73f18",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999966753565727,
+          "peak_margin": 0.9915168549304618,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999966753565727,
+              "peak_margin": 0.9965929775997261,
+              "edges": [
+                {
+                  "correlation": 0.9999988314081518,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999945193049935,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999992852512967,
+              "peak_margin": 0.9915168549304618,
+              "edges": [
+                {
+                  "correlation": 0.9999992311979823,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999993393046112,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9994199872016907
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9994213581085205
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9993976950645447
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.999396562576294
+            }
+          ],
+          "pattern_correlation": 0.9993757009506226
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            256,
+            256
+          ],
+          "offset_integer": [
+            0,
+            0,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            4,
+            5,
+            4
+          ]
+        },
+        "preparation_seconds": 0.2018209000234492,
+        "paired_sha256": "290e46fc5384932d3ded2913612f70d456daaee5b5787b1298429d8d6a2a0d8c",
+        "status": "COMPARED",
+        "pattern": "floral",
+        "calibration_sha256": "c26d85e88c59864f1ffe18c29d2832d0498c4878a3fcf8160fe6f7c8fe043811",
+        "capture": {
+          "frame_id": 2089,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 2088,
+          "transfer_ms": 106.74689995357767,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:15.237536+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 2,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 47096,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 2089,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 707283163,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 791787276,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 712930143,
+          "output_crc32": 3837403327,
+          "output_crc_verified": true,
+          "paired_sha256": "290e46fc5384932d3ded2913612f70d456daaee5b5787b1298429d8d6a2a0d8c",
+          "score_sha256": "12aed69e21ef3da6ccfdb2893290e91f407e845e291cb511856389edf9f42f83",
+          "engine_seconds": 0.012190036923076924,
+          "request_seconds": 0.8269535999861546,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.0
+        },
+        "completion": {
+          "initial_pixels": 0,
+          "completed_pixels": 0,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+        "regions": [],
+        "candidate_pixels": 0,
+        "record": "inspections/20261020T062715_b696b213",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062715_b696b213\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_002",
+        "style": "floral",
+        "kind": "line",
+        "image_sha256": "1c43b67a8b9589264dd7f380cc1285e2c90f004ec0d11ed623bae2abf03fb200",
+        "reference_source": "ref_000",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3768342999974266,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": true,
+        "manual_review_required": true,
+        "reference_array_sha256": "8285f1da5830027360e1f1e94a081aefd520e611029815226004fb92d5105a79",
+        "current_array_sha256": "c817a6bd74974ddf908a69acd8d6ebc6a53f0918cda301f864d7540b56e4b3e3",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999966753565727,
+          "peak_margin": 0.9915168549304618,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999966753565727,
+              "peak_margin": 0.9965929775997261,
+              "edges": [
+                {
+                  "correlation": 0.9999988314081518,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999945193049935,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999992852512967,
+              "peak_margin": 0.9915168549304618,
+              "edges": [
+                {
+                  "correlation": 0.9999992311979823,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999993393046112,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.965251624584198
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9994213581085205
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9993976950645447
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9862527251243591
+            }
+          ],
+          "pattern_correlation": 0.9868041276931763
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            0.9731725187397849,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            3.498844614777653,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            249,
+            256
+          ],
+          "offset_integer": [
+            0,
+            3,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            4,
+            5,
+            4
+          ]
+        },
+        "preparation_seconds": 0.19501400005538017,
+        "paired_sha256": "50a288a6bf445c72373daaa4a5263024fd913009cfd2c363e22ca790e6f3e38a",
+        "status": "COMPARED",
+        "pattern": "floral",
+        "calibration_sha256": "c26d85e88c59864f1ffe18c29d2832d0498c4878a3fcf8160fe6f7c8fe043811",
+        "capture": {
+          "frame_id": 2228,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 2227,
+          "transfer_ms": 120.11840002378449,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:17.553898+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 3,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 49412,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 2228,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 4128968173,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 3553692462,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 640058269,
+          "output_crc32": 1563785800,
+          "output_crc_verified": true,
+          "paired_sha256": "50a288a6bf445c72373daaa4a5263024fd913009cfd2c363e22ca790e6f3e38a",
+          "score_sha256": "15b559ea7fa1e16c5d5f7e9a39bc8eb52f4eac6bae63da206a67b02004683111",
+          "engine_seconds": 0.012221923076923076,
+          "request_seconds": 0.8473629000363871,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.005632
+        },
+        "completion": {
+          "initial_pixels": 1845,
+          "completed_pixels": 1922,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "REFERENCE_CHANGE_CANDIDATE",
+        "regions": [
+          {
+            "box": [
+              435,
+              170,
+              856,
+              531
+            ],
+            "pixels": 1922,
+            "seeds": 1845,
+            "kind": "thin_surface_change"
+          }
+        ],
+        "candidate_pixels": 1922,
+        "record": "inspections/20261020T062717_c8be97e0",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062717_c8be97e0\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_003",
+        "style": "floral",
+        "kind": "invalid_pose",
+        "image_sha256": "87e8748e4af1396905402d8357d96137a35d623096703c11e82162433d4fe8d0",
+        "reference_source": "ref_000",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.2869117999798618,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": false,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 0,
+        "alarm": null,
+        "manual_review_required": true,
+        "reference_array_sha256": "8285f1da5830027360e1f1e94a081aefd520e611029815226004fb92d5105a79",
+        "current_array_sha256": "260e1de4f27356e86d2a26def098ae4e42bded0c238d733a55f278fea777268b",
+        "registration": {
+          "dx": 6.0,
+          "dy": 0.0,
+          "correlation": 0.9999971989206733,
+          "peak_margin": 0.9940521519272186,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 6.0,
+              "correlation": 0.9999999908001933,
+              "peak_margin": 0.9943053289678772,
+              "edges": [
+                {
+                  "correlation": 0.9999999853298368,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999999962705499,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": 0.0,
+              "correlation": 0.9999971989206733,
+              "peak_margin": 0.9940521519272186,
+              "edges": [
+                {
+                  "correlation": 1.0000000066587942,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999943911825525,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": []
+        },
+        "status": "REJECTED_INPUT",
+        "decision": "REVIEW_INPUT_OR_EXTENSIVE_SURFACE_CHANGE",
+        "reason": "translation_exceeds_fixture_tolerance",
+        "preparation_seconds": 0.07124080002540722,
+        "pattern": "floral",
+        "calibration_sha256": "c26d85e88c59864f1ffe18c29d2832d0498c4878a3fcf8160fe6f7c8fe043811",
+        "capture": {
+          "frame_id": 2360,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 2359,
+          "transfer_ms": 123.30490001477301,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:19.754453+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 4,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 51612,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 2360,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 12,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 12,
+          "selection_center_error_px": 6.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 1782056852,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "record": "inspections/20261020T062719_d4c44dde",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062719_d4c44dde\\capture\\input.png"
+      },
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_004",
+        "style": "geometry",
+        "kind": "reference",
+        "image_sha256": "783fd0e861546273c805e12db55867dcfa1ca7490141cab9110524cfc3fb618b",
+        "reference_source": "ref_004",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.43099080002866685,
+      "result": {
+        "status": "CALIBRATED",
+        "pattern": "geometry",
+        "reference": {
+          "bundle": "calibrations/geometry/20261020T062720_b6f91d08",
+          "bundle_sha256": "9b71dac3f0d8feb443915a0e491928b5ccc2b441f9f52375f1c649785f48dd60",
+          "capture": "captures/20261020T062720_b6f91d08",
+          "capture_identity": {
+            "frame_id": 2422,
+            "candidate_pixels": 0,
+            "boxes": [],
+            "alarm": false,
+            "config_word": 2079545863,
+            "status_word": 4,
+            "device_frames": 2421,
+            "transfer_ms": 129.64349996764213,
+            "width": 1280,
+            "height": 720,
+            "acquired_at": "2026-10-20T06:27:20.788051+00:00",
+            "transport": "ETHERNET_TCP",
+            "source": "HDMI",
+            "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+            "region_areas": [],
+            "region_overflow": false,
+            "event_id": 5,
+            "boot_id": 1488262539,
+            "firmware_version": 91904,
+            "event_reason": 3,
+            "recovery_generation": 0,
+            "captured_ms": 52646,
+            "queue_depth": 1,
+            "event_total": 0,
+            "events_dropped": 0,
+            "board_captures": 2422,
+            "invalid_frames": 0,
+            "capture_gaps": 0,
+            "support_profile": null,
+            "region_evidence_enabled": false,
+            "region_min_trusted": null,
+            "region_evidence_fraction": null,
+            "product_id": 2,
+            "product_flags": 17,
+            "selection_score": 0,
+            "selection_full_tile": true,
+            "selection": "LIVE_PREVIEW",
+            "selection_metric": "CENTER_DISTANCE_X2",
+            "selection_center_distance_x2": 0,
+            "selection_center_error_px": 0.0,
+            "pixel_crc_verified": true,
+            "header_crc_verified": true,
+            "descriptor_crc_verified": true,
+            "pixel_crc32": 40852322,
+            "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+          }
+        },
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\captures\\20261020T062720_b6f91d08\\input.png"
+      }
+    },
+    {
+      "source": {
+        "source": "ref_005",
+        "style": "geometry",
+        "kind": "good",
+        "image_sha256": "6874df93d1c41fff6fa65c8ca9969d0ed8777974852486b1fd75e692cf2d3c36",
+        "reference_source": "ref_004",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3332600999856368,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": false,
+        "manual_review_required": true,
+        "reference_array_sha256": "a5fbcb7048f522b5d5ae45dedb44dc773e5c5254f229983b304cd3b5af5b8df0",
+        "current_array_sha256": "5ef684f04381b58a8ef45364dd9353c4d66c37d7717e057dda823a64d4fad2a7",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.999997798708891,
+          "peak_margin": 0.9955408066449525,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.999997798708891,
+              "peak_margin": 0.9955408066449525,
+              "edges": [
+                {
+                  "correlation": 0.9999986759938502,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999969214239318,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999990497087975,
+              "peak_margin": 1.0017724065073117,
+              "edges": [
+                {
+                  "correlation": 0.9999991702378341,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999989291797609,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9992480874061584
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9992995262145996
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9991573095321655
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9992029666900635
+            }
+          ],
+          "pattern_correlation": 0.9992262721061707
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            256,
+            256
+          ],
+          "offset_integer": [
+            0,
+            0,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            4,
+            5,
+            5
+          ]
+        },
+        "preparation_seconds": 0.19065190001856536,
+        "paired_sha256": "d2148fd0cac310f004a6fea9ba06092006ce2c5cd706a585a2d80694806fc3dc",
+        "status": "COMPARED",
+        "pattern": "geometry",
+        "calibration_sha256": "9b71dac3f0d8feb443915a0e491928b5ccc2b441f9f52375f1c649785f48dd60",
+        "capture": {
+          "frame_id": 2486,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 2485,
+          "transfer_ms": 94.10829999251291,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:21.854068+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 6,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 53712,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 2486,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3551693872,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 1024899836,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 1095673279,
+          "output_crc32": 1098369620,
+          "output_crc_verified": true,
+          "paired_sha256": "d2148fd0cac310f004a6fea9ba06092006ce2c5cd706a585a2d80694806fc3dc",
+          "score_sha256": "9dac732cc4fa6213ecdaf4f091f0ed1e0fff3419f0a15e20cedc0cc0dd85f038",
+          "engine_seconds": 0.01219219076923077,
+          "request_seconds": 0.8533630999736488,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.0
+        },
+        "completion": {
+          "initial_pixels": 0,
+          "completed_pixels": 0,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+        "regions": [],
+        "candidate_pixels": 0,
+        "record": "inspections/20261020T062721_f2e54b95",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062721_f2e54b95\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_006",
+        "style": "geometry",
+        "kind": "line",
+        "image_sha256": "e82b6c046d13a889b58d44fb2d51ed64a434704d3396593d80b0eeddbf6da242",
+        "reference_source": "ref_004",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.348701999988407,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": true,
+        "manual_review_required": true,
+        "reference_array_sha256": "a5fbcb7048f522b5d5ae45dedb44dc773e5c5254f229983b304cd3b5af5b8df0",
+        "current_array_sha256": "f8e635e2e2d705b7263a595835787af6410777d49bd863d8ba504d84f0c1027a",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.999997798708891,
+          "peak_margin": 0.9955408066449525,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.999997798708891,
+              "peak_margin": 0.9955408066449525,
+              "edges": [
+                {
+                  "correlation": 0.9999986759938502,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999969214239318,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999990497087975,
+              "peak_margin": 1.0017724065073117,
+              "edges": [
+                {
+                  "correlation": 0.9999991702378341,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999989291797609,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9469829797744751
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9991053938865662
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9919155836105347
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9592136740684509
+            }
+          ],
+          "pattern_correlation": 0.9759164452552795
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            256,
+            256
+          ],
+          "offset_integer": [
+            0,
+            0,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            4,
+            5,
+            5
+          ]
+        },
+        "preparation_seconds": 0.19061709998641163,
+        "paired_sha256": "16a46bac50f1d396822c47c626dcd2ad3272cceab3605a21e3808345d5950ee1",
+        "status": "COMPARED",
+        "pattern": "geometry",
+        "calibration_sha256": "9b71dac3f0d8feb443915a0e491928b5ccc2b441f9f52375f1c649785f48dd60",
+        "capture": {
+          "frame_id": 2624,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 2623,
+          "transfer_ms": 105.40389997186139,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:24.152367+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 7,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 56012,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 2624,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3592929402,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 1436548049,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 459373185,
+          "output_crc32": 211708236,
+          "output_crc_verified": true,
+          "paired_sha256": "16a46bac50f1d396822c47c626dcd2ad3272cceab3605a21e3808345d5950ee1",
+          "score_sha256": "b4320232efe6c7f537aaf143cd415335281c7a63ce90b68d3c2b46efb1da1a92",
+          "engine_seconds": 0.01219108,
+          "request_seconds": 0.8230057000182569,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.005288
+        },
+        "completion": {
+          "initial_pixels": 1803,
+          "completed_pixels": 1917,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "REFERENCE_CHANGE_CANDIDATE",
+        "regions": [
+          {
+            "box": [
+              435,
+              169,
+              855,
+              531
+            ],
+            "pixels": 1917,
+            "seeds": 1803,
+            "kind": "thin_surface_change"
+          }
+        ],
+        "candidate_pixels": 1917,
+        "record": "inspections/20261020T062724_24d94123",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062724_24d94123\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_007",
+        "style": "geometry",
+        "kind": "invalid_pose",
+        "image_sha256": "6fe82ca8eaac8b0b95861ed8c19abb880c2e46652ed1091b0f7a07129c6619b3",
+        "reference_source": "ref_004",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.23716260003857315,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": false,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 0,
+        "alarm": null,
+        "manual_review_required": true,
+        "reference_array_sha256": "a5fbcb7048f522b5d5ae45dedb44dc773e5c5254f229983b304cd3b5af5b8df0",
+        "current_array_sha256": "82859e0bf9e5ef003b52d1ba27c7ee2d616dfda8924018e28774dd56365f8542",
+        "registration": {
+          "dx": 6.0,
+          "dy": 0.0,
+          "correlation": 0.9999897543510994,
+          "peak_margin": 0.9952277511945825,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 6.0,
+              "correlation": 0.9999999962305781,
+              "peak_margin": 0.9952277511945825,
+              "edges": [
+                {
+                  "correlation": 1.0000000176597104,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999999748014458,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": 0.0,
+              "correlation": 0.9999897543510994,
+              "peak_margin": 0.9990239872985706,
+              "edges": [
+                {
+                  "correlation": 0.999979460291814,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 1.0000000484103848,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": []
+        },
+        "status": "REJECTED_INPUT",
+        "decision": "REVIEW_INPUT_OR_EXTENSIVE_SURFACE_CHANGE",
+        "reason": "translation_exceeds_fixture_tolerance",
+        "preparation_seconds": 0.07046859996626154,
+        "pattern": "geometry",
+        "calibration_sha256": "9b71dac3f0d8feb443915a0e491928b5ccc2b441f9f52375f1c649785f48dd60",
+        "capture": {
+          "frame_id": 2754,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 2753,
+          "transfer_ms": 94.46049999678507,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:26.318776+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 8,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 58179,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 2754,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 12,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 12,
+          "selection_center_error_px": 6.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3310321991,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "record": "inspections/20261020T062726_38317724",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062726_38317724\\capture\\input.png"
+      },
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_008",
+        "style": "stripes",
+        "kind": "reference",
+        "image_sha256": "592032009c2420ca99eeeccb31cfb68ea5a0787db5c12d89677256504f73b7f6",
+        "reference_source": "ref_008",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.4091753999819048,
+      "result": {
+        "status": "CALIBRATED",
+        "pattern": "stripes",
+        "reference": {
+          "bundle": "calibrations/stripes/20261020T062727_75684417",
+          "bundle_sha256": "87543c9c97ba03438057f40e7a4e037b832f1b432dac4977939336eab165f7c3",
+          "capture": "captures/20261020T062727_75684417",
+          "capture_identity": {
+            "frame_id": 2814,
+            "candidate_pixels": 0,
+            "boxes": [],
+            "alarm": false,
+            "config_word": 2079545863,
+            "status_word": 4,
+            "device_frames": 2813,
+            "transfer_ms": 108.92700002295896,
+            "width": 1280,
+            "height": 720,
+            "acquired_at": "2026-10-20T06:27:27.320432+00:00",
+            "transport": "ETHERNET_TCP",
+            "source": "HDMI",
+            "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+            "region_areas": [],
+            "region_overflow": false,
+            "event_id": 9,
+            "boot_id": 1488262539,
+            "firmware_version": 91904,
+            "event_reason": 3,
+            "recovery_generation": 0,
+            "captured_ms": 59179,
+            "queue_depth": 1,
+            "event_total": 0,
+            "events_dropped": 0,
+            "board_captures": 2814,
+            "invalid_frames": 0,
+            "capture_gaps": 0,
+            "support_profile": null,
+            "region_evidence_enabled": false,
+            "region_min_trusted": null,
+            "region_evidence_fraction": null,
+            "product_id": 2,
+            "product_flags": 17,
+            "selection_score": 0,
+            "selection_full_tile": true,
+            "selection": "LIVE_PREVIEW",
+            "selection_metric": "CENTER_DISTANCE_X2",
+            "selection_center_distance_x2": 0,
+            "selection_center_error_px": 0.0,
+            "pixel_crc_verified": true,
+            "header_crc_verified": true,
+            "descriptor_crc_verified": true,
+            "pixel_crc32": 3826185496,
+            "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+          }
+        },
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\captures\\20261020T062727_75684417\\input.png"
+      }
+    },
+    {
+      "source": {
+        "source": "ref_009",
+        "style": "stripes",
+        "kind": "good",
+        "image_sha256": "c7c49237cd1fd56a7246a2808aae3fd88d85efcc5577a2011ce5f1f1c953b8e3",
+        "reference_source": "ref_008",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3470867999712937,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": false,
+        "manual_review_required": true,
+        "reference_array_sha256": "fa5306f56a465b18ed5ecd46ad233d9972e59dfe3d6456608946f262c6c4dcc5",
+        "current_array_sha256": "ccd97f26b6a881fb61099e3d7a6a6e952e163f0f9aa4b74f3b4654b90e5a1974",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999700221348724,
+          "peak_margin": 0.998902717053359,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999700221348724,
+              "peak_margin": 0.998902717053359,
+              "edges": [
+                {
+                  "correlation": 0.999967947165509,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.999972097104236,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.999990907265331,
+              "peak_margin": 0.9996875389228999,
+              "edges": [
+                {
+                  "correlation": 0.9999917447472453,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999900697834169,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.999256432056427
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9996429681777954
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9992753267288208
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9995443820953369
+            }
+          ],
+          "pattern_correlation": 0.9992481470108032
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            256,
+            256
+          ],
+          "offset_integer": [
+            0,
+            0,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            4,
+            5,
+            4
+          ]
+        },
+        "preparation_seconds": 0.1894359000143595,
+        "paired_sha256": "61c399307881f52312ac3555244d9825f982fba60b31e06d56e9480c7100f41a",
+        "status": "COMPARED",
+        "pattern": "stripes",
+        "calibration_sha256": "87543c9c97ba03438057f40e7a4e037b832f1b432dac4977939336eab165f7c3",
+        "capture": {
+          "frame_id": 2872,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 2871,
+          "transfer_ms": 114.80390001088381,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:28.288671+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 10,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 60145,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 2872,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3785499717,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 1689577479,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 554348749,
+          "output_crc32": 840543286,
+          "output_crc_verified": true,
+          "paired_sha256": "61c399307881f52312ac3555244d9825f982fba60b31e06d56e9480c7100f41a",
+          "score_sha256": "c21318e2c43c47553ddc18ce9479aaea0fc13ad513caaa545a7473fec928db4b",
+          "engine_seconds": 0.01218408923076923,
+          "request_seconds": 0.8425107999937609,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 0.0,
+          "p90": 1.0,
+          "strong_fraction": 0.0
+        },
+        "completion": {
+          "initial_pixels": 0,
+          "completed_pixels": 0,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+        "regions": [],
+        "candidate_pixels": 0,
+        "record": "inspections/20261020T062728_bd177d65",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062728_bd177d65\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_010",
+        "style": "stripes",
+        "kind": "line",
+        "image_sha256": "a436e88310b5df5399fc4f082ba9eecc2b49a6542350658f732a364696316b6f",
+        "reference_source": "ref_008",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3515580999664962,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": true,
+        "manual_review_required": true,
+        "reference_array_sha256": "fa5306f56a465b18ed5ecd46ad233d9972e59dfe3d6456608946f262c6c4dcc5",
+        "current_array_sha256": "a8aa783547d035a186048dc640e694b5055c17ada19d0272f4a73eeaa20a7a90",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999700221348724,
+          "peak_margin": 0.998902717053359,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999700221348724,
+              "peak_margin": 0.998902717053359,
+              "edges": [
+                {
+                  "correlation": 0.999967947165509,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.999972097104236,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.999990907265331,
+              "peak_margin": 0.9996875389228999,
+              "edges": [
+                {
+                  "correlation": 0.9999917447472453,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999900697834169,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9581117630004883
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9996429681777954
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9992753267288208
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9776544570922852
+            }
+          ],
+          "pattern_correlation": 0.9800739884376526
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            256,
+            256
+          ],
+          "offset_integer": [
+            0,
+            0,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            4,
+            5,
+            4
+          ]
+        },
+        "preparation_seconds": 0.20273860002635047,
+        "paired_sha256": "1deff4be36e65033fd5f3b2fb59a523dd9e7a8b6062580bbf9168358eb2433cd",
+        "status": "COMPARED",
+        "pattern": "stripes",
+        "calibration_sha256": "87543c9c97ba03438057f40e7a4e037b832f1b432dac4977939336eab165f7c3",
+        "capture": {
+          "frame_id": 3005,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3004,
+          "transfer_ms": 110.27410003589466,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:30.504167+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 11,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 62362,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3005,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 4249012597,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 2536827114,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 1473279387,
+          "output_crc32": 3873382883,
+          "output_crc_verified": true,
+          "paired_sha256": "1deff4be36e65033fd5f3b2fb59a523dd9e7a8b6062580bbf9168358eb2433cd",
+          "score_sha256": "f665af541f052f41c77e877e0bc791827a09b739a05349f1b2284d10fbd728f3",
+          "engine_seconds": 0.012233766153846155,
+          "request_seconds": 0.8319082000525668,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 0.0,
+          "p90": 1.0,
+          "strong_fraction": 0.004812
+        },
+        "completion": {
+          "initial_pixels": 1732,
+          "completed_pixels": 1914,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "REFERENCE_CHANGE_CANDIDATE",
+        "regions": [
+          {
+            "box": [
+              435,
+              169,
+              855,
+              532
+            ],
+            "pixels": 1914,
+            "seeds": 1732,
+            "kind": "thin_surface_change"
+          }
+        ],
+        "candidate_pixels": 1914,
+        "record": "inspections/20261020T062730_62abd2dc",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062730_62abd2dc\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_011",
+        "style": "stripes",
+        "kind": "invalid_pose",
+        "image_sha256": "a8e28840980993ac5d8ec5205c49a07151e50f3f96b636f2f466771d8660a0be",
+        "reference_source": "ref_008",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.24930649995803833,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": false,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 0,
+        "alarm": null,
+        "manual_review_required": true,
+        "reference_array_sha256": "fa5306f56a465b18ed5ecd46ad233d9972e59dfe3d6456608946f262c6c4dcc5",
+        "current_array_sha256": "f1e475d603811e66de0bdf0a7341c3dfd7d67663da4fae7640f8e82ff28cc4e4",
+        "registration": {
+          "dx": 6.0,
+          "dy": 0.0,
+          "correlation": 0.9999999549607221,
+          "peak_margin": 0.9927740565104375,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 6.0,
+              "correlation": 0.9999999709970774,
+              "peak_margin": 0.9927740565104375,
+              "edges": [
+                {
+                  "correlation": 0.9999999565903447,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999999854038101,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": 0.0,
+              "correlation": 0.9999999549607221,
+              "peak_margin": 0.9999998598531903,
+              "edges": [
+                {
+                  "correlation": 0.9999999924257662,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.999999917495678,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": []
+        },
+        "status": "REJECTED_INPUT",
+        "decision": "REVIEW_INPUT_OR_EXTENSIVE_SURFACE_CHANGE",
+        "reason": "translation_exceeds_fixture_tolerance",
+        "preparation_seconds": 0.0755049999570474,
+        "pattern": "stripes",
+        "calibration_sha256": "87543c9c97ba03438057f40e7a4e037b832f1b432dac4977939336eab165f7c3",
+        "capture": {
+          "frame_id": 3143,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3142,
+          "transfer_ms": 120.89710001600906,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:32.804319+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 12,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 64662,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3143,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 12,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 12,
+          "selection_center_error_px": 6.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3756576955,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "record": "inspections/20261020T062732_ba001770",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062732_ba001770\\capture\\input.png"
+      },
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_012",
+        "style": "woodlike",
+        "kind": "reference",
+        "image_sha256": "79082bdfcc51bb6a0a3a458ab0f5b4781ef061094bcef5283a6c63d5a722dab9",
+        "reference_source": "ref_012",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.36833969998406246,
+      "result": {
+        "status": "CALIBRATED",
+        "pattern": "woodlike",
+        "reference": {
+          "bundle": "calibrations/woodlike/20261020T062733_8ec28d29",
+          "bundle_sha256": "37df656de6435e8738d74cbcab9c596b131778696b5f0ae834b800da9b89a754",
+          "capture": "captures/20261020T062733_8ec28d29",
+          "capture_identity": {
+            "frame_id": 3201,
+            "candidate_pixels": 0,
+            "boxes": [],
+            "alarm": false,
+            "config_word": 2079545863,
+            "status_word": 4,
+            "device_frames": 3200,
+            "transfer_ms": 95.355799945537,
+            "width": 1280,
+            "height": 720,
+            "acquired_at": "2026-10-20T06:27:33.771666+00:00",
+            "transport": "ETHERNET_TCP",
+            "source": "HDMI",
+            "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+            "region_areas": [],
+            "region_overflow": false,
+            "event_id": 13,
+            "boot_id": 1488262539,
+            "firmware_version": 91904,
+            "event_reason": 3,
+            "recovery_generation": 0,
+            "captured_ms": 65629,
+            "queue_depth": 1,
+            "event_total": 0,
+            "events_dropped": 0,
+            "board_captures": 3201,
+            "invalid_frames": 0,
+            "capture_gaps": 0,
+            "support_profile": null,
+            "region_evidence_enabled": false,
+            "region_min_trusted": null,
+            "region_evidence_fraction": null,
+            "product_id": 2,
+            "product_flags": 17,
+            "selection_score": 0,
+            "selection_full_tile": true,
+            "selection": "LIVE_PREVIEW",
+            "selection_metric": "CENTER_DISTANCE_X2",
+            "selection_center_distance_x2": 0,
+            "selection_center_error_px": 0.0,
+            "pixel_crc_verified": true,
+            "header_crc_verified": true,
+            "descriptor_crc_verified": true,
+            "pixel_crc32": 4102933424,
+            "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+          }
+        },
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\captures\\20261020T062733_8ec28d29\\input.png"
+      }
+    },
+    {
+      "source": {
+        "source": "ref_013",
+        "style": "woodlike",
+        "kind": "good",
+        "image_sha256": "9d57bebd6ad9b0e0cbd91fd1a023572535c9267200d144dc5ef703a85b5bd6db",
+        "reference_source": "ref_012",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.329482499975711,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": false,
+        "manual_review_required": true,
+        "reference_array_sha256": "75c4f9d8ec5f40fd1bc7510d517da017b7dcf02f0031f736ec4ce2d90709faff",
+        "current_array_sha256": "662b916a1768c274e804a0380af1ed208146061a343c805517e84d09f72ec0e3",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999900537205879,
+          "peak_margin": 0.9995199701239932,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999960699614419,
+              "peak_margin": 0.9998833103390496,
+              "edges": [
+                {
+                  "correlation": 0.9999938370566687,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999983028662149,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999900537205879,
+              "peak_margin": 0.9995199701239932,
+              "edges": [
+                {
+                  "correlation": 0.9999904235096624,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999896839315134,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [],
+          "pattern_correlation": null
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            0.9787123572170301,
+            0.9586466165413533,
+            1.0
+          ],
+          "offsets": [
+            4.145379023883692,
+            4.926065162907278,
+            0.0
+          ],
+          "gain_q8": [
+            251,
+            245,
+            256
+          ],
+          "offset_integer": [
+            4,
+            5,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "offset_only_unidentified_gain"
+          ],
+          "populated_reference_levels": [
+            4,
+            3,
+            2
+          ]
+        },
+        "preparation_seconds": 0.17942199995741248,
+        "paired_sha256": "b00e16c85cb6b28e7979042d909c056ba23c045133a55ed6a59077906a412e29",
+        "status": "COMPARED",
+        "pattern": "woodlike",
+        "calibration_sha256": "37df656de6435e8738d74cbcab9c596b131778696b5f0ae834b800da9b89a754",
+        "capture": {
+          "frame_id": 3259,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3258,
+          "transfer_ms": 125.3088999656029,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:34.737734+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 14,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 66595,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3259,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 1340433673,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 3238441344,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 876072954,
+          "output_crc32": 3165188108,
+          "output_crc_verified": true,
+          "paired_sha256": "b00e16c85cb6b28e7979042d909c056ba23c045133a55ed6a59077906a412e29",
+          "score_sha256": "02473fac2d227e13ab64751161d42f262fb72a71dc663d02eb7c7407fe178ba3",
+          "engine_seconds": 0.012185621538461538,
+          "request_seconds": 0.8161468000034802,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.0
+        },
+        "completion": {
+          "initial_pixels": 0,
+          "completed_pixels": 0,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+        "regions": [],
+        "candidate_pixels": 0,
+        "record": "inspections/20261020T062734_add828b5",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062734_add828b5\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_014",
+        "style": "woodlike",
+        "kind": "line",
+        "image_sha256": "d1b463fa75e55406c4547325e39eba4d44c8ce3ce2118d8d38c31227147c02a5",
+        "reference_source": "ref_012",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3111399000044912,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": true,
+        "manual_review_required": true,
+        "reference_array_sha256": "75c4f9d8ec5f40fd1bc7510d517da017b7dcf02f0031f736ec4ce2d90709faff",
+        "current_array_sha256": "88e94f9f53a7d95f0f000b02268e322cb873842ca2c2d0123ccb7f49a3e7a881",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999900537205879,
+          "peak_margin": 0.9995199701239932,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999960699614419,
+              "peak_margin": 0.9998833103390496,
+              "edges": [
+                {
+                  "correlation": 0.9999938370566687,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999983028662149,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999900537205879,
+              "peak_margin": 0.9995199701239932,
+              "edges": [
+                {
+                  "correlation": 0.9999904235096624,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999896839315134,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [],
+          "pattern_correlation": null
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            0.9787123572170301,
+            0.9586466165413533,
+            1.0
+          ],
+          "offsets": [
+            4.145379023883692,
+            4.926065162907278,
+            0.0
+          ],
+          "gain_q8": [
+            251,
+            245,
+            256
+          ],
+          "offset_integer": [
+            4,
+            5,
+            0
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "offset_only_unidentified_gain"
+          ],
+          "populated_reference_levels": [
+            4,
+            3,
+            2
+          ]
+        },
+        "preparation_seconds": 0.1684244000352919,
+        "paired_sha256": "6ea206a7534cb97cddc3198e931ff09b290530975fe2a63994f8b3bf4f7c30b9",
+        "status": "COMPARED",
+        "pattern": "woodlike",
+        "calibration_sha256": "37df656de6435e8738d74cbcab9c596b131778696b5f0ae834b800da9b89a754",
+        "capture": {
+          "frame_id": 3388,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3387,
+          "transfer_ms": 117.05589998746291,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:36.888647+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 15,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 68745,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3388,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 2653977885,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 2753362317,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 1336112755,
+          "output_crc32": 1320918174,
+          "output_crc_verified": true,
+          "paired_sha256": "6ea206a7534cb97cddc3198e931ff09b290530975fe2a63994f8b3bf4f7c30b9",
+          "score_sha256": "a58fa1445109123057d76a5a428748815cf2f4cbac33bd53e34ada1e755ba37a",
+          "engine_seconds": 0.012186738461538461,
+          "request_seconds": 0.8262421999825165,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.005048
+        },
+        "completion": {
+          "initial_pixels": 1912,
+          "completed_pixels": 1912,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "REFERENCE_CHANGE_CANDIDATE",
+        "regions": [
+          {
+            "box": [
+              435,
+              170,
+              855,
+              531
+            ],
+            "pixels": 1912,
+            "seeds": 1912,
+            "kind": "thin_surface_change"
+          }
+        ],
+        "candidate_pixels": 1912,
+        "record": "inspections/20261020T062736_6650862e",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062736_6650862e\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_015",
+        "style": "woodlike",
+        "kind": "invalid_pose",
+        "image_sha256": "d6433d8ab00379fddbede18b09f01b12835e1a31b31b7f2ffe4d47f571fbd67f",
+        "reference_source": "ref_012",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.2795623000129126,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": false,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 0,
+        "alarm": null,
+        "manual_review_required": true,
+        "reference_array_sha256": "75c4f9d8ec5f40fd1bc7510d517da017b7dcf02f0031f736ec4ce2d90709faff",
+        "current_array_sha256": "608b8c9026a9eb7ff03014b479010b9a460dc7e2cd056796e136a52ea9863113",
+        "registration": {
+          "dx": 6.0,
+          "dy": 0.0,
+          "correlation": 0.9999999832305275,
+          "peak_margin": 0.9992964825849494,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 6.0,
+              "correlation": 1.0000000019658337,
+              "peak_margin": 0.9992964825849494,
+              "edges": [
+                {
+                  "correlation": 1.0000000180586153,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999999858730523,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": 0.0,
+              "correlation": 0.9999999832305275,
+              "peak_margin": 0.9997521523919408,
+              "edges": [
+                {
+                  "correlation": 0.9999999506373172,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 1.0000000158237379,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": []
+        },
+        "status": "REJECTED_INPUT",
+        "decision": "REVIEW_INPUT_OR_EXTENSIVE_SURFACE_CHANGE",
+        "reason": "translation_exceeds_fixture_tolerance",
+        "preparation_seconds": 0.07291230000555515,
+        "pattern": "woodlike",
+        "calibration_sha256": "37df656de6435e8738d74cbcab9c596b131778696b5f0ae834b800da9b89a754",
+        "capture": {
+          "frame_id": 3522,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3521,
+          "transfer_ms": 121.71279999893159,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:39.120541+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 16,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 70979,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3522,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 12,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 12,
+          "selection_center_error_px": 6.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3978332684,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "record": "inspections/20261020T062738_340a2e76",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062738_340a2e76\\capture\\input.png"
+      },
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_016",
+        "style": "grain",
+        "kind": "reference",
+        "image_sha256": "06af89c7972fcfa11e727dfa2ef001166102018100eda9549577987af7bac410",
+        "reference_source": "ref_016",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.47626389999641106,
+      "result": {
+        "status": "CALIBRATED",
+        "pattern": "grain",
+        "reference": {
+          "bundle": "calibrations/grain/20261020T062739_dd157cda",
+          "bundle_sha256": "2784e31b56f96e6680861c2fb832243498d9792c0724e92dd433aadfec881e2b",
+          "capture": "captures/20261020T062739_dd157cda",
+          "capture_identity": {
+            "frame_id": 3578,
+            "candidate_pixels": 0,
+            "boxes": [],
+            "alarm": false,
+            "config_word": 2079545863,
+            "status_word": 4,
+            "device_frames": 3577,
+            "transfer_ms": 119.21430000802502,
+            "width": 1280,
+            "height": 720,
+            "acquired_at": "2026-10-20T06:27:40.054380+00:00",
+            "transport": "ETHERNET_TCP",
+            "source": "HDMI",
+            "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+            "region_areas": [],
+            "region_overflow": false,
+            "event_id": 17,
+            "boot_id": 1488262539,
+            "firmware_version": 91904,
+            "event_reason": 3,
+            "recovery_generation": 0,
+            "captured_ms": 71912,
+            "queue_depth": 1,
+            "event_total": 0,
+            "events_dropped": 0,
+            "board_captures": 3578,
+            "invalid_frames": 0,
+            "capture_gaps": 0,
+            "support_profile": null,
+            "region_evidence_enabled": false,
+            "region_min_trusted": null,
+            "region_evidence_fraction": null,
+            "product_id": 2,
+            "product_flags": 17,
+            "selection_score": 0,
+            "selection_full_tile": true,
+            "selection": "LIVE_PREVIEW",
+            "selection_metric": "CENTER_DISTANCE_X2",
+            "selection_center_distance_x2": 0,
+            "selection_center_error_px": 0.0,
+            "pixel_crc_verified": true,
+            "header_crc_verified": true,
+            "descriptor_crc_verified": true,
+            "pixel_crc32": 431091644,
+            "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+          }
+        },
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\captures\\20261020T062739_dd157cda\\input.png"
+      }
+    },
+    {
+      "source": {
+        "source": "ref_017",
+        "style": "grain",
+        "kind": "good",
+        "image_sha256": "5e3f55a160ef3fbad1a801812d30ccdc1357d007edf500dec1face24381fdda0",
+        "reference_source": "ref_016",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3297327000182122,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": false,
+        "manual_review_required": true,
+        "reference_array_sha256": "f6b1569e22d993ceed4d19570d9152454604d8bc8b148295dbbd8fc4d92c10a9",
+        "current_array_sha256": "e65e21d7d1e4cd3e1922a34744d17b9d05581c8bb6033bc2d2b2752ca878a599",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999860420996167,
+          "peak_margin": 0.9920992944551112,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999921120324344,
+              "peak_margin": 0.9920992944551112,
+              "edges": [
+                {
+                  "correlation": 0.999990634233244,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999935898316249,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999860420996167,
+              "peak_margin": 0.9942164926136307,
+              "edges": [
+                {
+                  "correlation": 0.999986139408579,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999859447906544,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9990435242652893
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9990234375
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9990209341049194
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9989484548568726
+            }
+          ],
+          "pattern_correlation": 0.9990112781524658
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            0.9967442150564463,
+            1.0468277945619335,
+            0.9504504504504504
+          ],
+          "offsets": [
+            0.6648412648911375,
+            -4.521148036253777,
+            3.9009009009008935
+          ],
+          "gain_q8": [
+            255,
+            268,
+            243
+          ],
+          "offset_integer": [
+            1,
+            -5,
+            4
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            6,
+            3,
+            3
+          ]
+        },
+        "preparation_seconds": 0.1906029000529088,
+        "paired_sha256": "df2b72d2e00ebef73eb6df23c9bfc30c45dea6ae5c188f2001c26b830b00ce5c",
+        "status": "COMPARED",
+        "pattern": "grain",
+        "calibration_sha256": "2784e31b56f96e6680861c2fb832243498d9792c0724e92dd433aadfec881e2b",
+        "capture": {
+          "frame_id": 3647,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3646,
+          "transfer_ms": 113.2853000308387,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:41.203955+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 18,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 73062,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3647,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 4079734575,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 3217119829,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 159316651,
+          "output_crc32": 28666929,
+          "output_crc_verified": true,
+          "paired_sha256": "df2b72d2e00ebef73eb6df23c9bfc30c45dea6ae5c188f2001c26b830b00ce5c",
+          "score_sha256": "8eb5abb394755bf11b018da473f970cfac26faf5e073d5314a1bae55474580f7",
+          "engine_seconds": 0.012191381538461539,
+          "request_seconds": 0.8189048999920487,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.0
+        },
+        "completion": {
+          "initial_pixels": 0,
+          "completed_pixels": 0,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+        "regions": [],
+        "candidate_pixels": 0,
+        "record": "inspections/20261020T062741_9a0e3273",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062741_9a0e3273\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_018",
+        "style": "grain",
+        "kind": "line",
+        "image_sha256": "fe2182a633a08a00a088c1c28d8c5fae1d5c7b4e186867f09ea377d7a2cd1f3c",
+        "reference_source": "ref_016",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3512685000314377,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": true,
+        "manual_review_required": true,
+        "reference_array_sha256": "f6b1569e22d993ceed4d19570d9152454604d8bc8b148295dbbd8fc4d92c10a9",
+        "current_array_sha256": "8c8a196db7b124eb0b1dc58430e6b24734a40862ca50c9999df00f3783daa75f",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999860420996167,
+          "peak_margin": 0.9920992944551112,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999921120324344,
+              "peak_margin": 0.9920992944551112,
+              "edges": [
+                {
+                  "correlation": 0.999990634233244,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999935898316249,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.9999860420996167,
+              "peak_margin": 0.9942164926136307,
+              "edges": [
+                {
+                  "correlation": 0.999986139408579,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999859447906544,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.963038980960846
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9990190863609314
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9969401955604553
+            },
+            {
+              "dx": 0.0,
+              "dy": 0.0,
+              "correlation": 0.9622048139572144
+            }
+          ],
+          "pattern_correlation": 0.9806079268455505
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            0.9955197132616488,
+            1.0468277945619335,
+            0.9504504504504504
+          ],
+          "offsets": [
+            1.23566308243727,
+            -4.521148036253777,
+            3.9009009009008935
+          ],
+          "gain_q8": [
+            255,
+            268,
+            243
+          ],
+          "offset_integer": [
+            1,
+            -5,
+            4
+          ],
+          "fit_modes": [
+            "reference_stratified_affine",
+            "reference_stratified_affine",
+            "reference_stratified_affine"
+          ],
+          "populated_reference_levels": [
+            6,
+            3,
+            3
+          ]
+        },
+        "preparation_seconds": 0.19415529997786507,
+        "paired_sha256": "2d4a17ca454dc48013f256a292d5dfc709e11e07aa6aeec9889ee2838ffb1e0b",
+        "status": "COMPARED",
+        "pattern": "grain",
+        "calibration_sha256": "2784e31b56f96e6680861c2fb832243498d9792c0724e92dd433aadfec881e2b",
+        "capture": {
+          "frame_id": 3783,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3782,
+          "transfer_ms": 108.44049998559058,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:43.471096+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 19,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 75329,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3783,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 2787366110,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 3531012944,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 266837472,
+          "output_crc32": 1529005800,
+          "output_crc_verified": true,
+          "paired_sha256": "2d4a17ca454dc48013f256a292d5dfc709e11e07aa6aeec9889ee2838ffb1e0b",
+          "score_sha256": "4cd29902f155b9df463b96d1389065c3ae4c0583dbf5151b4612e2458f0f8c86",
+          "engine_seconds": 0.01218944,
+          "request_seconds": 0.8285266000311822,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 1.0,
+          "p90": 1.0,
+          "strong_fraction": 0.004236
+        },
+        "completion": {
+          "initial_pixels": 1697,
+          "completed_pixels": 1918,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "REFERENCE_CHANGE_CANDIDATE",
+        "regions": [
+          {
+            "box": [
+              435,
+              169,
+              856,
+              532
+            ],
+            "pixels": 1918,
+            "seeds": 1697,
+            "kind": "thin_surface_change"
+          }
+        ],
+        "candidate_pixels": 1918,
+        "record": "inspections/20261020T062743_af55b272",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062743_af55b272\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_019",
+        "style": "grain",
+        "kind": "invalid_pose",
+        "image_sha256": "5708d6b9e540ce93847d33ace1ae95350aa73caba9f5eab44b740fb4b5ed2f52",
+        "reference_source": "ref_016",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.26509589998750016,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": false,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 0,
+        "alarm": null,
+        "manual_review_required": true,
+        "reference_array_sha256": "f6b1569e22d993ceed4d19570d9152454604d8bc8b148295dbbd8fc4d92c10a9",
+        "current_array_sha256": "8fdbd188122a06bb47312d702566cba22d5e2b4f15f6fcfb42f51fabb3553336",
+        "registration": {
+          "dx": 6.0,
+          "dy": 0.0,
+          "correlation": 0.9999813311727135,
+          "peak_margin": 0.992707093681849,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 6.0,
+              "correlation": 0.9999999878501983,
+              "peak_margin": 0.992707093681849,
+              "edges": [
+                {
+                  "correlation": 0.9999999780976973,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999999976026993,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": 0.0,
+              "correlation": 0.9999813311727135,
+              "peak_margin": 1.0089761865790063,
+              "edges": [
+                {
+                  "correlation": 0.9999845283740364,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999781339713907,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": []
+        },
+        "status": "REJECTED_INPUT",
+        "decision": "REVIEW_INPUT_OR_EXTENSIVE_SURFACE_CHANGE",
+        "reason": "translation_exceeds_fixture_tolerance",
+        "preparation_seconds": 0.06870619999244809,
+        "pattern": "grain",
+        "calibration_sha256": "2784e31b56f96e6680861c2fb832243498d9792c0724e92dd433aadfec881e2b",
+        "capture": {
+          "frame_id": 3919,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 3918,
+          "transfer_ms": 94.09339999547228,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:45.737302+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 20,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 77595,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 3919,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 12,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 12,
+          "selection_center_error_px": 6.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 2553702746,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "record": "inspections/20261020T062745_cc4a1258",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062745_cc4a1258\\capture\\input.png"
+      },
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_020",
+        "style": "plain",
+        "kind": "reference",
+        "image_sha256": "3d840aea5def0aa4b8b296b76ce4591a69d06dea2d0dd0e76fbf3e1559c794ed",
+        "reference_source": "ref_020",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.38756260002264753,
+      "result": {
+        "status": "CALIBRATED",
+        "pattern": "plain",
+        "reference": {
+          "bundle": "calibrations/plain/20261020T062746_2868ebad",
+          "bundle_sha256": "778be12738b46c6b8ea85d6c81ef906000ebe53bb3243415c722d2db898d2fea",
+          "capture": "captures/20261020T062746_2868ebad",
+          "capture_identity": {
+            "frame_id": 3975,
+            "candidate_pixels": 0,
+            "boxes": [],
+            "alarm": false,
+            "config_word": 2079545863,
+            "status_word": 4,
+            "device_frames": 3974,
+            "transfer_ms": 117.33520001871511,
+            "width": 1280,
+            "height": 720,
+            "acquired_at": "2026-10-20T06:27:46.671520+00:00",
+            "transport": "ETHERNET_TCP",
+            "source": "HDMI",
+            "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+            "region_areas": [],
+            "region_overflow": false,
+            "event_id": 21,
+            "boot_id": 1488262539,
+            "firmware_version": 91904,
+            "event_reason": 3,
+            "recovery_generation": 0,
+            "captured_ms": 78529,
+            "queue_depth": 1,
+            "event_total": 0,
+            "events_dropped": 0,
+            "board_captures": 3975,
+            "invalid_frames": 0,
+            "capture_gaps": 0,
+            "support_profile": null,
+            "region_evidence_enabled": false,
+            "region_min_trusted": null,
+            "region_evidence_fraction": null,
+            "product_id": 2,
+            "product_flags": 17,
+            "selection_score": 0,
+            "selection_full_tile": true,
+            "selection": "LIVE_PREVIEW",
+            "selection_metric": "CENTER_DISTANCE_X2",
+            "selection_center_distance_x2": 0,
+            "selection_center_error_px": 0.0,
+            "pixel_crc_verified": true,
+            "header_crc_verified": true,
+            "descriptor_crc_verified": true,
+            "pixel_crc32": 3924465089,
+            "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+          }
+        },
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\captures\\20261020T062746_2868ebad\\input.png"
+      }
+    },
+    {
+      "source": {
+        "source": "ref_021",
+        "style": "plain",
+        "kind": "good",
+        "image_sha256": "d920c528e1f647120e07eedf74d5fedeba7af3b8ac9ed6b51aa0884138899f3c",
+        "reference_source": "ref_020",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.299711200001184,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": false,
+        "manual_review_required": true,
+        "reference_array_sha256": "35a392269ee23c48b5ad395aa19048196ed0821fa700ad117f95b3d3212c8837",
+        "current_array_sha256": "232c73fa14c6b1ab5bbbd2f0530670c855e05f2c442bc3d30ca6c8a32bea4cdb",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999887274387242,
+          "peak_margin": 0.9997462827898461,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999887274387242,
+              "peak_margin": 0.9997919361808734,
+              "edges": [
+                {
+                  "correlation": 0.999982922367679,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999945325097694,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.999998166931839,
+              "peak_margin": 0.9997462827898461,
+              "edges": [
+                {
+                  "correlation": 0.9999971988510994,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999991350125784,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [],
+          "pattern_correlation": null
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            256,
+            256
+          ],
+          "offset_integer": [
+            0,
+            0,
+            0
+          ],
+          "fit_modes": [
+            "offset_only_unidentified_gain",
+            "offset_only_unidentified_gain",
+            "offset_only_unidentified_gain"
+          ],
+          "populated_reference_levels": [
+            1,
+            1,
+            1
+          ]
+        },
+        "preparation_seconds": 0.17454999999608845,
+        "paired_sha256": "646f2a06167100269a0a20dcdc38078654799f1f5bbbb720edddd1797133c902",
+        "status": "COMPARED",
+        "pattern": "plain",
+        "calibration_sha256": "778be12738b46c6b8ea85d6c81ef906000ebe53bb3243415c722d2db898d2fea",
+        "capture": {
+          "frame_id": 4038,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 4037,
+          "transfer_ms": 108.47780003678054,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:47.721276+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 22,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 79579,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 4038,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3856034541,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 3583588334,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 781313878,
+          "output_crc32": 608597107,
+          "output_crc_verified": true,
+          "paired_sha256": "646f2a06167100269a0a20dcdc38078654799f1f5bbbb720edddd1797133c902",
+          "score_sha256": "f7c1974de13932ae420ecc7c7d359baf6cb413e3528f66b1648b7dcfa5e2ad7c",
+          "engine_seconds": 0.01222396,
+          "request_seconds": 0.8271048000315204,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 0.0,
+          "p90": 1.0,
+          "strong_fraction": 0.0
+        },
+        "completion": {
+          "initial_pixels": 0,
+          "completed_pixels": 0,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+        "regions": [],
+        "candidate_pixels": 0,
+        "record": "inspections/20261020T062747_55edb47a",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062747_55edb47a\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_022",
+        "style": "plain",
+        "kind": "line",
+        "image_sha256": "38e296fff157512b1901084839728d55a0a5bc1fcf8353116948c041ad0d40a5",
+        "reference_source": "ref_020",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 1.3176157000125386,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": true,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 250000,
+        "alarm": true,
+        "manual_review_required": true,
+        "reference_array_sha256": "35a392269ee23c48b5ad395aa19048196ed0821fa700ad117f95b3d3212c8837",
+        "current_array_sha256": "1da7739aa5d4d84a66b1ba0661709227e197ec8a8b7e5854c85878fa002054e3",
+        "registration": {
+          "dx": 0.75,
+          "dy": -0.5,
+          "correlation": 0.9999887274387242,
+          "peak_margin": 0.9997462827898461,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 0.75,
+              "correlation": 0.9999887274387242,
+              "peak_margin": 0.9997919361808734,
+              "edges": [
+                {
+                  "correlation": 0.999982922367679,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999945325097694,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": -0.5,
+              "correlation": 0.999998166931839,
+              "peak_margin": 0.9997462827898461,
+              "edges": [
+                {
+                  "correlation": 0.9999971988510994,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999991350125784,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": [],
+          "pattern_correlation": null
+        },
+        "resampling_transfer": {
+          "x_weights": [
+            0.1875,
+            0.625,
+            0.1875
+          ],
+          "y_weights": [
+            0.25,
+            0.5,
+            0.25
+          ],
+          "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+        },
+        "new_saturation_fraction": 0.0,
+        "photometric": {
+          "gains": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "offsets": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "gain_q8": [
+            256,
+            256,
+            256
+          ],
+          "offset_integer": [
+            0,
+            0,
+            0
+          ],
+          "fit_modes": [
+            "offset_only_unidentified_gain",
+            "offset_only_unidentified_gain",
+            "offset_only_unidentified_gain"
+          ],
+          "populated_reference_levels": [
+            1,
+            1,
+            1
+          ]
+        },
+        "preparation_seconds": 0.16559960000449792,
+        "paired_sha256": "dec8edf0a757135b4971ae17aeb10446cfd58541ac97f4cd715dc3b4fe5c67c4",
+        "status": "COMPARED",
+        "pattern": "plain",
+        "calibration_sha256": "778be12738b46c6b8ea85d6c81ef906000ebe53bb3243415c722d2db898d2fea",
+        "capture": {
+          "frame_id": 4171,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 4170,
+          "transfer_ms": 106.57190001802519,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:49.937283+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 23,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 81795,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 4171,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 2,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 2,
+          "selection_center_error_px": 1.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 532935827,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "hardware": {
+          "request_id": 2702888534,
+          "pl_id": 376440321,
+          "firmware": 91904,
+          "input_crc32": 114716515,
+          "output_crc32": 2235973699,
+          "output_crc_verified": true,
+          "paired_sha256": "dec8edf0a757135b4971ae17aeb10446cfd58541ac97f4cd715dc3b4fe5c67c4",
+          "score_sha256": "861820a38c2ea8110b9f0d9a1aa91791787f2f70b85833d367e142a4241f1b33",
+          "engine_seconds": 0.012190772307692308,
+          "request_seconds": 0.8502431999659166,
+          "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+        },
+        "residual": {
+          "median": 0.0,
+          "p90": 1.0,
+          "strong_fraction": 0.006056
+        },
+        "completion": {
+          "initial_pixels": 1913,
+          "completed_pixels": 1913,
+          "can_create_new_image_alarm": false
+        },
+        "decision": "REFERENCE_CHANGE_CANDIDATE",
+        "regions": [
+          {
+            "box": [
+              435,
+              169,
+              855,
+              531
+            ],
+            "pixels": 1913,
+            "seeds": 1913,
+            "kind": "thin_surface_change"
+          }
+        ],
+        "candidate_pixels": 1913,
+        "record": "inspections/20261020T062749_9a7627c5",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062749_9a7627c5\\result\\overlay.png"
+      },
+      "score_mismatch_pixels": 0,
+      "expectation_passed": true
+    },
+    {
+      "source": {
+        "source": "ref_023",
+        "style": "plain",
+        "kind": "invalid_pose",
+        "image_sha256": "8053a20a1abb19e32e549806aa3f8af488687c2a82cd2dd67b2304ce59e2f76a",
+        "reference_source": "ref_020",
+        "scope": "PROCEDURAL_NOT_REAL_PHOTOGRAPH_NOT_INDEPENDENT_ACCURACY"
+      },
+      "seconds": 0.2437511999742128,
+      "result": {
+        "version": "V1.67-host-prepared-FPGA-frame",
+        "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+        "accuracy_qualified": false,
+        "board_integrated": false,
+        "roi": [
+          390,
+          110,
+          889,
+          609
+        ],
+        "declared_roi_pixels": 250000,
+        "inspected_pixels": 0,
+        "alarm": null,
+        "manual_review_required": true,
+        "reference_array_sha256": "35a392269ee23c48b5ad395aa19048196ed0821fa700ad117f95b3d3212c8837",
+        "current_array_sha256": "b96fe5978c255253ca7a226c539c83215e79caaf317e9dd5107dd1914957ad85",
+        "registration": {
+          "dx": 6.0,
+          "dy": 0.0,
+          "correlation": 0.9999999955382647,
+          "peak_margin": 0.9999999954671633,
+          "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+          "boundary_axes": [
+            {
+              "shift": 6.0,
+              "correlation": 0.9999999955382647,
+              "peak_margin": 0.9999999954671633,
+              "edges": [
+                {
+                  "correlation": 0.9999999955382646,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 0.9999999955382648,
+                  "drift": 0.0
+                }
+              ]
+            },
+            {
+              "shift": 0.0,
+              "correlation": 1.0000000077736289,
+              "peak_margin": 1.0000000070092863,
+              "edges": [
+                {
+                  "correlation": 1.0000000077736286,
+                  "drift": 0.0
+                },
+                {
+                  "correlation": 1.000000007773629,
+                  "drift": 0.0
+                }
+              ]
+            }
+          ],
+          "quadrant_drifts": []
+        },
+        "status": "REJECTED_INPUT",
+        "decision": "REVIEW_INPUT_OR_EXTENSIVE_SURFACE_CHANGE",
+        "reason": "translation_exceeds_fixture_tolerance",
+        "preparation_seconds": 0.07484509999630973,
+        "pattern": "plain",
+        "calibration_sha256": "778be12738b46c6b8ea85d6c81ef906000ebe53bb3243415c722d2db898d2fea",
+        "capture": {
+          "frame_id": 4304,
+          "candidate_pixels": 0,
+          "boxes": [],
+          "alarm": false,
+          "config_word": 2079545863,
+          "status_word": 4,
+          "device_frames": 4303,
+          "transfer_ms": 94.22150003956631,
+          "width": 1280,
+          "height": 720,
+          "acquired_at": "2026-10-20T06:27:52.153999+00:00",
+          "transport": "ETHERNET_TCP",
+          "source": "HDMI",
+          "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+          "region_areas": [],
+          "region_overflow": false,
+          "event_id": 24,
+          "boot_id": 1488262539,
+          "firmware_version": 91904,
+          "event_reason": 3,
+          "recovery_generation": 0,
+          "captured_ms": 84012,
+          "queue_depth": 1,
+          "event_total": 0,
+          "events_dropped": 0,
+          "board_captures": 4304,
+          "invalid_frames": 0,
+          "capture_gaps": 0,
+          "support_profile": null,
+          "region_evidence_enabled": false,
+          "region_min_trusted": null,
+          "region_evidence_fraction": null,
+          "product_id": 2,
+          "product_flags": 17,
+          "selection_score": 12,
+          "selection_full_tile": true,
+          "selection": "LIVE_PREVIEW",
+          "selection_metric": "CENTER_DISTANCE_X2",
+          "selection_center_distance_x2": 12,
+          "selection_center_error_px": 6.0,
+          "pixel_crc_verified": true,
+          "header_crc_verified": true,
+          "descriptor_crc_verified": true,
+          "pixel_crc32": 3071718142,
+          "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+        },
+        "record": "inspections/20261020T062752_f6588e0b",
+        "preview": "C:\\Users\\Fang\\Documents\\Codex\\2026-10-16\\tilelab-handoff-20261016\\work\\competition_v167\\board_replay02\\station\\inspections\\20261020T062752_f6588e0b\\capture\\input.png"
+      },
+      "expectation_passed": true
+    }
+  ],
+  "board": {
+    "boot_id": 1488262539,
+    "firmware": 91904,
+    "pl_id": 376440321
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "id": "stripes_color_line_w1",
+  "kind": "localized_candidate",
+  "group": "ISOLUMINANT_COLOR_CHANGE_LIMIT",
+  "passed": true,
+  "coverage": 0.6984126984126984,
+  "pixel_precision": 0.6814159292035398,
+  "gt_pixels": 441,
+  "predicted_pixels": 452,
+  "tp": 308,
+  "parameters": {
+    "delta": [
+      40,
+      0,
+      -40
+    ],
+    "width": 1
+  },
+  "version": "V1.67-host-prepared-FPGA-frame",
+  "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "declared_roi_pixels": 250000,
+  "inspected_pixels": 250000,
+  "alarm": true,
+  "manual_review_required": true,
+  "reference_array_sha256": "72a34f9e06688748c6f0d21177cbcd40729d832cd383ecf75dc455ff56a42b80",
+  "current_array_sha256": "8a279dc1747ff3e8437a5b705d9d699414ec20af0a7c29d7824b52721531ebfe",
+  "registration": {
+    "dx": 0.0,
+    "dy": 0.0,
+    "correlation": 0.999999992078584,
+    "peak_margin": 0.9999999920785844,
+    "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+    "boundary_axes": [
+      {
+        "shift": 0.0,
+        "correlation": 0.999999992078584,
+        "peak_margin": 0.9999999920785844,
+        "edges": [
+          {
+            "correlation": 0.9999999963197667,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9999999878374013,
+            "drift": 0.0
+          }
+        ]
+      },
+      {
+        "shift": 0.0,
+        "correlation": 1.000000004926803,
+        "peak_margin": 1.0000000047998818,
+        "edges": [
+          {
+            "correlation": 1.000000004926803,
+            "drift": 0.0
+          },
+          {
+            "correlation": 1.0000000049268027,
+            "drift": 0.0
+          }
+        ]
+      }
+    ],
+    "quadrant_drifts": [
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9997817873954773
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 1.0
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 1.0
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9997056126594543
+      }
+    ],
+    "pattern_correlation": 0.9999105930328369
+  },
+  "resampling_transfer": {
+    "x_weights": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "y_weights": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+  },
+  "new_saturation_fraction": 0.0,
+  "photometric": {
+    "gains": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "offsets": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "gain_q8": [
+      256,
+      256,
+      256
+    ],
+    "offset_integer": [
+      0,
+      0,
+      0
+    ],
+    "fit_modes": [
+      "reference_stratified_affine",
+      "reference_stratified_affine",
+      "reference_stratified_affine"
+    ],
+    "populated_reference_levels": [
+      4,
+      5,
+      5
+    ]
+  },
+  "preparation_seconds": 0.45026199996937066,
+  "paired_sha256": "a6a8fdb80d4efa057ea1aefd76b326414f2d736fc1f1142a5ef8847f59288d9f",
+  "status": "COMPARED",
+  "hardware": {
+    "output_crc_verified": true,
+    "paired_sha256": "a6a8fdb80d4efa057ea1aefd76b326414f2d736fc1f1142a5ef8847f59288d9f",
+    "pl_id": 376440321,
+    "firmware": 91904,
+    "test_double": true
+  },
+  "residual": {
+    "median": 0.0,
+    "p90": 0.0,
+    "strong_fraction": 0.00134
+  },
+  "completion": {
+    "initial_pixels": 452,
+    "completed_pixels": 452,
+    "can_create_new_image_alarm": false
+  },
+  "decision": "REFERENCE_CHANGE_CANDIDATE",
+  "regions": [
+    {
+      "box": [
+        435,
+        170,
+        477,
+        200
+      ],
+      "pixels": 66,
+      "seeds": 66,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        482,
+        203,
+        495,
+        213
+      ],
+      "pixels": 22,
+      "seeds": 22,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        500,
+        216,
+        513,
+        225
+      ],
+      "pixels": 22,
+      "seeds": 22,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        536,
+        248,
+        549,
+        262
+      ],
+      "pixels": 17,
+      "seeds": 17,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        554,
+        267,
+        567,
+        282
+      ],
+      "pixels": 18,
+      "seeds": 18,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        572,
+        287,
+        585,
+        302
+      ],
+      "pixels": 19,
+      "seeds": 19,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        590,
+        307,
+        603,
+        322
+      ],
+      "pixels": 20,
+      "seeds": 20,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        608,
+        327,
+        621,
+        342
+      ],
+      "pixels": 19,
+      "seeds": 19,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        644,
+        366,
+        657,
+        380
+      ],
+      "pixels": 17,
+      "seeds": 17,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        662,
+        386,
+        675,
+        400
+      ],
+      "pixels": 17,
+      "seeds": 17,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        680,
+        405,
+        693,
+        419
+      ],
+      "pixels": 17,
+      "seeds": 17,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        698,
+        425,
+        711,
+        439
+      ],
+      "pixels": 17,
+      "seeds": 17,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        716,
+        444,
+        729,
+        458
+      ],
+      "pixels": 17,
+      "seeds": 17,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        752,
+        476,
+        765,
+        484
+      ],
+      "pixels": 27,
+      "seeds": 27,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        770,
+        485,
+        783,
+        493
+      ],
+      "pixels": 28,
+      "seeds": 28,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        788,
+        495,
+        801,
+        502
+      ],
+      "pixels": 28,
+      "seeds": 28,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        806,
+        504,
+        819,
+        512
+      ],
+      "pixels": 27,
+      "seeds": 27,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        824,
+        513,
+        837,
+        521
+      ],
+      "pixels": 27,
+      "seeds": 27,
+      "kind": "thin_surface_change"
+    },
+    {
+      "box": [
+        842,
+        523,
+        855,
+        530
+      ],
+      "pixels": 27,
+      "seeds": 27,
+      "kind": "thin_surface_change"
+    }
+  ],
+  "candidate_pixels": 452
+}

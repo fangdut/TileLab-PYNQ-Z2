@@ -1,4 +1,12 @@
-# TileLab 单片瓷砖：V166参照改进与实板验证
+# TileLab 单片瓷砖：V1.67.2完整参照检测工程
+
+当前分支 `single-tile-reference-v167` 已集成完整HDMI采集、DDR全图FPGA差分、按花色标定与网页工作站。[运行与重新构建](project/pynq_z2_tile_v1_53/README_REFERENCE_V167.md)、[设计报告](project/pynq_z2_tile_v1_53/reports/v167/design_report.pdf)、[实际开发板演示剪辑](project/pynq_z2_tile_v1_53/reports/v167/demo_replay.mp4)、[当前验收状态](project/pynq_z2_tile_v1_53/reports/v167/STATUS.json)。24张实际HDMI回放通过，12幅差异图共300万像素与独立参考一致，五种协议故障均恢复。所有图片均为明确标识的程序生成测试图。
+
+[完整提交候选包（约63 MB）](deliverables/tilelab_reference_v167_r2.zip)包含376个文件：源工程、匹配BIT/XSA/ELF、构建与下载脚本、独立演示图源、报告、视频、失败样本及实板原始记录。[包哈希与解压验证](deliverables/package_info.json)。工程内容已经打包；正式参赛前仍需核对当届模板及补充实体准确率证据。
+
+原创TileLab代码与文档已由项目所有者授权采用[MIT许可](LICENSE)，适用范围见[LICENSE_SCOPE.md](LICENSE_SCOPE.md)。第三方Digilent/AMD/Xilinx代码与其他材料保留原有许可，见[第三方声明](THIRD_PARTY_NOTICES.md)。[许可状态](project/pynq_z2_tile_v1_53/reports/v167/LICENSE_STATUS.json)。
+
+最新108个程序用例：60张正常图无报警、无拒判；36张人工细线检出33张，保留3张弱单像素漏检；12张超限位姿均拒判。**工程链路通过，独立实体瓷砖准确率尚未验收**。电脑负责配准和连通区域，PL负责完整图像定点差分；输入720p60，完整检测约0.98秒。完整交付包及校验结果见下方提交材料。以下内容为历史阶段说明。
 
 最新研究在 `single-tile-reference-v166` 分支：[V166运行与验收说明](project/pynq_z2_tile_v1_53/README_REFERENCE_V166.md)、[图文结果与实板证据](project/pynq_z2_tile_v1_53/reports/v166/reference_report.html)。按花色良品参照、固定视野与光照推进，改进了JPEG误报并保留弱线失败。实际板测包括V164检测器的50张HDMI回放和独立新窗口算术自检；**完整V166参照视频算法尚未集成，彩绘／多材质独立准确率尚未验收**。没有新分类模型训练。
 
