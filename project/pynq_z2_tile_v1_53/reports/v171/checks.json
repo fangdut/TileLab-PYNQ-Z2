@@ -1,0 +1,25 @@
+{
+  "scope": "STANDALONE_RTL_ONLY_NOT_HDMI_BOARD_ACCEPTANCE",
+  "checks": [
+    {
+      "test": "scheduler",
+      "pass_result": true,
+      "log_sha256": "5e6055ba174d29ddf8168d90a35e5951d943c7b363ef2c81480772f973486f49"
+    },
+    {
+      "test": "writer",
+      "pass_result": true,
+      "log_sha256": "cb1e640db9f0ffb27905c6b1e7a5888c10b8d4ecd14dee04f1981a5f2c05f04d"
+    },
+    {
+      "test": "roi",
+      "pass_result": true,
+      "log_sha256": "de1277c1ff014984a5e9534cdb04c6d63fc6eac258a03d5d3f867120b97b9983"
+    },
+    {
+      "test": "async_fifo_reset",
+      "pass_result": true,
+      "log_sha256": "cd4970122e6f78905d0ecba7e678354a7828ec2605076970a30512b6b144a5e5"
+    }
+  ]
+}

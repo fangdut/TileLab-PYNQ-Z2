@@ -76,10 +76,21 @@ class Board:
         record=dict(scope='BOARD_FULL_PL_INFERENCE',input=str(path.resolve()),input_file_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
             rgb_crc32=h[12],model_sha256=model['sha256'],model_crc32=h[6],pl_identity=h[5],boot_identity=h[8],
             width=width,height=height,pl_image_alarm=int(meta[2]),pl_peak=float(score),pl_threshold=float(threshold),
-            pl_mask_pixels=int(meta[6]),pl_completed_steps=int(meta[8]),ps_global_timer_ticks=h[9]+(h[10]<<32),ps_timer_hz=h[11],pl_engine_seconds=(h[9]+(h[10]<<32))/h[11] if h[11] else None,wall_seconds=wall,
+            pl_mask_pixels=int(meta[6]),pl_completed_steps=int(meta[8]),pl_frame_sequence=int(meta[9]),ps_global_timer_ticks=h[9]+(h[10]<<32),ps_timer_hz=h[11],pl_engine_seconds=(h[9]+(h[10]<<32))/h[11] if h[11] else None,wall_seconds=wall,
             result_crc32=h[4],result_sha256=hashlib.sha256(data).hexdigest(),reply_header=list(h),cpu_detection=False,gpu_detection=False)
         (output/'evidence.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),encoding='utf8')
         print(json.dumps(record,ensure_ascii=False),flush=True);return record
+    def auto_benchmark(self,frames,model,last_photo,output):
+        h,data,wall=self.request(6,offset=frames);words=struct.unpack('<16I',data)
+        if words[0]!=0x1700b001 or words[1]!=frames or words[2]<frames or words[2]>frames+2:raise RuntimeError('Invalid PL auto-restart completion count')
+        if (words[4]-words[3])&0xffffffff!=words[2] or words[5]!=last_photo['rgb_crc32'] or words[6]!=model['crc32'] or h[8]!=last_photo['boot_identity']:raise RuntimeError('Auto-restart source/model/boot mismatch')
+        seconds=(h[9]+(h[10]<<32))/h[11]
+        record=dict(scope='PHYSICAL_PL_AUTORESTART_FIXED_FRAME_MICROBENCHMARK',frames=words[2],requested=frames,
+            first_sequence=words[3],last_sequence=words[4],elapsed_engine_seconds=seconds,sustained_pl_fps=words[2]/seconds,
+            wall_seconds=wall,arm_start_writes=1,hardware_auto_restart=True,new_video_frames=False,
+            model_sha256=model['sha256'],source_rgb_crc32=words[5],boot_identity=h[8],pl_identity=h[5],
+            cpu_detection=False,gpu_detection=False,limitation='Repeated fixed DDR frame; not continuous HDMI/video end-to-end throughput')
+        output.write_text(json.dumps(record,indent=2),encoding='utf8');print(json.dumps(record),flush=True);return record
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--board',default='192.168.33.10');p.add_argument('--model',type=Path,required=True);p.add_argument('--image',type=Path);p.add_argument('--out',type=Path);p.add_argument('--status',action='store_true');a=p.parse_args()

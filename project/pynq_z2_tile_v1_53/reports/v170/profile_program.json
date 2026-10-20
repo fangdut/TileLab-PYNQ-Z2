@@ -1,0 +1,33 @@
+{
+  "boot_identity": 3056809872,
+  "build": {
+    "elf_sha256": "2bcb80d3880f8c3e3fda5fe19df23b81a5e42649cb6145a9924df05fea394886",
+    "xsa_sha256": "bec758120599167378460595b4d327bc066c59d7be66b51c17e6edd0b65513fa",
+    "bit_sha256": "a73e252cdc77f0c3cb9f659aa63c366d68ff92efd54524f6b74a8883b6c23b28",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "reset_proof": {
+      "auxiliary_reset_active_high": 0,
+      "auxiliary_level": 1,
+      "debug_reset": 0,
+      "clock_locked": 1,
+      "pl_reset_release_checked": true
+    },
+    "sources": {
+      "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+      "main.c": "4ec55067b7c3e3d6a0f16646c6adbc6875d6eb5146ff11e7270d70574976c214",
+      "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+      "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+    },
+    "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE",
+    "reused_platform": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_sw04.sdk\\texture_platform\\export\\texture_platform\\texture_platform.xpfm",
+    "reused_platform_sha256": "a1dd14cd1d70141993cc8d43b5434a3f1ff5e2fca9edb57dc0528d3449f74ec2",
+    "profiling": "PS observes PL progress/timestamps only; no detection math"
+  },
+  "implementation": {
+    "setup_slack_ns": 0.152,
+    "hold_slack_ns": 0.022,
+    "drc_errors": 0,
+    "pl_clock_mhz": 100
+  },
+  "flash_written": false
+}

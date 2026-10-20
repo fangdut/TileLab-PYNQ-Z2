@@ -34,7 +34,7 @@ def main():
     result=np.fromfile(a.out/'result.bin',dtype='<u4');grid=int(result[5]);actual=result[16:16+grid*grid].reshape(grid,grid)
     expected=np.load(a.profile/(a.image.stem+'_scores.npy'),allow_pickle=False)
     error=int(np.max(np.abs(actual.astype('i8')-expected)))
-    record=dict(scope='OFFLINE_FULL_INTEGER_C_NOT_RTL_OR_BOARD',source_sha256=sha(a.source),model_sha256=sha(a.profile/'model.bin'),
+    record=dict(scope='OFFLINE_FULL_INTEGER_C_NOT_RTL_OR_BOARD',source_sha256=sha(a.out/'kernel.cpp'),model_sha256=sha(a.profile/'model.bin'),
         image_sha256=sha(a.image),max_grid_error=error,alarm=int(result[2]),peak=int(result[3]),threshold=int(result[4]),
         mask_pixels=int(result[6]),steps=int(result[8]),elapsed_seconds=time.perf_counter()-started)
     save(a.out/'check.json',record);print(json.dumps(record),flush=True)

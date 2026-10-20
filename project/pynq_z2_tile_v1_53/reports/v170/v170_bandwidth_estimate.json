@@ -1,0 +1,10 @@
+{
+  "scope": "STATIC_SCHEDULE_ESTIMATE_NOT_MEASURED_FPS",
+  "depthwise_input_bytes_before": 88332160,
+  "depthwise_input_bytes_after": 7607936,
+  "reduction": 11.610528795194913,
+  "ordinary_convolution_input_bytes": 14468608,
+  "convolution_output_bytes": 6203008,
+  "residual_read_write_bytes": 677376,
+  "note": "Excludes AXI transaction overhead; board timing remains required"
+}

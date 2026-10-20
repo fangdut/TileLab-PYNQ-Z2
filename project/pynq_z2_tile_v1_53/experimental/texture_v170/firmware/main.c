@@ -26,11 +26,14 @@
 #define MODEL 0x08000000u
 #define WORK 0x10000000u
 #define STATUS 0x05f00000u
+#define TRACE ((volatile uint64_t*)0x05f01000u)
 static struct netif iface;
 struct netif *echo_netif=&iface;
 static struct tcp_pcb *client;
 static uint32_t req[16],reply[16],rx_used,rx_bytes,rx_crc,tx_pos,tx_ack,tx_bytes;
 static uint32_t upload_pos,model_ready,busy,boot,source_crc,reply_ready;
+static uint32_t last_width,last_height,repeat_start,repeat_target,repeat_summary[16];
+static uint32_t trace_step,trace_scores,trace_mask;
 static unsigned char *rx_dst;
 static const unsigned char *payload;
 static uint32_t table[256];
@@ -89,7 +92,12 @@ static void completed(void){
   model_ready=1;respond(0,0,0);return;
  }
  if(req[1]==5){
-  source_crc=req[7];elapsed=0;
+  source_crc=req[7];last_width=req[5];last_height=req[6];elapsed=0;
+  /* Debug/control only: timestamps observe PL progress; no image arithmetic. */
+  {unsigned i;for(i=0;i<100;i++)TRACE[i]=0;}
+  trace_step=trace_scores=trace_mask=0;
+  ((volatile uint32_t*)OUT)[16]=0xffffffffu;
+  ((volatile uint32_t*)OUT)[16+MODEL_GRID*MODEL_GRID]=0xffffffffu;
   Xil_Out32(IP+0x10,MODEL);Xil_Out32(IP+0x14,0);
   Xil_Out32(IP+0x1c,WORK);Xil_Out32(IP+0x20,0);
   Xil_Out32(IP+0x28,RGB);Xil_Out32(IP+0x2c,0);
@@ -98,12 +106,18 @@ static void completed(void){
   __asm__ volatile("dsb sy" ::: "memory");
   busy=1;XTime_GetTime(&started);Xil_Out32(IP,1);
  }
+ if(req[1]==6){
+  repeat_start=((volatile uint32_t*)OUT)[9];repeat_target=req[4];elapsed=0;
+  req[5]=last_width;req[6]=last_height;busy=2;XTime_GetTime(&started);
+  Xil_Out32(IP,0x81u); /* PL auto-restart: no ARM start for subsequent frames. */
+ }
 }
 static int start_request(void){
- if(req[0]!=REQ||req[15]!=crc(req,60)||req[1]<1||req[1]>5||Xil_In32(0x41200000u)!=ID)return 0;
+ if(req[0]!=REQ||req[15]!=crc(req,60)||req[1]<1||req[1]>6||Xil_In32(0x41200000u)!=ID)return 0;
  if(busy)return 0;
  rx_bytes=0;rx_crc=~0u;rx_dst=0;
- if(req[1]==1||req[1]==4){if(req[3])return 0;}
+ if(req[1]==6){if(req[3]||!model_ready||!last_width||!req[4]||req[4]>1000u)return 0;}
+ else if(req[1]==1||req[1]==4){if(req[3])return 0;}
  else if(req[1]==2){if(req[3]||req[4]!=MODEL_BYTES||req[8]!=MODEL_CRC)return 0;}
  else if(req[1]==3){
   if(model_ready||req[4]!=upload_pos||!req[3]||req[3]>1048576u||req[3]>MODEL_BYTES-upload_pos)return 0;
@@ -161,10 +175,29 @@ int main(void){
   if(now-slow>=COUNTS_PER_SECOND/2){tcp_slowtmr();slow=now;}
   if(now-link_time>=COUNTS_PER_SECOND){eth_link_detect(&iface);etharp_tmr();ip_reass_tmr();link_time=now;}
   xemacif_input(&iface);
-  if(now-last_poll>=COUNTS_PER_SECOND/1000){
+  if(now-last_poll>=COUNTS_PER_SECOND/10000){
    last_poll=now;
-   if(busy&&(Xil_In32(IP)&2u)){
+   if(busy==1&&now>=started){
+    unsigned step=((volatile uint32_t*)OUT)[8];
+    if(step&&step<=96&&step!=trace_step){TRACE[step]=now-started;trace_step=step;}
+    if(!trace_scores&&((volatile uint32_t*)OUT)[16]!=0xffffffffu){TRACE[97]=now-started;trace_scores=1;}
+    if(!trace_mask&&((volatile uint32_t*)OUT)[16+MODEL_GRID*MODEL_GRID]!=0xffffffffu){TRACE[98]=now-started;trace_mask=1;}
+   }
+   if(busy==2 && ((volatile uint32_t*)OUT)[9]-repeat_start>=repeat_target){
+    Xil_Out32(IP,0);busy=3; /* Disable restart, then drain the in-flight frame. */
+   }
+   if(busy==3 && (Xil_In32(IP)&4u)){
+    unsigned i;busy=0;elapsed=now-started;
+    for(i=0;i<16;i++)repeat_summary[i]=0;
+    repeat_summary[0]=0x1700b001u;repeat_summary[1]=repeat_target;
+    repeat_summary[2]=((volatile uint32_t*)OUT)[9]-repeat_start;
+    repeat_summary[3]=repeat_start;repeat_summary[4]=((volatile uint32_t*)OUT)[9];
+    repeat_summary[5]=source_crc;repeat_summary[6]=MODEL_CRC;
+    if(client)respond(0,repeat_summary,sizeof(repeat_summary));
+   }
+   if(busy==1&&(Xil_In32(IP)&2u)){
     unsigned bytes;busy=0;elapsed=now-started;
+    TRACE[99]=elapsed;
     __asm__ volatile("dsb sy" ::: "memory");
     bytes=(16u+MODEL_GRID*MODEL_GRID+req[5]*req[6])*4u;
     if(client)respond(((volatile uint32_t*)OUT)[1]?6:0,(const void*)OUT,bytes);

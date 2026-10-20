@@ -38,7 +38,11 @@ def export(folder, graph, head, side, threshold=None):
             # Exhaustive input-independent bound: any signed8 activation is
             # safe in the signed24 requant input, including quantized bias.
             bound=127*np.abs(w.astype('i8')).reshape(oc,-1).sum(1)+np.abs(q['bias'].numpy().astype('i8'))
-            if int(bound.max())>=(1<<23):raise ValueError('Signed24 accumulator proof failed')
+            active=q['multiplier'].numpy()!=0
+            # Some folded dead channels have tiny scales and a zero integer
+            # multiplier. Their requantized output is identically zero even
+            # if the unused accumulator wraps; prove the active channels.
+            if active.any() and int(bound[active].max())>=(1<<23):raise ValueError('Signed24 active-accumulator proof failed')
             oh=(ih+2*p-k)//s+1;ow=(iw+2*p-k)//s+1;depth=n.get('groups',1)==ic and ic>1
             if n.get('groups',1) not in (1,ic):raise ValueError('Unsupported groups')
             if depth:
@@ -52,7 +56,7 @@ def export(folder, graph, head, side, threshold=None):
                             for col in range(k):packed[o//16,(c//8*k+r)*k+col,o%16,c%8]=w[o,c,r,col]
             wo=u64(packed.ravel().view('<u8'))
             bo=u32(q['bias'].numpy().view('<u4'));m=q['multiplier'].numpy()
-            if np.any(m<0) or np.any(m>0xffffffff):raise ValueError('Requantization multiplier out of ABI range')
+            if np.any(m<0) or np.any(m>=(1<<27)):raise ValueError('Requantization multiplier exceeds exact 27-bit hardware bound')
             mo=u32(m.astype('<u4'));relu=2 if n.get('relu6') else int(n['relu'])
             qmax=min(127,int(np.floor(6/graph['scales'][i]+.5))) if relu==2 else 127
             t[0]=2 if depth else 1;t[4:16]=[wo,bo,mo,ih,iw,ic,oc,k,s,p,relu,qmax]

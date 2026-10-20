@@ -1,0 +1,17 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Oct 20 11:58:13 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/writer_test/xsim_script.tcl
+# xsim {writer_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PL_DDR_WRITER_CRC_LENGTH_BACKPRESSURE_COMMIT_PASS
+$finish called at time : 4630 ns : File "D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/video_v171/sim/tb_writer.sv" Line 54
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 11:58:15 2026...

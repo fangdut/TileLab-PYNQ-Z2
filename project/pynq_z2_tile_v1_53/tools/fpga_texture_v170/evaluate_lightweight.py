@@ -58,7 +58,7 @@ class Graph:
         return (x-torch.tensor([.485,.456,.406])[None,:,None,None])/torch.tensor([.229,.224,.225])[None,:,None,None]
 
     @torch.inference_mode()
-    def forward(self, path, integer=False, calibrate=False, output_codes=False):
+    def forward(self, path, integer=False, calibrate=False, output_codes=False, return_values=False):
         x=self.image(path)
         values={0:round_away(x/self.scales[0]).clamp(-127,127).to(torch.int32) if integer else x}
         if calibrate:self.maxima[0]=max(self.maxima.get(0,0),float(x.abs().max()))
@@ -92,6 +92,7 @@ class Graph:
             values[i]=x
             if calibrate:self.maxima[i]=max(self.maxima.get(i,0),float(x.abs().max()))
         self.macs=macs
+        if return_values:return values
         a=values[self.fa].float(); b=values[self.fb].float()
         if output_codes:
             assert integer
