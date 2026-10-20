@@ -1,0 +1,18 @@
+{
+  "tp": 84,
+  "fp": 0,
+  "fn": 0,
+  "tn": 33,
+  "accuracy": 1.0,
+  "recall": 1.0,
+  "cracks_detected": 17,
+  "threshold": 10908,
+  "projection_shift": 8,
+  "projection_scale": 0.0013927451916732273,
+  "cnn_macs_per_frame": 209861120,
+  "projection_clipped_values": 0,
+  "board_verified": false,
+  "rtl_verified": false,
+  "all_integer_reference": true,
+  "elapsed_seconds": 72.74179559998447
+}

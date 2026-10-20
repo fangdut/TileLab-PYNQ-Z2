@@ -1,0 +1,112 @@
+{
+  "version": "V169",
+  "status": "INITIAL_FULL_PL_MIGRATION_PASSED",
+  "scope": "Two real-photo board cases; not complete competition acceptance or full benchmark",
+  "part": "xc7z020clg400-1",
+  "implementation": {
+    "setup_slack_ns": 3.924,
+    "hold_slack_ns": 0.025,
+    "drc_errors": 0,
+    "pl_clock_mhz": 50
+  },
+  "programmed_build": {
+    "elf_sha256": "a306be8bb15eb93e12ae4775d210c4fcaf19564668124be9f8c21e24d65602f5",
+    "xsa_sha256": "057f1b04a55908f2b28040365929c93ccc7348ef418ac62a7b6a41a50f1388db",
+    "bit_sha256": "00f028cd8f3433f4a5ed0d57da8a841f94805d074a59aa24afd203a1a325b991",
+    "model_sha256": "a989d40268baa1786955defc8706bc1744b31194e4cdda292aacf90cf2a75a0b",
+    "reset_proof": {
+      "auxiliary_reset_active_high": 0,
+      "auxiliary_level": 1,
+      "debug_reset": 0,
+      "clock_locked": 1,
+      "pl_reset_release_checked": true
+    },
+    "sources": {
+      "lscript.ld": "eb0676eb598323aa931bbd51b9ec7c56b0ba60f8d9a607292cfd9b2bab799a79",
+      "main.c": "ba2d17e0199324348a88ad4b6089757af74d4cda6fdce0c1f1d51416a43516fb",
+      "model_identity.h": "44810fc6f79e60a61ff06f6b9f152ba3eeb9086d909417062cd7be9f597037dc",
+      "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+    },
+    "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE"
+  },
+  "hls_source_sha256": "1bf5bab0749159f232f8cb5f9ba986969009ff5df40873f7e059df6953de24d3",
+  "model_sha256": "a989d40268baa1786955defc8706bc1744b31194e4cdda292aacf90cf2a75a0b",
+  "cases": [
+    {
+      "id": "6621d769324f6e05d5838381",
+      "label": "good",
+      "max_grid_error": 1.3113021850585938e-06,
+      "alarm_matches_frozen_reference": true,
+      "mask_iou_with_frozen_reference": 1.0,
+      "mask_pixel_agreement": 1.0,
+      "ground_truth_correct": true,
+      "wall_seconds": 554.1913764000055,
+      "result_sha256": "808ef081b8caea520c05f61fd0d0cc783e6dd1d130963decf58fae59adb7b262",
+      "boot_identity": 3931605087,
+      "input_file_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+      "rgb_crc32": 2316138246,
+      "model_crc32": 395849756,
+      "result_crc32": 1075974584
+    },
+    {
+      "id": "6621d769324f6e05d583835f",
+      "label": "crack",
+      "max_grid_error": 7.152557373046875e-07,
+      "alarm_matches_frozen_reference": true,
+      "mask_iou_with_frozen_reference": 1.0,
+      "mask_pixel_agreement": 1.0,
+      "ground_truth_correct": true,
+      "wall_seconds": 553.0507483999827,
+      "result_sha256": "c3e1e6ba3c6330ce0acbcf1336043608699fa9c416ff7195d9761cd25e0705a2",
+      "boot_identity": 3931605087,
+      "input_file_sha256": "d10be1f6ec065f83d54c03b4093d7d87dfcc77617d8eb0df9f5a053aece4becf",
+      "rgb_crc32": 2125595710,
+      "model_crc32": 395849756,
+      "result_crc32": 2740006245
+    }
+  ],
+  "pc_runtime": [
+    "image file decoding",
+    "RGB packing",
+    "TCP transport",
+    "display",
+    "evidence saving"
+  ],
+  "ps_runtime": [
+    "TCP",
+    "CRC",
+    "buffer ownership",
+    "accelerator start/poll"
+  ],
+  "pl_runtime": [
+    "resize",
+    "normalize",
+    "all CNN convolutions",
+    "residual additions",
+    "pooling",
+    "PCA projection",
+    "nearest normal search",
+    "smoothing",
+    "image alarm",
+    "pixel mask"
+  ],
+  "cpu_or_gpu_detection_fallback": false,
+  "hdmi_integrated": false,
+  "offline_historical_benchmark": {
+    "tp": 84,
+    "fp": 1,
+    "fn": 0,
+    "tn": 32,
+    "accuracy": 0.9914529914529915,
+    "recall": 1.0,
+    "false_positive_rate": 0.030303030303030304,
+    "cracks_detected": 17,
+    "threshold": 1.5422118888626097,
+    "interpretation": "Offline migration reference only, not board evidence"
+  },
+  "limitations": [
+    "Board cases are an initial normal/crack numerical migration check, not a 117-image board accuracy measurement",
+    "MVTec Tile material only; arbitrary painted/mixed materials and walls unvalidated",
+    "FP32 large network is not real-time; use measured per-image latency"
+  ]
+}

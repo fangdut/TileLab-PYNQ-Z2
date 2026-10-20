@@ -1,0 +1,45 @@
+{
+  "scope": "INITIAL_BOARD_MIGRATION_CHECK_NOT_FULL_ACCURACY_BENCHMARK",
+  "cases": 2,
+  "all_alarms_match": true,
+  "all_grid_errors_below_0_001": true,
+  "max_grid_error": 1.3113021850585938e-06,
+  "mean_wall_seconds": 553.6210623999941,
+  "cases_details": [
+    {
+      "id": "6621d769324f6e05d5838381",
+      "label": "good",
+      "max_grid_error": 1.3113021850585938e-06,
+      "alarm_matches_frozen_reference": true,
+      "mask_iou_with_frozen_reference": 1.0,
+      "mask_pixel_agreement": 1.0,
+      "ground_truth_correct": true,
+      "wall_seconds": 554.1913764000055,
+      "result_sha256": "808ef081b8caea520c05f61fd0d0cc783e6dd1d130963decf58fae59adb7b262"
+    },
+    {
+      "id": "6621d769324f6e05d583835f",
+      "label": "crack",
+      "max_grid_error": 7.152557373046875e-07,
+      "alarm_matches_frozen_reference": true,
+      "mask_iou_with_frozen_reference": 1.0,
+      "mask_pixel_agreement": 1.0,
+      "ground_truth_correct": true,
+      "wall_seconds": 553.0507483999827,
+      "result_sha256": "c3e1e6ba3c6330ce0acbcf1336043608699fa9c416ff7195d9761cd25e0705a2"
+    }
+  ],
+  "offline_historical_benchmark": {
+    "tp": 84,
+    "fp": 1,
+    "fn": 0,
+    "tn": 32,
+    "accuracy": 0.9914529914529915,
+    "recall": 1.0,
+    "false_positive_rate": 0.030303030303030304,
+    "cracks_detected": 17,
+    "threshold": 1.5422118888626097,
+    "interpretation": "Offline migration reference only, not board evidence"
+  },
+  "claim": "Two initial real-photo board cases passed. This is not a 117-image board accuracy measurement or a general-material validation."
+}

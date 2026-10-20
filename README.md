@@ -1,28 +1,23 @@
-# TileLab 单片瓷砖：V1.67.2完整参照检测工程
+# TileLab FPGA 实拍瓷砖检测
 
-当前分支 `single-tile-reference-v167` 已集成完整HDMI采集、DDR全图FPGA差分、按花色标定与网页工作站。[运行与重新构建](project/pynq_z2_tile_v1_53/README_REFERENCE_V167.md)、[设计报告](project/pynq_z2_tile_v1_53/reports/v167/design_report.pdf)、[实际开发板演示剪辑](project/pynq_z2_tile_v1_53/reports/v167/demo_replay.mp4)、[当前验收状态](project/pynq_z2_tile_v1_53/reports/v167/STATUS.json)。24张实际HDMI回放通过，12幅差异图共300万像素与独立参考一致，五种协议故障均恢复。所有图片均为明确标识的程序生成测试图。
+目标是让图像预处理、特征提取和缺陷判定全部运行在 PYNQ-Z2 的 PL 中，电脑与 ARM 仅负责输入、传输、控制和显示。
 
-[完整提交候选包（约63 MB）](deliverables/tilelab_reference_v167_r2.zip)包含376个文件：源工程、匹配BIT/XSA/ELF、构建与下载脚本、独立演示图源、报告、视频、失败样本及实板原始记录。[包哈希与解压验证](deliverables/package_info.json)。工程内容已经打包；正式参赛前仍需核对当届模板及补充实体准确率证据。
+| 阶段 | 已有证据 | 尚未完成 |
+|---|---|---|
+| V169 完整浮点 PL 基线 | 两张真实良品/裂纹照片已上板，评分和掩膜与参考一致；单张约 553 秒 | 无实时能力，非完整准确率验收 |
+| V170 全整数实时候选 | CNN 计算量约降至 1/175，模型 751,760 字节；历史 117 张真实照片全部判对，完整 HLS C++ 的评分和掩膜逐点一致 | 实际资源/时序收敛、上板帧率、持续 HDMI 输入验证 |
 
-原创TileLab代码与文档已由项目所有者授权采用[MIT许可](LICENSE)，适用范围见[LICENSE_SCOPE.md](LICENSE_SCOPE.md)。第三方Digilent/AMD/Xilinx代码与其他材料保留原有许可，见[第三方声明](THIRD_PARTY_NOTICES.md)。[许可状态](project/pynq_z2_tile_v1_53/reports/v167/LICENSE_STATUS.json)。
+117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
 
-最新108个程序用例：60张正常图无报警、无拒判；36张人工细线检出33张，保留3张弱单像素漏检；12张超限位姿均拒判。**工程链路通过，独立实体瓷砖准确率尚未验收**。电脑负责配准和连通区域，PL负责完整图像定点差分；输入720p60，完整检测约0.98秒。完整交付包及校验结果见下方提交材料。以下内容为历史阶段说明。
+- [工程状态与职责划分](FPGA_MIGRATION_STATUS.md)
+- [V169 源码、构建、部署说明](project/pynq_z2_tile_v1_53/experimental/texture_v169/README.md)
+- [V169 实板验收证据](project/pynq_z2_tile_v1_53/reports/v169/acceptance.json)
+- [V169 两张照片的实板原始记录](project/pynq_z2_tile_v1_53/reports/v169/board_evidence.zip)
+- [V169 匹配 BIT/XSA/ELF/HLS 编译包](project/pynq_z2_tile_v1_53/reports/v169/V169_FPGA_Migration_Verified_compiled.zip)
+- [V170 冻结整数模型与说明](project/pynq_z2_tile_v1_53/models/texture_v170_r1/README.md)
+- [V170 全部 117 张 C++ 算术回归](project/pynq_z2_tile_v1_53/reports/v170/full_c_summary.json)
+- [历史 V167 完整工程](https://github.com/fangdut/TileLab-PYNQ-Z2/tree/single-tile-reference-v167)
 
-最新研究在 `single-tile-reference-v166` 分支：[V166运行与验收说明](project/pynq_z2_tile_v1_53/README_REFERENCE_V166.md)、[图文结果与实板证据](project/pynq_z2_tile_v1_53/reports/v166/reference_report.html)。按花色良品参照、固定视野与光照推进，改进了JPEG误报并保留弱线失败。实际板测包括V164检测器的50张HDMI回放和独立新窗口算术自检；**完整V166参照视频算法尚未集成，彩绘／多材质独立准确率尚未验收**。没有新分类模型训练。
+V169 的约 100 MB 模型可由冻结压缩配置与官方预训练权重精确重建，见源码说明；本地完整运行包包含该模型。V170 model.bin 已随源码保存。Python/Torch 算法脚本仅用于离线开发、标定和核对，板端运行不使用电脑 CPU/GPU 推理后备。
 
-`single-tile-v164`、`single-tile-reference-v165` 分支保留此前快照；以下V164验证与其报告属于该阶段的历史证据。当前研究状态以 `reports/v166/STATUS.json` 为准。原V164部署包保持原字节；脱离外接显示器依赖的HDMI通路另存在 `releases/v166_headless_transport`，不是V166参照检测算法。
-
-目标：先完成单片检测，再考虑多砖墙面与新模型训练。目标材料包含彩绘与多种材质。
-
-**当前为可复现的工程候选，彩绘／多材质高准确率尚未达标，不是已验收的比赛最终版。** 保留失败样本与两种输入链路的差异，不以历史纹理结果替代目标材料验证。
-
-- [项目说明与运行方法](project/pynq_z2_tile_v1_53/README.md)
-- [当前验证状态](project/pynq_z2_tile_v1_53/reports/v164/QUALIFICATION.json)
-- [回归图片与失败案例](project/pynq_z2_tile_v1_53/reports/v164/validation.html)
-- [当前部署包](project/pynq_z2_tile_v1_53/releases/v164/DEPLOYMENT.json)：仅在匹配 BIT、XSA、ELF 完成编译并通过时序后生成。
-
-本次沿用已经冻结的 V159 整数树检测器，没有进行新模型训练。在线检测在 FPGA PL；ARM 与电脑工作站负责传输、复核和留证。离线 Python 参考程序独立存放，不能当作上板测试。
-
-V1.53 原工程、历史报告和提交文档保留用于追溯；其板测通过结论、旧 BIT/ELF 与原始 `PACKAGE_MANIFEST.json` 不代表本次 V1.64 的验收。当前入口为 `host/start_single_tile.ps1` 和 `scripts/program_single_tile.py`，不会自动下载历史固件。
-
-数据来源和许可见项目 [数据说明](project/pynq_z2_tile_v1_53/DATA_PROVENANCE_V164.md)。未上传许可未澄清的 HFENet 图片包。
+原创代码采用 [MIT](LICENSE)。MVTec 实拍照片、数据派生的模型/配置和相关证据保留 CC BY-NC-SA 4.0，AMD/Xilinx IP 与上游预训练权重保留原许可；详见 [LICENSE_SCOPE.md](LICENSE_SCOPE.md)。
