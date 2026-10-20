@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>TileLab 单片良品参照检测</title>
+<style>body{font:16px system-ui;background:#edf2f5;color:#19303f;margin:32px;max-width:1200px}main{background:white;border-radius:16px;padding:28px}h1{margin:0 0 12px}button,input{font:inherit;padding:12px;border:1px solid #a7bac5;border-radius:8px;margin:6px}button{cursor:pointer;background:#dceef5}button:disabled{opacity:.5}#status{padding:16px;background:#eff5f7;border-radius:8px;white-space:pre-wrap}img{width:100%;max-height:680px;object-fit:contain}small{display:block;color:#536d79;margin:16px 0}pre{white-space:pre-wrap;font-size:13px}</style>
+<main><h1>TileLab · 单片良品参照检测</h1><p>固定视野 500×500 · 按花色标定 · 全表面检查</p>
+<label>花色编号 <input id="pattern" value="pattern_01" maxlength="64"></label>
+<label><input id="good" type="checkbox">当前画面为该花色完整良品</label><br>
+<button onclick="act('calibrate')">保存良品参照</button><button onclick="act('inspect')">检测当前瓷砖</button><button onclick="state()">检查开发板连接</button>
+<small>请将完整单片瓷砖置于固定视野，使用一致的拍摄位置和光照。检测的是相对良品的表面变化；拒绝检测时需要检查输入，无变化候选仍需人工复核。独立实体瓷砖准确率尚未验收。</small>
+<div id="status">正在读取开发板状态…</div><img id="preview" hidden><details><summary>结果与验证记录</summary><pre id="detail"></pre></details></main>
+<script>
+const box=document.querySelector('#status'),detail=document.querySelector('#detail'),preview=document.querySelector('#preview');
+async function state(){try{let r=await fetch('/api/state'),d=await r.json();if(!r.ok)throw Error(d.error);box.textContent='开发板已连接 · '+d.partition;detail.textContent=JSON.stringify(d,null,2)}catch(e){box.textContent='连接失败：'+e.message}}
+async function act(op){document.querySelectorAll('button').forEach(b=>b.disabled=true);box.textContent=op==='calibrate'?'正在采集并保存良品参照…':'正在采集、配准并由 FPGA 计算整幅差异图…';try{let r=await fetch('/api/action',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({op,pattern:document.querySelector('#pattern').value,declared_good:document.querySelector('#good').checked})}),d=await r.json();if(!r.ok)throw Error(d.error);box.textContent=d.status==='CALIBRATED'?'良品参照已保存':d.status==='REJECTED_INPUT'?'输入不满足检测条件，请复核：'+d.reason:d.alarm?'发现表面变化候选，请复核':'未发现表面变化候选，仍需复核';detail.textContent=JSON.stringify(d,null,2);preview.src='/preview?'+Date.now();preview.hidden=false}catch(e){box.textContent='操作失败：'+e.message}finally{document.querySelectorAll('button').forEach(b=>b.disabled=false)}}
+state();</script></html>
