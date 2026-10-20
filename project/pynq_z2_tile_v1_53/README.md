@@ -100,3 +100,7 @@ $env:TILE_SIM_OUT='D:/TileBuild/SingleTileCore01'
 目录名与旧 SDK 部分二进制沿用历史工程，旧 `system.bit`、旧 ELF、`reports/v153`、`reports/accepted_baseline` 和上级 `submission_documents` 都是历史留档，不能作为本版下载入口或验收依据。旧入口 `scripts/activate_current.py` 与 `host/start_station.ps1` 已转到新版本受检入口。
 
 使用者已确认按花色做良品参照标定。V165分支新增离线参照原型与独立整数差分RTL，见 [参照原型说明](README_REFERENCE_V165.md) 与 [当前报告](reports/v165/reference_report.html)。完整板端接入、同花色真实良品／裂纹配对和高准确率验收尚未完成。V164下载包与历史验证不包含新参照算法；之后才扩展多砖墙面，再决定是否训练新模型。
+# 当前版本：V1.67.2完整参照工程
+
+入口与重新构建请见[当前版本说明](README_REFERENCE_V167.md)，设计报告位于[reports/v167](reports/v167/design_report.pdf)。完整HDMI/DDR/PL差分链路已上板验证，配准和区域分析在电脑运行。实体瓷砖准确率尚未独立验收。以下保留历史版本说明。
+

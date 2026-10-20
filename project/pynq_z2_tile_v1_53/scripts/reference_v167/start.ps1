@@ -3,6 +3,7 @@ $ErrorActionPreference='Stop'
 $taskRoot=Split-Path -Parent $MyInvocation.MyCommand.Path
 if(Test-Path -LiteralPath (Join-Path $taskRoot 'project/host/reference_station.py')){$projectRoot=Join-Path $taskRoot 'project'}else{$projectRoot=Split-Path -Parent (Split-Path -Parent $taskRoot)}
 $taskRelease=Join-Path $projectRoot 'releases/v167'
+if(Test-Path -LiteralPath (Join-Path $projectRoot 'releases/v167_r2/DEPLOYMENT.json')){$taskRelease=Join-Path $projectRoot 'releases/v167_r2'}
 if(!(Test-Path -LiteralPath (Join-Path $taskRelease 'DEPLOYMENT.json'))){throw 'Missing sealed V167 deployment bundle'}
 if(Test-Path -LiteralPath (Join-Path $taskRoot 'PACKAGE_MANIFEST.json')){
  & $Python -B -X utf8 (Join-Path $projectRoot 'skill/verify_bundle.py') --root $taskRoot --manifest (Join-Path $taskRoot 'PACKAGE_MANIFEST.json')

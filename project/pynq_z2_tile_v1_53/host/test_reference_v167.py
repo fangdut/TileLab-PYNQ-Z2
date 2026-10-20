@@ -33,8 +33,11 @@ class Tests(unittest.TestCase):
             if seeded:words[20,20:41]=25|256|512
             r,m=frame_v167.finish(dict(status='PREPARED',paired_sha256='test',alarm=None),words,proof)
             self.assertEqual(r['alarm'],seeded)
-            self.assertEqual(int(m.sum()),41 if seeded else 0)
+            self.assertEqual(int(m.sum()),21 if seeded else 0)
             self.assertFalse(r['completion']['can_create_new_image_alarm'])
+        words=np.zeros((500,500),np.uint32);words[20,20:61]=20;words[20,20:41]=25|256|512
+        r,m=frame_v167.finish(dict(status='PREPARED',paired_sha256='test',alarm=None),words,proof)
+        self.assertTrue(r['alarm']);self.assertEqual(int(m.sum()),41)
     def test_one_directional_print_uses_both_physical_boundary_axes(self):
         reference=fixtures.frame('stripes');current=fixtures.capture(reference,dx=.75,dy=-.5,noise=.6,jpeg=96)
         r,pair,_,_=frame_v167.prepare(reference,current)
@@ -47,7 +50,9 @@ class Tests(unittest.TestCase):
         reference=np.full((500,500,3),[190,150,115],np.uint8);reference[25:50,25:250]=[65,100,190];reference[100:120,100:220]=[110,210,50]
         gain=np.array([.98,1.02,.97]);offset=np.array([2,-2,3]);current=np.clip(np.rint(reference*gain+offset),0,255).astype(np.uint8)
         fit,error=photometric_v167.fit(reference,current,frame_v167.policy());self.assertIsNone(error)
-        self.assertTrue(np.all(np.abs(np.asarray(fit['gains'])-1/gain)<.025));self.assertTrue(np.all(np.abs(fit['offsets'])<6))
+        normalized=np.clip(((current.astype(np.int32)*np.array(fit['gain_q8'])+128)>>8)+np.array(fit['offset_integer']),0,255)
+        difference=np.abs(reference.astype(np.int32)-normalized)
+        self.assertLessEqual(int(difference.max()),8);self.assertLessEqual(float(np.median(difference)),1);self.assertTrue(np.all(np.abs(fit['offsets'])<6))
     def test_full_metric_reconstruction_and_fingerprint(self):
         pair=np.zeros((500,500),dtype='<u8');fit=dict(gain_q8=[256]*3,offset_integer=[0]*3)
         with patch('reference_frame_tcp.socket.create_connection',return_value=Peer()):

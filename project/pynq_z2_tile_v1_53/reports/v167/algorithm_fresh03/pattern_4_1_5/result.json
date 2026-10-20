@@ -1,0 +1,175 @@
+{
+  "id": "pattern_4_1_5",
+  "kind": "line",
+  "group": null,
+  "passed": false,
+  "coverage": 0.0,
+  "pixel_precision": null,
+  "gt_pixels": 441,
+  "predicted_pixels": 0,
+  "tp": 0,
+  "parameters": {
+    "dx": -0.365571718129577,
+    "dy": 0.590648343766988,
+    "gains": [
+      0.9878905844330982,
+      0.9762597260229507,
+      0.9766241627431855
+    ],
+    "offsets": [
+      -2.7504185106198893,
+      0.5947232491434651,
+      -1.9566792409517013
+    ],
+    "noise": 0.9940700109053993,
+    "jpeg": 95,
+    "seed": 316790105
+  },
+  "version": "V1.67-host-prepared-FPGA-frame",
+  "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "declared_roi_pixels": 250000,
+  "inspected_pixels": 250000,
+  "alarm": false,
+  "manual_review_required": true,
+  "reference_array_sha256": "2e710b5eb4e7a5ff55a034ac4550554eb7b8ca9e6b72122b7c2be9fe82219559",
+  "current_array_sha256": "d30aff29b6d08729c7dbc33fd8d0ffdd31f22836cccea2b69e1f1ad85f35ff48",
+  "registration": {
+    "dx": -0.375,
+    "dy": 0.5625,
+    "correlation": 0.9990337253684201,
+    "peak_margin": 0.9793226422619647,
+    "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+    "boundary_axes": [
+      {
+        "shift": -0.375,
+        "correlation": 0.9998523884556241,
+        "peak_margin": 0.9917773569938045,
+        "edges": [
+          {
+            "correlation": 0.9998200251504024,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9998847517608457,
+            "drift": 0.0
+          }
+        ]
+      },
+      {
+        "shift": 0.5625,
+        "correlation": 0.9990337253684201,
+        "peak_margin": 0.9793226422619647,
+        "edges": [
+          {
+            "correlation": 0.998952025231389,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.999115425505451,
+            "drift": 0.0
+          }
+        ]
+      }
+    ],
+    "quadrant_drifts": [
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9871645569801331
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9921184778213501
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9912723898887634
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.985478401184082
+      }
+    ],
+    "pattern_correlation": 0.9894963502883911
+  },
+  "resampling_transfer": {
+    "x_weights": [
+      0.234375,
+      0.53125,
+      0.234375
+    ],
+    "y_weights": [
+      0.24609375,
+      0.5078125,
+      0.24609375
+    ],
+    "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+  },
+  "new_saturation_fraction": 0.0,
+  "photometric": {
+    "gains": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "offsets": [
+      5.0,
+      3.0,
+      5.0
+    ],
+    "gain_q8": [
+      256,
+      256,
+      256
+    ],
+    "offset_integer": [
+      5,
+      3,
+      5
+    ],
+    "fit_modes": [
+      "offset_only_unidentified_gain",
+      "offset_only_unidentified_gain",
+      "offset_only_unidentified_gain"
+    ],
+    "populated_reference_levels": [
+      2,
+      3,
+      3
+    ]
+  },
+  "preparation_seconds": 0.48931490001268685,
+  "paired_sha256": "85bc2e1220bc6a8bb6c4860abb07dc18f4b21b89784ace10660e0ae7b6ad10b0",
+  "status": "COMPARED",
+  "hardware": {
+    "output_crc_verified": true,
+    "paired_sha256": "85bc2e1220bc6a8bb6c4860abb07dc18f4b21b89784ace10660e0ae7b6ad10b0",
+    "pl_id": 376440321,
+    "firmware": 91904,
+    "test_double": true
+  },
+  "residual": {
+    "median": 1.0,
+    "p90": 2.0,
+    "strong_fraction": 0.0
+  },
+  "completion": {
+    "initial_pixels": 0,
+    "completed_pixels": 0,
+    "can_create_new_image_alarm": false
+  },
+  "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+  "regions": [],
+  "candidate_pixels": 0
+}

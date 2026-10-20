@@ -1,0 +1,204 @@
+{
+  "version": "V1.67-host-prepared-FPGA-frame",
+  "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+  "accuracy_qualified": false,
+  "board_integrated": true,
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "declared_roi_pixels": 250000,
+  "inspected_pixels": 250000,
+  "alarm": false,
+  "manual_review_required": true,
+  "reference_array_sha256": "8285f1da5830027360e1f1e94a081aefd520e611029815226004fb92d5105a79",
+  "current_array_sha256": "32096dc78b25f3d88d88bea677a85cae6635666787a57eea5cf6409d32f73f18",
+  "registration": {
+    "dx": 0.75,
+    "dy": -0.5,
+    "correlation": 0.9999966753565727,
+    "peak_margin": 0.9915168549304618,
+    "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+    "boundary_axes": [
+      {
+        "shift": 0.75,
+        "correlation": 0.9999966753565727,
+        "peak_margin": 0.9965929775997261,
+        "edges": [
+          {
+            "correlation": 0.9999988314081518,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9999945193049935,
+            "drift": 0.0
+          }
+        ]
+      },
+      {
+        "shift": -0.5,
+        "correlation": 0.9999992852512967,
+        "peak_margin": 0.9915168549304618,
+        "edges": [
+          {
+            "correlation": 0.9999992311979823,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9999993393046112,
+            "drift": 0.0
+          }
+        ]
+      }
+    ],
+    "quadrant_drifts": [
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9994199872016907
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9994213581085205
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9993976950645447
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.999396562576294
+      }
+    ],
+    "pattern_correlation": 0.9993757009506226
+  },
+  "resampling_transfer": {
+    "x_weights": [
+      0.1875,
+      0.625,
+      0.1875
+    ],
+    "y_weights": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+  },
+  "new_saturation_fraction": 0.0,
+  "photometric": {
+    "gains": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "offsets": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "gain_q8": [
+      256,
+      256,
+      256
+    ],
+    "offset_integer": [
+      0,
+      0,
+      0
+    ],
+    "fit_modes": [
+      "reference_stratified_affine",
+      "reference_stratified_affine",
+      "offset_only_unidentified_gain"
+    ],
+    "populated_reference_levels": [
+      4,
+      5,
+      4
+    ]
+  },
+  "preparation_seconds": 0.38600319996476173,
+  "paired_sha256": "290e46fc5384932d3ded2913612f70d456daaee5b5787b1298429d8d6a2a0d8c",
+  "status": "COMPARED",
+  "pattern": "floral",
+  "calibration_sha256": "f21e24d278876e705768cdefaa7d901bda467870c8002d76dbd24b33489e2389",
+  "capture": {
+    "frame_id": 49721,
+    "candidate_pixels": 0,
+    "boxes": [],
+    "alarm": false,
+    "config_word": 2079545863,
+    "status_word": 4,
+    "device_frames": 49720,
+    "transfer_ms": 119.11420000251383,
+    "width": 1280,
+    "height": 720,
+    "acquired_at": "2026-10-20T07:08:22.540754+00:00",
+    "transport": "ETHERNET_TCP",
+    "source": "HDMI",
+    "algorithm": "RAW_HDMI_CAPTURE_ONLY",
+    "region_areas": [],
+    "region_overflow": false,
+    "event_id": 28,
+    "boot_id": 1159366197,
+    "firmware_version": 91904,
+    "event_reason": 3,
+    "recovery_generation": 0,
+    "captured_ms": 840454,
+    "queue_depth": 1,
+    "event_total": 0,
+    "events_dropped": 0,
+    "board_captures": 49721,
+    "invalid_frames": 0,
+    "capture_gaps": 0,
+    "support_profile": null,
+    "region_evidence_enabled": false,
+    "region_min_trusted": null,
+    "region_evidence_fraction": null,
+    "product_id": 3,
+    "product_flags": 17,
+    "selection_score": 2,
+    "selection_full_tile": true,
+    "selection": "LIVE_PREVIEW",
+    "selection_metric": "CENTER_DISTANCE_X2",
+    "selection_center_distance_x2": 2,
+    "selection_center_error_px": 1.0,
+    "pixel_crc_verified": true,
+    "header_crc_verified": true,
+    "descriptor_crc_verified": true,
+    "pixel_crc32": 707283163,
+    "capture_scope": "V167_CAPTURE_ONLY_NOT_INSPECTION"
+  },
+  "hardware": {
+    "request_id": 2783898596,
+    "pl_id": 376440321,
+    "firmware": 91904,
+    "input_crc32": 712930143,
+    "output_crc32": 3837403327,
+    "output_crc_verified": true,
+    "paired_sha256": "290e46fc5384932d3ded2913612f70d456daaee5b5787b1298429d8d6a2a0d8c",
+    "score_sha256": "12aed69e21ef3da6ccfdb2893290e91f407e845e291cb511856389edf9f42f83",
+    "engine_seconds": 0.01219010153846154,
+    "request_seconds": 0.15920430002734065,
+    "partition": "HOST_ALIGNMENT_MATCHED_REFERENCE_EDGE_MAP;PL_Q8_NORMALIZATION_FULL_FRAME_SCORE;HOST_COMPONENTS"
+  },
+  "residual": {
+    "median": 1.0,
+    "p90": 1.0,
+    "strong_fraction": 0.0
+  },
+  "completion": {
+    "initial_pixels": 0,
+    "completed_pixels": 0,
+    "can_create_new_image_alarm": false
+  },
+  "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+  "regions": [],
+  "candidate_pixels": 0
+}

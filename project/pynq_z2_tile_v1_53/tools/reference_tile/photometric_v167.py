@@ -17,6 +17,7 @@ def fit(reference,current,p):
         # information. Only parameter estimation samples an 8px inset; the
         # FPGA still scores every pixel of the complete 500x500 surface.
         x=current[8:-8:2,8:-8:2,c].astype(np.float64).ravel();y=reference[8:-8:2,8:-8:2,c].astype(np.float64).ravel();valid=(x>3)&(x<252)&(y>11)&(y<244)
+        reference_spread=float(np.percentile(y[valid],90)-np.percentile(y[valid],10)) if valid.any() else 0.
         # JPEG/subpixel mixing at printed edges is spatially varying and is
         # not a global RGB exposure change. Estimate from reference-flat
         # interiors when enough samples exist; current defects cannot select
@@ -30,7 +31,7 @@ def fit(reference,current,p):
             chosen=(y>=low)&(y<low+16)
             if int(chosen.sum())>=128:xx.append(float(np.median(x[chosen])));yy.append(float(np.median(y[chosen])))
         xx=np.array(xx);yy=np.array(yy);mode='reference_stratified_affine';levels.append(len(xx))
-        if len(xx)<2 or np.ptp(yy)<12 or np.ptp(xx)<8:
+        if reference_spread<p['minimum_gain_identification_range'] or len(xx)<2 or np.ptp(yy)<12 or np.ptp(xx)<8:
             g=1.;b=float(np.median(y-x));mode='offset_only_unidentified_gain'
         else:
             keep=np.ones(len(xx),bool);g=1.;b=float(np.median(yy-xx))

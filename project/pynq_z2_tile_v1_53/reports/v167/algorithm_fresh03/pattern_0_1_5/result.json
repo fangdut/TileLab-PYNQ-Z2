@@ -1,0 +1,175 @@
+{
+  "id": "pattern_0_1_5",
+  "kind": "line",
+  "group": null,
+  "passed": false,
+  "coverage": 0.0,
+  "pixel_precision": null,
+  "gt_pixels": 441,
+  "predicted_pixels": 0,
+  "tp": 0,
+  "parameters": {
+    "dx": 0.3638887393437349,
+    "dy": 0.7070345387525854,
+    "gains": [
+      0.9783607039514268,
+      0.9750306307784726,
+      0.9998983156341086
+    ],
+    "offsets": [
+      -1.0721419431995793,
+      -0.1869702613862927,
+      1.5191989614660946
+    ],
+    "noise": 0.9471221517356346,
+    "jpeg": 100,
+    "seed": 316750105
+  },
+  "version": "V1.67-host-prepared-FPGA-frame",
+  "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "declared_roi_pixels": 250000,
+  "inspected_pixels": 250000,
+  "alarm": false,
+  "manual_review_required": true,
+  "reference_array_sha256": "3e9b73e376e13c97e5eaa96815c2b7536f9a6717c2bd61d2e59f0e109fda4c28",
+  "current_array_sha256": "bacf7fed2ade47ae17063f0250e504ff35d34d1cda331c2f751d3e3be10d02d6",
+  "registration": {
+    "dx": 0.375,
+    "dy": 0.6875,
+    "correlation": 0.9995951655416058,
+    "peak_margin": 0.9887806309117587,
+    "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+    "boundary_axes": [
+      {
+        "shift": 0.375,
+        "correlation": 0.9997959675332185,
+        "peak_margin": 0.9887806309117587,
+        "edges": [
+          {
+            "correlation": 0.9999125596488868,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9996793754175503,
+            "drift": 0.0
+          }
+        ]
+      },
+      {
+        "shift": 0.6875,
+        "correlation": 0.9995951655416058,
+        "peak_margin": 0.993192127682074,
+        "edges": [
+          {
+            "correlation": 0.9994665237661335,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.999723807317078,
+            "drift": 0.0
+          }
+        ]
+      }
+    ],
+    "quadrant_drifts": [
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9862632751464844
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9972909092903137
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9967648983001709
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9931195378303528
+      }
+    ],
+    "pattern_correlation": 0.9945630431175232
+  },
+  "resampling_transfer": {
+    "x_weights": [
+      0.234375,
+      0.53125,
+      0.234375
+    ],
+    "y_weights": [
+      0.21484375,
+      0.5703125,
+      0.21484375
+    ],
+    "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+  },
+  "new_saturation_fraction": 0.0,
+  "photometric": {
+    "gains": [
+      1.0275506035283195,
+      1.0308799534740958,
+      0.9947105541716585
+    ],
+    "offsets": [
+      0.6739461467037842,
+      -0.550265746918484,
+      -0.6216445771296151
+    ],
+    "gain_q8": [
+      263,
+      264,
+      255
+    ],
+    "offset_integer": [
+      1,
+      -1,
+      -1
+    ],
+    "fit_modes": [
+      "reference_stratified_affine",
+      "reference_stratified_affine",
+      "reference_stratified_affine"
+    ],
+    "populated_reference_levels": [
+      12,
+      10,
+      11
+    ]
+  },
+  "preparation_seconds": 0.23872639995533973,
+  "paired_sha256": "754bb53f90716f0b4032c976ec2352bca9989b26d983558596320ef5995b7c91",
+  "status": "COMPARED",
+  "hardware": {
+    "output_crc_verified": true,
+    "paired_sha256": "754bb53f90716f0b4032c976ec2352bca9989b26d983558596320ef5995b7c91",
+    "pl_id": 376440321,
+    "firmware": 91904,
+    "test_double": true
+  },
+  "residual": {
+    "median": 1.0,
+    "p90": 2.0,
+    "strong_fraction": 4e-06
+  },
+  "completion": {
+    "initial_pixels": 0,
+    "completed_pixels": 0,
+    "can_create_new_image_alarm": false
+  },
+  "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+  "regions": [],
+  "candidate_pixels": 0
+}

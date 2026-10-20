@@ -12,7 +12,7 @@ import registration_v167
 import photometric_v167
 
 def policy():
-    p=v166.policy();p.update(version='V1.67-boundary-reference',scope='SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS',registration_sampling='INDEPENDENT_FIXTURE_BOUNDARY_AXES_THEN_PATTERN_IDENTITY_ZERO_DRIFT_TIES',photometric_model='REFERENCE_INTENSITY_STRATIFIED_MEDIANS_AFFINE_OR_IDENTIFIABLE_OFFSET',photometric_estimation_inset_px=8,photometric_reference_flatness_span=8,inspection_inset_px=0,mask_completion='RAW_LOW_RESIDUAL_COMPONENTS_SEEDED_ONLY_BY_ALREADY_ACCEPTED_MASK_NO_NEW_IMAGE_ALARMS');return p
+    p=v166.policy();p.update(version='V1.67.2-boundary-reference',scope='SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS',registration_sampling='INDEPENDENT_FIXTURE_BOUNDARY_AXES_THEN_PATTERN_IDENTITY_ZERO_DRIFT_TIES',photometric_model='REFERENCE_INTENSITY_STRATIFIED_MEDIANS_AFFINE_OR_IDENTIFIABLE_OFFSET',photometric_estimation_inset_px=8,photometric_reference_flatness_span=8,minimum_gain_identification_range=32,inspection_inset_px=0,mask_completion='RAW_HIGH_RESIDUAL_COMPONENTS_SEEDED_ONLY_BY_ALREADY_ACCEPTED_MASK_NO_NEW_IMAGE_ALARMS');return p
 
 def implementation():
     return {name:base.sha(Path(__file__).with_name(name)) for name in ('frame_v167.py','registration_v167.py','photometric_v167.py','reference_v166.py','reference_tile.py')}
@@ -63,7 +63,7 @@ def finish(result,words,proof):
         # Recover weak gaps only after an alarm has already qualified. This
         # cannot turn a previously clean/rejected image into a new alarm.
         completion_policy=dict(p,minimum_component_seeds=1)
-        mask,regions=base.components(score.astype(np.int16)>p['low'],mask,completion_policy)
+        mask,regions=base.components((score.astype(np.int16)>p['high'])|mask,mask,completion_policy)
     result['completion']=dict(initial_pixels=initial_pixels,completed_pixels=int(mask.sum()),can_create_new_image_alarm=False)
     result.update(status='COMPARED',alarm=bool(regions),decision='REFERENCE_CHANGE_CANDIDATE' if regions else 'NO_REFERENCE_CHANGE_CANDIDATE',regions=regions,candidate_pixels=int(mask.sum()))
     return result,mask

@@ -1,0 +1,102 @@
+{
+  "scope": "EDITED_ACTUAL_BOARD_REPLAY_EVIDENCE_NOT_CAMERA_FILM",
+  "seconds": 86,
+  "fps": 15,
+  "scenes": [
+    {
+      "seconds": 8,
+      "label": "intro"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_001",
+      "capture_sha256": "a37fcf8939765699b8f943bcb4e7e5ee5c6243e85e131f646d5b5669b64bb84e",
+      "score_sha256": "12aed69e21ef3da6ccfdb2893290e91f407e845e291cb511856389edf9f42f83"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_005",
+      "capture_sha256": "3c820da4c2430ea6aa513a1aff0f554688a6f663ce30147b05a3019e28f024a7",
+      "score_sha256": "9dac732cc4fa6213ecdaf4f091f0ed1e0fff3419f0a15e20cedc0cc0dd85f038"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_009",
+      "capture_sha256": "5fb14dd4b712318ebd798989a5a8bc2763bb6507f549098c015f2b2748e5236a",
+      "score_sha256": "c21318e2c43c47553ddc18ce9479aaea0fc13ad513caaa545a7473fec928db4b"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_013",
+      "capture_sha256": "e5df2fd82c800fb9f105a2e999d51e54748ffb135ce4a99fba7223cb46dafd34",
+      "score_sha256": "696c4c45fc29da5129b14ffea7e4dcc57ae8f6d2dd9ff377011a99e2255189fa"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_017",
+      "capture_sha256": "15f61d6b605b7c66830bc74d94b974edc24bf4d9115e383543c49ed02a9414bd",
+      "score_sha256": "657071ef4feb07e569ae377ab05c9b24c58358665ec8e6161b261401d6f80888"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_021",
+      "capture_sha256": "017c64d0bc12be56945372bd281568b96b34410ee7c7d6577338d31af77f48a4",
+      "score_sha256": "f7c1974de13932ae420ecc7c7d359baf6cb413e3528f66b1648b7dcfa5e2ad7c"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_002",
+      "capture_sha256": "2d633b6cfe4d572545e6d55ba82181b516f94be407431883192eeb5d83d921f3",
+      "score_sha256": "15b559ea7fa1e16c5d5f7e9a39bc8eb52f4eac6bae63da206a67b02004683111"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_006",
+      "capture_sha256": "7f83c8e30aa2fddfa688cee456f0311e54b38b43e39219213e7ff0a395d776f8",
+      "score_sha256": "b4320232efe6c7f537aaf143cd415335281c7a63ce90b68d3c2b46efb1da1a92"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_010",
+      "capture_sha256": "677fefa0100cc761ac5bd923ad69c597feb4ff79c5db7d9ea4cc2a0891ea99d9",
+      "score_sha256": "f665af541f052f41c77e877e0bc791827a09b739a05349f1b2284d10fbd728f3"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_014",
+      "capture_sha256": "0e2e650e84143e24584930bca2bcba3efb153e47c18f46c242d6286d7f859250",
+      "score_sha256": "f445fc086e9239b449ea27a5e189935201072efe218df836ea06d85910b6206a"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_018",
+      "capture_sha256": "14f7e27b8823bccc7bb07e686733551cb37e6c7b1e077abf90cf984e45721913",
+      "score_sha256": "d21a00f63016322a6e7cccc347c0f53ef6adc45479a9ed89edc3881a681b7b1d"
+    },
+    {
+      "seconds": 4,
+      "label": "ref_022",
+      "capture_sha256": "197f299fd4e71bbda353d09fe9a81b88f8158b7e14852d1609a1fb39cfa0728f",
+      "score_sha256": "861820a38c2ea8110b9f0d9a1aa91791787f2f70b85833d367e142a4241f1b33"
+    },
+    {
+      "seconds": 6,
+      "label": "ref_003"
+    },
+    {
+      "seconds": 6,
+      "label": "ref_007"
+    },
+    {
+      "seconds": 10,
+      "label": "measured_performance"
+    },
+    {
+      "seconds": 8,
+      "label": "limitations"
+    }
+  ],
+  "board_sha256": "80c1c4469db2edf51b2d037759f494503e2c6930d869c797a564b104b62691ee",
+  "video_sha256": "29de5a1ba8d7e2411dd8bcc0e62efdc47f9fcc87c4ba740526262e567634dd82",
+  "render_script_sha256": "67d1565b57bfb2b79e1c59d94d78f0d3700a2e283a46b9dde67a7e8bfa3c4287"
+}

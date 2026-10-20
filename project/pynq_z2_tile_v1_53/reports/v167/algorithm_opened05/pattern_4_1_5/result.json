@@ -1,0 +1,175 @@
+{
+  "id": "pattern_4_1_5",
+  "kind": "line",
+  "group": null,
+  "passed": false,
+  "coverage": 0.0,
+  "pixel_precision": null,
+  "gt_pixels": 441,
+  "predicted_pixels": 0,
+  "tp": 0,
+  "parameters": {
+    "dx": 0.6662487160087645,
+    "dy": 0.2940596396470907,
+    "gains": [
+      1.0185274438211491,
+      0.9771397943565472,
+      0.9990340670208817
+    ],
+    "offsets": [
+      -2.078782391565883,
+      -2.170146584889138,
+      -1.7344087114308289
+    ],
+    "noise": 0.902589458486429,
+    "jpeg": 99,
+    "seed": 16790105
+  },
+  "version": "V1.67-host-prepared-FPGA-frame",
+  "scope": "SINGLE_PATTERN_REFERENCE_HOST_ALIGNMENT_PL_SCORE_HOST_COMPONENTS",
+  "accuracy_qualified": false,
+  "board_integrated": false,
+  "roi": [
+    390,
+    110,
+    889,
+    609
+  ],
+  "declared_roi_pixels": 250000,
+  "inspected_pixels": 250000,
+  "alarm": false,
+  "manual_review_required": true,
+  "reference_array_sha256": "c5764ccaeaaee84d99e7475c5408726cbf0cdff3cf84e8a22cf0d0ad4ec227a4",
+  "current_array_sha256": "975613f8c609c9793daefd11110922603ebce1445f9de5d479b966237ccd7b47",
+  "registration": {
+    "dx": 0.6875,
+    "dy": 0.3125,
+    "correlation": 0.9995355991531636,
+    "peak_margin": 0.9829282669652513,
+    "texture_mode": "independent_physical_boundary_axes_then_pattern_identity",
+    "boundary_axes": [
+      {
+        "shift": 0.6875,
+        "correlation": 0.9995355991531636,
+        "peak_margin": 0.9829282669652513,
+        "edges": [
+          {
+            "correlation": 0.9996322061525518,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9994389921537755,
+            "drift": 0.0
+          }
+        ]
+      },
+      {
+        "shift": 0.3125,
+        "correlation": 0.9996560401602477,
+        "peak_margin": 0.9944199711276431,
+        "edges": [
+          {
+            "correlation": 0.9996631506435065,
+            "drift": 0.0
+          },
+          {
+            "correlation": 0.9996489296769889,
+            "drift": 0.0
+          }
+        ]
+      }
+    ],
+    "quadrant_drifts": [
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9896809458732605
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9959151148796082
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9957426190376282
+      },
+      {
+        "dx": 0.0,
+        "dy": 0.0,
+        "correlation": 0.9909409880638123
+      }
+    ],
+    "pattern_correlation": 0.9926963448524475
+  },
+  "resampling_transfer": {
+    "x_weights": [
+      0.21484375,
+      0.5703125,
+      0.21484375
+    ],
+    "y_weights": [
+      0.21484375,
+      0.5703125,
+      0.21484375
+    ],
+    "assumption": "Bilinear sampling transfer approximation; not camera optical validation"
+  },
+  "new_saturation_fraction": 0.0,
+  "photometric": {
+    "gains": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "offsets": [
+      0.0,
+      6.0,
+      3.0
+    ],
+    "gain_q8": [
+      256,
+      256,
+      256
+    ],
+    "offset_integer": [
+      0,
+      6,
+      3
+    ],
+    "fit_modes": [
+      "offset_only_unidentified_gain",
+      "offset_only_unidentified_gain",
+      "offset_only_unidentified_gain"
+    ],
+    "populated_reference_levels": [
+      2,
+      3,
+      3
+    ]
+  },
+  "preparation_seconds": 0.5169759999844246,
+  "paired_sha256": "6c909276d765f74dc4d1d010750f40ed5cccc1090784968190e2f81232554299",
+  "status": "COMPARED",
+  "hardware": {
+    "output_crc_verified": true,
+    "paired_sha256": "6c909276d765f74dc4d1d010750f40ed5cccc1090784968190e2f81232554299",
+    "pl_id": 376440321,
+    "firmware": 91904,
+    "test_double": true
+  },
+  "residual": {
+    "median": 1.0,
+    "p90": 1.0,
+    "strong_fraction": 0.0
+  },
+  "completion": {
+    "initial_pixels": 0,
+    "completed_pixels": 0,
+    "can_create_new_image_alarm": false
+  },
+  "decision": "NO_REFERENCE_CHANGE_CANDIDATE",
+  "regions": [],
+  "candidate_pixels": 0
+}

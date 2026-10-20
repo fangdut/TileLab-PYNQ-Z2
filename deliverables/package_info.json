@@ -1,0 +1,16 @@
+{
+  "archive": "tilelab_reference_v167_r2.zip",
+  "sha256": "cbbdf1ec6dd0165ca386e6244b935909bd389c81adc9aa1af85bece3a38a3125",
+  "bytes": 63144755,
+  "files": 369,
+  "clean_extraction_integrity_passed": true,
+  "clean_extraction_unit_tests": 8,
+  "physical_accuracy_qualified": false,
+  "clean_extraction_actual_board_demo": {
+    "good": "COMPARED_NO_ALARM",
+    "invalid_pose": "REJECTED_INPUT",
+    "line": "COMPARED_ALARM",
+    "verification": "BROWSER_UI_AND_SAVED_RECORDS",
+    "boot_id": 1159366197
+  }
+}

@@ -17,6 +17,7 @@ class Station:
     def __init__(self,address,store):
         self.address=address;self.capture=Capture(address);self.store=Path(store);self.store.mkdir(parents=True,exist_ok=True)
         self.calibrations=self.store/'calibrations';self.calibrations.mkdir(exist_ok=True);self.last=None
+        self.loaded_implementation=frame_v167.implementation()
     def save(self,path,data):workstation.atomic(path,data)
     def json(self,path,value):self.save(path,(json.dumps(value,ensure_ascii=False,indent=2)+'\n').encode())
     def acquire(self,folder):
@@ -26,6 +27,7 @@ class Station:
         with Image.open(io.BytesIO(png)) as im:array=np.array(im.convert('RGB'))
         return frame,array
     def action(self,body):
+        if frame_v167.implementation()!=self.loaded_implementation:raise ValueError('算法源码已变化，请重新启动工作站并重新标定')
         pattern=body.get('pattern','')
         if not re.fullmatch('[A-Za-z0-9_-]{1,64}',pattern):raise ValueError('花色编号请使用1–64个字母、数字、下划线或减号')
         op=body.get('op');identifier=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%S')+'_'+uuid.uuid4().hex[:8]
