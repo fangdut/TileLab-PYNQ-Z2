@@ -7,9 +7,10 @@ from reportlab.lib import colors
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from xml.sax.saxutils import escape
+from reportlab.graphics.shapes import Drawing,Rect,String,Line,Polygon
 R=Path(__file__).resolve().parents[2]
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--board',required=True,type=Path);p.add_argument('--bundle',required=True,type=Path);p.add_argument('--algorithm',required=True,type=Path,nargs='+');p.add_argument('--out',required=True,type=Path);p.add_argument('--font',type=Path,default=Path('C:/Windows/Fonts/simhei.ttf'));a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--board',required=True,type=Path);p.add_argument('--bundle',required=True,type=Path);p.add_argument('--algorithm',required=True,type=Path,nargs='+');p.add_argument('--performance',type=Path);p.add_argument('--baseline',type=Path,nargs='*',default=[]);p.add_argument('--out',required=True,type=Path);p.add_argument('--font',type=Path,default=Path('C:/Windows/Fonts/simhei.ttf'));a=p.parse_args()
     board=json.loads(a.board.read_text(encoding='utf8'));manifest=json.loads((a.bundle/'DEPLOYMENT.json').read_text());algorithms=[json.loads(f.read_text()) for f in a.algorithm]
     if not board.get('passed') or not board.get('rows'):raise ValueError('Complete board replay required before report generation')
     if board.get('programming',{}).get('deployment_sha256')!=hashlib.sha256((a.bundle/'DEPLOYMENT.json').read_bytes()).hexdigest():raise ValueError('Board evidence belongs to a different deployment')
@@ -29,6 +30,12 @@ def main():
     add('彩绘图案、木纹和釉面变化会使仅依赖暗线或边缘的检测器产生误报。本设计在固定拍摄位置与光照下，按花色保存一张完整良品参照，将检测任务限定为同一空间花纹相对参照的表面变化。不同自然纹理即使属于同类材质，也不能直接互作良品参照。')
     add('项目没有新训练分类模型。关键取舍是将花纹身份、位置与光照一致性先行校验，再以保留单像素亮度细节的定点差分发现变化。系统输出变化候选，不能自动区分裂纹、污渍、印刷变化和釉面损伤。')
     head('2. 系统架构与完整数据流')
+    diagram=Drawing(511,110)
+    for x,label,detail in [(0,'视频源','HDMI 720p60'),(173,'PL / ARM','采集 + DDR + 全图差分'),(346,'电脑工作站','标定 + 配准 + 区域分析')]:
+        diagram.add(Rect(x,28,165,65,fillColor=colors.HexColor('#e1eff2'),strokeColor=colors.HexColor('#087c89')));diagram.add(String(x+82.5,69,label,fontName='Chinese',fontSize=12,textAnchor='middle'));diagram.add(String(x+82.5,46,detail,fontName='Chinese',fontSize=9,textAnchor='middle'))
+    for x in (165,338):
+        diagram.add(Line(x,60,x+8,60,strokeColor=colors.HexColor('#087c89')));diagram.add(Polygon([x+8,60,x+4,63,x+4,57],fillColor=colors.HexColor('#087c89')))
+    diagram.add(String(255,10,'电脑准备配对数据 -> ARM提交PL计算 -> 差异图返回电脑',fontName='Chinese',fontSize=9,textAnchor='middle'));story.append(diagram)
     table([['环节','实现与边界'],['采集','PC或其他视频源 HDMI -> PL接收与格式计数 -> AXI异步FIFO -> SG DMA -> DDR；每帧CRC与元数据绑定'],['标定','保存实际捕获的720p良品、花色ID、算法和策略哈希；不可覆盖旧标定版本'],['准备','电脑使用四条物理边界确定双轴位移，再校验内部花纹；估计RGB增益和偏移，生成配对图像'],['计算','ARM校验上传数据与参数，刷新缓存并启动AXI DDR加速器；PL输出250000个分数与强/弱标志'],['判断','电脑核对版本、请求身份和输出CRC，再筛选连通区域、补全已确认候选并保存结果'],['异常','错花色、位姿超限、光照越界、数据错误和超时均不输出“良品通过”']], [70,441])
     add('当前版本是电脑与FPGA协同系统。配准和连通区域分析尚未迁移到ARM，不能把本版本描述为完全脱离电脑的自主检测设备。视频输入帧率、计算核耗时与完整检测吞吐分别测量。')
     head('3. 配准、标定与缺陷判定')
@@ -63,19 +70,31 @@ def main():
     if scored:
         engines=[r['result']['hardware']['engine_seconds']*1000 for r in scored];network=[r['result']['hardware']['request_seconds']*1000 for r in scored];total=[r['seconds']*1000 for r in inspected]
         table([['耗时口径','中位数 / 最大值'],['实际FPGA计算',f'{statistics.median(engines):.3f} / {max(engines):.3f} ms'],['上传、计算与结果返回',f'{statistics.median(network):.3f} / {max(network):.3f} ms'],['完整检测操作',f'{statistics.median(total):.3f} / {max(total):.3f} ms']], [175,336])
+    if a.performance:
+        performance=json.loads(a.performance.read_text())
+        if performance['board_sha256']!=hashlib.sha256(a.board.read_bytes()).hexdigest():raise ValueError('Performance evidence belongs to different board captures')
+        table([['同一组12幅实际捕获图的差分算子','中位耗时'],['NumPy完整图参考（不含配准）',f"{performance['cpu_median_ms']:.3f} ms"],['实际PL完整图算子',f"{performance['pl_median_ms']:.3f} ms"],['含采集/配准/网络/区域分析的完整比对',f"{performance['full_median_ms']:.3f} ms"]],[335,176])
+        add('上表完整比对统计12次实际进入PL的检测；前表完整操作包含6次拒判。CPU与PL只比较相同差分算子，未声称整机相对CPU的同倍数加速。','SmallCN')
+    if a.baseline:
+        rows=[['固件优化阶段（实际开发板）','请求中位耗时']]
+        names=['逐字节CRC / TCP窗口2048','查表CRC / TCP窗口2048','查表CRC / TCP窗口65535']
+        for name,path in zip(names,a.baseline):
+            data=json.loads(path.read_text());samples=[r['result']['hardware']['request_seconds']*1000 for r in data['rows'] if r['result'].get('hardware')];rows.append([name,f'{statistics.median(samples):.3f} ms'])
+        rows.append(['当前最终算法与完整新平台',f'{statistics.median(network):.3f} ms']);table(rows,[335,176])
+        add('每次请求上传2MB配对图并返回1MB差异图。各阶段使用同一PL实现，比特流及PL资源不变；变化在ARM CRC与TCP配置，PL资源增量为0，ARM则增加查表及网络缓冲占用。主机算法与运行负载并非全部相同，故此表仅说明传输阶段优化，不能用其推导完整算法速度或准确率增益。原始阶段汇总随包保留。','SmallCN')
     for kind,title in [('good','正常表面'),('line','人工线缺陷'),('invalid_pose','位姿超限拒判')]:
         row=next((r for r in inspected if r['source']['kind']==kind),None)
         if row:
             preview=Path(row['result']['preview'])
             if preview.exists():
-                im=Image(str(preview));scale=min(360/im.imageWidth,230/im.imageHeight);im.drawWidth=im.imageWidth*scale;im.drawHeight=im.imageHeight*scale
+                im=Image(str(preview));scale=min(360/im.imageWidth,180/im.imageHeight);im.drawWidth=im.imageWidth*scale;im.drawHeight=im.imageHeight*scale
                 story.append(KeepTogether([para(title+' / '+row['source']['source'],'SmallCN'),im,Spacer(1,12)]))
     head('8. 从零复现与操作步骤')
     add('安装Python及NumPy、Pillow；安装Vivado/Vitis 2025.2和板卡驱动。完整构建顺序为HLS C/RTL验证、独立Vivado工程、匹配XSA/BIT与ARM固件、封存部署清单。工程README提供所有命令及新输出目录参数。')
     add('使用JTAG易失性下载脚本前关闭工作站；脚本校验文件哈希、时序及XSA内嵌比特流，下载后检查固件、PL和ROI身份。PS参考时钟先于HDMI热插拔使能启动，无需外接HDMI OUT显示器。')
     add('电脑HDMI接开发板HDMI IN，网线接以太网，输入设为1280×720、60 Hz。启动reference_station.py，确认完整良品与固定暗背景后按花色编号标定。更换花色须切换对应标定；检测、拒判与原始证据保存在独立记录目录。')
     head('9. 可复用经验、协作记录与提交边界')
-    add('skill目录提供通用数组精确比对、部署文件校验与DMA所有权排查工作流。它们从本项目的实际失败提炼，可用于其他定点信号处理任务；硬件来源、黄金参考与场景标注仍需独立确认。report目录的协作记录保留提示词摘要、工具结果、自我纠错和失败轨迹。')
+    add('skill目录提供通用数组精确比对、部署文件校验与DMA所有权排查工作流。它们从本项目的实际失败提炼，可用于其他定点信号处理任务；硬件来源、黄金参考与场景标注仍需独立确认。evidence中的协作记录保留提示词摘要、工具结果、自我纠错和失败轨迹。')
     add('当前可以证明工程链路及指定回放数据上的行为。高准确率实体瓷砖验收仍需要同一花色的独立良品和真实裂纹试件，固定成像位置和光照，并将漏检、误报和拒判分别统计。此前提出的100正样本/400负样本及置信区间目标属于工程目标，不是已核实的官方比赛门槛。')
     add('部署清单SHA256：'+hashlib.sha256((a.bundle/'DEPLOYMENT.json').read_bytes()).hexdigest(),'SmallCN');add('实板记录SHA256：'+hashlib.sha256(a.board.read_bytes()).hexdigest(),'SmallCN')
     a.out.parent.mkdir(parents=True,exist_ok=True)

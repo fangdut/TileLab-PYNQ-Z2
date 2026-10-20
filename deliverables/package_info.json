@@ -1,8 +1,8 @@
 {
   "archive": "tilelab_reference_v167_r2.zip",
-  "sha256": "cbbdf1ec6dd0165ca386e6244b935909bd389c81adc9aa1af85bece3a38a3125",
-  "bytes": 63144755,
-  "files": 369,
+  "sha256": "63dabc31bd2e8a625457df9037c24d9c94215e80b414917c66e56a1bf9e7e8ed",
+  "bytes": 63191396,
+  "files": 374,
   "clean_extraction_integrity_passed": true,
   "clean_extraction_unit_tests": 8,
   "physical_accuracy_qualified": false,
@@ -12,5 +12,8 @@
     "line": "COMPARED_ALARM",
     "verification": "BROWSER_UI_AND_SAVED_RECORDS",
     "boot_id": 1159366197
-  }
+  },
+  "clean_extraction_runtime_identical_files": 153,
+  "release_source_binding_verified": true,
+  "license_authorization_pending": true
 }

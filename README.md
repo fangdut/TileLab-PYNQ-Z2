@@ -2,7 +2,9 @@
 
 当前分支 `single-tile-reference-v167` 已集成完整HDMI采集、DDR全图FPGA差分、按花色标定与网页工作站。[运行与重新构建](project/pynq_z2_tile_v1_53/README_REFERENCE_V167.md)、[设计报告](project/pynq_z2_tile_v1_53/reports/v167/design_report.pdf)、[实际开发板演示剪辑](project/pynq_z2_tile_v1_53/reports/v167/demo_replay.mp4)、[当前验收状态](project/pynq_z2_tile_v1_53/reports/v167/STATUS.json)。24张实际HDMI回放通过，12幅差异图共300万像素与独立参考一致，五种协议故障均恢复。所有图片均为明确标识的程序生成测试图。
 
-[完整提交候选包（约63 MB）](deliverables/tilelab_reference_v167_r2.zip)包含369个文件：源工程、匹配BIT/XSA/ELF、构建与下载脚本、独立演示图源、报告、视频、失败样本及实板原始记录。[包哈希与解压验证](deliverables/package_info.json)。工程内容已经打包；正式参赛前仍需核对当届模板及补充实体准确率证据。
+[完整提交候选包（约63 MB）](deliverables/tilelab_reference_v167_r2.zip)包含374个文件：源工程、匹配BIT/XSA/ELF、构建与下载脚本、独立演示图源、报告、视频、失败样本及实板原始记录。[包哈希与解压验证](deliverables/package_info.json)。工程内容已经打包；正式参赛前仍需核对当届模板及补充实体准确率证据。
+
+归档的2026 AMD选题指南3.3.3.3要求明确的可再分发开源许可；当前尚无作者授权选择，[MIT草案](project/pynq_z2_tile_v1_53/reports/v167/license_proposal.txt)仅供审阅，未生效。第三方Digilent/AMD/Xilinx代码保留原有许可。[许可状态](project/pynq_z2_tile_v1_53/reports/v167/LICENSE_STATUS.json)。
 
 最新108个程序用例：60张正常图无报警、无拒判；36张人工细线检出33张，保留3张弱单像素漏检；12张超限位姿均拒判。**工程链路通过，独立实体瓷砖准确率尚未验收**。电脑负责配准和连通区域，PL负责完整图像定点差分；输入720p60，完整检测约0.98秒。完整交付包及校验结果见下方提交材料。以下内容为历史阶段说明。
 
