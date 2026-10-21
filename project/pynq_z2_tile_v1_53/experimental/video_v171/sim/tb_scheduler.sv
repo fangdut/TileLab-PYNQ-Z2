@@ -6,13 +6,20 @@ module tb_scheduler;
  wire [31:0] awaddr,wdata,araddr;wire [2:0] awprot,arprot;wire [3:0] strb;
  wire awvalid,wvalid,bready,arvalid,rready;
  reg awready=0,wready=0,bvalid=0,arready=0,rvalid=0;reg [1:0] bresp=0,rresp=0;reg [31:0] rdata=0;
- pl_frame_scheduler #(.POLL_CYCLES(3)) dut(clk,resetn,enable,commit,invalid,seq,crc,request,owner,publish,
+ reg result_done=0,result_error=0;integer result_delay=0;
+ pl_frame_scheduler #(.POLL_CYCLES(3),.LATCH_RESULT(1)) dut(clk,resetn,enable,commit,invalid,seq,crc,request,owner,publish,
  completed,rejected,last_seq,last_crc,fault,awaddr,awprot,awvalid,awready,wdata,strb,wvalid,wready,bresp,bvalid,bready,
- araddr,arprot,arvalid,arready,rdata,rresp,rvalid,rready,capture_active);
+ araddr,arprot,arvalid,arready,rdata,rresp,rvalid,rready,capture_active,result_done,result_error);
  integer cycle=0,writes=0,remaining=0,publishes=0;reg got_aw=0,got_w=0,inject_error=0;
  reg hold_aw=0,hold_w=0,hold_ar=0;
  always @(posedge clk)begin
-  cycle<=cycle+1;
+  cycle<=cycle+1;result_done<=0;
+  if(publish)result_delay<=63;
+  else if(result_delay>0)begin
+   result_delay<=result_delay-1;
+   if(capture_active)$fatal(1,"Next capture started before result latch completed");
+   if(result_delay==1)result_done<=1;
+  end
   // Independent, non-identical stalls on AW, W and AR.
   awready<=cycle%5==0;wready<=cycle%7==0;arready<=cycle%3==0;
   if(resetn)begin

@@ -5,7 +5,7 @@
 // ap_ctrl or start HLS while this scheduler owns it (done is clear-on-read).
 module pl_frame_scheduler #(
  parameter logic [31:0] HLS_BASE=32'h43c10000,
- parameter integer POLL_CYCLES=1000,REARM_CYCLES=32
+ parameter integer POLL_CYCLES=1000,REARM_CYCLES=32,LATCH_RESULT=0
 )(
  input wire clk,resetn,enable,
  // All capture inputs have already crossed into clk. Commit must follow the
@@ -25,9 +25,10 @@ module pl_frame_scheduler #(
  output wire m_axi_arvalid,input wire m_axi_arready,
  input wire [31:0] m_axi_rdata,input wire [1:0] m_axi_rresp,
  input wire m_axi_rvalid,output wire m_axi_rready,
- output wire capture_active
+ output wire capture_active,
+ input wire result_done,result_error
 );
- localparam OFF=0,ARM=1,CAPTURE=2,WRITE=3,DELAY=4,READ_REQ=5,READ_DATA=6,ERROR=7,REARM=8;
+ localparam OFF=0,ARM=1,CAPTURE=2,WRITE=3,DELAY=4,READ_REQ=5,READ_DATA=6,ERROR=7,REARM=8,WAIT_RESULT=9;
  logic [3:0] state=OFF;
  logic aw_sent=0,w_sent=0;
  logic [31:0] delay_count=0,pending_sequence=0,pending_crc=0;
@@ -68,9 +69,20 @@ module pl_frame_scheduler #(
    READ_DATA:if(m_axi_rvalid)begin
     if(m_axi_rresp!=0)begin fault<=32'h2;state<=ERROR;end
     else if(m_axi_rdata[1])begin
-     completed<=completed+1;last_sequence<=pending_sequence;last_crc<=pending_crc;
-     result_publish<=1;state<=enable?REARM:OFF;delay_count<=REARM_CYCLES;
+     result_publish<=1;
+     if(LATCH_RESULT)state<=WAIT_RESULT;
+     else begin
+      completed<=completed+1;last_sequence<=pending_sequence;last_crc<=pending_crc;
+      state<=enable?REARM:OFF;delay_count<=REARM_CYCLES;
+     end
     end else begin delay_count<=POLL_CYCLES;state<=DELAY;end
+   end
+   WAIT_RESULT:if(result_done)begin
+    if(result_error)begin fault<=32'h4;state<=ERROR;end
+    else begin
+     completed<=completed+1;last_sequence<=pending_sequence;last_crc<=pending_crc;
+     state<=enable?REARM:OFF;delay_count<=REARM_CYCLES;
+    end
    end
    ERROR:if(!enable)state<=OFF;
    default:begin fault<=32'h3;state<=ERROR;end

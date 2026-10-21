@@ -25,7 +25,7 @@ $env:TILE_TEXTURE_SW='D:/Vivado/your_software.sdk'
 python scripts/texture_v170/program_board.py --hardware $env:TILE_TEXTURE_HW --software $env:TILE_TEXTURE_SW --out D:/Vivado/your_program_evidence
 ```
 
-下载前检查 RTL 协同仿真、实际复位连接、时序、BIT/XSA/ELF 和模型哈希。只通过 JTAG 易失加载，不写 Flash。`hls/frozen/v170_hls10.cpp` 保留已经通过 RTL 的并行基线；构建器按 HLS 输出目录同名快照严格核对字节。当前源增加了深度卷积的通道组专用读缓存与权重缓存，须独立完成验证。
+下载前检查 RTL 协同仿真、实际复位连接、时序、BIT/XSA/ELF 和模型哈希。只通过 JTAG 易失加载，不写 Flash。`hls/frozen/v170_hls10.cpp` 保留已经通过 RTL 的并行基线；构建器按 HLS 输出目录同名快照严格核对字节。HLS15 已完成 117 张实板逐数值验证，自动重启 4.279 FPS；同名冻结源码与最新完整包可复现。HLS18 的 DSP 复用通过 RTL，当前 HLS19 进一步改 DDR 行突发，均须独立完成实板验证。
 
 ## 运行与验证
 

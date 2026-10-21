@@ -29,11 +29,18 @@ def main():
     for folder in ['scripts/texture_v170','tools/fpga_texture_v170']:
         for source in (root/folder).rglob('*'):
             if source.is_file() and source.suffix in ['.py','.tcl'] and '__pycache__' not in source.parts:copy(source,Path('source')/source.relative_to(root))
-    # Pin the actual pre-dataflow test/generator contract used by this release.
+    # Pin the generator matching the actual test contract, not today's experiment.
+    contracts={
+        'fba67d8c9f3dc76ea6aed7255b82c21d10ba4b011632a68112fe13887f7fa04b':'68944eb',
+        '05464440ca79e68d9d6ff6a77ed57b081002aa379eb922dcce35742af01cf8b6':'ea70ad4',
+    }
+    generator_commit=contracts.get(check['hls_source_sha256'])
+    if not generator_commit:raise ValueError('No verified generator contract for this source')
     prefix='project/pynq_z2_tile_v1_53/'
-    for relative in ['tools/fpga_texture_v170/make_vectors.py','scripts/texture_v170/build_hls.tcl']:
-        result=subprocess.run(['git','show','68944eb:'+prefix+relative],cwd=repo,check=True,capture_output=True)
+    for relative in ['tools/fpga_texture_v170/make_vectors.py','tools/fpga_texture_v170/evaluate_lightweight.py','scripts/texture_v170/build_hls.tcl']:
+        result=subprocess.run(['git','show',generator_commit+':'+prefix+relative],cwd=repo,check=True,capture_output=True)
         (a.out/'source'/relative).write_bytes(result.stdout)
+    for source in a.hls.glob('test_*.bin'):copy(source,Path('unit_vectors')/source.name)
     for relative in ['scripts/ps7_preset.tcl','pynq_z2_tile_v1_53.sdk/ethernet_sources/safe_memcpy.c','pynq_z2_tile_v1_53.sdk/ethernet_sources/lscript.ld']:
         copy(root/relative,Path('source')/relative)
     for source in a.profile.iterdir():
@@ -52,11 +59,13 @@ def main():
         for name in ['input.png','mask.png','overlay.png','evidence.json']:copy(a.validation/ident/name,Path('examples')/ident/name)
     for name in ['LICENSE','LICENSE_SCOPE.md','THIRD_PARTY_NOTICES.md']:copy(repo/name,Path(name))
     (a.out/'requirements_runtime.txt').write_text('numpy==2.5.2\nPillow==12.3.0\n')
-    (a.out/'README.md').write_text('''# V170 verified all-PL snapshot — not real-time acceptance
+    fps=check['autorestart_fixed_frame']['sustained_pl_fps']
+    frames=check['autorestart_fixed_frame']['frames']
+    (a.out/'README.md').write_text(f'''# V170 verified all-PL snapshot — not real-time acceptance
 
-Pinned source: HLS11, matching timing-closed 100 MHz BIT/XSA/ELF. All 117 exposed historical MVTec Tile development images were physically processed on PYNQ-Z2; integer scores and original-size masks are exact. Image decisions: 84/84 anomalies (17/17 cracks), 0/33 normal false alarms. This is not independent or general-material accuracy. Crack segmentation remains coarse (historical mean IoU about 0.067).
+Pinned source: {a.hls.name}, matching timing-closed 100 MHz BIT/XSA/ELF. All 117 exposed historical MVTec Tile development images were physically processed on PYNQ-Z2; integer scores and original-size masks are exact. Image decisions: 84/84 anomalies (17/17 cracks), 0/33 normal false alarms. This is not independent or general-material accuracy. Crack segmentation remains coarse (historical mean IoU about 0.067).
 
-Measured fixed-frame PL auto-restart: 2.695 FPS, one ARM start followed by 27 completed hardware frames. This is NOT continuous HDMI video and NOT the 10 FPS target. reports/verification.json binds source/model/build identities and all case hashes. all_117_board_raw.zip contains every raw hardware result and evidence file. Models and original photo URLs/SHA256 are recorded in model/; two original examples and actual overlays are included.
+Measured fixed-frame PL auto-restart: {fps:.6f} FPS, one ARM start followed by {frames} completed hardware frames. This is NOT continuous HDMI video and NOT the 10 FPS target. reports/verification.json binds source/model/build identities and all case hashes. all_117_board_raw.zip contains every raw hardware result and evidence file. Models and original photo URLs/SHA256 are recorded in model/; two original examples and actual overlays are included. unit_vectors/ contains the exact RTL input/reference files; the generator is pinned to local source commit {generator_commit}.
 
 PL performs the complete integer detector. ARM performs transport, CRC, start/stop and timing; PC decodes files, sends RGB, renders masks and stores evidence. No CPU/GPU detection fallback. Runtime needs only Pillow/NumPy. Vitis/Vivado 2025.2 rebuild source is included. Programming is volatile JTAG; no Flash writes.
 

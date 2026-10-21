@@ -3,6 +3,7 @@ from pathlib import Path
 import os,hashlib,json,shutil,re,zipfile
 import vitis
 from verify_reset import verify
+from verify_video import verify as verify_video
 root=Path(__file__).resolve().parents[2]
 ws=Path(os.environ['TILE_TEXTURE_SW']);hw=Path(os.environ['TILE_TEXTURE_HW'])
 hls=Path(os.environ['TILE_TEXTURE_HLS']);model=Path(os.environ['TILE_TEXTURE_MODEL'])
@@ -10,6 +11,7 @@ if not ws.is_absolute() or ws.exists():raise ValueError('Use new absolute softwa
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 status=json.loads((hw/'implementation_status.json').read_text())
 reset_proof=verify(hw)
+video_proof=verify_video(hw)
 if status['setup_slack_ns']<0 or status['hold_slack_ns']<0 or status['drc_errors']:raise ValueError('Unaccepted implementation')
 with zipfile.ZipFile(hw/'system.xsa') as z:
     bits=[n for n in z.namelist() if n.endswith('.bit')]
@@ -49,4 +51,4 @@ try:
 finally:vitis.dispose()
 elf=ws/'texture_transport/build/texture_transport.elf'
 if not elf.is_file():raise RuntimeError('ELF not built')
-(ws/'BUILD_RESULT.json').write_text(json.dumps(dict(elf_sha256=sha(elf),xsa_sha256=sha(hw/'system.xsa'),bit_sha256=sha(hw/'system.bit'),model_sha256=graph['sha256'],reset_proof=reset_proof,sources={p.name:sha(p) for p in src.iterdir()},scope='ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE'),indent=2))
+(ws/'BUILD_RESULT.json').write_text(json.dumps(dict(elf_sha256=sha(elf),xsa_sha256=sha(hw/'system.xsa'),bit_sha256=sha(hw/'system.bit'),model_sha256=graph['sha256'],reset_proof=reset_proof,video_proof=video_proof,sources={p.name:sha(p) for p in src.iterdir()},scope='ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE'),indent=2))

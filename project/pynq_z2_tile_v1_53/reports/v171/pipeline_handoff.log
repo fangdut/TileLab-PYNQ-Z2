@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Oct 20 13:17:31 2026
+# Process ID         : 41324
+# Current directory  : D:/Vivado/TileLab_RealPhotos_20261020/v171_pipeline_sim01
+# Command line       : xsim.exe -log simulation.log -mode tcl -source {xsim.dir/pipeline_test/xsim_script.tcl}
+# Log file           : D:/Vivado/TileLab_RealPhotos_20261020/v171_pipeline_sim01/simulation.log
+# Journal file       : D:/Vivado/TileLab_RealPhotos_20261020/v171_pipeline_sim01\xsim.jou
+# Running On         : LAPTOP-UOC8IVHM
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i7-14650HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 16944 MB
+# Swap memory        : 24999 MB
+# Total Virtual      : 41944 MB
+# Available Virtual  : 2421 MB
+#-----------------------------------------------------------
+source xsim.dir/pipeline_test/xsim_script.tcl
+# xsim {pipeline_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_pipeline/dut/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_127  Scope: tb_pipeline.dut.capture.fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+PL_VIDEO_ROI_DDR_HLS_HANDOFF_RESULT_THREE_FRAMES_PASS
+$finish called at time : 52395 ns : File "D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/video_v171/sim/tb_pipeline.sv" Line 142
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 13:17:33 2026...

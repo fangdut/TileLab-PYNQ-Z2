@@ -3,6 +3,7 @@ set root [file normalize [file join [file dirname [info script]] ../..]]
 foreach n {TILE_TEXTURE_HW TILE_TEXTURE_HLS} {if {![info exists ::env($n)]} {error "Missing $n"}}
 set out [file normalize $::env(TILE_TEXTURE_HW)]
 set hls [file normalize $::env(TILE_TEXTURE_HLS)]
+set video [info exists ::env(TILE_TEXTURE_VIDEO)]
 if {[file exists $out]} {error "Refusing to overwrite hardware build"}
 set report $hls/solution/sim/report/texture_integer_cosim.rpt
 set f [open $report r];set proof [read $f];close $f
@@ -29,12 +30,24 @@ puts $f {set_property CFGBVS VCCO [current_design]}
 puts $f {set_property CONFIG_VOLTAGE 3.3 [current_design]}
 close $f
 add_files -fileset constrs_1 $out/config.xdc
-set_property ip_repo_paths $hls/solution/impl/ip [current_project]
+set repositories [list $hls/solution/impl/ip]
+if {$video} {
+ lappend repositories $root/ip_repo
+ add_files [glob $root/experimental/video_v171/rtl/*.sv $root/experimental/video_v171/rtl/*.v]
+ # Only constrain external video pins which are present on this top.
+ set f [open $root/constraints/pynq_z2.xdc r];set lines [split [read $f] "\n"];close $f
+ set f [open $out/video.xdc w]
+ foreach line $lines {if {[regexp {hdmi_in_|hdmi_out_(clk|data)} $line]} {puts $f $line}}
+ close $f
+ add_files -fileset constrs_1 $out/video.xdc
+}
+set_property ip_repo_paths $repositories [current_project]
 update_ip_catalog
 create_bd_design system
 set ps7 [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 ps7]
 source $root/scripts/ps7_preset.tcl
 set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_EN_CLK0_PORT {1} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_EN_CLK1_PORT {0} CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_EN_CLK3_PORT {0}] $ps7
+if {$video} {set_property -dict [list CONFIG.PCW_USE_S_AXI_HP1 {1} CONFIG.PCW_EN_CLK1_PORT {1} CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {200}] $ps7}
 make_bd_intf_pins_external [get_bd_intf_pins ps7/DDR]
 make_bd_intf_pins_external [get_bd_intf_pins ps7/FIXED_IO]
 set_property name DDR [get_bd_intf_ports DDR_0]
@@ -74,19 +87,30 @@ connect_bd_net [get_bd_pins one/dout] [get_bd_pins resets/dcm_locked] [get_bd_pi
 connect_bd_net [get_bd_pins zero/dout] [get_bd_pins resets/mb_debug_sys_rst]
 connect_bd_net [get_bd_pins resets/peripheral_aresetn] [get_bd_pins identity/s_axi_aresetn] [get_bd_pins infer/ap_rst_n]
 connect_bd_net [get_bd_pins resets/interconnect_aresetn] [get_bd_pins control_fabric/aresetn] [get_bd_pins memory_fabric/aresetn]
+if {$video} {source $root/scripts/texture_v170/add_video.tcl}
 assign_bd_address
 set_property offset 0x41200000 [get_bd_addr_segs ps7/Data/SEG_identity_Reg]
 set_property offset 0x43C10000 [get_bd_addr_segs ps7/Data/SEG_infer_Reg]
+if {$video} {
+ set_property offset 0x43C20000 [get_bd_addr_segs ps7/Data/SEG_video_regs_reg0]
+ # Each AXI master has its own address space. Updating PS addresses alone
+ # leaves the hardware scheduler at incompatible auto-assigned addresses.
+ foreach {name offset} {identity_Reg 0x41200000 infer_Reg 0x43C10000 video_regs_reg0 0x43C20000} {
+  set_property offset $offset [get_bd_addr_segs pipeline/m_axi_control/SEG_$name]
+ }
+}
 validate_bd_design
 save_bd_design
+if {[info exists ::env(TILE_TEXTURE_PREPARE_ONLY)]} {puts "TEXTURE_VIDEO_BLOCK_DESIGN_PREPARED";close_project;exit}
 generate_target all [get_files system.bd]
 make_wrapper -files [get_files system.bd] -top
 add_files $out/texture_v170.gen/sources_1/bd/system/hdl/system_wrapper.v
 set_property top system_wrapper [current_fileset]
-launch_runs synth_1 -jobs 4
+set jobs [expr {$video?1:4}]
+launch_runs synth_1 -jobs $jobs
 wait_on_run synth_1
 if {[get_property PROGRESS [get_runs synth_1]] ne "100%"} {error "Synthesis failed"}
-launch_runs impl_1 -to_step write_bitstream -jobs 4
+launch_runs impl_1 -to_step write_bitstream -jobs $jobs
 wait_on_run impl_1
 if {[get_property PROGRESS [get_runs impl_1]] ne "100%"} {error "Implementation failed"}
 open_run impl_1
