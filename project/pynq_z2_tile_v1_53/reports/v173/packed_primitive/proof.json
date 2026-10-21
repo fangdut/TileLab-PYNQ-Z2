@@ -1,0 +1,17 @@
+{
+  "scope": "ISOLATED_ARITHMETIC_PROTOTYPE_NOT_INTEGRATED_OR_BOARD_TESTED",
+  "int8_triples": 16777216,
+  "signed18_difference_range_checks": 262144,
+  "rtl_outputs_checked": 20002,
+  "dsp": 1,
+  "lut": 56,
+  "registers": 92,
+  "placed_routed_timing_verified": false,
+  "detector_fps_measured": false,
+  "model_changed": false,
+  "sources": {
+    "experimental\\packed_mac_v173\\check_exhaustive.cpp": "3634e0cf6f6f4156d4bd1dd0f96742642e8768523b0a51aeb2df2773b2993ec1",
+    "experimental\\packed_mac_v173\\packed_product.sv": "63460e4c83f06efc30e1c70d205ee7bc01b89da56b6ec1760632838652a80080",
+    "experimental\\packed_mac_v173\\tb_packed_product.sv": "85f32d23259d99e27bf75efac39344db9dd278f60f692e6e6201b3fc27690830"
+  }
+}

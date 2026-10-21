@@ -83,7 +83,8 @@ exit 0
     evidence=dict(scope='PAUSED_PHYSICAL_HDMI_INPUT_AND_PL_RESULT',video_report_sha256=sha(a.video/'report.json'),
         rgb_crc32=rgb_crc,capture_sequence=values[4],pl_sequence=int(header[9]),pl_image_alarm=int(header[2]),
         arm_cores_halted_during_dump=True,
-        input_scope='Captured PL RGB after startup black/gain calibration, before detector resize',
+        input_scope=('Captured PL RGB after startup black/gain calibration, before detector resize'
+                     if version==0x17200001 else 'Captured PL RGB before detector resize; legacy hardware has no color calibration'),
         video_register_version=version,color_registers=color_words,
         color_startup_profile=report.get('color_startup_profile'),
         pl_peak=int(header[3]),pl_threshold=int(header[4]),pl_mask_pixels=int(header[6]),

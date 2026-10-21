@@ -161,6 +161,10 @@ exit 0
             source_status_sha256=sha(a.out/(photo['id']+'_source.json'))))
     (a.out/'results.json').write_text(json.dumps(results,indent=2)+'\n')
     normal=[r for r in results if r['label']=='good'];anomaly=[r for r in results if r['label']!='good']
+    first=results[0]['samples'][0];last=results[-1]['samples'][-1]
+    duration=(last['timestamp_ms']-first['timestamp_ms'])/1000
+    frames=(last['registers'][2]-first['registers'][2])&0xffffffff
+    if duration<=0 or frames<1:raise ValueError('Invalid continuous progress interval')
     summary=dict(scope='PHYSICAL_CONTROLLED_ORIGINAL_PHOTO_HDMI_SERIES',cases=len(results),
         correct=sum(r['correct'] for r in results),normal_images=len(normal),
         normal_false_alarms=sum(r['alarm'] for r in normal),anomalies=len(anomaly),
@@ -168,6 +172,9 @@ exit 0
         cracks=sum(r['label']=='crack' for r in results),cracks_detected=sum(r['alarm'] for r in results if r['label']=='crack'),
         both_arm_cores_halted=True,arm_halt_checks=len(states),cpu_per_frame_start_writes=0,
         cpu_detection=False,gpu_detection=False,benchmark_is_blind=False,threshold_adaptation=False,
+        continuous_observation_seconds=duration,autonomous_frames_in_interval=frames,
+        autonomous_hdmi_fps_over_photo_series=frames/duration,
+        distinct_observed_photo_crcs=len({r['captured_crc32'] for r in results}),
         plan_sha256=sha(a.out/'plan.json'),results_sha256=sha(a.out/'results.json'),
         limitations=plan['source_binding'],left_running=False)
     (a.out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')

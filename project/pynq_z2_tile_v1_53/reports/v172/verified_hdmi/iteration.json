@@ -1,0 +1,130 @@
+{
+  "scope": "GUARDED_EXPOSED_DEVELOPMENT_PHYSICAL_ITERATION_NOT_FINAL_ACCEPTANCE",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v172_hw02",
+  "stages": [
+    {
+      "name": "build_transport",
+      "returncode": 0,
+      "seconds": 138.49504733085632
+    },
+    {
+      "name": "volatile_program",
+      "returncode": 0,
+      "seconds": 15.359697580337524
+    },
+    {
+      "name": "direct117",
+      "returncode": 0,
+      "seconds": 97.2432632446289
+    },
+    {
+      "name": "identity_gray_live",
+      "returncode": 0,
+      "seconds": 13.784409046173096
+    },
+    {
+      "name": "identity_gray_snapshot",
+      "returncode": 0,
+      "seconds": 14.121400594711304
+    },
+    {
+      "name": "derive_color_profile",
+      "returncode": 0,
+      "seconds": 0.24721980094909668
+    },
+    {
+      "name": "good_live",
+      "returncode": 0,
+      "seconds": 11.08676528930664
+    },
+    {
+      "name": "good_snapshot",
+      "returncode": 0,
+      "seconds": 14.088021278381348
+    },
+    {
+      "name": "good_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 5.280208110809326
+    },
+    {
+      "name": "crack_live",
+      "returncode": 0,
+      "seconds": 11.157155513763428
+    },
+    {
+      "name": "crack_snapshot",
+      "returncode": 0,
+      "seconds": 14.113585233688354
+    },
+    {
+      "name": "crack_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 4.383652210235596
+    },
+    {
+      "name": "series_live",
+      "returncode": 0,
+      "seconds": 14.047465324401855
+    },
+    {
+      "name": "hdmi117",
+      "returncode": 0,
+      "seconds": 261.39746499061584
+    }
+  ],
+  "status": "DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING",
+  "flash_written": false,
+  "direct117": {
+    "scope": "PHYSICAL_V170_FULL_INTEGER_PL",
+    "cases": 117,
+    "all_integer_outputs_exact": true,
+    "correct": 117,
+    "anomalies_detected": 84,
+    "anomalies": 84,
+    "normal_false_alarms": 0,
+    "normal_images": 33,
+    "cracks_detected": 17,
+    "engine_mean_seconds": 0.15880066211702829,
+    "engine_p95_seconds": 0.15883687446153846,
+    "inverse_mean_engine_fps": 6.297202962938839,
+    "validation_wall_seconds": 91.58804599998984,
+    "benchmark_is_blind": false,
+    "continuous_video_verified": false,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "autorestart_fixed_frame_fps": 6.299141896531898
+  },
+  "hdmi117": {
+    "scope": "PHYSICAL_CONTROLLED_ORIGINAL_PHOTO_HDMI_SERIES",
+    "cases": 117,
+    "correct": 117,
+    "normal_images": 33,
+    "normal_false_alarms": 0,
+    "anomalies": 84,
+    "anomalies_detected": 84,
+    "cracks": 17,
+    "cracks_detected": 17,
+    "both_arm_cores_halted": true,
+    "arm_halt_checks": 119,
+    "cpu_per_frame_start_writes": 0,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "benchmark_is_blind": false,
+    "threshold_adaptation": false,
+    "continuous_observation_seconds": 254.101,
+    "autonomous_frames_in_interval": 1386,
+    "autonomous_hdmi_fps_over_photo_series": 5.454523988492765,
+    "distinct_observed_photo_crcs": 117,
+    "plan_sha256": "38855fde70a3e6250b929a87d7f383cfc42f4785f652a63981572e08b264d61a",
+    "results_sha256": "50aafb8658197280d5e3cd4cf4327dacdcde5cb1ff465a12ad39d8968e390a5d",
+    "limitations": "Owned HDMI input player SHA/status plus settled stable PL completions; selected photos require separate DDR snapshot inspection/audit",
+    "left_running": false
+  },
+  "hdmi_fps": 5.393878575012543,
+  "ten_fps_passed": false,
+  "short_observation_at_least_ten_fps": false,
+  "sustained_speed_test_required": true,
+  "competition_final_acceptance": false,
+  "benchmark_is_blind": false
+}

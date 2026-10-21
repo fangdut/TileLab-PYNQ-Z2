@@ -1,0 +1,19 @@
+{
+  "scope": "ISOLATED_HLS_PRIMITIVE_NOT_FULL_DETECTOR_OR_BOARD",
+  "cases": 4096,
+  "rtl_cosim_pass": true,
+  "latency_cycles": 3,
+  "initiation_interval": 1,
+  "estimated_resources": {
+    "DSP": 1,
+    "FF": 268,
+    "LUT": 304,
+    "BRAM_18K": 0,
+    "URAM": 0
+  },
+  "full_detector_fps": null,
+  "source_sha256": {
+    "packed_pair.cpp": "0764111f78b4c980e9a766f74720dcd769d1252ee7049295689ff233bf20d2a8",
+    "test_packed_pair.cpp": "2b11f8787f200a100813d03b38fe9220a2fe2779db1f2ba6a2dc64124bc5b1e9"
+  }
+}
