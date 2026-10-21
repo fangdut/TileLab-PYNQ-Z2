@@ -7,8 +7,9 @@
 | V169 完整浮点 PL 基线 | 两张真实良品/裂纹照片已上板，评分和掩膜与参考一致；单张约 553 秒 | 无实时能力，非完整准确率验收 |
 | V170 已验证快照（HLS11） | 117 张真实照片已全部上板判对，评分/掩膜逐点一致；硬件自动运行 2.695 FPS | 尚未达到 10 FPS 或连续 HDMI 验收 |
 | V170 已验证快照（HLS15） | 同一批 117 张全部上板逐值一致；硬件自动运行 **4.279 FPS** | 尚未达到 10 FPS 或连续 HDMI 验收 |
-| V171 HDMI 集成候选（HLS20） | 已完成 100 MHz 布局布线，setup 0.040 ns、hold 0.031 ns，DRC 和 FIFO bus skew 通过；BIT/XSA/ELF 已生成 | USB 通道 Code 10，JTAG 无目标，尚未下载验证 |
-| V170 缓存迭代（HLS23） | 点卷积输入分块缓存、深度卷积循环行缓存；117 张评分及掩膜逐值一致，RTL 两次调用通过 | 硬件构建中，无新实测 FPS |
+| V171 缓存版（HLS23/HW04） | 117 张全部上板，评分和掩膜逐值一致；固定帧 PL 自动运行 **6.299 FPS**；100 MHz 时序和 FIFO 双向 bus skew 通过 | 尚未达到 10 FPS；117 张属于反复使用的开发集 |
+| V171 实际 HDMI 输入（HLS23） | 两个 ARM 核暂停期间，45 次检测 / 8.271 秒，约 **5.441 FPS**；117 张逐张输入时 84/84 缺陷检出 | **33/33 良品误报**，端到端准确率未通过；正在加入 PL 颜色校正 |
+| V172 PL 颜色标定 | 独立灰阶图测得启动增益；逐像素 RTL、寄存器和链路仿真通过；模块综合 380 LUT、0 DSP | 完整硬件构建中，尚未证明实板消除误报 |
 
 117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。已验证完整包见 [最新 V170 实板快照](deliverables/V170_Verified_FullPL_4p28FPS_R1.zip)。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
 
@@ -21,6 +22,10 @@
 - [V170 全部 117 张 C++ 算术回归](project/pynq_z2_tile_v1_53/reports/v170/full_c_summary.json)
 - [HDMI 候选的时序与文件身份](project/pynq_z2_tile_v1_53/reports/v171/hls20_timing_closed/candidate.json)
 - [HLS23 完整照片回归](project/pynq_z2_tile_v1_53/reports/v170/experiments/hls23_full_c_summary.json)
+- [HLS23 实板 117 张结果](project/pynq_z2_tile_v1_53/reports/v171/hls23_verified/board_summary.json)
+- [HLS23 实际 HDMI 吞吐](project/pynq_z2_tile_v1_53/reports/v171/hls23_hdmi_throughput/report.json)
+- [V172 颜色模块验证](project/pynq_z2_tile_v1_53/reports/v172/color_rtl/summary.json)
+- [未校正 HDMI 的 117 张失败基线](project/pynq_z2_tile_v1_53/reports/v172/uncorrected_hdmi117/summary.json)
 - [视频 PL 架构与实板验收步骤](project/pynq_z2_tile_v1_53/experimental/video_v171/README.md)
 - [历史 V167 完整工程](https://github.com/fangdut/TileLab-PYNQ-Z2/tree/single-tile-reference-v167)
 

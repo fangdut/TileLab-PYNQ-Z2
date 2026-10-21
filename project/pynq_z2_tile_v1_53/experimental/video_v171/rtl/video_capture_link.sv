@@ -7,7 +7,8 @@ module video_capture_link #(
 )(
  input wire pixel_clk,pixel_resetn,control_clk,control_resetn,capture_active,
  input wire [23:0] rgb,input wire de,vs,
- output wire [63:0] data,output wire [1:0] user,output wire valid,input wire ready
+ output wire [63:0] data,output wire [1:0] user,output wire valid,input wire ready,
+ output wire producer_resetn
 );
  // Assert even if PixelClk is stopped. Release synchronously to PixelClk;
  // keep the producer reset until XPM finishes its write-domain reset.
@@ -22,8 +23,9 @@ module video_capture_link #(
  assign pready=!full&&!wr_busy;
  assign {user,data}=dout;
  assign valid=!empty&&!rd_busy&&control_resetn;
+ assign producer_resetn=!fifo_reset&&!wr_busy;
  video_roi_tokens #(.FRAME_WIDTH(FRAME_WIDTH),.FRAME_HEIGHT(FRAME_HEIGHT),.ROI_X(ROI_X),.ROI_Y(ROI_Y),.ROI_WIDTH(ROI_WIDTH),.ROI_HEIGHT(ROI_HEIGHT)) producer(
-  .pixel_clk(pixel_clk),.resetn(!fifo_reset&&!wr_busy),.capture_active(capture_active),
+  .pixel_clk(pixel_clk),.resetn(producer_resetn),.capture_active(capture_active),
   .rgb(rgb),.de(de),.vs(vs),.m_data(pdata),.m_user(puser),.m_valid(pvalid),.m_ready(pready));
  xpm_fifo_async #(.FIFO_MEMORY_TYPE("block"),.FIFO_WRITE_DEPTH(FIFO_DEPTH),
   .WRITE_DATA_WIDTH(66),.READ_DATA_WIDTH(66),.READ_MODE("fwft"),.FIFO_READ_LATENCY(0),

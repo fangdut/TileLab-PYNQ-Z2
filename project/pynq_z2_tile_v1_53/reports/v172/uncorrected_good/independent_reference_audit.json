@@ -1,0 +1,15 @@
+{
+  "scope": "OFFLINE_SAVED_INPUT_REFERENCE_AUDIT_NOT_A_NEW_BOARD_RUN",
+  "cpu_used_only_for_offline_audit": true,
+  "model_rebuilt_byte_exact": true,
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "image_sha256": "8e564264abe2622ad46c964f11bffdc6cf57bcfe8c239955d622a5dcdfa0d303",
+  "saved_result_sha256": "a2540db08eaf27cf906ebb6cc9b5e9a7c24dee512d2460133efefdb0281f268c",
+  "quantized_graph_sha256": "ec43c6ac6a00db1e233aa0d003f641689198f86347ddbf19149c0259bb1232e3",
+  "head_sha256": "f8f5c9736d36a62457b610cc84ef58703a607e0e3a3a5d488a47537ab6f91a86",
+  "grid_max_error": 0,
+  "mask_mismatches": 0,
+  "result_header_exact": true,
+  "all_values_exact": true,
+  "accuracy_scope": "Numerical equivalence only; no ground-truth claim"
+}

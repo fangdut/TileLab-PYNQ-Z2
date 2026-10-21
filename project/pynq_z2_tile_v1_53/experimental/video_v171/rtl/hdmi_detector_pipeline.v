@@ -7,6 +7,8 @@ module hdmi_detector_pipeline #(
  (* X_INTERFACE_INFO="xilinx.com:signal:clock:1.0 control_clk CLK", X_INTERFACE_PARAMETER="XIL_INTERFACENAME control_clk, ASSOCIATED_BUSIF m_axi_control:m_axi_capture:m_axi_result, ASSOCIATED_RESET control_resetn, FREQ_HZ 100000000" *) input wire control_clk,
  (* X_INTERFACE_INFO="xilinx.com:signal:reset:1.0 control_resetn RST", X_INTERFACE_PARAMETER="XIL_INTERFACENAME control_resetn, POLARITY ACTIVE_LOW" *) input wire control_resetn,
  input wire pixel_clk,pixel_resetn,enable,
+ input wire [31:0] color_r,color_g,color_b,input wire color_changed,
+ output wire color_config_ready,
  // Digilent dvi2rgb encodes channels as R,B,G. Reorder exactly once here.
  input wire [23:0] hdmi_rgb,input wire de,vs,
  output wire [31:0] status,completed,rejected,capture_sequence,capture_crc,fault,peak,threshold,mask_pixels,core_sequence,
@@ -59,6 +61,12 @@ module hdmi_detector_pipeline #(
  wire [63:0] data;wire [1:0] user;wire valid,ready,commit,invalid,active,owner,publish;
  wire [31:0] captured_seq,captured_crc,schedule_fault,result_fault;
  wire unused_toggle,result_done,result_busy,result_alarm,result_valid;
+ wire [23:0] calibrated_rgb;wire calibrated_de,calibrated_vs,color_pixel_resetn;
+ video_color_correct color(
+  .control_clk(control_clk),.control_resetn(control_resetn),.pixel_clk(pixel_clk),.pixel_resetn(color_pixel_resetn),
+  .config_r(color_r),.config_g(color_g),.config_b(color_b),.config_changed(color_changed),.config_ready(color_config_ready),
+  .rgb({hdmi_rgb[23:16],hdmi_rgb[7:0],hdmi_rgb[15:8]}),.de(de),.vs(vs),
+  .rgb_out(calibrated_rgb),.de_out(calibrated_de),.vs_out(calibrated_vs));
  (* ASYNC_REG="TRUE" *) reg [2:0] lock_sync=0;
  reg [31:0] ticks=0,started=0;
  always @(posedge control_clk)begin
@@ -73,7 +81,7 @@ module hdmi_detector_pipeline #(
  assign fault=schedule_fault|(result_fault<<8);
  video_capture_link #(.FRAME_WIDTH(FRAME_WIDTH),.FRAME_HEIGHT(FRAME_HEIGHT),.ROI_X(ROI_X),.ROI_Y(ROI_Y),.ROI_WIDTH(ROI_WIDTH),.ROI_HEIGHT(ROI_HEIGHT)) capture(
   .pixel_clk(pixel_clk),.pixel_resetn(pixel_resetn),.control_clk(control_clk),.control_resetn(control_resetn),.capture_active(active),
-  .rgb({hdmi_rgb[23:16],hdmi_rgb[7:0],hdmi_rgb[15:8]}),.de(de),.vs(vs),.data(data),.user(user),.valid(valid),.ready(ready));
+  .rgb(calibrated_rgb),.de(calibrated_de),.vs(calibrated_vs),.data(data),.user(user),.valid(valid),.ready(ready),.producer_resetn(color_pixel_resetn));
  roi_ddr_writer #(.EXPECTED_WORDS(ROI_WIDTH*ROI_HEIGHT/2)) writer(
   .clk(control_clk),.resetn(control_resetn),.s_data(data),.s_user(user),.s_valid(valid),.s_ready(ready),
   .commit(commit),.invalid(invalid),.frame_sequence(captured_seq),.crc(captured_crc),
@@ -92,7 +100,7 @@ module hdmi_detector_pipeline #(
   .m_axi_bvalid(m_axi_capture_bvalid),
   .m_axi_bready(m_axi_capture_bready));
  pl_frame_scheduler #(.LATCH_RESULT(1)) scheduler(
-  .clk(control_clk),.resetn(control_resetn),.enable(enable),.capture_commit(commit),.capture_invalid(invalid),
+  .clk(control_clk),.resetn(control_resetn),.enable(enable&&color_config_ready),.capture_commit(commit),.capture_invalid(invalid),
   .capture_sequence(captured_seq),.capture_crc(captured_crc),.capture_request_toggle(unused_toggle),.owner(owner),.result_publish(publish),
   .completed(completed),.rejected(rejected),.last_sequence(capture_sequence),.last_crc(capture_crc),.fault(schedule_fault),
   .capture_active(active),.result_done(result_done),.result_error(|result_fault),

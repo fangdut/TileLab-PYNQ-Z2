@@ -3,6 +3,8 @@
 module tb_pipeline;
  reg control_clk=0,pixel_clk=0;always #7 control_clk=~control_clk;always #5 pixel_clk=~pixel_clk;
  reg control_resetn=0,pixel_resetn=0,enable=0;reg [23:0] hdmi_rgb=0;reg de=0,vs=0;
+ wire [31:0] color_r=32'h100,color_g=32'h100,color_b=32'h100;
+ wire color_changed=1'b0;wire color_config_ready;
  wire [31:0] status,completed,rejected,capture_sequence,capture_crc,fault,peak,threshold,mask_pixels,core_sequence,core_cycles;
  wire [31:0] m_axi_control_awaddr;
  wire [2:0] m_axi_control_awprot;

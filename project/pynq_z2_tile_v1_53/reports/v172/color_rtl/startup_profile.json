@@ -1,0 +1,25 @@
+{
+  "scope": "INDEPENDENT_HDMI_BLACK_WHITE_STARTUP_CALIBRATION",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "black_rgb": [
+    0,
+    0,
+    0
+  ],
+  "white_rgb": [
+    251,
+    208,
+    162
+  ],
+  "gain_q8_rgb": [
+    260,
+    314,
+    403
+  ],
+  "calibration_evidence_path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v171_calibration_snapshot01\\evidence.json",
+  "calibration_evidence_sha256": "da4c0d912b200c02c494982165e9d81a1c1cc1c75743591ccdd56b35e80ecf30",
+  "calibration_frame_sha256": "23a1dd8d6b77fcbac8094f61608f299cb030f57dba4e2fbbd67461c7cf42c71f",
+  "calibration_source": "RealPhotoSource independent gray ramp; no tile photo or defect labels used",
+  "runtime_arithmetic": "PL saturate(round(max(pixel-black,0)*gain_q8/256))",
+  "limitations": "Fixed HDMI source/display profile. Recalibrate after source color settings change; not a camera color-constancy model."
+}

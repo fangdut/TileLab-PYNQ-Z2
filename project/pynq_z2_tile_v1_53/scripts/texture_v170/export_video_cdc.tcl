@@ -9,6 +9,10 @@ open_checkpoint $checkpoint
 source $root/scripts/texture_v170/constrain_video_cdc.tcl
 report_timing_summary -file $out/timing_summary.rpt
 report_cdc -details -file $out/video_cdc.rpt
+report_bus_skew -file $out/bus_skew.rpt
+report_exceptions -file $out/video_exceptions.rpt
+set f [open $out/bus_skew.rpt r];set proof [read $f];close $f
+if {[regexp -nocase {VIOLATED} $proof] || [regexp -all {Slack\s+\(MET\)} $proof]<2 || ![string match *rd_pntr_cdc_inst/src_gray_ff_reg* $proof] || ![string match *wr_pntr_cdc_inst/src_gray_ff_reg* $proof]} {error "Both FIFO Gray-bus skew constraints must be present and pass"}
 report_clocks -file $out/clocks.rpt
 report_utilization -file $out/utilization.rpt
 set setup [get_property SLACK [get_timing_paths -delay_type max -max_paths 1]]

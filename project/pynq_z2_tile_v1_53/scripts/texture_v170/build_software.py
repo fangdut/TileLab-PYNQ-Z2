@@ -4,6 +4,7 @@ import os,hashlib,json,shutil,re,zipfile
 import vitis
 from verify_reset import verify
 from verify_video import verify as verify_video
+from verify_video import verify_bus_skew_report
 root=Path(__file__).resolve().parents[2]
 ws=Path(os.environ['TILE_TEXTURE_SW']);hw=Path(os.environ['TILE_TEXTURE_HW'])
 hls=Path(os.environ['TILE_TEXTURE_HLS']);model=Path(os.environ['TILE_TEXTURE_MODEL'])
@@ -13,8 +14,7 @@ status=json.loads((hw/'implementation_status.json').read_text())
 reset_proof=verify(hw)
 video_proof=verify_video(hw)
 if video_proof['video']:
-    skew=(hw/'bus_skew.rpt').read_text()
-    if 'VIOLATED' in skew.upper():raise ValueError('Asynchronous FIFO bus skew failed')
+    video_proof.update(verify_bus_skew_report(hw/'bus_skew.rpt'))
 if status['setup_slack_ns']<0 or status['hold_slack_ns']<0 or status['drc_errors']:raise ValueError('Unaccepted implementation')
 with zipfile.ZipFile(hw/'system.xsa') as z:
     bits=[n for n in z.namelist() if n.endswith('.bit')]

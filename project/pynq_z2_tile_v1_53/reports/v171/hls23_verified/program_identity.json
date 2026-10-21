@@ -1,0 +1,36 @@
+{
+  "boot_identity": 3871513087,
+  "build": {
+    "elf_sha256": "eacc4320c0966b3dfe7c163f606b8574915304475bca7df69ba8272317290368",
+    "xsa_sha256": "10d28bab3eceb3deb136c3e55e986d1d4406b6b3911361a2eafd2e3fb48c1cfa",
+    "bit_sha256": "8228f556153e27df80ee4c16f32f10b9cbca9a701a104e2adf3d76698a13f775",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "reset_proof": {
+      "auxiliary_reset_active_high": 0,
+      "auxiliary_level": 1,
+      "debug_reset": 0,
+      "clock_locked": 1,
+      "pl_reset_release_checked": true
+    },
+    "video_proof": {
+      "video": true,
+      "ps_and_pl_control_maps_match": true,
+      "capture_hp1_result_hp0": true,
+      "read_and_write_gray_bus_skew_passed": true
+    },
+    "sources": {
+      "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+      "main.c": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+      "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+      "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+    },
+    "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE"
+  },
+  "implementation": {
+    "setup_slack_ns": 0.082,
+    "hold_slack_ns": 0.05,
+    "drc_errors": 0,
+    "pl_clock_mhz": 100
+  },
+  "flash_written": false
+}

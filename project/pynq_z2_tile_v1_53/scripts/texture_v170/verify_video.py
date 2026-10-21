@@ -1,6 +1,15 @@
 """Check the actual saved BD maps for both PS and autonomous PL masters."""
 from pathlib import Path
-import json
+import json,re
+
+
+def verify_bus_skew_report(path):
+    proof=Path(path).read_text()
+    if 'VIOLATED' in proof.upper():raise ValueError('Asynchronous FIFO bus skew failed')
+    if len(re.findall(r'Slack\s+\(MET\)',proof))<2 or any(
+        name not in proof for name in ['rd_pntr_cdc_inst/src_gray_ff_reg','wr_pntr_cdc_inst/src_gray_ff_reg']):
+        raise ValueError('Read and write FIFO Gray-bus skew constraints must both be present and pass')
+    return {'read_and_write_gray_bus_skew_passed':True}
 
 def verify(hardware):
     path=Path(hardware)/'texture_v170.srcs/sources_1/bd/system/system.bd'

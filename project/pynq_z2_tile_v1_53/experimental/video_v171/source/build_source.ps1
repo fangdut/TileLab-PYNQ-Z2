@@ -5,6 +5,7 @@ if(Test-Path -LiteralPath $Out) { throw 'Choose a fresh output executable.' }
 $sourceFile=[System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot 'RealPhotoSource.cs'))
 if(-not (Test-Path -LiteralPath $sourceFile)) { throw "Source file missing: $sourceFile" }
 $compilerArgs=@('/nologo','/target:exe','/platform:x64',("/out:"+[System.IO.Path]::GetFullPath($Out)))
+$compilerArgs+=("/win32manifest:"+[System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot 'RealPhotoSource.manifest')))
 foreach($reference in @('WPF/PresentationFramework.dll','WPF/PresentationCore.dll','WPF/WindowsBase.dll','System.Xaml.dll','System.Windows.Forms.dll','System.Web.Extensions.dll')) {
  $compilerArgs+=("/r:"+[System.IO.Path]::GetFullPath((Join-Path $framework $reference)))
 }

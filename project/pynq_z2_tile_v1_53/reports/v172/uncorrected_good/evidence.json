@@ -1,0 +1,27 @@
+{
+  "scope": "PAUSED_PHYSICAL_HDMI_INPUT_AND_PL_RESULT",
+  "video_report_sha256": "a8011150c003eda74d9d10eac74652ba8cd524a61bd82c5a34e9d31d7ce2abef",
+  "rgb_crc32": 2080406639,
+  "capture_sequence": 566070,
+  "pl_sequence": 2253,
+  "pl_image_alarm": 1,
+  "arm_cores_halted_during_dump": true,
+  "input_scope": "Captured PL RGB after startup black/gain calibration, before detector resize",
+  "video_register_version": 386924545,
+  "color_registers": null,
+  "color_startup_profile": null,
+  "pl_peak": 12359,
+  "pl_threshold": 10908,
+  "pl_mask_pixels": 318273,
+  "source_photo_id": null,
+  "source_photo_binding": "Not inferred from the current player status; inspect/match the captured frame separately",
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "files": {
+    "rgb.bin": "1aa9729f237154b920382b8c9e3b826dc1f1ea92d854c28cff797e316d7da930",
+    "raw_result.bin": "a2540db08eaf27cf906ebb6cc9b5e9a7c24dee512d2460133efefdb0281f268c",
+    "actual_hdmi_input.png": "8e564264abe2622ad46c964f11bffdc6cf57bcfe8c239955d622a5dcdfa0d303",
+    "actual_pl_mask.png": "3930291b1330b2aa6bb928bddd5a2bb70e1d41623c3527cf7f529ad41528f546",
+    "actual_pl_overlay.png": "0df4f1866968eab1cdde222faf0c454ae7deff35534bc5642aa8531b74fce439"
+  }
+}

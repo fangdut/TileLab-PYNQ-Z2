@@ -16,6 +16,8 @@ net ps7/FCLK_CLK0 pipeline/control_clk video_regs/clk capture_fabric/aclk ps7/S_
 net resets/peripheral_aresetn pipeline/control_resetn video_regs/resetn
 net resets/interconnect_aresetn capture_fabric/aresetn
 net video_regs/enable pipeline/enable
+foreach name {color_r color_g color_b color_changed} {net video_regs/$name pipeline/$name}
+net pipeline/color_config_ready video_regs/color_config_ready
 foreach name {status completed rejected capture_sequence capture_crc fault peak threshold mask_pixels core_sequence core_cycles} {
  net pipeline/$name video_regs/$name
 }
