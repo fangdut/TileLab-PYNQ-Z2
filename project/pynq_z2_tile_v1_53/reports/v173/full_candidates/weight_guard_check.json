@@ -1,0 +1,10 @@
+{
+  "scope": "BUILD_GUARD_POSITIVE_AND_INCOMPATIBLE_WEIGHT_NEGATIVE_CHECK",
+  "valid_model": {
+    "weight_bytes": 529760,
+    "minimum": -127,
+    "maximum": 127,
+    "minus128_values": 0
+  },
+  "minus128_model_rejected": true
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "COARSE_HOST_POLLED_NOT_CYCLE_ACCURATE",
+  "source_summary_sha256": "cb09879c981053f28019db098204333ff6d7b252746b47acf70858c8e72701e7",
+  "mean_milliseconds_per_frame": {
+    "capture_or_wait": 28.860064814814812,
+    "preprocessing_and_first_conv": 12.517870370370371,
+    "depthwise_conv": 39.76135185185185,
+    "standard_or_pointwise_conv": 64.63142592592591,
+    "residual_add": 3.6092685185185185,
+    "post_cnn_head_and_mask": 33.95781481481482
+  },
+  "observed_graph_phases": {
+    "capture_or_wait": 1,
+    "preprocessing_and_first_conv": 1,
+    "depthwise_conv": 13,
+    "standard_or_pointwise_conv": 25,
+    "residual_add": 8,
+    "post_cnn_head_and_mask": 1
+  },
+  "total_observed_milliseconds": 183.3377962962963
+}

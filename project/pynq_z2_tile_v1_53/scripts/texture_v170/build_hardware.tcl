@@ -4,6 +4,9 @@ foreach n {TILE_TEXTURE_HW TILE_TEXTURE_HLS} {if {![info exists ::env($n)]} {err
 set out [file normalize $::env(TILE_TEXTURE_HW)]
 set hls [file normalize $::env(TILE_TEXTURE_HLS)]
 set video [info exists ::env(TILE_TEXTURE_VIDEO)]
+set opt_directive Default
+if {[info exists ::env(TILE_TEXTURE_OPT_DIRECTIVE)]} {set opt_directive $::env(TILE_TEXTURE_OPT_DIRECTIVE)}
+if {$opt_directive ni {Default ExploreArea ExploreWithRemap}} {error "Unsupported optimization directive"}
 if {[file exists $out]} {error "Refusing to overwrite hardware build"}
 set report $hls/solution/sim/report/texture_integer_cosim.rpt
 set f [open $report r];set proof [read $f];close $f
@@ -24,6 +27,10 @@ if {[info exists ::env(TILE_TEXTURE_IP_CACHE)]} {
 }
 file copy $hls/src/texture_integer.cpp $out/texture_integer_source.cpp
 file copy $report $out/hls_cosim.rpt
+file copy [info script] $out/build_hardware_source.tcl
+set f [open $out/optimization_strategy.json w]
+puts $f "{\"opt_directive\":\"$opt_directive\"}"
+close $f
 file mkdir $out/physical_scripts
 foreach name {replicate_controls.tcl constrain_video_cdc.tcl} {
  file copy $root/scripts/texture_v170/$name $out/physical_scripts/$name
@@ -123,6 +130,7 @@ report_utilization -file $out/synthesis_utilization.rpt
 set dsp_count [llength [get_cells -hier -filter {REF_NAME == DSP48E1}]]
 if {$dsp_count>220} {error "Actual synthesized DSP count $dsp_count exceeds device capacity"}
 close_design
+set_property STEPS.OPT_DESIGN.ARGS.DIRECTIVE $opt_directive [get_runs impl_1]
 set_property STEPS.ROUTE_DESIGN.TCL.PRE $out/physical_scripts/replicate_controls.tcl [get_runs impl_1]
 launch_runs impl_1 -to_step write_bitstream -jobs $jobs
 wait_on_run impl_1

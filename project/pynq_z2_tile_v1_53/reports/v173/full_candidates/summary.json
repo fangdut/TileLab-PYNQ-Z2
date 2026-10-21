@@ -1,0 +1,112 @@
+{
+  "scope": "EXPERIMENTAL_PACKED_FULL_KERNELS_NOT_BOARD_ACCEPTED",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "variants": [
+    {
+      "hls": 27,
+      "source_sha256": "faafb11b0b8d7ce742414a8ab40a7be6999a23e9943c996162a5edc8bc84ac90",
+      "full_c_cases": 117,
+      "full_c_exact": true,
+      "full_c_scope": "OFFLINE_NOT_BOARD",
+      "rtl_complete_two_calls_passed": false,
+      "hls_resources": {
+        "BRAM_18K": 334,
+        "DSP": 212,
+        "FF": 125856,
+        "LUT": 125820,
+        "URAM": 0
+      },
+      "whole_video_fit_verified": false,
+      "new_detector_fps": null,
+      "status": "HLS_BRAM_CAPACITY_REJECTED",
+      "evidence": {
+        "full_c_summary.json": "c7980a4f8ed67b9956739b70dd66fc71c77eaa548503bffc1e5376886c545783",
+        "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+        "hls_synthesis.rpt": "5c264510b6180ef1f9f5e1387dbfc50c48349094ea8e2135ac9d862b2d810e98",
+        "hls_synthesis.xml": "933341996c81058465d223cadb3502dbf35329d888956e6eaaec0b8ae6874e17",
+        "aborted.json": "e11c8b86113ef9689ebc020776b634f6c96abfe29989e692925530442489c2df"
+      }
+    },
+    {
+      "hls": 28,
+      "source_sha256": "2760c2e96453bdf308c359bd08eddce91f441b353e374e40191421dce1a72186",
+      "full_c_cases": 117,
+      "full_c_exact": true,
+      "full_c_scope": "OFFLINE_NOT_BOARD",
+      "rtl_complete_two_calls_passed": false,
+      "hls_resources": {
+        "BRAM_18K": 334,
+        "DSP": 212,
+        "FF": 122928,
+        "LUT": 123276,
+        "URAM": 0
+      },
+      "whole_video_fit_verified": false,
+      "new_detector_fps": null,
+      "status": "HLS_BRAM_CAPACITY_REJECTED",
+      "evidence": {
+        "full_c_summary.json": "5f6a0db73be5cfad6607281da8081c068bfc4e4cce0a2b0e536b61de71c1e990",
+        "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+        "hls_synthesis.rpt": "2efad7c67bd8e5d4907371a5e5abc68938dcc80939b718231f7a7d162fdf2592",
+        "hls_synthesis.xml": "248aae4005dd323533ecfa55b6f0b1be86f3f687f796d8d3e8c54d69901ab72c",
+        "aborted.json": "4f89cdb24482f99ffdb6b5f7a02b9f1272d36f9be997c9a6fd3ac8b37968b37a"
+      }
+    },
+    {
+      "hls": 29,
+      "source_sha256": "85fa84faf3fb7372243f22d3b191d55071d9ada6e8aeb548e4cca22d365c1168",
+      "full_c_cases": 117,
+      "full_c_exact": true,
+      "full_c_scope": "OFFLINE_NOT_BOARD",
+      "rtl_complete_two_calls_passed": false,
+      "hls_resources": {
+        "BRAM_18K": 270,
+        "DSP": 212,
+        "FF": 110831,
+        "LUT": 110606,
+        "URAM": 0
+      },
+      "whole_video_fit_verified": false,
+      "new_detector_fps": null,
+      "status": "RTL_DEFERRED_FOR_AREA_REDUCTION",
+      "evidence": {
+        "full_c_summary.json": "72c19868b402ec0bd15f930346ac4b733e93bdaebd0f98cf63545a19af77faf9",
+        "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+        "hls_synthesis.rpt": "4df587388cf7bc825da2a565e93f1fc15c6f023f3f16c9d6c1542df4906830a1",
+        "hls_synthesis.xml": "c54bfe8ce29079ce3a31c7ca62c160a66a35aab4455c1464b8a62b150b86a3a1",
+        "verification_deferred.json": "6d0ec4882ea9597b61dedec09b14198f42e6bcc6c1495f5dee5aa158b1069ea9",
+        "ooc_resource_gate.json": "8d383d04e00b696cf114377407ff34f27a3a673a05ad56cddeb88e591eab9a5b",
+        "ooc_utilization.rpt": "851e3cc4442988102e61796feb8a4620369df47483f0d26620a9102b672205d5",
+        "ooc_synthesis_timing.rpt": "5a2869ecfdcccb1acdbb7604e3b903c5db2c92e47453a7e6fcbb2074d759a1b9"
+      }
+    },
+    {
+      "hls": 30,
+      "source_sha256": "81983bb2922976b8907c921ff653c5e74957c838a09fc932e2edac39ee19799f",
+      "full_c_cases": 117,
+      "full_c_exact": true,
+      "full_c_scope": "OFFLINE_NOT_BOARD",
+      "rtl_complete_two_calls_passed": true,
+      "hls_resources": {
+        "BRAM_18K": 270,
+        "DSP": 212,
+        "FF": 91433,
+        "LUT": 100268,
+        "URAM": 0
+      },
+      "whole_video_fit_verified": false,
+      "new_detector_fps": null,
+      "status": "CANDIDATE_IN_FULL_VIDEO_IMPLEMENTATION",
+      "evidence": {
+        "full_c_summary.json": "7eecf606d792849c6b4b25b7e13711b74bda478cf4b2a0aeaaa5d37b187eaa50",
+        "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+        "hls_synthesis.rpt": "07bb6a1e990733c2578e5e381d5e8dc5428a90f7c94b8217ad5bf6b81e418728",
+        "hls_synthesis.xml": "8eec556116ff183036a12c775972ed6de6a54abfcf2d56e48ade0fbe714683ec",
+        "rtl_cosim.rpt": "7f36bb486946c567e8b9eb15baab4b1477fca79d672d280397f19678a078d924",
+        "ooc_resource_gate.json": "247cd792b57a1c546c7edead95ff00d111125b8587f105dc823952b90b3e9325",
+        "ooc_utilization.rpt": "b137d70a5a23aa6f9debfcd0503d8e8a223011d72095120cf8ee05fb7bc3e580",
+        "ooc_synthesis_timing.rpt": "ff7e7f086fd54960f8c11f4454853445fa9af36fe9b32949726bc53b6c46577d"
+      }
+    }
+  ]
+}
