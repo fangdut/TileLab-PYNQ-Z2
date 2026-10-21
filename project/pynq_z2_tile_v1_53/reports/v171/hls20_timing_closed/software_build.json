@@ -1,0 +1,25 @@
+{
+  "elf_sha256": "709d58aea0e1a3280295ada87d77d79f86ae36f503ff3de84b0e0848017d7fdc",
+  "xsa_sha256": "f2eb7f2750ca221e2e5bca3be7ed460ded791683a030883d2faf9d2186c892ab",
+  "bit_sha256": "4f92293691e815a2eb7ce44b6af0f07950cbd4b0b1db80fbc1901ab8f0334002",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "reset_proof": {
+    "auxiliary_reset_active_high": 0,
+    "auxiliary_level": 1,
+    "debug_reset": 0,
+    "clock_locked": 1,
+    "pl_reset_release_checked": true
+  },
+  "video_proof": {
+    "video": true,
+    "ps_and_pl_control_maps_match": true,
+    "capture_hp1_result_hp0": true
+  },
+  "sources": {
+    "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+    "main.c": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+    "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+    "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+  },
+  "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE"
+}

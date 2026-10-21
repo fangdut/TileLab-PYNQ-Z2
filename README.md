@@ -7,7 +7,8 @@
 | V169 完整浮点 PL 基线 | 两张真实良品/裂纹照片已上板，评分和掩膜与参考一致；单张约 553 秒 | 无实时能力，非完整准确率验收 |
 | V170 已验证快照（HLS11） | 117 张真实照片已全部上板判对，评分/掩膜逐点一致；硬件自动运行 2.695 FPS | 尚未达到 10 FPS 或连续 HDMI 验收 |
 | V170 已验证快照（HLS15） | 同一批 117 张全部上板逐值一致；硬件自动运行 **4.279 FPS** | 尚未达到 10 FPS 或连续 HDMI 验收 |
-| V170 DSP 复用实验（HLS18） | 共享卷积与距离搜索乘法器，RTL 两次调用和特征检查通过，213/220 DSP | 正在生成集成 HDMI 的硬件，尚未上板验证 |
+| V171 HDMI 集成候选（HLS20） | 已完成 100 MHz 布局布线，setup 0.040 ns、hold 0.031 ns，DRC 和 FIFO bus skew 通过；BIT/XSA/ELF 已生成 | USB 通道 Code 10，JTAG 无目标，尚未下载验证 |
+| V170 缓存迭代（HLS23） | 点卷积输入分块缓存、深度卷积循环行缓存；117 张评分及掩膜逐值一致，RTL 两次调用通过 | 硬件构建中，无新实测 FPS |
 
 117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。已验证完整包见 [最新 V170 实板快照](deliverables/V170_Verified_FullPL_4p28FPS_R1.zip)。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
 
@@ -18,6 +19,9 @@
 - [V169 匹配 BIT/XSA/ELF/HLS 编译包](project/pynq_z2_tile_v1_53/reports/v169/V169_FPGA_Migration_Verified_compiled.zip)
 - [V170 冻结整数模型与说明](project/pynq_z2_tile_v1_53/models/texture_v170_r1/README.md)
 - [V170 全部 117 张 C++ 算术回归](project/pynq_z2_tile_v1_53/reports/v170/full_c_summary.json)
+- [HDMI 候选的时序与文件身份](project/pynq_z2_tile_v1_53/reports/v171/hls20_timing_closed/candidate.json)
+- [HLS23 完整照片回归](project/pynq_z2_tile_v1_53/reports/v170/experiments/hls23_full_c_summary.json)
+- [视频 PL 架构与实板验收步骤](project/pynq_z2_tile_v1_53/experimental/video_v171/README.md)
 - [历史 V167 完整工程](https://github.com/fangdut/TileLab-PYNQ-Z2/tree/single-tile-reference-v167)
 
 V169 的约 100 MB 模型可由冻结压缩配置与官方预训练权重精确重建，见源码说明；本地完整运行包包含该模型。V170 model.bin 已随源码保存。Python/Torch 算法脚本仅用于离线开发、标定和核对，板端运行不使用电脑 CPU/GPU 推理后备。

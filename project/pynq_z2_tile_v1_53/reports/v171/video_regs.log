@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Oct 20 22:17:16 2026
+# Process ID         : 21264
+# Current directory  : D:/Vivado/TileLab_RealPhotos_20261020/v171_regs_sim01
+# Command line       : xsim.exe -log simulation.log -mode tcl -source {xsim.dir/regs_test/xsim_script.tcl}
+# Log file           : D:/Vivado/TileLab_RealPhotos_20261020/v171_regs_sim01/simulation.log
+# Journal file       : D:/Vivado/TileLab_RealPhotos_20261020/v171_regs_sim01\xsim.jou
+# Running On         : LAPTOP-UOC8IVHM
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i7-14650HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 16944 MB
+# Swap memory        : 24382 MB
+# Total Virtual      : 41327 MB
+# Available Virtual  : 6891 MB
+#-----------------------------------------------------------
+source xsim.dir/regs_test/xsim_script.tcl
+# xsim {regs_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+VIDEO_REGS_INDEPENDENT_AW_W_STROBES_READONLY_BACKPRESSURE_PASS
+$finish called at time : 2020 ns : File "D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/video_v171/sim/tb_video_regs.sv" Line 43
+exit
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 22:17:18 2026...

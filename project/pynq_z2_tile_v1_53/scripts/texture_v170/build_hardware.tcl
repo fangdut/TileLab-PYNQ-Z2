@@ -1,4 +1,4 @@
-# Isolated inference platform. No video capture/classifier from earlier builds.
+# Full integer inference, optionally with the autonomous HDMI pipeline.
 set root [file normalize [file join [file dirname [info script]] ../..]]
 foreach n {TILE_TEXTURE_HW TILE_TEXTURE_HLS} {if {![info exists ::env($n)]} {error "Missing $n"}}
 set out [file normalize $::env(TILE_TEXTURE_HW)]
@@ -24,6 +24,10 @@ if {[info exists ::env(TILE_TEXTURE_IP_CACHE)]} {
 }
 file copy $hls/src/texture_integer.cpp $out/texture_integer_source.cpp
 file copy $report $out/hls_cosim.rpt
+file mkdir $out/physical_scripts
+foreach name {replicate_controls.tcl constrain_video_cdc.tcl} {
+ file copy $root/scripts/texture_v170/$name $out/physical_scripts/$name
+}
 set_property target_language Verilog [current_project]
 set f [open $out/config.xdc w]
 puts $f {set_property CFGBVS VCCO [current_design]}
@@ -33,7 +37,11 @@ add_files -fileset constrs_1 $out/config.xdc
 set repositories [list $hls/solution/impl/ip]
 if {$video} {
  lappend repositories $root/ip_repo
- add_files [glob $root/experimental/video_v171/rtl/*.sv $root/experimental/video_v171/rtl/*.v]
+ file mkdir $out/rtl_snapshot
+ foreach source [glob $root/experimental/video_v171/rtl/*.sv $root/experimental/video_v171/rtl/*.v] {
+  file copy $source $out/rtl_snapshot/[file tail $source]
+ }
+ add_files [glob $out/rtl_snapshot/*.sv $out/rtl_snapshot/*.v]
  # Only constrain external video pins which are present on this top.
  set f [open $root/constraints/pynq_z2.xdc r];set lines [split [read $f] "\n"];close $f
  set f [open $out/video.xdc w]
@@ -110,6 +118,12 @@ set jobs [expr {$video?1:4}]
 launch_runs synth_1 -jobs $jobs
 wait_on_run synth_1
 if {[get_property PROGRESS [get_runs synth_1]] ne "100%"} {error "Synthesis failed"}
+open_run synth_1
+report_utilization -file $out/synthesis_utilization.rpt
+set dsp_count [llength [get_cells -hier -filter {REF_NAME == DSP48E1}]]
+if {$dsp_count>220} {error "Actual synthesized DSP count $dsp_count exceeds device capacity"}
+close_design
+set_property STEPS.ROUTE_DESIGN.TCL.PRE $out/physical_scripts/replicate_controls.tcl [get_runs impl_1]
 launch_runs impl_1 -to_step write_bitstream -jobs $jobs
 wait_on_run impl_1
 if {[get_property PROGRESS [get_runs impl_1]] ne "100%"} {error "Implementation failed"}
@@ -125,7 +139,19 @@ set f [open $out/implementation_status.json w]
 puts $f "{\"setup_slack_ns\":$setup,\"hold_slack_ns\":$hold,\"drc_errors\":$errors,\"pl_clock_mhz\":100}"
 close $f
 if {$setup<0 || $hold<0 || $errors} {error "Timing/DRC failed"}
+if {$video} {
+ report_cdc -details -file $out/video_cdc.rpt
+ report_bus_skew -file $out/bus_skew.rpt
+ report_exceptions -file $out/video_exceptions.rpt
+ set f [open $out/bus_skew.rpt r];set proof [read $f];close $f
+ if {[regexp -nocase {VIOLATED} $proof]} {error "Asynchronous FIFO bus skew failed"}
+ write_checkpoint -force $out/video_accepted.dcp
+}
 write_hw_platform -fixed -include_bit -force -file $out/system.xsa
-file copy $out/texture_v170.runs/impl_1/system_wrapper.bit $out/system.bit
+# Preserve the XSA export's canonical sibling BIT. A second write_bitstream
+# may change only DATE/TIME, which still breaks our required whole-file SHA.
+if {![file exists $out/system.bit]} {
+ file copy $out/texture_v170.runs/impl_1/system_wrapper.bit $out/system.bit
+}
 puts "TEXTURE_V170_IMPLEMENTATION_PASSED"
 exit

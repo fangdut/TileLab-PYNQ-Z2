@@ -1,0 +1,10 @@
+{
+  "scope": "REJECTED_EXPERIMENT_NOT_PROGRAMMED",
+  "source_sha256": "46ee2f60f02ba35faad7ebe260135213f7dd0bff23d6d662a765995ac0115e1b",
+  "reason": "Vitis HLS clang crashed during pre-synthesis after native unsigned address-product BIND_OP directives",
+  "single_real_crack_c_grid_error": 0,
+  "full_117_c_regression_complete": false,
+  "rtl_passed": false,
+  "board_programmed": false,
+  "follow_up": "Use an explicit AP-integer fabric address-product helper and keep complete C/RTL/physical acceptance gates"
+}

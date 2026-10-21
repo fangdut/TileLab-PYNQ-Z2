@@ -1,0 +1,26 @@
+{
+  "scope": "TIMING_CLOSED_HDMI_CANDIDATE_NOT_PROGRAMMED",
+  "hardware": "v171_hw03",
+  "hls": "v170_hls20",
+  "software": "v171_sw02.sdk",
+  "source_sha256": "aba8bb189d15e5b2ce43b15b1ab40ff248ea9882631d7bba47b23e3f839ce264",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "bit_sha256": "4f92293691e815a2eb7ce44b6af0f07950cbd4b0b1db80fbc1901ab8f0334002",
+  "xsa_sha256": "f2eb7f2750ca221e2e5bca3be7ed460ded791683a030883d2faf9d2186c892ab",
+  "elf_sha256": "709d58aea0e1a3280295ada87d77d79f86ae36f503ff3de84b0e0848017d7fdc",
+  "board_programmed": false,
+  "continuous_hdmi_verified": false,
+  "connection_blocker": "USB Serial Converter B Code 10; empty XSDB/Vivado JTAG inventory",
+  "cdc_structural_note": "One audited CDC-10 combinational-reset-request hint; no blanket asynchronous clock false path",
+  "report_files": {
+    "bit_header_equivalence.json": "2a2d9d3fe1af30a16594f203a630b7557a013abece8b7668498d33f5bd6a9e0b",
+    "bus_skew.rpt": "df672658c7d236195ec903ac8dec17d6549f5fa6238332f9cd8948cf39d2c113",
+    "clocks.rpt": "87a6a18ab7081353a7e0cd7049b7de0b349ffd9fc5ea160daff92f38fcd067c1",
+    "implementation_status.json": "5a27f559e9acdb981b9fa1d04237f0ee452e766456e8bf72cab2fecd9c3fba34",
+    "software_build.json": "f64f66dd82c1a6255c7e2bc1cc5f5142af97bdb9c9c7a0a63d1e1bfe9c004e80",
+    "timing_summary.rpt": "8b8d58845353518f032fd1fd3c61f7c0d3b218d00f791ad424a0ec8bdf7bc9d4",
+    "utilization.rpt": "2d3934eb7263d6e3805e18e2d9759a6e98176fd47168d43551c5a16d9aff3977",
+    "video_cdc.rpt": "ae34457e9efd554d2e714e32e7acce88bac88cc38abb3df3946ecc816b465996",
+    "video_exceptions.rpt": "00ce564b431d2a384604a4c0c86cbc1e40e222fb29bb1763e2689aeb7dc83a65"
+  }
+}

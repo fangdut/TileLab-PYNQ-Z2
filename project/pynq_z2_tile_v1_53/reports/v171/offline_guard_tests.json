@@ -1,0 +1,8 @@
+{
+  "scope": "OFFLINE_FAILURE_INJECTION_AND_PROVENANCE_TESTS_NOT_BOARD",
+  "checks": {
+    "matching_c_and_rtl_evidence_accepted": true,
+    "stale_other_hls_c_evidence_rejected": true,
+    "one_pixel_corruption_rejected": true
+  }
+}

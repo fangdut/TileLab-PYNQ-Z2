@@ -12,6 +12,9 @@ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 status=json.loads((hw/'implementation_status.json').read_text())
 reset_proof=verify(hw)
 video_proof=verify_video(hw)
+if video_proof['video']:
+    skew=(hw/'bus_skew.rpt').read_text()
+    if 'VIOLATED' in skew.upper():raise ValueError('Asynchronous FIFO bus skew failed')
 if status['setup_slack_ns']<0 or status['hold_slack_ns']<0 or status['drc_errors']:raise ValueError('Unaccepted implementation')
 with zipfile.ZipFile(hw/'system.xsa') as z:
     bits=[n for n in z.namelist() if n.endswith('.bit')]

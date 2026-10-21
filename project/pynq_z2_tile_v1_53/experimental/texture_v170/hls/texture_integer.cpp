@@ -104,6 +104,15 @@ static void dw16(pack_t input,pack_t weight,const i32 old[O],i32 out[O]){
     }
 }
 static uint32_t word32(const uint64_t *m,unsigned offset){return uint32_t(m[offset/2]>>((offset&1)*32));}
+// Non-critical address products use fabric; DSPs are reserved for inference.
+// An explicit AP result avoids a native-integer bind/outlining compiler crash.
+static unsigned address_product(unsigned a,unsigned b){
+#pragma HLS INLINE off
+#pragma HLS PIPELINE II=1
+    ap_uint<32> product=ap_uint<32>(a)*ap_uint<32>(b);
+#pragma HLS BIND_OP variable=product op=mul impl=fabric
+    return uint32_t(product);
+}
 static void burst_read_row(const pack_t *__restrict work,unsigned src,pack_t *__restrict line,unsigned dst,int width){
 #pragma HLS INLINE off
     for(int x=0;x<width;x++){
@@ -124,7 +133,7 @@ static void load_line(const pack_t *work,unsigned src,shape_t ih,shape_t iw,shap
     }
 }
 typedef ap_uint<512> sum_packet;
-static void mac_row(shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> stride,ap_uint<1> pad,bool depth,
+static void mac_row(shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> stride,ap_uint<1> pad,bool depth,ap_uint<2> row_head,
                     const uint64_t ram[O][RD],const pack_t line[LD],const pack_t dw_weight[9],bool nearest,const i16 query[64],int count,hls::stream<sum_packet>& output){
 #pragma HLS INLINE off
 #pragma HLS ARRAY_PARTITION variable=ram complete dim=1
@@ -153,7 +162,9 @@ static void mac_row(shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> str
 #pragma HLS ARRAY_PARTITION variable=next complete
 #pragma HLS ARRAY_PARTITION variable=old_dw complete
 #pragma HLS ARRAY_PARTITION variable=out_dw complete
-        pack_t a=(x<ow&&ix>=0&&ix<iw)?line[(depth?r:((ib/2)*int(k)+r))*iw+ix]:pack_t(0);
+        int shifted_row=r+int(row_head);
+        ap_uint<2> depth_row=(k==3&&shifted_row>=3)?shifted_row-3:shifted_row;
+        pack_t a=(x<ow&&ix>=0&&ix<iw)?line[(depth?int(depth_row):((ib/2)*int(k)+r))*iw+ix]:pack_t(0);
         uint64_t v=uint64_t(a>>(64*(ib&1)));
         uint64_t centers[O][2];
 #pragma HLS ARRAY_PARTITION variable=centers complete
@@ -232,7 +243,7 @@ static void quant_row(pack_t *work,unsigned dst,shape_t ow,const int32_t bias[O]
         work[dst+x]=row[x];
     }
 }
-static void process_row(pack_t *work,unsigned dst,shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> stride,ap_uint<1> pad,bool depth,
+static void process_row(pack_t *work,unsigned dst,shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> stride,ap_uint<1> pad,bool depth,ap_uint<2> row_head,
                         const uint64_t ram[O][RD],const pack_t line[LD],const pack_t dw_weight[9],
                         const int32_t bias[O],const uint32_t mul[O],int relu,int qmax,bool nearest,const i16 query[64],int count,uint64_t &best){
 #pragma HLS INLINE off
@@ -244,10 +255,23 @@ static void process_row(pack_t *work,unsigned dst,shape_t ow,shape_t ic,shape_t 
     hls::stream<sum_packet> sums;
 #pragma HLS STREAM variable=sums depth=16
 #pragma HLS BIND_STORAGE variable=sums type=fifo impl=srl
-    mac_row(ow,ic,iw,k,stride,pad,depth,ram,line,dw_weight,nearest,query,count,sums);
+    mac_row(ow,ic,iw,k,stride,pad,depth,row_head,ram,line,dw_weight,nearest,query,count,sums);
     quant_row(work,dst,ow,bias,mul,relu,qmax,nearest,count,best,sums);
 }
-static bool conv(const uint64_t *model,pack_t *work,const unsigned t[24],uint64_t ram[O][RD],pack_t line[LD],bool nearest,const i16 query[64],int count,uint64_t &best){
+static void cache_pointwise_input(const pack_t *__restrict work,unsigned src,pack_t *__restrict cache,int groups,int ih,int iw,int ybase,int rows){
+#pragma HLS INLINE off
+    unsigned plane=address_product(ih,iw),offset=address_product(ybase,iw);
+    unsigned words=address_product(rows,iw);
+    unsigned read_base=src+offset,write_base=0;
+    for(int cg=0;cg<groups;cg++){
+    for(unsigned i=0;i<words;i++){
+#pragma HLS PIPELINE II=1
+        cache[write_base+i]=work[read_base+i];
+    }
+    read_base+=plane;write_base+=words;
+    }
+}
+static bool conv(const uint64_t *model,pack_t *work,const unsigned t[24],uint64_t ram[O][RD],pack_t line[LD],pack_t *__restrict cache,bool nearest,const i16 query[64],int count,uint64_t &best){
 #pragma HLS INLINE off
 #pragma HLS ALLOCATION function instances=process_row limit=1
 #pragma HLS ARRAY_PARTITION variable=query complete
@@ -259,8 +283,22 @@ static bool conv(const uint64_t *model,pack_t *work,const unsigned t[24],uint64_
     if(!nearest&&stride!=1&&stride!=2)return false;
     shape_t oh=((int(ih)+2*pad-k)>>(stride==2))+1,ow=((int(iw)+2*pad-k)>>(stride==2))+1;
     int taps=((ic+7)/8)*k*k;
-    if(!nearest&&((ic+15)/16*k*iw>LD||(!depth&&taps>RD)||oc%8||ic<1||oc<1))return false;
+    if(!nearest&&((ic+15)/16*k*iw>LD||(!depth&&taps>RD)||oc%8||ic<1||oc<1||iw<1||ih<1))return false;
+    bool cached=!nearest&&!depth&&k==1&&stride==1&&pad==0&&oc>16;
+    int groups=(int(ic)+15)/16,rows_per_tile=nearest?1:int(oh);
+    unsigned group_words=address_product(groups,unsigned(iw));
+    unsigned input_plane=address_product(unsigned(ih),unsigned(iw));
+    unsigned output_plane=address_product(unsigned(oh),unsigned(ow));
+    if(cached)rows_per_tile=clampi(8192/group_words,1,clampi(int(oh),1,16));
+    // Reuse the projection RAM, which is not live until the CNN has finished.
+    // Sixteen rows bound the tile and exercise multi-tile transfer in RTL tests.
+    for(int ybase=0;ybase<(nearest?1:int(oh));ybase+=rows_per_tile){
+        int active_rows=clampi((nearest?1:int(oh))-ybase,1,rows_per_tile);
+        if(cached)cache_pointwise_input(work,src,cache,groups,int(ih),int(iw),ybase,active_rows);
     for(int ob=0;ob<(nearest?1:(int(oc)+15)/16);ob++){
+        unsigned weight_block=address_product(unsigned(ob),unsigned(taps));
+        unsigned input_group=src+address_product(unsigned(ob),input_plane);
+        unsigned output_row=dst+address_product(unsigned(ob),output_plane)+address_product(unsigned(ybase),unsigned(ow));
         int32_t bias[O];uint32_t mul[O];
         pack_t dw_weight[9];
 #pragma HLS ARRAY_PARTITION variable=dw_weight complete
@@ -273,7 +311,7 @@ static bool conv(const uint64_t *model,pack_t *work,const unsigned t[24],uint64_
         if(!nearest&&!depth){
             for(int tap=0;tap<taps;tap++)for(int lane=0;lane<O;lane++){
 #pragma HLS PIPELINE II=1
-                ram[lane][tap]=model[wo+(ob*taps+tap)*16+lane];
+                ram[lane][tap]=model[wo+((weight_block+tap)<<4)+lane];
             }
         }else if(!nearest){
             for(int tap=0;tap<k*k;tap++){
@@ -281,21 +319,36 @@ static bool conv(const uint64_t *model,pack_t *work,const unsigned t[24],uint64_
                 dw_weight[tap]=pack_t(model[wo+(ob*k*k+tap)*2])|(pack_t(model[wo+(ob*k*k+tap)*2+1])<<64);
             }
         }
-        for(int y=0;y<(nearest?1:int(oh));y++){
-            if(!nearest&&depth){
-                // Each depthwise output uses only its own 16-channel group.
-                // Loading all groups here multiplied DDR reads by up to 36.
-                for(int r=0;r<k;r++){
+        ap_uint<2> row_head=0;
+        for(int local_y=0;local_y<active_rows;local_y++){
+            int y=ybase+local_y;
+            if(cached){
+                unsigned cache_row=address_product(local_y,unsigned(iw)),cache_group=address_product(active_rows,unsigned(iw));
+                for(int cg=0;cg<groups;cg++){
+                for(int x=0;x<iw;x++){
+#pragma HLS PIPELINE II=1
+                    line[cg*int(iw)+x]=cache[cache_row+x];
+                }
+                cache_row+=cache_group;
+                }
+            }else if(!nearest&&depth){
+                // A three-row circular buffer retains overlapping DW rows.
+                // Stride 1 reads only one fresh row; stride 2 reads two.
+                if(y>0&&k==3){int next=int(row_head)+stride;row_head=next>=3?next-3:next;}
+                for(int r=0;r<k;r++)if(y==0||r>=k-stride){
+                    int shifted=r+int(row_head),slot=k==3&&shifted>=3?shifted-3:shifted;
                     int iy=(y<<(stride==2))+r-pad;
-                    if(iy>=0&&iy<ih)burst_read_row(work,src+(ob*int(ih)+iy)*int(iw),line,r*int(iw),int(iw));
+                    if(iy>=0&&iy<ih)burst_read_row(work,input_group+address_product(unsigned(iy),unsigned(iw)),line,slot*int(iw),int(iw));
                     else for(int x=0;x<iw;x++){
 #pragma HLS PIPELINE II=1
-                        line[r*int(iw)+x]=0;
+                        line[slot*int(iw)+x]=0;
                     }
                 }
             }else if(!nearest)load_line(work,src,ih,iw,ic,k,stride,pad,y,line);
-            process_row(work,dst+(ob*int(oh)+y)*int(ow),ow,int(ic),int(iw),k,stride,pad,depth,ram,line,dw_weight,bias,mul,relu,qmax,nearest,query,count,best);
+            process_row(work,output_row,ow,int(ic),int(iw),k,stride,pad,depth,row_head,ram,line,dw_weight,bias,mul,relu,qmax,nearest,query,count,best);
+            output_row+=unsigned(ow);
         }
+    }
     }
     return true;
 }
@@ -417,6 +470,7 @@ void texture_integer(const uint64_t *model,pack_t *work,const uint32_t *rgb,uint
 #pragma HLS ALLOCATION function instances=conv limit=1
 #pragma HLS ALLOCATION function instances=dw16 limit=1
 #pragma HLS ALLOCATION function instances=pooled limit=1
+#pragma HLS ALLOCATION function instances=address_product limit=1
     uint64_t ram[O][RD];pack_t line[LD];uint32_t row0[1024],row1[1024];unsigned raw[3136],smooth[3136];
     pack_t feature_cache[4096],projection_cache[8192];int64_t projection_bias[64];
 #pragma HLS BIND_STORAGE variable=feature_cache type=ram_2p impl=bram
@@ -433,8 +487,16 @@ void texture_integer(const uint64_t *model,pack_t *work,const uint32_t *rgb,uint
     shape_t side=h[3],grid=h[4],dim=h[5],ca=h[9],cb=h[10];ap_uint<11> count=h[6];
     if(h[0]!=0x17000001||!width||!height||width>1024||height>1024||side<8||side>224||grid!=side/8||dim!=64||count<1||count>1024||ca!=32||cb!=96||h[2]>96)return;
     int den=int(side)*2;ap_int<37> im[3];int64_t ib[3];for(int c=0;c<3;c++){im[c]=int64_t(model[h[17]+c]);ib[c]=int64_t(model[h[18]+c]);}
+    ap_uint<32> input_x[224];
+#pragma HLS BIND_STORAGE variable=input_x type=ram_1p impl=lutram
+    // Geometry depends on the column, not the row: divide 224 times, not 50176.
+    for(int x=0;x<side;x++){
+        int xx=clampi((2*x+1)*int(width)-side,0,(int(width)-1)*den),x0=xx/den;
+        int x1=x0+1<int(width)?x0+1:x0,fx=xx-x0*den;
+        input_x[x]=uint32_t(x0)|(uint32_t(x1)<<10)|(uint32_t(fx)<<20);
+    }
     for(int y=0;y<side;y++){
-        int yy=clampi((2*y+1)*int(height)-side,0,(int(height)-1)*den),y0=yy/den,y1=y0+1<int(height)?y0+1:y0,fy=yy%den;
+        int yy=clampi((2*y+1)*int(height)-side,0,(int(height)-1)*den),y0=yy/den,y1=y0+1<int(height)?y0+1:y0,fy=yy-y0*den;
         for(unsigned x=0;x<width;x++){
 #pragma HLS PIPELINE II=1
             row0[x]=rgb[y0*width+x];
@@ -443,20 +505,29 @@ void texture_integer(const uint64_t *model,pack_t *work,const uint32_t *rgb,uint
 #pragma HLS PIPELINE II=1
             row1[x]=rgb[y1*width+x];
         }
-        for(int x=0;x<side;x++){
-            int xx=clampi((2*x+1)*int(width)-side,0,(int(width)-1)*den),x0=xx/den,x1=x0+1<int(width)?x0+1:x0,fx=xx%den;
-            pack_t p=0;
-            for(int c=0;c<3;c++){
+        pack_t normalized=0;
+        // One colour component/cycle; the pipeline spans consecutive pixels.
+        // Reuse the CNN line BRAM as a normalized-row staging buffer.
+        for(ap_uint<10> group=0;group<int(side)*3;group++){
 #pragma HLS PIPELINE II=1
-                int shift=16-8*c;
-                int64_t a=(row0[x0]>>shift)&255,b=(row0[x1]>>shift)&255,c0=(row1[x0]>>shift)&255,d=(row1[x1]>>shift)&255;
-                ap_uint<27> v=(a*(den-fx)+b*fx)*(den-fy)+(c0*(den-fx)+d*fx)*fy;
-                ap_int<64> product=v*im[c];
+            int x=group/3,c=group%3;ap_uint<32> map=input_x[x];
+            unsigned x0=uint32_t(map)&1023,x1=(uint32_t(map)>>10)&1023;int fx=(uint32_t(map)>>20)&511;
+            int shift=16-8*c;
+            int64_t a=(row0[x0]>>shift)&255,b=(row0[x1]>>shift)&255,c0=(row1[x0]>>shift)&255,d=(row1[x1]>>shift)&255;
+            ap_uint<27> v=(a*(den-fx)+b*fx)*(den-fy)+(c0*(den-fx)+d*fx)*fy;
+            ap_int<64> product=v*im[c];
 #pragma HLS BIND_OP variable=product op=mul impl=dsp
-                int q=clampi(int(rounded(int64_t(product)+ib[c],48)),-127,127);p.range(c*8+7,c*8)=i8(q);
-            }work[y*side+x]=p;
+            int q=clampi(int(rounded(int64_t(product)+ib[c],48)),-127,127);
+            if(c==0)normalized=0;
+            normalized.range(c*8+7,c*8)=i8(q);
+            if(c==2)line[x]=normalized;
+        }
+        for(int x=0;x<side;x++){
+#pragma HLS PIPELINE II=1
+            work[y*side+x]=line[x];
         }
     }
+
     i16 query[64];uint64_t best=0;unsigned t[24];
 #pragma HLS ARRAY_PARTITION variable=query complete
     for(int j=0;j<64;j++)query[j]=0;
@@ -541,7 +612,7 @@ void texture_integer(const uint64_t *model,pack_t *work,const uint32_t *rgb,uint
             if(t[0]==3)add(work,t);
         }
         if(nearest||t[0]==1||t[0]==2){
-            if(!conv(model,work,t,ram,line,nearest,query,int(count),best)){result[1]=2;return;}
+            if(!conv(model,work,t,ram,line,projection_cache,nearest,query,int(count),best)){result[1]=2;return;}
         }else if(t[0]!=3){result[1]=3;return;}
         if(nearest)raw[phase-h[2]]=root(best);else result[8]=phase+1;
     }
