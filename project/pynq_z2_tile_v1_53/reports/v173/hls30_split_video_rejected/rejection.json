@@ -1,0 +1,18 @@
+{
+  "scope": "SPLIT_PORT_FULL_HDMI_IMPLEMENTATION_REJECTED_NOT_PROGRAMMED",
+  "hls_source_sha256": "81983bb2922976b8907c921ff653c5e74957c838a09fc932e2edac39ee19799f",
+  "synthesis_luts": 57379,
+  "device_luts": 53200,
+  "placement_error": "Place 30-487: instance packing cannot be obeyed",
+  "bitstream_exported": false,
+  "board_programmed": false,
+  "new_detector_fps": null,
+  "evidence_sha256": {
+    "synthesis_utilization.rpt": "7044319df76b2c71105fd724b0b2c1810aa98609be9d6a8f24e719c1b2311aa8",
+    "implementation.log": "8a1af832a824e324feb4549690c463639deb3b2eb7f46afc46f9c0cec3c5ccf2",
+    "preflight.json": "6d580f26e9d424c1e4e627e6a60fb9d741ae33bb31b237b916d63f977e3fb3bb",
+    "optimization_strategy.json": "c533dbf768a4e6408d7740bd2efa1e3df2efb86ee1e45766ff48e2f4fb627ef6",
+    "build_hardware_source.tcl": "c6e1f81556232a7536d756d84affe293877e1c8d6c69b72b69fbca119ddc78c0",
+    "add_video_source.tcl": "f5dccea3fbbf955972249d6e2ac2c6f3a580a706e627455cd47cfb0d390f835a"
+  }
+}

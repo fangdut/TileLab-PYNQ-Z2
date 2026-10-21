@@ -7,6 +7,9 @@ set video [info exists ::env(TILE_TEXTURE_VIDEO)]
 set opt_directive Default
 if {[info exists ::env(TILE_TEXTURE_OPT_DIRECTIVE)]} {set opt_directive $::env(TILE_TEXTURE_OPT_DIRECTIVE)}
 if {$opt_directive ni {Default ExploreArea ExploreWithRemap}} {error "Unsupported optimization directive"}
+set memory_layout shared
+if {[info exists ::env(TILE_TEXTURE_MEMORY_LAYOUT)]} {set memory_layout $::env(TILE_TEXTURE_MEMORY_LAYOUT)}
+if {$memory_layout ni {shared split}} {error "Unsupported DDR memory layout"}
 if {[file exists $out]} {error "Refusing to overwrite hardware build"}
 set report $hls/solution/sim/report/texture_integer_cosim.rpt
 set f [open $report r];set proof [read $f];close $f
@@ -28,8 +31,9 @@ if {[info exists ::env(TILE_TEXTURE_IP_CACHE)]} {
 file copy $hls/src/texture_integer.cpp $out/texture_integer_source.cpp
 file copy $report $out/hls_cosim.rpt
 file copy [info script] $out/build_hardware_source.tcl
+file copy $root/scripts/texture_v170/add_video.tcl $out/add_video_source.tcl
 set f [open $out/optimization_strategy.json w]
-puts $f "{\"opt_directive\":\"$opt_directive\"}"
+puts $f "{\"opt_directive\":\"$opt_directive\",\"memory_layout\":\"$memory_layout\"}"
 close $f
 file mkdir $out/physical_scripts
 foreach name {replicate_controls.tcl constrain_video_cdc.tcl} {
@@ -63,6 +67,7 @@ set ps7 [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 ps7]
 source $root/scripts/ps7_preset.tcl
 set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_EN_CLK0_PORT {1} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_EN_CLK1_PORT {0} CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_EN_CLK3_PORT {0}] $ps7
 if {$video} {set_property -dict [list CONFIG.PCW_USE_S_AXI_HP1 {1} CONFIG.PCW_EN_CLK1_PORT {1} CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {200}] $ps7}
+if {$memory_layout eq "split"} {set_property -dict [list CONFIG.PCW_USE_S_AXI_HP2 {1} CONFIG.PCW_USE_S_AXI_HP3 {1}] $ps7}
 make_bd_intf_pins_external [get_bd_intf_pins ps7/DDR]
 make_bd_intf_pins_external [get_bd_intf_pins ps7/FIXED_IO]
 set_property name DDR [get_bd_intf_ports DDR_0]
@@ -77,6 +82,13 @@ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 control_fabric
 set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {2} CONFIG.NUM_CLKS {1}] [get_bd_cells control_fabric]
 create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 memory_fabric
 set_property -dict [list CONFIG.NUM_SI {4} CONFIG.NUM_MI {1} CONFIG.NUM_CLKS {1}] [get_bd_cells memory_fabric]
+if {$memory_layout eq "split"} {
+ set_property CONFIG.NUM_SI {2} [get_bd_cells memory_fabric]
+ foreach name {work_fabric model_fabric} {
+  create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 $name
+  set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1} CONFIG.NUM_CLKS {1}] [get_bd_cells $name]
+ }
+}
 create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 resets
 set_property -dict [list CONFIG.C_EXT_RESET_HIGH {0} CONFIG.C_AUX_RESET_HIGH {0}] [get_bd_cells resets]
 foreach {name value} {zero 0 one 1} {
@@ -87,11 +99,21 @@ proc intf {a b} {connect_bd_intf_net [get_bd_intf_pins $a] [get_bd_intf_pins $b]
 intf ps7/M_AXI_GP0 control_fabric/S00_AXI
 intf control_fabric/M00_AXI identity/S_AXI
 intf control_fabric/M01_AXI infer/s_axi_control
-intf memory_fabric/M00_AXI ps7/S_AXI_HP0
-set n 0
-foreach p {m_axi_modelmem m_axi_workmem m_axi_inputmem m_axi_outmem} {
- intf infer/$p [format "memory_fabric/S%02d_AXI" $n]
- incr n
+if {$memory_layout eq "split"} {
+ intf infer/m_axi_workmem work_fabric/S00_AXI
+ intf work_fabric/M00_AXI ps7/S_AXI_HP0
+ intf infer/m_axi_modelmem model_fabric/S00_AXI
+ intf model_fabric/M00_AXI ps7/S_AXI_HP2
+ intf infer/m_axi_inputmem memory_fabric/S00_AXI
+ intf infer/m_axi_outmem memory_fabric/S01_AXI
+ intf memory_fabric/M00_AXI ps7/S_AXI_HP3
+} else {
+ intf memory_fabric/M00_AXI ps7/S_AXI_HP0
+ set n 0
+ foreach p {m_axi_modelmem m_axi_workmem m_axi_inputmem m_axi_outmem} {
+  intf infer/$p [format "memory_fabric/S%02d_AXI" $n]
+  incr n
+ }
 }
 foreach p {ps7/M_AXI_GP0_ACLK ps7/S_AXI_HP0_ACLK control_fabric/aclk memory_fabric/aclk identity/s_axi_aclk infer/ap_clk resets/slowest_sync_clk} {
  connect_bd_net [get_bd_pins ps7/FCLK_CLK0] [get_bd_pins $p]
@@ -102,6 +124,13 @@ connect_bd_net [get_bd_pins one/dout] [get_bd_pins resets/dcm_locked] [get_bd_pi
 connect_bd_net [get_bd_pins zero/dout] [get_bd_pins resets/mb_debug_sys_rst]
 connect_bd_net [get_bd_pins resets/peripheral_aresetn] [get_bd_pins identity/s_axi_aresetn] [get_bd_pins infer/ap_rst_n]
 connect_bd_net [get_bd_pins resets/interconnect_aresetn] [get_bd_pins control_fabric/aresetn] [get_bd_pins memory_fabric/aresetn]
+if {$memory_layout eq "split"} {
+ foreach name {work_fabric model_fabric} {
+  connect_bd_net [get_bd_pins ps7/FCLK_CLK0] [get_bd_pins $name/aclk]
+  connect_bd_net [get_bd_pins resets/interconnect_aresetn] [get_bd_pins $name/aresetn]
+ }
+ foreach port {S_AXI_HP2_ACLK S_AXI_HP3_ACLK} {connect_bd_net [get_bd_pins ps7/FCLK_CLK0] [get_bd_pins ps7/$port]}
+}
 if {$video} {source $root/scripts/texture_v170/add_video.tcl}
 assign_bd_address
 set_property offset 0x41200000 [get_bd_addr_segs ps7/Data/SEG_identity_Reg]

@@ -1,0 +1,29 @@
+{
+  "scope": "FULL_HDMI_IMPLEMENTATION_REJECTED_NOT_PROGRAMMED",
+  "hls_source_sha256": "81983bb2922976b8907c921ff653c5e74957c838a09fc932e2edac39ee19799f",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "synth_luts": 58640,
+  "postopt_luts": 57091,
+  "device_luts": 53200,
+  "excess_luts": 3891,
+  "actual_dsp": 218,
+  "bram_tiles": 137,
+  "setup_hold_closed": false,
+  "bitstream_exported": false,
+  "board_programmed": false,
+  "new_detector_fps": null,
+  "optimization_directive": "ExploreArea",
+  "further_remap_luts": 57131,
+  "skip_utilization_check": false,
+  "evidence_sha256": {
+    "synthesis_utilization.rpt": "77f706c6a07fea875d0dc8b232a1437682ee6686e89a8c280c3a4b0884f7d256",
+    "postopt_utilization.rpt": "985d9851b785c8111cd211c12f1b834da2bafac330e7aaadf2540ca88d968526",
+    "postopt_hierarchy.rpt": "7e1f377f0d1e554529dbae07be29ef3e42b8473f50f4aa2130e0d4cebb2a1a85",
+    "implementation.log": "8925cb58ffcfa602a677cf6f218a6eea3729b8cd7f75137ba2f20d4a2a978975",
+    "preflight.json": "3acd1b440fa3a034ad7f8ebb66cedbb3b003715850421a1962965a0451867c46",
+    "optimization_strategy.json": "d5122d3e4637e228283ca27666fd6929985d769780c9270db4387c69819f55b7",
+    "build_hardware_source.tcl": "49ae0314cc4ab7b84b11ecbacab4b08cdce3cf335bd9508e78f50b865f939246",
+    "rejected_acceptance.json": "b9dcc1484bca4623dd4da2f3a3bc9ea09457bcd56a0538538e95903efd1f70c7",
+    "further_remap_utilization.rpt": "22e48562d317d26f15039c59af8e938c5b02421b7cc88e61ff63cacb88b240f1"
+  }
+}

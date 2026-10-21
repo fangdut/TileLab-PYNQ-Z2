@@ -1,0 +1,21 @@
+{
+  "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "81983bb2922976b8907c921ff653c5e74957c838a09fc932e2edac39ee19799f",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_regression_summary_sha256": "7eecf606d792849c6b4b25b7e13711b74bda478cf4b2a0aeaaa5d37b187eaa50",
+  "rtl_cosim_sha256": "7f36bb486946c567e8b9eb15baab4b1477fca79d672d280397f19678a078d924",
+  "hls_dsp": 212,
+  "hls_bram18": 270,
+  "centered_packing_weights": {
+    "weight_bytes": 529760,
+    "minimum": -127,
+    "maximum": 127,
+    "minus128_values": 0,
+    "active_accumulator_magnitude_bound": 5742667,
+    "exclusive_accumulator_limit": 8388608,
+    "active_channels": 8052,
+    "zero_multiplier_channels": 12
+  },
+  "opt_directive": "ExploreArea",
+  "memory_layout": "split"
+}

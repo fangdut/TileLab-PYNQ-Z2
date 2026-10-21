@@ -64,13 +64,15 @@ def main():
     try:
         save();deadline=time.time()+5400
         while True:
+            sealed=a.hardware/'candidate_preflight.json'
+            console=a.hardware.with_name(a.hardware.name+'_console.log')
             status=a.hardware/'implementation_status.json'
+            if sealed.exists() and not status.exists():
+                raise RuntimeError('Hardware build ended without accepted implementation status; programming blocked')
             if status.exists():
                 s=json.loads(status.read_text())
                 if s['setup_slack_ns']<0 or s['hold_slack_ns']<0 or s['drc_errors']:
                     raise RuntimeError('Physical timing/DRC failed; programming blocked')
-                sealed=a.hardware/'candidate_preflight.json'
-                console=a.hardware.with_name(a.hardware.name+'_console.log')
                 if sealed.exists():
                     repaired=a.hardware/'physical_repair.json'
                     original_pass='TEXTURE_V170_IMPLEMENTATION_PASSED' in console.read_text(errors='replace')

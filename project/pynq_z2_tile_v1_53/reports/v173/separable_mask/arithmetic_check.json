@@ -1,0 +1,17 @@
+{
+  "scope": "OFFLINE_INTEGER_REARRANGEMENT_AND_RANGE_CHECK_NOT_RTL_OR_BOARD",
+  "source_sha256": "1f4e1c40f4f1fb7616ea03d678a4be99e1ba320924be0172c2ed31e0d2003d5b",
+  "seed": 17331,
+  "grid_values": [
+    1,
+    4,
+    10,
+    28
+  ],
+  "samples": 176000,
+  "all_numerators_exact": true,
+  "max_vertical_observed": 2147481600,
+  "max_numerator_observed": 4398042316800,
+  "algebra": "(a*dx+b*fx)*dy+(c*dx+d*fx)*fy == (a*dy+c*fy)*dx+(b*dy+d*fy)*fx",
+  "universal_range_bound": "vertical <= (2^20-1)*2048 < 2^32; numerator <= (2^20-1)*2048^2 < 2^44"
+}

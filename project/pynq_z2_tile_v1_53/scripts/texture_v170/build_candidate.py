@@ -15,7 +15,7 @@ def packed_weight_proof(source,profile,graph):
     blob=(profile/'model.bin').read_bytes()
     header=struct.unpack_from('<64I',blob)
     if header[2]!=len(graph['tasks']):raise ValueError('Model task count mismatch')
-    count=0;minimum=127;maximum=-127
+    count=0;minimum=127;maximum=-127;accumulator_bound=0;active_channels=0;dead_channels=0
     for i,t in enumerate(graph['tasks']):
         if list(struct.unpack_from('<24I',blob,(64+i*24)*4))!=t:
             raise ValueError('Graph and binary task descriptors differ')
@@ -26,8 +26,23 @@ def packed_weight_proof(source,profile,graph):
         if start+size>len(blob):raise ValueError('Convolution weights exceed model')
         values=struct.unpack_from('<'+str(size)+'b',blob,start)
         if -128 in values:raise ValueError('Centered packing rejects -128 weights')
+        taps=t[11]*t[11]*(1 if t[0]==2 else (t[9]+7)//8)
+        sums=[0]*(groups*16)
+        for index,value in enumerate(values):
+            channel=(index//(taps*16))*16+index%16 if t[0]==2 else (index//(taps*128))*16+(index//8)%16
+            sums[channel]+=abs(value)
+        bias=struct.unpack_from('<'+str(t[10])+'i',blob,t[5]*4)
+        multiplier=struct.unpack_from('<'+str(t[10])+'I',blob,t[6]*4)
+        for channel in range(t[10]):
+            if multiplier[channel]:
+                accumulator_bound=max(accumulator_bound,127*sums[channel]+abs(bias[channel]))
+                active_channels+=1
+            else:dead_channels+=1
         count+=size;minimum=min(minimum,min(values));maximum=max(maximum,max(values))
-    return dict(weight_bytes=count,minimum=minimum,maximum=maximum,minus128_values=0)
+    if accumulator_bound>=(1<<23):raise ValueError('Active convolution accumulator exceeds signed24 range')
+    return dict(weight_bytes=count,minimum=minimum,maximum=maximum,minus128_values=0,
+        active_accumulator_magnitude_bound=accumulator_bound,exclusive_accumulator_limit=1<<23,
+        active_channels=active_channels,zero_multiplier_channels=dead_channels)
 
 
 def preflight(hls,regression,profile):
@@ -66,6 +81,7 @@ def main():
     for n in ['hls','regression','profile','out']:p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--video',action='store_true')
     p.add_argument('--opt-directive',choices=['Default','ExploreArea','ExploreWithRemap'],default='Default')
+    p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
     a=p.parse_args()
     if not a.out.is_absolute() or a.out.exists():raise ValueError('Fresh absolute hardware output required')
     proof=preflight(a.hls,a.regression,a.profile)
@@ -73,6 +89,8 @@ def main():
     env=os.environ.copy();env['TILE_TEXTURE_HLS']=str(a.hls);env['TILE_TEXTURE_HW']=str(a.out)
     env['TILE_TEXTURE_OPT_DIRECTIVE']=a.opt_directive
     proof['opt_directive']=a.opt_directive
+    env['TILE_TEXTURE_MEMORY_LAYOUT']=a.memory_layout
+    proof['memory_layout']=a.memory_layout
     if a.video:env['TILE_TEXTURE_VIDEO']='1'
     else:env.pop('TILE_TEXTURE_VIDEO',None)
     env.pop('TILE_TEXTURE_PREPARE_ONLY',None)

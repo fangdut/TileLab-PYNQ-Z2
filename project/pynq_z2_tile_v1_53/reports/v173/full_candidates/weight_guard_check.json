@@ -4,7 +4,11 @@
     "weight_bytes": 529760,
     "minimum": -127,
     "maximum": 127,
-    "minus128_values": 0
+    "minus128_values": 0,
+    "active_accumulator_magnitude_bound": 5742667,
+    "exclusive_accumulator_limit": 8388608,
+    "active_channels": 8052,
+    "zero_multiplier_channels": 12
   },
   "minus128_model_rejected": true
 }

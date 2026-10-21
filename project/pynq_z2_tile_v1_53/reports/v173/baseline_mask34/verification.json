@@ -1,0 +1,27 @@
+{
+  "scope": "FULL_C_AND_TWO_CALL_RTL_PASS_NOT_BOARD_ACCEPTANCE",
+  "source_sha256": "18c9631dfb3aaf8a9e51029c325e8690ab3d1979e12ea35b017fe7d162bdcfd1",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "full_c_cases": 117,
+  "all_scores_and_masks_exact": true,
+  "correct_on_exposed_development_set": 117,
+  "rtl_two_calls_passed": true,
+  "rtl_fixture_input": [
+    13,
+    9
+  ],
+  "rtl_fixture_internal_side": 64,
+  "rtl_fixture_grid": 8,
+  "benchmark_is_blind": false,
+  "board_programmed": false,
+  "new_detector_fps": null,
+  "wide_fixture_failure": "HLS33 C wrapper SIGSEGV: 79x65 data exceeds declared rgb/result simulation depth 512. HLS34 uses source-identical kernel and matching fixture, with early capacity guard added.",
+  "evidence_sha256": {
+    "full_c_summary.json": "6c33cae8446d00d09c24c83a8690863b5b8630cb1ba98c662ae0f8ef17e6cb34",
+    "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+    "rtl_cosim.rpt": "dc5287bcdfe3663b84eade3945a2db2dd427745e1554c0fc3e3670eff7f039da",
+    "hls_synthesis.xml": "2385e06ad87bc3cfbe174cd33a4a14240c151971c3b2b2bc4908647e7691eb1f",
+    "hls_synthesis.rpt": "e5865f3f2b8002d516d2f6c2ccdb70b0034387f0d8c151493cbd26a83236d83c",
+    "failed_wide_fixture_cosim.rpt": "47c55b816f576879d1a012db6b6712e5146705b56f5e7802a6dc6f3a51410f43"
+  }
+}

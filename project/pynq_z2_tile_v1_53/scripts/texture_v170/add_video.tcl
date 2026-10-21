@@ -3,10 +3,12 @@
 create_bd_cell -type module -reference hdmi_detector_pipeline pipeline
 create_bd_cell -type module -reference video_regs video_regs
 set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {3}] [get_bd_cells control_fabric]
-set_property CONFIG.NUM_SI {5} [get_bd_cells memory_fabric]
+set result_si 4
+if {$memory_layout eq "split"} {set result_si 2}
+set_property CONFIG.NUM_SI [expr {$result_si+1}] [get_bd_cells memory_fabric]
 intf pipeline/m_axi_control control_fabric/S01_AXI
 intf control_fabric/M02_AXI video_regs/s_axi
-intf pipeline/m_axi_result memory_fabric/S04_AXI
+intf pipeline/m_axi_result [format "memory_fabric/S%02d_AXI" $result_si]
 create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 capture_fabric
 set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {1} CONFIG.NUM_CLKS {1}] [get_bd_cells capture_fabric]
 intf pipeline/m_axi_capture capture_fabric/S00_AXI
