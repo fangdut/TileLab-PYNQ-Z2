@@ -1,0 +1,19 @@
+{
+  "scope": "RESUME_SOURCE_BOUND_TIMING_ONLY_FAILURE_NO_AUTO_PROMOTION",
+  "status": "FAILED_NO_PROMOTION",
+  "stages": [
+    {
+      "stage": "postroute_repair",
+      "returncode": 0,
+      "seconds": 409.59300000000076
+    },
+    {
+      "stage": "board_acceptance",
+      "returncode": 1,
+      "seconds": 253.54699999999866
+    }
+  ],
+  "flash_written": false,
+  "board_programmed": true,
+  "error": "board_acceptance failed; no promotion"
+}

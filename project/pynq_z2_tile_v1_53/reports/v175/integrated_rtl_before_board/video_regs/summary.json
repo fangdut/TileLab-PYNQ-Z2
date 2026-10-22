@@ -1,0 +1,10 @@
+{
+  "scope": "DYNAMIC_DDR_AND_VIDEO_CONTROL_BUS_MODEL_RTL_NOT_REAL_HDMI_CNN_OR_BOARD",
+  "test": "video_regs",
+  "passed": true,
+  "elapsed_seconds": 5.514999999999418,
+  "sources": {
+    "rtl\\video_regs.v": "dc340aa8a897480018b7b5b8c217206c980264a7851e6f33c9f1e0984e5740a1",
+    "sim\\tb_video_regs.sv": "af7c76a9eec1eaa9ce01403ce3d84d53ca14f242e98cf9c01f5cb13abaf60c61"
+  }
+}

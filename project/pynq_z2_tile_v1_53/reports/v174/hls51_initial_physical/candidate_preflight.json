@@ -1,0 +1,462 @@
+{
+  "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "64cd7f4d7e150c4e729e8f457bd9f27a85186506df435eeeba87b043a4c3820c",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_regression_summary_sha256": "4138525d7d15d1e03c1dd24c935338f9884f3f39a0405e76e2ccf23d17025375",
+  "rtl_cosim_sha256": "3e94122136e84715028239698dccb3ec3b26f9a79624b51e8a0d6d59977a2235",
+  "hls_dsp": 218,
+  "hls_bram18": 251,
+  "mac_recurrence": {
+    "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+    "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls51",
+    "source_sha256": "64cd7f4d7e150c4e729e8f457bd9f27a85186506df435eeeba87b043a4c3820c",
+    "rtl_sha256": "8bb825171fc11d81a2203f4470cf6255ac5eee458e563447999487b2fdc13704",
+    "slots": 32,
+    "banks": [
+      {
+        "bank": "acc",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_1",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_10",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_11",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_12",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_13",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_14",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_15",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_2",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_3",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_4",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_5",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_6",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_7",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_8",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_9",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      }
+    ],
+    "all_banks_safe": true,
+    "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively."
+  },
+  "direct_cache_bounds": {
+    "scope": "STATIC_BINARY_GRAPH_BUFFER_BOUNDS_NOT_RUNTIME_INFERENCE",
+    "source_sha256": "64cd7f4d7e150c4e729e8f457bd9f27a85186506df435eeeba87b043a4c3820c",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "model_tasks": 47,
+    "convolution_tasks": 39,
+    "cached_pw_tasks": 25,
+    "max_direct_cache_word": 8063,
+    "cache_capacity_words": 8192,
+    "line_banks": 1,
+    "line_words_per_bank": 2048,
+    "quantization_row_words": 224,
+    "tasks": [
+      {
+        "task": 1,
+        "cached": false,
+        "input_width": 224,
+        "input_channels": 3,
+        "flat_line_words": 672,
+        "max_line_word": 671
+      },
+      {
+        "task": 2,
+        "cached": false,
+        "input_width": 112,
+        "input_channels": 32,
+        "flat_line_words": 672,
+        "max_line_word": 671
+      },
+      {
+        "task": 3,
+        "cached": true,
+        "input_width": 112,
+        "input_channels": 32,
+        "max_cache_word": 3583,
+        "output_rows_covered": 112
+      },
+      {
+        "task": 4,
+        "cached": true,
+        "input_width": 112,
+        "input_channels": 16,
+        "max_cache_word": 1791,
+        "output_rows_covered": 112
+      },
+      {
+        "task": 5,
+        "cached": false,
+        "input_width": 112,
+        "input_channels": 96,
+        "flat_line_words": 2016,
+        "max_line_word": 2015
+      },
+      {
+        "task": 6,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 96,
+        "max_cache_word": 5375,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 7,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 24,
+        "max_cache_word": 1791,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 8,
+        "cached": false,
+        "input_width": 56,
+        "input_channels": 144,
+        "flat_line_words": 1512,
+        "max_line_word": 1511
+      },
+      {
+        "task": 9,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 144,
+        "max_cache_word": 8063,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 11,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 24,
+        "max_cache_word": 1791,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 12,
+        "cached": false,
+        "input_width": 56,
+        "input_channels": 144,
+        "flat_line_words": 1512,
+        "max_line_word": 1511
+      },
+      {
+        "task": 13,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 144,
+        "max_cache_word": 4031,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 14,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 32,
+        "max_cache_word": 895,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 15,
+        "cached": false,
+        "input_width": 28,
+        "input_channels": 192,
+        "flat_line_words": 1008,
+        "max_line_word": 1007
+      },
+      {
+        "task": 16,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 192,
+        "max_cache_word": 5375,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 18,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 32,
+        "max_cache_word": 895,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 19,
+        "cached": false,
+        "input_width": 28,
+        "input_channels": 192,
+        "flat_line_words": 1008,
+        "max_line_word": 1007
+      },
+      {
+        "task": 20,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 192,
+        "max_cache_word": 5375,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 22,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 32,
+        "max_cache_word": 895,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 23,
+        "cached": false,
+        "input_width": 28,
+        "input_channels": 192,
+        "flat_line_words": 1008,
+        "max_line_word": 1007
+      },
+      {
+        "task": 24,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 192,
+        "max_cache_word": 2351,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 25,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 26,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "flat_line_words": 1008,
+        "max_line_word": 1007
+      },
+      {
+        "task": 27,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 29,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 30,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "flat_line_words": 1008,
+        "max_line_word": 1007
+      },
+      {
+        "task": 31,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 33,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 34,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "flat_line_words": 1008,
+        "max_line_word": 1007
+      },
+      {
+        "task": 35,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 37,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 38,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "flat_line_words": 1008,
+        "max_line_word": 1007
+      },
+      {
+        "task": 39,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 40,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 96,
+        "max_cache_word": 1175,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 41,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 576,
+        "flat_line_words": 1512,
+        "max_line_word": 1511
+      },
+      {
+        "task": 42,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 576,
+        "max_cache_word": 7055,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 44,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 96,
+        "max_cache_word": 1175,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 45,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 576,
+        "flat_line_words": 1512,
+        "max_line_word": 1511
+      },
+      {
+        "task": 46,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 576,
+        "max_cache_word": 7055,
+        "output_rows_covered": 14
+      }
+    ]
+  },
+  "centered_packing_weights": null,
+  "opt_directive": "Default",
+  "memory_layout": "shared"
+}

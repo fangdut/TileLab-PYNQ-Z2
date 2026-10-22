@@ -1,0 +1,32 @@
+{
+  "scope": "NUMERICALLY_EXACT_BUT_SLOWER_BOARD_CANDIDATE_REJECTED",
+  "candidate": "HLS51/HW04",
+  "all117_direct_scores_and_masks_exact": true,
+  "candidate_fixed_frame_fps": 7.443778670103955,
+  "restored_baseline_fixed_frame_fps": 7.538977944689445,
+  "fixed_frame_change_fraction": -0.012627610172616155,
+  "continuous_hdmi_measured": false,
+  "hdmi_source_exit": "No active external 1280x720 display",
+  "hdmi_observation": "Windows enumerated DISPLAY1 only; restoring accepted HLS39 enumerated DISPLAY2 1280x720/60 again",
+  "hdmi_root_cause_proven": false,
+  "promoted": false,
+  "board_restored_to": "HLS39",
+  "current_restored_boot_identity": 3488423778,
+  "flash_written": false,
+  "benchmark_is_blind": false,
+  "files": {
+    "canonical_header_alignment.json": "c9c92a37358bbceb111b5453d9329579fce47e76562ef0bb031f692b17e9708b",
+    "direct117_results.json": "e0f75c2ee3f0615420a48ce073cca218dcc776ec57aa516c69f210c52eab983c",
+    "direct117_summary.json": "97bab6ea8b47c843074f889e679875998fecb083d2e7e5e69c17d24f3cc5ce4d",
+    "failed_iteration.json": "aab6b3e5a461a646a91442635b98d0b8a44ef7f57757412312650d59a378993f",
+    "fixed_frame_benchmark.json": "2481faf9da6917e6a3bc7c2bd3a19707868b555f7e3961d8ca298372b1d8c2aa",
+    "hdmi_source_failed.log": "ae1a7fd66c4e7558c5079e1d795fdeccf5536e065c708df914052f0e4d8afa70",
+    "physical_repair.json": "f64825007056e518906d06574dbbc56b815eb3c571b438a7fdfd84662801e898",
+    "physical_status.json": "fe8672892accc4df3b8d911b1ea01dca13246936e14ea8fb33835103f2e3a113",
+    "program_identity.json": "2aa426abe8a486f07d4db9528b286a2dffd483502db4753c998f1760e8247ef7",
+    "recovery_iteration.json": "fc7f4ac7acaa7fc4191bfa4eabdca789037af976b60276999d7d9199084071a1",
+    "restored_hls39_direct117.json": "2a23797e08b3dad0e397f3d508b4fc5aaa1b36099387c96a5a67c9141a4d2f28",
+    "restored_hls39_fixed_frame.json": "ec6800872ab92edb3562cabde6a8140411015d62401d20fb7fdbb078ca50c572",
+    "restored_hls39_identity.json": "c9a2860b85c700127ea2588757ae999abf10df303e6db9380c220d87eaf08fef"
+  }
+}

@@ -35,7 +35,7 @@ targets -set -filter {name == "APU"}
 loadhw -hw XSA
 if {[expr [lindex [mrd -value 0x05f00008 1] 0]] != BOOT} {error "Unexpected boot identity"}
 set video_version [expr [lindex [mrd -value 0x43c20030 1] 0]]
-if {$video_version != 0x17100001 && $video_version != 0x17200001} {error "Wrong video register identity"}
+if {$video_version != 0x17100001 && ($video_version != 0x17200001 && $video_version != 0x17500001)} {error "Wrong video register identity"}
 puts "VIDEO_VERSION $video_version"
 if {[expr [lindex [mrd -value 0x05f0000c 1] 0]] != 0} {error "ARM transport still owns inference"}
 proc halt_core {} {
@@ -52,7 +52,7 @@ targets -set -filter {name == "APU"}
 if {[expr [lindex [mrd -value 0x43c20004 1] 0]] & 1} {error "PL already owns input; refusing reconfiguration"}
 if {[expr [lindex [mrd -value 0x43c20000 1] 0]] != 0} {error "Disable/drain capture before reconfiguration"}
 @@COLOR_CONFIG@@
-if {$video_version == 0x17200001} {
+if {($video_version == 0x17200001 || $video_version == 0x17500001)} {
  set ready 0
  for {set i 0} {$i<100} {incr i} {
   if {[expr [lindex [mrd -value 0x43c20044 1] 0]] == 1} {set ready 1;break}
@@ -80,7 +80,7 @@ for {set i 0} {$i<SAMPLES} {incr i} {
  after 250
 }
 STOP
-if {$video_version == 0x17200001 && [mrd -value 0x43c20038 4] ne $color_before} {error "Color configuration changed during detection"}
+if {($video_version == 0x17200001 || $video_version == 0x17500001) && [mrd -value 0x43c20038 4] ne $color_before} {error "Color configuration changed during detection"}
 puts "ARM_FINAL_BEGIN"
 puts [targets]
 puts "ARM_FINAL_END"
@@ -99,7 +99,7 @@ puts "VIDEO_FINAL [clock milliseconds] [mrd -value 0x43c20000 14]"
 if {!$idle} {error "Capture/inference has not drained; input buffer remains PL-owned"}
 '''
     words=profile['register_words'] if profile else [256]*3
-    configure='if {$video_version != 0x17200001} {error "Color profile requires V172 PL hardware"}\n' if profile else ''
+    configure='if {($video_version != 0x17200001 && $video_version != 0x17500001)} {error "Color profile requires calibrated PL hardware"}\n' if profile else ''
     configure+='\n'.join('mwr '+hex(0x43c20038+i*4)+' '+str(w) for i,w in enumerate(words)) if profile else ''
     expected='\n'.join('if {[expr [lindex $color_before '+str(i)+']] != '+str(w)+'} {error "Unexpected PL color coefficient"}' for i,w in enumerate(words))
     script=script.replace('@@COLOR_CONFIG@@',configure).replace('@@COLOR_EXPECT@@',expected)

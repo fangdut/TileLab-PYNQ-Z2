@@ -1,0 +1,50 @@
+{
+  "scope": "SIX_SOURCE_BOUND_RTL_REGRESSIONS_NOT_PHYSICAL_ACCEPTANCE",
+  "passed": true,
+  "gate_sha256": "158562f8634b3ace4e8a666a56704c5d2006bc5a36f411fcb1ae038fe8e2d6e1",
+  "rtl_sources": {
+    "frame_slot_queue.sv": "3fbca1529d9d4a51f594507c6e63eadd175fc4de91789bd99ba209d5d877f2ae",
+    "hdmi_detector_pipeline.v": "16efe495dc9fc346615a2348506bc454743aac4aee80e214ec0b45c4c48510c2",
+    "hdmi_hpd_startup.v": "380058313af9bd51ac6b221adbff61176829667ee55a306074ea1a1de2f41f63",
+    "pl_frame_scheduler_overlap.sv": "ae8dfa26ab8c0f128597a57e6ea1d8f26d688a1fc026a00b3ac85924510540d2",
+    "pl_result_latch.sv": "18d804d6540e5b03217733f42b057236b15933339c6a99e5dfdae506f311f13f",
+    "roi_ddr_writer.sv": "dfb9f8d1c0b2b8fa71b1bdacf66d5b9c9f1f53433255ba2eba77d149385281ea",
+    "video_alarm_border.v": "0e37098da62f642cd0af8c999565e4f6946728c58e4f07b890eaafc6e4fd90a7",
+    "video_capture_link.sv": "3a70a209bea5be6e3803d43b44017ccd259e5dc3740f582b05a734d5cbe7c1f3",
+    "video_color_correct.sv": "79d70c95ea93088810009d2bd50783e4e30f250913d628256c92a244fa54d97c",
+    "video_regs.v": "dc340aa8a897480018b7b5b8c217206c980264a7851e6f33c9f1e0984e5740a1",
+    "video_roi_tokens.sv": "9df98d2bc60bf313fb7372c2c6c989c4303fe48c01d1240708a086537dcaec1b"
+  },
+  "hls": "accepted frozen HLS39 arithmetic",
+  "pipeline_fixture": "8x4 video, 4x2 ROI, bus-model HLS; 28 write beats overlap simulated inference",
+  "board_programmed": false,
+  "new_fps_claimed": false,
+  "hw01_failure": "Vivado BD rejects HPD SystemVerilog top before synthesis; Verilog extension fixed and HPD retested",
+  "hw02_status": "BUILD_RUNNING_NO_PHYSICAL_RESULT_YET",
+  "tests": {
+    "queue": {
+      "original_summary_sha256": "431abdfb6ed839f4852b11d04e4ea43473d662f01980dd4dc4f33296280e7c1e",
+      "archived_summary": "queue/summary.json"
+    },
+    "scheduler": {
+      "original_summary_sha256": "c5c396c0e22023179766c2198888c289e049cbfe31b210e59cfaf9e1229f86ff",
+      "archived_summary": "scheduler/summary.json"
+    },
+    "writer": {
+      "original_summary_sha256": "1f503d6e4958c1c9ab149993a7234f98b4ca818b287a82981a906683700e9302",
+      "archived_summary": "writer/summary.json"
+    },
+    "pipeline": {
+      "original_summary_sha256": "d8120127cd817915fe4beaab208d0cf2b791a2c8ca6866dc6cb4e58b8f5a7cad",
+      "archived_summary": "pipeline/summary.json"
+    },
+    "video_regs": {
+      "original_summary_sha256": "ece617878485d21b538cffefacacebd79b5b6de2fea9d71b1001ab124b23880e",
+      "archived_summary": "video_regs/summary.json"
+    },
+    "hpd": {
+      "original_summary_sha256": "8692a6f9f2594d0a7f9939ea63578fade1979a4aae73bf24f032da6280cc90d0",
+      "archived_summary": "hpd/summary.json"
+    }
+  }
+}

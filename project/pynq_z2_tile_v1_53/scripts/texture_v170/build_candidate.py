@@ -88,13 +88,26 @@ def main():
     p=argparse.ArgumentParser()
     for n in ['hls','regression','profile','out']:p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--video',action='store_true')
+    p.add_argument('--video-variant',choices=['serial','overlap_v175'],default='serial')
+    p.add_argument('--video-rtl-gate',type=Path)
     p.add_argument('--opt-directive',choices=['Default','ExploreArea','ExploreWithRemap'],default='Default')
     p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
     a=p.parse_args()
     if not a.out.is_absolute() or a.out.exists():raise ValueError('Fresh absolute hardware output required')
     proof=preflight(a.hls,a.regression,a.profile)
     root=Path(__file__).resolve().parents[2]
+    if a.video_variant!='serial':
+        if not a.video or not a.video_rtl_gate:raise ValueError('Overlap video requires a source-bound RTL gate')
+        import importlib.util
+        base=root/'experimental/video_overlap_v175'
+        spec=importlib.util.spec_from_file_location('overlap_rtl_gate',base/'check_rtl_gate.py')
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        gate=module.inspect(a.video_rtl_gate,base)
+        proof['video_rtl_sources']=gate['rtl_sources']
+        proof['video_rtl_gate_sha256']=sha(a.video_rtl_gate)
+    proof['video_variant']=a.video_variant
     env=os.environ.copy();env['TILE_TEXTURE_HLS']=str(a.hls);env['TILE_TEXTURE_HW']=str(a.out)
+    env['TILE_TEXTURE_VIDEO_VARIANT']=a.video_variant
     env['TILE_TEXTURE_OPT_DIRECTIVE']=a.opt_directive
     proof['opt_directive']=a.opt_directive
     env['TILE_TEXTURE_MEMORY_LAYOUT']=a.memory_layout

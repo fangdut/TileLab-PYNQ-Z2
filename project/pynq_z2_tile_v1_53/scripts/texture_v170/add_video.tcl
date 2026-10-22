@@ -23,6 +23,9 @@ net pipeline/color_config_ready video_regs/color_config_ready
 foreach name {status completed rejected capture_sequence capture_crc fault peak threshold mask_pixels core_sequence core_cycles} {
  net pipeline/$name video_regs/$name
 }
+if {$video_variant eq "overlap_v175"} {
+ foreach name {last_input_base dropped} {net pipeline/$name video_regs/$name}
+}
 create_bd_cell -type ip -vlnv digilentinc.com:ip:dvi2rgb:1.7 hdmi_rx
 set_property -dict [list CONFIG.kEmulateDDC {true} CONFIG.kEdidFileName {720p_edid.data} CONFIG.kRstActiveHigh {false} CONFIG.kClkRange {2} CONFIG.kAddBUFG {true} CONFIG.kEnableSerialClkOutput {true}] [get_bd_cells hdmi_rx]
 create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2dvi:1.2 hdmi_tx
@@ -54,11 +57,19 @@ foreach {pin name dir width} {
  hdmi_tx/TMDS_Clk_n hdmi_out_clk_n O 1
  hdmi_tx/TMDS_Data_p hdmi_out_data_p O 3
  hdmi_tx/TMDS_Data_n hdmi_out_data_n O 3
- one/dout hdmi_in_hpd O 1
 } {
  if {$width==1} {set port [create_bd_port -dir $dir $name]} else {set port [create_bd_port -dir $dir -from [expr {$width-1}] -to 0 $name]}
  connect_bd_net $port [get_bd_pins $pin]
 }
+set hpd_pin one/dout
+if {$video_variant eq "overlap_v175"} {
+ create_bd_cell -type module -reference hdmi_hpd_startup hpd_startup
+ net ps7/FCLK_CLK0 hpd_startup/clk
+ net resets/peripheral_aresetn hpd_startup/resetn
+ set hpd_pin hpd_startup/hpd
+}
+set hpd_port [create_bd_port -dir O hdmi_in_hpd]
+connect_bd_net $hpd_port [get_bd_pins $hpd_pin]
 make_bd_intf_pins_external [get_bd_intf_pins hdmi_rx/DDC]
 set_property name hdmi_in_ddc [get_bd_intf_ports DDC_0]
 # An unused board output HPD input and LEDs are deliberately absent.

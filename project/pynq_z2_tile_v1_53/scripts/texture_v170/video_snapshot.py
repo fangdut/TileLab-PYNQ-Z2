@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse,hashlib,json,re,subprocess,zlib
 import numpy as np
 from PIL import Image
+from video_layout import validate_frame_base
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -31,7 +32,7 @@ targets -set -filter {name == "APU"}
 if {[expr [lindex [mrd -value 0x05f00008 1] 0]] != BOOT} {error "Boot changed"}
 set video_version [expr [lindex [mrd -value 0x43c20030 1] 0]]
 if {$video_version != EXPECTED_VERSION} {error "Video version changed"}
-if {$video_version == 0x17200001} {
+if {($video_version == 0x17200001 || $video_version == 0x17500001)} {
  set color_before [mrd -value 0x43c20038 4]
  puts "SNAPSHOT_COLOR $color_before"
 }
@@ -39,10 +40,17 @@ set before [mrd -value 0x43c20000 14]
 if {[expr [lindex $before 0]] || ([expr [lindex $before 1]] & 1)} {error "PL still owns input"}
 if {!([expr [lindex $before 1]] & 8) || ([expr [lindex $before 1]] & 16) || [expr [lindex $before 6]] || ![expr [lindex $before 2]]} {error "No valid fault-free published result"}
 puts "SNAPSHOT_REGISTERS $before"
-mrd -bin -file RGB 0x06000000 518400
+set input_base 0x06000000
+if {$video_version == 0x17500001} {
+ set input_base [expr [lindex [mrd -value 0x43c20048 1] 0]]
+ if {$input_base != 0x06000000 && $input_base != 0x06400000 && $input_base != 0x06800000 && $input_base != 0x06c00000} {error "Published input slot is invalid"}
+}
+puts "SNAPSHOT_INPUT_BASE [expr {$input_base}]"
+mrd -bin -file RGB $input_base 518400
 mrd -bin -file RESULT 0x07000000 519200
 if {[mrd -value 0x43c20000 14] ne $before} {error "Video registers changed during snapshot"}
-if {$video_version == 0x17200001 && [mrd -value 0x43c20038 4] ne $color_before} {error "Color registers changed during snapshot"}
+if {$video_version == 0x17500001 && [expr [lindex [mrd -value 0x43c20048 1] 0]] != $input_base} {error "Published input slot changed during snapshot"}
+if {($video_version == 0x17200001 || $video_version == 0x17500001) && [mrd -value 0x43c20038 4] ne $color_before} {error "Color registers changed during snapshot"}
 puts "ARM_FINAL_BEGIN"
 puts [targets]
 puts "ARM_FINAL_END"
@@ -64,8 +72,11 @@ exit 0
     values=[int(x,0) for x in re.search(r'SNAPSHOT_REGISTERS (.*)',log)[1].split()]
     color_match=re.search(r'SNAPSHOT_COLOR ([^\r\n]+)',log)
     color_words=[int(x,0) for x in color_match[1].split()] if color_match else None
-    if version==0x17200001 and color_words!=report['color_registers']:
+    if version in (0x17200001,0x17500001) and color_words!=report['color_registers']:
         raise ValueError('Snapshot color configuration differs from observed video')
+    base_match=re.search(r'SNAPSHOT_INPUT_BASE (\d+)',log)
+    if not base_match:raise ValueError('Missing physical input-slot proof')
+    input_base=validate_frame_base(version,int(base_match[1]))
     raw=(a.out/'rgb.bin').read_bytes();rgb_crc=zlib.crc32(raw)
     if len(raw)!=720*720*4 or rgb_crc!=values[5]:raise ValueError('Captured DDR frame differs from PL capture CRC')
     words=np.frombuffer(raw,dtype='<u4').reshape(720,720)
@@ -84,8 +95,8 @@ exit 0
         rgb_crc32=rgb_crc,capture_sequence=values[4],pl_sequence=int(header[9]),pl_image_alarm=int(header[2]),
         arm_cores_halted_during_dump=True,
         input_scope=('Captured PL RGB after startup black/gain calibration, before detector resize'
-                     if version==0x17200001 else 'Captured PL RGB before detector resize; legacy hardware has no color calibration'),
-        video_register_version=version,color_registers=color_words,
+                     if version in (0x17200001,0x17500001) else 'Captured PL RGB before detector resize; legacy hardware has no color calibration'),
+        video_register_version=version,input_base=input_base,input_base_stable_during_snapshot=True,color_registers=color_words,
         color_startup_profile=report.get('color_startup_profile'),
         pl_peak=int(header[3]),pl_threshold=int(header[4]),pl_mask_pixels=int(header[6]),
         source_photo_id=None,source_photo_binding='Not inferred from the current player status; inspect/match the captured frame separately',

@@ -58,7 +58,7 @@ if {[expr [lindex [mrd -value 0x43c20000 1] 0]] != 1} {error "PL video is not en
 if {[expr [lindex [mrd -value 0x43c20030 1] 0]] != @@VERSION@@} {error "Video version changed"}
 set owned_video_verified 1
 set version @@VERSION@@
-if {$version == 0x17200001} {
+if {($version == 0x17200001 || $version == 0x17500001)} {
  set color_before [mrd -value 0x43c20038 4]
  @@COLOR_EXPECT@@
 }
@@ -121,7 +121,7 @@ for {set i 0} {$i<100} {incr i} {
  after 100
 }
 if {!$drained} {error "Final input buffer did not drain"}
-if {$version==0x17200001 && [mrd -value 0x43c20038 4] ne $color_before} {error "Color profile changed"}
+if {($version == 0x17200001 || $version == 0x17500001) && [mrd -value 0x43c20038 4] ne $color_before} {error "Color profile changed"}
 halt_proof FINAL
 puts "SOURCE_STATUS_READ_RETRIES $source_status_read_retries"
 puts "HDMI_PHOTO_SERIES_COMPLETE"

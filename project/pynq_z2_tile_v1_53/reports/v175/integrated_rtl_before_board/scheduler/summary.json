@@ -1,0 +1,10 @@
+{
+  "scope": "SLOT_AND_CONTROL_AXI_MODEL_RTL_NOT_REAL_DDR_HDMI_CNN_OR_BOARD",
+  "passed": true,
+  "elapsed_seconds": 6.764999999999418,
+  "sources": {
+    "rtl\\frame_slot_queue.sv": "3fbca1529d9d4a51f594507c6e63eadd175fc4de91789bd99ba209d5d877f2ae",
+    "rtl\\pl_frame_scheduler_overlap.sv": "ae8dfa26ab8c0f128597a57e6ea1d8f26d688a1fc026a00b3ac85924510540d2",
+    "sim\\tb_overlap_scheduler.sv": "6023c08c6a08336155979e4fa5e32ce69d4a72d6b8188dc7b6d301602dd09e66"
+  }
+}

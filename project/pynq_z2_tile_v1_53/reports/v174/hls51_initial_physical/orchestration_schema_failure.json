@@ -1,0 +1,16 @@
+{
+  "scope": "GUARDED_HLS51_PHYSICAL_EXPERIMENT_NO_AUTO_PROMOTION",
+  "status": "STOPPED_BEFORE_PROGRAMMING_WRAPPER_SCHEMA_ERROR",
+  "stages": [
+    {
+      "stage": "whole_hardware",
+      "returncode": 1,
+      "seconds": 1364.125
+    }
+  ],
+  "flash_written": false,
+  "board_programmed": false,
+  "error": "KeyError dsp: initial implementation status has no DSP field",
+  "recorded": "2026-10-22T09:28:23.013509",
+  "actual_dsp_from_utilization_report": 218
+}

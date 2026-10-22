@@ -1,0 +1,21 @@
+{
+  "scope": "FIRST_ROUTED_TIMING_FAILURE_NOT_PROGRAMMED",
+  "setup_slack_ns": -0.366,
+  "hold_slack_ns": 0.012,
+  "pl_clock_mhz": 100,
+  "drc_errors": 0,
+  "dsp_from_actual_utilization_report": 218,
+  "board_programmed": false,
+  "flash_written": false,
+  "source_sha256": "64cd7f4d7e150c4e729e8f457bd9f27a85186506df435eeeba87b043a4c3820c",
+  "wrapper_failure": "Initial status lacks DSP field; old wrapper stopped with KeyError before repair/programming",
+  "resumed_with_actual_report_resource_check": true,
+  "files": {
+    "candidate_preflight.json": "5daae1cb1170a63715ab955f7c497beda13d8315d3e7cd0a1ef5782b805aa524",
+    "drc.rpt": "6a5b87b83173005c59e380cc6ddf31561abea96b532a2092215778b0f0343f69",
+    "implementation_status.json": "0de914ccd2180370398e27a525b6854da380e7ac33ff7cc953fa19d9454f6d3b",
+    "orchestration_schema_failure.json": "736cdec7bdb7e5b772376cd3e8ee0153281fd1266ceafaf172bf57ce1d7eb9f6",
+    "timing_summary.rpt": "da3d92e2195a55a1203c91f89f3467557409cfce68bc69cc6af93d926ea415db",
+    "utilization.rpt": "2b3677b44571a97360a38c78d39c240da1ab89e25c179413df0fefe3c99095c7"
+  }
+}

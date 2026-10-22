@@ -1,0 +1,10 @@
+{
+  "scope": "DYNAMIC_DDR_AND_VIDEO_CONTROL_BUS_MODEL_RTL_NOT_REAL_HDMI_CNN_OR_BOARD",
+  "test": "hpd",
+  "passed": true,
+  "elapsed_seconds": 5.186999999998079,
+  "sources": {
+    "rtl\\hdmi_hpd_startup.v": "380058313af9bd51ac6b221adbff61176829667ee55a306074ea1a1de2f41f63",
+    "sim\\tb_hpd.sv": "c7728eb06ae971845cac965adeb6c0cbb139963667dfc5e19038ec0795b95f14"
+  }
+}

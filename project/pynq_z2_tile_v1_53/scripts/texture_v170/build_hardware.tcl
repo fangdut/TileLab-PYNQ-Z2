@@ -4,6 +4,12 @@ foreach n {TILE_TEXTURE_HW TILE_TEXTURE_HLS} {if {![info exists ::env($n)]} {err
 set out [file normalize $::env(TILE_TEXTURE_HW)]
 set hls [file normalize $::env(TILE_TEXTURE_HLS)]
 set video [info exists ::env(TILE_TEXTURE_VIDEO)]
+set video_variant serial
+if {[info exists ::env(TILE_TEXTURE_VIDEO_VARIANT)]} {set video_variant $::env(TILE_TEXTURE_VIDEO_VARIANT)}
+if {$video_variant ni {serial overlap_v175}} {error "Unsupported video variant"}
+if {!$video && $video_variant ne "serial"} {error "Overlap variant requires video"}
+set video_rtl $root/experimental/video_v171/rtl
+if {$video_variant eq "overlap_v175"} {set video_rtl $root/experimental/video_overlap_v175/rtl}
 set opt_directive Default
 if {[info exists ::env(TILE_TEXTURE_OPT_DIRECTIVE)]} {set opt_directive $::env(TILE_TEXTURE_OPT_DIRECTIVE)}
 if {$opt_directive ni {Default ExploreArea ExploreWithRemap}} {error "Unsupported optimization directive"}
@@ -33,7 +39,7 @@ file copy $report $out/hls_cosim.rpt
 file copy [info script] $out/build_hardware_source.tcl
 file copy $root/scripts/texture_v170/add_video.tcl $out/add_video_source.tcl
 set f [open $out/optimization_strategy.json w]
-puts $f "{\"opt_directive\":\"$opt_directive\",\"memory_layout\":\"$memory_layout\"}"
+puts $f "{\"opt_directive\":\"$opt_directive\",\"memory_layout\":\"$memory_layout\",\"video_variant\":\"$video_variant\"}"
 close $f
 file mkdir $out/physical_scripts
 foreach name {replicate_controls.tcl constrain_video_cdc.tcl} {
@@ -49,7 +55,7 @@ set repositories [list $hls/solution/impl/ip]
 if {$video} {
  lappend repositories $root/ip_repo
  file mkdir $out/rtl_snapshot
- foreach source [glob $root/experimental/video_v171/rtl/*.sv $root/experimental/video_v171/rtl/*.v] {
+ foreach source [glob $video_rtl/*.sv $video_rtl/*.v] {
   file copy $source $out/rtl_snapshot/[file tail $source]
  }
  add_files [glob $out/rtl_snapshot/*.sv $out/rtl_snapshot/*.v]
@@ -172,10 +178,11 @@ set setup [get_property SLACK [get_timing_paths -delay_type max -max_paths 1]]
 set hold [get_property SLACK [get_timing_paths -delay_type min -max_paths 1]]
 report_drc -file $out/drc.rpt
 set errors [llength [get_drc_violations -filter {SEVERITY == Error}]]
+set final_dsp_count [llength [get_cells -hier -filter {REF_NAME == DSP48E1}]]
 set f [open $out/implementation_status.json w]
-puts $f "{\"setup_slack_ns\":$setup,\"hold_slack_ns\":$hold,\"drc_errors\":$errors,\"pl_clock_mhz\":100}"
+puts $f "{\"setup_slack_ns\":$setup,\"hold_slack_ns\":$hold,\"drc_errors\":$errors,\"pl_clock_mhz\":100,\"dsp\":$final_dsp_count}"
 close $f
-if {$setup<0 || $hold<0 || $errors} {error "Timing/DRC failed"}
+if {$setup<0 || $hold<0 || $errors || $final_dsp_count>220} {error "Timing/DRC/capacity failed"}
 if {$video} {
  report_cdc -details -file $out/video_cdc.rpt
  report_bus_skew -file $out/bus_skew.rpt
