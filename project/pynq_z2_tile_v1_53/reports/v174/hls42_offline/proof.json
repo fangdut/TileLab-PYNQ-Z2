@@ -1,0 +1,25 @@
+{
+  "scope": "OFFLINE_C_AND_REDUCED_RTL_PASS_NOT_BOARD",
+  "kernel_sha256": "88de87611609a1864acf6d6653644a43f1e8225cfe04939ce9e2eaab5565b13f",
+  "fixture_model_sha256": "892e5b9e6efc5d276fa3cd75190c13207806642354b3cabb1e34164cfe5158fb",
+  "fixture_rgb_sha256": "0c3eec335dc3f27290030c85a6b3162e063736c3c23d7b237dffd0303c83a933",
+  "fixture_output_sha256": "c009ccb7281f33417d8c37a94ca53cd7352f42dc983c7b18784acc10e23d870b",
+  "fixture_input_width": 79,
+  "fixture_input_height": 65,
+  "fixture_internal_side": 80,
+  "fixture_task_count": 9,
+  "fixture_rtl_launches": 2,
+  "rtl_cycles": [
+    556901,
+    556909
+  ],
+  "prior_hls39_same_fixture_cycles": [
+    602800,
+    602808
+  ],
+  "cycle_reduction_percent": 7.614299933643,
+  "ip_zip_sha256": "829d8d2782dd906ac5bd20f3504209c0a17f7af6c27db6de38c1ea30ebc04292",
+  "all_117_c_scores_and_original_masks_exact": true,
+  "physical_fpga_timing_and_speed_established": false,
+  "model_or_threshold_changed": false
+}

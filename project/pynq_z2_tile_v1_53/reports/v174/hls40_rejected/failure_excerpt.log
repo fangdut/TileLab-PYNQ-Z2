@@ -1,0 +1,45 @@
+INFO: [RTGEN 206-100] Generating core module 'udiv_16ns_12ns_6_20_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'texture_integer'.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_left_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_ram_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_line_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_row0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_raw_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_smooth_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_feature_cache_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_projection_cache_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_projection_bias_RAM_1P_LUTRAM_1R1W' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_h_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_im_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_ib_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_input_x_RAM_1P_LUTRAM_1R1W' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_t_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_feature_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_projection_sums_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_mx_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_mf_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'texture_integer_vertical_RAM_2P_LUTRAM_1R1W' using distributed RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.301 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 4 seconds. Elapsed time: 7.259 seconds; current allocated memory: 1.167 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-2225] Wrote inferred directives to file D:/Vivado/TileLab_RealPhotos_20261020/v170_hls40/solution/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3 seconds. CPU system time: 2 seconds. Elapsed time: 3.975 seconds; current allocated memory: 1.167 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for texture_integer.
+INFO: [VLOG 209-307] Generating Verilog RTL for texture_integer.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 111.11 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:03:06; Allocated memory: 688.414 MB.
+Packed detector exceeds video board budget: BRAM18=284 DSP=220; RTL/export blocked
+    while executing
+"error "Packed detector exceeds video board budget: BRAM18=$bram DSP=$dsp; RTL/export blocked""
+    invoked from within
+"if {$bram>276||$dsp>220} {error "Packed detector exceeds video board budget: BRAM18=$bram DSP=$dsp; RTL/export blocked"}"
+    (file "D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/packed_mac_v173/build_detector_hls.tcl" line 39)
+    invoked from within
+"source D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/packed_mac_v173/build_detector_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 46 seconds. Total CPU system time: 23 seconds. Total elapsed time: 230.742 seconds; peak allocated memory: 1.167 GB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

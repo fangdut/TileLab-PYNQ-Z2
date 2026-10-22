@@ -61,6 +61,12 @@ def preflight(hls,regression,profile):
     frozen=root/'experimental/texture_v170/hls/frozen'/(hls.name+'.cpp')
     if not frozen.exists() or frozen.read_bytes()!=source.read_bytes():
         raise ValueError('A byte-exact named source snapshot is required')
+    import sys
+    sys.path.insert(0,str(root/'tools/fpga_texture_v170'))
+    from check_mac_recurrence import inspect as inspect_recurrence
+    recurrence=inspect_recurrence(hls)
+    if not recurrence['all_banks_safe']:
+        raise ValueError('Generated MAC feedback is later than its same-slot recurrence')
     cosim=hls/'solution/sim/report/texture_integer_cosim.rpt'
     if not re.search(r'Verilog\s*\|\s*Pass',cosim.read_text()):
         raise ValueError('RTL co-simulation did not pass')
@@ -72,7 +78,7 @@ def preflight(hls,regression,profile):
         raise ValueError('HLS DSP/BRAM estimate exceeds the target device')
     return dict(scope='OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD',source_sha256=sha(source),
         model_sha256=graph['sha256'],c_regression_summary_sha256=sha(regression/'summary.json'),
-        rtl_cosim_sha256=sha(cosim),hls_dsp=dsp,hls_bram18=bram,
+        rtl_cosim_sha256=sha(cosim),hls_dsp=dsp,hls_bram18=bram,mac_recurrence=recurrence,
         centered_packing_weights=packed_weight_proof(source,profile,graph))
 
 

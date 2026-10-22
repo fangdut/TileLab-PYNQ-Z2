@@ -1,0 +1,68 @@
+[
+  {
+    "ProcessId": 2160,
+    "ParentProcessId": 31448,
+    "Name": "python.exe",
+    "CommandLine": "\"D:\\Vivado\\TileLab_Runtime_V168\\Scripts\\python.exe\" -X utf8 D:\\Vivado\\TileLab_RealPhotos_20261020\\start_v174_hls41.py"
+  },
+  {
+    "ProcessId": 28776,
+    "ParentProcessId": 2160,
+    "Name": "python.exe",
+    "CommandLine": "\"C:\\Users\\Fang\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 D:\\Vivado\\TileLab_RealPhotos_20261020\\start_v174_hls41.py"
+  },
+  {
+    "ProcessId": 10656,
+    "ParentProcessId": 28776,
+    "Name": "cmd.exe",
+    "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /c D:/2025.2/Vitis/bin/vitis-run.bat --mode hls --tcl D:\\Vivado\\TileLab_SingleTile_V164_20261019\\project\\pynq_z2_tile_v1_53\\experimental\\packed_mac_v173\\build_detector_hls.tcl"
+  },
+  {
+    "ProcessId": 5640,
+    "ParentProcessId": 10656,
+    "Name": "vitis-run.exe",
+    "CommandLine": "\"D:/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe\"   --mode hls --tcl D:\\Vivado\\TileLab_SingleTile_V164_20261019\\project\\pynq_z2_tile_v1_53\\experimental\\packed_mac_v173\\build_detector_hls.tcl"
+  },
+  {
+    "ProcessId": 15428,
+    "ParentProcessId": 5640,
+    "Name": "cmd.exe",
+    "CommandLine": " /c D:/2025.2/Vitis/bin/loader -exec vitis_hls -run tcl D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/packed_mac_v173/build_detector_hls.tcl -work_dir C:/Users/Fang/Documents/Codex/2026-10-16/tilelab-handoff-20261016 -nolog"
+  },
+  {
+    "ProcessId": 16848,
+    "ParentProcessId": 15428,
+    "Name": "vitis_hls.exe",
+    "CommandLine": "\"D:/2025.2/Vitis/bin/unwrapped/win64.o/vitis_hls.exe\"   -run tcl D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/packed_mac_v173/build_detector_hls.tcl -work_dir C:/Users/Fang/Documents/Codex/2026-10-16/tilelab-handoff-20261016 -nolog"
+  },
+  {
+    "ProcessId": 23112,
+    "ParentProcessId": 16848,
+    "Name": "cmd.exe",
+    "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /c D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls41\\solution\\sim\\verilog\\run_xsim.bat"
+  },
+  {
+    "ProcessId": 29100,
+    "ParentProcessId": 16848,
+    "Name": "tee.exe",
+    "CommandLine": "D:\\2025.2\\Vitis\\tps\\win64\\msys2_bash\\usr\\bin\\tee.exe temp.log"
+  },
+  {
+    "ProcessId": 19208,
+    "ParentProcessId": 23112,
+    "Name": "xsim.exe",
+    "CommandLine": "\"D:/2025.2/Vivado/bin/unwrapped/win64.o/xsim.exe\"   -testplusarg \"UVM_VERBOSITY=UVM_NONE\" -testplusarg \"UVM_TESTNAME=texture_integer_test_lib\" -testplusarg \"UVM_TIMEOUT=20000000000000\" --noieeewarnings texture_integer -tclbatch texture_integer.tcl"
+  },
+  {
+    "ProcessId": 11788,
+    "ParentProcessId": 19208,
+    "Name": "xsimk.exe",
+    "CommandLine": "xsim.dir/texture_integer/xsimk.exe -simmode gui -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=texture_integer_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -wdb texture_integer.wdb -simrunnum 0 -socket 62609"
+  },
+  {
+    "ProcessId": 28180,
+    "ParentProcessId": 11788,
+    "Name": "conhost.exe",
+    "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+  }
+]

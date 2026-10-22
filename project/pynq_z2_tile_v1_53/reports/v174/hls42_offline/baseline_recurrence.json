@@ -1,0 +1,123 @@
+{
+  "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+  "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls39",
+  "source_sha256": "cef70b27006722b51b5871441e4e06b175d19337872646c93ddeb58142ba5c5a",
+  "rtl_sha256": "ae8eb1fdacd03dda71890342961d9e1fcb57e04289678ca40475eef5ca1eb040",
+  "slots": 32,
+  "banks": [
+    {
+      "bank": "acc",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_1",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_10",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_11",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_12",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_13",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_14",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_15",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_2",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_3",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_4",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_5",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_6",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_7",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_8",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    },
+    {
+      "bank": "acc_9",
+      "read_stage": 21,
+      "write_stage": 29,
+      "write_minus_read": 8,
+      "safe_before_next_read": true
+    }
+  ],
+  "all_banks_safe": true,
+  "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively."
+}

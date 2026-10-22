@@ -1,0 +1,38 @@
+{
+  "scope": "OFFLINE_ACTUAL_CANDIDATE_MAC_VS_INDEPENDENT_SCALAR_NOT_RTL_OR_BOARD",
+  "source_sha256": "88de87611609a1864acf6d6653644a43f1e8225cfe04939ce9e2eaab5565b13f",
+  "test_sha256": "88fbdcc7aae98276e4da3212fa8334a8afdc0676d2fe00109b1957ce3ced20c8",
+  "executable_sha256": "ff0e6d1007aa89d7a3a95adcfa19149b2a05d84787f116bedd32f55bdc43d132",
+  "logical_line_words_checked": 446430,
+  "dw_mac_calls": 426,
+  "channel_outputs_exact": 231936,
+  "input_domain_includes_negative128": true,
+  "weight_domain_includes_negative128": true,
+  "widths": [
+    1,
+    2,
+    3,
+    7,
+    8,
+    13,
+    14,
+    28,
+    56,
+    112,
+    224
+  ],
+  "strides": [
+    1,
+    2
+  ],
+  "kernels": [
+    1,
+    3
+  ],
+  "circular_row_heads": [
+    0,
+    1,
+    2
+  ],
+  "native_output": "PARALLEL_DW_SCALAR_EXACT bank_words=446430 mac_calls=426 lane_outputs=231936\nINFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 224\n"
+}

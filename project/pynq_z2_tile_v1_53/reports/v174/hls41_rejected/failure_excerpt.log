@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////////
+
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+
+//Critical WARNING: Due to pragma (src/texture_integer.cpp:155:1), dependence access (loop distance = 32) is detected in "`AUTOTB_DUT_INST.grp_conv_fu_1784.grp_process_row_fu_4477.mac_row_U0.grp_mac_row_Pipeline_VITIS_LOOP_153_1_VITIS_LOOP_153_2_VITIS_LOOP_153_3_fu_796"
+
+//                : From memory access "acc_address1" = 0x0 @ "480750000"
+
+//                : To memory access "acc_address0" = DEP_address_16_to[9][4:0] = 0x0 @ "480660000"
+
+//If cosim fails, the WARNING should be checked. autotb LINE:       1203
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//Critical WARNING: Due to pragma (src/texture_integer.cpp:155:1), dependence access (loop distance = 32) is detected in "`AUTOTB_DUT_INST.grp_conv_fu_1784.grp_process_row_fu_4477.mac_row_U0.grp_mac_row_Pipeline_VITIS_LOOP_153_1_VITIS_LOOP_153_2_VITIS_LOOP_153_3_fu_796"
+
+//                : From memory access "acc_1_address1" = 0x0 @ "480750000"
+
+//                : To memory access "acc_1_address0" = DEP_address_17_to[9][4:0] = 0x0 @ "480660000"
+
+//If cosim fails, the WARNING should be checked. autotb LINE:       1955
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//Critical WARNING: Due to pragma (src/texture_integer.cpp:155:1), dependence access (loop distance = 32) is detected in "`AUTOTB_DUT_INST.grp_conv_fu_1784.grp_process_row_fu_4477.mac_row_U0.grp_mac_row_Pipeline_VITIS_LOOP_153_1_VITIS_LOOP_153_2_VITIS_LOOP_153_3_fu_796"
+
+//                : From memory access "acc_2_address1" = 0x0 @ "480750000"
+
+//                : To memory access "acc_2_address0" = DEP_address_18_to[9][4:0] = 0x0 @ "480660000"
+
+//If cosim fails, the WARNING should be checked. autotb LINE:       2707
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//Critical WARNING: Due to pragma (src/texture_integer.cpp:155:1), dependence access (loop distance = 32) is detected in "`AUTOTB_DUT_INST.grp_conv_fu_1784.grp_process_row_fu_4477.mac_row_U0.grp_mac_row_Pipeline_VITIS_LOOP_153_1_VITIS_LOOP_153_2_VITIS_LOOP_153_3_fu_796"
+
+//                : From memory access "acc_3_address1" = 0x0 @ "480750000"
+
+//                : To memory access "acc_3_address0" = DEP_address_19_to[9][4:0] = 0x0 @ "480660000"
+
+//If cosim fails, the WARNING should be checked. autotb LINE:       3459
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//Critical WARNING: Due to pragma (src/texture_integer.cpp:155:1), dependence access (loop distance = 32) is detected in "`AUTOTB_DUT_INST.grp_conv_fu_1784.grp_process_row_fu_4477.mac_row_U0.grp_mac_row_Pipeline_VITIS_LOOP_153_1_VITIS_LOOP_153_2_VITIS_LOOP_153_3_fu_796"
+
+//                : From memory access "acc_4_address1" = 0x0 @ "480750000"
+
+//                : To memory access "acc_4_address0" = DEP_address_20_to[9][4:0] = 0x0 @ "480660000"

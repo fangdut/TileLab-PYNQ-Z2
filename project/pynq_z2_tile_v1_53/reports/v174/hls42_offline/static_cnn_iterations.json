@@ -1,0 +1,10 @@
+{
+  "scope": "STATIC_MODEL_LOOP_COUNTS_NOT_TIMING",
+  "old_all_convolution_mac_iterations": 3561344,
+  "old_depthwise_mac_iterations": 1733760,
+  "ordinary_mac_iterations": 1827584,
+  "cached_input_copy_words": 729120,
+  "process_row_calls": 6304,
+  "additional_12_pipeline_cycles_per_call": 75648,
+  "interpretation": "No frame rate claim. Actual stalls, control setup and DDR must be measured."
+}
