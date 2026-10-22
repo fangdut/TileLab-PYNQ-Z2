@@ -1,0 +1,26 @@
+ARM0_PC pc: 0010c99c
+
+ARM0_CPSR cpsr: 600e005f
+       n (Bits [31]):  0      z (Bits [30]):  1      c (Bits [29]):  1
+       v (Bits [28]):  0      q (Bits [27]):  0  it (Bits [15:25]):  0
+       j (Bits [24]):  0  ge (Bits [19:16]):  e       e (Bits [9]):  0
+        a (Bits [8]):  0       i (Bits [7]):  0       f (Bits [6]):  1
+        t (Bits [5]):  0     m (Bits [4:0]): 1f
+
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vitis/data/embeddedsw) loading 0 seconds
+CLIENT_STATE 0 0 0 64 3593389726 2 0 1996959894
+TX_STATE 2825664 2825664 378557016 0
+TX_ACK 2825664
+TCP_PCB_HEADS 3200128 375 0 25857 0 0
+Memory read error at 0xE000B028. Blocked address 0xE000B028. Cannot read write-only register
+    invoked from within
+"::tcf::eval -progress {apply {{msg} {puts $msg}}} {tcf_send_command tcfchan#0 Memory get siiii {Bea{o{msg o{} A}}} {JTAG-jsn-TUL-1234-tulA-4ba00477-0 3758141440 4 64 3}}"
+    (procedure "::tcf::send_command" line 4)
+    invoked from within
+"::tcf::send_command $chan Memory get "siiii" "Bea{o{msg o{} A}}" [list $ctx $start_addr $size $nbytes $mode]"
+    (procedure "mrd" line 87)
+    invoked from within
+"mrd -value 0xe000b000 16"
+    invoked from within
+"puts "ETHERNET_REGISTERS [mrd -value 0xe000b000 16]""
+    (file "D:/Vivado/TileLab_RealPhotos_20261020/debug_v173_timeout02.tcl" line 14)

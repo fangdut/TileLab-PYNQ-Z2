@@ -48,6 +48,7 @@ def main():
         cp(a.hardware/n,Path('hardware')/n)
     cp(a.hardware/'texture_v170.srcs/sources_1/bd/system/system.bd',Path('hardware/texture_v170.srcs/sources_1/bd/system/system.bd'))
     cp(software/'BUILD_RESULT.json',Path('software/BUILD_RESULT.json'))
+    if (software/'REUSE_PROOF.json').exists():cp(software/'REUSE_PROOF.json',Path('software/REUSE_PROOF.json'))
     cp(software/'texture_transport/build/texture_transport.elf',Path('software/texture_transport/build/texture_transport.elf'))
     cp(source,Path('source/texture_integer.cpp'));cp(source,Path('source/experimental/texture_v170/hls/frozen')/(a.hls.name+'.cpp'))
     cp(a.hls/'src/test_integer.cpp',Path('source/experimental/texture_v170/hls/test_integer.cpp'))

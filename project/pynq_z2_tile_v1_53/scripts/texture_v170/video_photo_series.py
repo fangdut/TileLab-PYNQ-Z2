@@ -35,11 +35,13 @@ def main():
     plan=dict(scope='CONTROLLED_ORIGINAL_PHOTO_HDMI_DEVELOPMENT_EXPERIMENT',
         photos=photos,video_report_sha256=sha(a.video/'report.json'),
         benchmark_is_blind=False,threshold_adaptation=False,model_adaptation=False,
-        cpu_detection=False,gpu_detection=False,
+        cpu_detection=False,gpu_detection=False,source_status_retry_budget_ms=3000,
         source_binding='Owned HDMI input player SHA/status plus settled stable PL completions; selected photos require separate DDR snapshot inspection/audit')
     (a.out/'plan.json').write_text(json.dumps(plan,indent=2)+'\n')
     def tp(path):return '{'+path.resolve().as_posix()+'}'
-    template=r'''if {[catch {
+    template=r'''set owned_video_verified 0
+set source_status_read_retries 0
+if {[catch {
 connect -url tcp:127.0.0.1:3121
 targets -set -filter {name == "APU"}
 loadhw -hw @@XSA@@
@@ -54,6 +56,7 @@ halt_proof START
 targets -set -filter {name == "APU"}
 if {[expr [lindex [mrd -value 0x43c20000 1] 0]] != 1} {error "PL video is not enabled"}
 if {[expr [lindex [mrd -value 0x43c20030 1] 0]] != @@VERSION@@} {error "Video version changed"}
+set owned_video_verified 1
 set version @@VERSION@@
 if {$version == 0x17200001} {
  set color_before [mrd -value 0x43c20038 4]
@@ -64,13 +67,16 @@ set source_status @@STATUS@@
 set source_command @@COMMAND@@
 set output @@OUTPUT@@
 proc current_source {id hash} {
- global source_status
+ global source_status source_status_read_retries
  set readable 0
- for {set attempt 0} {$attempt<10} {incr attempt} {
-  if {![catch {set f [open $source_status r]}]} {
-   set data [read $f];close $f;set readable 1;break
-  }
-  after 20
+ for {set attempt 0} {$attempt<100} {incr attempt} {
+  set f ""
+  set failed [catch {set f [open $source_status r];set data [read $f]} why]
+  if {$f ne ""} {catch {close $f}}
+  if {!$failed} {set readable 1;break}
+  incr source_status_read_retries
+  puts "SOURCE_STATUS_READ_RETRY $id $attempt $why"
+  after 30
  }
  if {!$readable} {error "Source status unavailable"}
  foreach token [list "\"image_id\":\"$id\"" "\"original_sha256\":\"$hash\"" {"physical_window_bounds_verified":true} {"running":true} {"paused":true} {"calibration_pattern":false}] {
@@ -117,9 +123,26 @@ for {set i 0} {$i<100} {incr i} {
 if {!$drained} {error "Final input buffer did not drain"}
 if {$version==0x17200001 && [mrd -value 0x43c20038 4] ne $color_before} {error "Color profile changed"}
 halt_proof FINAL
+puts "SOURCE_STATUS_READ_RETRIES $source_status_read_retries"
 puts "HDMI_PHOTO_SERIES_COMPLETE"
 disconnect
-} why opts]} {puts stderr $why;exit 1}
+} why opts]} {
+ puts stderr $why
+ if {$owned_video_verified} {
+  catch {
+   targets -set -filter {name == "APU"}
+   mwr 0x43c20000 0
+   set drained 0
+   for {set i 0} {$i<100} {incr i} {
+    if {!([expr [lindex [mrd -value 0x43c20004 1] 0]] & 1)} {set drained 1;break}
+    after 100
+   }
+   puts "FAILED_EXPERIMENT_VIDEO_DISABLED_DRAINED $drained"
+  }
+ }
+ catch {disconnect}
+ exit 1
+}
 exit 0
 '''
     color=live.get('color_registers')
@@ -176,6 +199,7 @@ exit 0
         autonomous_hdmi_fps_over_photo_series=frames/duration,
         distinct_observed_photo_crcs=len({r['captured_crc32'] for r in results}),
         plan_sha256=sha(a.out/'plan.json'),results_sha256=sha(a.out/'results.json'),
+        source_status_read_retries=int(re.search(r'SOURCE_STATUS_READ_RETRIES (\d+)',log)[1]),
         limitations=plan['source_binding'],left_running=False)
     (a.out/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
     print(json.dumps(summary),flush=True)

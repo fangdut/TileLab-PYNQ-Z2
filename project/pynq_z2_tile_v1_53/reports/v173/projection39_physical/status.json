@@ -1,0 +1,29 @@
+{
+  "scope": "TIMING_CLOSED_AND_PHYSICAL_HDMI_ACCEPTED_DEVELOPMENT_NOT_FINAL",
+  "source_sha256": "cef70b27006722b51b5871441e4e06b175d19337872646c93ddeb58142ba5c5a",
+  "bit_sha256": "b0d98a0d6ea0f35ca474bd8fbde5cf988bb4680c6da03554cddc2f64475c36ad",
+  "xsa_sha256": "e204d4df873677841006c188f7614351742dd921212585fffcb2885a4f8d0aae",
+  "clock_mhz": 100,
+  "initial_setup_slack_ns": -0.155,
+  "accepted_setup_slack_ns": 0.007,
+  "accepted_hold_slack_ns": 0.05,
+  "dsp": 218,
+  "board_fps_measured": true,
+  "evidence_sha256": {
+    "initial_status.json": "c139c8f2dd67a1cbb43a3e1149b54eca0c998519bfbda3ee3966a6a6c47009b5",
+    "initial_timing.rpt": "55115f87ae52aeeabb61eeff821d09ad18f9c7832a3da1f3ba89416cdf91cbf9",
+    "accepted_status.json": "38178d52fc2153c28a2e21bd19f5aab60361f89d1c80c3a4a7239090e50af071",
+    "accepted_timing.rpt": "f130b7fb572e2679adb7821a06024dbcbe6c017baf14daa86f64fd18f3b5a985",
+    "accepted_utilization.rpt": "b4964a1298303f32cb7a5ea4f406b3e307db1c0fddb0b88b95f579b700f475a4",
+    "accepted_bus_skew.rpt": "d3fb18782add35f1035a2df964d674eb37107faa6c4536d6aa6a76c5dff6a2ef",
+    "accepted_cdc.rpt": "3f21858dfa16a88bde42e21dfe7e23429ba20183fea9b7964f7d791706b3e0ab",
+    "accepted_drc.rpt": "e7b7c5e6ff59d2cdda9bf7353eb5c19df816e69a8e0a388da47b07381cbc1387",
+    "repair_proof.json": "9f278a4f37469220be9eea18cbdad042202b289ca710b48a1ce84dbecad79517",
+    "repair_source.tcl": "afb1c6c5606d8d54c53238b9a0e312b3f610357de7b8d7e3b72a15aa2f018386",
+    "preflight.json": "9895f76acf03c58f2482a63407b4fe2ea08410e94f93f797cba3fa99093ff59a",
+    "core_synthesis_utilization.rpt": "e5a32a19984b3573a927d2c62ed4b273c6ca187861ca348301848a05640cd41d"
+  },
+  "boot_identity": 1678502908,
+  "continuous_hdmi_fps": 6.665889850087794,
+  "verified_evidence": "../verified_hdmi_hls39_r2/verification.json"
+}

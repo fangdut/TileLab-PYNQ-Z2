@@ -6,7 +6,7 @@ and crack captures, and run the exposed 117-photo HDMI experiment. Runtime
 image detection remains entirely PL; Python reference checks are offline.
 """
 from pathlib import Path
-import argparse, hashlib, json, os, subprocess, time
+import argparse, hashlib, json, os, shutil, subprocess, time
 
 
 def main():
@@ -14,6 +14,8 @@ def main():
     for name in ['hardware','hls','dataset','profile','catalog','player','out']:
         p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--previous-source',type=Path)
+    p.add_argument('--reuse-software',type=Path,
+        help='Copy an already built transport only when its whole BIT/XSA/ELF/model hashes match')
     a=p.parse_args();a.out.mkdir(parents=True,exist_ok=False)
     root=Path(__file__).resolve().parents[2]
     scripts=root/'scripts/texture_v170';tools=root/'tools/fpga_texture_v170'
@@ -95,7 +97,24 @@ def main():
         env=os.environ.copy()
         env.update(TILE_TEXTURE_SW=str(software),TILE_TEXTURE_HW=str(a.hardware),
             TILE_TEXTURE_HLS=str(a.hls),TILE_TEXTURE_MODEL=str(a.profile))
-        run('build_transport',['D:/2025.2/Vitis/bin/vitis.bat','-s',scripts/'build_software.py'],env,1200)
+        if a.reuse_software:
+            proof=json.loads((a.reuse_software/'BUILD_RESULT.json').read_text())
+            elf=a.reuse_software/'texture_transport/build/texture_transport.elf'
+            for key,path in [('bit',a.hardware/'system.bit'),('xsa',a.hardware/'system.xsa'),
+                             ('elf',elf),('model',a.profile/'model.bin')]:
+                if hashlib.sha256(path.read_bytes()).hexdigest()!=proof[key+'_sha256']:
+                    raise ValueError('Reused transport artifact differs: '+key)
+            software.mkdir();(software/'texture_transport/build').mkdir(parents=True)
+            shutil.copy2(elf,software/'texture_transport/build/texture_transport.elf')
+            shutil.copy2(a.reuse_software/'BUILD_RESULT.json',software/'BUILD_RESULT.json')
+            if (a.reuse_software/'sources').exists():shutil.copytree(a.reuse_software/'sources',software/'sources')
+            reuse=dict(source_workspace=str(a.reuse_software),whole_artifact_hashes_checked=True,
+                       fresh_programming_and_all_validation_still_required=True)
+            (software/'REUSE_PROOF.json').write_text(json.dumps(reuse,indent=2)+'\n')
+            journal['reused_transport']=reuse
+            journal['stages'].append(dict(name='reuse_checked_transport',returncode=0));save()
+        else:
+            run('build_transport',['D:/2025.2/Vitis/bin/vitis.bat','-s',scripts/'build_software.py'],env,1200)
         close_source(a.previous_source)
         run('volatile_program',[python,scripts/'program_board.py','--hardware',a.hardware,
             '--software',software,'--out',program],timeout=300)

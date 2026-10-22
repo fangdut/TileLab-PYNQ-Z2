@@ -1,0 +1,24 @@
+{
+  "scope": "GUARDED_EXPOSED_DEVELOPMENT_PHYSICAL_ITERATION_NOT_FINAL_ACCEPTANCE",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v173_hw04",
+  "stages": [
+    {
+      "name": "build_transport",
+      "returncode": 0,
+      "seconds": 121.09692931175232
+    },
+    {
+      "name": "volatile_program",
+      "returncode": 0,
+      "seconds": 22.796145915985107
+    },
+    {
+      "name": "direct117",
+      "returncode": 1,
+      "seconds": 41.685771226882935
+    }
+  ],
+  "status": "FAILED_NO_PROMOTION",
+  "flash_written": false,
+  "error": "direct117 failed; inspect stage log"
+}

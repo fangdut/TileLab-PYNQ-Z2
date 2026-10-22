@@ -1,0 +1,16 @@
+{
+  "scope": "FAILED_ATTEMPT_PRESERVED_NO_PROMOTION",
+  "note": "Next TCP connection timed out after 24 exact complete results. Later diagnostic readback: PL idle, transport busy=0, final frame=24, TX bytes fully acknowledged. No new inference start was issued by diagnostics. A status query responded after ARM resume. Root cause not conclusively determined; fresh complete rerun required.",
+  "files": {
+    "iteration.json": "a8c79a7d598fb1f276b281417787392e67fd87e2f49056f3b4171eab3bef1008",
+    "program_identity.json": "bcb61f3323ea060ece9bd57d2faf5eb6f1b41af346a0ee9071d39dc802f9343a",
+    "direct117.log": "a3518c53b7414c47f44521d5e028c3b2c65dbda27e21280e91b1e82e05e34125",
+    "partial_results.json": "986be079d7f47c69f202de6fe4b6fe120e31fda60951a4878d1e7ff438214d15",
+    "diagnostic01.log": "84b04ce2f0753a4c82ab01d66868f8d3a336257e71e3c9f6b6a6d48254f2a581",
+    "diagnostic02.log": "4bcc879ba592b937f71336e6d4802567832ddfaa3fcf0da2494ce67a00e1cb61",
+    "diagnostic03.log": "b176452fc9385de0a7ad970bc0ae2cb4db578c9a5669f55091601fa21de6f12e",
+    "diagnostic01.tcl": "6cfe0b25fe2ed7f1f9014fcdb6cabe6161d67a97ac956a7add5e27c0ad89d0e9",
+    "diagnostic02.tcl": "ebe62c203d006c1d6835d9425761c59695cba4f92cfb67a01dbe0be9924b1e24",
+    "diagnostic03.tcl": "0f148470d12ca4745116573b0a20002e06a3b0d735fbb6ecc700a15b0b6c84a2"
+  }
+}

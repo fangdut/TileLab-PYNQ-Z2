@@ -1,0 +1,15 @@
+{
+  "scope": "FAILED_ATTEMPT_PRESERVED_NO_PROMOTION",
+  "note": "Direct 117-photo test passed exactly. HDMI series stopped when source status could not be opened within the old ten-by-20ms retry window. Captured PL register samples showed no fault. No full HDMI accuracy/FPS was accepted. Owned video was explicitly disabled and drained. Reader retry/diagnostics and verified-owner failure cleanup were added; source identity requirements remain unchanged.",
+  "files": {
+    "iteration.json": "9c2e58d1ee0741bc9b85af653c595f0295d15cc40f63b6b0fa0f8a01d500eb6f",
+    "program_identity.json": "3ee0a409326e6edbe1ee7724fbdcff40f033b3ccbabe20b3a07607a30fce3808",
+    "direct117_summary.json": "62be38b22b02d27f7add7820c1f7b28652b72969eb2ba1ea449e23c0a2d5fd28",
+    "hdmi_experiment.log": "3cae790bbf96b70a885d0d786160ab91e7da0477e372f96fa31917f79526b240",
+    "hdmi_experiment.tcl": "0bc40d98805b9c08a9172aa8ff6ff5dd9de99a1067d0d0f231c45d34cc03cc4a",
+    "hdmi_driver.log": "e5aa2c326eb5d8537c283ade89d1fa04b354bed413c3c9e9ff8bc44d5c31c49d",
+    "source_closed_status.json": "d83238649c99039bdbc081773860581115eda0abab2373458a0a5b0097b804e9",
+    "owned_cleanup.log": "698fab27560d3eef8d87142d771797e13bdee05ca28cc6e3ab9aa2afc6da0372",
+    "owned_cleanup.tcl": "6b06ae88f0693b2343423b1d6b0166fd143f09a32b2c9910d6590ff055706eb6"
+  }
+}

@@ -1,0 +1,19 @@
+BEFORE_HALT_TARGETS
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+ARM0_PC
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vitis/data/embeddedsw) loading 1 seconds
+TRANSPORT_STATUS
+385875969 1 3557296191 0 47 0 0 0
+PL_RESULT_HEADER
+385875969 0 1 16112 10908 28 171165 705600 47 24 0 0 0 0 0 0
+HLS_CONTROL_AFTER_ARM_HALT_DIAGNOSTIC_ONLY
+4
+VIDEO_CONTROL
+0 32 0 0 0 0 0 0 0 0 0 0 387973121 47186640
+  1* APU
+     2  ARM Cortex-A9 MPCore #0 (Suspended)
+     3  ARM Cortex-A9 MPCore #1 (Suspended)
+  4  xc7z020
