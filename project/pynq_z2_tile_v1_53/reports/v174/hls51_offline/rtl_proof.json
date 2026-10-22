@@ -1,0 +1,26 @@
+{
+  "scope": "COMPLETE_REDUCED_FIXTURE_RTL_NOT_PRODUCTION_FPS_OR_BOARD",
+  "source_sha256": "64cd7f4d7e150c4e729e8f457bd9f27a85186506df435eeeba87b043a4c3820c",
+  "source_identical_to_hls50_c117": true,
+  "calls": 2,
+  "latency_min_cycles": 601794,
+  "latency_max_cycles": 601802,
+  "hls39_same_fixture_min_cycles": 602800,
+  "hls39_same_fixture_max_cycles": 602808,
+  "fixture_width": 79,
+  "fixture_height": 65,
+  "fixture_internal_side": 80,
+  "fixture_tasks": 9,
+  "fixture_is_full_production_model": false,
+  "production_model_tasks": 47,
+  "ip_sha256": "e3f203cc43c6ca7a4fa8519faf024034633fb5c1dbf81436642408a00884c686",
+  "fixture_files": {
+    "test_model.bin": "892e5b9e6efc5d276fa3cd75190c13207806642354b3cabb1e34164cfe5158fb",
+    "test_rgb.bin": "0c3eec335dc3f27290030c85a6b3162e063736c3c23d7b237dffd0303c83a933",
+    "test_expected.bin": "c009ccb7281f33417d8c37a94ca53cd7352f42dc983c7b18784acc10e23d870b",
+    "test_fa_expected.bin": "e95c5d9666de87d5a3b81d93ce95a521416cc11539064684aba361ef09199775",
+    "test_fb_expected.bin": "6ddf5ff795b0619df41967752bbc19a313ff7dec5936734b526186d77f5e0d86"
+  },
+  "physical_speed_verified": false,
+  "board_programmed": false
+}
