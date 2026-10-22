@@ -1,0 +1,39 @@
+{
+  "scope": "EXACT_C_117_TWO_REDUCED_FULL_PIPELINE_RTL_CALLS_PASS_NOT_BOARD",
+  "source_sha256": "cef70b27006722b51b5871441e4e06b175d19337872646c93ddeb58142ba5c5a",
+  "all_scores_and_masks_exact": true,
+  "projection_iteration_latency": 9,
+  "accumulator_recurrence_distance": 64,
+  "projection_ii": 1,
+  "rtl_passed": true,
+  "board_programmed": false,
+  "evidence_sha256": {
+    "full_c_summary.json": "d23c9b279add1e5445d0ea5ba74512a268ebf7c60a43fdc89df5771cdf1b96d1",
+    "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+    "odd_rows_c_check.json": "5840e0bb526a3e8560d95bf27d7d9aeae4b92d58712e6faf4a0b186ee39b9d39",
+    "integer_bounds.json": "407c85d2bd935e5cc52ca9ffb40baa61ea8f71c0979d4002ae076a7372fef80a",
+    "projection_loop_synthesis.rpt": "aa23e640ead5f63b178aaf6ae197bb9bfeaa087f6b07ecb775c3def53a984c1f",
+    "synthesis.xml": "ad134d4948ced23ed7c67a81db222114fd37a21b373577c42ddc646554dbe7a4",
+    "rtl_cosim.rpt": "5b6c185ba2e365b7102087e4e8f33eefb4ce9e5ec4034baf9214bc8b8703e087",
+    "synthesis.rpt": "44a2ad851098339b8d94b7a602c00d7d4b17a1ba59465c8430b26e4b653048c8",
+    "previous_projection_loop.rpt": "5dd24e33bdc208f98d1eb3f9af977cf309e68cfcfe14344bf4bccfbf04b66147"
+  },
+  "fixture_input": [
+    79,
+    65
+  ],
+  "fixture_internal_side": 80,
+  "fixture_cnn_tasks": 9,
+  "production_cnn_tasks": 47,
+  "rtl_cycles": [
+    602800,
+    602808
+  ],
+  "comparison_hls38_cycles": [
+    665600,
+    665608
+  ],
+  "cycle_reduction_fraction": 0.09435096153846154,
+  "comparison_scope": "Identical reduced nine-task fixture; not full-resolution FPGA FPS",
+  "ip_export_sha256": "6d995522e0ecd3743f318ab91e76a10f038ad03f93daf0ffe0beca568217f3a0"
+}

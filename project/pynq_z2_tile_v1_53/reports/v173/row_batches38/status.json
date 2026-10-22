@@ -1,0 +1,46 @@
+{
+  "scope": "EXACT_C_117_AND_TWO_FULL_RTL_CALLS_PASS_NOT_BOARD",
+  "source_sha256": "8ec36b8e23f1d3207b6d0fa5944899729bd11cc9c2df68cbcb627b855856aef4",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "testbench_sha256": "b3c2060f68ee34aeb35ec5f163559c16d943fdf2cbce98963628623211006b79",
+  "fixture": {
+    "test_model.bin": "892e5b9e6efc5d276fa3cd75190c13207806642354b3cabb1e34164cfe5158fb",
+    "test_rgb.bin": "0c3eec335dc3f27290030c85a6b3162e063736c3c23d7b237dffd0303c83a933",
+    "test_expected.bin": "c009ccb7281f33417d8c37a94ca53cd7352f42dc983c7b18784acc10e23d870b",
+    "test_fa_expected.bin": "e95c5d9666de87d5a3b81d93ce95a521416cc11539064684aba361ef09199775",
+    "test_fb_expected.bin": "6ddf5ff795b0619df41967752bbc19a313ff7dec5936734b526186d77f5e0d86"
+  },
+  "fixture_input": [
+    79,
+    65
+  ],
+  "fixture_internal_side": 80,
+  "rtl_cycles": [
+    665600,
+    665608
+  ],
+  "rtl_fixture_cycles_are_not_full_resolution_fps": true,
+  "hls_estimated_resources": {
+    "BRAM_18K": 250,
+    "DSP": 219,
+    "FF": 61819,
+    "LUT": 66334,
+    "URAM": 0
+  },
+  "ip_export_sha256": "f00ad575907b429eab164a33a37d3d6b40f8d331974204bdd418096adee06bd2",
+  "full_c_cases": 117,
+  "all_scores_and_masks_exact": true,
+  "board_programmed": false,
+  "physical_timing_pending": true,
+  "evidence_sha256": {
+    "hls_synthesis.xml": "3e510b2ee9876db175631a2bea253efa1ba9fe5f333097c947863bd3955f8592",
+    "hls_synthesis.rpt": "b1b1cf55fef76614e64862825003c7dd1b59b92f8e334cdf42c05d7bc2804cad",
+    "rtl_cosim.rpt": "d28f1be447f3e96f117a5145e8d1a871e8e30c986d54afb5c1cf5288dd221dbb",
+    "full_c_summary.json": "c7ae0a84cb0759c80434812fd9df9b3e04b1ac3fbacedf2df5e3c6caca3788c2",
+    "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+    "odd_rows_c_check.json": "315a1c43d6a89a88ee15790d7594d1508a084b73d19fe26f024c30b71d2fcd74",
+    "static_schedule.json": "c78f77fe467210e9291c57eb49aa23897dba8b6f19996f8f5b97e3ea87d6ea07"
+  },
+  "fixture_cnn_tasks": 9,
+  "production_cnn_tasks": 47
+}
