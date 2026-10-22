@@ -1,0 +1,86 @@
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 22 03:30:15 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {D:\Vivado\TileLab_RealPhotos_20261020\v174_control_sets01\inspect.tcl} -notrace
+Command: open_checkpoint D:/Vivado/TileLab_RealPhotos_20261020/v173_hw04/texture_v170.runs/system_infer_0_synth_1/system_infer_0.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 433.043 ; gain = 5.820
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.951 . Memory (MB): peak = 1020.453 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5248 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1184.109 ; gain = 15.039
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1185.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 412 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 29 instances
+  RAM16X1S => RAM32X1S (RAMS32): 229 instances
+  RAM32X1S => RAM32X1S (RAMS32): 29 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 93 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1191.098 ; gain = 774.727
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1191.098 ; gain = 0.000
+Command: open_checkpoint D:/Vivado/TileLab_RealPhotos_20261020/v174_hw01/texture_v170.runs/system_infer_0_synth_1/system_infer_0.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1191.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1191.098 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5382 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.178 . Memory (MB): peak = 1217.035 ; gain = 19.887
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1217.133 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 412 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 29 instances
+  RAM16X1S => RAM32X1S (RAMS32): 229 instances
+  RAM32X1S => RAM32X1S (RAMS32): 29 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 93 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1223.027 ; gain = 31.930
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 1223.027 ; gain = 0.000
+Command: open_checkpoint D:/Vivado/TileLab_RealPhotos_20261020/v174_ooc43/synthesized.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1223.027 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6586 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.182 . Memory (MB): peak = 1223.457 ; gain = 0.430
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1949.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 412 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 29 instances
+  RAM16X1S => RAM32X1S (RAMS32): 229 instances
+  RAM32X1S => RAM32X1S (RAMS32): 29 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 93 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1949.664 ; gain = 726.637
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 1949.664 ; gain = 0.000
+CONTROL_SET_COMPARISON_COMPLETE
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 22 03:31:21 2026...

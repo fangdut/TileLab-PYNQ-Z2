@@ -64,6 +64,8 @@ def preflight(hls,regression,profile):
     import sys
     sys.path.insert(0,str(root/'tools/fpga_texture_v170'))
     from check_mac_recurrence import inspect as inspect_recurrence
+    from check_direct_cache import inspect as inspect_direct_cache
+    cache_bounds=inspect_direct_cache(source,profile)
     recurrence=inspect_recurrence(hls)
     if not recurrence['all_banks_safe']:
         raise ValueError('Generated MAC feedback is later than its same-slot recurrence')
@@ -78,7 +80,7 @@ def preflight(hls,regression,profile):
         raise ValueError('HLS DSP/BRAM estimate exceeds the target device')
     return dict(scope='OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD',source_sha256=sha(source),
         model_sha256=graph['sha256'],c_regression_summary_sha256=sha(regression/'summary.json'),
-        rtl_cosim_sha256=sha(cosim),hls_dsp=dsp,hls_bram18=bram,mac_recurrence=recurrence,
+        rtl_cosim_sha256=sha(cosim),hls_dsp=dsp,hls_bram18=bram,mac_recurrence=recurrence,direct_cache_bounds=cache_bounds,
         centered_packing_weights=packed_weight_proof(source,profile,graph))
 
 

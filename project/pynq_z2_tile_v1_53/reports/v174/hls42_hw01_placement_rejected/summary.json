@@ -1,0 +1,16 @@
+{
+  "scope": "REJECTED_WHOLE_VIDEO_PLACEMENT_NO_BITSTREAM_NO_PROGRAMMING",
+  "kernel_sha256": "88de87611609a1864acf6d6653644a43f1e8225cfe04939ce9e2eaab5565b13f",
+  "synthesized_luts": 51035,
+  "synthesized_ff": 57547,
+  "synthesized_bram_tiles": 132,
+  "synthesized_dsp": 217,
+  "placer_control_sets": 1110,
+  "placer_combined_luts": 50410,
+  "available_remaining_slices": 7057,
+  "unplaced_required_slices": 7357,
+  "reason": "Instance/control-set packing failed despite aggregate LUT count below capacity",
+  "board_programmed": false,
+  "model_changed": false,
+  "threshold_changed": false
+}

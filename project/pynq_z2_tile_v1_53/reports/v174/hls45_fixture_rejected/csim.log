@@ -1,0 +1,8 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../src/test_integer.cpp in debug mode
+   Compiling ../../../src/texture_integer.cpp in debug mode
+   Generating csim.exe
+CNN_FEATURE_FAIL tensor=0 word=0 got=611960 expected=1031290624
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 160
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************

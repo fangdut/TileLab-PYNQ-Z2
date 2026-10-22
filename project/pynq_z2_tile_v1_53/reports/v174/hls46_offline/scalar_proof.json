@@ -1,0 +1,12 @@
+{
+  "scope": "OFFLINE_ACTUAL_MAC_VS_SCALAR_AND_MODEL_BOUNDS_NOT_RTL_OR_BOARD",
+  "source_sha256": "494de759c5b1bc926be9a7ff46e51004bedae0cc1cfdc06c04b867401b039ad5",
+  "test_sha256": "e811ae643d2b39209333b11b3311f7215d0407dccf6e7343f0c008d93198fa4f",
+  "executable_sha256": "bb4e8e1c1f3909109b86fa0f53ecf17fe293d10ec8f5576c002a4e3fd99bfae3",
+  "physical_line_words_checked": 75600,
+  "mac_calls": 426,
+  "channel_outputs_exact": 231936,
+  "native_log_sha256": "c9401cea7e2aab4fcb3e5fee06e367df8330e6ae3aaad58bc13fad4030ce0ef9",
+  "invalid_uncached_group_count_rejected": true,
+  "rejection": "Uncached ordinary convolution exceeds three physical row banks"
+}

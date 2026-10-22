@@ -44,8 +44,10 @@ def main():
     a.out.mkdir(parents=True)
     def cp(src,dst):
         dst=a.out/dst;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst)
-    for n in ['system.bit','system.xsa','implementation_status.json','timing_summary.rpt','utilization.rpt','video_cdc.rpt','bus_skew.rpt','physical_repair.json','drc.rpt']:
+    for n in ['system.bit','system.xsa','implementation_status.json','timing_summary.rpt','utilization.rpt','video_cdc.rpt','bus_skew.rpt','drc.rpt']:
         cp(a.hardware/n,Path('hardware')/n)
+    if (a.hardware/'physical_repair.json').exists():
+        cp(a.hardware/'physical_repair.json',Path('hardware/physical_repair.json'))
     cp(a.hardware/'texture_v170.srcs/sources_1/bd/system/system.bd',Path('hardware/texture_v170.srcs/sources_1/bd/system/system.bd'))
     cp(software/'BUILD_RESULT.json',Path('software/BUILD_RESULT.json'))
     if (software/'REUSE_PROOF.json').exists():cp(software/'REUSE_PROOF.json',Path('software/REUSE_PROOF.json'))
