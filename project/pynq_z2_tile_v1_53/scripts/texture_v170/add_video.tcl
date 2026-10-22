@@ -64,6 +64,7 @@ foreach {pin name dir width} {
 set hpd_pin one/dout
 if {$video_variant eq "overlap_v175"} {
  create_bd_cell -type module -reference hdmi_hpd_startup hpd_startup
+ set_property CONFIG.STARTUP_CYCLES [expr {int($pl_clock_mhz*200000)}] [get_bd_cells hpd_startup]
  net ps7/FCLK_CLK0 hpd_startup/clk
  net resets/peripheral_aresetn hpd_startup/resetn
  set hpd_pin hpd_startup/hpd

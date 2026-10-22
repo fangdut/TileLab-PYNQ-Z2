@@ -1,0 +1,1313 @@
+{
+  "scope": "EXHAUSTIVE_LAYOUT_GEOMETRY_ONLY_NOT_FULL_DETECTOR_OR_FPS",
+  "passed": true,
+  "rom_entries": 32,
+  "legal_sides": 217,
+  "max_words": 2744,
+  "cache_words": 4096,
+  "source_sha256": "ac5fc543b2e633e0abfb6e0e76f00587ad18d0e9120b6a3341c2077a42ad6896",
+  "cases": [
+    {
+      "side": 8,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 9,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 10,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 11,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 12,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 13,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 14,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 15,
+      "grid": 1,
+      "fa_words": 2,
+      "fb_words": 0
+    },
+    {
+      "side": 16,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 17,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 18,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 19,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 20,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 21,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 22,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 23,
+      "grid": 2,
+      "fa_words": 8,
+      "fb_words": 6
+    },
+    {
+      "side": 24,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 25,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 26,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 27,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 28,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 29,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 30,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 31,
+      "grid": 3,
+      "fa_words": 18,
+      "fb_words": 6
+    },
+    {
+      "side": 32,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 33,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 34,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 35,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 36,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 37,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 38,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 39,
+      "grid": 4,
+      "fa_words": 32,
+      "fb_words": 24
+    },
+    {
+      "side": 40,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 41,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 42,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 43,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 44,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 45,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 46,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 47,
+      "grid": 5,
+      "fa_words": 50,
+      "fb_words": 24
+    },
+    {
+      "side": 48,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 49,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 50,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 51,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 52,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 53,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 54,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 55,
+      "grid": 6,
+      "fa_words": 72,
+      "fb_words": 54
+    },
+    {
+      "side": 56,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 57,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 58,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 59,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 60,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 61,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 62,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 63,
+      "grid": 7,
+      "fa_words": 98,
+      "fb_words": 54
+    },
+    {
+      "side": 64,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 65,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 66,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 67,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 68,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 69,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 70,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 71,
+      "grid": 8,
+      "fa_words": 128,
+      "fb_words": 96
+    },
+    {
+      "side": 72,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 73,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 74,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 75,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 76,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 77,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 78,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 79,
+      "grid": 9,
+      "fa_words": 162,
+      "fb_words": 96
+    },
+    {
+      "side": 80,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 81,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 82,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 83,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 84,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 85,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 86,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 87,
+      "grid": 10,
+      "fa_words": 200,
+      "fb_words": 150
+    },
+    {
+      "side": 88,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 89,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 90,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 91,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 92,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 93,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 94,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 95,
+      "grid": 11,
+      "fa_words": 242,
+      "fb_words": 150
+    },
+    {
+      "side": 96,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 97,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 98,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 99,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 100,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 101,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 102,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 103,
+      "grid": 12,
+      "fa_words": 288,
+      "fb_words": 216
+    },
+    {
+      "side": 104,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 105,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 106,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 107,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 108,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 109,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 110,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 111,
+      "grid": 13,
+      "fa_words": 338,
+      "fb_words": 216
+    },
+    {
+      "side": 112,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 113,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 114,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 115,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 116,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 117,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 118,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 119,
+      "grid": 14,
+      "fa_words": 392,
+      "fb_words": 294
+    },
+    {
+      "side": 120,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 121,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 122,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 123,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 124,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 125,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 126,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 127,
+      "grid": 15,
+      "fa_words": 450,
+      "fb_words": 294
+    },
+    {
+      "side": 128,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 129,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 130,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 131,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 132,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 133,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 134,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 135,
+      "grid": 16,
+      "fa_words": 512,
+      "fb_words": 384
+    },
+    {
+      "side": 136,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 137,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 138,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 139,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 140,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 141,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 142,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 143,
+      "grid": 17,
+      "fa_words": 578,
+      "fb_words": 384
+    },
+    {
+      "side": 144,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 145,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 146,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 147,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 148,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 149,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 150,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 151,
+      "grid": 18,
+      "fa_words": 648,
+      "fb_words": 486
+    },
+    {
+      "side": 152,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 153,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 154,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 155,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 156,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 157,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 158,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 159,
+      "grid": 19,
+      "fa_words": 722,
+      "fb_words": 486
+    },
+    {
+      "side": 160,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 161,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 162,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 163,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 164,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 165,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 166,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 167,
+      "grid": 20,
+      "fa_words": 800,
+      "fb_words": 600
+    },
+    {
+      "side": 168,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 169,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 170,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 171,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 172,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 173,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 174,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 175,
+      "grid": 21,
+      "fa_words": 882,
+      "fb_words": 600
+    },
+    {
+      "side": 176,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 177,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 178,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 179,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 180,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 181,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 182,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 183,
+      "grid": 22,
+      "fa_words": 968,
+      "fb_words": 726
+    },
+    {
+      "side": 184,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 185,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 186,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 187,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 188,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 189,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 190,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 191,
+      "grid": 23,
+      "fa_words": 1058,
+      "fb_words": 726
+    },
+    {
+      "side": 192,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 193,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 194,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 195,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 196,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 197,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 198,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 199,
+      "grid": 24,
+      "fa_words": 1152,
+      "fb_words": 864
+    },
+    {
+      "side": 200,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 201,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 202,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 203,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 204,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 205,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 206,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 207,
+      "grid": 25,
+      "fa_words": 1250,
+      "fb_words": 864
+    },
+    {
+      "side": 208,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 209,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 210,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 211,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 212,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 213,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 214,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 215,
+      "grid": 26,
+      "fa_words": 1352,
+      "fb_words": 1014
+    },
+    {
+      "side": 216,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 217,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 218,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 219,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 220,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 221,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 222,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 223,
+      "grid": 27,
+      "fa_words": 1458,
+      "fb_words": 1014
+    },
+    {
+      "side": 224,
+      "grid": 28,
+      "fa_words": 1568,
+      "fb_words": 1176
+    }
+  ]
+}

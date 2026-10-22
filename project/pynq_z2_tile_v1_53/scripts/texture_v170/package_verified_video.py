@@ -27,6 +27,15 @@ def main():
     if status['setup_slack_ns']<0 or status['hold_slack_ns']<0 or status['drc_errors']:raise ValueError('Physical timing/DRC failed')
     source=a.hls/'src/texture_integer.cpp'
     if source.read_bytes()!=(a.hardware/'texture_integer_source.cpp').read_bytes():raise ValueError('Hardware/HLS source mismatch')
+    preflight=read(a.hardware/'candidate_preflight.json')
+    variant=preflight.get('video_variant','serial')
+    if variant not in ('serial','overlap_v175'):raise ValueError('Unknown video source layout')
+    video_folder='experimental/'+('video_overlap_v175' if variant=='overlap_v175' else 'video_v171')
+    if variant=='overlap_v175':
+        snapshots={f.name:sha(f) for f in (a.hardware/'rtl_snapshot').iterdir() if f.suffix in ('.v','.sv')}
+        if snapshots!=preflight['video_rtl_sources']:raise ValueError('Packaged overlap RTL differs from tested build')
+        if snapshots!={f.name:sha(f) for f in (root/video_folder/'rtl').iterdir() if f.suffix in ('.v','.sv')}:
+            raise ValueError('Current overlap RTL differs from physical hardware')
     for kind,path in [('bit',a.hardware/'system.bit'),('xsa',a.hardware/'system.xsa'),('elf',software/'texture_transport/build/texture_transport.elf')]:
         if sha(path)!=build[kind+'_sha256'] or build[kind+'_sha256']!=identity['build'][kind+'_sha256']:raise ValueError('Artifact identity mismatch: '+kind)
     if sha(a.profile/'model.bin')!=identity['build']['model_sha256']:raise ValueError('Frozen model mismatch')
@@ -46,6 +55,8 @@ def main():
         dst=a.out/dst;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst)
     for n in ['system.bit','system.xsa','implementation_status.json','timing_summary.rpt','utilization.rpt','video_cdc.rpt','bus_skew.rpt','drc.rpt']:
         cp(a.hardware/n,Path('hardware')/n)
+    for n in ['candidate_preflight.json','optimization_strategy.json']:
+        if (a.hardware/n).exists():cp(a.hardware/n,Path('hardware')/n)
     if (a.hardware/'physical_repair.json').exists():
         cp(a.hardware/'physical_repair.json',Path('hardware/physical_repair.json'))
     cp(a.hardware/'texture_v170.srcs/sources_1/bd/system/system.bd',Path('hardware/texture_v170.srcs/sources_1/bd/system/system.bd'))
@@ -62,7 +73,11 @@ def main():
         for f in (root/folder).rglob('*'):
             if f.is_file() and '__pycache__' not in f.parts and f.suffix in ['.py','.tcl','.c','.h','.md','.cs','.ps1']:cp(f,Path('source')/f.relative_to(root))
     for f in (a.hardware/'rtl_snapshot').iterdir():
-        if f.is_file():cp(f,Path('source/experimental/video_v171/rtl')/f.name)
+        if f.is_file():cp(f,Path('source')/video_folder/'rtl'/f.name)
+    if variant=='overlap_v175':
+        for f in (root/video_folder).rglob('*'):
+            if f.is_file() and '__pycache__' not in f.parts and 'rtl' not in f.relative_to(root/video_folder).parts and f.suffix in ['.py','.sv','.md']:
+                cp(f,Path('source')/f.relative_to(root))
     cp(root/'scripts/ps7_preset.tcl',Path('source/scripts/ps7_preset.tcl'))
     cp(root/'experimental/packed_mac_v173/build_detector_hls.tcl',Path('source/experimental/packed_mac_v173/build_detector_hls.tcl'))
     for n in ['LICENSE','LICENSE_SCOPE.md','THIRD_PARTY_NOTICES.md']:cp(repo/n,Path(n))
@@ -97,7 +112,7 @@ This is not a final competition submission. Independent blind accuracy, arbitrar
 
 Open report.html. hardware/ contains the exact programmed BIT/XSA; software/ the matching transport ELF; model/ the frozen model. evidence/all117_direct_raw.zip preserves every full board output. Source/model/artifact hashes are in PACKAGE_MANIFEST.json. The recorded boot {identity['boot_identity']} belongs to this experiment; reruns need fresh programming and validation records.
 
-Full project and vendor IP dependencies: https://github.com/fangdut/TileLab-PYNQ-Z2/tree/{a.source_commit} . The exact accepted HLS source is source/texture_integer.cpp; hls/accepted_export.zip and unit_vectors/ match it. Later experimental kernels in the repository are separate. Rebuilding the complete Vivado project requires that pinned repository and AMD tools 2025.2; this archive contains compiled artifacts and supporting sources.
+Full project and vendor IP dependencies: https://github.com/fangdut/TileLab-PYNQ-Z2/tree/{a.source_commit} . The exact accepted HLS source is source/texture_integer.cpp; hls/accepted_export.zip and unit_vectors/ match it. Video variant: {variant}; its compiled RTL sources are in source/{video_folder}/rtl. hardware/candidate_preflight.json records the actual source-bound build selection. Later experimental kernels in the repository are separate. Rebuilding the complete Vivado project requires that pinned repository and AMD tools 2025.2; this archive contains compiled artifacts and supporting sources.
 
 From the extracted package root, volatile JTAG programming is supported with:
 python source/scripts/texture_v170/program_board.py --hardware hardware --software software --out runtime/program_new
@@ -107,7 +122,7 @@ Use a fresh output folder. PC Ethernet: 192.168.33.30/24; board: 192.168.33.10:9
 Original code is MIT. MVTec-derived photos/models/evidence retain CC BY-NC-SA 4.0; AMD/Xilinx/Digilent and other upstream components retain their licenses.
 ''',encoding='utf8')
     manifest=dict(scope='VERIFIED_DEVELOPMENT_VIDEO_SNAPSHOT_NOT_FINAL_COMPETITION',source_commit=a.source_commit,
-        hls_source_sha256=sha(source),boot_identity=identity['boot_identity'],build=build,
+        video_variant=variant,hls_source_sha256=sha(source),boot_identity=identity['boot_identity'],build=build,
         continuous_hdmi=hdmi,files={f.relative_to(a.out).as_posix():sha(f) for f in a.out.rglob('*') if f.is_file()})
     (a.out/'PACKAGE_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
     with zipfile.ZipFile(archive,'x',zipfile.ZIP_DEFLATED,compresslevel=6) as z:

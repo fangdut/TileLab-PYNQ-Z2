@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_candidate.py", line 140, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_candidate.py", line 113, in main
+    raise ValueError('HLS must be rescheduled for the requested faster PL clock')
+ValueError: HLS must be rescheduled for the requested faster PL clock

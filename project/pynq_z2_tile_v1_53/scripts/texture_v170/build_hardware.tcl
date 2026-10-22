@@ -4,6 +4,9 @@ foreach n {TILE_TEXTURE_HW TILE_TEXTURE_HLS} {if {![info exists ::env($n)]} {err
 set out [file normalize $::env(TILE_TEXTURE_HW)]
 set hls [file normalize $::env(TILE_TEXTURE_HLS)]
 set video [info exists ::env(TILE_TEXTURE_VIDEO)]
+set pl_clock_mhz 100
+if {[info exists ::env(TILE_TEXTURE_PL_CLOCK_MHZ)]} {set pl_clock_mhz $::env(TILE_TEXTURE_PL_CLOCK_MHZ)}
+if {$pl_clock_mhz ni {100 125}} {error "Unsupported PL clock; use a rescheduled and verified HLS IP"}
 set video_variant serial
 if {[info exists ::env(TILE_TEXTURE_VIDEO_VARIANT)]} {set video_variant $::env(TILE_TEXTURE_VIDEO_VARIANT)}
 if {$video_variant ni {serial overlap_v175}} {error "Unsupported video variant"}
@@ -39,7 +42,7 @@ file copy $report $out/hls_cosim.rpt
 file copy [info script] $out/build_hardware_source.tcl
 file copy $root/scripts/texture_v170/add_video.tcl $out/add_video_source.tcl
 set f [open $out/optimization_strategy.json w]
-puts $f "{\"opt_directive\":\"$opt_directive\",\"memory_layout\":\"$memory_layout\",\"video_variant\":\"$video_variant\"}"
+puts $f "{\"opt_directive\":\"$opt_directive\",\"memory_layout\":\"$memory_layout\",\"video_variant\":\"$video_variant\",\"requested_pl_clock_mhz\":$pl_clock_mhz}"
 close $f
 file mkdir $out/physical_scripts
 foreach name {replicate_controls.tcl constrain_video_cdc.tcl} {
@@ -71,7 +74,7 @@ update_ip_catalog
 create_bd_design system
 set ps7 [create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 ps7]
 source $root/scripts/ps7_preset.tcl
-set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_EN_CLK0_PORT {1} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_EN_CLK1_PORT {0} CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_EN_CLK3_PORT {0}] $ps7
+set_property -dict [list CONFIG.PCW_USE_M_AXI_GP0 {1} CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_EN_CLK0_PORT {1} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ $pl_clock_mhz CONFIG.PCW_EN_CLK1_PORT {0} CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_EN_CLK3_PORT {0}] $ps7
 if {$video} {set_property -dict [list CONFIG.PCW_USE_S_AXI_HP1 {1} CONFIG.PCW_EN_CLK1_PORT {1} CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {200}] $ps7}
 if {$memory_layout eq "split"} {set_property -dict [list CONFIG.PCW_USE_S_AXI_HP2 {1} CONFIG.PCW_USE_S_AXI_HP3 {1}] $ps7}
 make_bd_intf_pins_external [get_bd_intf_pins ps7/DDR]
@@ -179,8 +182,13 @@ set hold [get_property SLACK [get_timing_paths -delay_type min -max_paths 1]]
 report_drc -file $out/drc.rpt
 set errors [llength [get_drc_violations -filter {SEVERITY == Error}]]
 set final_dsp_count [llength [get_cells -hier -filter {REF_NAME == DSP48E1}]]
+set pl_clock [get_clocks clk_fpga_0]
+if {[llength $pl_clock]!=1} {error "Missing actual PL clock"}
+set actual_pl_period [get_property PERIOD $pl_clock]
+if {abs($actual_pl_period-1000.0/$pl_clock_mhz)>0.001} {error "Actual PL timing clock differs from requested frequency"}
+set actual_pl_mhz [expr {1000.0/$actual_pl_period}]
 set f [open $out/implementation_status.json w]
-puts $f "{\"setup_slack_ns\":$setup,\"hold_slack_ns\":$hold,\"drc_errors\":$errors,\"pl_clock_mhz\":100,\"dsp\":$final_dsp_count}"
+puts $f "{\"setup_slack_ns\":$setup,\"hold_slack_ns\":$hold,\"drc_errors\":$errors,\"pl_clock_mhz\":$actual_pl_mhz,\"pl_clock_period_ns\":$actual_pl_period,\"dsp\":$final_dsp_count}"
 close $f
 if {$setup<0 || $hold<0 || $errors || $final_dsp_count>220} {error "Timing/DRC/capacity failed"}
 if {$video} {

@@ -1,0 +1,14 @@
+{
+  "scope": "GUARDED_V175_OVERLAP_PHYSICAL_DEVELOPMENT_NOT_FINAL_ACCEPTANCE",
+  "status": "FAILED_NO_PROMOTION",
+  "stages": [
+    {
+      "stage": "timing_repair",
+      "returncode": 1,
+      "seconds": 495.1880000000019
+    }
+  ],
+  "flash_written": false,
+  "board_programmed": false,
+  "error": "timing_repair failed; no promotion"
+}

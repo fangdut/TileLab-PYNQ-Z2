@@ -1,6 +1,6 @@
 # V175 采集与推理重叠流水线（尚未通过上板验收）
 
-四槽所有权模块已接入 HDMI 流水线、DDR 写入器、独立的采集/推理状态机及结果寄存器。六组源文件绑定的 RTL 回归已通过，HW02 正在进行整机构建；尚无 V175 时序、上板或 FPS 结论。数值内核沿用已验收的冻结 HLS39，不使用板上速度下降的 HLS51。
+四槽所有权模块已接入 HDMI 流水线、DDR 写入器、独立的采集/推理状态机及结果寄存器。六组源文件绑定的 RTL 回归已通过。HW02 初始 100 MHz 时序 −0.482 ns，一次物理修复后仍为 −0.279 ns，因此未下载，尚无 V175 上板或 FPS 结论。数值内核沿用已验收的冻结 HLS39，不使用板上速度下降的 HLS51。
 
 目标是在 PL 内重叠采集与推理，减少串行等待。四个 4 MiB 输入槽从 `0x06000000` 开始，分别属于正在采集、最新就绪、正在推理、上一份已发布结果的输入。新采集可以替换尚未使用的就绪帧；绝不覆盖推理中或保留给快照的输入。
 
@@ -27,4 +27,4 @@ python experimental/video_overlap_v175/test_queue.py --out D:/Vivado/TileLab_Rea
 
 测试入口是 `test_queue.py`、`test_scheduler.py`、`test_pipeline.py --case writer|pipeline|video_regs|hpd`，输出必须是全新目录。`test_layout.py` 检查主机读取槽地址的版本和范围约束。`check_rtl_gate.py` 将六组通过记录绑定至全部 11 个 HDL 文件和测试平台；整机构建使用 `--video-variant overlap_v175 --video-rtl-gate <gate.json>`。默认串行版本不变。
 
-HW01 在综合前因 Vivado BD 不支持以 SystemVerilog 文件作为 HPD 模块引用而终止。已改为 Verilog 封装并重跑 HPD 单元检查；失败记录保留。HW02 必须通过整机时序/DRC/FIFO Gray skew、117 张直接数值核对、真实 HDMI 图像与吞吐检查，以及 ARM 双核暂停和输入/结果身份核对后才能考虑提升为已验收版本。以上仿真通过不能当作吞吐提升证据。
+HW01 在综合前因 Vivado BD 不支持以 SystemVerilog 文件作为 HPD 模块引用而终止。已改为 Verilog 封装并重跑 HPD 单元检查；失败记录保留。HW02 的两次时序失败保存在 reports/v175/hw02_timing_rejected，现暂停重复布线，转向 V176 的关键路径逻辑与时钟流水线实验。将来必须通过整机时序/DRC/FIFO Gray skew、117 张直接数值核对、真实 HDMI 图像与吞吐检查，以及 ARM 双核暂停和输入/结果身份核对后才能考虑提升为已验收版本。以上仿真通过不能当作吞吐提升证据。

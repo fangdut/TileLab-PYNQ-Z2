@@ -1,0 +1,11 @@
+{
+  "scope": "EXPERIMENT_PREPARATION_NOT_SYNTHESIS_OR_BOARD",
+  "source_sha256": "ac5fc543b2e633e0abfb6e0e76f00587ad18d0e9120b6a3341c2077a42ad6896",
+  "baseline_sha256": "cef70b27006722b51b5871441e4e06b175d19337872646c93ddeb58142ba5c5a",
+  "model_changed": false,
+  "arithmetic_change": "Only bounded feature-layout geometry; neural arithmetic unchanged",
+  "critical_path": "HW02 sub_ln527_reg_10793 -> icmp_ln528_reg_10848, -0.482ns before repair",
+  "clock_probe_ns": 8.0,
+  "clock_target_mhz": 125,
+  "clock_is_not_yet_implemented": true
+}

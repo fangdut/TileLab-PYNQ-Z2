@@ -90,6 +90,7 @@ def main():
     p.add_argument('--video',action='store_true')
     p.add_argument('--video-variant',choices=['serial','overlap_v175'],default='serial')
     p.add_argument('--video-rtl-gate',type=Path)
+    p.add_argument('--clock-mhz',type=int,choices=[100,125],default=100)
     p.add_argument('--opt-directive',choices=['Default','ExploreArea','ExploreWithRemap'],default='Default')
     p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
     a=p.parse_args()
@@ -106,7 +107,14 @@ def main():
         proof['video_rtl_sources']=gate['rtl_sources']
         proof['video_rtl_gate_sha256']=sha(a.video_rtl_gate)
     proof['video_variant']=a.video_variant
+    clock_xml=ET.parse(a.hls/'solution/syn/report/texture_integer_csynth.xml').getroot()
+    hls_period=float(clock_xml.findtext('UserAssignments/TargetClockPeriod'))
+    if hls_period>1000/a.clock_mhz+1e-6:
+        raise ValueError('HLS must be rescheduled for the requested faster PL clock')
+    proof['requested_pl_clock_mhz']=a.clock_mhz
+    proof['hls_target_clock_ns']=hls_period
     env=os.environ.copy();env['TILE_TEXTURE_HLS']=str(a.hls);env['TILE_TEXTURE_HW']=str(a.out)
+    env['TILE_TEXTURE_PL_CLOCK_MHZ']=str(a.clock_mhz)
     env['TILE_TEXTURE_VIDEO_VARIANT']=a.video_variant
     env['TILE_TEXTURE_OPT_DIRECTIVE']=a.opt_directive
     proof['opt_directive']=a.opt_directive

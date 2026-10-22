@@ -1,0 +1,151 @@
+{
+  "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "cef70b27006722b51b5871441e4e06b175d19337872646c93ddeb58142ba5c5a",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_regression_summary_sha256": "d23c9b279add1e5445d0ea5ba74512a268ebf7c60a43fdc89df5771cdf1b96d1",
+  "rtl_cosim_sha256": "5b6c185ba2e365b7102087e4e8f33eefb4ce9e5ec4034baf9214bc8b8703e087",
+  "hls_dsp": 219,
+  "hls_bram18": 251,
+  "mac_recurrence": {
+    "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+    "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls39",
+    "source_sha256": "cef70b27006722b51b5871441e4e06b175d19337872646c93ddeb58142ba5c5a",
+    "rtl_sha256": "ae8eb1fdacd03dda71890342961d9e1fcb57e04289678ca40475eef5ca1eb040",
+    "slots": 32,
+    "banks": [
+      {
+        "bank": "acc",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_1",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_10",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_11",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_12",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_13",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_14",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_15",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_2",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_3",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_4",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_5",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_6",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_7",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_8",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_9",
+        "read_stage": 21,
+        "write_stage": 29,
+        "write_minus_read": 8,
+        "safe_before_next_read": true
+      }
+    ],
+    "all_banks_safe": true,
+    "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively."
+  },
+  "direct_cache_bounds": null,
+  "centered_packing_weights": null,
+  "video_rtl_sources": {
+    "frame_slot_queue.sv": "3fbca1529d9d4a51f594507c6e63eadd175fc4de91789bd99ba209d5d877f2ae",
+    "hdmi_detector_pipeline.v": "16efe495dc9fc346615a2348506bc454743aac4aee80e214ec0b45c4c48510c2",
+    "hdmi_hpd_startup.v": "380058313af9bd51ac6b221adbff61176829667ee55a306074ea1a1de2f41f63",
+    "pl_frame_scheduler_overlap.sv": "ae8dfa26ab8c0f128597a57e6ea1d8f26d688a1fc026a00b3ac85924510540d2",
+    "pl_result_latch.sv": "18d804d6540e5b03217733f42b057236b15933339c6a99e5dfdae506f311f13f",
+    "roi_ddr_writer.sv": "dfb9f8d1c0b2b8fa71b1bdacf66d5b9c9f1f53433255ba2eba77d149385281ea",
+    "video_alarm_border.v": "0e37098da62f642cd0af8c999565e4f6946728c58e4f07b890eaafc6e4fd90a7",
+    "video_capture_link.sv": "3a70a209bea5be6e3803d43b44017ccd259e5dc3740f582b05a734d5cbe7c1f3",
+    "video_color_correct.sv": "79d70c95ea93088810009d2bd50783e4e30f250913d628256c92a244fa54d97c",
+    "video_regs.v": "dc340aa8a897480018b7b5b8c217206c980264a7851e6f33c9f1e0984e5740a1",
+    "video_roi_tokens.sv": "9df98d2bc60bf313fb7372c2c6c989c4303fe48c01d1240708a086537dcaec1b"
+  },
+  "video_rtl_gate_sha256": "158562f8634b3ace4e8a666a56704c5d2006bc5a36f411fcb1ae038fe8e2d6e1",
+  "video_variant": "overlap_v175",
+  "opt_directive": "Default",
+  "memory_layout": "shared"
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "FULL_HDMI_PHYSICAL_TIMING_REJECTED_NOT_PROGRAMMED",
+  "board_programmed": false,
+  "flash_written": false,
+  "hls": "39 unchanged accepted arithmetic",
+  "initial": {
+    "setup_slack_ns": -0.482,
+    "hold_slack_ns": 0.037,
+    "drc_errors": 0,
+    "pl_clock_mhz": 100,
+    "dsp": 218
+  },
+  "postroute_repair": {
+    "setup_slack_ns": -0.279,
+    "hold_slack_ns": 0.037,
+    "drc_errors": 0,
+    "pl_clock_mhz": 100,
+    "dsp": 218,
+    "postroute_physical_repair": true
+  },
+  "action": "Stop repeating this placement; retain six passing RTL regressions and investigate bounded geometry critical path in V176",
+  "no_v175_board_or_fps_result": true,
+  "files": {
+    "guarded_pipeline.json": "e205265824dbae09c53c4b7891d78e8f2833295f206af994d8195b50e55d60ad",
+    "initial/candidate_preflight.json": "007218024044cc812c2b9d1e036a6ed4ebbd24a56d5a385ad3fb43b9f48ebe60",
+    "initial/drc.rpt": "be27ebb49c07b368e3226730c730dc9e2453cab23a2205118b5ac8e2ec621fe9",
+    "initial/implementation_status.json": "3930900e2b0f9f4823a724577323a5e553b821fbf57649dfe0e6a4765f5aede8",
+    "initial/optimization_strategy.json": "4185af244a5bd578555eb95d8687fcbdd59befbc6c1763a7d6ab441b183c0c82",
+    "initial/timing_summary.rpt": "d186836aa27f77ffadd75d067bb11bc34a75000f20030ffb64863992eab37e09",
+    "initial/utilization.rpt": "70bd4e08779866686a2a23ddf96b86c9992c757f9892fa65ca5f172d801d61eb",
+    "repair01/bus_skew.rpt": "a7592abec6594fa452d97bcaa1fd67bd7f33c694c6f4043b7c5d3a559580e48c",
+    "repair01/drc.rpt": "430f6c13774d07fe34d2d0be168541d7b74e76cfbed8cc53004acd2f43d8b027",
+    "repair01/implementation_status.json": "1397fc436998397ceaf1801b8ecf0bc7176e5cee11ae9b9a3c299c1a673212e6",
+    "repair01/timing_summary.rpt": "dc0c460fdb5d61b478dbc3971bb511537e26a59079797e5708edb06098a7888e",
+    "repair01/utilization.rpt": "8208b3cfc38aeef08788a1da5698aa5129156164ff8bfdfcce872018ffe3ac6e",
+    "repair01/video_cdc.rpt": "aa955610723331b83ed9973a38572f712160622393805d2f3883cef192a22b3a"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "SOURCE_BOUND_ALL117_C_AND_125MHZ_SCHEDULING_PROBE_NOT_RTL_OR_BOARD",
+  "passed_full_c": true,
+  "source_sha256": "ac5fc543b2e633e0abfb6e0e76f00587ad18d0e9120b6a3341c2077a42ad6896",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "all117_full_output_files_byte_identical_to_hls39": true,
+  "hls_target_clock_ns": 8,
+  "estimated_clock_ns": 8.207,
+  "estimated_fmax_mhz": 121.84720360667721,
+  "hls_estimate_meets_125mhz": false,
+  "resources": {
+    "BRAM_18K": 251,
+    "DSP": 219,
+    "FF": 67028,
+    "LUT": 66568,
+    "URAM": 0
+  },
+  "all_accumulator_banks_statically_safe": true,
+  "rtl_simulated": false,
+  "physical_frequency_verified": false,
+  "board_programmed": false,
+  "new_fps_claimed": false,
+  "followup": "Source-identical HLS53 full RTL/IP job started; needs actual physical timing and board tests",
+  "files": {
+    "all117_c_plan.json": "3efb170238d2e27fd13771149a6db45bfc3eef789e3eb027c292c8268f681cc8",
+    "all117_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+    "all117_c_summary.json": "b22eaae7680d43c4947b92a2b9ee0b9ebfc2d6510ad84c74bcd88ccacd9eb2a6",
+    "all_legal_geometry.json": "527c6977fd410a287493950a7978d0a57d38a934d48199d840524cc4b7eafb21",
+    "hls52_csynth.xml": "668600b847fedcc66dc1f647806ad57fcad4e3f10534dc96bdfabab6f57cf20b",
+    "mac_recurrence.json": "2f014a773dff95cd1add97ff1f8acc6ddfec0ac781618dfbf1daa650e9fdcc15",
+    "old_clock_rejection.json": "7825c580b7c5b99dff89d9cff91043a699b3d6201d1bb1fb7f371c3f6c267db4",
+    "old_clock_rejection.log": "4053f6d71f51c9842ca272fb1c61d219d8f5063a22834b8553447c3d9d89c44d"
+  }
+}
