@@ -1,0 +1,15 @@
+{
+  "scope": "ACTUAL_ISOLATED_KERNEL_SYNTHESIS_NOT_WHOLE_VIDEO_TIMING_OR_BOARD",
+  "source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+  "dcp_sha256": "9d7b9ddd366b96eb96e6e2036bae1f7b0dfdd173430170dc6ee4b179443a2e91",
+  "utilization_report_sha256": "7ac7c605b7308b5a479b1e4b43b8ecb976d646ecffb54a0aeb4150040cebeb95",
+  "dsp_cells_sha256": "128d0a4dd71cfacd7a1432c288c80e6ffefb9b67f5658b0f31edd11240f61b0e",
+  "actual_dsp": 218,
+  "hls_estimate_dsp": 214,
+  "lut": 35713,
+  "ff": 47454,
+  "bram_tiles": 123.5,
+  "model_changed": false,
+  "board_programmed": false,
+  "interpretation": "Actual mapped DSP count, not HLS estimate. Whole-system physical reports and measured throughput remain required."
+}

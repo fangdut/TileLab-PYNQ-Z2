@@ -1,0 +1,131 @@
+{
+  "scope": "EXACT_INTEGER_ALGEBRA_AND_MODEL_GEOMETRY_FEASIBILITY_NOT_HLS_RTL_BOARD_OR_FPS",
+  "passed": true,
+  "cases": 100208,
+  "basis_coefficients": 576,
+  "random_cases": 100000,
+  "source_sha256": "171d3ada5df3f6ced19f6f4c8e63b159d46328e035f634732861495f70501b49",
+  "model_graph_sha256": "3283e17899f7b69e119cac6d4be11dfd33b4791634d61fef90ba438aae4c4a2a",
+  "eligible_depthwise_layers": [
+    {
+      "step": 2,
+      "ih": 112,
+      "iw": 112,
+      "channels": 32,
+      "oh": 112,
+      "ow": 112,
+      "conservative_four_row_words": 896,
+      "direct_scalar_products": 3612672,
+      "transformed_scalar_products": 1605632
+    },
+    {
+      "step": 8,
+      "ih": 56,
+      "iw": 56,
+      "channels": 144,
+      "oh": 56,
+      "ow": 56,
+      "conservative_four_row_words": 2016,
+      "direct_scalar_products": 4064256,
+      "transformed_scalar_products": 1806336
+    },
+    {
+      "step": 15,
+      "ih": 28,
+      "iw": 28,
+      "channels": 192,
+      "oh": 28,
+      "ow": 28,
+      "conservative_four_row_words": 1344,
+      "direct_scalar_products": 1354752,
+      "transformed_scalar_products": 602112
+    },
+    {
+      "step": 19,
+      "ih": 28,
+      "iw": 28,
+      "channels": 192,
+      "oh": 28,
+      "ow": 28,
+      "conservative_four_row_words": 1344,
+      "direct_scalar_products": 1354752,
+      "transformed_scalar_products": 602112
+    },
+    {
+      "step": 26,
+      "ih": 14,
+      "iw": 14,
+      "channels": 384,
+      "oh": 14,
+      "ow": 14,
+      "conservative_four_row_words": 1344,
+      "direct_scalar_products": 677376,
+      "transformed_scalar_products": 301056
+    },
+    {
+      "step": 30,
+      "ih": 14,
+      "iw": 14,
+      "channels": 384,
+      "oh": 14,
+      "ow": 14,
+      "conservative_four_row_words": 1344,
+      "direct_scalar_products": 677376,
+      "transformed_scalar_products": 301056
+    },
+    {
+      "step": 34,
+      "ih": 14,
+      "iw": 14,
+      "channels": 384,
+      "oh": 14,
+      "ow": 14,
+      "conservative_four_row_words": 1344,
+      "direct_scalar_products": 677376,
+      "transformed_scalar_products": 301056
+    },
+    {
+      "step": 38,
+      "ih": 14,
+      "iw": 14,
+      "channels": 384,
+      "oh": 14,
+      "ow": 14,
+      "conservative_four_row_words": 1344,
+      "direct_scalar_products": 677376,
+      "transformed_scalar_products": 301056
+    },
+    {
+      "step": 41,
+      "ih": 14,
+      "iw": 14,
+      "channels": 576,
+      "oh": 14,
+      "ow": 14,
+      "conservative_four_row_words": 2016,
+      "direct_scalar_products": 1016064,
+      "transformed_scalar_products": 451584
+    },
+    {
+      "step": 45,
+      "ih": 14,
+      "iw": 14,
+      "channels": 576,
+      "oh": 14,
+      "ow": 14,
+      "conservative_four_row_words": 2016,
+      "direct_scalar_products": 1016064,
+      "transformed_scalar_products": 451584
+    }
+  ],
+  "eligible_product_count_before": 15128064,
+  "eligible_product_count_after": 6723584,
+  "eligible_product_reduction_fraction": 0.5555555555555556,
+  "actual_speedup_claimed": false,
+  "model_changed": false,
+  "threshold_changed": false,
+  "board_programmed": false,
+  "elapsed_seconds": 2.0460000000020955,
+  "paper": "https://arxiv.org/abs/1509.09308",
+  "interpretation": "Both sides are bilinear maps. All144 input/kernel basis pairs verify all576 output coefficients before division. G2=2G yields4*direct convolution exactly. Wide native integers check the identity; explicit bounds are necessary before any finite-width HLS implementation."
+}
