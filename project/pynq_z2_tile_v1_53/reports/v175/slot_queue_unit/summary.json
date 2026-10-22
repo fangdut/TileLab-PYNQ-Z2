@@ -1,0 +1,9 @@
+{
+  "scope": "ISOLATED_SLOT_OWNERSHIP_RTL_NOT_HDMI_AXI_CNN_OR_BOARD",
+  "passed": true,
+  "elapsed_seconds": 5.453000000001339,
+  "sources": {
+    "rtl\\frame_slot_queue.sv": "3fbca1529d9d4a51f594507c6e63eadd175fc4de91789bd99ba209d5d877f2ae",
+    "sim\\tb_frame_slot_queue.sv": "bb800a448d6567cf0ed6664d61c8b9e3b204d1e5c28de74870ec31952380086d"
+  }
+}
