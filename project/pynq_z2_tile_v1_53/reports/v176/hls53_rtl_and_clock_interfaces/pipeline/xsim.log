@@ -1,0 +1,27 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 22 11:01:18 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/test/xsim_script.tcl
+# xsim {test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Warning: SIM_ASSERT_CHK (1) specifies simulation message reporting, messages related to potential misuse will be reported.
+Time: 1 ps  Iteration: 0  Process: /tb_pipeline/dut/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_163  Scope: tb_pipeline.dut.capture.fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+OVERLAP_DIAGNOSTIC starts=3 core_seq=3 peak=12000 status=0000002c rejected=1 core_cycles=423 overlap_beats=28 dropped=5
+PL_OVERLAP_ROI_DYNAMIC_DDR_POINTER_RESULT_CORRELATION_PASS
+$finish called at time : 24213 ns : File "D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/video_overlap_v175/sim/tb_pipeline.sv" Line 185
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 22 11:01:20 2026...
+ reported.
+Time: 1 ps  Iteration: 0  Process: /tb_pipeline/dut/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/Initial1559_163  Scope: tb_pipeline.dut.capture.fifo.gnuram_async_fifo.xpm_fifo_base_inst  File: D:\2025.2\Vivado\data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv Line: 1566
+OVERLAP_DIAGNOSTIC starts=3 core_seq=3 peak=12000 status=0000002c rejected=1 core_cycles=423 overlap_beats=28 dropped=5
+PL_OVERLAP_ROI_DYNAMIC_DDR_POINTER_RESULT_CORRELATION_PASS
+$finish called at time : 24213 ns : File "D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/video_overlap_v175/sim/tb_pipeline.sv" Line 185
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 22 11:01:20 2026...

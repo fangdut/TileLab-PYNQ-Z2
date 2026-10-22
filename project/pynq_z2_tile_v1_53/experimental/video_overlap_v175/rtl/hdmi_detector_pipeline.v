@@ -4,7 +4,7 @@
 module hdmi_detector_pipeline #(
  parameter integer FRAME_WIDTH=1280,FRAME_HEIGHT=720,ROI_X=280,ROI_Y=0,ROI_WIDTH=720,ROI_HEIGHT=720
 )(
- (* X_INTERFACE_INFO="xilinx.com:signal:clock:1.0 control_clk CLK", X_INTERFACE_PARAMETER="XIL_INTERFACENAME control_clk, ASSOCIATED_BUSIF m_axi_control:m_axi_capture:m_axi_result, ASSOCIATED_RESET control_resetn, FREQ_HZ 100000000" *) input wire control_clk,
+ (* X_INTERFACE_INFO="xilinx.com:signal:clock:1.0 control_clk CLK", X_INTERFACE_PARAMETER="XIL_INTERFACENAME control_clk, ASSOCIATED_BUSIF m_axi_control:m_axi_capture:m_axi_result, ASSOCIATED_RESET control_resetn" *) input wire control_clk,
  (* X_INTERFACE_INFO="xilinx.com:signal:reset:1.0 control_resetn RST", X_INTERFACE_PARAMETER="XIL_INTERFACENAME control_resetn, POLARITY ACTIVE_LOW" *) input wire control_resetn,
  input wire pixel_clk,pixel_resetn,enable,
  input wire [31:0] color_r,color_g,color_b,input wire color_changed,

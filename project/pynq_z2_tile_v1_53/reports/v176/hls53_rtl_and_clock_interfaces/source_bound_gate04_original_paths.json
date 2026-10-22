@@ -1,0 +1,43 @@
+{
+  "scope": "SOURCE_BOUND_OVERLAP_RTL_GATE_NOT_BOARD",
+  "passed": true,
+  "tests": {
+    "queue": {
+      "summary": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v175_queue_rtl02\\summary.json",
+      "sha256": "431abdfb6ed839f4852b11d04e4ea43473d662f01980dd4dc4f33296280e7c1e"
+    },
+    "scheduler": {
+      "summary": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v175_scheduler_rtl01\\summary.json",
+      "sha256": "c5c396c0e22023179766c2198888c289e049cbfe31b210e59cfaf9e1229f86ff"
+    },
+    "writer": {
+      "summary": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v175_writer_rtl01\\summary.json",
+      "sha256": "1f503d6e4958c1c9ab149993a7234f98b4ca818b287a82981a906683700e9302"
+    },
+    "pipeline": {
+      "summary": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v176_pipeline_rtl04\\summary.json",
+      "sha256": "437ef52575b38de59903baf0d4b465c94ee61f6c69bc42023483430e706ada7b"
+    },
+    "video_regs": {
+      "summary": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v176_regs_rtl02\\summary.json",
+      "sha256": "e06f769051c66d6350c50b5f6397feb8e77b0bdf227ef31cb648c1cbed6902f6"
+    },
+    "hpd": {
+      "summary": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v175_hpd_rtl02\\summary.json",
+      "sha256": "8692a6f9f2594d0a7f9939ea63578fade1979a4aae73bf24f032da6280cc90d0"
+    }
+  },
+  "rtl_sources": {
+    "frame_slot_queue.sv": "3fbca1529d9d4a51f594507c6e63eadd175fc4de91789bd99ba209d5d877f2ae",
+    "hdmi_detector_pipeline.v": "f964701a2edc06d24f7c21d474001bc2b484f2645c192816da218a924e7c5f33",
+    "hdmi_hpd_startup.v": "380058313af9bd51ac6b221adbff61176829667ee55a306074ea1a1de2f41f63",
+    "pl_frame_scheduler_overlap.sv": "ae8dfa26ab8c0f128597a57e6ea1d8f26d688a1fc026a00b3ac85924510540d2",
+    "pl_result_latch.sv": "18d804d6540e5b03217733f42b057236b15933339c6a99e5dfdae506f311f13f",
+    "roi_ddr_writer.sv": "dfb9f8d1c0b2b8fa71b1bdacf66d5b9c9f1f53433255ba2eba77d149385281ea",
+    "video_alarm_border.v": "0e37098da62f642cd0af8c999565e4f6946728c58e4f07b890eaafc6e4fd90a7",
+    "video_capture_link.sv": "3a70a209bea5be6e3803d43b44017ccd259e5dc3740f582b05a734d5cbe7c1f3",
+    "video_color_correct.sv": "79d70c95ea93088810009d2bd50783e4e30f250913d628256c92a244fa54d97c",
+    "video_regs.v": "74e8d370bb1f95c053f47562528473dbbf533ac907adbc4052d0988fb2c618c9",
+    "video_roi_tokens.sv": "9df98d2bc60bf313fb7372c2c6c989c4303fe48c01d1240708a086537dcaec1b"
+  }
+}

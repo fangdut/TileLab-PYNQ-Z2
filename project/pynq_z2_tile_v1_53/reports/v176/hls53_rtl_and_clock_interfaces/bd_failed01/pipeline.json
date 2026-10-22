@@ -1,0 +1,15 @@
+{
+  "scope": "ONE_GUARDED_HIGH_FREQUENCY_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE",
+  "status": "FAILED_NO_PROMOTION",
+  "stages": [
+    {
+      "stage": "whole_hardware",
+      "returncode": 1,
+      "seconds": 40.57800000000134
+    }
+  ],
+  "flash_written": false,
+  "requested_pl_mhz": 125,
+  "board_programmed": false,
+  "error": "[Errno 2] No such file or directory: 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v176_hw01\\\\implementation_status.json'"
+}

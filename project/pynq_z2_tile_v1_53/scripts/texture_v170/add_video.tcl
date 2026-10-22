@@ -2,6 +2,14 @@
 # Called before address assignment. PS is used for one-time DDR/clock setup.
 create_bd_cell -type module -reference hdmi_detector_pipeline pipeline
 create_bd_cell -type module -reference video_regs video_regs
+# RTL modules have legacy100MHz interface annotations. All their control/AXI
+# ports share FCLK0; bind BD metadata to the actual selected clock as well.
+foreach name {pipeline/control_clk video_regs/clk} {
+ set_property CONFIG.FREQ_HZ [expr {int($pl_clock_mhz*1000000)}] [get_bd_pins $name]
+}
+foreach name {pipeline/m_axi_control pipeline/m_axi_capture pipeline/m_axi_result video_regs/s_axi} {
+ set_property CONFIG.FREQ_HZ [expr {int($pl_clock_mhz*1000000)}] [get_bd_intf_pins $name]
+}
 set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {3}] [get_bd_cells control_fabric]
 set result_si 4
 if {$memory_layout eq "split"} {set result_si 2}

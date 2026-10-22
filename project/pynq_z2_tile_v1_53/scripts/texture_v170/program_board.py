@@ -2,11 +2,13 @@
 from pathlib import Path
 import argparse,hashlib,json,secrets,subprocess,zipfile
 from verify_reset import verify
+from verify_clock import verify as verify_clock
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
     p=argparse.ArgumentParser();p.add_argument('--hardware',type=Path,required=True);p.add_argument('--software',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
     if a.out.exists():raise ValueError('Use new evidence directory')
     result=json.loads((a.software/'BUILD_RESULT.json').read_text());status=json.loads((a.hardware/'implementation_status.json').read_text());verify(a.hardware)
+    verify_clock(a.hardware)
     if status['setup_slack_ns']<0 or status['hold_slack_ns']<0 or status['drc_errors']:raise ValueError('Failed timing/DRC')
     elf=a.software/'texture_transport/build/texture_transport.elf'
     for key,file in [('elf_sha256',elf),('xsa_sha256',a.hardware/'system.xsa'),('bit_sha256',a.hardware/'system.bit')]:

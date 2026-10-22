@@ -1,0 +1,42 @@
+{
+  "scope": "SAVED_BD_CLOCK_VALIDATION_NOT_PHYSICAL_OR_BOARD_FREQUENCY_RESULT",
+  "candidate": {
+    "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+    "pl_clock_mhz": 125.0,
+    "axi_clocks_hz": {
+      "pipeline/m_axi_control": 125000000,
+      "pipeline/m_axi_capture": 125000000,
+      "pipeline/m_axi_result": 125000000,
+      "video_regs/s_axi": 125000000
+    },
+    "hpd_delay_seconds": 0.2,
+    "physical_metadata_checked": false,
+    "legacy_axi_derived_from_checked_clock": [],
+    "bd_sha256": "d4865ca037203bd3b43352f6bc4b38bd31b1f5b9a05f6562c48acb5c33e60de9"
+  },
+  "accepted_legacy_compatibility": {
+    "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+    "pl_clock_mhz": 100.0,
+    "axi_clocks_hz": {
+      "pipeline/m_axi_control": 100000000,
+      "pipeline/m_axi_capture": 100000000,
+      "pipeline/m_axi_result": 100000000,
+      "video_regs/s_axi": 100000000
+    },
+    "hpd_delay_seconds": null,
+    "physical_metadata_checked": true,
+    "legacy_axi_derived_from_checked_clock": [
+      "pipeline/m_axi_control",
+      "pipeline/m_axi_capture",
+      "pipeline/m_axi_result",
+      "video_regs/s_axi"
+    ],
+    "bd_sha256": "73755f32a67b67460e516cc6ae78a9dd01409575932e1edea78c16067cce516e"
+  },
+  "unchanged_other_clocks_mhz": {
+    "PCW_ACT_APU_PERIPHERAL_FREQMHZ": "650.000000",
+    "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": "525.000000",
+    "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": "200.000000"
+  },
+  "verifier_sha256": "c7678ac27b069278604b15402eeede19f4c9c24026289b5210537a251eff882d"
+}

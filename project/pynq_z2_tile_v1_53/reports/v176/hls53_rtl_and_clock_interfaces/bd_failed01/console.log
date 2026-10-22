@@ -1,0 +1,153 @@
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Oct 22 10:57:26 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_hardware.tcl} -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 649.262 ; gain = 230.656
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_RealPhotos_20261020/v170_hls53/solution/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+Wrote  : <D:\Vivado\TileLab_RealPhotos_20261020\v176_hw01\texture_v170.srcs\sources_1\bd\system\system.bd> 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconstant:1.0 for the IP type xilinx.com:ip:xlconstant:1.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconstant:1.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+WARNING: [BD 41-1306] The connection to interface pin </identity/gpio_io_i> is being overridden by the user with net <build_id_dout>. This pin will not be connected as a part of interface connection <GPIO>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+CRITICAL WARNING: [BD 41-737] Cannot set the parameter C_EXT_RESET_HIGH on /resets. It is read-only.
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconstant:1.0 for the IP type xilinx.com:ip:xlconstant:1.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconstant:1.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconstant:1.0 for the IP type xilinx.com:ip:xlconstant:1.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconstant:1.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_resetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_resetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_capture' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_capture' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_result' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_result' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'pixel_resetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'pixel_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'pixel_resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'control_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'control_resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'pixel_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'pixel_resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'control_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axi_control'.
+INFO: [IP_Flow 19-4728] Bus Interface 'control_clk': Added interface parameter 'FREQ_HZ' with value '100000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'control_resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'control_clk' has a fixed FREQ_HZ of '100000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+WARNING: [IP_Flow 19-5661] Bus Interface 'pixel_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'pixel_clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'FREQ_HZ' with value '100000000'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-7067] Note that bus interface 'clk' has a fixed FREQ_HZ of '100000000'. This value will be respected whenever this IP is instantiated in IP Integrator.
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'pixel_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'pixel_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'pixel_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'pixel_clk' has no FREQ_HZ parameter.
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pData> is being overridden by the user with net <hdmi_rx_vid_pData>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pVDE> is being overridden by the user with net <hdmi_rx_vid_pVDE>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pVSync> is being overridden by the user with net <hdmi_rx_vid_pVSync>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pHSync> is being overridden by the user with net <hdmi_rx_vid_pHSync>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pData> is being overridden by the user with net <border_rgb_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pVDE> is being overridden by the user with net <border_de_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pHSync> is being overridden by the user with net <border_hs_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pVSync> is being overridden by the user with net <border_vs_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Clk_p> is being overridden by the user with net <hdmi_in_clk_p_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Clk_n> is being overridden by the user with net <hdmi_in_clk_n_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Data_p> is being overridden by the user with net <hdmi_in_data_p_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Data_n> is being overridden by the user with net <hdmi_in_data_n_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Clk_p> is being overridden by the user with net <hdmi_tx_TMDS_Clk_p>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Clk_n> is being overridden by the user with net <hdmi_tx_TMDS_Clk_n>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Data_p> is being overridden by the user with net <hdmi_tx_TMDS_Data_p>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Data_n> is being overridden by the user with net <hdmi_tx_TMDS_Data_n>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "spirit:ceil(spirit:log(2,(spirit:decode(id('MODELPARAM_VALUE.STARTUP_CYCLES')) + 1)))" into user parameter "COUNTER_BITS".
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/ps7/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_inputmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_modelmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_outmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_workmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/pipeline/m_axi_result' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP1/HP1_DDR_LOWOCM' is being assigned into address space '/pipeline/m_axi_capture' at <0x0000_0000 [ 512M ]>.
+Slave segment '/video_regs/s_axi/reg0' is being assigned into address space '/ps7/Data' at <0x4000_0000 [ 4K ]>.
+Slave segment '/video_regs/s_axi/reg0' is being assigned into address space '/pipeline/m_axi_control' at <0x4000_0000 [ 4K ]>.
+Slave segment '/identity/S_AXI/Reg' is being assigned into address space '/ps7/Data' at <0x4001_0000 [ 64K ]>.
+Slave segment '/identity/S_AXI/Reg' is being assigned into address space '/pipeline/m_axi_control' at <0x4001_0000 [ 64K ]>.
+Slave segment '/infer/s_axi_control/Reg' is being assigned into address space '/ps7/Data' at <0x4002_0000 [ 64K ]>.
+Slave segment '/infer/s_axi_control/Reg' is being assigned into address space '/pipeline/m_axi_control' at <0x4002_0000 [ 64K ]>.
+WARNING: [BD 41-3281] Instance '/ps7' is connected on both sides by SmartConnects and cannot automatically configure itself to match the endpoints. Please manually configure its AXI interfaces as required for the design.
+WARNING: [BD 41-3281] Instance '/pipeline' is connected on both sides by SmartConnects and cannot automatically configure itself to match the endpoints. Please manually configure its AXI interfaces as required for the design.
+WARNING: [BD 41-3281] Instance '/infer' is connected on both sides by SmartConnects and cannot automatically configure itself to match the endpoints. Please manually configure its AXI interfaces as required for the design.
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] system_control_fabric_0: The device(s) attached to /M02_AXI do not share a common clock frequency with this smartconnect instance. Modify the clock frequency values of the attached device(s) or re-customize this AXI SmartConnect instance to add a new clock pin and connect it to the same clock source of the IP attached to /M02_AXI to prevent further clock DRC violations.
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] system_control_fabric_0: The device(s) attached to /S01_AXI do not share a common clock frequency with this smartconnect instance. Modify the clock frequency values of the attached device(s) or re-customize this AXI SmartConnect instance to add a new clock pin and connect it to the same clock source of the IP attached to /S01_AXI to prevent further clock DRC violations.
+INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/control_fabric/S00_AXI' to master interface '/control_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C1_0000 [ 64K ]> from slave interface '/control_fabric/S00_AXI' to master interface '/control_fabric/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C2_0000 [ 4K ]> from slave interface '/control_fabric/S00_AXI' to master interface '/control_fabric/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/control_fabric/S01_AXI' to master interface '/control_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C1_0000 [ 64K ]> from slave interface '/control_fabric/S01_AXI' to master interface '/control_fabric/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C2_0000 [ 4K ]> from slave interface '/control_fabric/S01_AXI' to master interface '/control_fabric/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_control_fabric_0: SmartConnect system_control_fabric_0 is in Low-Area Mode.
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] system_memory_fabric_0: The device(s) attached to /S04_AXI do not share a common clock frequency with this smartconnect instance. Modify the clock frequency values of the attached device(s) or re-customize this AXI SmartConnect instance to add a new clock pin and connect it to the same clock source of the IP attached to /S04_AXI to prevent further clock DRC violations.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S00_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S01_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S02_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S03_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S04_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_memory_fabric_0: SmartConnect system_memory_fabric_0 is in High-performance Mode.
+CRITICAL WARNING: [xilinx.com:ip:smartconnect:1.0-1] system_capture_fabric_0: The device(s) attached to /S00_AXI do not share a common clock frequency with this smartconnect instance. Modify the clock frequency values of the attached device(s) or re-customize this AXI SmartConnect instance to add a new clock pin and connect it to the same clock source of the IP attached to /S00_AXI to prevent further clock DRC violations.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/capture_fabric/S00_AXI' to master interface '/capture_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_capture_fabric_0: SmartConnect system_capture_fabric_0 is in High-performance Mode.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /video_regs/s_axi(100000000) and /control_fabric/M02_AXI(125000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /control_fabric/S01_AXI(125000000) and /pipeline/m_axi_control(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /capture_fabric/S00_AXI(125000000) and /pipeline/m_axi_capture(100000000)
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /memory_fabric/S04_AXI(125000000) and /pipeline/m_axi_result(100000000)
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /pipeline/control_clk(100000000) and /ps7/FCLK_CLK0(125000000)
+ERROR: [BD 41-238] Port/Pin property FREQ_HZ does not match between /video_regs/clk(100000000) and /ps7/FCLK_CLK0(125000000)
+validate_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 986.047 ; gain = 212.695
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+
+    while executing
+"validate_bd_design"
+    (file "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_hardware.tcl" line 155)
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 22 10:58:05 2026...

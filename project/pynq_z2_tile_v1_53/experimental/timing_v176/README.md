@@ -21,13 +21,27 @@ it does not run RTL, export a deployable IP, program hardware or prove125MHz.
 HLS52 estimates8.207ns/121.85MHz, which misses125MHz. All loop constraints pass;
 16 accumulator banks read at stage23 and write32, before the next32-slot read.
 Estimated resources:219DSP/251BRAM18/66568LUT/67028FF. These are not actual
-Vivado resource measurements. Source-identical HLS53 is running the full RTL/IP flow.
+Vivado resource measurements. Source-identical HLS53 passes both complete reduced
+fixture RTL launches at617699/617707cycles and exports IP. This fixture takes
+2.47% more cycles than HLS39; its8ns simulation period is not an achieved board clock.
 
 build_candidate.py --clock-mhz125 requires an HLS target period at most8ns,
 and the hardware export checks the actual Vivado PL clock period. The old10ns
 HLS39 request at125MHz is rejected before launching Vivado. HPD startup is
 scaled with the chosen100/125MHz clock to retain200ms. Existing100MHz defaults
 and accepted compiled artifacts remain unchanged.
+
+HW01/02 stop before synthesis because fixed100MHz RTL interface annotations
+overrule BD properties. The current metadata removes that fixed input frequency;
+BD binds clock and all AXI interfaces to the selected FCLK0. Affected pipeline
+and CSR RTL tests pass again; current11HDL files are bound by Gate04.
+HW03 passes the saved125MHz clock/AXI configuration check and is synthesizing.
+verify_clock.py also checks actual FCLK0 connectivity and200msHPD configuration,
+and checks matching physical/HLS timing metadata before software/program/package.
+Its scope is saved configuration, not a measurement of a running board clock.
+
+Module interface reference:
+https://docs.amd.com/r/2022.2-English/ug994-vivado-ip-subsystems/Inferring-Control-Signals-in-a-RTL-Module
 
 Next gates: full117 exact output files, synthesized capacities/recurrences,
 resource synthesis, two retained-fixture RTL launches, complete HDMI physical

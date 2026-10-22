@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse,hashlib,json,re,shutil,zipfile
 from verify_reset import verify
 from verify_video import verify as verify_video,verify_bus_skew_report
+from verify_clock import verify as verify_clock
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
@@ -23,6 +24,7 @@ def main():
         raise ValueError('Physical HDMI accuracy/ownership proof failed')
     if direct['cases']!=117 or not direct['all_integer_outputs_exact']:raise ValueError('Full direct numerical regression required')
     verify(a.hardware);verify_video(a.hardware);verify_bus_skew_report(a.hardware/'bus_skew.rpt')
+    verify_clock(a.hardware)
     status=read(a.hardware/'implementation_status.json')
     if status['setup_slack_ns']<0 or status['hold_slack_ns']<0 or status['drc_errors']:raise ValueError('Physical timing/DRC failed')
     source=a.hls/'src/texture_integer.cpp'

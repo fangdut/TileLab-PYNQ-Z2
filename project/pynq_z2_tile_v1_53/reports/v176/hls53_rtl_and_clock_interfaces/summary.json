@@ -1,0 +1,39 @@
+{
+  "scope": "SOURCE_BOUND_REDUCED_FIXTURE_RTL_PASS_NOT_BOARD_OR_FPS",
+  "source_sha256": "ac5fc543b2e633e0abfb6e0e76f00587ad18d0e9120b6a3341c2077a42ad6896",
+  "all117_full_c_outputs_exact": true,
+  "rtl_launch_cycles": [
+    617699,
+    617707
+  ],
+  "fixture": "Same79x65/internal80/nine-task fixture as HLS39; not full47-task production throughput",
+  "estimated_125mhz_target_met": false,
+  "actual_fpga_clock_verified": false,
+  "new_board_programmed": false,
+  "export_zip_sha256": "19f96f2bb793689da825b016cd02314ce7b55a02f4422694b46e810d9a1732bd",
+  "source_bound_video_gate_sha256": "4ad6f9c56709b0a7c890ec859342a1c8ee01d152fbcd6601204a709467f8c502",
+  "bd_failures": "HW01 andHW02 rejected fixed100MHz module clock annotations before synthesis; no programming",
+  "metadata_fix": "Remove fixed input-clock HDL FREQ_HZ and set BD clock/bus metadata from selected FCLK0; associations and all timing checks retained",
+  "metadata_reference": "https://docs.amd.com/r/2022.2-English/ug994-vivado-ip-subsystems/Inferring-Control-Signals-in-a-RTL-Module",
+  "hw03_status": "SAVED_BD_125MHZ_CLOCK_AXI_CONFIGURATION_PASS_SYNTHESIS_RUNNING_NOT_TIMING_OR_BOARD",
+  "files": {
+    "clock_configuration.json": "cd3e639baeba1b71990c0380882e6a6c9fc3c70c23bbb5e188daf72e78664ac3",
+    "cosim.rpt": "6ddf7cb8e4803753dd5a836e27c25fb54e185d5f142d7d09a3d576823552a77f",
+    "mac_recurrence.json": "021b8c39ee8833f965cbaf3f248a828213fc8a4de206a8dfe4b7e670caa6746e",
+    "source_bound_gate04_original_paths.json": "4ad6f9c56709b0a7c890ec859342a1c8ee01d152fbcd6601204a709467f8c502",
+    "bd_failed01/candidate_preflight.json": "6f4482719ba3fb0128785930b5caa5bfd3dbbe6970406d9eacd654a4e80d1950",
+    "bd_failed01/console.log": "335d94763a129fbafcbbf988b239deeab27c87a3be77ae70202348f476e03f53",
+    "bd_failed01/pipeline.json": "31f96aa96f66ebbca67f8fa1ecd70b50b4e120e9c1c24d844db6f3801107f704",
+    "bd_failed02/candidate_preflight.json": "6f4482719ba3fb0128785930b5caa5bfd3dbbe6970406d9eacd654a4e80d1950",
+    "bd_failed02/console.log": "67b35d3459731a84d53d90832d3bbc7977cbee9f13c03f6be197e1cab1b93e96",
+    "bd_failed02/pipeline.json": "f3d2a9c75439ce4067c5e05c4facc50acfe725ffe347440a5685551a5a76b1f2",
+    "pipeline/summary.json": "437ef52575b38de59903baf0d4b465c94ee61f6c69bc42023483430e706ada7b",
+    "pipeline/xelab.log": "c05ce5b8c28fd6352aab034267c76419b3c032f1093832795dd56db8b3dd50e7",
+    "pipeline/xsim.log": "dcb8f007ddfe772f076289c8ae08a7ca5c6fb7804f0451b90a60415784ed94d8",
+    "pipeline/xvlog.log": "8cffea89bfde70cfab2b1a179e24de6c6c0bdc999f633fc8f12a328ed71a4628",
+    "video_regs/summary.json": "e06f769051c66d6350c50b5f6397feb8e77b0bdf227ef31cb648c1cbed6902f6",
+    "video_regs/xelab.log": "fcf826d10e9c64653a4954bbf724272ea6e307905efaf932d7deec649f0a3d9f",
+    "video_regs/xsim.log": "a785758e96e0ba0c842dbfc8ae509850f8db9a53fef25d89f5f203317eb92259",
+    "video_regs/xvlog.log": "823fd175ab1d0f9d22ed8d958f4e352d79f992747c8bc1f33ea20edb95c4b3f5"
+  }
+}
