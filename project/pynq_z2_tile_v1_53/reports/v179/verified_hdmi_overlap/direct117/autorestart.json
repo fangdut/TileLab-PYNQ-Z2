@@ -1,0 +1,20 @@
+{
+  "scope": "PHYSICAL_PL_AUTORESTART_FIXED_FRAME_MICROBENCHMARK",
+  "frames": 33,
+  "requested": 32,
+  "first_sequence": 117,
+  "last_sequence": 150,
+  "elapsed_engine_seconds": 4.114135686153846,
+  "sustained_pl_fps": 8.021125825057677,
+  "wall_seconds": 4.137300700000196,
+  "arm_start_writes": 1,
+  "hardware_auto_restart": true,
+  "new_video_frames": false,
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "source_rgb_crc32": 1867345702,
+  "boot_identity": 1363500809,
+  "pl_identity": 385875969,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "limitation": "Repeated fixed DDR frame; not continuous HDMI/video end-to-end throughput"
+}

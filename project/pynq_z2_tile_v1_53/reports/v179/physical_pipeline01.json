@@ -1,0 +1,196 @@
+{
+  "scope": "GUARDED_SOURCE_BOUND_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE",
+  "status": "EXPERIMENT_COMPLETE_REVIEW_ACTUAL_SPEED_BEFORE_PROMOTION",
+  "stages": [
+    {
+      "stage": "hardware",
+      "returncode": 0,
+      "seconds": 1483.0149999999994,
+      "log": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_physical_pipeline01_hardware.log"
+    },
+    {
+      "stage": "board",
+      "returncode": 0,
+      "seconds": 642.4069999999992,
+      "log": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_physical_pipeline01_board.log"
+    },
+    {
+      "stage": "report",
+      "returncode": 0,
+      "seconds": 0.125,
+      "log": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_physical_pipeline01_report.log"
+    }
+  ],
+  "requested_pl_clock_mhz": 100,
+  "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls62",
+  "regression": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_all_c05",
+  "flash_written": false,
+  "board_programmed": true,
+  "numerical_preflight": {
+    "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+    "source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "c_regression_summary_sha256": "5859482e2a6848a32cb86a4b50048ff5a8da996348311dcd7a094fe4430fc853",
+    "rtl_cosim_sha256": "59b428b8d44373a852249465d1f8911de4f67ce62e032a39bd64a728c035b0e3",
+    "hls_dsp": 214,
+    "hls_bram18": 251,
+    "mac_recurrence": {
+      "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+      "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls62",
+      "source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+      "rtl_sha256": "8bf0f5680f5dac0f6866bfb11a596de34573fc790ddac488c57a14492f209cdd",
+      "slots": 32,
+      "minimum_reuse_iterations": 16,
+      "banks": [
+        {
+          "bank": "acc",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_1",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_10",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_11",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_12",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_13",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_14",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_15",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_2",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_3",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_4",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_5",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_6",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_7",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_8",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_9",
+          "read_stage": 9,
+          "write_stage": 18,
+          "write_minus_read": 9,
+          "safe_before_next_read": true
+        }
+      ],
+      "all_banks_safe": true,
+      "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively. Allocated RAM depth alone is insufficient when DW uses a shorter logical span."
+    },
+    "direct_cache_bounds": null,
+    "spatial_coordinate_bounds": {
+      "scope": "MODEL_BOUND_SPATIAL_COORDINATE_PROOF_NOT_RTL_OR_FPS",
+      "passed": true,
+      "source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "binary_descriptors_checked": 47,
+      "standard3x3_layers": [
+        {
+          "step": 1,
+          "input_channels": 3,
+          "output_channels": 32
+        }
+      ],
+      "depthwise3x3_steps": [
+        2,
+        5,
+        8,
+        12,
+        15,
+        19,
+        23,
+        26,
+        30,
+        34,
+        38,
+        41,
+        45
+      ],
+      "standard3x3_input_channel_limit": 8,
+      "all_nine_kernel_positions_exact": true,
+      "unsupported_standard3x3_has_runtime_error_guard": true
+    },
+    "centered_packing_weights": null
+  }
+}

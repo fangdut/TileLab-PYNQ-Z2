@@ -1,0 +1,176 @@
+{
+  "scope": "PHYSICAL_REAL_PHOTO_HDMI_DEVELOPMENT_ACCEPTANCE_NOT_FINAL_COMPETITION",
+  "video_variant": "overlap_v175",
+  "boot_identity": 1363500809,
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "kernel_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+  "bit_sha256": "38936ea6894b7393db56f9c0cf11bf6abbe1351af80dc6149fafd402d17c3e07",
+  "xsa_sha256": "93f75a35058eb82fa8a4d3a6db7f115e40e195a207c1df637ee5ecf985fbe184",
+  "elf_sha256": "8f9cf94ed91eaf3380ec6591bd1f286e8c1379d8afa493abe86429c09a104370",
+  "threshold": 10908,
+  "model_changed": false,
+  "threshold_changed": false,
+  "runtime_detection": "FPGA only",
+  "arm_halt_checks": 119,
+  "cpu_per_frame_start_writes": 0,
+  "cases": 117,
+  "normal_false_alarms": 0,
+  "normal_images": 33,
+  "anomalies_detected": 84,
+  "anomalies": 84,
+  "cracks_detected": 17,
+  "cracks": 17,
+  "continuous_hdmi_fps": 8.169552657504967,
+  "continuous_seconds": 239.548,
+  "continuous_frames": 1957,
+  "fixed_frame_fps": 8.021125825057677,
+  "previous_v173_r2_hdmi_fps": 6.665889850087794,
+  "hdmi_fps_improvement_fraction": 0.22557570575477914,
+  "physical_input_identity": {
+    "identity_gray": {
+      "input_base": 104857600,
+      "rgb_crc32": 3004692568,
+      "capture_sequence": 5745,
+      "pl_sequence": 194,
+      "pl_image_alarm": 1
+    },
+    "good": {
+      "input_base": 109051904,
+      "rgb_crc32": 1294985054,
+      "capture_sequence": 8367,
+      "pl_sequence": 238,
+      "pl_image_alarm": 0
+    },
+    "crack": {
+      "input_base": 104857600,
+      "rgb_crc32": 3303937739,
+      "capture_sequence": 11253,
+      "pl_sequence": 282,
+      "pl_image_alarm": 1
+    }
+  },
+  "benchmark_is_blind": false,
+  "ten_fps_passed": false,
+  "competition_final_acceptance": false,
+  "clock_proof": {
+    "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+    "pl_clock_mhz": 100.0,
+    "axi_clocks_hz": {
+      "pipeline/m_axi_control": 100000000,
+      "pipeline/m_axi_capture": 100000000,
+      "pipeline/m_axi_result": 100000000,
+      "video_regs/s_axi": 100000000
+    },
+    "hpd_delay_seconds": 0.2,
+    "physical_metadata_checked": true,
+    "legacy_axi_derived_from_checked_clock": [],
+    "bd_sha256": "c600266f93f6b464c96010f2959b814101243cf23b8609da6841234c3347e16a"
+  },
+  "memory_layout_proof": {
+    "scope": "SAVED_BD_DDR_CONNECTIVITY_NOT_THROUGHPUT",
+    "memory_layout": "shared",
+    "video": true,
+    "checked_interface_pairs": [
+      [
+        "infer/m_axi_modelmem",
+        "memory_fabric/S00_AXI"
+      ],
+      [
+        "infer/m_axi_workmem",
+        "memory_fabric/S01_AXI"
+      ],
+      [
+        "infer/m_axi_inputmem",
+        "memory_fabric/S02_AXI"
+      ],
+      [
+        "infer/m_axi_outmem",
+        "memory_fabric/S03_AXI"
+      ],
+      [
+        "memory_fabric/M00_AXI",
+        "ps7/S_AXI_HP0"
+      ],
+      [
+        "pipeline/m_axi_result",
+        "memory_fabric/S04_AXI"
+      ],
+      [
+        "capture_fabric/M00_AXI",
+        "ps7/S_AXI_HP1"
+      ]
+    ],
+    "enabled_hp_ports": [
+      0,
+      1
+    ],
+    "clock_ports": [
+      "infer/ap_clk",
+      "memory_fabric/aclk",
+      "ps7/S_AXI_HP0_ACLK",
+      "ps7/S_AXI_HP1_ACLK",
+      "capture_fabric/aclk"
+    ],
+    "bd_sha256": "c600266f93f6b464c96010f2959b814101243cf23b8609da6841234c3347e16a"
+  },
+  "local_readable_report": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_acceptance01\\report.html",
+  "report_sha256": "213196120ca2481eed79176ea704ec35c24448a57d08d462190a4dae3ebc486e",
+  "source_status_read_retries": 3,
+  "files": {
+    "color_profile.json": "2af9c6fdea680f18730b74f5bf108aa5c1d9321868014b7770e8f13efef76ba3",
+    "iteration.json": "8e7322f5a0c9f596225818420dddb721a5dacf79181202ddab6265901aedb8d7",
+    "program_identity.json": "50c8e4b85879b405fbacc669706355c24f7866796769a965b3dd090905f39d9a",
+    "crack/independent_reference_audit.json": "798a95444f7563f80ed6b6500104a344c58c763c9fd35e1dcfb639d777a0ee38",
+    "direct117/autorestart.json": "6470e6eaa607ff61f89c8203d9f50f6596e5c9e11f50acdea047f2433474e54e",
+    "direct117/plan.json": "8f55b1709bb2185f7c4582ff1374a2d94540f75abac1875e4364f23921314e2d",
+    "direct117/results.json": "9591eba12a5ca5ebe35e5ddd1e3e0126f32290738d3a9631d4270d11eff82632",
+    "direct117/summary.json": "0b601d905ff4cec54451e5b1cdff12d5496f34d437e6b48cefef6c230e7bb3b0",
+    "good/independent_reference_audit.json": "af68c3ea89f0a8a42c940b3449aa4641db1dd0754203e3edafda894710ba0ca8",
+    "hardware/bus_skew.rpt": "087943da8e1955fe929e2e4fc8a0e69e7e697d52a7c7efda985f74ee8b946a4f",
+    "hardware/candidate_preflight.json": "abf729cf4e4a37ea0ca3a11bd5d90514d366b7619294c05a5a0b5af48ec2eabc",
+    "hardware/clocks.rpt": "f697c83969da8c14e5d79c726623763505119a67ef452c3d880149e09088de21",
+    "hardware/drc.rpt": "2dbf63eb0ff69231d7d04e9a1fb06e1922b806cb10ee281badc6ddbf6605d3bb",
+    "hardware/implementation_status.json": "42038cf54c0f6ec7fca780a90aa6e1ce0b8df933600345524b8cfb36fa19b70b",
+    "hardware/optimization_strategy.json": "70e885360086b6585d122fe1a6376e544fc308e598800f7859d3bb55e6b9233a",
+    "hardware/rtl_snapshot_hashes.json": "1d12b1c6a71d1113bbf6ef49f755c00ba7e6ac2ca90da101170f40ae616cab86",
+    "hardware/timing_summary.rpt": "fa1df8097c23583107b854d99055cf19ee2940633f4fa8ef7097eab84827b2db",
+    "hardware/utilization.rpt": "0da1e69af6cb71becb925de6d6557ed7ed229aa99f333c134d3a5e6a96d688d2",
+    "hardware/video_cdc.rpt": "4b03a3312ab9d965b7938a3e3d477a34dc77fe8a497e343799da9951d47a7e55",
+    "hdmi117/experiment.log": "ac0d132c36d038190fc6b96c35f5aa8ba3bbf4cde469fe7b1666b68a82f97e9b",
+    "hdmi117/experiment.tcl": "5906b2468ac4ba267e8d40d51b013f6130c6c226707c49453501b7a34538f2c9",
+    "hdmi117/plan.json": "7d435bd53d7bf894f97ec6a875775535fa19778b0fae7caf83beef6947483274",
+    "hdmi117/results.json": "6672759c486956e9020bb020a0461c1027d8eda7101dbd5fa3105554d2ef5156",
+    "hdmi117/source_statuses.json": "1947cad20d53fccfbd0a0f6d0d635696a66c263c5992130dc7d31f8d0d78420f",
+    "hdmi117/summary.json": "8669237c97e4d61ba51f7f3986f5ac5bab48f757ea0a2c57139a6e8401e3618e",
+    "crack/live/control.log": "c254f1677062231e31bcbf0c0feb86b4d866c22ca6b18841a2de61dfd9f12488",
+    "crack/live/control.tcl": "ee195bd323076b86205c70be84a5826e6938af4a047efcd27953cbfbb7bbc098",
+    "crack/live/report.json": "e86745e89cf368cf242ff4244a9fe69cce00ea2409cc278d6bcdd470772ce650",
+    "crack/live/samples.json": "4a94202f923b56297a9354e260d41af0b2594e3647b31d9119aac82046d42e1c",
+    "crack/snapshot/actual_hdmi_input.png": "28472b631d336848e002d56164186f59461031cddb9d1e6df5035c46230859b0",
+    "crack/snapshot/actual_pl_mask.png": "d449b3c601e936463adaaec550a0177ce3e35117c1200f6b88673161b0524044",
+    "crack/snapshot/actual_pl_overlay.png": "79752de76ac0f7ce18c4374c5c417b6246b6199027cb0d059665442ffaea3881",
+    "crack/snapshot/evidence.json": "00709f28fc8fd4eee4fb454e922691eb6c66643562f26c1fb605b0346c5cada7",
+    "crack/snapshot/snapshot.log": "52e072b9bc63821165393c1b3df347b518b76183f6c57a5cc21447c2c64e0f33",
+    "crack/snapshot/snapshot.tcl": "85f0f3f5bb44dc70bdc8b96324d7dff7fb1eb8dea044ae5439049ae323e81166",
+    "good/live/control.log": "17c616388984d585e4fe2307b2a4bdaa705ee56793ffa473cfc84cc63aa5e0e3",
+    "good/live/control.tcl": "ee195bd323076b86205c70be84a5826e6938af4a047efcd27953cbfbb7bbc098",
+    "good/live/report.json": "859682bd49fc590e6d2176d5e6c9d522d961d4c0fbdb45df48a4386fa5dd4e23",
+    "good/live/samples.json": "656c08f536e6c90e9a893c5f71c31ace5ea6a2274dd9e6e8b069a5c142ed4beb",
+    "good/snapshot/actual_hdmi_input.png": "62269b73b8976b6741a2dda03129b536c54d0e6d0abb372f3be4843f1e50939f",
+    "good/snapshot/actual_pl_mask.png": "fe96ea90f8d82f907079dc63810ffea11158dd2b9b257b80bce4fd46eb79b3ea",
+    "good/snapshot/actual_pl_overlay.png": "62269b73b8976b6741a2dda03129b536c54d0e6d0abb372f3be4843f1e50939f",
+    "good/snapshot/evidence.json": "5e36db237c879cf815df5b6cebf62df10139004c05ff6b20bbcd01dd7a0f9e04",
+    "good/snapshot/snapshot.log": "6e19d30615cfe5fb332ebe1762404ba12d9e4031ee51b2ce34c72bf6d2eb68fb",
+    "good/snapshot/snapshot.tcl": "e7ec858778300397d7205ac885bc6401aa8ed6b57e0ac9070a92ffe371d40c15",
+    "identity_gray/live/control.log": "c28fe9bf726841cd47eeba3af8bde0fb58469b05a1957219312560e74e69ccb5",
+    "identity_gray/live/control.tcl": "8dea119490f58861c6224b960591d31dad7e44e6b28c9d6119d543986983f6e8",
+    "identity_gray/live/report.json": "0e4df67cf2ac9b66b3dee8153a6a27aa45cfe68021bf57e091dd2fc411466c5b",
+    "identity_gray/live/samples.json": "ec1ce495ff91c56154bc138da6c57d93be0e240ab3dec746d6b6288bf9ea2148",
+    "identity_gray/snapshot/actual_hdmi_input.png": "6bc5a3bec7327e021a9b56eb18b07b0efe7adcf97b2eceecc192b68cf667b4eb",
+    "identity_gray/snapshot/actual_pl_mask.png": "2b983fda231828ce745679917648e8fda12a3d4e77a0bb33367860a5db6d724e",
+    "identity_gray/snapshot/actual_pl_overlay.png": "bc28bd44d47a03cde45918c49a2c7e6bbfae44ebf880eb270ef6a90b790d3633",
+    "identity_gray/snapshot/evidence.json": "4dee7c01c78614ee2bdd40addfe530708d32b1a8ff35d8350e8243a7dffc617c",
+    "identity_gray/snapshot/snapshot.log": "b478ba698370bfd2a3ac348f7e7181fd0979586a95e812fcdc22192527091bc5",
+    "identity_gray/snapshot/snapshot.tcl": "9d9aa4d0a1101c388cede0966889edb57f62a9736c153b4cf557bead0dac7c53"
+  }
+}

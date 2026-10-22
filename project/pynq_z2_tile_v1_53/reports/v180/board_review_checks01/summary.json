@@ -1,0 +1,57 @@
+{
+  "scope": "PHYSICAL_REVIEW_POSITIVE_AND_MUTATED_NEGATIVE_FIXTURES_NOT_NEW_BOARD_RUN",
+  "passed": true,
+  "positive": [
+    {
+      "scope": "PHYSICAL_RESULT_REVIEW_NOT_RELEASE_PROMOTION",
+      "fixed_frame_fps": 7.538924664782664,
+      "continuous_hdmi_fps": 6.665889850087794,
+      "continuous_seconds": 248.879,
+      "ten_fps_over_complete_series": false,
+      "benchmark_is_blind": false,
+      "competition_final_acceptance": false
+    },
+    {
+      "scope": "PHYSICAL_RESULT_REVIEW_NOT_RELEASE_PROMOTION",
+      "fixed_frame_fps": 8.021125825057677,
+      "continuous_hdmi_fps": 8.169552657504967,
+      "continuous_seconds": 239.548,
+      "ten_fps_over_complete_series": false,
+      "benchmark_is_blind": false,
+      "competition_final_acceptance": false
+    }
+  ],
+  "negative": [
+    {
+      "case": "helper_returned_zero_but_accuracy_failed",
+      "rejected": true,
+      "error": "Board accuracy stage did not pass"
+    },
+    {
+      "case": "normal_false_alarm",
+      "rejected": true,
+      "error": "Physical photo classification regression"
+    },
+    {
+      "case": "arm_running",
+      "rejected": true,
+      "error": "Autonomous PL runtime proof incomplete"
+    },
+    {
+      "case": "cpu_frame_start",
+      "rejected": true,
+      "error": "Autonomous PL runtime proof incomplete"
+    },
+    {
+      "case": "stale_input",
+      "rejected": true,
+      "error": "Full source-bound continuous photo series incomplete"
+    },
+    {
+      "case": "wrong_fps",
+      "rejected": true,
+      "error": "Continuous FPS disagrees with measured counters/time"
+    }
+  ],
+  "reviewer_source_sha256": "788cc77d793190e873895610454d0713919ae22701f60d550ccb19b3e640154e"
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "PHYSICAL_V170_FULL_INTEGER_PL",
+  "cases": 117,
+  "all_integer_outputs_exact": true,
+  "correct": 117,
+  "anomalies_detected": 84,
+  "anomalies": 84,
+  "normal_false_alarms": 0,
+  "normal_images": 33,
+  "cracks_detected": 17,
+  "engine_mean_seconds": 0.12473055066403681,
+  "engine_p95_seconds": 0.12475979569230769,
+  "inverse_mean_engine_fps": 8.017282010511696,
+  "validation_wall_seconds": 86.05095920000167,
+  "benchmark_is_blind": false,
+  "continuous_video_verified": false,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "autorestart_fixed_frame_fps": 8.021125825057677
+}

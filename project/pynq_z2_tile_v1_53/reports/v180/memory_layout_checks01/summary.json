@@ -1,0 +1,137 @@
+{
+  "scope": "READ_ONLY_BD_CHECKER_POSITIVE_AND_NEGATIVE_FIXTURES_NOT_NEW_HARDWARE",
+  "passed": true,
+  "positive": [
+    {
+      "scope": "SAVED_BD_DDR_CONNECTIVITY_NOT_THROUGHPUT",
+      "memory_layout": "shared",
+      "video": true,
+      "checked_interface_pairs": [
+        [
+          "infer/m_axi_modelmem",
+          "memory_fabric/S00_AXI"
+        ],
+        [
+          "infer/m_axi_workmem",
+          "memory_fabric/S01_AXI"
+        ],
+        [
+          "infer/m_axi_inputmem",
+          "memory_fabric/S02_AXI"
+        ],
+        [
+          "infer/m_axi_outmem",
+          "memory_fabric/S03_AXI"
+        ],
+        [
+          "memory_fabric/M00_AXI",
+          "ps7/S_AXI_HP0"
+        ],
+        [
+          "pipeline/m_axi_result",
+          "memory_fabric/S04_AXI"
+        ],
+        [
+          "capture_fabric/M00_AXI",
+          "ps7/S_AXI_HP1"
+        ]
+      ],
+      "enabled_hp_ports": [
+        0,
+        1
+      ],
+      "clock_ports": [
+        "infer/ap_clk",
+        "memory_fabric/aclk",
+        "ps7/S_AXI_HP0_ACLK",
+        "ps7/S_AXI_HP1_ACLK",
+        "capture_fabric/aclk"
+      ],
+      "bd_sha256": "c600266f93f6b464c96010f2959b814101243cf23b8609da6841234c3347e16a"
+    },
+    {
+      "scope": "SAVED_BD_DDR_CONNECTIVITY_NOT_THROUGHPUT",
+      "memory_layout": "split",
+      "video": true,
+      "checked_interface_pairs": [
+        [
+          "infer/m_axi_workmem",
+          "work_fabric/S00_AXI"
+        ],
+        [
+          "work_fabric/M00_AXI",
+          "ps7/S_AXI_HP0"
+        ],
+        [
+          "infer/m_axi_modelmem",
+          "model_fabric/S00_AXI"
+        ],
+        [
+          "model_fabric/M00_AXI",
+          "ps7/S_AXI_HP2"
+        ],
+        [
+          "infer/m_axi_inputmem",
+          "memory_fabric/S00_AXI"
+        ],
+        [
+          "infer/m_axi_outmem",
+          "memory_fabric/S01_AXI"
+        ],
+        [
+          "memory_fabric/M00_AXI",
+          "ps7/S_AXI_HP3"
+        ],
+        [
+          "pipeline/m_axi_result",
+          "memory_fabric/S02_AXI"
+        ],
+        [
+          "capture_fabric/M00_AXI",
+          "ps7/S_AXI_HP1"
+        ]
+      ],
+      "enabled_hp_ports": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_ports": [
+        "infer/ap_clk",
+        "memory_fabric/aclk",
+        "ps7/S_AXI_HP0_ACLK",
+        "ps7/S_AXI_HP2_ACLK",
+        "ps7/S_AXI_HP3_ACLK",
+        "ps7/S_AXI_HP1_ACLK",
+        "work_fabric/aclk",
+        "model_fabric/aclk",
+        "capture_fabric/aclk"
+      ],
+      "bd_sha256": "eff7b1cd7e009fb1bd5b1f125b733c74a282ccf515986ece9a8e47b228f40ccb"
+    }
+  ],
+  "negative": [
+    {
+      "case": "wrong_hp",
+      "rejected": true,
+      "error": "DDR connection mismatch: memory_fabric/M00_AXI -> ps7/S_AXI_HP0"
+    },
+    {
+      "case": "wrong_clock",
+      "rejected": true,
+      "error": "DDR port not on actual FCLK0 net: ps7/S_AXI_HP0_ACLK"
+    },
+    {
+      "case": "wrong_master_count",
+      "rejected": true,
+      "error": "DDR master count disagrees with connected clients"
+    },
+    {
+      "case": "requested_split_but_shared",
+      "rejected": true,
+      "error": "Saved DDR layout differs from requested layout"
+    }
+  ],
+  "checker_sha256": "859a9b4a1b243d2501018d2db69e3cba65d5fb7b829e430ca7dce6df98e80bbd"
+}

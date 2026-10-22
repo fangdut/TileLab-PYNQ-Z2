@@ -20,9 +20,10 @@
 | V176 关键路径与频率实验（HLS52/53） | 217 种合法尺寸穷举通过；117 张完整 C 输出文件与 HLS39 字节一致；两次缩小配置 RTL 通过，IP 已导出；125 MHz 时钟接口连接检查通过 | HW03 在 125 MHz 下时序 −1.571 ns，修复后仍 −1.352 ns；未下载，无新实板速度 |
 
 | V178 坐标查表（HLS55/56） | 117 张完整 C 输出与 HLS39 字节一致；两次缩小配置 RTL 通过，IP 已导出 | 125 MHz 实际时序 −0.653 ns；未通过，未下载 |
-| V179 资源重分配（HLS61/62） | 117 张完整 C 输出字节一致；插值、归一化及量化共 331,408 个独立整数检查通过；HLS 估计 214 DSP | 两次完整缩小配置 RTL 通过（545,575 / 545,583 周期）；100 MHz 整机实现进行中，无新实板帧率 |
+| **V179 已验证（HLS62）** | **117/117 原始照片及 HDMI 均通过；0/33 良品误报、17/17 裂纹；连续 239.548 秒完成 1,957 次自主检测，8.170 FPS；固定帧 8.021 FPS；ARM 双核暂停检查 119 次；100 MHz 时序通过** | 同一公开开发集；持续 10 FPS、独立盲测及精细定位仍待完成 |
+| V180 DDR 分流＋125 MHz | 沿用完全相同的 HLS62 检测内核；共享/分流实际端口与时钟检查通过 | 整机实现进行中；Winograd 仅完成独立数学检查，尚未接入检测器 |
 
-117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。最新已验证编译文件、实拍示例与实验记录见 [V173 R2 开发快照](deliverables/V173R2_Verified_HDMI_6p67FPS_Dev.zip)；[V173 掩膜快照](deliverables/V173_Verified_HDMI_6p00FPS_Dev.zip)；[V172 快照](deliverables/V172_Verified_HDMI_5p45FPS_Dev.zip) 与 [旧 V170 完整快照](deliverables/V170_Verified_FullPL_4p28FPS_R1.zip) 保留。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
+117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。最新已验证编译文件、实拍示例与实验记录见 [V179 开发快照](deliverables/V179_Verified_HDMI_8p17FPS_Dev.zip)；[V179 实板报告](project/pynq_z2_tile_v1_53/reports/v179/report.html)；[V173 R2 开发快照](deliverables/V173R2_Verified_HDMI_6p67FPS_Dev.zip)；[V173 掩膜快照](deliverables/V173_Verified_HDMI_6p00FPS_Dev.zip)；[V172 快照](deliverables/V172_Verified_HDMI_5p45FPS_Dev.zip) 与 [旧 V170 完整快照](deliverables/V170_Verified_FullPL_4p28FPS_R1.zip) 保留。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
 
 - [工程状态与职责划分](FPGA_MIGRATION_STATUS.md)
 - [V169 源码、构建、部署说明](project/pynq_z2_tile_v1_53/experimental/texture_v169/README.md)
@@ -50,3 +51,5 @@ V169 的约 100 MB 模型可由冻结压缩配置与官方预训练权重精确�
 最新已验证 V173 的源文件／下载身份、250 秒连续 HDMI 记录与逐图结果见 [实板证据](project/pynq_z2_tile_v1_53/reports/v173/verified_hdmi_hls34/verification.json)。它保持原模型和阈值，连续 HDMI 速度比 V172 提高约 10.03%。
 
 最新 V173 R2 的 [实板证据](project/pynq_z2_tile_v1_53/reports/v173/verified_hdmi_hls39_r2/verification.json) 记录了全部 117 张结果、248.879 秒连续运行与 300 次通信查询。R2 保持模型和阈值，HDMI 速度比最初 V172 提高约 22.21%。曾有一次 TCP 建连超时和一次源状态文件权限错误；失败记录完整保留，后续两轮原始照片回归和本轮 HDMI 复测均通过。源状态读取现有有界重试及失败停机处理，TCP 超时原因未完全确定。
+
+V179 的 [实板证据](project/pynq_z2_tile_v1_53/reports/v179/verified_hdmi_overlap/verification.json) 绑定了原模型、匹配 BIT/XSA/ELF、全部 117 张结果和连续 HDMI 计数。连续吞吐比 V173 R2 提高约 22.56%，固定帧提高约 6.40%；整机 42,482 LUT、218 DSP、127.5 BRAM。源码冻结为 HLS62，Winograd 尚未集成。
