@@ -1,0 +1,15 @@
+{
+  "scope": "C_AND_SYNTHESIS_ONLY_NOT_FULL_RTL_OR_BOARD",
+  "source_sha256": "c4391bbdd3da915836e2f6f63c97407bfd120456f3274d95a1fcf71e6ec4abbd",
+  "all117_complete_output_files_identical": true,
+  "baseline": "acceptedHLS62/v179_all_c05",
+  "estimated_clock_ns": 8.207,
+  "resources": {
+    "BRAM_18K": 251,
+    "DSP": 214,
+    "FF": 69861,
+    "LUT": 71919,
+    "URAM": 0
+  },
+  "board_programmed": false
+}

@@ -1,0 +1,35 @@
+{
+  "scope": "INDEPENDENT_RAW32_DECODER_C_AND_INVALID_MODEL_PATH_NOT_RTL_OR_BOARD",
+  "passed": true,
+  "scalar_cases": 100268,
+  "source_sha256": "c4391bbdd3da915836e2f6f63c97407bfd120456f3274d95a1fcf71e6ec4abbd",
+  "harness_sha256": "21f6c8ff9c8514aab59f283243ccc64968764fd91a5f1cf0c122685ddb123b8c",
+  "invalid_models": [
+    {
+      "raw_opcode": 0,
+      "original_error": 3,
+      "candidate_error": 3,
+      "header16_words_identical": true
+    },
+    {
+      "raw_opcode": 4,
+      "original_error": 3,
+      "candidate_error": 3,
+      "header16_words_identical": true
+    },
+    {
+      "raw_opcode": 268435457,
+      "original_error": 3,
+      "candidate_error": 3,
+      "header16_words_identical": true
+    },
+    {
+      "raw_opcode": 4294967295,
+      "original_error": 3,
+      "candidate_error": 3,
+      "header16_words_identical": true
+    }
+  ],
+  "elapsed_seconds": 15.28200000000652,
+  "interpretation": "High-bit unsupported opcodes remain rejected; no truncation to supported opcodes. Valid-image C117, RTL and physical timing are separate gates."
+}

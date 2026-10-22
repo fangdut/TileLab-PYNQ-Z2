@@ -1,0 +1,19 @@
+{
+  "scope": "CRITICAL_PATH_DRIVEN_CONTROL_DECODE_PROPOSAL_NOT_RTL_OR_BOARD",
+  "source_sha256": "c4391bbdd3da915836e2f6f63c97407bfd120456f3274d95a1fcf71e6ec4abbd",
+  "base_source_sha256": "bba4b392fb2c0f4915daf6d49aa011323d758afd8dd430959fa7ef8b5e3d7a72",
+  "model_changed": false,
+  "threshold_changed": false,
+  "input_resolution_changed": false,
+  "measured_failure": {
+    "clock_mhz": 125,
+    "setup_slack_ns": -0.598,
+    "source_register": "t_1_load_reg_11896_reg[27]",
+    "destination": "ram_U/ram_reg_0/WEA[0]",
+    "data_path_ns": 7.641,
+    "route_fraction": 0.83143,
+    "report_sha256": "137d2374a13f787b446035853459481e5baadd799169fa02b4758136acf230ef"
+  },
+  "change": "Register a three-bit one-hot decode of supported raw32 opcodes; pass decoded depth explicitly; invalid opcodes retain error3",
+  "accuracy_or_speed_claimed": false
+}

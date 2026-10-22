@@ -1,0 +1,48 @@
+{
+  "scope": "STATIC_HLS_STRUCTURE_POSITIVE_AND_MUTATED_FIXTURES_NOT_RTL_SIMULATION",
+  "passed": true,
+  "positive": {
+    "scope": "GENERATED_HLS_CONTROL_STRUCTURE_NOT_FULL_RTL_SIMULATION_OR_BOARD",
+    "passed": true,
+    "source_sha256": "c4391bbdd3da915836e2f6f63c97407bfd120456f3274d95a1fcf71e6ec4abbd",
+    "decoder_rtl_sha256": "1d888a4d396410e3465a0e7a3c32b851d62e985e32908a3d33003924d05a8edc",
+    "top_rtl_sha256": "3431e3cd49d856f4972a3a3c293f6b1b471851154ccc51358cf5ff0e60658d82",
+    "decoder_report_sha256": "f6c3235a7c2d902e84f16430167af6d695d49426d6d1208383453b4de4524cd2",
+    "raw_bits": 32,
+    "onehot_bits": 3,
+    "latency_cycles": 2,
+    "initiation_interval": 1,
+    "comparison_stage_pairs": [
+      [
+        "icmp_ln83_1_reg_85_pp0_iter1_reg",
+        "icmp_ln83_1_reg_85"
+      ],
+      [
+        "icmp_ln83_2_reg_90_pp0_iter1_reg",
+        "icmp_ln83_2_reg_90"
+      ],
+      [
+        "icmp_ln83_reg_80_pp0_iter1_reg",
+        "icmp_ln83_reg_80"
+      ]
+    ]
+  },
+  "negative": [
+    {
+      "case": "wrong_port_width",
+      "rejected": true,
+      "error": "Generated decoder no longer32-input/3-output"
+    },
+    {
+      "case": "missing_comparison_stage",
+      "rejected": true,
+      "error": "Three registered comparison stages missing"
+    },
+    {
+      "case": "wrong_latency",
+      "rejected": true,
+      "error": "Decoder latency/II changed"
+    }
+  ],
+  "checker_sha256": "196c882d6910e6a275fa4ecad1343bb9b3a291a7dac45dc4f0e4404cd2a3c888"
+}

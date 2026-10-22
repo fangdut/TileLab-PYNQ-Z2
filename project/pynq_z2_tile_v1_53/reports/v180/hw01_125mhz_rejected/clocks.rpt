@@ -1,0 +1,100 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Thu Oct 22 14:05:41 2026
+| Host         : LAPTOP-UOC8IVHM running 64-bit major release  (build 9200)
+| Command      : report_clocks -file D:/Vivado/TileLab_RealPhotos_20261020/v180_hw01/clocks.rpt
+| Design       : system_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Report
+
+
+Attributes
+  P: Propagated
+  G: Generated
+  A: Auto-derived
+  R: Renamed
+  V: Virtual
+  I: Inverted
+  S: Pin phase-shifted with Latency mode
+
+Clock                          Period(ns)  Waveform(ns)   Attributes  Sources
+clk_fpga_0                     8.000       {0.000 4.000}  P           {system_i/ps7/inst/PS7_i/FCLKCLK[0]}
+clk_fpga_1                     5.000       {0.000 2.500}  P           {system_i/ps7/inst/PS7_i/FCLKCLK[1]}
+hdmi_rx_clk                    13.468      {0.000 6.734}  P           {hdmi_in_clk_p}
+system_i/hdmi_tx/U0/SerialClk  2.694       {0.000 1.077}  P,G         {system_i/hdmi_tx/U0/SerialClk}
+CLKFBIN                        13.468      {0.000 6.734}  P,G,A       {system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKFBOUT}
+CLKFBIN_1                      13.468      {0.000 6.734}  P,G,A       {system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKFBOUT}
+CLK_OUT_5x_hdmi_clk            2.694       {0.000 1.347}  P,G,A       {system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0}
+PixelClkIO                     13.468      {0.000 6.734}  P,G,A       {system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKOUT1}
+PixelClk_int                   13.468      {0.000 5.387}  P,G,A       {system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O}
+SerialClkIO                    2.694       {0.000 1.347}  P,G,A       {system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKOUT0}
+
+
+====================================================
+Generated Clocks
+====================================================
+
+Generated Clock     : system_i/hdmi_tx/U0/SerialClk
+Master Source       : system_i/hdmi_tx/U0/PixelClk
+Master Clock        : PixelClk_int
+Multiply By         : 5
+Generated Sources   : {system_i/hdmi_tx/U0/SerialClk}
+
+Generated Clock     : CLKFBIN
+Master Source       : system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKIN1
+Master Clock        : hdmi_rx_clk
+Multiply By         : 1
+Generated Sources   : {system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKFBOUT}
+
+Generated Clock     : CLKFBIN_1
+Master Source       : system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKIN1
+Master Clock        : PixelClk_int
+Multiply By         : 1
+Generated Sources   : {system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKFBOUT}
+
+Generated Clock     : CLK_OUT_5x_hdmi_clk
+Master Source       : system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKIN1
+Master Clock        : hdmi_rx_clk
+Multiply By         : 5
+Generated Sources   : {system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0}
+
+Generated Clock     : PixelClkIO
+Master Source       : system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKIN1
+Master Clock        : PixelClk_int
+Multiply By         : 1
+Generated Sources   : {system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKOUT1}
+
+Generated Clock     : PixelClk_int
+Master Source       : system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/I
+Master Clock        : CLK_OUT_5x_hdmi_clk
+Edges               : {1 2 3}
+Edge Shifts(ns)     : {0.000 4.040 10.774}
+Generated Sources   : {system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O}
+
+Generated Clock     : SerialClkIO
+Master Source       : system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKIN1
+Master Clock        : PixelClk_int
+Multiply By         : 5
+Generated Sources   : {system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/GenMMCM.DVI_ClkGenerator/CLKOUT0}
+
+
+
+====================================================
+User Uncertainty
+====================================================
+
+
+
+====================================================
+User Jitter
+====================================================
+
+Clock       Jitter(ns)
+clk_fpga_0  0.240
+clk_fpga_1  0.150
+
