@@ -1,0 +1,93 @@
+{
+  "scope": "PHYSICAL_AUTONOMOUS_HDMI_WITH_BOTH_ARM_CORES_HALTED",
+  "programmed_build": {
+    "boot_identity": 1836510927,
+    "build": {
+      "elf_sha256": "dcca34dbe7ad2e89ff8bdb99f9003b3a9327f902f9a8c3803e64b49aa988542c",
+      "xsa_sha256": "addb73b971fc7226647d04c3c677205b8171099b4a65582582179c0effad7baa",
+      "bit_sha256": "aaf75fc60de461e7348ac7ca45e30febda2da2691ea6870b2479df4254c5cb6a",
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "reset_proof": {
+        "auxiliary_reset_active_high": 0,
+        "auxiliary_level": 1,
+        "debug_reset": 0,
+        "clock_locked": 1,
+        "pl_reset_release_checked": true
+      },
+      "video_proof": {
+        "video": true,
+        "ps_and_pl_control_maps_match": true,
+        "memory_layout": "shared",
+        "capture_hp": 1,
+        "result_hp": 0,
+        "all_inference_ddr_maps_verified": true,
+        "read_and_write_gray_bus_skew_passed": true
+      },
+      "sources": {
+        "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+        "main.c": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+        "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+        "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+      },
+      "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE"
+    },
+    "implementation": {
+      "setup_slack_ns": 0.133,
+      "hold_slack_ns": 0.029,
+      "drc_errors": 0,
+      "pl_clock_mhz": 100,
+      "dsp": 219,
+      "postroute_physical_repair": true
+    },
+    "flash_written": false
+  },
+  "samples": 20,
+  "frames": 32,
+  "elapsed_wall_seconds": 5.345,
+  "frame_rate": 5.986903648269411,
+  "distinct_capture_crc32": 1,
+  "dynamic_input_observed": false,
+  "capture_frame_sequence_first": 8654,
+  "capture_frame_sequence_last": 8974,
+  "both_arm_cores_halted": true,
+  "pl_enable_writes": 1,
+  "arm_halt_checks": 3,
+  "arm_state_scope": "During the observation session before debugger disconnect; post-disconnect state is not assumed",
+  "cpu_per_frame_start_writes": 0,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "video_register_version": 387973121,
+  "color_startup_profile": {
+    "profile_sha256": "55ae4771eb4d8ce9969e06907441d49a9b7773ac276d20fc1f9637ce17b0bd22",
+    "black_rgb": [
+      0,
+      0,
+      0
+    ],
+    "gain_q8_rgb": [
+      260,
+      314,
+      403
+    ],
+    "register_words": [
+      260,
+      314,
+      403
+    ],
+    "calibration_evidence_sha256": "752b0bf8c02f90a947b2a804f8dc7e9fa04cfb1aad373d053ae8f2e0f01201cb",
+    "calibration_frame_sha256": "23a1dd8d6b77fcbac8094f61608f299cb030f57dba4e2fbbd67461c7cf42c71f",
+    "calibration_source": "RealPhotoSource independent gray ramp; no tile photo or defect labels used",
+    "runtime_pixel_processing": "FPGA fabric only"
+  },
+  "color_registers": [
+    260,
+    314,
+    403,
+    1
+  ],
+  "color_configuration_unchanged": true,
+  "precision_scope": "Engineering video throughput only; compare image decisions separately",
+  "physical_regression_plan_sha256": "602bd066978eac3dcb736419cfa60bd663ee30c064ec689276bf4a766b74b8c2",
+  "physical_regression_summary_sha256": "9c88d50b10cad0ceeeb2155dd2374423bef23b714ce9e2426c14aadb1e5a9389",
+  "left_running": false
+}

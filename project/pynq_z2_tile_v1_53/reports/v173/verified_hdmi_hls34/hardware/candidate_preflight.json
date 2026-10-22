@@ -1,0 +1,12 @@
+{
+  "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "18c9631dfb3aaf8a9e51029c325e8690ab3d1979e12ea35b017fe7d162bdcfd1",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_regression_summary_sha256": "6c33cae8446d00d09c24c83a8690863b5b8630cb1ba98c662ae0f8ef17e6cb34",
+  "rtl_cosim_sha256": "dc5287bcdfe3663b84eade3945a2db2dd427745e1554c0fc3e3670eff7f039da",
+  "hls_dsp": 220,
+  "hls_bram18": 250,
+  "centered_packing_weights": null,
+  "opt_directive": "Default",
+  "memory_layout": "shared"
+}

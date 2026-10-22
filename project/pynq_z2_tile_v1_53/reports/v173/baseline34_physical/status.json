@@ -1,5 +1,5 @@
 {
-  "scope": "TIMING_CLOSED_HDMI_HARDWARE_BOARD_ACCEPTANCE_PENDING",
+  "scope": "TIMING_CLOSED_AND_PHYSICAL_HDMI_ACCEPTED_DEVELOPMENT_NOT_FINAL",
   "kernel_sha256": "18c9631dfb3aaf8a9e51029c325e8690ab3d1979e12ea35b017fe7d162bdcfd1",
   "bit_sha256": "aaf75fc60de461e7348ac7ca45e30febda2da2691ea6870b2479df4254c5cb6a",
   "xsa_sha256": "addb73b971fc7226647d04c3c677205b8171099b4a65582582179c0effad7baa",
@@ -19,6 +19,9 @@
     "preflight.json": "93621a8a93a736fc8328277241414401428fad7a6b878c9926797011b338ca81",
     "blocked_acceptance04.json": "f1c3e22760972918f4be76212eb582c2c5b41ff0dad93f10f1414bcfec13ed4e"
   },
-  "board_programmed": false,
-  "board_fps_measured": false
+  "board_programmed": true,
+  "board_fps_measured": true,
+  "boot_identity": 1836510927,
+  "continuous_hdmi_fps": 6.0018209117337,
+  "verified_evidence": "../verified_hdmi_hls34/verification.json"
 }

@@ -1,0 +1,53 @@
+{
+  "scope": "PAUSED_PHYSICAL_HDMI_INPUT_AND_PL_RESULT",
+  "video_report_sha256": "921e818056819165713c62df3f014b495e53586dcfabcbe16c6ad055e2f1e959",
+  "rgb_crc32": 1294985054,
+  "capture_sequence": 8974,
+  "pl_sequence": 215,
+  "pl_image_alarm": 0,
+  "arm_cores_halted_during_dump": true,
+  "input_scope": "Captured PL RGB after startup black/gain calibration, before detector resize",
+  "video_register_version": 387973121,
+  "color_registers": [
+    260,
+    314,
+    403,
+    1
+  ],
+  "color_startup_profile": {
+    "profile_sha256": "55ae4771eb4d8ce9969e06907441d49a9b7773ac276d20fc1f9637ce17b0bd22",
+    "black_rgb": [
+      0,
+      0,
+      0
+    ],
+    "gain_q8_rgb": [
+      260,
+      314,
+      403
+    ],
+    "register_words": [
+      260,
+      314,
+      403
+    ],
+    "calibration_evidence_sha256": "752b0bf8c02f90a947b2a804f8dc7e9fa04cfb1aad373d053ae8f2e0f01201cb",
+    "calibration_frame_sha256": "23a1dd8d6b77fcbac8094f61608f299cb030f57dba4e2fbbd67461c7cf42c71f",
+    "calibration_source": "RealPhotoSource independent gray ramp; no tile photo or defect labels used",
+    "runtime_pixel_processing": "FPGA fabric only"
+  },
+  "pl_peak": 9783,
+  "pl_threshold": 10908,
+  "pl_mask_pixels": 0,
+  "source_photo_id": null,
+  "source_photo_binding": "Not inferred from the current player status; inspect/match the captured frame separately",
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "files": {
+    "rgb.bin": "55c04ace0bd060a42d5230416eef2f6329f031c347e3ff96f3f2720b1e43014c",
+    "raw_result.bin": "4d72037af1dfa2a2d9635ffe1a1770f8b5d4b14cae398e2823bcf3d3396da128",
+    "actual_hdmi_input.png": "62269b73b8976b6741a2dda03129b536c54d0e6d0abb372f3be4843f1e50939f",
+    "actual_pl_mask.png": "fe96ea90f8d82f907079dc63810ffea11158dd2b9b257b80bce4fd46eb79b3ea",
+    "actual_pl_overlay.png": "62269b73b8976b6741a2dda03129b536c54d0e6d0abb372f3be4843f1e50939f"
+  }
+}

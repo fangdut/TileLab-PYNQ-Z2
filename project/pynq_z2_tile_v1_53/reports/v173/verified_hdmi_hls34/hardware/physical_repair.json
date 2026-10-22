@@ -1,0 +1,28 @@
+{
+  "scope": "TIMING_CLOSED_POSTROUTE_PHYSICAL_REPAIR_NOT_PROGRAMMED",
+  "bit_sha256": "aaf75fc60de461e7348ac7ca45e30febda2da2691ea6870b2479df4254c5cb6a",
+  "xsa_sha256": "addb73b971fc7226647d04c3c677205b8171099b4a65582582179c0effad7baa",
+  "original_failed_status_sha256": "a9a839774e818a8f3307dd590dd472d2104d57678715fbd574550ba15933bb57",
+  "repair_script_sha256": "afb1c6c5606d8d54c53238b9a0e312b3f610357de7b8d7e3b72a15aa2f018386",
+  "kernel_sha256": "18c9631dfb3aaf8a9e51029c325e8690ab3d1979e12ea35b017fe7d162bdcfd1",
+  "status": {
+    "setup_slack_ns": 0.133,
+    "hold_slack_ns": 0.029,
+    "drc_errors": 0,
+    "pl_clock_mhz": 100,
+    "dsp": 219,
+    "postroute_physical_repair": true
+  },
+  "gray_skew": {
+    "read_and_write_gray_bus_skew_passed": true
+  },
+  "clock_changed": false,
+  "algorithm_changed": false,
+  "reports": {
+    "timing_summary.rpt": "c63cb9c64b5486aca1dfd5d304aeafe04ed04e3bb44a8c298e430a04eb3a6e30",
+    "bus_skew.rpt": "0d8cd56b94b10337f6667075aef708ceddbbe41020392c67cef041d4d8e07ef4",
+    "video_cdc.rpt": "abe037e258d0b0ffad2caa3e8f7a56f5773c67e87486847e077536f2a119e125",
+    "utilization.rpt": "e222837936aae5e49df6924af84d4e4765af940d09ca1cc16f1f6c7cb89dabd5",
+    "drc.rpt": "f240dd432141cad32e90792694e6de3793badbdf4d78fdef516244a013fa0ba7"
+  }
+}

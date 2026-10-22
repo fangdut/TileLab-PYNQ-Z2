@@ -27,10 +27,10 @@ The complete integration processes 32 standard/pointwise output channels with th
 | `texture_packed_centered.cpp` / HLS30 | 117/117, exact | Two complete calls pass | Isolated synthesis 47,618 LUT; whole HDMI layout rejected for resource capacity |
 | `texture_packed_separable.cpp` / HLS31 | 117/117, exact | Deferred | Exact separable mask; HLS synthesis only |
 | `texture_packed_narrow.cpp` / HLS32 | 117/117, exact | Deferred | Proven signed24 convolution sums and 768-bit packets; HLS synthesis only |
-| `texture_baseline_separable.cpp` / HLS34 | 117/117, exact | Two complete calls pass | Whole HDMI timing closed +0.133 ns after physical repair; board verification in progress |
+| `texture_baseline_separable.cpp` / HLS34 | 117/117, exact | Two complete calls pass | Whole HDMI passes 117/117 at 6.002 FPS; +0.133 ns setup |
 | `texture_baseline_paired_rows.cpp` / HLS35 | 117/117 exact, including odd-row fixture | Not run | Reuse existing array for two narrow pointwise rows |
 | `texture_baseline_row_batches.cpp` / HLS38 | 117/117 scores/masks exact, plus odd-row fixture | Two reduced-fixture calls pass | Power-of-two batches; complete video candidate superseded by HLS39 |
-| `texture_interleaved_projection.cpp` / HLS39 | 117/117 scores/masks exact, plus odd-row fixture | Two reduced-fixture calls pass | Same projection DSP count; whole HDMI HW04 building, not programmed |
+| `texture_interleaved_projection.cpp` / HLS39 | 117/117 scores/masks exact, plus odd-row fixture | Two reduced-fixture calls pass | Actual core 34,960 LUT / 218 DSP / 123.5 BRAM; HW04 routing, not programmed |
 
 HLS30 packs **signed** low weights and relies on frozen symmetric weights in [-127,127]; all 16,646,400 triples in this restricted domain pass the independent mathematical check in `check_centered.cpp`. `build_candidate.py` inspects the actual binary model and verifies all 529,760 packed convolution weight bytes, graph/task agreement, source hashes and complete C/RTL evidence before building. A weight of -128 is rejected. This domain restriction does not apply to the original general primitive.
 
