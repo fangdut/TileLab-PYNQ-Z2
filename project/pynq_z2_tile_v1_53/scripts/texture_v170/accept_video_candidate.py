@@ -14,6 +14,7 @@ def main():
     for name in ['hardware','hls','dataset','profile','catalog','player','out']:
         p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--previous-source',type=Path)
+    p.add_argument('--performance-status',action='store_true',help='Emit the distinct target-pass status for callers supporting it')
     p.add_argument('--reuse-software',type=Path,
         help='Copy an already built transport only when its whole BIT/XSA/ELF/model hashes match')
     a=p.parse_args();a.out.mkdir(parents=True,exist_ok=False)
@@ -152,10 +153,19 @@ def main():
         hdmi=json.loads((a.out/'hdmi117/summary.json').read_text())
         speed=json.loads((a.out/'series_live/report.json').read_text())
         passed=hdmi['cases']==117 and hdmi['correct']==117
-        journal.update(status='DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING' if passed else 'HDMI_ACCURACY_FAILED',
-            direct117=direct,hdmi117=hdmi,hdmi_fps=speed['frame_rate'],
-            ten_fps_passed=False,short_observation_at_least_ten_fps=speed['frame_rate']>=10,
-            sustained_speed_test_required=True,competition_final_acceptance=False,
+        sustained_fps=hdmi['autonomous_hdmi_fps_over_photo_series']
+        ten_passed=(passed and direct['all_integer_outputs_exact'] and direct['correct']==117
+            and hdmi['continuous_observation_seconds']>=180 and sustained_fps>=10
+            and hdmi['both_arm_cores_halted'] and hdmi['arm_halt_checks']>=119
+            and hdmi['cpu_per_frame_start_writes']==0 and not hdmi['cpu_detection'] and not hdmi['gpu_detection']
+            and hdmi['distinct_observed_photo_crcs']==117)
+        status=('DEVELOPMENT_ACCURACY_AND_TEN_FPS_PASS' if ten_passed and a.performance_status else
+                'DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING' if passed else 'HDMI_ACCURACY_FAILED')
+        journal.update(status=status,
+            direct117=direct,hdmi117=hdmi,hdmi_fps=sustained_fps,short_observation_hdmi_fps=speed['frame_rate'],
+            ten_fps_passed=ten_passed,performance_status='TEN_FPS_PASS_OVER_COMPLETE_SERIES' if ten_passed else 'TEN_FPS_TARGET_PENDING',
+            legacy_status_compatibility=not a.performance_status,short_observation_at_least_ten_fps=speed['frame_rate']>=10,
+            sustained_speed_test_required=not ten_passed,competition_final_acceptance=False,
             benchmark_is_blind=False)
         save();print(json.dumps(journal),flush=True)
     except Exception as error:

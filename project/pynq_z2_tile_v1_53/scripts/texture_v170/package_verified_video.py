@@ -19,10 +19,10 @@ def main():
     hdmi=read(a.run/'hdmi117/summary.json');direct=read(a.run/'board117/summary.json')
     state=read(a.run/'progress.json');identity=read(a.run/'program/identity.json')
     software=a.run/'software.sdk';build=read(software/'BUILD_RESULT.json')
-    if state['status']!='DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING':raise ValueError('Completed physical development experiment required')
+    if state['status'] not in ['DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING','DEVELOPMENT_ACCURACY_AND_TEN_FPS_PASS']:raise ValueError('Completed physical development experiment required')
     if hdmi['cases']!=117 or hdmi['correct']!=117 or hdmi['normal_false_alarms'] or not hdmi['both_arm_cores_halted'] or hdmi['cpu_per_frame_start_writes']:
         raise ValueError('Physical HDMI accuracy/ownership proof failed')
-    if direct['cases']!=117 or not direct['all_integer_outputs_exact']:raise ValueError('Full direct numerical regression required')
+    if direct['cases']!=117 or direct['correct']!=117 or not direct['all_integer_outputs_exact']:raise ValueError('Full direct numerical regression required')
     verify(a.hardware);verify_video(a.hardware);verify_bus_skew_report(a.hardware/'bus_skew.rpt')
     verify_clock(a.hardware)
     status=read(a.hardware/'implementation_status.json')
@@ -106,11 +106,13 @@ def main():
         dst=Path('originals')/f.name;cp(f,dst);report=report.replace(f.as_uri(),dst.as_posix())
     (a.out/'report.html').write_text(report,encoding='utf8')
     fps=hdmi['autonomous_hdmi_fps_over_photo_series']
+    speed_status=('Sustained 10 FPS remains open.' if fps<10 else
+                  'At least 10 FPS is observed over the complete exposed 117-photo controlled HDMI series; broader real-camera deployment remains unverified.')
     (a.out/'README.md').write_text(f'''# Verified FPGA video development snapshot
 
 Actual HDMI input: 117/117 exposed MVTec Tile development photos correct, 0/33 normal false alarms, 84/84 anomalies and 17/17 cracks detected. FPGA completed {hdmi['autonomous_frames_in_interval']} autonomous detections over {hdmi['continuous_observation_seconds']} seconds ({fps:.6f} FPS). Both ARM cores were checked halted {hdmi['arm_halt_checks']} times; no CPU/GPU detection or CPU per-frame start writes. Fixed-frame speed: {direct['autorestart_fixed_frame_fps']:.6f} FPS.
 
-This is not a final competition submission. Independent blind accuracy, arbitrary painted/mixed materials, precise crack tracing and sustained 10 FPS remain open. Input photos are original publicly sourced MVTec photographs, displayed through HDMI; this is not evidence of a new camera or a complete physical tile installation.
+This is not a final competition submission. Independent blind accuracy, arbitrary painted/mixed materials and precise crack tracing remain open. {speed_status} Input photos are original publicly sourced MVTec photographs, displayed through HDMI; this is not evidence of a new camera or a complete physical tile installation.
 
 Open report.html. hardware/ contains the exact programmed BIT/XSA; software/ the matching transport ELF; model/ the frozen model. evidence/all117_direct_raw.zip preserves every full board output. Source/model/artifact hashes are in PACKAGE_MANIFEST.json. The recorded boot {identity['boot_identity']} belongs to this experiment; reruns need fresh programming and validation records.
 

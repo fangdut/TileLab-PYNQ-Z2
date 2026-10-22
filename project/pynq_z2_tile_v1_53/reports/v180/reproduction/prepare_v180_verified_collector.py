@@ -1,0 +1,8 @@
+from pathlib import Path
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020');s=(W/'collect_v179_verified.py').read_text()
+for a,b in [('physical V179 run','physical V180 run'),("run=W/'v179_acceptance01';hw=W/'v179_hw01';dst=P/'reports/v179/verified_hdmi_overlap'","run=W/'v180_acceptance01';hw=W/'v180_hw01';dst=P/'reports/v180/verified_hdmi_split125'"),("W/'v179_physical_pipeline01.json'","W/'v180_physical_pipeline01.json'"),('v179_transport_stress01','v180_transport_stress01'),('after_v179_video','after_v180_video')]:
+    assert a in s,a;s=s.replace(a,b)
+a="assert state['status']=='DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING'";assert a in s;s=s.replace(a,"assert state['status'] in ['DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING','DEVELOPMENT_ACCURACY_AND_TEN_FPS_PASS']")
+a="memory_layout_proof=verify_memory_layout(hw,preflight['memory_layout'])";assert a in s;s=s.replace(a,a+"\nassert memory_layout_proof['memory_layout']=='split' and clock_proof['pl_clock_mhz']==125\nprevious_v179=read(W/'v179_acceptance01/hdmi117/summary.json')\nassert hdmi['autonomous_hdmi_fps_over_photo_series']>previous_v179['autonomous_hdmi_fps_over_photo_series']")
+a="    previous_v173_r2_hdmi_fps=old['autonomous_hdmi_fps_over_photo_series'],";assert a in s;s=s.replace(a,a+"\n    previous_v179_hdmi_fps=previous_v179['autonomous_hdmi_fps_over_photo_series'],\n    improvement_over_v179_fraction=hdmi['autonomous_hdmi_fps_over_photo_series']/previous_v179['autonomous_hdmi_fps_over_photo_series']-1,")
+out=W/'collect_v180_verified.py';assert not out.exists();out.write_text(s);compile(s,str(out),'exec');print('V180_COLLECTOR_PREPARED_NOT_EXECUTED_REQUIRES_REAL_PHYSICAL_PASS')

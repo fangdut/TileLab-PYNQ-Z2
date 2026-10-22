@@ -1,0 +1,9 @@
+{
+  "scope": "EXACT_RESIDUAL_STREAM_PROPOSAL_NOT_HLS_RTL_BOARD_OR_FPS",
+  "source_sha256": "bba4b392fb2c0f4915daf6d49aa011323d758afd8dd430959fa7ef8b5e3d7a72",
+  "base_source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+  "model_changed": false,
+  "threshold_changed": false,
+  "change": "Flatten residual requantization across up to256 packed words; reuse same two rq8 functions and three RAMs; shift-packed16 bytes preserves lane order",
+  "accuracy_or_speed_claimed": false
+}

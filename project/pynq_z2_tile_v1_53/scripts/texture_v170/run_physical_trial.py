@@ -8,7 +8,7 @@ def review_board_result(run):
     """A successful subprocess alone is insufficient: inspect physical results."""
     run=Path(run);read=lambda p:json.loads(p.read_text())
     state=read(run/'progress.json');direct=read(run/'board117/summary.json');hdmi=read(run/'hdmi117/summary.json')
-    if state['status']!='DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING':raise ValueError('Board accuracy stage did not pass')
+    if state['status'] not in ['DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING','DEVELOPMENT_ACCURACY_AND_TEN_FPS_PASS']:raise ValueError('Board accuracy stage did not pass')
     if direct['cases']!=117 or direct['correct']!=117 or not direct['all_integer_outputs_exact']:raise ValueError('Direct117 numerical/accuracy failure')
     for summary in [direct,hdmi]:
         if summary['cases']!=117 or summary['correct']!=117 or summary['normal_images']!=33 or summary['normal_false_alarms']!=0 or summary['anomalies_detected']!=84 or summary['anomalies']!=84 or summary['cracks_detected']!=17:
@@ -18,6 +18,7 @@ def review_board_result(run):
     if hdmi['distinct_observed_photo_crcs']!=117 or hdmi['continuous_observation_seconds']<180:raise ValueError('Full source-bound continuous photo series incomplete')
     rate=hdmi['autonomous_frames_in_interval']/hdmi['continuous_observation_seconds']
     if abs(rate-hdmi['autonomous_hdmi_fps_over_photo_series'])>1e-9:raise ValueError('Continuous FPS disagrees with measured counters/time')
+    if state['status']=='DEVELOPMENT_ACCURACY_AND_TEN_FPS_PASS' and rate<10:raise ValueError('Ten-FPS status disagrees with the full series')
     return dict(scope='PHYSICAL_RESULT_REVIEW_NOT_RELEASE_PROMOTION',fixed_frame_fps=direct['autorestart_fixed_frame_fps'],
                 continuous_hdmi_fps=rate,continuous_seconds=hdmi['continuous_observation_seconds'],
                 ten_fps_over_complete_series=rate>=10,benchmark_is_blind=False,competition_final_acceptance=False)
@@ -74,7 +75,7 @@ def main():
         j['memory_layout_proof']=verify_memory_layout(a.hardware,a.memory_layout);save()
         if run('board',[sys.executable,'-X','utf8',scripts/'accept_video_candidate.py',
             '--hardware',a.hardware,'--hls',a.hls,'--dataset',a.dataset,'--profile',a.profile,
-            '--catalog',a.catalog,'--player',a.player,'--out',a.run],3600):
+            '--catalog',a.catalog,'--player',a.player,'--out',a.run,'--performance-status'],3600):
             raise RuntimeError('Board experiment failed; no promotion')
         j['board_result_review']=review_board_result(a.run);save()
         if run('report',[sys.executable,'-X','utf8',root/'tools/fpga_texture_v170/render_video_report.py',

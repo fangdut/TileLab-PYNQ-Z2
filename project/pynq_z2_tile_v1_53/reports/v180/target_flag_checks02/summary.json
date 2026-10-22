@@ -1,0 +1,23 @@
+{
+  "scope": "SYNTHETIC_TARGET_STATUS_TEST_NOT_HARDWARE_OR_TEN_FPS_EVIDENCE",
+  "passed": true,
+  "tests": [
+    {
+      "case": "synthetic_consistent_target",
+      "expected_outcome": "accepted synthetic control-flow fixture",
+      "passed": true
+    },
+    {
+      "case": "synthetic_false_target_claim",
+      "expected_outcome": "rejected inconsistent synthetic target claim",
+      "passed": true,
+      "error": "Ten-FPS status disagrees with the full series"
+    }
+  ],
+  "source_hashes": {
+    "scripts\\texture_v170\\accept_video_candidate.py": "90485743fbfe57579b494a0ec5f53681d488846edbe95db31a2fea5319278d5d",
+    "scripts\\texture_v170\\run_physical_trial.py": "5043d90df401e2a4fdc800f7fb15f0ad5b2ff74cf7cb5b7dc92b1d00e703548f",
+    "scripts\\texture_v170\\package_verified_video.py": "e2f3b92521f37b4cf45dd9f2b1a8d7af13482b84c96c6a12552365a2fe1d7260",
+    "tools\\fpga_texture_v170\\render_video_report.py": "fba28fc45e50974af43197268735c82dce21576c279f10e8c19e232f78229002"
+  }
+}

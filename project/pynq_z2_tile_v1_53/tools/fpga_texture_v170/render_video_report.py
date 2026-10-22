@@ -11,11 +11,13 @@ def main():
     def read(path):return json.loads(path.read_text())
     run=read(a.run/'progress.json');after=read(a.run/'hdmi117/summary.json')
     before=read(a.baseline/'summary.json');direct=read(a.run/'board117/summary.json')
-    if run['status'] not in ['DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING','HDMI_ACCURACY_FAILED']:
+    if run['status'] not in ['DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING','DEVELOPMENT_ACCURACY_AND_TEN_FPS_PASS','HDMI_ACCURACY_FAILED']:
         raise ValueError('Completed physical experiment required')
     results=read(a.run/'hdmi117/results.json');catalog=read(a.run/'hdmi117/plan.json')['photos']
     by_id={r['id']:r for r in results};photos={r['id']:r for r in catalog}
     fps=after['autonomous_hdmi_fps_over_photo_series'];duration=after['continuous_observation_seconds']
+    speed_notice=('本次完整公开开发集 HDMI 观测达到持续 10 FPS，详见实际计数、时长及 ARM 暂停记录。'
+                  if run.get('ten_fps_passed',False) and fps>=10 and duration>=180 else '尚未达到持续 10 FPS 目标。')
     label=html.escape(a.label);comparison=''
     if a.previous:
         previous=read(a.previous/'hdmi117/summary.json');previous_direct=read(a.previous/'board117/summary.json')
@@ -47,7 +49,7 @@ def main():
 body{{font-family:"Microsoft YaHei",system-ui,sans-serif;color:#1b2d40;background:#f2f5f8;margin:0;line-height:1.7}}main{{max-width:1120px;margin:auto;padding:34px 24px}}h1{{font-size:30px;margin:0}}h2{{font-size:21px}}.sub{{color:#52657a}}section,.notice,.metrics{{background:white;border:1px solid #dde4eb;border-radius:12px;padding:22px;margin:20px 0}}.notice{{background:#fff8e8}}.metrics{{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}}.value{{font-size:29px;font-weight:700;color:#125c92}}table{{border-collapse:collapse;width:100%;font-size:14px}}td,th{{padding:10px;text-align:left;border-bottom:1px solid #e3e8ef}}th{{background:#edf3f8}}.photos{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}}figure{{margin:0}}img{{width:100%;display:block;border-radius:7px}}figcaption{{color:#52657a;font-size:13px;margin-top:7px}}.bad{{background:#fff0ef}}a{{color:#1265a0}}details{{margin:20px 0}}.scroll{{overflow:auto}}@media(max-width:700px){{.metrics{{grid-template-columns:repeat(2,1fr)}}.photos{{grid-template-columns:1fr}}h1{{font-size:24px}}}}
 </style><main><h1>FPGA 实板复测 · {label}</h1><p class="sub">真实瓷砖表面照片经 HDMI 输入，由 FPGA 完成颜色校正与检测。</p>
 <div class="metrics"><div>HDMI 图片判对<div class="value">{after['correct']} / {after['cases']}</div></div><div>良品误报<div class="value">{after['normal_false_alarms']} / {after['normal_images']}</div></div><div>缺陷检出<div class="value">{after['anomalies_detected']} / {after['anomalies']}</div></div><div>持续检测速度<div class="value">{fps:.2f} FPS</div></div></div>
-<div class="notice">这些是反复使用的 MVTec Tile 公开开发集，不能代表独立盲测或任意彩绘／多材质表现。尚未达到持续 10 FPS 目标。图片判定通过也不代表细裂纹逐像素定位达标。</div>
+<div class="notice">这些是反复使用的 MVTec Tile 公开开发集，不能代表独立盲测或任意彩绘／多材质表现。{speed_notice}图片判定通过也不代表细裂纹逐像素定位达标。</div>
 {comparison}
 <section><h2>同一批 117 张照片，校正前后对照</h2><table><thead><tr><th>指标</th><th>未校正 HDMI</th><th>FPGA 颜色校正后</th></tr></thead><tbody>
 <tr><td>图片判对</td><td>{before['correct']} / {before['cases']}</td><td>{after['correct']} / {after['cases']}</td></tr>

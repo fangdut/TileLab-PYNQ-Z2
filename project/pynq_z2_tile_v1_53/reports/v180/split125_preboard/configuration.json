@@ -1,0 +1,79 @@
+{
+  "scope": "SAVED_SPLIT125_CONFIGURATION_NOT_PHYSICAL_OR_BOARD",
+  "memory": {
+    "scope": "SAVED_BD_DDR_CONNECTIVITY_NOT_THROUGHPUT",
+    "memory_layout": "split",
+    "video": true,
+    "checked_interface_pairs": [
+      [
+        "infer/m_axi_workmem",
+        "work_fabric/S00_AXI"
+      ],
+      [
+        "work_fabric/M00_AXI",
+        "ps7/S_AXI_HP0"
+      ],
+      [
+        "infer/m_axi_modelmem",
+        "model_fabric/S00_AXI"
+      ],
+      [
+        "model_fabric/M00_AXI",
+        "ps7/S_AXI_HP2"
+      ],
+      [
+        "infer/m_axi_inputmem",
+        "memory_fabric/S00_AXI"
+      ],
+      [
+        "infer/m_axi_outmem",
+        "memory_fabric/S01_AXI"
+      ],
+      [
+        "memory_fabric/M00_AXI",
+        "ps7/S_AXI_HP3"
+      ],
+      [
+        "pipeline/m_axi_result",
+        "memory_fabric/S02_AXI"
+      ],
+      [
+        "capture_fabric/M00_AXI",
+        "ps7/S_AXI_HP1"
+      ]
+    ],
+    "enabled_hp_ports": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "clock_ports": [
+      "infer/ap_clk",
+      "memory_fabric/aclk",
+      "ps7/S_AXI_HP0_ACLK",
+      "ps7/S_AXI_HP2_ACLK",
+      "ps7/S_AXI_HP3_ACLK",
+      "ps7/S_AXI_HP1_ACLK",
+      "work_fabric/aclk",
+      "model_fabric/aclk",
+      "capture_fabric/aclk"
+    ],
+    "bd_sha256": "429133e01e810013471b49682f95c60b9e61c8e78a599690088598212e8784a8"
+  },
+  "clock": {
+    "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+    "pl_clock_mhz": 125.0,
+    "axi_clocks_hz": {
+      "pipeline/m_axi_control": 125000000,
+      "pipeline/m_axi_capture": 125000000,
+      "pipeline/m_axi_result": 125000000,
+      "video_regs/s_axi": 125000000
+    },
+    "hpd_delay_seconds": 0.2,
+    "physical_metadata_checked": false,
+    "legacy_axi_derived_from_checked_clock": [],
+    "bd_sha256": "429133e01e810013471b49682f95c60b9e61c8e78a599690088598212e8784a8"
+  },
+  "board_programmed": false
+}
