@@ -1,0 +1,10 @@
+{
+  "scope": "SPATIAL_ADDRESS_EXPERIMENT_PREPARATION_NOT_RTL_OR_BOARD",
+  "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+  "parent": "HLS53; DW still32 for isolated timing comparison",
+  "runtime_guard": "Standard3x3 convolution input channels must be<=8",
+  "model_changed": false,
+  "threshold_changed": false,
+  "target_clock_ns": 8,
+  "reason": "HW03 worst path select_ln151 -> constant divider magic multiply -> address DSP C input; setup about-1.57ns at125MHz"
+}

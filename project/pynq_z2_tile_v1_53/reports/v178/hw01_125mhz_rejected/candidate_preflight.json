@@ -1,0 +1,186 @@
+{
+  "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_regression_summary_sha256": "0453b67a5f8353aa48fcb26add5807f899f12310090b58027a34763acc792be9",
+  "rtl_cosim_sha256": "de208182d6e5a0d11f7e1dc6b1e2c52cd00b647e56990cddbbadd7dd2e5878b9",
+  "hls_dsp": 217,
+  "hls_bram18": 251,
+  "mac_recurrence": {
+    "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+    "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls56",
+    "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+    "rtl_sha256": "08f77bdf67acad334c792cd5324ba282f3fafb517ecaebfe33d7a2fadd24f134",
+    "slots": 32,
+    "minimum_reuse_iterations": 32,
+    "banks": [
+      {
+        "bank": "acc",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_1",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_10",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_11",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_12",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_13",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_14",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_15",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_2",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_3",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_4",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_5",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_6",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_7",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_8",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_9",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      }
+    ],
+    "all_banks_safe": true,
+    "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively. Allocated RAM depth alone is insufficient when DW uses a shorter logical span."
+  },
+  "direct_cache_bounds": null,
+  "spatial_coordinate_bounds": {
+    "scope": "MODEL_BOUND_SPATIAL_COORDINATE_PROOF_NOT_RTL_OR_FPS",
+    "passed": true,
+    "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "binary_descriptors_checked": 47,
+    "standard3x3_layers": [
+      {
+        "step": 1,
+        "input_channels": 3,
+        "output_channels": 32
+      }
+    ],
+    "depthwise3x3_steps": [
+      2,
+      5,
+      8,
+      12,
+      15,
+      19,
+      23,
+      26,
+      30,
+      34,
+      38,
+      41,
+      45
+    ],
+    "standard3x3_input_channel_limit": 8,
+    "all_nine_kernel_positions_exact": true,
+    "unsupported_standard3x3_has_runtime_error_guard": true
+  },
+  "centered_packing_weights": null,
+  "video_rtl_sources": {
+    "frame_slot_queue.sv": "3fbca1529d9d4a51f594507c6e63eadd175fc4de91789bd99ba209d5d877f2ae",
+    "hdmi_detector_pipeline.v": "f964701a2edc06d24f7c21d474001bc2b484f2645c192816da218a924e7c5f33",
+    "hdmi_hpd_startup.v": "380058313af9bd51ac6b221adbff61176829667ee55a306074ea1a1de2f41f63",
+    "pl_frame_scheduler_overlap.sv": "ae8dfa26ab8c0f128597a57e6ea1d8f26d688a1fc026a00b3ac85924510540d2",
+    "pl_result_latch.sv": "18d804d6540e5b03217733f42b057236b15933339c6a99e5dfdae506f311f13f",
+    "roi_ddr_writer.sv": "dfb9f8d1c0b2b8fa71b1bdacf66d5b9c9f1f53433255ba2eba77d149385281ea",
+    "video_alarm_border.v": "0e37098da62f642cd0af8c999565e4f6946728c58e4f07b890eaafc6e4fd90a7",
+    "video_capture_link.sv": "3a70a209bea5be6e3803d43b44017ccd259e5dc3740f582b05a734d5cbe7c1f3",
+    "video_color_correct.sv": "79d70c95ea93088810009d2bd50783e4e30f250913d628256c92a244fa54d97c",
+    "video_regs.v": "74e8d370bb1f95c053f47562528473dbbf533ac907adbc4052d0988fb2c618c9",
+    "video_roi_tokens.sv": "9df98d2bc60bf313fb7372c2c6c989c4303fe48c01d1240708a086537dcaec1b"
+  },
+  "video_rtl_gate_sha256": "4ad6f9c56709b0a7c890ec859342a1c8ee01d152fbcd6601204a709467f8c502",
+  "video_variant": "overlap_v175",
+  "requested_pl_clock_mhz": 125,
+  "hls_target_clock_ns": 8.0,
+  "opt_directive": "Default",
+  "memory_layout": "shared"
+}

@@ -1,0 +1,22 @@
+{
+  "hls": 57,
+  "source_sha256": "95ef914aa2c39fe793502f07263e00687fe72bc923dbe3fe6c1611d3b7c87f62",
+  "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+  "board_programmed": false,
+  "estimated_clock_ns": 12.86,
+  "hls_resources": {
+    "BRAM_18K": 251,
+    "DSP": 219,
+    "FF": 67870,
+    "LUT": 70283,
+    "URAM": 0
+  },
+  "full_c_all_117_exact": true,
+  "complete_output_byte_comparison": {
+    "baseline": "v173_all_c10",
+    "cases": 117,
+    "all_identical": true
+  },
+  "ip_exports": [],
+  "rejected_reason": "12.860ns HLS estimate: moving a wide multiply to fabric without internal decomposition fails the clock goal"
+}

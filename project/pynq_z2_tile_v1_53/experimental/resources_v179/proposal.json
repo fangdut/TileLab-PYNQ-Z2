@@ -1,0 +1,18 @@
+{
+  "scope": "RESOURCE_REDISTRIBUTION_PROPOSAL_NOT_SYNTHESIS_RTL_OR_BOARD",
+  "source_sha256": "95ef914aa2c39fe793502f07263e00687fe72bc923dbe3fe6c1611d3b7c87f62",
+  "changes": [
+    "DW16 bounded spatial groups",
+    "guarded3x3 coordinate ROM",
+    "normalization multiplier in fabric",
+    "one of four quant lanes in fabric",
+    "projection16 lanes using all existing16RAM banks"
+  ],
+  "expected_resource_tradeoff": "Move infrequent/small multiplies to LUT fabric to fund wider projection; actual resource gates still required",
+  "model_changed": false,
+  "threshold_changed": false,
+  "projection_iterations_per_grid_cell_before": 1024,
+  "projection_iterations_after": 512,
+  "scalar_fabric_requantization_needs_independent_check": true,
+  "ten_fps_claimed": false
+}

@@ -1,0 +1,8 @@
+{
+  "scope": "SEGMENTED_FABRIC_NORMALIZATION_PROPOSAL_NOT_RTL_OR_BOARD",
+  "source_sha256": "d7735794abe2e8f3e959b440934b5c3381bb4527e9794bb365434f40da0ec1ab",
+  "parent": "HLS57 timing-rejected12.860ns; replace wide combinational fabric multiply with seven4-bit partial products and pipelined sums",
+  "numeric_domain": "unsigned27 times signed37; signed64 result exactly fits",
+  "model_changed": false,
+  "threshold_changed": false
+}

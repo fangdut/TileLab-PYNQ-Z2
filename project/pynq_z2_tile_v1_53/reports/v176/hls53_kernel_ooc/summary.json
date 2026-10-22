@@ -1,0 +1,22 @@
+{
+  "scope": "ACTUAL_ISOLATED_KERNEL_VIVADO_SYNTHESIS_NOT_FULL_SYSTEM_TIMING_OR_FPS",
+  "resources": {
+    "lut": 34634,
+    "ff": 45460,
+    "dsp": 218,
+    "bram_tiles": 123.5
+  },
+  "source_sha256": "ac5fc543b2e633e0abfb6e0e76f00587ad18d0e9120b6a3341c2077a42ad6896",
+  "ip_export_sha256": "19f96f2bb793689da825b016cd02314ce7b55a02f4422694b46e810d9a1732bd",
+  "full_system_resources_pending": true,
+  "physical_125mhz_verified": false,
+  "board_programmed": false,
+  "files": {
+    "clock_configuration_tests.json": "78d2cf9971c73e39b9d4a41f394219fe98c77a3803f6ff9dc9f93dec9ac79ce9",
+    "synthesis_full.log.gz": "1b2acd50238857448d9a94f50ae76fb46c290763abbfd9c38c6d03ae9856b3fd",
+    "synthesis_tail.log": "e23c42a7c78a224f94627c2aea174026dc6e2aa3792a346ec934cdf2af250627",
+    "utilization.rpt": "d69c5d325c133e2c5b9d6e1809b5a002759f1dca7e6852f2680ffd734a46570c"
+  },
+  "full_log_uncompressed_sha256": "e781a53e5ec5e3401bb7b29d007dd91cb9c0d36ca85dd1c1b9c5c3dca2f8249c",
+  "full_log_compression": "gzip; decompressed bytes validated identical to original Vivado synthesis log"
+}

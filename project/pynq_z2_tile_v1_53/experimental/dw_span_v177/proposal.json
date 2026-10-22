@@ -1,0 +1,119 @@
+{
+  "scope": "STATIC_DW_LOOP_PROPOSAL_NOT_RTL_TIMING_OR_FPS",
+  "source_sha256": "1485d8096af8396d67ffbe88f9948398b051b9c03679eab74358d2f3c27a1da9",
+  "model_changed": false,
+  "threshold_changed": false,
+  "mac_loop_iterations_before": 1733760,
+  "mac_loop_iterations_after": 1338624,
+  "reduction_fraction": 0.22790697674418603,
+  "extra_multipliers": 0,
+  "accumulator_storage_slots": 32,
+  "new_RTL_must_prove_write_before_next_16_iteration_read": true,
+  "nearest_and_other_convolutions_keep_32": true,
+  "layers": [
+    {
+      "step": 2,
+      "ow": 112,
+      "oh": 112,
+      "oc": 32,
+      "old32": 258048,
+      "proposed16": 225792
+    },
+    {
+      "step": 5,
+      "ow": 56,
+      "oh": 56,
+      "oc": 96,
+      "old32": 193536,
+      "proposed16": 193536
+    },
+    {
+      "step": 8,
+      "ow": 56,
+      "oh": 56,
+      "oc": 144,
+      "old32": 290304,
+      "proposed16": 290304
+    },
+    {
+      "step": 12,
+      "ow": 28,
+      "oh": 28,
+      "oc": 144,
+      "old32": 72576,
+      "proposed16": 72576
+    },
+    {
+      "step": 15,
+      "ow": 28,
+      "oh": 28,
+      "oc": 192,
+      "old32": 96768,
+      "proposed16": 96768
+    },
+    {
+      "step": 19,
+      "ow": 28,
+      "oh": 28,
+      "oc": 192,
+      "old32": 96768,
+      "proposed16": 96768
+    },
+    {
+      "step": 23,
+      "ow": 14,
+      "oh": 14,
+      "oc": 192,
+      "old32": 48384,
+      "proposed16": 24192
+    },
+    {
+      "step": 26,
+      "ow": 14,
+      "oh": 14,
+      "oc": 384,
+      "old32": 96768,
+      "proposed16": 48384
+    },
+    {
+      "step": 30,
+      "ow": 14,
+      "oh": 14,
+      "oc": 384,
+      "old32": 96768,
+      "proposed16": 48384
+    },
+    {
+      "step": 34,
+      "ow": 14,
+      "oh": 14,
+      "oc": 384,
+      "old32": 96768,
+      "proposed16": 48384
+    },
+    {
+      "step": 38,
+      "ow": 14,
+      "oh": 14,
+      "oc": 384,
+      "old32": 96768,
+      "proposed16": 48384
+    },
+    {
+      "step": 41,
+      "ow": 14,
+      "oh": 14,
+      "oc": 576,
+      "old32": 145152,
+      "proposed16": 72576
+    },
+    {
+      "step": 45,
+      "ow": 14,
+      "oh": 14,
+      "oc": 576,
+      "old32": 145152,
+      "proposed16": 72576
+    }
+  ]
+}

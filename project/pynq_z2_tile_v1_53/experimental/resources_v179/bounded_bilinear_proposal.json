@@ -1,0 +1,13 @@
+{
+  "scope": "EXACT_BILINEAR_WIDTH_PROPOSAL_NOT_RTL_OR_BOARD",
+  "source_sha256": "303cb47b0e08ff460a36870b853308517788421ed870124a4168b136139917ab",
+  "parent": "HLS59",
+  "reason": "Actual HLS56 netlist uses two DSPs for each oversized27x21 vertical multiply;17x9 exactly suffices",
+  "max_den": 448,
+  "max_horizontal": 114240,
+  "max_final": 51179520,
+  "horizontal_bits": 17,
+  "vertical_bits": 26,
+  "model_changed": false,
+  "threshold_changed": false
+}

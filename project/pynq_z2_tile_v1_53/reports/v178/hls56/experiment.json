@@ -1,0 +1,28 @@
+{
+  "hls": 56,
+  "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+  "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+  "board_programmed": false,
+  "estimated_clock_ns": 8.207,
+  "hls_resources": {
+    "BRAM_18K": 251,
+    "DSP": 217,
+    "FF": 66237,
+    "LUT": 66003,
+    "URAM": 0
+  },
+  "full_c_all_117_exact": true,
+  "complete_output_byte_comparison": {
+    "baseline": "v173_all_c10",
+    "cases": 117,
+    "all_identical": true
+  },
+  "reduced_full_function_cosim_pass": true,
+  "ip_exports": [
+    {
+      "filename": "xilinx_com_hls_texture_integer_1_0.zip",
+      "sha256": "5e226df4d655ed3828b48e84fa0e97c0160d747576a2fa62474bc09b88b63108",
+      "bytes": 1188204
+    }
+  ]
+}

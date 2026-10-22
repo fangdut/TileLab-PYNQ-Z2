@@ -1,0 +1,17 @@
+{
+  "scope": "SAVED_CLOCK_CONFIGURATION_TESTS_NOT_PHYSICAL_FREQUENCY_OR_FPS",
+  "passed": true,
+  "checks": [
+    "accepted100MHz_physical_metadata",
+    "candidate125MHz_BD_only",
+    "legacy_fixed_module_clock_rejected",
+    "legacy_fixed_AXI_clock_rejected",
+    "unscaled_HPD_delay_rejected",
+    "requested_unrealized_clock_rejected",
+    "mismatched_clock_net_rejected"
+  ],
+  "verifier_sha256": "c7678ac27b069278604b15402eeede19f4c9c24026289b5210537a251eff882d",
+  "test_sha256": "507066158119f93c0ca0fb6f97d51a0a09e94c35562990aaa8e90c70aa2b57b0",
+  "candidate_bd_sha256": "d4865ca037203bd3b43352f6bc4b38bd31b1f5b9a05f6562c48acb5c33e60de9",
+  "baseline_bd_sha256": "73755f32a67b67460e516cc6ae78a9dd01409575932e1edea78c16067cce516e"
+}

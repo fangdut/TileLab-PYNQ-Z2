@@ -1,0 +1,21 @@
+{
+  "hls": 54,
+  "source_sha256": "1485d8096af8396d67ffbe88f9948398b051b9c03679eab74358d2f3c27a1da9",
+  "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+  "board_programmed": false,
+  "estimated_clock_ns": 8.207,
+  "hls_resources": {
+    "BRAM_18K": 251,
+    "DSP": 219,
+    "FF": 67055,
+    "LUT": 66615,
+    "URAM": 0
+  },
+  "full_c_all_117_exact": true,
+  "complete_output_byte_comparison": {
+    "baseline": "v173_all_c10",
+    "cases": 117,
+    "all_identical": true
+  },
+  "ip_exports": []
+}

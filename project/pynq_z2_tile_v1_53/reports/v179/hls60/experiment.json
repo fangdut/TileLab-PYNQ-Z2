@@ -1,0 +1,14 @@
+{
+  "hls": 60,
+  "source_sha256": "303cb47b0e08ff460a36870b853308517788421ed870124a4168b136139917ab",
+  "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+  "board_programmed": false,
+  "full_c_all_117_exact": true,
+  "complete_output_byte_comparison": {
+    "baseline": "v173_all_c10",
+    "cases": 117,
+    "all_identical": true
+  },
+  "ip_exports": [],
+  "rejected_reason": "C117 exact but HLS legacy frontend crashes before scheduling; superseded by inline same-arithmetic61, no RTL or board"
+}

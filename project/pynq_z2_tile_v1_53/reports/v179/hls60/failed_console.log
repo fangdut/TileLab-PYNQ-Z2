@@ -1,0 +1,112 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Thu Oct 22 12:27:38 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script 'D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/resources_v179/build_bounded_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60 
+WARNING: [HLS 200-2182] The 'v170_hls60' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60'.
+INFO: [HLS 200-1510] Running: open_solution solution -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_top texture_integer 
+INFO: [HLS 200-1510] Running: add_files D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/src/texture_integer.cpp 
+INFO: [HLS 200-10] Adding design file 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/src/texture_integer.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/src/test_integer.cpp -cflags -DTILE_TEST_WIDTH=79 -DTILE_TEST_HEIGHT=65 -DTILE_TEST_WORK_DEPTH=16384 -DTILE_TEST_INPUT_DEPTH=8192 -DTILE_TEST_RESULT_DEPTH=8192 
+INFO: [HLS 200-10] Adding test bench file 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/src/test_integer.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_model.bin 
+INFO: [HLS 200-10] Adding test bench file 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_model.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_rgb.bin 
+INFO: [HLS 200-10] Adding test bench file 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_rgb.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_expected.bin 
+INFO: [HLS 200-10] Adding test bench file 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_expected.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_fa_expected.bin 
+INFO: [HLS 200-10] Adding test bench file 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_fa_expected.bin' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_fb_expected.bin 
+INFO: [HLS 200-10] Adding test bench file 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/test_fb_expected.bin' to the project
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0.8 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.8ns.
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../src/test_integer.cpp in debug mode
+   Compiling ../../../src/texture_integer.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../src/test_integer.cpp:5:
+In file included from D:/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../src/texture_integer.cpp:5:
+In file included from D:/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+V170_COMPLETE_INTEGER_TWO_LAUNCH_PASS
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 160
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:28; Allocated memory: 0.379 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.491 seconds; current allocated memory: 508.148 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'src/texture_integer.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 11.592 seconds; current allocated memory: 514.137 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 37,142 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 18,119 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 12,187 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 11,980 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 11,908 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 23,434 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 12,972 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 12,972 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 12,971 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 14,016 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 13,598 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 13,199 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 13,529 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 13,529 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (D:/Vivado/TileLab_RealPhotos_20261020/v170_hls60/solution/syn/report/csynth_design_size.rpt:2)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:36; Allocated memory: 8.234 MB.
+Pre-synthesis failed.
+    while executing
+"source D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/resources_v179/build_bounded_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 5 seconds. Total elapsed time: 72.586 seconds; peak allocated memory: 516.000 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

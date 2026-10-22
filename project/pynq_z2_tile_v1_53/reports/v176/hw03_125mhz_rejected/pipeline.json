@@ -1,0 +1,20 @@
+{
+  "scope": "ONE_GUARDED_HIGH_FREQUENCY_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE",
+  "status": "FAILED_NO_PROMOTION",
+  "stages": [
+    {
+      "stage": "whole_hardware",
+      "returncode": 1,
+      "seconds": 2030.827999999994
+    },
+    {
+      "stage": "single_postroute_repair",
+      "returncode": 1,
+      "seconds": 767.0940000000046
+    }
+  ],
+  "flash_written": false,
+  "requested_pl_mhz": 125,
+  "board_programmed": false,
+  "error": "single_postroute_repair failed; no promotion"
+}

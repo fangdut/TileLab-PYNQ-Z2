@@ -1,0 +1,159 @@
+[
+  {
+    "hls": 54,
+    "source_sha256": "1485d8096af8396d67ffbe88f9948398b051b9c03679eab74358d2f3c27a1da9",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "estimated_clock_ns": 8.207,
+    "hls_resources": {
+      "BRAM_18K": 251,
+      "DSP": 219,
+      "FF": 67055,
+      "LUT": 66615,
+      "URAM": 0
+    },
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "ip_exports": []
+  },
+  {
+    "hls": 55,
+    "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "estimated_clock_ns": 8.207,
+    "hls_resources": {
+      "BRAM_18K": 251,
+      "DSP": 217,
+      "FF": 66237,
+      "LUT": 66003,
+      "URAM": 0
+    },
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "ip_exports": []
+  },
+  {
+    "hls": 56,
+    "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "estimated_clock_ns": 8.207,
+    "hls_resources": {
+      "BRAM_18K": 251,
+      "DSP": 217,
+      "FF": 66237,
+      "LUT": 66003,
+      "URAM": 0
+    },
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "reduced_full_function_cosim_pass": true,
+    "ip_exports": [
+      {
+        "filename": "xilinx_com_hls_texture_integer_1_0.zip",
+        "sha256": "5e226df4d655ed3828b48e84fa0e97c0160d747576a2fa62474bc09b88b63108",
+        "bytes": 1188204
+      }
+    ]
+  },
+  {
+    "hls": 57,
+    "source_sha256": "95ef914aa2c39fe793502f07263e00687fe72bc923dbe3fe6c1611d3b7c87f62",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "estimated_clock_ns": 12.86,
+    "hls_resources": {
+      "BRAM_18K": 251,
+      "DSP": 219,
+      "FF": 67870,
+      "LUT": 70283,
+      "URAM": 0
+    },
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "ip_exports": [],
+    "rejected_reason": "12.860ns HLS estimate: moving a wide multiply to fabric without internal decomposition fails the clock goal"
+  },
+  {
+    "hls": 58,
+    "source_sha256": "d7735794abe2e8f3e959b440934b5c3381bb4527e9794bb365434f40da0ec1ab",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "full_c_all_117_exact": false,
+    "ip_exports": [],
+    "rejected_reason": "C type ambiguity in signed conditional expression; superseded by frozen59, no RTL or board"
+  },
+  {
+    "hls": 59,
+    "source_sha256": "1157993fb569edb2586a18e24b699275f1609d362d0d994a7991e52b346bb759",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "estimated_clock_ns": 8.207,
+    "hls_resources": {
+      "BRAM_18K": 251,
+      "DSP": 219,
+      "FF": 70191,
+      "LUT": 71772,
+      "URAM": 0
+    },
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "ip_exports": []
+  },
+  {
+    "hls": 60,
+    "source_sha256": "303cb47b0e08ff460a36870b853308517788421ed870124a4168b136139917ab",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "ip_exports": [],
+    "rejected_reason": "C117 exact but HLS legacy frontend crashes before scheduling; superseded by inline same-arithmetic61, no RTL or board"
+  },
+  {
+    "hls": 61,
+    "source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "estimated_clock_ns": 8.207,
+    "hls_resources": {
+      "BRAM_18K": 251,
+      "DSP": 214,
+      "FF": 70073,
+      "LUT": 71767,
+      "URAM": 0
+    },
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "ip_exports": []
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "scope": "MODEL_BOUND_SPATIAL_COORDINATE_PROOF_NOT_RTL_OR_FPS",
+  "passed": true,
+  "source_sha256": "c181c87d0513b7b3481db6b21e16867b30bde3aa2b912e3999f7e77e98de5f85",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "binary_descriptors_checked": 47,
+  "standard3x3_layers": [
+    {
+      "step": 1,
+      "input_channels": 3,
+      "output_channels": 32
+    }
+  ],
+  "depthwise3x3_steps": [
+    2,
+    5,
+    8,
+    12,
+    15,
+    19,
+    23,
+    26,
+    30,
+    34,
+    38,
+    41,
+    45
+  ],
+  "standard3x3_input_channel_limit": 8,
+  "all_nine_kernel_positions_exact": true,
+  "unsupported_standard3x3_has_runtime_error_guard": true
+}
