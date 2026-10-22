@@ -47,3 +47,9 @@ separately. No sustained 10 FPS, achieved 125 MHz, new accepted release or
 award readiness is claimed by these experiments.
 
 Original code MIT; dataset-derived model/evidence retains its existing license.
+
+Source-identical HLS62 reduced full-function RTL passes two launches at
+545,575 / 545,583 cycles; IP export SHA256
+60b008cfeb66d95dbde9d3b245ae6eb503e0dc0f74e4d35507964e916556645b.
+This is 9.49% fewer fixture cycles than HLS39, not a production FPS result.
+The source-bound 100MHz whole-video build is in progress; no board result yet.

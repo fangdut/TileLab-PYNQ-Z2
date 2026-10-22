@@ -155,5 +155,33 @@
       "all_identical": true
     },
     "ip_exports": []
+  },
+  {
+    "hls": 62,
+    "source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+    "scope": "DEVELOPMENT_EXPERIMENT_NOT_BOARD_ACCEPTED",
+    "board_programmed": false,
+    "estimated_clock_ns": 8.207,
+    "hls_resources": {
+      "BRAM_18K": 251,
+      "DSP": 214,
+      "FF": 70073,
+      "LUT": 71767,
+      "URAM": 0
+    },
+    "full_c_all_117_exact": true,
+    "complete_output_byte_comparison": {
+      "baseline": "v173_all_c10",
+      "cases": 117,
+      "all_identical": true
+    },
+    "reduced_full_function_cosim_pass": true,
+    "ip_exports": [
+      {
+        "filename": "xilinx_com_hls_texture_integer_1_0.zip",
+        "sha256": "60b008cfeb66d95dbde9d3b245ae6eb503e0dc0f74e4d35507964e916556645b",
+        "bytes": 1214578
+      }
+    ]
   }
 ]
