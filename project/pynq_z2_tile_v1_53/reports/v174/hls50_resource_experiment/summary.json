@@ -1,0 +1,17 @@
+{
+  "scope": "OFFLINE_COMPLETE_C_AND_ISOLATED_RESOURCE_CHECK_NOT_RTL_OR_BOARD",
+  "source_sha256": "64cd7f4d7e150c4e729e8f457bd9f27a85186506df435eeeba87b043a4c3820c",
+  "all_117_full_output_files_byte_identical_to_hls39": true,
+  "architecture": "HLS39 separate nine-step DW plus direct cached PW",
+  "isolated_serial_luts": 34854,
+  "isolated_serial_ff": 40539,
+  "isolated_dsp": 217,
+  "isolated_bram18_equivalent": 247,
+  "rtl_complete": false,
+  "board_programmed": false,
+  "source_identical_full_hls51_in_progress": true,
+  "scalar_pw_observed_mac_calls": 180,
+  "scalar_pw_observed_lane_outputs": 280800,
+  "scalar_test_sha256": "8f20be5f88ca421856a9a1cb932aeabf2e1de5ffaae2c27ca94b895f6f8bea1a",
+  "scalar_executable_sha256": "d9fba4c20c575f14809f68c6d2c89e32483178cb20a3af91121ba89905ae99ee"
+}

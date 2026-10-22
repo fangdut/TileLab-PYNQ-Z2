@@ -1,0 +1,13 @@
+{
+  "scope": "AGENT_STOPPED_CONGESTED_ROUTING_FOR_RESOURCE_SELECTION_NOT_TOOL_FAILURE",
+  "time": "2026-10-22T05:04:37.613041",
+  "kernel": "HLS46",
+  "stopped_route_pid": 23492,
+  "last_reported_overlaps": 5253,
+  "route_log_sha256": "8befcafa689f73e44d5d9cc86d947494f79006f75d5e197a32e0567075287226",
+  "placed_checkpoint_preserved": true,
+  "reason": "HLS50 retains accepted separate DW, all 117 exact C outputs, serial synthesis 34854 LUT versus 38574 for HLS47; select lower-area design for complete RTL and fresh whole-system build",
+  "board_programmed": false,
+  "flash_written": false,
+  "rtl_pass_remains_valid": true
+}

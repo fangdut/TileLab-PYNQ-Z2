@@ -1,0 +1,462 @@
+{
+  "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "494de759c5b1bc926be9a7ff46e51004bedae0cc1cfdc06c04b867401b039ad5",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_regression_summary_sha256": "d93cd9b4e66b3755824d955e2ee40a6050c00264a4702cc13a32222d0c3b502b",
+  "rtl_cosim_sha256": "7b9c1e451a68b6ff77677a5630bdac6f778fc9b9eeea323567ded00ea75912f6",
+  "hls_dsp": 208,
+  "hls_bram18": 248,
+  "mac_recurrence": {
+    "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+    "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls46",
+    "source_sha256": "494de759c5b1bc926be9a7ff46e51004bedae0cc1cfdc06c04b867401b039ad5",
+    "rtl_sha256": "1b0484a496a0c86eb6de4ec5943be30cb7c27ab2bd6480b8cb512058ba4d85bb",
+    "slots": 32,
+    "banks": [
+      {
+        "bank": "acc",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_1",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_10",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_11",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_12",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_13",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_14",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_15",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_2",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_3",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_4",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_5",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_6",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_7",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_8",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_9",
+        "read_stage": 1,
+        "write_stage": 26,
+        "write_minus_read": 25,
+        "safe_before_next_read": true
+      }
+    ],
+    "all_banks_safe": true,
+    "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively."
+  },
+  "direct_cache_bounds": {
+    "scope": "STATIC_BINARY_GRAPH_BUFFER_BOUNDS_NOT_RUNTIME_INFERENCE",
+    "source_sha256": "494de759c5b1bc926be9a7ff46e51004bedae0cc1cfdc06c04b867401b039ad5",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "model_tasks": 47,
+    "convolution_tasks": 39,
+    "cached_pw_tasks": 25,
+    "max_direct_cache_word": 8063,
+    "cache_capacity_words": 8192,
+    "line_banks": 3,
+    "line_words_per_bank": 512,
+    "quantization_row_words": 224,
+    "tasks": [
+      {
+        "task": 1,
+        "cached": false,
+        "input_width": 224,
+        "input_channels": 3,
+        "physical_row_banks": 3,
+        "max_line_column": 223
+      },
+      {
+        "task": 2,
+        "cached": false,
+        "input_width": 112,
+        "input_channels": 32,
+        "physical_row_banks": 3,
+        "max_line_column": 111
+      },
+      {
+        "task": 3,
+        "cached": true,
+        "input_width": 112,
+        "input_channels": 32,
+        "max_cache_word": 3583,
+        "output_rows_covered": 112
+      },
+      {
+        "task": 4,
+        "cached": true,
+        "input_width": 112,
+        "input_channels": 16,
+        "max_cache_word": 1791,
+        "output_rows_covered": 112
+      },
+      {
+        "task": 5,
+        "cached": false,
+        "input_width": 112,
+        "input_channels": 96,
+        "physical_row_banks": 3,
+        "max_line_column": 111
+      },
+      {
+        "task": 6,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 96,
+        "max_cache_word": 5375,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 7,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 24,
+        "max_cache_word": 1791,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 8,
+        "cached": false,
+        "input_width": 56,
+        "input_channels": 144,
+        "physical_row_banks": 3,
+        "max_line_column": 55
+      },
+      {
+        "task": 9,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 144,
+        "max_cache_word": 8063,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 11,
+        "cached": true,
+        "input_width": 56,
+        "input_channels": 24,
+        "max_cache_word": 1791,
+        "output_rows_covered": 56
+      },
+      {
+        "task": 12,
+        "cached": false,
+        "input_width": 56,
+        "input_channels": 144,
+        "physical_row_banks": 3,
+        "max_line_column": 55
+      },
+      {
+        "task": 13,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 144,
+        "max_cache_word": 4031,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 14,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 32,
+        "max_cache_word": 895,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 15,
+        "cached": false,
+        "input_width": 28,
+        "input_channels": 192,
+        "physical_row_banks": 3,
+        "max_line_column": 27
+      },
+      {
+        "task": 16,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 192,
+        "max_cache_word": 5375,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 18,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 32,
+        "max_cache_word": 895,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 19,
+        "cached": false,
+        "input_width": 28,
+        "input_channels": 192,
+        "physical_row_banks": 3,
+        "max_line_column": 27
+      },
+      {
+        "task": 20,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 192,
+        "max_cache_word": 5375,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 22,
+        "cached": true,
+        "input_width": 28,
+        "input_channels": 32,
+        "max_cache_word": 895,
+        "output_rows_covered": 28
+      },
+      {
+        "task": 23,
+        "cached": false,
+        "input_width": 28,
+        "input_channels": 192,
+        "physical_row_banks": 3,
+        "max_line_column": 27
+      },
+      {
+        "task": 24,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 192,
+        "max_cache_word": 2351,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 25,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 26,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "physical_row_banks": 3,
+        "max_line_column": 13
+      },
+      {
+        "task": 27,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 29,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 30,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "physical_row_banks": 3,
+        "max_line_column": 13
+      },
+      {
+        "task": 31,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 33,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 34,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "physical_row_banks": 3,
+        "max_line_column": 13
+      },
+      {
+        "task": 35,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 37,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 64,
+        "max_cache_word": 783,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 38,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 384,
+        "physical_row_banks": 3,
+        "max_line_column": 13
+      },
+      {
+        "task": 39,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 384,
+        "max_cache_word": 4703,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 40,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 96,
+        "max_cache_word": 1175,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 41,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 576,
+        "physical_row_banks": 3,
+        "max_line_column": 13
+      },
+      {
+        "task": 42,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 576,
+        "max_cache_word": 7055,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 44,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 96,
+        "max_cache_word": 1175,
+        "output_rows_covered": 14
+      },
+      {
+        "task": 45,
+        "cached": false,
+        "input_width": 14,
+        "input_channels": 576,
+        "physical_row_banks": 3,
+        "max_line_column": 13
+      },
+      {
+        "task": 46,
+        "cached": true,
+        "input_width": 14,
+        "input_channels": 576,
+        "max_cache_word": 7055,
+        "output_rows_covered": 14
+      }
+    ]
+  },
+  "centered_packing_weights": null,
+  "opt_directive": "Default",
+  "memory_layout": "shared"
+}

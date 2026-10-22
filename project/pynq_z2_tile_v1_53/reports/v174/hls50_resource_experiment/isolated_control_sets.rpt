@@ -1,0 +1,67 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Thu Oct 22 05:03:21 2026
+| Host         : LAPTOP-UOC8IVHM running 64-bit major release  (build 9200)
+| Command      : report_control_sets -file D:/Vivado/TileLab_RealPhotos_20261020/v174_ooc50/control_sets.rpt
+| Design       : texture_integer
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+
+1. Summary
+----------
+
++---------------------------------------------------+-------+
+|                       Status                      | Count |
++---------------------------------------------------+-------+
+| Total control sets                                |   580 |
+|    Minimum number of control sets                 |   580 |
+|    Addition due to synthesis replication          |     0 |
+|    Addition due to physical synthesis replication |     0 |
++---------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   580 |
+| >= 0 to < 4        |    18 |
+| >= 4 to < 6        |    68 |
+| >= 6 to < 8        |    45 |
+| >= 8 to < 10       |    28 |
+| >= 10 to < 12      |    45 |
+| >= 12 to < 14      |     9 |
+| >= 14 to < 16      |    12 |
+| >= 16              |   355 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            2092 |            0 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            1015 |            0 |
+| Yes          | No                    | No                     |           29289 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            8143 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
