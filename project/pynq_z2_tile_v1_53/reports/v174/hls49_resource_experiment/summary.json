@@ -1,0 +1,14 @@
+{
+  "scope": "OFFLINE_COMPLETE_C_AND_ISOLATED_RESOURCE_CHECK_NOT_RTL_OR_BOARD",
+  "source_sha256": "f7685ac6503beca3e00c292cb032814e29dc4e41c7643a80695aae2d6bdbc3af",
+  "all_117_full_output_files_byte_identical_to_hls39": true,
+  "quant_lanes": 4,
+  "projection_lanes": 8,
+  "isolated_serial_luts": 38594,
+  "isolated_serial_ff": 43833,
+  "isolated_dsp": 211,
+  "isolated_bram18_equivalent": 244,
+  "rtl_complete": false,
+  "board_programmed": false,
+  "note": "Resource screen only; no whole-system timing or board FPS."
+}

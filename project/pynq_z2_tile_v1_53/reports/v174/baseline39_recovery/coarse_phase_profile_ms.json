@@ -1,0 +1,8 @@
+{
+  "capture_or_wait": 19.814984848484848,
+  "preprocessing_and_first_convolution": 12.331068181818182,
+  "depthwise_convolution": 38.608053030303026,
+  "ordinary_or_pointwise_convolution": 51.13505303030302,
+  "residual_add": 2.368931818181818,
+  "post_cnn_head_and_mask": 25.736954545454545
+}

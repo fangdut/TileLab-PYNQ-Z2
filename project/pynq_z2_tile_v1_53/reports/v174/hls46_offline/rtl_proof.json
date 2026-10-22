@@ -1,0 +1,24 @@
+{
+  "scope": "OFFLINE_COMPLETE_C_AND_REDUCED_RTL_PASS_NOT_BOARD",
+  "kernel_sha256": "494de759c5b1bc926be9a7ff46e51004bedae0cc1cfdc06c04b867401b039ad5",
+  "fixture_model_sha256": "892e5b9e6efc5d276fa3cd75190c13207806642354b3cabb1e34164cfe5158fb",
+  "fixture_rgb_sha256": "0c3eec335dc3f27290030c85a6b3162e063736c3c23d7b237dffd0303c83a933",
+  "fixture_input_width": 79,
+  "fixture_input_height": 65,
+  "fixture_internal_side": 80,
+  "fixture_task_count": 9,
+  "rtl_launches": 2,
+  "rtl_cycles": [
+    533811,
+    533819
+  ],
+  "prior_same_fixture_hls39_cycles": [
+    602800,
+    602808
+  ],
+  "cycle_reduction_percent": 11.444757796947579,
+  "ip_export_sha256": "00b3da8a8ddbfc7c546c9ac1ae18b8e04dd752480290369dc0869a9b0bba30e5",
+  "all_117_complete_output_files_byte_identical_to_hls39": true,
+  "rtl_dependency_warnings": 0,
+  "full_resolution_fpga_fps_established": false
+}

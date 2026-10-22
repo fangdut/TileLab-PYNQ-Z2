@@ -1,0 +1,28 @@
+{
+  "scope": "EXACT_PROJECTION_INTEGER_RANGE_PROOF_NOT_RTL_OR_BOARD",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "source_sha256": "675110d927926d094ed09742b7fe6252294241ff5e7d072a2d21c438d743b476",
+  "activations_domain": [
+    -128,
+    127
+  ],
+  "weights_domain": [
+    -32768,
+    32767
+  ],
+  "sixteen_term_magnitude_bound": 67108864,
+  "all_128_term_magnitude_bound": 536870912,
+  "signed32_sums_safe": true,
+  "actual_bias_magnitude_bound": 3663013,
+  "biased_sum_magnitude_bound": 540533925,
+  "signed64_bias_add_safe": true,
+  "rounding_shift": 8,
+  "rounded_magnitude_bound": 2111461,
+  "signed32_rounded_cast_safe": true,
+  "actual_projection_weight_range": [
+    -32767,
+    29583
+  ],
+  "accumulator_recurrence_distance": 64,
+  "rtl_pipeline_latency_and_ii_still_required": true
+}

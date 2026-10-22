@@ -1,0 +1,16 @@
+{
+  "scope": "OFFLINE_COMPLETE_C_AND_ISOLATED_RESOURCE_CHECK_NOT_RTL_OR_BOARD",
+  "source_sha256": "675110d927926d094ed09742b7fe6252294241ff5e7d072a2d21c438d743b476",
+  "all_117_full_output_files_byte_identical_to_hls39": true,
+  "quant_lanes": 4,
+  "projection_lanes": 16,
+  "isolated_serial_luts": 38574,
+  "isolated_serial_ff": 43196,
+  "isolated_dsp": 217,
+  "isolated_bram_tiles": 122,
+  "hls47_synthesis_only": true,
+  "full_hls48_same_source_queued": true,
+  "rtl_complete": false,
+  "board_programmed": false,
+  "note": "Standalone serial synthesis is a resource screen; whole-system timing and FPS must still be measured."
+}

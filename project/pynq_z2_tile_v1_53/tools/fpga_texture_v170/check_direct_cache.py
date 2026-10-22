@@ -2,7 +2,7 @@
 from pathlib import Path
 import argparse,hashlib,json,struct
 
-def analyze(tasks):
+def analyze(tasks,banked=True):
     rows=[]
     for i,t in enumerate(tasks):
         if t[0] not in (1,2):continue
@@ -12,7 +12,9 @@ def analyze(tasks):
         if not (1<=ow<=224 and oh>=1):raise ValueError('Quantization row capacity exceeded')
         cached=t[0]==1 and k==1 and st==1 and pad==0
         groups=(ic+15)//16
-        if t[0]==1 and not cached and not ((k==3 and ic==3) or (k==1 and ic<=48)):raise ValueError('Uncached ordinary convolution exceeds three physical row banks')
+        if not cached:
+            if banked and t[0]==1 and not ((k==3 and ic==3) or (k==1 and ic<=48)):raise ValueError('Uncached ordinary convolution exceeds three physical row banks')
+            if not banked and groups*k*iw>2048:raise ValueError('Uncached convolution exceeds flat line storage')
         r=dict(task=i+1,cached=cached,input_width=iw,input_channels=ic)
         if cached:
             tile=max(1,min(8192//(groups*iw),max(1,min(oh,16))))
@@ -29,18 +31,23 @@ def analyze(tasks):
                     peak=max(peak,last);covered+=batch;local+=batch
             if covered!=oh:raise ValueError('PW row coverage differs')
             r.update(max_cache_word=peak,output_rows_covered=covered)
-        else:r.update(physical_row_banks=3,max_line_column=iw-1)
+        elif banked:r.update(physical_row_banks=3,max_line_column=iw-1)
+        else:r.update(flat_line_words=groups*k*iw,max_line_word=groups*k*iw-1)
         rows.append(r)
     return rows
 
 def inspect(source,profile):
-    if b'Single-read physical row banks' not in source.read_bytes():return None
+    raw=source.read_bytes()
+    banked=b'Single-read physical row banks' in raw
+    flat=b'const pack_t line[LD],const pack_t *__restrict cache,bool cached' in raw
+    if not banked and not flat:return None
+    if banked and flat:raise ValueError('Ambiguous direct-cache line storage')
     data=(profile/'model.bin').read_bytes();header=struct.unpack_from('<64I',data);graph=json.loads((profile/'graph.json').read_text())
     tasks=[list(struct.unpack_from('<24I',data,256+i*96)) for i in range(header[2])]
     if tasks!=graph['tasks']:raise ValueError('Graph JSON differs from binary task descriptors')
     sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-    rows=analyze(tasks)
-    return dict(scope='STATIC_BINARY_GRAPH_BUFFER_BOUNDS_NOT_RUNTIME_INFERENCE',source_sha256=sha(source),model_sha256=sha(profile/'model.bin'),model_tasks=len(tasks),convolution_tasks=len(rows),cached_pw_tasks=sum(r['cached'] for r in rows),max_direct_cache_word=max(r.get('max_cache_word',0) for r in rows),cache_capacity_words=8192,line_banks=3,line_words_per_bank=512,quantization_row_words=224,tasks=rows)
+    rows=analyze(tasks,banked=banked)
+    return dict(scope='STATIC_BINARY_GRAPH_BUFFER_BOUNDS_NOT_RUNTIME_INFERENCE',source_sha256=sha(source),model_sha256=sha(profile/'model.bin'),model_tasks=len(tasks),convolution_tasks=len(rows),cached_pw_tasks=sum(r['cached'] for r in rows),max_direct_cache_word=max(r.get('max_cache_word',0) for r in rows),cache_capacity_words=8192,line_banks=3 if banked else 1,line_words_per_bank=512 if banked else 2048,quantization_row_words=224,tasks=rows)
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--profile',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
