@@ -1,0 +1,28 @@
+{
+  "scope": "ROW_BATCHING_C_EXACT_117_FRESH_RTL_PENDING_NOT_BOARD",
+  "source_sha256": "8ec36b8e23f1d3207b6d0fa5944899729bd11cc9c2df68cbcb627b855856aef4",
+  "synthesis_only_hls": 36,
+  "fresh_full_flow_hls": 38,
+  "source_identical": true,
+  "rtl_passed": false,
+  "board_programmed": false,
+  "failed_resume_reason": "Missing apatb_texture_integer_sw and texture_integer_hw_stub at C wrapper link; design source was absent from resumed compile list. Rebuild fresh with absolute source paths.",
+  "evidence_sha256": {
+    "failed_resume_cosim.rpt": "37ef80b8b2d303aaddf78ff17fb2b36403abd04ed702575b7de214554823acb3",
+    "failed_resume_console.log": "9e334896c25ddd661aa4e63ec88904e9a4cd3caa721116a53e6973720f42234d",
+    "failed_resume_helper.tcl": "c2c44066add6947c6d7d948aa3adaf9d267ae137a2770e5c9c20b58f51428734",
+    "hls36_synthesis.xml": "3e510b2ee9876db175631a2bea253efa1ba9fe5f333097c947863bd3955f8592",
+    "hls36_synthesis.rpt": "bec0255a7cf037c7160e729321ec0184a2e60b2ae86de8fc081628e3cf6b8c8d",
+    "real_crack_c_check.json": "a1bace3e65abc788d35adffd3e3be297f363966ad95996db24ce4f6ade3fad61",
+    "odd_rows_c_check.json": "315a1c43d6a89a88ee15790d7594d1508a084b73d19fe26f024c30b71d2fcd74",
+    "full_c_summary.json": "c7ae0a84cb0759c80434812fd9df9b3e04b1ac3fbacedf2df5e3c6caca3788c2",
+    "full_c_results.json": "85258fb83e8b8c2811e0285686414645f0ddfe836c3a4043097d07c92e399b36",
+    "static_schedule.json": "c78f77fe467210e9291c57eb49aa23897dba8b6f19996f8f5b97e3ea87d6ea07",
+    "interrupted_hls37_console.log": "d428dc4e70c6d6851f27315504fd001817fecf17671526cbefc3ab1f5f831b56"
+  },
+  "interrupted_full_flow_hls": 37,
+  "interruption": "All corresponding processes absent after interrupted turn; partial HLS37 preserved. Fresh HLS38 uses byte-identical source.",
+  "full_c_117_complete": true,
+  "all_scores_and_masks_exact": true,
+  "correct_on_exposed_development_set": 117
+}

@@ -16,17 +16,26 @@ def mask_reference(scores,width,height,threshold):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--dataset',type=Path,required=True);p.add_argument('--profile',type=Path,required=True)
-    p.add_argument('--compiled-check',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--workers',type=int,default=4);a=p.parse_args()
-    a.out.mkdir(parents=True,exist_ok=False);data=json.loads((a.dataset/'manifest.json').read_text(encoding='utf8'))
+    p.add_argument('--compiled-check',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--workers',type=int,default=4);p.add_argument('--resume',action='store_true');a=p.parse_args()
+    a.out.mkdir(parents=True,exist_ok=a.resume);data=json.loads((a.dataset/'manifest.json').read_text(encoding='utf8'))
     rows=[r for r in data['images'] if r['role']=='test'];graph=json.loads((a.profile/'graph.json').read_text(encoding='utf8'))
-    source=a.compiled_check/'kernel.cpp';exe=a.compiled_check/'check.exe';started=time.perf_counter();results=[]
-    save(a.out/'plan.json',dict(scope='OFFLINE_HLS_C_ALL_117_NOT_BOARD',ids=[r['id'] for r in rows],source_sha256=sha(source),model_sha256=sha(a.profile/'model.bin')))
+    source=a.compiled_check/'kernel.cpp';exe=a.compiled_check/'check.exe';started=time.perf_counter();results=[];reused=set()
+    plan=dict(scope='OFFLINE_HLS_C_ALL_117_NOT_BOARD',ids=[r['id'] for r in rows],source_sha256=sha(source),model_sha256=sha(a.profile/'model.bin'))
+    if a.resume and json.loads((a.out/'plan.json').read_text())!=plan:raise ValueError('Resume source/model/case plan differs')
+    save(a.out/'plan.json',plan)
     def run(r):
-        case=a.out/r['id'];case.mkdir();im=a.dataset/r['file']
+        case=a.out/r['id'];case.mkdir(exist_ok=a.resume);im=a.dataset/r['file']
         with Image.open(im) as image:rgb=np.array(image.convert('RGB'),dtype='<u4')
         h,w=rgb.shape[:2];((rgb[:,:,0]<<16)|(rgb[:,:,1]<<8)|rgb[:,:,2]).astype('<u4').tofile(case/'input.bin')
-        with (case/'c.log').open('w') as log:
-            subprocess.run([str(exe),str(a.profile/'model.bin'),str(case/'input.bin'),str(case/'result.bin'),str(w),str(h)],stdout=log,stderr=subprocess.STDOUT,check=True,timeout=180)
+        previous=case/'check.json'
+        reuse=False
+        if a.resume and previous.exists() and (case/'result.bin').exists():
+            proof=json.loads(previous.read_text())
+            reuse=proof['id']==r['id'] and proof['result_sha256']==sha(case/'result.bin')
+        if reuse:reused.add(r['id'])
+        if not reuse:
+            with (case/'c.log').open('w') as log:
+                subprocess.run([str(exe),str(a.profile/'model.bin'),str(case/'input.bin'),str(case/'result.bin'),str(w),str(h)],stdout=log,stderr=subprocess.STDOUT,check=True,timeout=180)
         out=np.fromfile(case/'result.bin',dtype='<u4');g=int(out[5]);scores=out[16:16+g*g].reshape(g,g);expected=np.load(a.profile/(r['id']+'_scores.npy'))
         error=int(np.abs(scores.astype('i8')-expected).max());mask=out[16+g*g:].reshape(h,w);reference=mask_reference(expected,w,h,graph['threshold'])
         mismatches=int(np.count_nonzero(mask!=reference));correct=bool(out[2])==(r['label']!='good')
@@ -40,6 +49,7 @@ def main():
             save(a.out/'progress.json',results)
     results.sort(key=lambda r:r['id']);save(a.out/'results.json',results)
     summary=dict(scope='OFFLINE_HLS_C_ALL_117_NOT_BOARD',cases=len(results),all_grid_values_exact=True,all_original_size_masks_exact=True,
-        correct=sum(r['ground_truth_correct'] for r in results),source_sha256=sha(source),model_sha256=sha(a.profile/'model.bin'),elapsed_seconds=time.perf_counter()-started)
+        correct=sum(r['ground_truth_correct'] for r in results),source_sha256=sha(source),model_sha256=sha(a.profile/'model.bin'),elapsed_seconds=time.perf_counter()-started,
+        resumed=a.resume,revalidated_saved_results=len(reused),elapsed_scope='current invocation only; excludes prior interrupted work; not FPGA speed')
     save(a.out/'summary.json',summary);print(json.dumps(summary),flush=True)
 if __name__=='__main__':main()

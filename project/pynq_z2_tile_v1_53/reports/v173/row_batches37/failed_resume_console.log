@@ -1,0 +1,183 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Wed Oct 21 09:33:17 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+
+Sourcing Tcl script 'D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/packed_mac_v173/finish_detector_hls.tcl'
+
+INFO: [HLS 200-1510] Running: open_project D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36 
+
+WARNING: [HLS 200-2182] The 'v170_hls36' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+
+INFO: [HLS 200-10] Opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36'.
+
+INFO: [HLS 200-1510] Running: open_solution solution 
+
+INFO: [HLS 200-10] Opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36/solution'.
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+
+INFO: [HLS 200-1510] Running: cosim_design -rtl verilog -tool xsim 
+
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+
+   Build using "D:/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling apatb_texture_integer.cpp
+   Compiling test_integer.cpp_pre.cpp.tb.cpp
+   Compiling apatb_texture_integer_ir.ll
+   Generating cosim.tv.exe
+In file included from apatb_texture_integer.cpp:14:
+In file included from D:/2025.2/Vitis/include\ap_fixed.h:9:
+In file included from D:/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36/src/test_integer.cpp:5:
+In file included from D:/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2025.2/Vitis/include\gmp.h:2304:345: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+                                                                                                                                                                                                                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+D:/2025.2/Vitis/include\gmp.h:2304:345: note: remove extraneous parentheses around the comparison to silence this warning
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+                                                                                                                                                                                                                                                                     ~                                                                                  ^   ~
+D:/2025.2/Vitis/include\gmp.h:2304:345: note: use '=' to turn this equality comparison into an assignment
+  do { mp_size_t __gmp_i; mp_limb_t __gmp_x; __gmp_i = (__gmp_ysize); if (__gmp_i != 0) { if (__gmpn_add_n (__gmp_wp, __gmp_xp, __gmp_yp, __gmp_i)) { do { if (__gmp_i >= (__gmp_xsize)) { (__gmp_c) = 1; goto __gmp_done; } __gmp_x = (__gmp_xp)[__gmp_i]; } while ((((__gmp_wp)[__gmp_i++] = (__gmp_x + 1) & ((~ (static_cast<mp_limb_t> (0))) >> 0)) == 0)); } } if ((__gmp_wp) != (__gmp_xp)) do { mp_size_t __gmp_j; for (__gmp_j = (__gmp_i); __gmp_j < (__gmp_xsize); __gmp_j++) (__gmp_wp)[__gmp_j] = (__gmp_xp)[__gmp_j]; } while (0); (__gmp_c) = 0; __gmp_done: ; } while (0);
+                                                                                                                                                                                                                                                                                                                                                        ^~
+                                                                                                                                                                                                                                                                                                                                                        =
+In file included from D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36/src/test_integer.cpp:5:
+In file included from D:/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2025.2/Vitis/include\hls_half.h:26:
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:375:30: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+        if (((fr)->_mpfr_exp == (0 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:375:30: note: remove extraneous parentheses around the comparison to silence this warning
+        if (((fr)->_mpfr_exp == (0 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+            ~                ^                                                ~
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:375:30: note: use '=' to turn this equality comparison into an assignment
+        if (((fr)->_mpfr_exp == (0 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                             ^~
+                             =
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:377:37: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+        } else if (((fr)->_mpfr_exp == (2 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                    ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:377:37: note: remove extraneous parentheses around the comparison to silence this warning
+        } else if (((fr)->_mpfr_exp == (2 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                   ~                ^                                                ~
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:377:37: note: use '=' to turn this equality comparison into an assignment
+        } else if (((fr)->_mpfr_exp == (2 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                                    ^~
+                                    =
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:379:37: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+        } else if (((fr)->_mpfr_exp == (1 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                    ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:379:37: note: remove extraneous parentheses around the comparison to silence this warning
+        } else if (((fr)->_mpfr_exp == (1 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                   ~                ^                                                ~
+D:/2025.2/Vitis/include/etc/hls_half_fpo.h:379:37: note: use '=' to turn this equality comparison into an assignment
+        } else if (((fr)->_mpfr_exp == (1 - ((mpfr_exp_t) (((mpfr_uexp_t) -1) >> 1))))) {
+                                    ^~
+                                    =
+In file included from D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36/src/test_integer.cpp:5:
+In file included from D:/2025.2/Vitis/include\ap_int.h:11:
+D:/2025.2/Vitis/include\etc/ap_int_base.h:394:22: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    do { if ((length == 0)) { fprintf((__acrt_iob_func(2)), "WARNING: " "ap_int<> is being initialized with an empty C string, which can result in undefined behavior during simulation/synthesis"); fprintf((__acrt_iob_func(2)), "\n"); } } while (0);
+              ~~~~~~~^~~~
+D:/2025.2/Vitis/include\etc/ap_int_base.h:394:22: note: remove extraneous parentheses around the comparison to silence this warning
+    do { if ((length == 0)) { fprintf((__acrt_iob_func(2)), "WARNING: " "ap_int<> is being initialized with an empty C string, which can result in undefined behavior during simulation/synthesis"); fprintf((__acrt_iob_func(2)), "\n"); } } while (0);
+             ~       ^   ~
+D:/2025.2/Vitis/include\etc/ap_int_base.h:394:22: note: use '=' to turn this equality comparison into an assignment
+    do { if ((length == 0)) { fprintf((__acrt_iob_func(2)), "WARNING: " "ap_int<> is being initialized with an empty C string, which can result in undefined behavior during simulation/synthesis"); fprintf((__acrt_iob_func(2)), "\n"); } } while (0);
+                     ^~
+                     =
+In file included from D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36/src/test_integer.cpp:5:
+In file included from D:/2025.2/Vitis/include\ap_int.h:439:
+In file included from D:/2025.2/Vitis/include\ap_fixed.h:10:
+D:/2025.2/Vitis/include\etc/ap_fixed_base.h:447:21: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+    do { if ((radix == 0)) { fprintf((__acrt_iob_func(2)), "ERROR: " "ap_fixed_base(const char* \"%s\", %d), str=%s, radix = %d", s, rd, str.c_str(), radix); fprintf((__acrt_iob_func(2)), "\n"); abort(); } } while (0);
+              ~~~~~~^~~~
+D:/2025.2/Vitis/include\etc/ap_fixed_base.h:447:21: note: remove extraneous parentheses around the comparison to silence this warning
+    do { if ((radix == 0)) { fprintf((__acrt_iob_func(2)), "ERROR: " "ap_fixed_base(const char* \"%s\", %d), str=%s, radix = %d", s, rd, str.c_str(), radix); fprintf((__acrt_iob_func(2)), "\n"); abort(); } } while (0);
+             ~      ^   ~
+D:/2025.2/Vitis/include\etc/ap_fixed_base.h:447:21: note: use '=' to turn this equality comparison into an assignment
+    do { if ((radix == 0)) { fprintf((__acrt_iob_func(2)), "ERROR: " "ap_fixed_base(const char* \"%s\", %d), str=%s, radix = %d", s, rd, str.c_str(), radix); fprintf((__acrt_iob_func(2)), "\n"); abort(); } } while (0);
+                    ^~
+                    =
+6 warnings generated.
+e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024ld.lld: error: undefined symbol: apatb_texture_integer_sw
+>>> referenced by D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36/src\test_integer.cpp:39
+>>>               obj/test_integer.cpp_pre.cpp.tb.o:(main)
+>>> referenced by D:/Vivado/TileLab_RealPhotos_20261020/v170_hls36/src\test_integer.cpp:52
+>>>               obj/test_integer.cpp_pre.cpp.tb.o:(main)
+
+ld.lld: error: undefined symbol: texture_integer_hw_stub
+>>> referenced by obj/apatb_texture_integer_ir.o:(texture_integer_hw_stub_wrapper)
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+mingw32-make: *** [Makefile.rules:333: cosim.tv.exe] Error 1
+ERROR: [COSIM 212-317] C++ compile error.
+
+ERROR: [COSIM 212-321] EXE file generate failed.
+
+ERROR: [COSIM 212-321] EXE file generate failed.
+
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:00:35; Allocated memory: 21.477 MB.
+
+command 'ap_source' returned error code
+
+    while executing
+
+"source D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/packed_mac_v173/finish_detector_hls.tcl"
+
+    ("uplevel" body line 1)
+
+    invoked from within
+
+"uplevel \#0 [list source $tclfile] "
+
+
+
+INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 26 seconds. Total elapsed time: 69.402 seconds; peak allocated memory: 528.008 MB.
+
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

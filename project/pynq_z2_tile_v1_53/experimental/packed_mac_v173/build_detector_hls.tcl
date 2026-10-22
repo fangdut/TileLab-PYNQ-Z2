@@ -23,11 +23,11 @@ cd $out
 open_project $out
 open_solution solution -flow_target vivado
 set_top texture_integer
-add_files src/texture_integer.cpp
+add_files $out/src/texture_integer.cpp
 set tb_flags {-DTILE_TEST_WIDTH=79 -DTILE_TEST_HEIGHT=65 -DTILE_TEST_WORK_DEPTH=16384 -DTILE_TEST_INPUT_DEPTH=8192 -DTILE_TEST_RESULT_DEPTH=8192}
 if {[info exists ::env(TILE_PACKED_SMALL_FIXTURE)]} {set tb_flags {}}
-add_files -tb src/test_integer.cpp -cflags $tb_flags
-foreach name {test_model.bin test_rgb.bin test_expected.bin test_fa_expected.bin test_fb_expected.bin} {add_files -tb $name}
+add_files -tb $out/src/test_integer.cpp -cflags $tb_flags
+foreach name {test_model.bin test_rgb.bin test_expected.bin test_fa_expected.bin test_fb_expected.bin} {add_files -tb $out/$name}
 set_part xc7z020clg400-1
 create_clock -period 10 -name default
 set_clock_uncertainty 1
