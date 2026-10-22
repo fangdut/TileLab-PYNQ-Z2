@@ -16,7 +16,7 @@
 | V173 多行批次（HLS38） | 117 张 C 评分/掩膜一致，两次缩小配置 RTL 检测通过 | 完整 HDMI 硬件由后续 HLS39 合并验证，尚未单独上板 |
 | **V173 R2 已验证（HLS39）** | **117/117 原始照片和 HDMI 均通过，0/33 良品误报、17/17 裂纹检出**；连续 248.879 秒自主完成 1659 次检测，**6.666 FPS**；固定帧 **7.539 FPS**；ARM 双核暂停检查 119 次 | 公开开发集；尚未完成独立盲测、细裂纹定位与持续 10 FPS 验收 |
 
-117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。最新已验证编译文件、实拍示例与实验记录见 [V173 开发快照](deliverables/V173_Verified_HDMI_6p00FPS_Dev.zip)；[V172 快照](deliverables/V172_Verified_HDMI_5p45FPS_Dev.zip) 与 [旧 V170 完整快照](deliverables/V170_Verified_FullPL_4p28FPS_R1.zip) 保留。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
+117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。最新已验证编译文件、实拍示例与实验记录见 [V173 R2 开发快照](deliverables/V173R2_Verified_HDMI_6p67FPS_Dev.zip)；[V173 掩膜快照](deliverables/V173_Verified_HDMI_6p00FPS_Dev.zip)；[V172 快照](deliverables/V172_Verified_HDMI_5p45FPS_Dev.zip) 与 [旧 V170 完整快照](deliverables/V170_Verified_FullPL_4p28FPS_R1.zip) 保留。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
 
 - [工程状态与职责划分](FPGA_MIGRATION_STATUS.md)
 - [V169 源码、构建、部署说明](project/pynq_z2_tile_v1_53/experimental/texture_v169/README.md)
