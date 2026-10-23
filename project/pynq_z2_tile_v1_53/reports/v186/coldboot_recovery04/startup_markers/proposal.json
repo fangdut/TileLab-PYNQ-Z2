@@ -1,0 +1,23 @@
+{
+  "scope": "UNPROGRAMMED_STARTUP_MARKER_FIRMWARE_PROPOSAL",
+  "source_sha256": "42d09c2f60f8b99804c42bb546d9f64ea1ed5f77fd2be9ea47eb28d909e7a37b",
+  "original_sha256": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+  "marker_register": "SLCR REBOOT_STATUS bits31:24,lower24bits preserved",
+  "markers": {
+    "0xa1": "before DCacheDisable",
+    "0xa2": "after DCacheDisable",
+    "0xa3": "before boot-mailbox read",
+    "0xa4": "after boot-mailbox read",
+    "0xa5": "before PL identity read",
+    "0xa6": "after PL identity read",
+    "0xa7": "DDR TLB attributes done",
+    "0xa8": "before Ethernet initialization",
+    "0xa9": "after Ethernet initialization",
+    "0xaa": "TCP listener ready",
+    "0xe1": "zero boot identity",
+    "0xe2": "wrong PL identity",
+    "0xe3": "Ethernet init failure"
+  },
+  "detection_cpu_or_gpu": false,
+  "board_programmed": false
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "COLD_POWER_CYCLE_ACKNOWLEDGED_USB_RECOVERY_BLOCKED_DIAGNOSTIC_BUILD_ONLY",
+  "power_cycle_confirmed_by_user": true,
+  "jtag_first_scan_saw_arm": true,
+  "usb_interface_b_problem_code": 10,
+  "new_jtag_scan_no_device": true,
+  "os_device_restart": "ACCESS_DENIED",
+  "ftdi_expected_serial_open_status": 3,
+  "waiting_for": "USB_DATA_CABLE_PHYSICAL_REPLUG",
+  "baseline_restore_completed": false,
+  "diagnostic_firmware_compiled": true,
+  "diagnostic_firmware_programmed": false,
+  "elf_sha256": "cc5d99de4a693117aecf4965e2a512fa48493054bd15cb0d2eaf767973a1b733",
+  "new_fpga_fps_available": false,
+  "flash_written": false,
+  "files": {
+    "v186_coldboot_preflight04.log": "aca54aa9ddee95bd70117bc4fc759b448a1d13c1cef04094a923e3bff8cb66a4",
+    "v186_coldboot_preflight05.log": "5fc46c760af01ad9fec98b7208038b002d5b4929236fda0cef14d37c73c6e0ec",
+    "v186_ftdi_cycle05.json": "86a9a3c0554352393f9910b5b8354ececae2c0d74c73fe36f2f3e395f042fc55",
+    "restore179_attempt/program.log": "acb91f3e841bffb88685a1ea12967963953bad6d43b6e4aa267d6ed92a4fe2e2",
+    "restore179_attempt/program.tcl": "3edbfda80b183043b92ea0f5bacf20d460b036dc510060d8a9a3765e48a40c8f",
+    "startup_markers/build.log": "f503420b1b4ab3c23b05b31525f113d5248c1eddf2f5e6627ebca04c6ba013b7",
+    "startup_markers/BUILD_RESULT.json": "71c25ffab5cccd42bc8ebf6d1aeec9240461ce3ff89390e7c40bca4e72a865af",
+    "startup_markers/proposal.json": "3640562dd1404a7a64c75ca34767a522b78bb9fab99c0d6ae109ac31755c1885"
+  }
+}

@@ -1,0 +1,53 @@
+
+****** Xilinx Vitis Development Environment
+****** Vitis v2025.2 (64-bit)
+****** SW Build 6295257 on 2025-11-13-08:29:30
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Vitis Server started on port '55784'.
+Vitis Server for Embedded Edition. Only embedded component related functions are supported.
+Initiating build for the texture_transport component.
+Command: cmd.exe /C set CC= && set CXX= && empyro.bat build_app -s D:\Vivado\TileLab_RealPhotos_20261020\v186_startup_markers01\software.sdk\texture_transport\src -b D:\Vivado\TileLab_RealPhotos_20261020\v186_startup_markers01\software.sdk\texture_transport\build
+[INFO]: Starting Application build process
+[INFO]: Building Application
+[1/4] ==========Application Build Information ==========
+Compiler Flags:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=D:/Vivado/TileL
+ab_RealPhotos_20261020/v186_acceptance01/software.sdk/texture_platform/export/texture_platform/sw/st
+andalone_a9/Xilinx.spec -ID:/Vivado/TileLab_RealPhotos_20261020/v186_acceptance01/software.sdk/textu
+re_platform/export/texture_platform/sw/standalone_a9/include -Wall -Wextra      -O2  -g3    -fno-bui
+ltin-memcpy -U__clang__  
+Linker Flags:       -Wl,-T -Wl,"D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/softwar
+e.sdk/texture_transport/src/lscript.ld" -L"D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_marker
+s01/software.sdk/texture_transport/src/" -L"D:/Vivado/TileLab_RealPhotos_20261020/v186_acceptance01/
+software.sdk/texture_platform/export/texture_platform/sw/standalone_a9/lib/" -L"/" -Wl,--start-group
+,-lxilstandalone,-lxiltimer,-llwip220,-lxil,-lgcc,-lc -Wl,--end-group
+===========================================
+[2/4] Building C object CMakeFiles/texture_transport.elf.dir/safe_memcpy.c.obj
+[3/4] Building C object CMakeFiles/texture_transport.elf.dir/main.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c: In function 'pump':
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c:74:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   74 |   if(tcp_write(client,p,n,TCP_WRITE_FLAG_COPY)!=ERR_OK)break;tx_pos+=n;
+      |   ^~
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c:74:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   74 |   if(tcp_write(client,p,n,TCP_WRITE_FLAG_COPY)!=ERR_OK)break;tx_pos+=n;
+      |                                                              ^~~~~~
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c: In function 'start_request':
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c:129:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  129 |  if(!req[3])completed();return 1;
+      |  ^~
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c:129:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  129 |  if(!req[3])completed();return 1;
+      |                         ^~~~~~
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c: In function 'received':
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c:139:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  139 |    if(n>64-rx_used)n=64-rx_used;pbuf_copy_partial(p,(unsigned char*)req+rx_used,n,pos);rx_used+=n;pos+=n;
+      |    ^~
+D:/Vivado/TileLab_RealPhotos_20261020/v186_startup_markers01/software.sdk/texture_transport/src/main.c:139:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  139 |    if(n>64-rx_used)n=64-rx_used;pbuf_copy_partial(p,(unsigned char*)req+rx_used,n,pos);rx_used+=n;pos+=n;
+      |                                 ^~~~~~~~~~~~~~~~~
+[4/4] Linking C executable texture_transport.elf
+   text	   data	    bss	    dec	    hex	filename
+ 118538	   3476	4290000	4412014	 43526e	texture_transport.elf
+Build Finished successfully
+Shutting down Vitis server running on port '55784'
