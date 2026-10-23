@@ -22,6 +22,10 @@ def main():
     def tpath(p):return '{'+p.resolve().as_posix()+'}'
     script='''if {[catch {
 connect -url tcp:127.0.0.1:3121
+jtag targets -set 1
+puts "previous_jtag_clock [jtag frequency]"
+if {[jtag frequency 1000000] != 1000000} {error "Could not select 1MHz JTAG clock"}
+puts "program_jtag_clock [jtag frequency]"
 set inventory [targets]
 puts $inventory
 if {![regexp {ARM Cortex-A9} $inventory]} {
@@ -30,19 +34,29 @@ if {![regexp {ARM Cortex-A9} $inventory]} {
  after 2000
  disconnect
  connect -url tcp:127.0.0.1:3121
+ jtag targets -set 1
+ if {[jtag frequency 1000000] != 1000000} {error "Could not select 1MHz JTAG clock"}
+ puts "program_jtag_clock [jtag frequency]"
  puts [targets]
 }
 targets -set -filter {name =~ "ARM*#0"}
+puts "stage_reset_begin"
 rst -system
 after 1000
 stop
 source INIT
+puts "stage_ps_init_begin"
 ps7_init
+puts "stage_bit_download_begin"
 fpga -file BIT
+puts "stage_bit_download_done"
 ps7_post_config
+puts "stage_elf_download_begin"
 dow ELF
+puts "stage_elf_download_done"
 mwr 0x05f00000 [list 0 0 BOOT 0 0 0 0 0]
 con
+puts "stage_run_done"
 after 2000
 targets -set -filter {name == "APU"}
 loadhw -hw XSA

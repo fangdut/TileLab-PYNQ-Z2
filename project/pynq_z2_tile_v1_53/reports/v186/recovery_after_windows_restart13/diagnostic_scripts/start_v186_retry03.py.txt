@@ -1,0 +1,30 @@
+"""Fresh physical acceptance after preserved JTAG startup failure and restore."""
+from pathlib import Path
+import json,subprocess,sys,time,hashlib
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');W=Path('D:/Vivado/TileLab_RealPhotos_20261020')
+sys.path.insert(0,str(P/'scripts/texture_v170'))
+from run_physical_trial import review_board_result
+from verify_clock import verify as verify_clock
+from verify_memory_layout import verify as verify_memory_layout
+read=lambda p:json.loads(p.read_text());hw=W/'v186_hw01';out=W/'v186_acceptance03';state=W/'v186_retry_pipeline03.json'
+assert not out.exists() and not state.exists()
+assert read(W/'v186_physical_pipeline01.json')['status']=='FAILED_NO_PROMOTION'
+assert read(W/'v186_acceptance01/progress.json')['stages'][-1]['name']=='volatile_program'
+restore=read(W/'v186_idle_probe17911/recovery_proof.json');assert len(restore['checks'])==2 and all(x['all_scores_and_masks_exact'] for x in restore['checks'])
+verify_clock(hw);verify_memory_layout(hw,'split')
+j=dict(scope='FRESH_PHYSICAL_RETRY_AFTER_PRESERVED_JTAG_FAILURE_NOT_COMPETITION',status='READY',hardware=str(hw),run=str(out),flash_written=False,stages=[],original_failure=str(W/'v186_acceptance01'),baseline_restore=str(W/'v186_idle_probe17911/recovery_proof.json'),program_attempted=False)
+def save():
+ j['startup_identity_recorded']=(out/'program/identity.json').exists();state.write_text(json.dumps(j,indent=2)+'\n')
+def run(name,args):
+ j['status']=name;save();started=time.monotonic()
+ with (W/('v186_retry03_'+name+'.log')).open('w') as log:r=subprocess.run([str(x) for x in args],cwd=P,stdout=log,stderr=subprocess.STDOUT,timeout=3600)
+ j['stages'].append(dict(name=name,returncode=r.returncode,seconds=time.monotonic()-started));save()
+ if r.returncode:raise RuntimeError(name+' failed; no promotion')
+try:
+ save();j['program_attempted']=True
+ run('board',[sys.executable,'-X','utf8',P/'scripts/texture_v170/accept_video_candidate.py','--hardware',hw,'--hls',W/'v170_hls71','--dataset',W/'dataset_v168','--profile',W/'v170_fullint224','--catalog',W/'v171_source01/catalog_all117.json','--player',W/'RealPhotoSource_v171_r7.exe','--out',out,'--performance-status','--reuse-software',W/'v186_acceptance01/software.sdk'])
+ j['board_result_review']=review_board_result(out);save()
+ run('report',[sys.executable,'-X','utf8',P/'tools/fpga_texture_v170/render_video_report.py','--run',out,'--baseline',W/'v172_uncorrected_series02','--previous',W/'v179_acceptance01','--label','V186 Split Normalization Cache 125MHz'])
+ j['status']='EXPERIMENT_COMPLETE_REVIEW_ACTUAL_SPEED_BEFORE_PROMOTION';save()
+except Exception as e:j.update(status='FAILED_NO_PROMOTION',error=repr(e));save();raise
+print(json.dumps(j),flush=True)

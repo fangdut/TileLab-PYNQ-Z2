@@ -1,0 +1,31 @@
+{
+  "dll": "C:/Windows/System32/ftd2xx.dll",
+  "count_status": 0,
+  "devices": [
+    {
+      "index": 0,
+      "info_status": 0,
+      "flags": 2,
+      "type": 6,
+      "id": "0x4036010",
+      "location": 305,
+      "serial": "1234-tulA",
+      "description": "TUL A",
+      "open_status": 0,
+      "close_status": 0
+    },
+    {
+      "index": 1,
+      "info_status": 0,
+      "flags": 2,
+      "type": 6,
+      "id": "0x4036010",
+      "location": 306,
+      "serial": "1234-tulB",
+      "description": "TUL B",
+      "open_status": 0,
+      "close_status": 0
+    }
+  ],
+  "count": 2
+}

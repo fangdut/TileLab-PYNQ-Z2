@@ -1,0 +1,22 @@
+PREVIOUS_JTAG_CLOCK 15000000
+PROGRAM_JTAG_CLOCK 1000000
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+STAGE_reset_BEGIN
+STAGE_reset_DONE
+STAGE_stop_BEGIN
+STAGE_stop_DONE
+STAGE_ps_init_BEGIN
+STAGE_ps_init_DONE
+STAGE_bit_download_BEGIN
+STAGE_bit_download_DONE
+STAGE_post_config_BEGIN
+STAGE_post_config_DONE
+STAGE_elf_download_BEGIN
+STAGE_elf_download_DONE
+STAGE_run_BEGIN
+STAGE_run_DONE
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vitis/data/embeddedsw) loading 1 seconds
+V170_VOLATILE_LOAD_PASSED

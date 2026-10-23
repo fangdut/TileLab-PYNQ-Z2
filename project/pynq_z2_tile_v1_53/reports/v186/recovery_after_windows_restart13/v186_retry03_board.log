@@ -1,0 +1,13 @@
+{"stage": "volatile_program", "state": "started"}
+{"stage": "volatile_program", "state": "passed"}
+{"stage": "direct117", "state": "started"}
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\accept_video_candidate.py", line 178, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\accept_video_candidate.py", line 122, in main
+    run('direct117',[python,tools/'validate_board.py','--dataset',a.dataset,
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\accept_video_candidate.py", line 35, in run
+    if r.returncode:raise RuntimeError(name+' failed; inspect stage log')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: direct117 failed; inspect stage log

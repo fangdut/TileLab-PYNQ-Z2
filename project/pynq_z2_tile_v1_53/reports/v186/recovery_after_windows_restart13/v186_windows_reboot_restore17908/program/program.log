@@ -1,0 +1,17 @@
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+FT_Write returned 0, expected 4049
+FT_Write returned 0, expected 4049
+    invoked from within
+"::tcf::eval -progress ::xsdb::print_progress {::tcf::cache_enter tcfchan#0 {tcf_cache_eval {process_tcf_actions_cache_client ::tcfclient#0::arg}}}"
+    (procedure "::tcf::cache_eval_with_progress" line 2)
+    invoked from within
+"::tcf::cache_eval_with_progress [dict get $arg chan]  [list process_tcf_actions_cache_client $argvar] $progress"
+    (procedure "process_tcf_actions" line 1)
+    invoked from within
+"process_tcf_actions $arg ::xsdb::print_progress"
+    (procedure "fpga" line 430)
+    invoked from within
+"fpga -file {D:/Vivado/TileLab_RealPhotos_20261020/v179_hw01/system.bit}"

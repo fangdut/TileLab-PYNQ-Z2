@@ -1,0 +1,19 @@
+{
+  "scope": "FRESH_PHYSICAL_RETRY_AFTER_PRESERVED_JTAG_FAILURE_NOT_COMPETITION",
+  "status": "FAILED_NO_PROMOTION",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_hw01",
+  "run": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance03",
+  "flash_written": false,
+  "stages": [
+    {
+      "name": "board",
+      "returncode": 1,
+      "seconds": 52.46900000000005
+    }
+  ],
+  "original_failure": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance01",
+  "baseline_restore": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_idle_probe17911\\recovery_proof.json",
+  "program_attempted": true,
+  "startup_identity_recorded": true,
+  "error": "RuntimeError('board failed; no promotion')"
+}

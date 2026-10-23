@@ -1,0 +1,19 @@
+from pathlib import Path
+import subprocess,sys
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53')
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020')
+source=(P/'scripts/texture_v170/program_board.py').read_text()
+source=source.replace('connect -url tcp:127.0.0.1:3121','connect -url tcp:127.0.0.1:3121\njtag targets -set 1\nputs "PREVIOUS_JTAG_CLOCK [jtag frequency]"\nputs "PROGRAM_JTAG_CLOCK [jtag frequency 1000000]"')
+for stage,call in [('reset','rst -system'),('ps_init','\nps7_init\n'),('bit_download','\nfpga -file BIT\n'),('elf_download','\ndow ELF\n'),('run','\ncon\n')]:
+    source=source.replace(call,'\nputs "stage_'+stage+'_begin"\n'+call+'\nputs "stage_'+stage+'_done"\n')
+source=source.replace('puts "V170_VOLATILE_LOAD_PASSED"','''mwr 0xf8000008 0xdf0d
+set previous_reboot [expr [lindex [mrd -value 0xf8000258 1] 0]]
+mwr 0xf8000258 [expr ($previous_reboot & 0x00ffffff) | 0x5a000000]
+mwr 0xf8000004 0x767b
+puts "STAMPED_REBOOT_STATUS [mrd -value 0xf8000258 1]"
+puts "PROGRAMMED_FCLK [mrd -value 0xf8000170 1]"
+puts "V170_VOLATILE_LOAD_PASSED"''')
+source='import sys\nsys.path.insert(0,'+repr(str(P/'scripts/texture_v170'))+')\n'+source
+script=W/'v186_idle_program_diagnostic11.py'
+script.write_text(source)
+subprocess.run([sys.executable,'-X','utf8',str(script),'--hardware',str(W/'v179_hw01'),'--software',str(W/'v179_acceptance01/software.sdk'),'--out',str(W/'v186_idle_probe17911/program')],check=True)

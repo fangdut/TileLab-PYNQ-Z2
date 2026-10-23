@@ -1,0 +1,41 @@
+from pathlib import Path
+import sys,json,hashlib
+import numpy as np
+
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53')
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020')
+sys.path.insert(0,str(P/'tools/fpga_texture_v170'))
+from board_client import Board
+from validate_board import mask_ref
+
+folder=W/'v186_idle_probe17911'
+identity=json.loads((folder/'program/identity.json').read_text())
+profile=W/'v170_fullint224'
+model_data=(profile/'model.bin').read_bytes()
+assert hashlib.sha256(model_data).hexdigest()==identity['build']['model_sha256']
+dataset=W/'dataset_v168'
+manifest=json.loads((dataset/'manifest.json').read_text(encoding='utf8'))
+ids=[('6621d769324f6e05d5838381','good'),('6621d769324f6e05d583835f','crack')]
+board=Board()
+model=board.upload(profile)
+checks=[]
+for ident,label in ids:
+    entry=next(r for r in manifest['images'] if r['id']==ident)
+    photo=dataset/entry['file']
+    assert hashlib.sha256(photo.read_bytes()).hexdigest()==entry['sha256']
+    dest=folder/ident
+    evidence=board.infer(photo,dest,model)
+    assert evidence['boot_identity']==identity['boot_identity']
+    actual=np.load(dest/'scores.npy',allow_pickle=False)
+    expected=np.load(profile/(ident+'_scores.npy'),allow_pickle=False)
+    assert np.array_equal(actual,expected)
+    raw=np.fromfile(dest/'raw_result.bin',dtype='<u4')
+    mask=raw[16+model['grid']**2:].reshape(evidence['height'],evidence['width'])
+    assert np.array_equal(mask,mask_ref(expected,evidence['width'],evidence['height'],model['threshold']))
+    assert bool(evidence['pl_image_alarm'])==(label!='good')
+    checks.append(dict(id=ident,label=label,all_scores_and_masks_exact=True,alarm=evidence['pl_image_alarm']))
+proof=dict(scope='RECOVERED_BASELINE_TWO_PHOTO_CHECK_NOT_NEW_VERSION_ACCEPTANCE',boot_identity=identity['boot_identity'],
+    checks=checks,build=identity['build'],model_sha256=model['sha256'],flash_written=False,
+    cause_of_prior_usb_fault='NOT_ESTABLISHED_PORT_AND_CLOCK_BOTH_CHANGED',new_continuous_fps_measured=False)
+(folder/'recovery_proof.json').write_text(json.dumps(proof,indent=2))
+print(json.dumps(proof,indent=2))

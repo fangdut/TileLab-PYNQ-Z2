@@ -1,0 +1,57 @@
+{
+  "scope": "RECOVERY_AND_FAILED_PARTIAL_PHYSICAL_TEST_NOT_ACCEPTANCE",
+  "date": "2026-10-23",
+  "human_confirmed_windows_restart": true,
+  "human_confirmed_usb_port_change": true,
+  "human_reported_faulty_usb_port": true,
+  "human_reported_power_source": "USB_ONLY_NO_DC_ADAPTER_AVAILABLE",
+  "initial_after_restart": {
+    "ftdi_open_each": 0,
+    "jtag_scan": "PASS",
+    "default_program_link_write_failed": true
+  },
+  "helper_change": "Explicit1MHz JTAG clock plus stage logs; no algorithm or firmware change",
+  "baseline179_recovery": {
+    "boot_identity": 3627840536,
+    "exact_photos": 2,
+    "idle_status_queries": 6,
+    "scope": "Historical recovery boot, superseded by subsequent V186 attempts"
+  },
+  "candidate03": {
+    "boot_identity": 1321415397,
+    "completed_photos": 10,
+    "all_completed_scores_and_masks_exact": true,
+    "failed_before_117_complete": true,
+    "hdmi_or_continuous_fps_accepted": false
+  },
+  "post_failure": {
+    "ddr_controller_held_reset": true,
+    "fclk_register": 1054720,
+    "fpga_done": 0
+  },
+  "xadc_scope": "Six idle/post-failure samples only; not a fault-time capture; cannot establish or exclude a transient supply problem",
+  "root_cause": "NOT_ESTABLISHED",
+  "usb_locations": {
+    "post_windows_restart": [
+      305,
+      306
+    ],
+    "first_port_change": [
+      321,
+      322
+    ],
+    "latest_reconnect": [
+      401,
+      402
+    ]
+  },
+  "latest_reconnect_preflight": "PASS; fresh acceptance04 launched separately, not claimed accepted here",
+  "historical_accepted_continuous_fps": 8.169552657504967,
+  "flash_written": false,
+  "eeprom_written": false,
+  "primary_sources": [
+    "https://docs.amd.com/r/en-US/ug585-zynq-7000-SoC-TRM/Reset-Reason",
+    "https://docs.amd.com/r/2024.2-English/ug912-vivado-properties/HW_SYSMON",
+    "https://www.sparkle-embedded.com.tw/tw/PYNQ-Z2"
+  ]
+}

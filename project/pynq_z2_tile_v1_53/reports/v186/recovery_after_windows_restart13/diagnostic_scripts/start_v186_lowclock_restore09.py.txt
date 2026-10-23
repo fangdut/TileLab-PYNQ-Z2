@@ -1,0 +1,13 @@
+from pathlib import Path
+import subprocess,sys
+
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53')
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020')
+source=(P/'scripts/texture_v170/program_board.py').read_text()
+source=source.replace('connect -url tcp:127.0.0.1:3121','connect -url tcp:127.0.0.1:3121\njtag targets -set 1\nputs "PREVIOUS_JTAG_CLOCK [jtag frequency]"\nputs "PROGRAM_JTAG_CLOCK [jtag frequency 1000000]"')
+for stage,call in [('reset','rst -system'),('stop','\nstop\n'),('ps_init','\nps7_init\n'),('bit_download','\nfpga -file BIT\n'),('post_config','\nps7_post_config\n'),('elf_download','\ndow ELF\n'),('run','\ncon\n')]:
+    source=source.replace(call,'\nputs "STAGE_'+stage+'_BEGIN"\n'+call+'\nputs "STAGE_'+stage+'_DONE"\n')
+source='import sys\nsys.path.insert(0,'+repr(str(P/'scripts/texture_v170'))+')\n'+source
+script=W/'v186_lowclock_program_diagnostic10.py'
+script.write_text(source)
+subprocess.run([sys.executable,'-X','utf8',str(script),'--hardware',str(W/'v179_hw01'),'--software',str(W/'v179_acceptance01/software.sdk'),'--out',str(W/'v186_changed_port_restore17910/program')],check=True)

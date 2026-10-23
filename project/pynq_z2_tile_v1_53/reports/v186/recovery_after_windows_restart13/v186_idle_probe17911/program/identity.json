@@ -1,0 +1,55 @@
+{
+  "boot_identity": 3627840536,
+  "build": {
+    "elf_sha256": "8f9cf94ed91eaf3380ec6591bd1f286e8c1379d8afa493abe86429c09a104370",
+    "xsa_sha256": "93f75a35058eb82fa8a4d3a6db7f115e40e195a207c1df637ee5ecf985fbe184",
+    "bit_sha256": "38936ea6894b7393db56f9c0cf11bf6abbe1351af80dc6149fafd402d17c3e07",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "reset_proof": {
+      "auxiliary_reset_active_high": 0,
+      "auxiliary_level": 1,
+      "debug_reset": 0,
+      "clock_locked": 1,
+      "pl_reset_release_checked": true
+    },
+    "clock_proof": {
+      "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+      "pl_clock_mhz": 100.0,
+      "axi_clocks_hz": {
+        "pipeline/m_axi_control": 100000000,
+        "pipeline/m_axi_capture": 100000000,
+        "pipeline/m_axi_result": 100000000,
+        "video_regs/s_axi": 100000000
+      },
+      "hpd_delay_seconds": 0.2,
+      "physical_metadata_checked": true,
+      "legacy_axi_derived_from_checked_clock": [],
+      "bd_sha256": "c600266f93f6b464c96010f2959b814101243cf23b8609da6841234c3347e16a"
+    },
+    "video_proof": {
+      "video": true,
+      "ps_and_pl_control_maps_match": true,
+      "memory_layout": "shared",
+      "capture_hp": 1,
+      "result_hp": 0,
+      "all_inference_ddr_maps_verified": true,
+      "read_and_write_gray_bus_skew_passed": true
+    },
+    "sources": {
+      "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+      "main.c": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+      "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+      "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+    },
+    "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE"
+  },
+  "implementation": {
+    "setup_slack_ns": 0.013,
+    "hold_slack_ns": 0.024,
+    "drc_errors": 0,
+    "pl_clock_mhz": 100.0,
+    "pl_clock_period_ns": 10.0,
+    "dsp": 218
+  },
+  "flash_written": false
+}
