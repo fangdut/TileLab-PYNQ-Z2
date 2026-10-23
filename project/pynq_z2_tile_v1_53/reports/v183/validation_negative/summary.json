@@ -1,0 +1,31 @@
+{
+  "scope": "DELIBERATELY_BROKEN_RESULT_VALIDATION_REJECTS_NOT_BOARD",
+  "passed": true,
+  "source_sha256": "0286097ab63ca62ff8a7ef1789e75447881bd9d24c8bc8bfc367a23e18e539a4",
+  "checks": [
+    {
+      "mutation": "skip_sequence",
+      "rejected": true,
+      "diagnostic": [
+        "Fatal: Result mismatch at transaction 30 fault 00000000/00000008 seq d2cae47c/2d351b82",
+        "Fatal: Result mismatch at transaction 30 fault 00000000/00000008 seq d2cae47c/2d351b82"
+      ]
+    },
+    {
+      "mutation": "ignore_ddr_error",
+      "rejected": true,
+      "diagnostic": [
+        "Fatal: Result mismatch at transaction 6178 fault 00000000/00000004 seq d01c4aff/00000000",
+        "Fatal: Result mismatch at transaction 6178 fault 00000000/00000004 seq d01c4aff/00000000"
+      ]
+    },
+    {
+      "mutation": "alarm_on_equality",
+      "rejected": true,
+      "diagnostic": [
+        "Fatal: Result mismatch at transaction 33 fault 00000008/00000000 seq 279f6fca/279f6fcb",
+        "Fatal: Result mismatch at transaction 33 fault 00000008/00000000 seq 279f6fca/279f6fcb"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "MUTATED_GENERATED_ROW_GUARD_REJECTIONS_NOT_BOARD",
+  "passed": true,
+  "legacy_hls65_returns_none": true,
+  "cases": [
+    {
+      "case": "width",
+      "rejected": true,
+      "reason": "Generated row helper widths changed"
+    },
+    {
+      "case": "input_register",
+      "rejected": true,
+      "reason": "Input/multiply/output register stage missing"
+    },
+    {
+      "case": "latency",
+      "rejected": true,
+      "reason": "Expected row helper latency3 and II1"
+    },
+    {
+      "case": "guard",
+      "rejected": true,
+      "reason": "Original size validation must precede both narrowed row offsets"
+    },
+    {
+      "case": "unused_helper",
+      "rejected": true,
+      "reason": "Expected one shared row helper in detector"
+    },
+    {
+      "case": "old_wide_multiplier",
+      "rejected": true,
+      "reason": "Measured old22x32 multiplier still generated"
+    }
+  ]
+}

@@ -27,6 +27,8 @@
 
 | V183 结果校验流水线 | 与已验收历史 RTL 对照 6,190 次事务，覆盖错误头、DDR 错误、序号回绕及复位；采集/推理集成仿真通过，七组源文件绑定 | 沿用 HLS65，125 MHz 整机实现进行中；暂无新实板吞吐 |
 
+| V184 行地址位宽实验（HLS66） | 117 张完整输出字节一致；2,578 万几何检查、104 万实际辅助函数输入及生成 RTL 单元检查通过；HLS 估计少 1 个 DSP | 尚无完整检测器 RTL、整机时序或上板结果；后续完整 RTL 仅在 V183 实现失败且内存足够时启动 |
+
 117 张为反复使用的 MVTec Tile 开发基准，已用于方案比较，不能作为独立盲测或任意彩绘/多材质准确率。当前不宣称已经达到实时检测或比赛最终验收。最新已验证编译文件、实拍示例与实验记录见 [V179 开发快照](deliverables/V179_Verified_HDMI_8p17FPS_Dev.zip)；[V179 实板报告](project/pynq_z2_tile_v1_53/reports/v179/report.html)；[V173 R2 开发快照](deliverables/V173R2_Verified_HDMI_6p67FPS_Dev.zip)；[V173 掩膜快照](deliverables/V173_Verified_HDMI_6p00FPS_Dev.zip)；[V172 快照](deliverables/V172_Verified_HDMI_5p45FPS_Dev.zip) 与 [旧 V170 完整快照](deliverables/V170_Verified_FullPL_4p28FPS_R1.zip) 保留。首个速度目标是持续 10 次检测/秒，需分别报告核内速度、文件传输速度和连续视频速度。
 
 - [工程状态与职责划分](FPGA_MIGRATION_STATUS.md)

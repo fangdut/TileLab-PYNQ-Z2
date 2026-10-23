@@ -1,0 +1,11 @@
+{
+  "scope": "MEASURED_ROW_ADDRESS_WIDTH_PROPOSAL_NOT_RTL_OR_BOARD",
+  "source_sha256": "d76fd393161ba43ea1e8f912e7294aa5d37a6c94d6b6f035b81af238fc4b2713",
+  "base_source_sha256": "c4391bbdd3da915836e2f6f63c97407bfd120456f3274d95a1fcf71e6ec4abbd",
+  "model_changed": false,
+  "threshold_changed": false,
+  "input_resolution_changed": false,
+  "measured_path": "V182 repair: FSM43 to22x32 DSP cascade PCIN,-0.187ns setup",
+  "change": "Exact bounded10x11 row offset, shared DSP with latency3, called only after original validation",
+  "accuracy_or_speed_claimed": false
+}

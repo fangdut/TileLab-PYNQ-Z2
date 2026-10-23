@@ -12,6 +12,8 @@ Current V182 targets the measured V180 control path: rawopcode bit27 (t_1_load_r
 
 V183 pipelines the measured result-latch validation chain into separate expected-sequence, primitive-comparison and commit stages. It adds two control cycles without changing validation rules or CNN/model/threshold. Historical accepted RTL comparison passes6190transactions, including malformed headers, DDRerrors, sequencewrap, stickyfaults and reset; the complete capture/control integration fixture also passes. Seven source-bound RTL groups bind all11HDLs. Same HLS65/C117 and split125MHz physical trial running; no new actual FPS or timing pass.
 
+V184 addresses the separate repairedV182 critical22x32row-address multiplier. A shared10x11 helper with registered inputs/three-cycle DSP operation retains exact original legal geometry and invalid-input guards. Source/frozen66/67SHA d76fd393161ba43ea1e8f912e7294aa5d37a6c94d6b6f035b81af238fc4b2713. All117complete C outputs byte-identical to accepted179;25,776,128geometry and1,048,576native-helper cases pass. Generated-HLSunitRTL passes1,048,576legal inputs and350344enable stalls. Generatedstructure and6mutatednegative checks pass;HLS66estimate213DSP251BRAM18,71877LUT69688FF,8.207ns. These are NOT full-detector RTL,actual resource counts,timing or boardFPS. HLS67 fullRTL queue waits for V183 physical failure and7.5GiBphysical/16GiBcommit memory; it skips if V183 finishes successfully. Accepted1798.17FPS remains unchanged.
+
 ## Archived development history before V179 board verification
 
 
