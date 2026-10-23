@@ -1,0 +1,24 @@
+from pathlib import Path
+import ctypes as c
+import json
+import sys
+
+dll_path=sys.argv[1] if len(sys.argv)>1 else 'C:/Windows/System32/ftd2xx.dll'
+output=sys.argv[2] if len(sys.argv)>2 else 'D:/Vivado/TileLab_RealPhotos_20261020/v186_usb_open_inventory08.json'
+dll=c.WinDLL(dll_path)
+count=c.c_uint32()
+result={'dll':dll_path,'count_status':dll.FT_CreateDeviceInfoList(c.byref(count)), 'devices':[]}
+result['count']=count.value
+for index in range(count.value):
+    flags,kind,device_id,loc=(c.c_uint32() for _ in range(4))
+    serial,desc=c.create_string_buffer(64),c.create_string_buffer(128)
+    info_handle=c.c_void_p()
+    rc=dll.FT_GetDeviceInfoDetail(index,c.byref(flags),c.byref(kind),c.byref(device_id),c.byref(loc),serial,desc,c.byref(info_handle))
+    handle=c.c_void_p()
+    opened=dll.FT_Open(index,c.byref(handle))
+    item=dict(index=index,info_status=rc,flags=flags.value,type=kind.value,id=hex(device_id.value),location=loc.value,serial=serial.value.decode(errors='replace'),description=desc.value.decode(errors='replace'),open_status=opened)
+    if opened==0:
+        item['close_status']=dll.FT_Close(handle)
+    result['devices'].append(item)
+Path(output).write_text(json.dumps(result,indent=2))
+print(json.dumps(result,indent=2))

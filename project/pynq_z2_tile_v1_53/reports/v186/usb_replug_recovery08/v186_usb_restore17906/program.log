@@ -1,0 +1,7 @@
+no target(s) with id: 1
+no target(s) with id: 1
+    while executing
+"error "no target(s) with id: $args""
+    (procedure "::xsdb::jtag::targets" line 86)
+    invoked from within
+"jtag targets -set 1"

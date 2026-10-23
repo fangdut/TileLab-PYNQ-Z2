@@ -1,0 +1,33 @@
+{
+  "scope": "POST_HUMAN_USB_REPLUG_RECOVERY_NOT_ACCEPTED",
+  "date": "2026-10-23",
+  "human_confirmed_power_cycle": true,
+  "human_confirmed_usb_data_replug": true,
+  "pnp_parent_and_both_interfaces_status": "OK",
+  "pnp_problem_code": 0,
+  "first_jtag_scan": "Both ARM cores and xc7z020 visible at 3MHz",
+  "restore17905": "Failed during PS MIO initialization at 0xf8000754 with FT_Write IO error, before FPGA download",
+  "restore17906_and_07": "No JTAG targets; neither completed programming",
+  "targeted_ftdi_reload": {
+    "vid": "0403",
+    "pid": "6010",
+    "returned_status": 0,
+    "restored_open_access": false
+  },
+  "ftdi_direct_open_system_and_bundled_dll": {
+    "device_count": 2,
+    "open_status_each": 3,
+    "hardware_server_stopped_for_test": true
+  },
+  "device_owner_or_failure_cause": "NOT_ESTABLISHED",
+  "targeted_windows_device_restart_previous_result": "ACCESS_DENIED; current session is not administrator",
+  "programming_helper": "Explicit 1MHz experiment did not restore access; preserved as unpromoted data and normal helper restored byte-for-byte to HEAD",
+  "normal_programming_helper_sha256": "b683150aef0d58e42ea097f1aec67cfa6d1773a15e3a526836ac578865f3792a",
+  "current_board_firmware_identity": "UNKNOWN_NOT_ACCEPTED",
+  "baseline_restored_after_power_cycle": false,
+  "new_board_inference_or_fps_measured": false,
+  "historical_accepted_fps": 8.169552657504967,
+  "flash_written": false,
+  "eeprom_written": false,
+  "next_recovery_attempt": "Operator Windows restart after saving work; then fresh PnP/JTAG preflight and restore matched V179 before V186 startup test. Restart is not guaranteed to fix the fault."
+}
