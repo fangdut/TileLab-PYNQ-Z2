@@ -1,0 +1,87 @@
+{
+  "scope": "PHYSICAL_AUTONOMOUS_HDMI_WITH_BOTH_ARM_CORES_HALTED",
+  "programmed_build": {
+    "boot_identity": 2814040743,
+    "build": {
+      "elf_sha256": "9e2d983b069ba78c7b2d296ce2e3a4bbaba3909b25c627695af59903555c0955",
+      "xsa_sha256": "e365e9a74ba4c8571f5b8446937a60547324562ca3570450fa9a07d9a1cf9bfb",
+      "bit_sha256": "9aee8d2f53e25e9dcc3ca041ad72d75a470df8030e661188ea58e4ffd712ef3a",
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "reset_proof": {
+        "auxiliary_reset_active_high": 0,
+        "auxiliary_level": 1,
+        "debug_reset": 0,
+        "clock_locked": 1,
+        "pl_reset_release_checked": true
+      },
+      "clock_proof": {
+        "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+        "pl_clock_mhz": 125.0,
+        "axi_clocks_hz": {
+          "pipeline/m_axi_control": 125000000,
+          "pipeline/m_axi_capture": 125000000,
+          "pipeline/m_axi_result": 125000000,
+          "video_regs/s_axi": 125000000
+        },
+        "hpd_delay_seconds": 0.2,
+        "physical_metadata_checked": true,
+        "legacy_axi_derived_from_checked_clock": [],
+        "bd_sha256": "f8355be561cfed2a57669101c1aff5e8c17cbf4181a0fea86f19bfe45dd50324"
+      },
+      "video_proof": {
+        "video": true,
+        "ps_and_pl_control_maps_match": true,
+        "memory_layout": "split",
+        "capture_hp": 1,
+        "result_hp": 3,
+        "all_inference_ddr_maps_verified": true,
+        "read_and_write_gray_bus_skew_passed": true
+      },
+      "sources": {
+        "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+        "main.c": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+        "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+        "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+      },
+      "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE"
+    },
+    "implementation": {
+      "setup_slack_ns": 0.003,
+      "hold_slack_ns": 0.025,
+      "drc_errors": 0,
+      "pl_clock_mhz": 125.0,
+      "pl_clock_period_ns": 8.0,
+      "dsp": 218,
+      "postroute_physical_repair": true
+    },
+    "flash_written": false
+  },
+  "samples": 20,
+  "frames": 59,
+  "elapsed_wall_seconds": 5.524,
+  "frame_rate": 10.680666183924693,
+  "distinct_capture_crc32": 1,
+  "dynamic_input_observed": false,
+  "capture_frame_sequence_first": 5141,
+  "capture_frame_sequence_last": 5471,
+  "both_arm_cores_halted": true,
+  "pl_enable_writes": 1,
+  "arm_halt_checks": 3,
+  "arm_state_scope": "During the observation session before debugger disconnect; post-disconnect state is not assumed",
+  "cpu_per_frame_start_writes": 0,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "video_register_version": 391118849,
+  "color_startup_profile": null,
+  "color_registers": [
+    256,
+    256,
+    256,
+    1
+  ],
+  "color_configuration_unchanged": true,
+  "precision_scope": "Engineering video throughput only; compare image decisions separately",
+  "physical_regression_plan_sha256": "fc328c72f787d2fbec532c123a6996608dc777d4160455b2e7c44a448ff5cb30",
+  "physical_regression_summary_sha256": "e3fb038cf6903f8185262aa6ef25d348622b72939c77571cf9760cc8d025d97d",
+  "left_running": false
+}

@@ -1,0 +1,83 @@
+{
+  "scope": "GUARDED_EXPOSED_DEVELOPMENT_PHYSICAL_ITERATION_NOT_FINAL_ACCEPTANCE",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_hw01",
+  "stages": [
+    {
+      "name": "reuse_checked_transport",
+      "returncode": 0
+    },
+    {
+      "name": "volatile_program",
+      "returncode": 0,
+      "seconds": 44.04847598075867
+    },
+    {
+      "name": "direct117",
+      "returncode": 0,
+      "seconds": 84.71085715293884
+    },
+    {
+      "name": "identity_gray_live",
+      "returncode": 0,
+      "seconds": 10.825443744659424
+    },
+    {
+      "name": "identity_gray_snapshot",
+      "returncode": 0,
+      "seconds": 70.1120924949646
+    },
+    {
+      "name": "derive_color_profile",
+      "returncode": 0,
+      "seconds": 0.20041155815124512
+    },
+    {
+      "name": "good_live",
+      "returncode": 0,
+      "seconds": 11.128101825714111
+    },
+    {
+      "name": "good_snapshot",
+      "returncode": 0,
+      "seconds": 70.40824270248413
+    },
+    {
+      "name": "good_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 4.91656494140625
+    },
+    {
+      "name": "crack_live",
+      "returncode": 0,
+      "seconds": 10.980580806732178
+    },
+    {
+      "name": "crack_snapshot",
+      "returncode": 0,
+      "seconds": 70.23990607261658
+    },
+    {
+      "name": "crack_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 3.9513537883758545
+    },
+    {
+      "name": "series_live",
+      "returncode": 0,
+      "seconds": 14.14011549949646
+    },
+    {
+      "name": "hdmi117",
+      "returncode": 1,
+      "seconds": 97.6402690410614
+    }
+  ],
+  "status": "FAILED_NO_PROMOTION",
+  "flash_written": false,
+  "reused_transport": {
+    "source_workspace": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance01\\software.sdk",
+    "whole_artifact_hashes_checked": true,
+    "fresh_programming_and_all_validation_still_required": true
+  },
+  "error": "hdmi117 failed; inspect stage log"
+}

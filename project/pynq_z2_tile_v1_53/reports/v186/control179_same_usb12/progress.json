@@ -1,0 +1,138 @@
+{
+  "scope": "GUARDED_EXPOSED_DEVELOPMENT_PHYSICAL_ITERATION_NOT_FINAL_ACCEPTANCE",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_hw01",
+  "stages": [
+    {
+      "name": "reuse_checked_transport",
+      "returncode": 0
+    },
+    {
+      "name": "volatile_program",
+      "returncode": 0,
+      "seconds": 44.61940145492554
+    },
+    {
+      "name": "direct117",
+      "returncode": 0,
+      "seconds": 88.48850703239441
+    },
+    {
+      "name": "identity_gray_live",
+      "returncode": 0,
+      "seconds": 11.549411535263062
+    },
+    {
+      "name": "identity_gray_snapshot",
+      "returncode": 0,
+      "seconds": 70.3811662197113
+    },
+    {
+      "name": "derive_color_profile",
+      "returncode": 0,
+      "seconds": 0.20775318145751953
+    },
+    {
+      "name": "good_live",
+      "returncode": 0,
+      "seconds": 11.004225015640259
+    },
+    {
+      "name": "good_snapshot",
+      "returncode": 0,
+      "seconds": 70.65084791183472
+    },
+    {
+      "name": "good_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 4.313682794570923
+    },
+    {
+      "name": "crack_live",
+      "returncode": 0,
+      "seconds": 11.018297672271729
+    },
+    {
+      "name": "crack_snapshot",
+      "returncode": 0,
+      "seconds": 70.48703527450562
+    },
+    {
+      "name": "crack_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 4.106308221817017
+    },
+    {
+      "name": "series_live",
+      "returncode": 0,
+      "seconds": 14.415505409240723
+    },
+    {
+      "name": "hdmi117",
+      "returncode": 0,
+      "seconds": 250.9800579547882
+    }
+  ],
+  "status": "DEVELOPMENT_ACCURACY_PASS_SPEED_TARGET_PENDING",
+  "flash_written": false,
+  "reused_transport": {
+    "source_workspace": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_acceptance01\\software.sdk",
+    "whole_artifact_hashes_checked": true,
+    "fresh_programming_and_all_validation_still_required": true
+  },
+  "direct117": {
+    "scope": "PHYSICAL_V170_FULL_INTEGER_PL",
+    "cases": 117,
+    "all_integer_outputs_exact": true,
+    "correct": 117,
+    "anomalies_detected": 84,
+    "anomalies": 84,
+    "normal_false_alarms": 0,
+    "normal_images": 33,
+    "cracks_detected": 17,
+    "engine_mean_seconds": 0.12472381322813936,
+    "engine_p95_seconds": 0.12475904307692308,
+    "inverse_mean_engine_fps": 8.017715094797845,
+    "validation_wall_seconds": 84.07045019999987,
+    "benchmark_is_blind": false,
+    "continuous_video_verified": false,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "autorestart_fixed_frame_fps": 8.021639347826406
+  },
+  "hdmi117": {
+    "scope": "PHYSICAL_CONTROLLED_ORIGINAL_PHOTO_HDMI_SERIES",
+    "cases": 117,
+    "correct": 117,
+    "normal_images": 33,
+    "normal_false_alarms": 0,
+    "anomalies": 84,
+    "anomalies_detected": 84,
+    "cracks": 17,
+    "cracks_detected": 17,
+    "both_arm_cores_halted": true,
+    "arm_halt_checks": 119,
+    "cpu_per_frame_start_writes": 0,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "benchmark_is_blind": false,
+    "threshold_adaptation": false,
+    "continuous_observation_seconds": 244.341,
+    "autonomous_frames_in_interval": 1996,
+    "autonomous_hdmi_fps_over_photo_series": 8.168911480267331,
+    "distinct_observed_photo_crcs": 117,
+    "plan_sha256": "267ace812bb213fe8adc7640b567e035e9d916bc9c9359a1ea1515cd0120e911",
+    "results_sha256": "caee2f1a4a56740f9cc23a13004b85e328545a631a8362337655ffe34e9f4ac8",
+    "source_status_read_retries": 2,
+    "limitations": "Owned HDMI input player SHA/status plus settled stable PL completions; selected photos require separate DDR snapshot inspection/audit",
+    "left_running": false
+  },
+  "hdmi_fps": 8.168911480267331,
+  "short_observation_hdmi_fps": 8.168981211343214,
+  "ten_fps_passed": false,
+  "performance_status": "TEN_FPS_TARGET_PENDING",
+  "legacy_status_compatibility": false,
+  "short_observation_at_least_ten_fps": false,
+  "sustained_speed_test_required": true,
+  "competition_final_acceptance": false,
+  "benchmark_is_blind": false
+}

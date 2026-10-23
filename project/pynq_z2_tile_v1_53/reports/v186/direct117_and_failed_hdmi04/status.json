@@ -1,0 +1,158 @@
+{
+  "scope": "FULL_DIRECT117_PASS_AND_FAILED_PARTIAL_HDMI_NOT_VIDEO_ACCEPTANCE",
+  "boot_identity": 2814040743,
+  "direct117": {
+    "scope": "PHYSICAL_V170_FULL_INTEGER_PL",
+    "cases": 117,
+    "all_integer_outputs_exact": true,
+    "correct": 117,
+    "anomalies_detected": 84,
+    "anomalies": 84,
+    "normal_false_alarms": 0,
+    "normal_images": 33,
+    "cracks_detected": 17,
+    "engine_mean_seconds": 0.09507114703484551,
+    "engine_p95_seconds": 0.09511064369230769,
+    "inverse_mean_engine_fps": 10.518438361046382,
+    "validation_wall_seconds": 81.25254519999999,
+    "benchmark_is_blind": false,
+    "continuous_video_verified": false,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "autorestart_fixed_frame_fps": 10.524375183006374
+  },
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "build": {
+    "elf_sha256": "9e2d983b069ba78c7b2d296ce2e3a4bbaba3909b25c627695af59903555c0955",
+    "xsa_sha256": "e365e9a74ba4c8571f5b8446937a60547324562ca3570450fa9a07d9a1cf9bfb",
+    "bit_sha256": "9aee8d2f53e25e9dcc3ca041ad72d75a470df8030e661188ea58e4ffd712ef3a",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "reset_proof": {
+      "auxiliary_reset_active_high": 0,
+      "auxiliary_level": 1,
+      "debug_reset": 0,
+      "clock_locked": 1,
+      "pl_reset_release_checked": true
+    },
+    "clock_proof": {
+      "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+      "pl_clock_mhz": 125.0,
+      "axi_clocks_hz": {
+        "pipeline/m_axi_control": 125000000,
+        "pipeline/m_axi_capture": 125000000,
+        "pipeline/m_axi_result": 125000000,
+        "video_regs/s_axi": 125000000
+      },
+      "hpd_delay_seconds": 0.2,
+      "physical_metadata_checked": true,
+      "legacy_axi_derived_from_checked_clock": [],
+      "bd_sha256": "f8355be561cfed2a57669101c1aff5e8c17cbf4181a0fea86f19bfe45dd50324"
+    },
+    "video_proof": {
+      "video": true,
+      "ps_and_pl_control_maps_match": true,
+      "memory_layout": "split",
+      "capture_hp": 1,
+      "result_hp": 3,
+      "all_inference_ddr_maps_verified": true,
+      "read_and_write_gray_bus_skew_passed": true
+    },
+    "sources": {
+      "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+      "main.c": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+      "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+      "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+    },
+    "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE"
+  },
+  "completed_hdmi_photos": 35,
+  "hdmi_observations": 105,
+  "both_arm_cores_halted_in_retained_observations": true,
+  "hdmi_failure": "Invalid context; subsequent fresh JTAG read reports DDR held in reset",
+  "complete_continuous_hdmi_fps": null,
+  "ten_fps_video_target_passed": false,
+  "competition_final_acceptance": false,
+  "benchmark_is_blind": false,
+  "source_commit": "63238eaa22ae6c987d98fde215b1d4deb0b27b92",
+  "kernel_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "physical_input_and_result_snapshots_retained_locally": [
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\identity_gray_snapshot\\rgb.bin",
+      "sha256": "23a1dd8d6b77fcbac8094f61608f299cb030f57dba4e2fbbd67461c7cf42c71f",
+      "bytes": 2073600
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\identity_gray_snapshot\\raw_result.bin",
+      "sha256": "93ddb4dccbeaabe3dec6df3ed6f910479c866a7690cc1e8a6becf42bebfab7a4",
+      "bytes": 2076800
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\identity_gray_snapshot\\actual_hdmi_input.png",
+      "sha256": "6bc5a3bec7327e021a9b56eb18b07b0efe7adcf97b2eceecc192b68cf667b4eb",
+      "bytes": 3237
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\identity_gray_snapshot\\actual_pl_mask.png",
+      "sha256": "2b983fda231828ce745679917648e8fda12a3d4e77a0bb33367860a5db6d724e",
+      "bytes": 1977
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\identity_gray_snapshot\\actual_pl_overlay.png",
+      "sha256": "bc28bd44d47a03cde45918c49a2c7e6bbfae44ebf880eb270ef6a90b790d3633",
+      "bytes": 3360
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\good_snapshot\\rgb.bin",
+      "sha256": "55c04ace0bd060a42d5230416eef2f6329f031c347e3ff96f3f2720b1e43014c",
+      "bytes": 2073600
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\good_snapshot\\raw_result.bin",
+      "sha256": "9fb1cedf7947ef74f5e950247d6dcb3885f53acf3da82da4ba0cddc42f2457c5",
+      "bytes": 2076800
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\good_snapshot\\actual_hdmi_input.png",
+      "sha256": "62269b73b8976b6741a2dda03129b536c54d0e6d0abb372f3be4843f1e50939f",
+      "bytes": 822212
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\good_snapshot\\actual_pl_mask.png",
+      "sha256": "fe96ea90f8d82f907079dc63810ffea11158dd2b9b257b80bce4fd46eb79b3ea",
+      "bytes": 583
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\good_snapshot\\actual_pl_overlay.png",
+      "sha256": "62269b73b8976b6741a2dda03129b536c54d0e6d0abb372f3be4843f1e50939f",
+      "bytes": 822212
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\crack_snapshot\\rgb.bin",
+      "sha256": "37fec9bb88231c6bf01cf54bdd2c67f838354239ce145289a0eb0013636f438d",
+      "bytes": 2073600
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\crack_snapshot\\raw_result.bin",
+      "sha256": "da186c0114bffd05f6dcb223bc5f50076f116d800086c38912ea57ff23c23cb9",
+      "bytes": 2076800
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\crack_snapshot\\actual_hdmi_input.png",
+      "sha256": "28472b631d336848e002d56164186f59461031cddb9d1e6df5035c46230859b0",
+      "bytes": 821162
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\crack_snapshot\\actual_pl_mask.png",
+      "sha256": "d449b3c601e936463adaaec550a0177ce3e35117c1200f6b88673161b0524044",
+      "bytes": 3846
+    },
+    {
+      "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance04\\crack_snapshot\\actual_pl_overlay.png",
+      "sha256": "79752de76ac0f7ce18c4374c5c417b6246b6199027cb0d059665442ffaea3881",
+      "bytes": 789989
+    }
+  ],
+  "root_cause": "NOT_ESTABLISHED",
+  "flash_written": false,
+  "eeprom_written": false
+}
