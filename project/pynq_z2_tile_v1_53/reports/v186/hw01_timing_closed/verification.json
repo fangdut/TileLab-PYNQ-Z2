@@ -1,0 +1,43 @@
+{
+  "scope": "ROUTED_125MHZ_PASS_WITH_FAILED_STARTUP_NOT_INFERENCE_ACCEPTANCE",
+  "source_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "status": {
+    "setup_slack_ns": 0.003,
+    "hold_slack_ns": 0.025,
+    "drc_errors": 0,
+    "pl_clock_mhz": 125.0,
+    "pl_clock_period_ns": 8.0,
+    "dsp": 218,
+    "postroute_physical_repair": true
+  },
+  "resources": {
+    "lut": 40419,
+    "ff": 57831,
+    "dsp": 218,
+    "bram36_tiles": 128
+  },
+  "artifacts": {
+    "system.bit": "9aee8d2f53e25e9dcc3ca041ad72d75a470df8030e661188ea58e4ffd712ef3a",
+    "system.xsa": "e365e9a74ba4c8571f5b8446937a60547324562ca3570450fa9a07d9a1cf9bfb"
+  },
+  "board_acceptance": false,
+  "new_fps_measured": false,
+  "files": {
+    "bus_skew.rpt": "3458940e1f6808daeee93d57f5614cf017a45b98f823f0e6fe3264c905e0cda7",
+    "candidate_preflight.json": "096032ee7e6d726cc8a08c4c1042f1881b3a29e9356da537f0df0f63e192e7e5",
+    "clocks.rpt": "a0a8c4187db5752ae8c6efe31c55d501644a7b5ecdcb25a6c4b88bfca7a1ee38",
+    "drc.rpt": "44295c9ad1eeb17fffb6739ce4b9dea9ecf26e554ec8146d2ed6941105267f57",
+    "implementation_status.json": "c26237436d26f4a660602663e7e9b1b022289741d156202f3a432c1c0a991b69",
+    "optimization_strategy.json": "c292277d6f39f51b8b8112dfb8d42dbb6b9771023edafa4454a66a365b4edefa",
+    "physical_repair.json": "a6d2c34c6158af33cffebb7c337cc3c24c47f58a37f362384aa4260eb2f11968",
+    "timing_summary.rpt": "26401de92f1dc745b7dfaf0f19ab1b1ad60f3ff8454a94d3a13fe87e88cb6bb1",
+    "utilization.rpt": "28e37e732f6737a9ed8a5e390dc01718459ab84ee70d7dd2e28bfc0992db2bfd",
+    "video_cdc.rpt": "3f817572cf3661183aad310b678923030d5187c94863f247082914bb6ed488b4",
+    "repair01/canonical_header_alignment.json": "97cea535de341f94caccda1d52173a67f9b37f1ea19997be01d350861a089cb2",
+    "repair01/console.log": "a1eff4b81e9cc2dbfdfb4147a1481c12cd0a6dd9095d4974988f4cf7cb2bdd1b",
+    "repair01/implementation_status.json": "c26237436d26f4a660602663e7e9b1b022289741d156202f3a432c1c0a991b69",
+    "repair01/timing_summary.rpt": "26401de92f1dc745b7dfaf0f19ab1b1ad60f3ff8454a94d3a13fe87e88cb6bb1",
+    "repair01/original_failure/implementation_status.json": "ed6bf5fccb6be7e59913c1d2335d0d4194254806a2a7a8858c07083fcaaf610e",
+    "repair01/original_failure/timing_summary.rpt": "95d49f82d839c1279b85c1aabb76a50df9fb3412afafa395f65e00dc4a2df710"
+  }
+}

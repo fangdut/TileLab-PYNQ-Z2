@@ -4,6 +4,14 @@ import argparse,json,os,subprocess,sys,time
 from build_candidate import preflight
 from verify_clock import verify as verify_clock
 
+def programming_state(run):
+    """A missing final identity does not prove that no download happened."""
+    run=Path(run)
+    verified=(run/'program/identity.json').exists()
+    attempted=verified or (run/'program/program.log').exists()
+    return dict(programming_attempted=attempted,board_startup_verified=verified,
+                board_programmed=True if verified else (None if attempted else False))
+
 def review_board_result(run):
     """A successful subprocess alone is insufficient: inspect physical results."""
     run=Path(run);read=lambda p:json.loads(p.read_text())
@@ -40,7 +48,7 @@ def main():
     j=dict(scope='GUARDED_SOURCE_BOUND_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE',status='PREFLIGHT',stages=[],
            requested_pl_clock_mhz=a.clock_mhz,memory_layout=a.memory_layout,hls=str(a.hls),regression=str(a.regression),flash_written=False)
     def save():
-        j['board_programmed']=(a.run/'program/identity.json').exists()
+        j.update(programming_state(a.run))
         a.journal.write_text(json.dumps(j,indent=2)+'\n')
     def run(name,args,timeout,env=None):
         j['status']=name;save();started=time.monotonic()

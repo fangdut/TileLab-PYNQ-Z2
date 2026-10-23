@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\program_board.py", line 84, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\program_board.py", line 81, in main
+    if r.returncode or 'V170_VOLATILE_LOAD_PASSED' not in (a.out/'program.log').read_text():raise RuntimeError('JTAG startup checks failed; inspect program.log')
+                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: JTAG startup checks failed; inspect program.log

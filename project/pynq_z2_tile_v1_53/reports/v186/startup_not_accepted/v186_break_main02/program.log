@@ -1,0 +1,19 @@
+CONFIGURE_FIRST_BEGIN
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+PL_CONFIGURATION_COMPLETE
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Suspended)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4* xc7z020
+PS_DDR_SETUP_COMPLETE
+BOOT_MAILBOX_BEFORE 0 0 1095143918 0 0 0 0 0
+CORE_BEFORE_RUN pc: 00100000
+
+MAIN_BREAKPOINT_SET
+Invalid context
+Invalid context
+    while executing
+"error $why"

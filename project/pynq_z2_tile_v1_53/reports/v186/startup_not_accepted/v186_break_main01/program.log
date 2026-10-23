@@ -1,0 +1,26 @@
+CONFIGURE_FIRST_BEGIN
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+PL_CONFIGURATION_COMPLETE
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Suspended)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4* xc7z020
+PS_DDR_SETUP_COMPLETE
+PRE_START_PC pc: 00100000
+
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vitis/data/embeddedsw) loading 0 seconds
+PRE_START_CLOCK 2098176
+PRE_START_MAILBOX 0 0 1416420883 0 0 0 0 0
+PRE_START_PL_ID 385875969
+BREAK_MAIN_TARGETS   1  APU
+     2* ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+  5  whole scan chain (FT_Read returned 0, expected 133)
+Invalid context
+Invalid context
+    while executing
+"error $why"

@@ -1,0 +1,13 @@
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+no targets found with "name == "APU"". available targets:
+  1  xc7z020
+no targets found with "name == "APU"". available targets:
+  1  xc7z020
+    while executing
+"error "no targets found with \"$params(filter)\". available targets:$target_list""
+    (procedure "targets" line 177)
+    invoked from within
+"targets -set -filter {name == "APU"}"

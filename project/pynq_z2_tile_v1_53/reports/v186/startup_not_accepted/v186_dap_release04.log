@@ -1,0 +1,12 @@
+  1  DAP (APB AP transaction error, DAP status 0x30000021)
+  2  xc7z020
+Context does not support memory read. Unsupported command
+Context does not support memory read. Unsupported command
+    invoked from within
+"::tcf::eval -progress {apply {{msg} {puts $msg}}} {tcf_send_command tcfchan#0 Memory get siiii {Bea{o{msg o{} A}}} {JTAG-jsn-TUL-1234-tulA-4ba00477-0 4160750148 4 4 7}}"
+    (procedure "::tcf::send_command" line 4)
+    invoked from within
+"::tcf::send_command $chan Memory get "siiii" "Bea{o{msg o{} A}}" [list $ctx $start_addr $size $nbytes $mode]"
+    (procedure "mrd" line 87)
+    invoked from within
+"mrd -force -value 0xf8000244 1"

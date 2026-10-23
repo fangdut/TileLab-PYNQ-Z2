@@ -1,0 +1,14 @@
+CONFIGURE_FIRST_BEGIN
+  1  DAP (APB AP transaction error, DAP status 0x30000021)
+  2  xc7z020
+no targets found with "name =~ "ARM*#0"". available targets:
+  1  DAP (APB AP transaction error, DAP status 0x30000021)
+  2  xc7z020
+no targets found with "name =~ "ARM*#0"". available targets:
+  1  DAP (APB AP transaction error, DAP status 0x30000021)
+  2  xc7z020
+    while executing
+"error "no targets found with \"$params(filter)\". available targets:$target_list""
+    (procedure "targets" line 177)
+    invoked from within
+"targets -set -filter {name =~ "ARM*#0"}"

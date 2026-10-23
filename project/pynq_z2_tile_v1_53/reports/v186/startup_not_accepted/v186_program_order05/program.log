@@ -1,0 +1,22 @@
+CONFIGURE_FIRST_BEGIN
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+PL_CONFIGURATION_COMPLETE
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Suspended)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4* xc7z020
+PS_DDR_SETUP_COMPLETE
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vitis/data/embeddedsw) loading 0 seconds
+Invalid context
+Invalid context
+    invoked from within
+"::tcf::eval -progress {apply {{msg} {puts $msg}}} {tcf_send_command tcfchan#1 Memory get siiii {Bea{o{msg o{} A}}} {JTAG-jsn-TUL-1234-tulA-4ba00477-0 1092616192 4 4 3}}"
+    (procedure "::tcf::send_command" line 4)
+    invoked from within
+"::tcf::send_command $chan Memory get "siiii" "Bea{o{msg o{} A}}" [list $ctx $start_addr $size $nbytes $mode]"
+    (procedure "mrd" line 87)
+    invoked from within
+"mrd -value 0x41200000 1"

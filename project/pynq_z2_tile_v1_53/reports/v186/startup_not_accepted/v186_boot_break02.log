@@ -1,0 +1,20 @@
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+BEFORE pc: 001003c8
+
+BREAKPOINTS ID        Enabled   Location            Status              
+==        =======   ========            ======              
+0         1         0x001019e0          target 2: {Address 0x1019e0 HitCount 
+                                        0}                  
+1         1         0x0011770c          target 2: {Address 0x11770c HitCount 
+                                        0}                  
+AFTER_TARGETS   1  APU
+     2* ARM Cortex-A9 MPCore #0 (Breakpoint)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+AFTER_PC pc: 001019e0
+
+AFTER_LR lr: 001001b0
+

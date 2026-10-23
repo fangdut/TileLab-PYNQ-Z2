@@ -1,0 +1,59 @@
+"""Verify an already loaded program after a debug-link failure; never program.
+
+The prior failed attempt stays unchanged. This creates separate evidence only
+after fresh MMIO and TCP agree with the unique boot written by that attempt.
+"""
+from pathlib import Path
+import argparse,hashlib,json,re,subprocess,sys,zipfile
+from verify_clock import verify as verify_clock
+from verify_reset import verify as verify_reset
+
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def main():
+    p=argparse.ArgumentParser()
+    for n in ['hardware','software','attempt','out']:p.add_argument('--'+n,type=Path,required=True)
+    p.add_argument('--board',default='192.168.33.10');a=p.parse_args()
+    assert not a.out.exists();verify_clock(a.hardware);verify_reset(a.hardware)
+    status=json.loads((a.hardware/'implementation_status.json').read_text());assert status['setup_slack_ns']>=0 and status['hold_slack_ns']>=0 and not status['drc_errors']
+    build=json.loads((a.software/'BUILD_RESULT.json').read_text())
+    for role,path in [('bit',a.hardware/'system.bit'),('xsa',a.hardware/'system.xsa'),('elf',a.software/'texture_transport/build/texture_transport.elf')]:assert sha(path)==build[role+'_sha256']
+    with zipfile.ZipFile(a.hardware/'system.xsa') as z:
+        names=[n for n in z.namelist() if n.endswith('.bit')];assert len(names)==1 and z.read(names[0])==(a.hardware/'system.bit').read_bytes()
+    assert not (a.attempt/'identity.json').exists()
+    original=(a.attempt/'program.tcl').read_text();log=(a.attempt/'program.log').read_text(errors='replace')
+    assert 'V170_VOLATILE_LOAD_PASSED' not in log
+    for command,path in [('fpga -file',a.hardware/'system.bit'),('dow',a.software/'texture_transport/build/texture_transport.elf')]:
+        assert command+' {'+path.resolve().as_posix()+'}' in original
+    boots=re.findall(r'mwr 0x05f00000 \[list 0 0 (\d+) 0 0 0 0 0\]',original);assert len(boots)==1;boot=int(boots[0]);assert 0<boot<0xffffffff
+    sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools/fpga_texture_v170'))
+    from board_client import Board
+    h,_,_=Board(a.board,timeout=10).request(1);assert h[5]==0x17000001 and h[8]==boot
+    a.out.mkdir(parents=True)
+    tcl='''if {[catch {
+connect -url tcp:127.0.0.1:3121
+jtag targets -set 1
+if {[jtag frequency 3000000] != 3000000} {error "JTAG clock mismatch"}
+puts [targets]
+targets -set -filter {name == "APU"}
+loadhw -hw XSA
+set pl [expr [lindex [mrd -value 0x41200000 1] 0]]
+set words [mrd -value 0x05f00000 8]
+puts "RECOVERED_MAILBOX $words"
+if {$pl != 0x17000001 || [expr [lindex $words 0]] != 0x17000001 || [expr [lindex $words 2]] != BOOT} {error "Fresh MMIO startup identity mismatch"}
+puts "RECOVERED_CLOCK_CONTROL [mrd -value 0xf8000170 1]"
+puts "EXISTING_STARTUP_MMIO_VERIFIED"
+disconnect
+} why opts]} {puts stderr $why;if {[dict exists $opts -errorinfo]} {puts stderr [dict get $opts -errorinfo]};exit 1}
+exit 0
+'''.replace('XSA','{'+(a.hardware/'system.xsa').resolve().as_posix()+'}').replace('BOOT',str(boot))
+    script=a.out/'verify_startup.tcl';script.write_text(tcl)
+    with (a.out/'verify_startup.log').open('w') as f:subprocess.run(['D:/2025.2/Vitis/bin/xsdb.bat',str(script)],stdout=f,stderr=subprocess.STDOUT,check=True,timeout=90)
+    assert 'EXISTING_STARTUP_MMIO_VERIFIED' in (a.out/'verify_startup.log').read_text()
+    h2,_,_=Board(a.board,timeout=10).request(1);assert h2[5]==0x17000001 and h2[8]==boot
+    j=dict(boot_identity=boot,build=build,implementation=status,flash_written=False,startup_recovered=True,
+        scope='EXISTING_LOAD_FRESH_MMIO_AND_TCP_STARTUP_CHECK_NOT_INFERENCE_ACCEPTANCE',
+        original_failed_attempt=str(a.attempt),original_attempt_hashes={n:sha(a.attempt/n) for n in ['program.tcl','program.log']},
+        fresh_tcp_headers=[list(h),list(h2)],checks={n:sha(a.out/n) for n in ['verify_startup.tcl','verify_startup.log']},
+        fpga_or_elf_programmed_by_recovery=False)
+    (a.out/'identity.json').write_text(json.dumps(j,indent=2)+'\n');print(json.dumps(dict(boot_identity=boot,startup_recovered=True,programmed=False)))
+if __name__=='__main__':main()

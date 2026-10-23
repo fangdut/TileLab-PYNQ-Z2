@@ -1,0 +1,26 @@
+{
+  "scope": "ACTUAL_EXISTING_JOURNAL_STATE_AUDIT_NOT_BOARD_TEST",
+  "passed": true,
+  "states": {
+    "v179_acceptance01": {
+      "programming_attempted": true,
+      "board_startup_verified": true,
+      "board_programmed": true
+    },
+    "v186_acceptance01": {
+      "programming_attempted": true,
+      "board_startup_verified": false,
+      "board_programmed": null
+    },
+    "v186_acceptance02": {
+      "programming_attempted": true,
+      "board_startup_verified": false,
+      "board_programmed": null
+    },
+    "v185_acceptance01": {
+      "programming_attempted": false,
+      "board_startup_verified": false,
+      "board_programmed": false
+    }
+  }
+}

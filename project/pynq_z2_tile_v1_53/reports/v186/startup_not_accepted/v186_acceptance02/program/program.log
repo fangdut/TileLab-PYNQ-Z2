@@ -1,0 +1,15 @@
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+WAITING_FOR_STARTUP_DEBUG_TARGET 0   5  whole scan chain (FT_Read returned 0, expected 133)
+port closed
+port closed
+    invoked from within
+"::tcf::eval -progress {apply {{msg} {puts $msg}}} {tcf_send_command tcfchan#1 Jtag getOption ss ei {jsn-TUL-1234-tulA frequency}}"
+    (procedure "::tcf::send_command" line 4)
+    invoked from within
+"::tcf::send_command $chan Jtag getOption ss ei [list $node frequency]"
+    (procedure "::xsdb::jtag::frequency" line 104)
+    invoked from within
+"jtag frequency 3000000"

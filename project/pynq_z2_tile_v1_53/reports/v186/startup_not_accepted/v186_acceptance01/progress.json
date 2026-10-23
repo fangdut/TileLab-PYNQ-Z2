@@ -1,0 +1,19 @@
+{
+  "scope": "GUARDED_EXPOSED_DEVELOPMENT_PHYSICAL_ITERATION_NOT_FINAL_ACCEPTANCE",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_hw01",
+  "stages": [
+    {
+      "name": "build_transport",
+      "returncode": 0,
+      "seconds": 128.20576333999634
+    },
+    {
+      "name": "volatile_program",
+      "returncode": 1,
+      "seconds": 45.533588886260986
+    }
+  ],
+  "status": "FAILED_NO_PROMOTION",
+  "flash_written": false,
+  "error": "volatile_program failed; inspect stage log"
+}

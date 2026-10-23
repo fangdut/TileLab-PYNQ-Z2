@@ -1,0 +1,759 @@
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri Oct 23 03:38:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {D:\Vivado\TileLab_RealPhotos_20261020\v186_hw01\physical_repair01\repair_postroute.tcl} -notrace
+Scanning sources...
+Finished scanning sources
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\ac701\1.4\board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.6\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu105\1.7\board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.4\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\kcu116\1.5\board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\scu35\1.0\board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.0\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\sp701\1.1\board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.6\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu108\1.7\board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu110\1.4\board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vcu129\production\1.0\board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vermeo_t1_rfsoc\1.0\board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.0\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vrk160:part0:1.1 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\vrk160\1.1\board.xml as part xcvr1602-vsva2488-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.2\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.3\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu111\1.4\board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1275\1.0\board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu1285\1.0\board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208\production\2.0\board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu208ld\production\2.0\board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216\production\2.0\board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu216ld\production\2.0\board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670\2.0\board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/2025.2/data/xhub/boards\XilinxBoardStore\boards\Xilinx\zcu670ld\1.0\board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_RealPhotos_20261020/v170_hls71/solution/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/texture_v170.srcs/sources_1/bd/system/system.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ system_build_id_0
+system_zero_0
+system_one_0
+system_alarm_bit_0
+system_valid_bit_0
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 724.352 ; gain = 307.902
+Command: open_checkpoint D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/texture_v170.runs/impl_1/system_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 761.406 ; gain = 9.223
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1248.934 ; gain = 2.422
+INFO: [Netlist 29-17] Analyzing 6186 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.165 . Memory (MB): peak = 1430.590 ; gain = 18.957
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 2234.703 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2234.703 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2234.703 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2234.703 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2234.703 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.590 . Memory (MB): peak = 2281.949 ; gain = 47.246
+Read Physdb Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2281.949 ; gain = 47.246
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2281.949 ; gain = 47.246
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2372.430 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 687 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 29 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 3 instances
+  RAM16X1S => RAM32X1S (RAMS32): 229 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 266 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM32X1S => RAM32X1S (RAMS32): 29 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 93 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2380.512 ; gain = 1656.160
+CDC_FIRST_STAGE_ONLY system_i/pipeline/inst/lock_sync_reg[0]/D -> system_i/pipeline/inst/lock_sync_reg[1]/D
+CDC_FIRST_STAGE_ONLY system_i/pipeline/inst/capture/producer/request_sync_reg[0]/D -> system_i/pipeline/inst/capture/producer/request_sync_reg[1]/D
+CDC_FIRST_STAGE_ONLY system_i/border/inst/alarm_sync_reg[0]/D -> system_i/border/inst/alarm_sync_reg[1]/D
+CDC_FIRST_STAGE_ONLY system_i/border/inst/valid_sync_reg[0]/D -> system_i/border/inst/valid_sync_reg[1]/D
+ASYNC_RESET_RELEASE_PRE_ONLY system_i/pipeline/inst/capture/reset_pipe_reg[0]/PRE
+ASYNC_RESET_RELEASE_PRE_ONLY system_i/pipeline/inst/capture/reset_pipe_reg[1]/PRE
+ASYNC_RESET_RELEASE_PRE_ONLY system_i/pipeline/inst/capture/reset_pipe_reg[2]/PRE
+ASYNC_RESET_RELEASE_PRE_ONLY system_i/pipeline/inst/capture/reset_pipe_reg[3]/PRE
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:12 . Memory (MB): peak = 2595.242 ; gain = 35.582
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 41.00s |  WALL: 16.54s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 2595.930 ; gain = 0.621
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.219 | TNS=-7.180 | WHS=0.050 | THS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 20715717d
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2697.902 ; gain = 101.973
+
+Phase 2 Critical Path Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.219 | TNS=-7.180 | WHS=0.050 | THS=0.000 |
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_4_fu_612[13].  Re-placed instance system_i/infer/inst/query_4_fu_612_reg[13]
+INFO: [Physopt 32-952] Improved path group WNS = -0.219. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_4_fu_612[13].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_4_fu_612[1].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/ps7/inst/FCLK_CLK_unbuffered[0].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/icmp_ln599_fu_3176_p2[0].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_35_fu_736[15]_i_11_n_9.
+INFO: [Physopt 32-952] Improved path group WNS = -0.211. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_20_fu_676[11].  Re-placed instance system_i/infer/inst/query_20_fu_676_reg[11]
+INFO: [Physopt 32-952] Improved path group WNS = -0.211. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_20_fu_676[11].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_20_fu_676[14].  Re-placed instance system_i/infer/inst/query_20_fu_676_reg[14]
+INFO: [Physopt 32-952] Improved path group WNS = -0.211. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_20_fu_676[14].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_20_fu_676[15].
+INFO: [Physopt 32-952] Improved path group WNS = -0.194. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ram_14_U/q0[32].
+INFO: [Physopt 32-710] Processed net system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/d1[1]. Critical path length was reduced through logic transformation on cell system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/ram_reg_0_i_53__0_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.187. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ram_15_U/ram_1_address11.
+INFO: [Physopt 32-710] Processed net system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/d1[21]. Critical path length was reduced through logic transformation on cell system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/ram_reg_0_i_33__1_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.171. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ram_15_U/ram_1_address11.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/memory_fabric/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/wr_wea.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/memory_fabric/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_wr.inst_wr_addra_p1/gen_wr.full_r_inv_i_2_n_0.
+INFO: [Physopt 32-710] Processed net system_i/memory_fabric/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_wr.inst_wr_addra_p1/gen_wr.full_r_inv_i_2_n_0. Critical path length was reduced through logic transformation on cell system_i/memory_fabric/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_wr.inst_wr_addra_p1/gen_wr.full_r_inv_i_2_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.165. Path group: clk_fpga_0. Processed net: system_i/memory_fabric/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_wr.inst_wr_addra_p1/gen_rd.fifo_empty_r_i_5_n_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/shl_ln104_reg_7242[25].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/shl_ln104_reg_7242[55]_i_4_n_9.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/shl_ln104_reg_7242[55]_i_10_n_9.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/add_ln104_fu_3795_p2[29].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/shl_ln104_reg_7242[31]_i_1_n_9.
+INFO: [Physopt 32-703] Processed net system_i/infer/inst/h_load_14_reg_7168[0]. Clock skew was adjusted for instance system_i/infer/inst/h_load_14_reg_7168_reg[0].
+INFO: [Physopt 32-952] Improved path group WNS = -0.163. Path group: clk_fpga_0. Processed net: system_i/infer/inst/h_load_14_reg_7168[0].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_19_fu_672[2].  Re-placed instance system_i/infer/inst/query_19_fu_672_reg[2]
+INFO: [Physopt 32-952] Improved path group WNS = -0.154. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_19_fu_672[2].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_32_fu_724[0].
+INFO: [Physopt 32-952] Improved path group WNS = -0.127. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-710] Processed net system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/d1[3]. Critical path length was reduced through logic transformation on cell system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/ram_reg_0_i_51__0_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.127. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ram_15_U/ram_1_address11.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_2_fu_604[7].
+INFO: [Physopt 32-952] Improved path group WNS = -0.110. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_20_fu_676[2].
+INFO: [Physopt 32-952] Improved path group WNS = -0.106. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/feature_7_U/ram_reg_0_7_7_7/O.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_quarter_vertical_fu_2269/total_reg_142_pp0_iter1_reg_reg[15]_0.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_quarter_vertical_fu_2269/ram_reg_0_7_6_6_i_2__5_n_9.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_quarter_vertical_fu_2269/sub_ln548_14_fu_4933_p2[8].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_quarter_vertical_fu_2269/ram_reg_0_7_0_0_i_8__5_n_9.
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/grp_pooled_fu_1684/feature_7_d0_local[0].  Re-placed instance system_i/infer/inst/grp_pooled_fu_1684/ram_reg_0_7_7_7_i_1__8
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_pooled_fu_1684/feature_7_d0_local[0].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[12].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[12]
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[12].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[14].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[14]
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[14].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[15].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[15]
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[15].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[2].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[2]
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[2].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[3].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[3]
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[3].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[5].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[5]
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[5].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[7].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[7]
+INFO: [Physopt 32-952] Improved path group WNS = -0.097. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[7].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_50_fu_796[8].  Re-placed instance system_i/infer/inst/query_50_fu_796_reg[8]
+INFO: [Physopt 32-952] Improved path group WNS = -0.084. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_50_fu_796[8].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_4_fu_612[11].
+INFO: [Physopt 32-952] Improved path group WNS = -0.081. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_4_fu_612[10].
+INFO: [Physopt 32-952] Improved path group WNS = -0.069. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_18_fu_668[0].
+INFO: [Physopt 32-952] Improved path group WNS = -0.045. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_18_fu_668[11].  Re-placed instance system_i/infer/inst/query_18_fu_668_reg[11]
+INFO: [Physopt 32-952] Improved path group WNS = -0.045. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_18_fu_668[11].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_18_fu_668[14].  Re-placed instance system_i/infer/inst/query_18_fu_668_reg[14]
+INFO: [Physopt 32-952] Improved path group WNS = -0.045. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_18_fu_668[14].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_18_fu_668[5].  Re-placed instance system_i/infer/inst/query_18_fu_668_reg[5]
+INFO: [Physopt 32-952] Improved path group WNS = -0.045. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_18_fu_668[5].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_18_fu_668[6].
+INFO: [Physopt 32-952] Improved path group WNS = -0.043. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_32_fu_724[10].  Re-placed instance system_i/infer/inst/query_32_fu_724_reg[10]
+INFO: [Physopt 32-952] Improved path group WNS = -0.043. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_32_fu_724[10].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_32_fu_724[12].  Re-placed instance system_i/infer/inst/query_32_fu_724_reg[12]
+INFO: [Physopt 32-952] Improved path group WNS = -0.043. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_32_fu_724[12].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_32_fu_724[15].  Re-placed instance system_i/infer/inst/query_32_fu_724_reg[15]
+INFO: [Physopt 32-952] Improved path group WNS = -0.043. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_32_fu_724[15].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_32_fu_724[2].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ap_NS_fsm1101_out.
+INFO: [Physopt 32-703] Processed net system_i/infer/inst/y_fu_940_reg[2]. Clock skew was adjusted for instance system_i/infer/inst/y_fu_940_reg[2].
+INFO: [Physopt 32-952] Improved path group WNS = -0.042. Path group: clk_fpga_0. Processed net: system_i/infer/inst/y_fu_940_reg[2].
+INFO: [Physopt 32-663] Processed net system_i/infer/inst/query_19_fu_672[2].  Re-placed instance system_i/infer/inst/query_19_fu_672_reg[2]
+INFO: [Physopt 32-952] Improved path group WNS = -0.042. Path group: clk_fpga_0. Processed net: system_i/infer/inst/query_19_fu_672[2].
+INFO: [Physopt 32-952] Improved path group WNS = -0.022. Path group: clk_fpga_0. Processed net: system_i/infer/inst/h_load_14_reg_7168[0].
+INFO: [Physopt 32-710] Processed net system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/d1[16]. Critical path length was reduced through logic transformation on cell system_i/infer/inst/grp_texture_integer_Pipeline_VITIS_LOOP_494_1_VITIS_LOOP_494_23_fu_2352/ram_reg_0_i_38__1_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.017. Path group: clk_fpga_0. Processed net: system_i/infer/inst/ram_15_U/ram_1_address11.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/shl_ln104_reg_7242[55]_i_19_n_9.
+INFO: [Physopt 32-703] Processed net system_i/infer/inst/h_load_14_reg_7168[5]. Clock skew was adjusted for instance system_i/infer/inst/h_load_14_reg_7168_reg[5].
+INFO: [Physopt 32-952] Improved path group WNS = -0.015. Path group: clk_fpga_0. Processed net: system_i/infer/inst/h_load_14_reg_7168[5].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/outmem_m_axi_U/store_unit_0/fifo_wreq/U_fifo_srl/mem_reg[2][56]_srl3_n_9.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/outmem_m_axi_U/store_unit_0/fifo_wreq/U_fifo_srl/outmem_0_AWVALID.
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_conv_fu_1722/ap_CS_fsm_reg[2]_0.
+INFO: [Physopt 32-710] Processed net system_i/infer/inst/grp_conv_fu_1722/ap_CS_fsm_reg[2]_0. Critical path length was reduced through logic transformation on cell system_i/infer/inst/grp_conv_fu_1722/mem_reg[2][0]_srl3_i_9_comp.
+INFO: [Physopt 32-952] Improved path group WNS = -0.013. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_conv_fu_1722/icmp_ln637_reg_7321_reg[0].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: clk_fpga_0. Processed net: system_i/infer/inst/grp_conv_fu_1722/empty_477_reg_2580_reg_n_9_[2].
+INFO: [Physopt 32-710] Processed net system_i/infer/inst/grp_conv_fu_1722/empty_477_reg_2580[23]_i_2_n_9. Critical path length was reduced through logic transformation on cell system_i/infer/inst/grp_conv_fu_1722/empty_477_reg_2580[23]_i_2_comp.
+INFO: [Physopt 32-735] Processed net system_i/infer/inst/grp_conv_fu_1722/ap_CS_fsm[58]_i_2_n_9. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.025 | THS=0.000 |
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.025 | THS=0.000 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 3156.199 ; gain = 0.000
+Phase 2 Critical Path Optimization | Checksum: 20715717d
+
+Time (s): cpu = 00:09:22 ; elapsed = 00:06:17 . Memory (MB): peak = 3156.199 ; gain = 560.270
+
+Phase 3 Hold Fix Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.025 | THS=0.000 |
+INFO: [Physopt 32-1493] The number of hold_fix net fail limit is 5.
+INFO: [Physopt 32-66] No high hold slack nets found for hold slack optimization.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.025 | THS=0.000 |
+Phase 3 Hold Fix Optimization | Checksum: 20715717d
+
+Time (s): cpu = 00:09:22 ; elapsed = 00:06:18 . Memory (MB): peak = 3156.199 ; gain = 560.270
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3156.199 ; gain = 0.000
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.025 | THS=0.000 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Critical Path  |          0.222  |          7.180  |            0  |              0  |                    40  |           0  |           1  |  00:06:11  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary of Hold Fix Optimizations
+=================================
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization               |  WHS Gain (ns)  |  THS Gain (ns)  |  Added LUTs  |  Added FFs  |  Optimized Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT1 and ZHOLD Insertion   |          0.000  |          0.000  |           0  |          0  |               0  |           0  |           0  |  00:00:00  |
+|  Total                      |          0.000  |          0.000  |           0  |          0  |               0  |           0  |           0  |  00:00:00  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 3156.199 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 13c08ccb2
+
+Time (s): cpu = 00:09:22 ; elapsed = 00:06:18 . Memory (MB): peak = 3156.199 ; gain = 560.270
+INFO: [Common 17-83] Releasing license: Implementation
+134 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:10:03 ; elapsed = 00:06:35 . Memory (MB): peak = 3156.199 ; gain = 775.688
+Command: route_design -directive Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'Explore'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: b0332ec9 ConstDB: 0 ShapeSum: fb5d9d4 RouteDB: 391253aa
+Post Restoration Checksum: NetGraph: f05ef5e0 | NumContArr: a73badfb | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 31cec9915
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:28 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 31cec9915
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:29 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 31cec9915
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:29 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 2.3 Timing Verification
+
+Phase 2.3.1 Update Timing
+Phase 2.3.1 Update Timing | Checksum: 35632f2cb
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:43 . Memory (MB): peak = 3156.199 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.003  | TNS=0.000  | WHS=0.025  | THS=0.000  |
+
+Phase 2.3 Timing Verification | Checksum: 35632f2cb
+
+Time (s): cpu = 00:01:51 ; elapsed = 00:00:43 . Memory (MB): peak = 3156.199 ; gain = 0.000
+INFO: [Route 35-61] The design met the timing requirement.
+
+Phase 2.4 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 52.9108 %
+  Global Horizontal Routing Utilization  = 56.8497 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2.4 Route finalize | Checksum: 35632f2cb
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:00:43 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 2.5 Verifying routed nets
+
+ Verification completed successfully
+Phase 2.5 Verifying routed nets | Checksum: 35632f2cb
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:00:43 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 2.6 Depositing Routes
+Phase 2.6 Depositing Routes | Checksum: 35632f2cb
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:00:50 . Memory (MB): peak = 3156.199 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 35632f2cb
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:00:50 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 3 Timing Verification
+
+Phase 3.1 Update Timing
+Phase 3.1 Update Timing | Checksum: 25dd99606
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:00:57 . Memory (MB): peak = 3156.199 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.001 | TNS=-0.001 | WHS=0.025  | THS=0.000  |
+
+Phase 3 Timing Verification | Checksum: 25dd99606
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:00:57 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 4 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 52.9108 %
+  Global Horizontal Routing Utilization  = 56.8497 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 4x4 Area, Max Cong = 87.5563%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X40Y66 -> INT_R_X43Y69
+   INT_FEEDTHRU_2_X121Y61 -> INT_R_X51Y61
+   INT_L_X52Y58 -> INT_R_X55Y61
+   INT_L_X56Y58 -> INT_R_X59Y61
+   INT_L_X36Y54 -> INT_R_X39Y57
+South Dir 8x8 Area, Max Cong = 90.6109%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X40Y54 -> INT_FEEDTHRU_2_X118Y64
+   INT_L_X32Y46 -> INT_R_X39Y53
+   INT_L_X24Y38 -> INT_R_X31Y45
+East Dir 16x16 Area, Max Cong = 88.0576%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X32Y54 -> INT_FEEDTHRU_2_X118Y72
+   INT_L_X16Y38 -> INT_R_X31Y53
+   INT_L_X32Y38 -> INT_FEEDTHRU_2_X118Y56
+   INT_L_X16Y22 -> INT_R_X31Y37
+   INT_L_X32Y22 -> INT_R_X47Y37
+West Dir 8x8 Area, Max Cong = 87.9826%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X40Y54 -> INT_FEEDTHRU_2_X118Y64
+   INT_L_X24Y38 -> INT_R_X31Y45
+   INT_L_X24Y30 -> INT_R_X31Y37
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 4 Aspect Ratio: 0.4 Sparse Ratio: 0.5
+Direction: South
+----------------
+Congested clusters found at Level 3
+Effective congestion level: 5 Aspect Ratio: 0.75 Sparse Ratio: 0.5625
+Direction: East
+----------------
+Congested clusters found at Level 4
+Effective congestion level: 5 Aspect Ratio: 0.666667 Sparse Ratio: 1.25
+Direction: West
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 4 Aspect Ratio: 0.625 Sparse Ratio: 1.25
+
+Phase 4 Route finalize | Checksum: 25dd99606
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:00:57 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 5 Verifying routed nets
+
+ Verification completed successfully
+Phase 5 Verifying routed nets | Checksum: 25dd99606
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:00:57 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 6 Depositing Routes
+Phase 6 Depositing Routes | Checksum: 25dd99606
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:04 . Memory (MB): peak = 3156.199 ; gain = 0.000
+
+Phase 7 Incr Placement Change
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 3156.199 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.051. For the most accurate timing information please run report_timing.
+Ending IncrPlace Task | Checksum: 2366bcc3b
+
+Time (s): cpu = 00:01:55 ; elapsed = 00:01:05 . Memory (MB): peak = 3207.348 ; gain = 51.148
+Google Cpuprofiler is only supported on Linux.
+Phase 7 Incr Placement Change | Checksum: 2366bcc3b
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:02:09 . Memory (MB): peak = 3207.348 ; gain = 51.148
+
+Phase 8 Build RT Design
+Checksum: PlaceDB: aefdda60 ConstDB: 0 ShapeSum: faccd6a0 RouteDB: 8ca11b3b
+Post Restoration Checksum: NetGraph: 18e37c55 | NumContArr: 198c691c | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 8 Build RT Design | Checksum: 1b7c1daab
+
+Time (s): cpu = 00:05:05 ; elapsed = 00:02:23 . Memory (MB): peak = 3207.348 ; gain = 51.148
+
+Phase 9 Router Initialization
+
+Phase 9.1 Fix Topology Constraints
+Phase 9.1 Fix Topology Constraints | Checksum: 1b7c1daab
+
+Time (s): cpu = 00:05:06 ; elapsed = 00:02:23 . Memory (MB): peak = 3207.348 ; gain = 51.148
+
+Phase 9.2 Pre Route Cleanup
+Phase 9.2 Pre Route Cleanup | Checksum: 2a2d1a00c
+
+Time (s): cpu = 00:05:07 ; elapsed = 00:02:23 . Memory (MB): peak = 3207.348 ; gain = 51.148
+ Number of Nodes with overlaps = 0
+
+Phase 9.3 Update Timing
+Phase 9.3 Update Timing | Checksum: 1ca484f1b
+
+Time (s): cpu = 00:06:02 ; elapsed = 00:02:41 . Memory (MB): peak = 3369.789 ; gain = 213.590
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.022 | TNS=-0.043 | WHS=-2.264 | THS=-792.717|
+
+
+Phase 9.4 Update Timing for Bus Skew
+
+Phase 9.4.1 Update Timing
+Phase 9.4.1 Update Timing | Checksum: 1c06faa0a
+
+Time (s): cpu = 00:06:19 ; elapsed = 00:02:50 . Memory (MB): peak = 3598.379 ; gain = 442.180
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.022 | TNS=0.000  | WHS=-0.255 | THS=-1.530 |
+
+Phase 9.4 Update Timing for Bus Skew | Checksum: 23a8309cf
+
+Time (s): cpu = 00:06:19 ; elapsed = 00:02:50 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 9.5 Soft Constraint Pins - Fast Budgeting
+Phase 9.5 Soft Constraint Pins - Fast Budgeting | Checksum: 23a8309cf
+
+Time (s): cpu = 00:06:20 ; elapsed = 00:02:50 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 52.6842 %
+  Global Horizontal Routing Utilization  = 56.6225 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 554
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 114
+  Number of Partially Routed Nets     = 440
+  Number of Node Overlaps             = 0
+
+Phase 9 Router Initialization | Checksum: 25658c84b
+
+Time (s): cpu = 00:06:20 ; elapsed = 00:02:50 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 10 Global Routing
+Phase 10 Global Routing | Checksum: 25658c84b
+
+Time (s): cpu = 00:06:21 ; elapsed = 00:02:51 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 11 Initial Routing
+
+Phase 11.1 Initial Net Routing Pass
+Phase 11.1 Initial Net Routing Pass | Checksum: 23f2c7f3b
+
+Time (s): cpu = 00:06:25 ; elapsed = 00:02:52 . Memory (MB): peak = 3598.379 ; gain = 442.180
+Phase 11 Initial Routing | Checksum: 23f2c7f3b
+
+Time (s): cpu = 00:06:25 ; elapsed = 00:02:52 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 12 Rip-up And Reroute
+
+Phase 12.1 Global Iteration 0
+ Number of Nodes with overlaps = 4360
+ Number of Nodes with overlaps = 1714
+ Number of Nodes with overlaps = 681
+ Number of Nodes with overlaps = 328
+ Number of Nodes with overlaps = 165
+ Number of Nodes with overlaps = 83
+ Number of Nodes with overlaps = 50
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.093 | TNS=-0.499 | WHS=N/A    | THS=N/A    |
+
+Phase 12.1 Global Iteration 0 | Checksum: 209a0e7de
+
+Time (s): cpu = 00:09:59 ; elapsed = 00:04:35 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 12.2 Global Iteration 1
+ Number of Nodes with overlaps = 1225
+ Number of Nodes with overlaps = 347
+ Number of Nodes with overlaps = 91
+ Number of Nodes with overlaps = 29
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.124 | TNS=-0.215 | WHS=N/A    | THS=N/A    |
+
+Phase 12.2 Global Iteration 1 | Checksum: 2befa2c14
+
+Time (s): cpu = 00:10:24 ; elapsed = 00:04:51 . Memory (MB): peak = 3598.379 ; gain = 442.180
+Phase 12 Rip-up And Reroute | Checksum: 2befa2c14
+
+Time (s): cpu = 00:10:24 ; elapsed = 00:04:51 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 13 Delay and Skew Optimization
+
+Phase 13.1 Delay CleanUp
+
+Phase 13.1.1 Update Timing
+Phase 13.1.1 Update Timing | Checksum: 2248ad859
+
+Time (s): cpu = 00:10:29 ; elapsed = 00:04:52 . Memory (MB): peak = 3598.379 ; gain = 442.180
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.093 | TNS=-0.467 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 13.1 Delay CleanUp | Checksum: 2572da751
+
+Time (s): cpu = 00:10:29 ; elapsed = 00:04:52 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 13.2 Clock Skew Optimization
+Phase 13.2 Clock Skew Optimization | Checksum: 2572da751
+
+Time (s): cpu = 00:10:30 ; elapsed = 00:04:53 . Memory (MB): peak = 3598.379 ; gain = 442.180
+Phase 13 Delay and Skew Optimization | Checksum: 2572da751
+
+Time (s): cpu = 00:10:30 ; elapsed = 00:04:53 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 14 Post Hold Fix
+
+Phase 14.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.093 | TNS=-0.467 | WHS=0.007  | THS=0.000  |
+
+Phase 14.1 Hold Fix Iter | Checksum: 3198fcc0d
+
+Time (s): cpu = 00:10:34 ; elapsed = 00:04:54 . Memory (MB): peak = 3598.379 ; gain = 442.180
+Phase 14 Post Hold Fix | Checksum: 3198fcc0d
+
+Time (s): cpu = 00:10:34 ; elapsed = 00:04:54 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 15 Timing Verification
+
+Phase 15.1 Update Timing
+Phase 15.1 Update Timing | Checksum: 24d160e5b
+
+Time (s): cpu = 00:10:44 ; elapsed = 00:04:57 . Memory (MB): peak = 3598.379 ; gain = 442.180
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.093 | TNS=-0.467 | WHS=0.007  | THS=0.000  |
+
+Phase 15 Timing Verification | Checksum: 24d160e5b
+
+Time (s): cpu = 00:10:44 ; elapsed = 00:04:57 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 16 Reset Design
+INFO: [Route 35-307] 100954 nets already restored were skipped.
+Post Restoration Checksum: NetGraph: f31be34 | NumContArr: b6ebecda | Constraints: c2a8fa9d | Timing: 6595ea8
+
+Phase 16.1 Create Timer
+Phase 16.1 Create Timer | Checksum: 18f200453
+
+Time (s): cpu = 00:10:45 ; elapsed = 00:04:57 . Memory (MB): peak = 3598.379 ; gain = 442.180
+Phase 16 Reset Design | Checksum: 18f200453
+
+Time (s): cpu = 00:11:17 ; elapsed = 00:05:06 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 17 Post Process Routing
+Phase 17 Post Process Routing | Checksum: 18f200453
+
+Time (s): cpu = 00:11:19 ; elapsed = 00:05:07 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Phase 18 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.003  | TNS=0.000  | WHS=0.025  | THS=0.000  |
+
+Phase 18 Post Router Timing | Checksum: 26982cc25
+
+Time (s): cpu = 00:12:06 ; elapsed = 00:05:20 . Memory (MB): peak = 3598.379 ; gain = 442.180
+INFO: [Route 35-61] The design met the timing requirement.
+Total Elapsed time in route_design: 320.383 secs
+
+Phase 19 Post-Route Event Processing
+Phase 19 Post-Route Event Processing | Checksum: 237a120a4
+
+Time (s): cpu = 00:12:07 ; elapsed = 00:05:20 . Memory (MB): peak = 3598.379 ; gain = 442.180
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 237a120a4
+
+Time (s): cpu = 00:12:07 ; elapsed = 00:05:21 . Memory (MB): peak = 3598.379 ; gain = 442.180
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+156 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:12:08 ; elapsed = 00:05:22 . Memory (MB): peak = 3598.379 ; gain = 442.180
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:00:51 ; elapsed = 00:00:17 . Memory (MB): peak = 3598.379 ; gain = 0.000
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-433] Consider using Xilinx recommended XPM_CDC modules to avoid Critical severities
+INFO: [Timing 38-314] The report_cdc command only analyzes and reports clock domain crossing paths where clocks have been defined on both source and destination sides. Ports with no input delay constraint are skipped. Please run check_timing to verify there are no missing clock definitions in your design, nor any unconstrained input port.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Command: report_drc -file D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/physical_repair01/drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/physical_repair01/drc.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 3598.379 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Vivado_Tcl 4-49] No violations matched 'SEVERITY == Error'.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 3598.379 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/physical_repair01/after_physical_optimization.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 3598.379 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.192 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 3598.379 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/video_accepted.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 3598.379 ; gain = 0.000
+Command: write_bitstream -force D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/texture_v170.runs/impl_1/system_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/texture_v170.runs/impl_1/system_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+185 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:43 ; elapsed = 00:00:18 . Memory (MB): peak = 3659.355 ; gain = 60.977
+INFO: [Projectvivado 1-1918] Creating Hardware Platform: D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/system.xsa ...
+Command: write_bitstream -force D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/.Xil/Vivado-29132-LAPTOP-UOC8IVHM/xsa/system.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/.Xil/Vivado-29132-LAPTOP-UOC8IVHM/xsa/system.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+194 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:42 ; elapsed = 00:00:17 . Memory (MB): peak = 3932.242 ; gain = 152.352
+INFO: [Projectvivado 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Projectvivado 1-1941] Successfully created Hardware Platform: D:/Vivado/TileLab_RealPhotos_20261020/v186_hw01/system.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vivado/data/embeddedsw) loading 1 seconds
+write_hw_platform: Time (s): cpu = 00:00:54 ; elapsed = 00:00:30 . Memory (MB): peak = 3932.242 ; gain = 272.887
+TEXTURE_VIDEO_POSTROUTE_REPAIR_PASSED
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 23 03:53:21 2026...

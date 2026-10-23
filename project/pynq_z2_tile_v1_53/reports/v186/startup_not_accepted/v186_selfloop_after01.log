@@ -1,0 +1,18 @@
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+CORE_PC pc: 00100000
+
+CORE_LR lr: ffffff20
+
+CORE_CPSR cpsr: 200001df
+       n (Bits [31]):  0      z (Bits [30]):  0      c (Bits [29]):  1
+       v (Bits [28]):  0      q (Bits [27]):  0  it (Bits [15:25]):  0
+       j (Bits [24]):  0  ge (Bits [19:16]):  0       e (Bits [9]):  0
+        a (Bits [8]):  1       i (Bits [7]):  1       f (Bits [6]):  1
+        t (Bits [5]):  0     m (Bits [4:0]): 1f
+
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vitis/data/embeddedsw) loading 0 seconds
+MAILBOX 0 0 1095143918 0 0 0 0 0
+PS_CLOCK 2098432

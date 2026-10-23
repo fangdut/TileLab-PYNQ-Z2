@@ -1,0 +1,18 @@
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+BEFORE pc: 0011770c
+
+BREAKPOINTS ID        Enabled   Location            Status              
+==        =======   ========            ======              
+0         1         0x00117764          target 2: {Address 0x117764 HitCount 
+                                        0}                  
+AFTER_TARGETS   1  APU
+     2* ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+Cannot halt processor core, timeout
+Cannot halt processor core, timeout
+    while executing
+"error $why"
