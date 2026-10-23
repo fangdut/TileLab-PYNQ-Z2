@@ -1,0 +1,16 @@
+{
+  "scope": "REDUCED_FULL_FUNCTION_RTL_AND_IP_EXPORT_NOT_PHYSICAL_OR_BOARD",
+  "passed": true,
+  "source_sha256": "c4391bbdd3da915836e2f6f63c97407bfd120456f3274d95a1fcf71e6ec4abbd",
+  "latency_cycles": [
+    545278,
+    545286
+  ],
+  "interval_cycles": 545295,
+  "ip_export_sha256": "494d19194f7b63e899b53daf2e9c6b6966ee7c8abfe7bf4d2218c2c035a21ceb",
+  "ip_export_bytes": 1223368,
+  "model_changed": false,
+  "threshold_changed": false,
+  "input_resolution_changed": false,
+  "board_programmed": false
+}

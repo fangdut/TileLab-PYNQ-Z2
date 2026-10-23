@@ -1,0 +1,12 @@
+{
+  "scope": "HISTORICAL_RESULT_VALIDATION_EQUIVALENCE_RTL_NOT_TIMING_OR_BOARD",
+  "passed": true,
+  "transactions": 6190,
+  "extra_validation_cycles": 2,
+  "elapsed_seconds": 6.8439999999973224,
+  "sources": {
+    "rtl\\pl_result_latch.sv": "0286097ab63ca62ff8a7ef1789e75447881bd9d24c8bc8bfc367a23e18e539a4",
+    "sim\\pl_result_latch_reference_v176.sv": "3b35f853fe02b759ff12338a87ea55d27451f031ae799ea89bce2d1e8f4e0494",
+    "sim\\tb_result_latch.sv": "ca70f906416fcca6a9c524a60377adb71742d9e78cff7ac2959420235a43f53b"
+  }
+}

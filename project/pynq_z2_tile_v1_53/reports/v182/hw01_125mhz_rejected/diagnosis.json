@@ -1,0 +1,29 @@
+{
+  "scope": "FAILED_PHYSICAL_TIMING_NOT_BOARD",
+  "initial_setup_ns": -0.49,
+  "repair_setup_ns": -0.187,
+  "initial_hold_ns": 0.05,
+  "repair_hold_ns": 0.038,
+  "drc_errors": 0,
+  "actual_dsp": 219,
+  "board_programmed": false,
+  "initial_path": "result header[4][4] to mask_pixels CE; 12 logic levels, 8.145ns data",
+  "repaired_path": "HLS FSM[43] to row-address mul22x32 DSP cascade PCIN; 6.400ns data",
+  "accepted_firmware_remains": "V179/HLS62 100MHz measured 8.169552657504967 HDMI FPS",
+  "reports": {
+    "pipeline.json": "015da905140f101ddd0c335d69f8dfadc420c2e17138949eaf26f65603f13c42",
+    "initial\\candidate_preflight.json": "974cdd3643194482d9eaa777bef3f45d330e3dc4b4a1df5bf9b031e5e968f70a",
+    "initial\\clocks.rpt": "926a823b36cfeca6ff6226fcbcfb35e35a9ab5b8cf9f0676a995bf1f42f722a4",
+    "initial\\drc.rpt": "e60e0c4d7ac4bcdbc0956672baf8b59bfda639b2c43a9c98b000855422ad43a9",
+    "initial\\implementation_status.json": "314a025b0a2c4b04efee84166cb701fc1c5f315b652fd090286fda75c71a6beb",
+    "initial\\optimization_strategy.json": "c292277d6f39f51b8b8112dfb8d42dbb6b9771023edafa4454a66a365b4edefa",
+    "initial\\synthesis_utilization.rpt": "f3be4574a40c12aa8a47fd8cd100e5cd55b477127e32419273f1f1e5e6f2cfbc",
+    "initial\\timing_summary.rpt": "19368bf81fff174ea912cd46cbcb560fd689547379ca96586e8f0bd744470738",
+    "initial\\utilization.rpt": "05c66d099e59cf720c9b30934f02066c2e5f7ea8389eeeec3b334dc6b37b76af",
+    "single_repair\\clocks.rpt": "9f9fd1eefee87ad47fe892326c04175431a21450696410e039a288c544707b14",
+    "single_repair\\drc.rpt": "83ba266339eefbe445fc84cbdb79038014a67ba6c1c493c02c4d8613de5af046",
+    "single_repair\\implementation_status.json": "4d539fe6b2112a04e2f69d7d2bc928e9bb48d186f5f29361d01a2cf4d5f78a4f",
+    "single_repair\\timing_summary.rpt": "a7d71f346c98fcaa544b2ccd2abd52819c1acb9078cd0e4179a99c3b8e14e679",
+    "single_repair\\utilization.rpt": "5d58c0e643319ff0805cfd1fd032e1e17411fc62c1670a55140a525c658a4984"
+  }
+}
