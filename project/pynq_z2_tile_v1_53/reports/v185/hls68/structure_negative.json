@@ -1,0 +1,37 @@
+{
+  "scope": "MUTATED_GENERATED_QUARTER_GUARD_REJECTIONS_NOT_BOARD",
+  "passed": true,
+  "legacy_hls66_returns_none": true,
+  "cases": [
+    {
+      "case": "horizontal_width",
+      "rejected": true,
+      "reason": "Generated quarter port width changed: quarter_horizontal/ap_return"
+    },
+    {
+      "case": "vertical_width",
+      "rejected": true,
+      "reason": "Generated quarter port width changed: quarter_vertical/top"
+    },
+    {
+      "case": "latency",
+      "rejected": true,
+      "reason": "Expected each quarter stage latency2/II1"
+    },
+    {
+      "case": "dsp_budget",
+      "rejected": true,
+      "reason": "Quarter stage consumes new DSPs"
+    },
+    {
+      "case": "rounding",
+      "rejected": true,
+      "reason": "Interpolation call graph or signed rounding changed"
+    },
+    {
+      "case": "parallel_instance_missing",
+      "rejected": true,
+      "reason": "Expected16 parallel quarter stage instances: quarter_vertical"
+    }
+  ]
+}

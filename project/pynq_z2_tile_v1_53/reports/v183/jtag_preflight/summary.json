@@ -1,0 +1,15 @@
+{
+  "scope": "PRETRIAL_BASELINE_JTAG_STATUS_NOT_NEW_BOARD_ACCEPTANCE",
+  "previous_boot_identity": 1363500809,
+  "pl_identity": 385875969,
+  "jtag_frequency_hz": 3000000,
+  "final_arm_status": "both suspended",
+  "programmed": false,
+  "initial_read_issue": "PL MMIO initially blocked by absent debug memory map; loading accepted V179 XSA into debugger resolved read. Both cores explicitly halted before final baseline identity check.",
+  "files": {
+    "v183_jtag_preflight.log": "d1cbff282d428d8a1e2ddf93b8abf1f005356c5a9452f159eb1ec49d02b67062",
+    "v183_jtag_preflight.tcl": "84935ac6006ca0078f245d639d52503bd7bcc5c52b9717f4a5e85c3e61aad7c1",
+    "v183_jtag_preflight02.log": "d1f63a4ea46823ce53b9011000f418e4fc51072821ff55d06b4e8cf176b2ae46",
+    "v183_jtag_preflight02.tcl": "108551adb93d258a975ffb446cbb33417a79c276dcb81f1de4faa06182f7a183"
+  }
+}

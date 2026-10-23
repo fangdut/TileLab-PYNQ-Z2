@@ -1,0 +1,18 @@
+{
+  "scope": "GENERATED_ROW_ADDRESS_STRUCTURE_NOT_FULL_RTL_TIMING_OR_BOARD",
+  "passed": true,
+  "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+  "helper_rtl_sha256": "7f00c97a88323c8885b3a8b5fbb9b24c8a2b55989af657c8d4b4f9a835b18bc1",
+  "multiplier_rtl_sha256": "e8adeff1e2145b84f5d4183310d3d9eb08a98c9dbb30891cf92c6032f947ebbc",
+  "helper_report_sha256": "75e4957ad397892315ff8b9bc4c7437c70acb2d9ab4f6d92a9b6ecfee8e0296a",
+  "top_rtl_sha256": "396c843d054c207edcef1e99b77879272220d0c031f3c50f35da180a1ff70642",
+  "row_bits": 10,
+  "width_bits": 11,
+  "output_bits": 21,
+  "latency_cycles": 3,
+  "initiation_interval": 1,
+  "estimated_helper_dsp": 1,
+  "original_input_validation_before_narrowing": true,
+  "old22x32_multiplier_removed": true,
+  "interpretation": "Width/resource checks are generated-HLS evidence; actual DSP placement/timing and production-frame performance remain unmeasured."
+}

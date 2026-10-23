@@ -1,0 +1,21 @@
+{
+  "scope": "C_SYNTHESIS_AND_QUARTER_UNIT_RTL_NOT_FULL_DETECTOR_RTL_OR_BOARD",
+  "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "all117_complete_output_files_identical": true,
+  "baseline": "acceptedHLS62/v179_all_c05",
+  "resources": {
+    "BRAM_18K": 251,
+    "DSP": 213,
+    "FF": 70171,
+    "LUT": 70949,
+    "URAM": 0
+  },
+  "estimated_clock_ns": 8.207,
+  "horizontal_unit_cases": 262144,
+  "vertical_unit_cases": 131088,
+  "row_helper_and_size_guard_byte_identical_to_exhaustively_checked_hls66": true,
+  "board_programmed": false,
+  "full_detector_rtl_passed": false,
+  "full_hls69_state_at_archive": "FULL_HLS_STARTED"
+}

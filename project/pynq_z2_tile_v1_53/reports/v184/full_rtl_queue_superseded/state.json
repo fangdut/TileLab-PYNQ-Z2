@@ -1,0 +1,7 @@
+{
+  "scope": "SOURCE_BOUND_ROW_ADDRESS_FULL_RTL_NOT_BOARD",
+  "status": "SUPERSEDED_BY_MEASURED_QUARTER_PIPELINE185_NO_FULL_HLS_STARTED",
+  "source_sha256": "d76fd393161ba43ea1e8f912e7294aa5d37a6c94d6b6f035b81af238fc4b2713",
+  "board_programmed": false,
+  "reason": "V183 routed failure reveals inline quarter interpolation carry chain; combine registered interpolation with exact bounded row offsets in new source before spending full RTL resources. No full HLS67 started and no board programming."
+}

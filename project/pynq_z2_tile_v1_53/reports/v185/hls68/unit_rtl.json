@@ -1,0 +1,20 @@
+{
+  "scope": "GENERATED_QUARTER_UNIT_RTL_NOT_FULL_DETECTOR_TIMING_OR_BOARD",
+  "passed": true,
+  "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+  "exhaustive_signed8_horizontal_inputs": 262144,
+  "vertical_edge_and_random_cases": 131088,
+  "horizontal_latency_cycles": 2,
+  "vertical_latency_cycles": 2,
+  "reported_ii": 1,
+  "elapsed_seconds": 8.827999999994063,
+  "report_sha256": {
+    "quarter_horizontal": "504e28a29b750154313891543896192413e7d05d1ef2236a512e06a1a1a46aad",
+    "quarter_vertical": "12fdb53bf21055f927fb918c070c120b79c2f234c515ff8652b0be5eac25934b"
+  },
+  "sources": {
+    "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls68\\solution\\syn\\verilog\\texture_integer_quarter_horizontal.v": "9c35d3958482aa1f698a5071a79d82a6358255a485689e395316e8168c2508df",
+    "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls68\\solution\\syn\\verilog\\texture_integer_quarter_vertical.v": "4af61ac184bdae588ca10861ca668f3fc37e7645432aa283b0f1361d9509aa13",
+    "D:\\Vivado\\TileLab_SingleTile_V164_20261019\\project\\pynq_z2_tile_v1_53\\experimental\\quarter_pipeline_v185\\tb_quarter.sv": "a87f5b7271c8e2c1a0e755301fefc15e60795b5baee041532a0f1f3b2e2271ae"
+  }
+}

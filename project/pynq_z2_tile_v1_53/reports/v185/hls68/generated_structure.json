@@ -1,0 +1,25 @@
+{
+  "scope": "GENERATED_QUARTER_REGISTERED_STRUCTURE_NOT_FULL_RTL_TIMING_OR_BOARD",
+  "passed": true,
+  "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+  "top_rtl_sha256": "396c843d054c207edcef1e99b77879272220d0c031f3c50f35da180a1ff70642",
+  "units": {
+    "quarter_horizontal": {
+      "rtl_sha256": "9c35d3958482aa1f698a5071a79d82a6358255a485689e395316e8168c2508df",
+      "report_sha256": "504e28a29b750154313891543896192413e7d05d1ef2236a512e06a1a1a46aad",
+      "latency_cycles": 2,
+      "initiation_interval": 1,
+      "estimated_dsp": 0,
+      "instances": 16
+    },
+    "quarter_vertical": {
+      "rtl_sha256": "4af61ac184bdae588ca10861ca668f3fc37e7645432aa283b0f1361d9509aa13",
+      "report_sha256": "12fdb53bf21055f927fb918c070c120b79c2f234c515ff8652b0be5eac25934b",
+      "latency_cycles": 2,
+      "initiation_interval": 1,
+      "estimated_dsp": 0,
+      "instances": 16
+    }
+  },
+  "interpretation": "HLS latency/register structure is source-bound; routed timing, actual resource use and board speed still require separate acceptance."
+}

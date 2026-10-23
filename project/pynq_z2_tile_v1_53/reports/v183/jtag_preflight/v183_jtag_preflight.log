@@ -1,0 +1,8 @@
+JTAG_FREQUENCY 3000000
+TARGETS_START
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+CURRENT_BOOT_MAILBOX 385875969 1 1363500809 0 47 0 0 0
+Memory read error at 0x41200000. Blocked address 0x41200000. PL AXI slave ports access is not allowed. This address has not been added to the memory map

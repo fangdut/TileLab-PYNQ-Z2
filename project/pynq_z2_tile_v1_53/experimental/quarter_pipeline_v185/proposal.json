@@ -1,0 +1,11 @@
+{
+  "scope": "ACTUAL_QUARTER_CRITICAL_PATH_PIPELINE_PROPOSAL_NOT_BOARD",
+  "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+  "base_source_sha256": "d76fd393161ba43ea1e8f912e7294aa5d37a6c94d6b6f035b81af238fc4b2713",
+  "model_changed": false,
+  "threshold_changed": false,
+  "input_resolution_changed": false,
+  "measured_path": "V183 initial125MHz:tmp_28 bit0 to tmp_32 bit0 via quarter total_3,11levels/7CARRY4,8.041nsdata,-0.342nssetup",
+  "change": "Same bounded row_offset plus explicit two-cycle horizontal and vertical quarter interpolation helpers; arithmetic and final signed rounding unchanged",
+  "accuracy_or_speed_claimed": false
+}
