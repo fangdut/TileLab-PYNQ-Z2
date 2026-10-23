@@ -1,0 +1,14 @@
+{
+  "scope": "INDEPENDENT_EXHAUSTIVE_PACKING_ARITHMETIC_NOT_RTL_OR_DETECTOR",
+  "passed": true,
+  "source_sha256": "b47dc3838ec087ce13118708fa6b06b610e1465938e63156b037c9169f37d45e",
+  "dual_signed8_cases": 16777216,
+  "nearest_difference_cases": 131071,
+  "missing_correction_errors": 8323072,
+  "packed_minimum": -8388736,
+  "packed_maximum": 8323199,
+  "elapsed_seconds": 1.312999999994645,
+  "integrated_into_detector": false,
+  "board_programmed": false,
+  "fpga_throughput_measured": false
+}
