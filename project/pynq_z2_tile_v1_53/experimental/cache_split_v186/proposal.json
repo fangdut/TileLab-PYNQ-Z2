@@ -1,0 +1,12 @@
+{
+  "scope": "ROUTED_SHARED_BRAM_CONTROL_CACHE_SPLIT_PROPOSAL_NOT_BOARD",
+  "source_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "base_source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+  "model_changed": false,
+  "threshold_changed": false,
+  "input_resolution_changed": false,
+  "measured_path": "V185125MHz:convloop421init->global128bit line_U enable,-0.786nssetup,8.111nsdata/75.649%route",
+  "change": "Dedicated224x24bit normalized RGB row cache; CNN2048x128 line buffer retains convolution ownership only. Exact zero-extension restores original128bit packed RGB words.",
+  "added_logical_storage_bits": 5376,
+  "accuracy_or_speed_claimed": false
+}

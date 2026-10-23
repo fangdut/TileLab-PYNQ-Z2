@@ -69,11 +69,13 @@ def preflight(hls,regression,profile):
     from check_operation_decode import inspect as inspect_operation_decode
     from check_row_address import inspect as inspect_row_address
     from check_quarter_pipeline import inspect as inspect_quarter_pipeline
+    from check_normal_cache import inspect as inspect_normal_cache
     cache_bounds=inspect_direct_cache(source,profile)
     spatial_bounds=inspect_spatial_coordinates(source,profile)
     operation_decode=inspect_operation_decode(hls)
     row_address=inspect_row_address(hls)
     quarter_pipeline=inspect_quarter_pipeline(hls)
+    normal_cache=inspect_normal_cache(hls)
     recurrence=inspect_recurrence(hls)
     if not recurrence['all_banks_safe']:
         raise ValueError('Generated MAC feedback is later than its same-slot recurrence')
@@ -89,7 +91,7 @@ def preflight(hls,regression,profile):
     return dict(scope='OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD',source_sha256=sha(source),
         model_sha256=graph['sha256'],c_regression_summary_sha256=sha(regression/'summary.json'),
         rtl_cosim_sha256=sha(cosim),hls_dsp=dsp,hls_bram18=bram,mac_recurrence=recurrence,direct_cache_bounds=cache_bounds,spatial_coordinate_bounds=spatial_bounds,
-        centered_packing_weights=packed_weight_proof(source,profile,graph),operation_decode=operation_decode,row_address=row_address,quarter_pipeline=quarter_pipeline)
+        centered_packing_weights=packed_weight_proof(source,profile,graph),operation_decode=operation_decode,row_address=row_address,quarter_pipeline=quarter_pipeline,normal_cache=normal_cache)
 
 
 def main():

@@ -1,0 +1,37 @@
+{
+  "scope": "MUTATED_CACHE_SEPARATION_GUARD_REJECTIONS_NOT_BOARD",
+  "passed": true,
+  "legacy_hls69_returns_none": true,
+  "cases": [
+    {
+      "case": "source_width",
+      "rejected": true,
+      "reason": "Compact normalization source contract changed"
+    },
+    {
+      "case": "source_depth",
+      "rejected": true,
+      "reason": "Compact normalization source contract changed"
+    },
+    {
+      "case": "old_writer",
+      "rejected": true,
+      "reason": "Compact normalization source contract changed"
+    },
+    {
+      "case": "upper_bits",
+      "rejected": true,
+      "reason": "Compact normalization source contract changed"
+    },
+    {
+      "case": "generated_width",
+      "rejected": true,
+      "reason": "Generated cache dimensions changed: normal_line"
+    },
+    {
+      "case": "shared_write_enable",
+      "rejected": true,
+      "reason": "Convolution RAM control still shared with another phase: we1"
+    }
+  ]
+}

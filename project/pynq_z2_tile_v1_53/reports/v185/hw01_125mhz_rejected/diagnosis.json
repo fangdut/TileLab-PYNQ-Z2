@@ -1,0 +1,17 @@
+{
+  "scope": "FAILED_PHYSICAL_TIMING_NOT_BOARD",
+  "setup_ns": -0.786,
+  "hold_ns": 0.05,
+  "drc_errors": 0,
+  "actual_dsp": 218,
+  "board_programmed": false,
+  "repair_attempted": false,
+  "source": "conv loop421 sequential-init register",
+  "destination": "shared line_U RAM3 enable",
+  "data_delay_ns": 8.111,
+  "route_delay_ns": 6.136,
+  "logic_levels": 8,
+  "route_fraction": 0.75649,
+  "interpretation": "Shared preprocessing/CNN line memory participates in the routed control path. V186 will separate a compact24-bit normalization cache to remove the preprocessing writer and permit local memory placement. Improvement remains unproven.",
+  "timing_sha256": "8e18adb06005f87b9a7c9d422b339482391301bad2e3de07ac7e399a03967091"
+}

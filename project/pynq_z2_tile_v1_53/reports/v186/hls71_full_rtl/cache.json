@@ -1,0 +1,44 @@
+{
+  "scope": "GENERATED_CACHE_SEPARATION_NOT_FULL_RTL_ROUTING_OR_BOARD",
+  "passed": true,
+  "source_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "top_rtl_sha256": "b4707fd4f87977e31cfa12613b26296fa0a9912aaebbf35abaab97b873fe61d3",
+  "memories": {
+    "normal_line": {
+      "width": 24,
+      "depth": 224,
+      "rtl_sha256": "6911a332a26b1f5624924535c76bbbc57dcd8d4da7a90b9b2b4170c05a06ed3a",
+      "connections": {
+        "clk": "ap_clk",
+        "reset": "ap_rst_n_inv",
+        "address0": "grp_texture_integer_Pipeline_VITIS_LOOP_627_9_fu_1998_normal_line_address0",
+        "ce0": "normal_line_ce0",
+        "q0": "normal_line_q0",
+        "address1": "grp_texture_integer_Pipeline_VITIS_LOOP_614_8_fu_1984_normal_line_address1",
+        "ce1": "normal_line_ce1",
+        "we1": "normal_line_we1",
+        "d1": "grp_texture_integer_Pipeline_VITIS_LOOP_614_8_fu_1984_normal_line_d1"
+      }
+    },
+    "line": {
+      "width": 128,
+      "depth": 2048,
+      "rtl_sha256": "158a86196863a0029bead4823af2217dd598597c55da5ff73a3758fd030d5ed8",
+      "connections": {
+        "clk": "ap_clk",
+        "reset": "ap_rst_n_inv",
+        "address0": "grp_conv_fu_1722_line_r_address0",
+        "ce0": "grp_conv_fu_1722_line_r_ce0",
+        "q0": "line_q0",
+        "address1": "grp_conv_fu_1722_line_r_address1",
+        "ce1": "grp_conv_fu_1722_line_r_ce1",
+        "we1": "grp_conv_fu_1722_line_r_we1",
+        "d1": "grp_conv_fu_1722_line_r_d1"
+      }
+    }
+  },
+  "added_logical_bits": 5376,
+  "convolution_controls_direct": true,
+  "normal_rgb_zero_extended_to_128": true,
+  "interpretation": "Dedicated generated storage/control verified; resource/timing/FPS improvement requires routed and physical board evidence."
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "REDUCED_FULL_FUNCTION_RTL_AND_IP_EXPORT_NOT_PHYSICAL_OR_BOARD",
+  "passed": true,
+  "source_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "ip_export_sha256": "e11299dfe45dc6ad9dc676e31894d861048d3a80154ba88d85aaff53efa4644f",
+  "ip_export_bytes": 1209982,
+  "latency_cycles": [
+    547158,
+    547166
+  ],
+  "interval_cycles": 547175,
+  "fixture_is_production_benchmark": false,
+  "resources": {
+    "BRAM_18K": 252,
+    "DSP": 213,
+    "FF": 69970,
+    "LUT": 70467,
+    "URAM": 0
+  },
+  "model_changed": false,
+  "threshold_changed": false,
+  "input_resolution_changed": false,
+  "board_programmed": false
+}

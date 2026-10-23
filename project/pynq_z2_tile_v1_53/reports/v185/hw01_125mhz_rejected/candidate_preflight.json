@@ -1,0 +1,255 @@
+{
+  "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_regression_summary_sha256": "2850763a293cee701cf7758f904c1e748c6abb3fba4e1203d75874ed433ba6b6",
+  "rtl_cosim_sha256": "222571f5e158c63dde36060b37e81554705d02796cb01715c1b1d27e709f6bde",
+  "hls_dsp": 213,
+  "hls_bram18": 251,
+  "mac_recurrence": {
+    "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+    "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls69",
+    "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+    "rtl_sha256": "88f91c67cee2889d81ca42cdeb4efff955af2fbf42042283b556a5170571ac09",
+    "slots": 32,
+    "minimum_reuse_iterations": 16,
+    "banks": [
+      {
+        "bank": "acc",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_1",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_10",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_11",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_12",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_13",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_14",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_15",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_2",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_3",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_4",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_5",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_6",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_7",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_8",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      },
+      {
+        "bank": "acc_9",
+        "read_stage": 9,
+        "write_stage": 18,
+        "write_minus_read": 9,
+        "safe_before_next_read": true
+      }
+    ],
+    "all_banks_safe": true,
+    "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively. Allocated RAM depth alone is insufficient when DW uses a shorter logical span."
+  },
+  "direct_cache_bounds": null,
+  "spatial_coordinate_bounds": {
+    "scope": "MODEL_BOUND_SPATIAL_COORDINATE_PROOF_NOT_RTL_OR_FPS",
+    "passed": true,
+    "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "binary_descriptors_checked": 47,
+    "standard3x3_layers": [
+      {
+        "step": 1,
+        "input_channels": 3,
+        "output_channels": 32
+      }
+    ],
+    "depthwise3x3_steps": [
+      2,
+      5,
+      8,
+      12,
+      15,
+      19,
+      23,
+      26,
+      30,
+      34,
+      38,
+      41,
+      45
+    ],
+    "standard3x3_input_channel_limit": 8,
+    "all_nine_kernel_positions_exact": true,
+    "unsupported_standard3x3_has_runtime_error_guard": true
+  },
+  "centered_packing_weights": null,
+  "operation_decode": {
+    "scope": "GENERATED_HLS_CONTROL_STRUCTURE_NOT_FULL_RTL_SIMULATION_OR_BOARD",
+    "passed": true,
+    "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+    "decoder_rtl_sha256": "43762b3bb60e466b3aae023c4335f97259dcd456fb63b213a9fec7cd829e0477",
+    "top_rtl_sha256": "396c843d054c207edcef1e99b77879272220d0c031f3c50f35da180a1ff70642",
+    "decoder_report_sha256": "f6c3235a7c2d902e84f16430167af6d695d49426d6d1208383453b4de4524cd2",
+    "raw_bits": 32,
+    "onehot_bits": 3,
+    "latency_cycles": 2,
+    "initiation_interval": 1,
+    "comparison_stage_pairs": [
+      [
+        "icmp_ln83_1_reg_85_pp0_iter1_reg",
+        "icmp_ln83_1_reg_85"
+      ],
+      [
+        "icmp_ln83_2_reg_90_pp0_iter1_reg",
+        "icmp_ln83_2_reg_90"
+      ],
+      [
+        "icmp_ln83_reg_80_pp0_iter1_reg",
+        "icmp_ln83_reg_80"
+      ]
+    ]
+  },
+  "row_address": {
+    "scope": "GENERATED_ROW_ADDRESS_STRUCTURE_NOT_FULL_RTL_TIMING_OR_BOARD",
+    "passed": true,
+    "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+    "helper_rtl_sha256": "7f00c97a88323c8885b3a8b5fbb9b24c8a2b55989af657c8d4b4f9a835b18bc1",
+    "multiplier_rtl_sha256": "e8adeff1e2145b84f5d4183310d3d9eb08a98c9dbb30891cf92c6032f947ebbc",
+    "helper_report_sha256": "75e4957ad397892315ff8b9bc4c7437c70acb2d9ab4f6d92a9b6ecfee8e0296a",
+    "top_rtl_sha256": "396c843d054c207edcef1e99b77879272220d0c031f3c50f35da180a1ff70642",
+    "row_bits": 10,
+    "width_bits": 11,
+    "output_bits": 21,
+    "latency_cycles": 3,
+    "initiation_interval": 1,
+    "estimated_helper_dsp": 1,
+    "original_input_validation_before_narrowing": true,
+    "old22x32_multiplier_removed": true,
+    "interpretation": "Width/resource checks are generated-HLS evidence; actual DSP placement/timing and production-frame performance remain unmeasured."
+  },
+  "quarter_pipeline": {
+    "scope": "GENERATED_QUARTER_REGISTERED_STRUCTURE_NOT_FULL_RTL_TIMING_OR_BOARD",
+    "passed": true,
+    "source_sha256": "ca83b961ae8ec3a34a0bf3be25ec87e45d7afbc60ae05b9e2fd4d12b39a8e36b",
+    "top_rtl_sha256": "396c843d054c207edcef1e99b77879272220d0c031f3c50f35da180a1ff70642",
+    "units": {
+      "quarter_horizontal": {
+        "rtl_sha256": "9c35d3958482aa1f698a5071a79d82a6358255a485689e395316e8168c2508df",
+        "report_sha256": "504e28a29b750154313891543896192413e7d05d1ef2236a512e06a1a1a46aad",
+        "latency_cycles": 2,
+        "initiation_interval": 1,
+        "estimated_dsp": 0,
+        "instances": 16
+      },
+      "quarter_vertical": {
+        "rtl_sha256": "4af61ac184bdae588ca10861ca668f3fc37e7645432aa283b0f1361d9509aa13",
+        "report_sha256": "12fdb53bf21055f927fb918c070c120b79c2f234c515ff8652b0be5eac25934b",
+        "latency_cycles": 2,
+        "initiation_interval": 1,
+        "estimated_dsp": 0,
+        "instances": 16
+      }
+    },
+    "interpretation": "HLS latency/register structure is source-bound; routed timing, actual resource use and board speed still require separate acceptance."
+  },
+  "video_rtl_sources": {
+    "frame_slot_queue.sv": "3fbca1529d9d4a51f594507c6e63eadd175fc4de91789bd99ba209d5d877f2ae",
+    "hdmi_detector_pipeline.v": "f964701a2edc06d24f7c21d474001bc2b484f2645c192816da218a924e7c5f33",
+    "hdmi_hpd_startup.v": "380058313af9bd51ac6b221adbff61176829667ee55a306074ea1a1de2f41f63",
+    "pl_frame_scheduler_overlap.sv": "ae8dfa26ab8c0f128597a57e6ea1d8f26d688a1fc026a00b3ac85924510540d2",
+    "pl_result_latch.sv": "0286097ab63ca62ff8a7ef1789e75447881bd9d24c8bc8bfc367a23e18e539a4",
+    "roi_ddr_writer.sv": "dfb9f8d1c0b2b8fa71b1bdacf66d5b9c9f1f53433255ba2eba77d149385281ea",
+    "video_alarm_border.v": "0e37098da62f642cd0af8c999565e4f6946728c58e4f07b890eaafc6e4fd90a7",
+    "video_capture_link.sv": "3a70a209bea5be6e3803d43b44017ccd259e5dc3740f582b05a734d5cbe7c1f3",
+    "video_color_correct.sv": "79d70c95ea93088810009d2bd50783e4e30f250913d628256c92a244fa54d97c",
+    "video_regs.v": "74e8d370bb1f95c053f47562528473dbbf533ac907adbc4052d0988fb2c618c9",
+    "video_roi_tokens.sv": "9df98d2bc60bf313fb7372c2c6c989c4303fe48c01d1240708a086537dcaec1b"
+  },
+  "video_rtl_gate_sha256": "7552f9bd6c39c30513fc0941ff6ec4cfcf74b4424608a14f976c0708de684317",
+  "video_variant": "overlap_v175",
+  "requested_pl_clock_mhz": 125,
+  "hls_target_clock_ns": 8.0,
+  "opt_directive": "Default",
+  "memory_layout": "split"
+}
