@@ -16,14 +16,22 @@
     "dsp": 217,
     "bram36_tiles": 118
   },
-  "physical_status": "hardware",
+  "physical_status": "FAILED_NO_PROMOTION",
   "board_programmed": false,
   "new_measured_fps": null,
   "accepted_continuous_hdmi_fps": 8.168911480267331,
   "notes": [
-    "OOC utilization is detector only; complete video resources/timing pending",
+    "Complete HDMI system failed detailed placement: LUT/control-set packing exceeds xc7z020. No download or new FPS.",
     "Full AXI simulation uses a reduced independent fixture, not117photo RTL",
     "C development set is exposed, not blind or camera collection",
     "Failed harness01 missed ROM files; harness02 sampled done on a changing half-cycle; both preserved. Third MAC run samples rising-edge completion and passes."
-  ]
+  ],
+  "physical_rejection": {
+    "stage": "detailed_placement",
+    "combined_lut_demand": 61488,
+    "available_luts": 53200,
+    "control_sets": 2019,
+    "synthesized_whole_system_luts": 58424,
+    "programmed": false
+  }
 }

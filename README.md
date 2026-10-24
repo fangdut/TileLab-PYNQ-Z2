@@ -1,7 +1,11 @@
 # TileLab FPGA 实拍瓷砖检测
 
+<!-- V190_CURRENT_BEGIN -->
+**V190 硬件实验（2026-10-24）：** 相邻像素共享权重，HLS76的117张开发集C输出一致，完整AXI RTL两次启动13302个字一致；当前整机阶段 `hardware`（100 MHz / ExploreArea）。上一版HLS75本体42879 LUT，不能等同于当前整机容量。尚无新版板端FPS；已验收历史基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v190/status.html)。
+<!-- V190_CURRENT_END -->
+
 <!-- V188_CURRENT_BEGIN -->
-**V188 硬件实验（2026-10-24）：** 32路卷积已接入完整检测器，117张开发集C评分/掩膜逐值一致；完整AXI RTL两次启动共13302个字一致。检测器本体实际综合48726 LUT、217 DSP、118 BRAM Tile，完整HDMI系统阶段为 `hardware`。尚无新版板端帧率，持续基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v188/status.html)。
+**V188 硬件实验（2026-10-24）：** 32路卷积已接入完整检测器，117张开发集C评分/掩膜逐值一致；完整AXI RTL两次启动共13302个字一致。检测器本体实际综合48726 LUT、217 DSP、118 BRAM Tile，完整HDMI系统阶段为 `FAILED_NO_PROMOTION`。尚无新版板端帧率，持续基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v188/status.html)。
 <!-- V188_CURRENT_END -->
 
 目标是让图像预处理、特征提取和缺陷判定全部运行在 PYNQ-Z2 的 PL 中，电脑与 ARM 仅负责输入、传输、控制和显示。

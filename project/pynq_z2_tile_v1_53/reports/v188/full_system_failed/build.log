@@ -1,0 +1,1431 @@
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 01:37:48 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source {D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_hardware.tcl} -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 647.473 ; gain = 228.363
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_RealPhotos_20261020/v170_hls74/solution/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+Wrote  : <D:\Vivado\TileLab_RealPhotos_20261020\v188_hw01\texture_v170.srcs\sources_1\bd\system\system.bd> 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconstant:1.0 for the IP type xilinx.com:ip:xlconstant:1.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconstant:1.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+WARNING: [BD 41-1306] The connection to interface pin </identity/gpio_io_i> is being overridden by the user with net <build_id_dout>. This pin will not be connected as a part of interface connection <GPIO>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+CRITICAL WARNING: [BD 41-737] Cannot set the parameter C_EXT_RESET_HIGH on /resets. It is read-only.
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconstant:1.0 for the IP type xilinx.com:ip:xlconstant:1.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconstant:1.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilconstant:1.0 for the IP type xilinx.com:ip:xlconstant:1.1 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlconstant:1.1 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_resetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'control_resetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_control' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_capture' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_capture' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_result' of definition 'xilinx.com:interface:aximm:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'm_axi_result' of definition 'xilinx.com:interface:aximm:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'pixel_resetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'pixel_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'pixel_resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'control_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'control_resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'pixel_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'pixel_resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'control_clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'm_axi_control'.
+INFO: [IP_Flow 19-4728] Bus Interface 'control_resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11770] Clock interface 'control_clk' has no FREQ_HZ parameter.
+WARNING: [IP_Flow 19-5661] Bus Interface 'pixel_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'pixel_clk' has no FREQ_HZ parameter.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from X_INTERFACE_INFO parameter from HDL file).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from 'X_INTERFACE_INFO' attribute).
+INFO: [IP_Flow 19-5107] Inferred bus interface 's_axi' of definition 'xilinx.com:interface:aximm:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_BUSIF' with value 's_axi'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'pixel_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'pixel_clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+WARNING: [IP_Flow 19-5661] Bus Interface 'pixel_clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'pixel_clk' has no FREQ_HZ parameter.
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+INFO: [BD 5-1043] It is recommended to use inline hdl version xilinx.com:inline_hdl:ilslice:1.0 for the IP type xilinx.com:ip:xlslice:1.0 for improved performance and reduced disk space. IPs with VLNV xilinx.com:ip:xlslice:1.0 will not be supported from release 2025.2. More information on inline hdl IP is available in UG994 
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pData> is being overridden by the user with net <hdmi_rx_vid_pData>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pVDE> is being overridden by the user with net <hdmi_rx_vid_pVDE>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pVSync> is being overridden by the user with net <hdmi_rx_vid_pVSync>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/vid_pHSync> is being overridden by the user with net <hdmi_rx_vid_pHSync>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pData> is being overridden by the user with net <border_rgb_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pVDE> is being overridden by the user with net <border_de_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pHSync> is being overridden by the user with net <border_hs_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/vid_pVSync> is being overridden by the user with net <border_vs_out>. This pin will not be connected as a part of interface connection <RGB>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Clk_p> is being overridden by the user with net <hdmi_in_clk_p_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Clk_n> is being overridden by the user with net <hdmi_in_clk_n_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Data_p> is being overridden by the user with net <hdmi_in_data_p_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_rx/TMDS_Data_n> is being overridden by the user with net <hdmi_in_data_n_1>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Clk_p> is being overridden by the user with net <hdmi_tx_TMDS_Clk_p>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Clk_n> is being overridden by the user with net <hdmi_tx_TMDS_Clk_n>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Data_p> is being overridden by the user with net <hdmi_tx_TMDS_Data_p>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+WARNING: [BD 41-1306] The connection to interface pin </hdmi_tx/TMDS_Data_n> is being overridden by the user with net <hdmi_tx_TMDS_Data_n>. This pin will not be connected as a part of interface connection <TMDS>, and might not recreate the connectivity as expected using the writ_bd_tcl command.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'resetn' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'resetn': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+INFO: [IP_Flow 19-4728] Bus Interface 'clk': Added interface parameter 'ASSOCIATED_RESET' with value 'resetn'.
+INFO: [IP_Flow 19-818] Not transferring value dependency attribute "spirit:ceil(spirit:log(2,(spirit:decode(id('MODELPARAM_VALUE.STARTUP_CYCLES')) + 1)))" into user parameter "COUNTER_BITS".
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-11770] Clock interface 'clk' has no FREQ_HZ parameter.
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/ps7/S_AXI_HP3/HP3_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_inputmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP3/HP3_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_outmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP3/HP3_DDR_LOWOCM' is being assigned into address space '/pipeline/m_axi_result' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_workmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP1/HP1_DDR_LOWOCM' is being assigned into address space '/pipeline/m_axi_capture' at <0x0000_0000 [ 512M ]>.
+Slave segment '/ps7/S_AXI_HP2/HP2_DDR_LOWOCM' is being assigned into address space '/infer/Data_m_axi_modelmem' at <0x0000_0000 [ 512M ]>.
+Slave segment '/video_regs/s_axi/reg0' is being assigned into address space '/ps7/Data' at <0x4000_0000 [ 4K ]>.
+Slave segment '/video_regs/s_axi/reg0' is being assigned into address space '/pipeline/m_axi_control' at <0x4000_0000 [ 4K ]>.
+Slave segment '/identity/S_AXI/Reg' is being assigned into address space '/ps7/Data' at <0x4001_0000 [ 64K ]>.
+Slave segment '/identity/S_AXI/Reg' is being assigned into address space '/pipeline/m_axi_control' at <0x4001_0000 [ 64K ]>.
+Slave segment '/infer/s_axi_control/Reg' is being assigned into address space '/ps7/Data' at <0x4002_0000 [ 64K ]>.
+Slave segment '/infer/s_axi_control/Reg' is being assigned into address space '/pipeline/m_axi_control' at <0x4002_0000 [ 64K ]>.
+WARNING: [BD 41-3281] Instance '/ps7' is connected on both sides by SmartConnects and cannot automatically configure itself to match the endpoints. Please manually configure its AXI interfaces as required for the design.
+WARNING: [BD 41-3281] Instance '/infer' is connected on both sides by SmartConnects and cannot automatically configure itself to match the endpoints. Please manually configure its AXI interfaces as required for the design.
+WARNING: [BD 41-3281] Instance '/pipeline' is connected on both sides by SmartConnects and cannot automatically configure itself to match the endpoints. Please manually configure its AXI interfaces as required for the design.
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/control_fabric/S00_AXI' to master interface '/control_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C1_0000 [ 64K ]> from slave interface '/control_fabric/S00_AXI' to master interface '/control_fabric/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C2_0000 [ 4K ]> from slave interface '/control_fabric/S00_AXI' to master interface '/control_fabric/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4120_0000 [ 64K ]> from slave interface '/control_fabric/S01_AXI' to master interface '/control_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C1_0000 [ 64K ]> from slave interface '/control_fabric/S01_AXI' to master interface '/control_fabric/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x43C2_0000 [ 4K ]> from slave interface '/control_fabric/S01_AXI' to master interface '/control_fabric/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_control_fabric_0: SmartConnect system_control_fabric_0 is in Low-Area Mode.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/model_fabric/S00_AXI' to master interface '/model_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_model_fabric_0: SmartConnect system_model_fabric_0 is in High-performance Mode.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/work_fabric/S00_AXI' to master interface '/work_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_work_fabric_0: SmartConnect system_work_fabric_0 is in High-performance Mode.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S00_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S01_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/memory_fabric/S02_AXI' to master interface '/memory_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_memory_fabric_0: SmartConnect system_memory_fabric_0 is in High-performance Mode.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/capture_fabric/S00_AXI' to master interface '/capture_fabric/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] system_capture_fabric_0: SmartConnect system_capture_fabric_0 is in High-performance Mode.
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+validate_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 997.953 ; gain = 221.223
+WARNING: [BD 41-2671] The dangling interface net <m00_aw_node_M_AXIS_ARB> will not be written out to the BD file.
+WARNING: [BD 41-2671] The dangling interface net <m01_aw_node_M_AXIS_ARB> will not be written out to the BD file.
+WARNING: [BD 41-2671] The dangling interface net <m02_aw_node_M_AXIS_ARB> will not be written out to the BD file.
+Wrote  : <D:\Vivado\TileLab_RealPhotos_20261020\v188_hw01\texture_v170.srcs\sources_1\bd\system\system.bd> 
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/work_fabric/S00_AXI_arlock'(1) to pin: '/infer/m_axi_workmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/work_fabric/S00_AXI_awlock'(1) to pin: '/infer/m_axi_workmem_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/model_fabric/S00_AXI_arlock'(1) to pin: '/infer/m_axi_modelmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/memory_fabric/S00_AXI_arlock'(1) to pin: '/infer/m_axi_inputmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/memory_fabric/S01_AXI_awlock'(1) to pin: '/infer/m_axi_outmem_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/work_fabric/S00_AXI_arlock'(1) to pin: '/infer/m_axi_workmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/work_fabric/S00_AXI_awlock'(1) to pin: '/infer/m_axi_workmem_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/model_fabric/S00_AXI_arlock'(1) to pin: '/infer/m_axi_modelmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/memory_fabric/S00_AXI_arlock'(1) to pin: '/infer/m_axi_inputmem_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/memory_fabric/S01_AXI_awlock'(1) to pin: '/infer/m_axi_outmem_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/sim/system.v
+Verilog Output written to : D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP1'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP2'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP3'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block infer .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block identity .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block build_id .
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_nodes/s00_ar_node/s_sc_payld'(148) to pin: '/s00_nodes/S_SC_AR_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_nodes/s00_aw_node/s_sc_payld'(148) to pin: '/s00_nodes/S_SC_AW_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_nodes/s01_ar_node/s_sc_payld'(148) to pin: '/s01_nodes/S_SC_AR_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_nodes/s01_aw_node/s_sc_payld'(148) to pin: '/s01_nodes/S_SC_AW_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_nodes/m00_r_node/s_sc_payld'(57) to pin: '/m00_nodes/S_SC_R_payld'(55) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_nodes/m00_b_node/s_sc_payld'(11) to pin: '/m00_nodes/S_SC_B_payld'(9) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_nodes/m01_r_node/s_sc_payld'(57) to pin: '/m01_nodes/S_SC_R_payld'(55) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_nodes/m01_b_node/s_sc_payld'(11) to pin: '/m01_nodes/S_SC_B_payld'(9) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_nodes/m02_r_node/s_sc_payld'(57) to pin: '/m02_nodes/S_SC_R_payld'(55) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_nodes/m02_b_node/s_sc_payld'(11) to pin: '/m02_nodes/S_SC_B_payld'(9) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_axi2sc/s_sc_r_payld'(55) to pin: '/s00_nodes/M_SC_R_payld'(57) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_axi2sc/s_sc_b_payld'(9) to pin: '/s00_nodes/M_SC_B_payld'(11) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_axi2sc/s_sc_r_payld'(55) to pin: '/s01_nodes/M_SC_R_payld'(57) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_axi2sc/s_sc_b_payld'(9) to pin: '/s01_nodes/M_SC_B_payld'(11) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_sc2axi/s_sc_ar_payld'(144) to pin: '/m00_nodes/M_SC_AR_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_sc2axi/s_sc_aw_payld'(144) to pin: '/m00_nodes/M_SC_AW_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_sc2axi/s_sc_ar_payld'(144) to pin: '/m01_nodes/M_SC_AR_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_sc2axi/s_sc_aw_payld'(144) to pin: '/m01_nodes/M_SC_AW_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_sc2axi/s_sc_ar_payld'(144) to pin: '/m02_nodes/M_SC_AR_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_sc2axi/s_sc_aw_payld'(144) to pin: '/m02_nodes/M_SC_AW_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_nodes/s00_ar_node/s_sc_payld'(148) to pin: '/s00_nodes/S_SC_AR_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_nodes/s00_aw_node/s_sc_payld'(148) to pin: '/s00_nodes/S_SC_AW_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_nodes/s01_ar_node/s_sc_payld'(148) to pin: '/s01_nodes/S_SC_AR_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_nodes/s01_aw_node/s_sc_payld'(148) to pin: '/s01_nodes/S_SC_AW_payld'(144) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_nodes/m00_r_node/s_sc_payld'(57) to pin: '/m00_nodes/S_SC_R_payld'(55) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_nodes/m00_b_node/s_sc_payld'(11) to pin: '/m00_nodes/S_SC_B_payld'(9) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_nodes/m01_r_node/s_sc_payld'(57) to pin: '/m01_nodes/S_SC_R_payld'(55) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_nodes/m01_b_node/s_sc_payld'(11) to pin: '/m01_nodes/S_SC_B_payld'(9) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_nodes/m02_r_node/s_sc_payld'(57) to pin: '/m02_nodes/S_SC_R_payld'(55) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_nodes/m02_b_node/s_sc_payld'(11) to pin: '/m02_nodes/S_SC_B_payld'(9) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_axi2sc/s_sc_r_payld'(55) to pin: '/s00_nodes/M_SC_R_payld'(57) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s00_axi2sc/s_sc_b_payld'(9) to pin: '/s00_nodes/M_SC_B_payld'(11) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_axi2sc/s_sc_r_payld'(55) to pin: '/s01_nodes/M_SC_R_payld'(57) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/s01_axi2sc/s_sc_b_payld'(9) to pin: '/s01_nodes/M_SC_B_payld'(11) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_sc2axi/s_sc_ar_payld'(144) to pin: '/m00_nodes/M_SC_AR_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m00_sc2axi/s_sc_aw_payld'(144) to pin: '/m00_nodes/M_SC_AW_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_sc2axi/s_sc_ar_payld'(144) to pin: '/m01_nodes/M_SC_AR_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m01_sc2axi/s_sc_aw_payld'(144) to pin: '/m01_nodes/M_SC_AW_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_sc2axi/s_sc_ar_payld'(144) to pin: '/m02_nodes/M_SC_AR_payld'(148) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/m02_sc2axi/s_sc_aw_payld'(144) to pin: '/m02_nodes/M_SC_AW_payld'(148) - Only lower order bits will be connected.
+Exporting to file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/hw_handoff/system_control_fabric_0.hwh
+Generated Hardware Definition File d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/synth/system_control_fabric_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block control_fabric .
+Exporting to file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/hw_handoff/system_memory_fabric_0.hwh
+Generated Hardware Definition File d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/synth/system_memory_fabric_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block memory_fabric .
+Exporting to file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/hw_handoff/system_work_fabric_0.hwh
+Generated Hardware Definition File d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/synth/system_work_fabric_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block work_fabric .
+Exporting to file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/hw_handoff/system_model_fabric_0.hwh
+Generated Hardware Definition File d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/synth/system_model_fabric_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block model_fabric .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block resets .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zero .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block one .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pipeline .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block video_regs .
+Exporting to file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/hw_handoff/system_capture_fabric_0.hwh
+Generated Hardware Definition File d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/synth/system_capture_fabric_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block capture_fabric .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_rx .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hdmi_tx .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block border .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block alarm_bit .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block valid_bit .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block hpd_startup .
+Exporting to file D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/hw_handoff/system.hwh
+Generated Hardware Definition File D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.hwdef
+INFO: [BD 41-3262] Generated VHDL Instantiation Template file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/system.vho
+INFO: [BD 41-3262] Generated Verilog Instantiation Template file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/system.veo
+INFO: [BD 41-3262] Generated System Verilog Instantiation Template file d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/system_sv.sveo
+generate_target: Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1085.109 ; gain = 87.156
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_capture_fabric_0, cache-ID = 65e4656777add769.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_control_fabric_0, cache-ID = 7068182a2b6df288.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_hdmi_rx_0, cache-ID = c7ee062a8b773640.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_hdmi_tx_0, cache-ID = 83e6ab365cc5fe90.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_identity_0, cache-ID = 8fccf28cc8c23836.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP system_resets_0, cache-ID = 5ea05ae7b5954964.
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sat Oct 24 01:39:16 2026] Launched system_video_regs_0_synth_1, system_pipeline_0_synth_1, system_border_0_synth_1, system_hpd_startup_0_synth_1, system_memory_fabric_0_synth_1, system_work_fabric_0_synth_1, system_model_fabric_0_synth_1, system_ps7_0_synth_1, system_infer_0_synth_1...
+Run output will be captured here:
+system_video_regs_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_video_regs_0_synth_1/runme.log
+system_pipeline_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_pipeline_0_synth_1/runme.log
+system_border_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_border_0_synth_1/runme.log
+system_hpd_startup_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_hpd_startup_0_synth_1/runme.log
+system_memory_fabric_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_memory_fabric_0_synth_1/runme.log
+system_work_fabric_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_work_fabric_0_synth_1/runme.log
+system_model_fabric_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_model_fabric_0_synth_1/runme.log
+system_ps7_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_ps7_0_synth_1/runme.log
+system_infer_0_synth_1: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/system_infer_0_synth_1/runme.log
+[Sat Oct 24 01:39:16 2026] Launched synth_1...
+Run output will be captured here: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1096.023 ; gain = 10.914
+[Sat Oct 24 01:39:16 2026] Waiting for synth_1 to finish...
+
+
+*** Running vivado
+    with args -log system_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 01:53:57 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 645.852 ; gain = 226.863
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_RealPhotos_20261020/v170_hls74/solution/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.srcs/sources_1/bd/system/system.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ system_build_id_0
+system_zero_0
+system_one_0
+system_alarm_bit_0
+system_valid_bit_0
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 737.238 ; gain = 88.426
+Command: synth_design -top system_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4980
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1511.816 ; gain = 544.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [D:/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6157] synthesizing module 'system' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6157] synthesizing module 'system_alarm_bit_0' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_alarm_bit_0/synth/system_alarm_bit_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'system_alarm_bit_0' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_alarm_bit_0/synth/system_alarm_bit_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_border_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_border_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_border_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_border_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_build_id_0' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_build_id_0/synth/system_build_id_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'system_build_id_0' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_build_id_0/synth/system_build_id_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_capture_fabric_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_capture_fabric_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_capture_fabric_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_capture_fabric_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_control_fabric_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_control_fabric_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_control_fabric_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_control_fabric_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'system_control_fabric_0' is unconnected for instance 'control_fabric' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:546]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'system_control_fabric_0' is unconnected for instance 'control_fabric' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:546]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'system_control_fabric_0' is unconnected for instance 'control_fabric' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:546]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'system_control_fabric_0' is unconnected for instance 'control_fabric' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:546]
+WARNING: [Synth 8-7023] instance 'control_fabric' of module 'system_control_fabric_0' has 116 connections declared, but only 112 given [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:546]
+INFO: [Synth 8-6157] synthesizing module 'system_hdmi_rx_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_hdmi_rx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_hdmi_rx_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_hdmi_rx_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'SerialClk' of module 'system_hdmi_rx_0' is unconnected for instance 'hdmi_rx' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:659]
+WARNING: [Synth 8-7023] instance 'hdmi_rx' of module 'system_hdmi_rx_0' has 20 connections declared, but only 19 given [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:659]
+INFO: [Synth 8-6157] synthesizing module 'system_hdmi_tx_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_hdmi_tx_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_hdmi_tx_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_hdmi_tx_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_hpd_startup_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_hpd_startup_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_hpd_startup_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_hpd_startup_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_identity_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_identity_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_identity_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_identity_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_infer_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_infer_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_infer_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_infer_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_ARREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWADDR' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWBURST' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWCACHE' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWLEN' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWLOCK' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWPROT' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWQOS' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWSIZE' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_AWVALID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_BREADY' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_WDATA' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_WID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_WLAST' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_WSTRB' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_modelmem_WVALID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_workmem_ARREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_workmem_AWREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_workmem_WID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_ARREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWADDR' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWBURST' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWCACHE' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWLEN' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWLOCK' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWPROT' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWQOS' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWSIZE' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_AWVALID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_BREADY' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_WDATA' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_WID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_WLAST' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_WSTRB' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_inputmem_WVALID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARADDR' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARBURST' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARCACHE' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARLEN' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARLOCK' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARPROT' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARQOS' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARSIZE' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_ARVALID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_AWREGION' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_RREADY' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7071] port 'm_axi_outmem_WID' of module 'system_infer_0' is unconnected for instance 'infer' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+WARNING: [Synth 8-7023] instance 'infer' of module 'system_infer_0' has 180 connections declared, but only 126 given [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:715]
+INFO: [Synth 8-6157] synthesizing module 'system_memory_fabric_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_memory_fabric_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_memory_fabric_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_memory_fabric_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_model_fabric_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_model_fabric_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_model_fabric_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_model_fabric_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_one_0' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_one_0/synth/system_one_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'system_one_0' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_one_0/synth/system_one_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_pipeline_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_pipeline_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_pipeline_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_pipeline_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_ps7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_ps7_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARREADY' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RLAST' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RVALID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RRESP' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_BID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RDATA' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_RACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_WACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_AWREADY' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_BVALID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WREADY' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_BRESP' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_BID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_RACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_WACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_BID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_RID' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_RCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_WCOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_RACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_WACOUNT' of module 'system_ps7_0' is unconnected for instance 'ps7' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+WARNING: [Synth 8-7023] instance 'ps7' of module 'system_ps7_0' has 247 connections declared, but only 212 given [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1038]
+INFO: [Synth 8-6157] synthesizing module 'system_resets_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_resets_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_resets_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_resets_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_resets_0' is unconnected for instance 'resets' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1251]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_resets_0' is unconnected for instance 'resets' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1251]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_resets_0' is unconnected for instance 'resets' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1251]
+WARNING: [Synth 8-7023] instance 'resets' of module 'system_resets_0' has 10 connections declared, but only 7 given [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:1251]
+INFO: [Synth 8-6157] synthesizing module 'system_valid_bit_0' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_valid_bit_0/synth/system_valid_bit_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice__parameterized0' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice__parameterized0' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'system_valid_bit_0' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_valid_bit_0/synth/system_valid_bit_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_video_regs_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_video_regs_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_video_regs_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_video_regs_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_work_fabric_0' [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_work_fabric_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_work_fabric_0' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/.Xil/Vivado-32328-LAPTOP-UOC8IVHM/realtime/system_work_fabric_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_zero_0' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_zero_0/synth/system_zero_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized1' [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized1' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'system_zero_0' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_zero_0/synth/system_zero_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (0#1) [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+WARNING: [Synth 8-7129] Port Din[31] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[30] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[29] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[28] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[27] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[24] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[31] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[30] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[29] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[28] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[27] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[24] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1647.430 ; gain = 679.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1647.430 ; gain = 679.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1647.430 ; gain = 679.789
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1647.430 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0/system_ps7_0_in_context.xdc] for cell 'system_i/ps7'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0/system_ps7_0_in_context.xdc] for cell 'system_i/ps7'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_infer_0/system_infer_0/system_infer_0_in_context.xdc] for cell 'system_i/infer'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_infer_0/system_infer_0/system_infer_0_in_context.xdc] for cell 'system_i/infer'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0/system_identity_0_in_context.xdc] for cell 'system_i/identity'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0/system_identity_0_in_context.xdc] for cell 'system_i/identity'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/system_control_fabric_0/system_control_fabric_0_in_context.xdc] for cell 'system_i/control_fabric'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/system_control_fabric_0/system_control_fabric_0_in_context.xdc] for cell 'system_i/control_fabric'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/system_memory_fabric_0/system_memory_fabric_0_in_context.xdc] for cell 'system_i/memory_fabric'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/system_memory_fabric_0/system_memory_fabric_0_in_context.xdc] for cell 'system_i/memory_fabric'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/system_work_fabric_0/system_work_fabric_0_in_context.xdc] for cell 'system_i/work_fabric'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/system_work_fabric_0/system_work_fabric_0_in_context.xdc] for cell 'system_i/work_fabric'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/system_model_fabric_0/system_model_fabric_0_in_context.xdc] for cell 'system_i/model_fabric'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/system_model_fabric_0/system_model_fabric_0_in_context.xdc] for cell 'system_i/model_fabric'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0/system_resets_0_in_context.xdc] for cell 'system_i/resets'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0/system_resets_0_in_context.xdc] for cell 'system_i/resets'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_pipeline_0/system_pipeline_0/system_pipeline_0_in_context.xdc] for cell 'system_i/pipeline'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_pipeline_0/system_pipeline_0/system_pipeline_0_in_context.xdc] for cell 'system_i/pipeline'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_video_regs_0/system_video_regs_0/system_video_regs_0_in_context.xdc] for cell 'system_i/video_regs'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_video_regs_0/system_video_regs_0/system_video_regs_0_in_context.xdc] for cell 'system_i/video_regs'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/system_capture_fabric_0/system_capture_fabric_0_in_context.xdc] for cell 'system_i/capture_fabric'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/system_capture_fabric_0/system_capture_fabric_0_in_context.xdc] for cell 'system_i/capture_fabric'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/system_hdmi_rx_0/system_hdmi_rx_0_in_context.xdc] for cell 'system_i/hdmi_rx'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/system_hdmi_rx_0/system_hdmi_rx_0_in_context.xdc] for cell 'system_i/hdmi_rx'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/system_hdmi_tx_0/system_hdmi_tx_0_in_context.xdc] for cell 'system_i/hdmi_tx'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/system_hdmi_tx_0/system_hdmi_tx_0_in_context.xdc] for cell 'system_i/hdmi_tx'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_border_0/system_border_0/system_border_0_in_context.xdc] for cell 'system_i/border'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_border_0/system_border_0/system_border_0_in_context.xdc] for cell 'system_i/border'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hpd_startup_0/system_hpd_startup_0/system_hpd_startup_0_in_context.xdc] for cell 'system_i/hpd_startup'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hpd_startup_0/system_hpd_startup_0/system_hpd_startup_0_in_context.xdc] for cell 'system_i/hpd_startup'
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/config.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/config.xdc]
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/video.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/video.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/video.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1678.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1678.836 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1678.836 ; gain = 711.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1678.836 ; gain = 711.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1678.836 ; gain = 711.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1678.836 ; gain = 711.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port Din[31] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[30] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[29] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[28] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[27] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[24] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module system_valid_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[31] in module system_alarm_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[30] in module system_alarm_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[29] in module system_alarm_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[28] in module system_alarm_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[27] in module system_alarm_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module system_alarm_bit_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module system_alarm_bit_0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1678.836 ; gain = 711.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1831.562 ; gain = 863.922
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1832.973 ; gain = 865.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1844.664 ; gain = 877.023
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------+----------+
+|      |BlackBox name           |Instances |
++------+------------------------+----------+
+|1     |system_border_0         |         1|
+|2     |system_capture_fabric_0 |         1|
+|3     |system_control_fabric_0 |         1|
+|4     |system_hdmi_rx_0        |         1|
+|5     |system_hdmi_tx_0        |         1|
+|6     |system_hpd_startup_0    |         1|
+|7     |system_identity_0       |         1|
+|8     |system_infer_0          |         1|
+|9     |system_memory_fabric_0  |         1|
+|10    |system_model_fabric_0   |         1|
+|11    |system_pipeline_0       |         1|
+|12    |system_ps7_0            |         1|
+|13    |system_resets_0         |         1|
+|14    |system_video_regs_0     |         1|
+|15    |system_work_fabric_0    |         1|
++------+------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------+------+
+|      |Cell                  |Count |
++------+----------------------+------+
+|1     |system_border         |     1|
+|2     |system_capture_fabric |     1|
+|3     |system_control_fabric |     1|
+|4     |system_hdmi_rx        |     1|
+|5     |system_hdmi_tx        |     1|
+|6     |system_hpd_startup    |     1|
+|7     |system_identity       |     1|
+|8     |system_infer          |     1|
+|9     |system_memory_fabric  |     1|
+|10    |system_model_fabric   |     1|
+|11    |system_pipeline       |     1|
+|12    |system_ps7            |     1|
+|13    |system_resets         |     1|
+|14    |system_video_regs     |     1|
+|15    |system_work_fabric    |     1|
+|16    |IOBUF                 |     2|
+|17    |OBUF                  |     1|
++------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 62 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 2092.367 ; gain = 1093.320
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2092.367 ; gain = 1124.727
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2092.367 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2105.117 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Synth Design complete | Checksum: 555cf718
+INFO: [Common 17-83] Releasing license: Synthesis
+79 Infos, 202 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 2105.117 ; gain = 1367.879
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2105.117 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/synth_1/system_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 01:54:51 2026...
+[Sat Oct 24 01:54:51 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:15:35 . Memory (MB): peak = 1096.023 ; gain = 0.000
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_border_0/system_border_0.dcp' for cell 'system_i/border'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/system_capture_fabric_0.dcp' for cell 'system_i/capture_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/system_control_fabric_0.dcp' for cell 'system_i/control_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/system_hdmi_rx_0.dcp' for cell 'system_i/hdmi_rx'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/system_hdmi_tx_0.dcp' for cell 'system_i/hdmi_tx'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hpd_startup_0/system_hpd_startup_0.dcp' for cell 'system_i/hpd_startup'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0.dcp' for cell 'system_i/identity'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_infer_0/system_infer_0.dcp' for cell 'system_i/infer'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/system_memory_fabric_0.dcp' for cell 'system_i/memory_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/system_model_fabric_0.dcp' for cell 'system_i/model_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_pipeline_0/system_pipeline_0.dcp' for cell 'system_i/pipeline'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.dcp' for cell 'system_i/ps7'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0.dcp' for cell 'system_i/resets'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_video_regs_0/system_video_regs_0.dcp' for cell 'system_i/video_regs'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/system_work_fabric_0.dcp' for cell 'system_i/work_fabric'
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1601.531 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8665 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.xdc] for cell 'system_i/ps7/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.xdc] for cell 'system_i/ps7/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0_board.xdc] for cell 'system_i/identity/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0_board.xdc] for cell 'system_i/identity/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/ip/ip_1/bd_7dbf_psr_aclk_0_board.xdc] for cell 'system_i/control_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/ip/ip_1/bd_7dbf_psr_aclk_0_board.xdc] for cell 'system_i/control_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/smartconnect.xdc] for cell 'system_i/control_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/smartconnect.xdc] for cell 'system_i/control_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/ip/ip_1/bd_a99b_psr_aclk_0_board.xdc] for cell 'system_i/memory_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/ip/ip_1/bd_a99b_psr_aclk_0_board.xdc] for cell 'system_i/memory_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/smartconnect.xdc] for cell 'system_i/memory_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/smartconnect.xdc] for cell 'system_i/memory_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/ip/ip_1/bd_0b42_psr_aclk_0_board.xdc] for cell 'system_i/work_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/ip/ip_1/bd_0b42_psr_aclk_0_board.xdc] for cell 'system_i/work_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/smartconnect.xdc] for cell 'system_i/work_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/smartconnect.xdc] for cell 'system_i/work_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/ip/ip_1/bd_1159_psr_aclk_0_board.xdc] for cell 'system_i/model_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/ip/ip_1/bd_1159_psr_aclk_0_board.xdc] for cell 'system_i/model_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/smartconnect.xdc] for cell 'system_i/model_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/smartconnect.xdc] for cell 'system_i/model_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0_board.xdc] for cell 'system_i/resets/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0_board.xdc] for cell 'system_i/resets/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/ip/ip_1/bd_ef65_psr_aclk_0_board.xdc] for cell 'system_i/capture_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/ip/ip_1/bd_ef65_psr_aclk_0_board.xdc] for cell 'system_i/capture_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/smartconnect.xdc] for cell 'system_i/capture_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/smartconnect.xdc] for cell 'system_i/capture_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/src/dvi2rgb.xdc] for cell 'system_i/hdmi_rx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/src/dvi2rgb.xdc] for cell 'system_i/hdmi_rx/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi.xdc] for cell 'system_i/hdmi_tx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi.xdc] for cell 'system_i/hdmi_tx/U0'
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/config.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/config.xdc]
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/video.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/video.xdc]
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/hdmi_tx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/hdmi_tx/U0'
+INFO: [Project 1-1714] 186 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2518.777 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 844 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 29 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 3 instances
+  RAM16X1S => RAM32X1S (RAMS32): 229 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 417 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM32X1S => RAM32X1S (RAMS32): 29 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 93 instances
+
+open_run: Time (s): cpu = 00:00:46 ; elapsed = 00:00:44 . Memory (MB): peak = 2518.777 ; gain = 1422.754
+WARNING: [Runs 36-537] File D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/physical_scripts/replicate_controls.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.
+[Sat Oct 24 01:55:40 2026] Launched impl_1...
+Run output will be captured here: D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/impl_1/runme.log
+[Sat Oct 24 01:55:40 2026] Waiting for impl_1 to finish...
+
+
+*** Running vivado
+    with args -log system_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 01:55:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 649.559 ; gain = 233.844
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_RealPhotos_20261020/v170_hls74/solution/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 745.574 ; gain = 93.051
+Command: link_design -top system_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_border_0/system_border_0.dcp' for cell 'system_i/border'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/system_capture_fabric_0.dcp' for cell 'system_i/capture_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/system_control_fabric_0.dcp' for cell 'system_i/control_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/system_hdmi_rx_0.dcp' for cell 'system_i/hdmi_rx'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/system_hdmi_tx_0.dcp' for cell 'system_i/hdmi_tx'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hpd_startup_0/system_hpd_startup_0.dcp' for cell 'system_i/hpd_startup'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0.dcp' for cell 'system_i/identity'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_infer_0/system_infer_0.dcp' for cell 'system_i/infer'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/system_memory_fabric_0.dcp' for cell 'system_i/memory_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/system_model_fabric_0.dcp' for cell 'system_i/model_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_pipeline_0/system_pipeline_0.dcp' for cell 'system_i/pipeline'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.dcp' for cell 'system_i/ps7'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0.dcp' for cell 'system_i/resets'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_video_regs_0/system_video_regs_0.dcp' for cell 'system_i/video_regs'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/system_work_fabric_0.dcp' for cell 'system_i/work_fabric'
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1293.098 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8665 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.xdc] for cell 'system_i/ps7/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.xdc] for cell 'system_i/ps7/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0_board.xdc] for cell 'system_i/identity/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0_board.xdc] for cell 'system_i/identity/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/ip/ip_1/bd_7dbf_psr_aclk_0_board.xdc] for cell 'system_i/control_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/ip/ip_1/bd_7dbf_psr_aclk_0_board.xdc] for cell 'system_i/control_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/smartconnect.xdc] for cell 'system_i/control_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/smartconnect.xdc] for cell 'system_i/control_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/ip/ip_1/bd_a99b_psr_aclk_0_board.xdc] for cell 'system_i/memory_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/ip/ip_1/bd_a99b_psr_aclk_0_board.xdc] for cell 'system_i/memory_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/smartconnect.xdc] for cell 'system_i/memory_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/smartconnect.xdc] for cell 'system_i/memory_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/ip/ip_1/bd_0b42_psr_aclk_0_board.xdc] for cell 'system_i/work_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/ip/ip_1/bd_0b42_psr_aclk_0_board.xdc] for cell 'system_i/work_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/smartconnect.xdc] for cell 'system_i/work_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/smartconnect.xdc] for cell 'system_i/work_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/ip/ip_1/bd_1159_psr_aclk_0_board.xdc] for cell 'system_i/model_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/ip/ip_1/bd_1159_psr_aclk_0_board.xdc] for cell 'system_i/model_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/smartconnect.xdc] for cell 'system_i/model_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/smartconnect.xdc] for cell 'system_i/model_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0_board.xdc] for cell 'system_i/resets/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0_board.xdc] for cell 'system_i/resets/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/ip/ip_1/bd_ef65_psr_aclk_0_board.xdc] for cell 'system_i/capture_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/ip/ip_1/bd_ef65_psr_aclk_0_board.xdc] for cell 'system_i/capture_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/smartconnect.xdc] for cell 'system_i/capture_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/smartconnect.xdc] for cell 'system_i/capture_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/src/dvi2rgb.xdc] for cell 'system_i/hdmi_rx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/src/dvi2rgb.xdc] for cell 'system_i/hdmi_rx/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi.xdc] for cell 'system_i/hdmi_tx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi.xdc] for cell 'system_i/hdmi_tx/U0'
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/config.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/config.xdc]
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/video.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/video.xdc]
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/hdmi_tx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/hdmi_tx/U0'
+INFO: [Project 1-1714] 186 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 2208.102 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 844 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 29 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 3 instances
+  RAM16X1S => RAM32X1S (RAMS32): 229 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 417 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 10 instances
+  RAM32X1S => RAM32X1S (RAMS32): 29 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 93 instances
+
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 2208.102 ; gain = 1462.527
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.664 . Memory (MB): peak = 2208.102 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 2208.102 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 2669.957 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.163 . Memory (MB): peak = 2669.957 ; gain = 0.000
+Phase 1 Initialization | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 2669.957 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.258 . Memory (MB): peak = 2697.242 ; gain = 27.285
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2697.242 ; gain = 27.285
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Phase 2 Timer Update And Timing Data Collection | Checksum: 15c98cd57
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2697.242 ; gain = 27.285
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 11 inverters resulting in an inversion of 89 pins
+INFO: [Opt 31-138] Pushed 39 inverter(s) to 287 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1680e34b4
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Retarget | Checksum: 1680e34b4
+INFO: [Opt 31-389] Phase Retarget created 405 cells and removed 505 cells
+INFO: [Opt 31-1021] In phase Retarget, 215 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 8 inverter(s) to 25 load pin(s).
+Phase 4 Constant propagation | Checksum: 1c0abe00a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Constant propagation | Checksum: 1c0abe00a
+INFO: [Opt 31-389] Phase Constant propagation created 361 cells and removed 1750 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 213 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 2697.242 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2697.242 ; gain = 0.000
+Phase 5 Sweep | Checksum: 22396622e
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Sweep | Checksum: 22396622e
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1578 cells
+INFO: [Opt 31-1021] In phase Sweep, 270 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG system_i/ps7/inst/FCLK_CLK1_BUFG_inst to drive 159 load(s) on clock net system_i/ps7/inst/FCLK_CLK1_BUFG
+INFO: [Opt 31-194] Inserted BUFG system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG_inst to drive 8 load(s) on clock net system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG
+INFO: [Opt 31-194] Inserted BUFG system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG_inst to drive 8 load(s) on clock net system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG
+INFO: [Opt 31-193] Inserted 3 BUFG(s) on clock nets
+Phase 6 BUFG optimization | Checksum: 16edb7a80
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.242 ; gain = 27.285
+BUFG optimization | Checksum: 16edb7a80
+INFO: [Opt 31-662] Phase BUFG optimization created 3 cells of which 3 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 1313f7db1
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Shift Register Optimization | Checksum: 1313f7db1
+INFO: [Opt 31-389] Phase Shift Register Optimization created 10 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 4 pins
+Phase 8 Post Processing Netlist | Checksum: 19e3c57af
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Post Processing Netlist | Checksum: 19e3c57af
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 241 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: fcd3f125
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2697.242 ; gain = 27.285
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 2697.242 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: fcd3f125
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Phase 9 Finalization | Checksum: fcd3f125
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2697.242 ; gain = 27.285
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             405  |             505  |                                            215  |
+|  Constant propagation         |             361  |            1750  |                                            213  |
+|  Sweep                        |               0  |            1578  |                                            270  |
+|  BUFG optimization            |               3  |               0  |                                              0  |
+|  Shift Register Optimization  |              10  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               1  |                                            241  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: fcd3f125
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2697.242 ; gain = 27.285
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 126 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 65 newly gated: 0 Total Ports: 252
+Ending PowerOpt Patch Enables Task | Checksum: 19029c099
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.612 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 19029c099
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 3250.637 ; gain = 553.395
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 1c0a0ea4f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 1c0a0ea4f
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 3250.637 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+65 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:15 ; elapsed = 00:00:48 . Memory (MB): peak = 3250.637 ; gain = 1042.535
+INFO: [Vivado 12-24828] Executing command : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.170 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.226 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.287 . Memory (MB): peak = 3250.637 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/TileLab_RealPhotos_20261020/v188_hw01/texture_v170.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: da005b91
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 3250.637 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1565eee66
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 3250.637 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+WARNING: [Place 30-770] High register utilization is forcing place_design to place up to 8 registers per slice which may impact placement success and/or routing congestion.
+WARNING: [Place 30-34] Design utilization is very high. Please run report_utilization command to see design utilization.
+Phase 1.3 Build Placer Netlist Model | Checksum: dee628f9
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:31 . Memory (MB): peak = 3250.637 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: dee628f9
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:32 . Memory (MB): peak = 3250.637 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: dee628f9
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:32 . Memory (MB): peak = 3250.637 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 168d9875a
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:40 . Memory (MB): peak = 3250.637 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1a14f38cd
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:00:47 . Memory (MB): peak = 3250.637 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: e40bd049
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:47 . Memory (MB): peak = 3250.637 ; gain = 0.000
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 16681362b
+
+Time (s): cpu = 00:03:54 ; elapsed = 00:01:51 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 12ab9a4ef
+
+Time (s): cpu = 00:04:16 ; elapsed = 00:01:58 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 6128 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 1, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 1977 nets or LUTs. Breaked 0 LUT, combined 1977 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1721/grp_process_row_fu_8555/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_241_1_VITIS_LOOP_241_2_VITIS_LOOP_241_3_fu_806/acc_addr_reg_17322_pp0_iter15_reg[0]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1200 to 151 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 151.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1721/grp_process_row_fu_8555/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_241_1_VITIS_LOOP_241_2_VITIS_LOOP_241_3_fu_806/acc_addr_reg_17322_pp0_iter15_reg[1]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1200 to 151 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 151.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1721/grp_process_row_fu_8555/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_241_1_VITIS_LOOP_241_2_VITIS_LOOP_241_3_fu_806/acc_addr_reg_17322_pp0_iter15_reg[2]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1200 to 151 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 151.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1721/grp_process_row_fu_8555/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_241_1_VITIS_LOOP_241_2_VITIS_LOOP_241_3_fu_806/acc_addr_reg_17322_pp0_iter15_reg[3]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1200 to 151 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 151.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1721/grp_process_row_fu_8555/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_241_1_VITIS_LOOP_241_2_VITIS_LOOP_241_3_fu_806/acc_addr_reg_17322_pp0_iter15_reg[4]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1200 to 151 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 151.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1721/grp_process_row_fu_8555/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_241_1_VITIS_LOOP_241_2_VITIS_LOOP_241_3_fu_806/acc_U/p_0_in' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1048 to 132 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 132.
+INFO: [Physopt 32-1408] Pass 1. Identified 1 candidate net for high-fanout optimization.
+INFO: [Physopt 32-81] Processed net system_i/infer/inst/grp_conv_fu_1721/grp_process_row_fu_8555/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_241_1_VITIS_LOOP_241_2_VITIS_LOOP_241_3_fu_806/nearest_read_reg_16495[0]. Replicated 73 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 73 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 73 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.478 . Memory (MB): peak = 3368.051 ; gain = 0.000
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-81] Processed net system_i/resets/U0/peripheral_aresetn[0]. Replicated 9 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 9 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 9 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.472 . Memory (MB): peak = 3368.051 ; gain = 0.000
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 3368.051 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |           1977  |                  1977  |           0  |           1  |  00:00:02  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |           73  |              0  |                     1  |           0  |           1  |  00:00:03  |
+|  Fanout                                           |            9  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           82  |           1977  |                  1979  |           0  |          10  |  00:00:06  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: bf3d505c
+
+Time (s): cpu = 00:04:43 ; elapsed = 00:02:14 . Memory (MB): peak = 3368.051 ; gain = 117.414
+Phase 2.5 Global Place Phase2 | Checksum: bbbbbe88
+
+Time (s): cpu = 00:04:49 ; elapsed = 00:02:17 . Memory (MB): peak = 3368.051 ; gain = 117.414
+Phase 2 Global Placement | Checksum: bbbbbe88
+
+Time (s): cpu = 00:04:49 ; elapsed = 00:02:17 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 812a25d1
+
+Time (s): cpu = 00:05:08 ; elapsed = 00:02:24 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: db45e4a4
+
+Time (s): cpu = 00:06:50 ; elapsed = 00:03:45 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 174f4eb7a
+
+Time (s): cpu = 00:06:51 ; elapsed = 00:03:45 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: d5b21814
+
+Time (s): cpu = 00:06:52 ; elapsed = 00:03:45 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 11eb15633
+
+Time (s): cpu = 00:07:29 ; elapsed = 00:03:58 . Memory (MB): peak = 3368.051 ; gain = 117.414
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 11ca8939f
+
+Time (s): cpu = 00:07:51 ; elapsed = 00:04:17 . Memory (MB): peak = 3368.051 ; gain = 117.414
+Phase 3 Detail Placement | Checksum: 11ca8939f
+
+Time (s): cpu = 00:07:52 ; elapsed = 00:04:17 . Memory (MB): peak = 3368.051 ; gain = 117.414
+ERROR: [Place 30-487] The packing of instances into the device could not be obeyed. There are a total of 13300 slices in the device, of which 4022 slices are available, however, the unplaced instances require 6359 slices. Please analyze your design to determine if the number of LUTs, FFs, and/or control sets can be reduced.
+
+Number of control sets and instances constrained to the design
+	Control sets: 2019
+	Luts: 61488 (combined) 71865 (total), available capacity: 53200 
+	Flip flops: 67515, available capacity: 106400
+	NOTE: each slice can only accommodate 1 unique control set so FFs cannot be packed to fully fill every slice
+
+
+ERROR: [Place 30-99] Placer failed with error: 'Detail Placement failed please check previous errors for details.'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+
+Phase 4 Add Constraints
+
+Phase 4.1 Add User PBlocks
+Phase 4.1 Add User PBlocks | Checksum: 130d22318
+
+Time (s): cpu = 00:07:52 ; elapsed = 00:04:17 . Memory (MB): peak = 3368.051 ; gain = 117.414
+Phase 4 Add Constraints | Checksum: 130d22318
+
+Time (s): cpu = 00:07:52 ; elapsed = 00:04:17 . Memory (MB): peak = 3368.051 ; gain = 117.414
+Ending Placer Task | Checksum: 10a0f9bf1
+
+Time (s): cpu = 00:07:52 ; elapsed = 00:04:17 . Memory (MB): peak = 3368.051 ; gain = 117.414
+113 Infos, 2 Warnings, 0 Critical Warnings and 3 Errors encountered.
+place_design failed
+place_design: Time (s): cpu = 00:08:03 ; elapsed = 00:04:24 . Memory (MB): peak = 3368.051 ; gain = 117.414
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 02:02:16 2026...
+[Sat Oct 24 02:02:19 2026] impl_1 finished
+ERROR: [Vivado 12-13638] Failed runs(s) : 'impl_1'
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:06:40 . Memory (MB): peak = 2518.777 ; gain = 0.000
+ERROR: [Common 17-39] 'wait_on_runs' failed due to earlier errors.
+
+    while executing
+"wait_on_run impl_1"
+    (file "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_hardware.tcl" line 183)
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 02:02:19 2026...

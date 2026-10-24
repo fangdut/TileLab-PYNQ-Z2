@@ -1,0 +1,25 @@
+"""Count MAC-loop iterations from the frozen graph. Not timing or FPGA FPS."""
+from pathlib import Path
+import hashlib,json,math
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');W=Path('D:/Vivado/TileLab_RealPhotos_20261020');profile=W/'v170_fullint224'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+g=json.loads((profile/'graph.json').read_text());assert sha(profile/'model.bin')==g['sha256']
+rows=[]
+for index,t in enumerate(g['tasks']):
+ if t[0]!=1:continue
+ ih,iw,ic,oc,k,stride,pad=t[7:14];oh=(ih+2*pad-k)//stride+1;ow=(iw+2*pad-k)//stride+1;groups=(ic+15)//16;taps=((ic+7)//8)*k*k
+ cached=k==1 and stride==1 and pad==0 and oc>16
+ tile=max(1,min(8192//(groups*iw),max(1,min(oh,16)))) if cached else oh
+ blocks=0
+ for ybase in range(0,oh,tile):
+  active=min(oh-ybase,tile);local=0
+  while local<active:
+   shift=0
+   if cached:
+    for s in range(1,5):
+     if active-local>=1<<s and iw<=224//(1<<s) and groups*iw<=2048//(1<<s):shift=s
+   blocks+=math.ceil((ow<<shift)/32);local+=1<<shift
+ old=blocks*taps*32*math.ceil(oc/16);new=blocks*taps*16*math.ceil(oc/16)
+ rows.append(dict(task=index+1,old_iterations=old,new_iterations=new))
+j=dict(scope='STATIC_NORMAL_CONV_MAC_LOOP_COUNTS_NOT_FPGA_CYCLES_OR_FPS',model_sha256=g['sha256'],candidate_source_sha256=sha(P/'experimental/texture_v170/hls/frozen/v170_hls76.cpp'),old_source_sha256=sha(P/'experimental/texture_v170/hls/frozen/v170_hls71.cpp'),tasks=len(rows),old_iterations=sum(r['old_iterations'] for r in rows),new_iterations=sum(r['new_iterations'] for r in rows),all_normal_conv_iterations_halved=all(r['old_iterations']==2*r['new_iterations'] for r in rows),excluded='Pipeline startup/drain, depthwise, nearest, preprocessing, DDR stalls, quantization and result publication are excluded. Not a frame-rate prediction.',rows=rows)
+(W/'v190_static_iteration_budget.json').write_text(json.dumps(j,indent=2)+'\n');print(json.dumps({k:v for k,v in j.items() if k!='rows'}))

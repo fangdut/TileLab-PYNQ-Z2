@@ -1,0 +1,11 @@
+from pathlib import Path
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');old=P/'experimental/paired_conv_v188';new=P/'experimental/spatial_pair_v190'
+s=(old/'test_mac.cpp').read_text().replace('texture_paired.cpp','texture_spatial_pair.cpp').replace('memory[O][RD],extra_memory[O][CRD]','memory[O][RD]').replace('taps<=CRD','taps<=RD').replace('memory[c][t]=lo;memory[c][CRD+t]=hi;','memory[c][t]=lo;')
+s=s.replace('for(int x=0;x<ow;x++){','for(int x=0;x<(depth?ow:(ow+1)/2);x++){')
+s=s.replace('int64_t expected=0;\n            for(int t=0;t<taps;t++){','int64_t expected=0;\n            int pixel=depth?x:x*2+c/16;\n            for(int t=0;t<taps&&pixel<ow;t++){')
+s=s.replace('ix=x*stride+col-pad;','ix=pixel*stride+col-pad;').replace('uint64_t weights=c<16?memory[c][t]:memory[c-16][CRD+t];','uint64_t weights=memory[c%16][t];')
+s=s.replace('PAIRED_INTEGRATED_MAC_SCALAR_PASS','SPATIAL_INTEGRATED_MAC_SCALAR_PASS')
+(new/'test_mac.cpp').write_text(s)
+s=(old/'check_mac.py').read_text().replace('texture_paired.cpp','texture_spatial_pair.cpp').replace('PAIRED_INTEGRATED_MAC_SCALAR_PASS','SPATIAL_INTEGRATED_MAC_SCALAR_PASS').replace('INTEGRATED_MAC_NATIVE_C_SCALAR_REFERENCE_NOT_RTL_OR_BOARD','SPATIAL_INTEGRATED_MAC_NATIVE_C_SCALAR_REFERENCE_NOT_RTL_OR_BOARD')
+(new/'check_mac.py').write_text(s)
+print('SPATIAL_SCALAR_TEST_PREPARED')

@@ -1,7 +1,14 @@
 {
   "scope": "GUARDED_SOURCE_BOUND_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE",
-  "status": "hardware",
-  "stages": [],
+  "status": "FAILED_NO_PROMOTION",
+  "stages": [
+    {
+      "stage": "hardware",
+      "returncode": 1,
+      "seconds": 1472.875,
+      "log": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v188_physical_pipeline01_hardware.log"
+    }
+  ],
   "requested_pl_clock_mhz": 100,
   "memory_layout": "split",
   "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls74",
@@ -418,5 +425,6 @@
       "normal_rgb_zero_extended_to_128": true,
       "interpretation": "Dedicated generated storage/control verified; resource/timing/FPS improvement requires routed and physical board evidence."
     }
-  }
+  },
+  "error": "RuntimeError('Build failed before physical reports; no programming')"
 }

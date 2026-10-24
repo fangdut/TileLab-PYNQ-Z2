@@ -39,6 +39,7 @@ def main():
     p.add_argument('--full-axi-proof',type=Path)
     p.add_argument('--clock-mhz',type=int,choices=[100,125],required=True)
     p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
+    p.add_argument('--opt-directive',choices=['Default','ExploreArea','ExploreWithRemap'],default='Default')
     p.add_argument('--ip-cache',type=Path)
     p.add_argument('--label',required=True)
     p.add_argument('--render-baseline',type=Path,required=True)
@@ -47,7 +48,7 @@ def main():
     a=p.parse_args();root=Path(__file__).resolve().parents[2];scripts=root/'scripts/texture_v170'
     if any(x.exists() for x in [a.hardware,a.run,a.journal]):raise ValueError('Fresh hardware/run/journal paths required')
     j=dict(scope='GUARDED_SOURCE_BOUND_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE',status='PREFLIGHT',stages=[],
-           requested_pl_clock_mhz=a.clock_mhz,memory_layout=a.memory_layout,hls=str(a.hls),regression=str(a.regression),flash_written=False)
+           requested_pl_clock_mhz=a.clock_mhz,memory_layout=a.memory_layout,opt_directive=a.opt_directive,hls=str(a.hls),regression=str(a.regression),flash_written=False)
     def save():
         j.update(programming_state(a.run))
         a.journal.write_text(json.dumps(j,indent=2)+'\n')
@@ -67,7 +68,7 @@ def main():
         hardware_args=[sys.executable,'-X','utf8',scripts/'build_candidate.py',
             '--hls',a.hls,'--regression',a.regression,'--profile',a.profile,'--out',a.hardware,
             '--video','--video-variant','overlap_v175','--video-rtl-gate',a.video_rtl_gate,
-            '--clock-mhz',a.clock_mhz,'--opt-directive','Default','--memory-layout',a.memory_layout]
+            '--clock-mhz',a.clock_mhz,'--opt-directive',a.opt_directive,'--memory-layout',a.memory_layout]
         if a.full_axi_proof:hardware_args.extend(['--full-axi-proof',a.full_axi_proof])
         code=run('hardware',hardware_args,5400,env)
         if code:

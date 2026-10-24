@@ -1,0 +1,64 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Sat Oct 24 02:51:01 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script 'D:/Vivado/TileLab_RealPhotos_20261020/v190_export76_01/export.tcl'
+INFO: [HLS 200-1510] Running: open_project D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76 
+WARNING: [HLS 200-2182] The 'v170_hls76' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76'.
+INFO: [HLS 200-1510] Running: open_solution solution 
+INFO: [HLS 200-10] Opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -rtl verilog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 02:51:12 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/solution_data.json outdir=D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip srcdir=D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip/misc
+INFO: Copied 177 verilog file(s) to D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip/hdl/verilog
+INFO: Copied 172 vhdl file(s) to D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 652.016 ; gain = 219.027
+INFO: Import ports from HDL: D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip/hdl/vhdl/texture_integer.vhd (texture_integer)
+INFO: Add axi4lite interface s_axi_control
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+INFO: Add axi4full interface m_axi_modelmem
+INFO: Add axi4full interface m_axi_workmem
+INFO: Add axi4full interface m_axi_inputmem
+INFO: Add axi4full interface m_axi_outmem
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip/component.xml
+INFO: Created IP archive D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip/xilinx_com_hls_texture_integer_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 02:51:30 2026...
+INFO: [HLS 200-802] Generated output file D:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:20; Allocated memory: 31.250 MB.
+V190_SOURCE_BOUND_EXPORTED_IP_NOT_BOARD
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 5 seconds. Total elapsed time: 26.922 seconds; peak allocated memory: 537.852 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 29s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

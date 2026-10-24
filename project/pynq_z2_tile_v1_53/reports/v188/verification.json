@@ -65,6 +65,10 @@
       "bytes": 532,
       "sha256": "323f64ee63ae07f5a40e02f8123bf1fae6abf5c270bc7ac2e33917e52965f1d6"
     },
+    "connection/jtag_readonly.log": {
+      "bytes": 270,
+      "sha256": "909114c1d7f5c5b8bab807497d8489d3f6c81433fe3c723f605978953b50d2f1"
+    },
     "failed_harness_axi01/xelab.log": {
       "bytes": 1337,
       "sha256": "901dcc80afc34dc25e570b66f3b57e6d4abc79ea0b0e1890745c9ae34ae113de"
@@ -108,6 +112,26 @@
     "full_axi74/xvlog.log": {
       "bytes": 50253,
       "sha256": "6d3a4552c41cd0418780854eff12ea911622673d2578e7e5d5022a0d3fdaf742"
+    },
+    "full_system_failed/build.log": {
+      "bytes": 164677,
+      "sha256": "422f1f14c58ad27e79981fd8be244074d8adb96dd699c1c86098ce09161134cc"
+    },
+    "full_system_failed/candidate_preflight.json": {
+      "bytes": 14813,
+      "sha256": "028becd084020e0f427c2729372eb39d861efa9bb81135f04e0d77ac7fd895ac"
+    },
+    "full_system_failed/pipeline.log": {
+      "bytes": 707,
+      "sha256": "5a8fa05c77f26c02a0d3d6610c8a831a5d88fba1e2a53a21d634c9b5d0e1bdce"
+    },
+    "full_system_failed/placement.log": {
+      "bytes": 41140,
+      "sha256": "757f24dbcb223a4b1606b19b413ef6c0717629b5ef9cabec82b3a9ab0a494611"
+    },
+    "full_system_failed/synthesis_utilization.rpt": {
+      "bytes": 11176,
+      "sha256": "348af05e3961adfb0450a1b4c5417c4dca1a2f07dbd07fbdf4039dd1cf43e8bc"
     },
     "hls72/console.log": {
       "bytes": 255833,
@@ -226,8 +250,8 @@
       "sha256": "36f185165bcafe0ed11f21473f9672d6166ec114e07bbfa73abe11c5528438ce"
     },
     "physical_pipeline_snapshot.json": {
-      "bytes": 14749,
-      "sha256": "46e7a24a3a5e7e83c51247c681172ca3f9e623539a2dedc87242ddf0e3071a2f"
+      "bytes": 15037,
+      "sha256": "b071fc0dd1c4c548a3f9f78e90ef5056fbcafdd00bbdd8e9f7b7ce5c13fd19cf"
     },
     "reproduction/export_v188_hls74.py.txt": {
       "bytes": 1327,
@@ -262,12 +286,12 @@
       "sha256": "b342174c43cc4a41a05b1adb4916f8a37f29363a261edb0e218d50e528ed0acb"
     },
     "status.html": {
-      "bytes": 2549,
-      "sha256": "37ff851229f13d840d71d7ac137c88e9620042d6080fd32546d85e7a077b6f1c"
+      "bytes": 2796,
+      "sha256": "e72679516e34edcc7ad38e9391490bd4d1a67e36eb0670305de5c2a237f561e2"
     },
     "status.json": {
-      "bytes": 1194,
-      "sha256": "35e4d4fcaf8586cf28d471a085a06d70844af8e91ae529c0bcdd6e989e16b75e"
+      "bytes": 1475,
+      "sha256": "ceeff2133c83d5d46916e249914e09edf77bd0dfa8fd9d48c3484baa783403eb"
     }
   }
 }

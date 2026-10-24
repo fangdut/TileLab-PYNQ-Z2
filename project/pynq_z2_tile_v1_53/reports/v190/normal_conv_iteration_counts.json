@@ -1,0 +1,143 @@
+{
+  "scope": "STATIC_NORMAL_CONV_MAC_LOOP_COUNTS_NOT_FPGA_CYCLES_OR_FPS",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "candidate_source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+  "old_source_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "tasks": 26,
+  "old_iterations": 1827584,
+  "new_iterations": 913792,
+  "all_normal_conv_iterations_halved": true,
+  "excluded": "Pipeline startup/drain, depthwise, nearest, preprocessing, DDR stalls, quantization and result publication are excluded. Not a frame-rate prediction.",
+  "rows": [
+    {
+      "task": 1,
+      "old_iterations": 258048,
+      "new_iterations": 129024
+    },
+    {
+      "task": 3,
+      "old_iterations": 57344,
+      "new_iterations": 28672
+    },
+    {
+      "task": 4,
+      "old_iterations": 150528,
+      "new_iterations": 75264
+    },
+    {
+      "task": 6,
+      "old_iterations": 75264,
+      "new_iterations": 37632
+    },
+    {
+      "task": 7,
+      "old_iterations": 84672,
+      "new_iterations": 42336
+    },
+    {
+      "task": 9,
+      "old_iterations": 112896,
+      "new_iterations": 56448
+    },
+    {
+      "task": 11,
+      "old_iterations": 84672,
+      "new_iterations": 42336
+    },
+    {
+      "task": 13,
+      "old_iterations": 28800,
+      "new_iterations": 14400
+    },
+    {
+      "task": 14,
+      "old_iterations": 38400,
+      "new_iterations": 19200
+    },
+    {
+      "task": 16,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 18,
+      "old_iterations": 38400,
+      "new_iterations": 19200
+    },
+    {
+      "task": 20,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 22,
+      "old_iterations": 38400,
+      "new_iterations": 19200
+    },
+    {
+      "task": 24,
+      "old_iterations": 21504,
+      "new_iterations": 10752
+    },
+    {
+      "task": 25,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 27,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 29,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 31,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 33,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 35,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 37,
+      "old_iterations": 43008,
+      "new_iterations": 21504
+    },
+    {
+      "task": 39,
+      "old_iterations": 64512,
+      "new_iterations": 32256
+    },
+    {
+      "task": 40,
+      "old_iterations": 96768,
+      "new_iterations": 48384
+    },
+    {
+      "task": 42,
+      "old_iterations": 96768,
+      "new_iterations": 48384
+    },
+    {
+      "task": 44,
+      "old_iterations": 96768,
+      "new_iterations": 48384
+    },
+    {
+      "task": 46,
+      "old_iterations": 96768,
+      "new_iterations": 48384
+    }
+  ]
+}

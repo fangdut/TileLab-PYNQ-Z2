@@ -13,7 +13,9 @@ def inspect(hls):
     if re.search(r'\bline\[',code[start:end]):raise ValueError('Preprocessing still accesses convolution line storage')
     root=hls/'solution/syn/verilog';top=root/'texture_integer.v';text=top.read_text();sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();memories={}
     for name,width,depth in [('normal_line',24,224),('line',128,2048)]:
-        module='texture_integer_'+name+'_RAM_2P_BRAM_1R1W';rtl=root/(module+'.v');r=rtl.read_text()
+        true_dual=name=='line' and '#pragma HLS BIND_STORAGE variable=line type=ram_t2p impl=bram' in code
+        kind='T2P' if true_dual else '2P'
+        module='texture_integer_'+name+'_RAM_'+kind+'_BRAM_1R1W';rtl=root/(module+'.v');r=rtl.read_text()
         for key,value in [('DataWidth',width),('AddressRange',depth)]:
             if not re.search(r'parameter\s+'+key+r'\s*=\s*'+str(value)+r'\s*;',r):raise ValueError('Generated cache dimensions changed: '+name)
         matches=re.findall(r'\b'+module+r'\s*#\((.*?)\)\s*'+name+r'_U\((.*?)\n\);',text,re.S)
@@ -23,7 +25,8 @@ def inspect(hls):
             if not re.search(r'\.'+key+r'\(\s*'+str(value)+r'\s*\)',params):raise ValueError('Top cache parameter override changed: '+name)
         connections=dict(re.findall(r'\.(\w+)\((\w+)\)',ports))
         if name=='line':
-            for port in ['address0','ce0','address1','ce1','we1','d1']:
+            control_ports=['address0','ce0','address1','ce1']+(['we0','d0'] if true_dual else ['we1','d1'])
+            for port in control_ports:
                 if not re.fullmatch(r'grp_conv_fu_\d+_line_r_\w+',connections.get(port,'')):
                     raise ValueError('Convolution RAM control still shared with another phase: '+port)
         elif any('grp_conv' in connections.get(port,'') for port in ['address0','ce0','address1','ce1','we1','d1']):

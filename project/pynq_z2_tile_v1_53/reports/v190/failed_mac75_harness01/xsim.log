@@ -1,0 +1,36 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 02:32:14 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/mac_test/xsim_script.tcl
+# xsim {mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Fatal: MAC_TIMEOUT
+Time: 2 ms  Iteration: 0  Process: /tb_generated_mac/Initial903_683  Scope: tb_generated_mac  File: D:/Vivado/TileLab_RealPhotos_20261020/v190_mac_rtl75_01/tb_generated_mac.sv Line: 903
+$finish called at time : 2 ms
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 02:32:20 2026...
+50HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 16944 MB
+# Swap memory        : 18253 MB
+# Total Virtual      : 35198 MB
+# Available Virtual  : 16784 MB
+#-----------------------------------------------------------
+source xsim.dir/mac_test/xsim_script.tcl
+# xsim {mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Fatal: MAC_TIMEOUT
+Time: 2 ms  Iteration: 0  Process: /tb_generated_mac/Initial903_683  Scope: tb_generated_mac  File: D:/Vivado/TileLab_RealPhotos_20261020/v190_mac_rtl75_01/tb_generated_mac.sv Line: 903
+$finish called at time : 2 ms
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 02:32:20 2026...

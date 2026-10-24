@@ -1,0 +1,33 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 02:35:20 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/full_test/xsim_script.tcl
+# xsim {full_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+FULL_AXI_LAUNCH_PASS launch=1 cycle=642215 checked=6651
+FULL_AXI_LAUNCH_PASS launch=2 cycle=1284382 checked=13302
+PAIRED_FULL_AXI_RTL_PASS launches=2 checked=13302 cycles=1284382 work_reads=72380 work_writes=39600
+$finish called at time : 12843825 ns : File "D:/Vivado/TileLab_RealPhotos_20261020/v190_full_axi75_01/tb_full_axi.sv" Line 309
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:19 . Memory (MB): peak = 238.289 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 27888 KB (Peak: 27888 KB), Simulation CPU Usage: 78453 ms
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 02:36:44 2026...
+xsim_script.tcl
+# xsim {full_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+FULL_AXI_LAUNCH_PASS launch=1 cycle=642215 checked=6651
+FULL_AXI_LAUNCH_PASS launch=2 cycle=1284382 checked=13302
+PAIRED_FULL_AXI_RTL_PASS launches=2 checked=13302 cycles=1284382 work_reads=72380 work_writes=39600
+$finish called at time : 12843825 ns : File "D:/Vivado/TileLab_RealPhotos_20261020/v190_full_axi75_01/tb_full_axi.sv" Line 309
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:19 . Memory (MB): peak = 238.289 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 27888 KB (Peak: 27888 KB), Simulation CPU Usage: 78453 ms
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 02:36:44 2026...

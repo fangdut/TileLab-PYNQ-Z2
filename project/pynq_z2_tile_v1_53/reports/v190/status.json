@@ -1,0 +1,29 @@
+{
+  "scope": "V190_SPATIAL_PAIR_PROGRESS_NOT_ACCEPTED_RELEASE",
+  "candidate_source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "c_all117_scores_and_masks_exact": true,
+  "scalar_cases": 158,
+  "scalar_checks": 140903,
+  "mac_rtl_packets": 642,
+  "mac_stall_cycles": 853,
+  "full_axi_launches": 2,
+  "full_axi_checked_words": 13302,
+  "previous_hls75_ooc": {
+    "source_sha256": "3fdc545a586db86a5d91bde7be30ee0f384a076e410ca99c0dc3043ec8c98353",
+    "lut": 42879,
+    "ff": 45007,
+    "dsp": 218,
+    "bram36_tiles": 116
+  },
+  "physical_status": "hardware",
+  "opt_directive": "ExploreArea",
+  "board_programmed": false,
+  "new_measured_fps": null,
+  "accepted_historical_continuous_hdmi_fps": 8.168911480267331,
+  "limitations": [
+    "All117photos are exposed public development images, not blind/camera/generalpaintedtile accuracy",
+    "Prior75 detector-only mapped resources do not establish76 fullsystem fit or timing",
+    "Static half-MAC count and reduced-fixture simulation cycles are not FPGA FPS"
+  ]
+}

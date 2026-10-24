@@ -1,0 +1,10 @@
+{
+  "scope": "SPATIAL_PAIR_SPAN16_NOT_YET_VALIDATED",
+  "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+  "base_source_sha256": "3fdc545a586db86a5d91bde7be30ee0f384a076e410ca99c0dc3043ec8c98353",
+  "reason": "Each normal block covers32pixels using16pairediterations, reducing narrow-feature-map padding versus32pairediterations.",
+  "model_changed": false,
+  "threshold_changed": false,
+  "resolution_changed": false,
+  "board_programmed": false
+}

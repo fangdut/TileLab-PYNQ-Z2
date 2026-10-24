@@ -1,0 +1,11 @@
+{
+  "scope": "SPATIAL_PAIRING_PROPOSAL_NOT_YET_VALIDATED",
+  "source_sha256": "3fdc545a586db86a5d91bde7be30ee0f384a076e410ca99c0dc3043ec8c98353",
+  "base_source_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "ordinary_conv": "16channels x2adjacentpixels; 8activation pairs shared by128products",
+  "nearest_and_depthwise": "original16lanes",
+  "model_changed": false,
+  "threshold_changed": false,
+  "resolution_changed": false,
+  "board_programmed": false
+}

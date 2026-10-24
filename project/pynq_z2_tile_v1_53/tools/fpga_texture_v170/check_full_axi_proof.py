@@ -12,7 +12,8 @@ def verify(hls,proof_file):
     if p['source_sha256']!=sha(hls/'src/texture_integer.cpp'):raise ValueError('Full AXI RTL source differs')
     actual={f.name:sha(f) for f in sorted((hls/'solution/syn/verilog').glob('*')) if f.suffix in ['.v','.dat']}
     if actual!=p['dut_files']:raise ValueError('Generated RTL/ROM changed after full AXI test')
-    if p['test_driver_sha256']!=sha(root/'experimental/paired_conv_v188/test_full_axi.py') or p['axi_memory_sha256']!=sha(root/'experimental/paired_conv_v188/axi_ram_tb.sv'):raise ValueError('AXI test infrastructure changed')
+    family='spatial_pair_v190' if 'activation_pairs[I]' in (hls/'src/texture_integer.cpp').read_text() else 'paired_conv_v188'
+    if p['test_driver_sha256']!=sha(root/('experimental/'+family+'/test_full_axi.py')) or p['axi_memory_sha256']!=sha(root/('experimental/'+family+'/axi_ram_tb.sv')):raise ValueError('AXI test infrastructure changed')
     if p['testbench_sha256']!=sha(base/'tb_full_axi.sv') or p['xsim_log_sha256']!=sha(base/'xsim.log'):raise ValueError('AXI testbench or raw transcript changed')
     names=['test_model.bin','test_rgb.bin','test_expected.bin','test_fa_expected.bin','test_fb_expected.bin']
     if p['fixture']!={n:sha(base/n) for n in names}:raise ValueError('AXI fixture bytes changed')

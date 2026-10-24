@@ -1,0 +1,14 @@
+{
+  "scope": "NATIVE_SHARED_MAC_UNIT_C_AND_RTL_NOT_DETECTOR_OR_BOARD",
+  "passed": true,
+  "checked": 1998,
+  "issued": 2048,
+  "reset_flushed": 50,
+  "stalled": 580,
+  "reset_cycles": 16,
+  "source_sha256": "3094ca24ded7b8d644e9d8745b7012411b7f39331ea81077a4bcac7b4ab0fd5f",
+  "c_model_sha256": "fd740e11406cd55098ebeb92ad8aa458c2251262ea574393a8d908db4361d021",
+  "enabled_clock_latency": 6,
+  "scalar_oracle": "Independent Python signed integers; lower16 partial sums and upper16 partial sums or exact squared differences",
+  "elapsed_seconds": 8.43800000000192
+}

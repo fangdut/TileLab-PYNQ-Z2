@@ -15,7 +15,12 @@ def inspect(hls):
     reuse=slots
     if 'DW_SPAN' in code:
         match=re.search(r'static const int DW_SPAN=(\d+);',code)
-        if not match or 'int span=(!nearest&&depth)?DW_SPAN:32;' not in code or 'for(int p=0;p<span;p++)' not in code:
+        valid_span='int span=(!nearest&&depth)?DW_SPAN:32;' in code
+        if 'PW_SPAN' in code:
+            pw=re.search(r'static const int PW_SPAN=(\d+);',code)
+            if not pw or int(pw[1])!=16 or 'int span=nearest?32:(depth?DW_SPAN:PW_SPAN);' not in code or 'block*(PW_SPAN*2)+p*2' not in code:raise ValueError('Unknown paired-pixel recurrence schedule')
+            valid_span=True;reuse=min(reuse,int(pw[1]))
+        if not match or not valid_span or 'for(int p=0;p<span;p++)' not in code:
             raise ValueError('Unsupported shortened DW recurrence schedule')
         reuse=min(slots,int(match[1]))
         if reuse not in (16,32):raise ValueError('Unverified DW reuse distance')

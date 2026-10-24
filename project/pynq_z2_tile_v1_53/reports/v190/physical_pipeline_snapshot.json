@@ -1,0 +1,424 @@
+{
+  "scope": "GUARDED_SOURCE_BOUND_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE",
+  "status": "hardware",
+  "stages": [],
+  "requested_pl_clock_mhz": 100,
+  "memory_layout": "split",
+  "opt_directive": "ExploreArea",
+  "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls76",
+  "regression": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v190_all_c02",
+  "flash_written": false,
+  "programming_attempted": false,
+  "board_startup_verified": false,
+  "board_programmed": false,
+  "numerical_preflight": {
+    "scope": "OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD",
+    "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "c_regression_summary_sha256": "bb5348716b7ddf7191555e38ae8c2eecd9e2c5e693ce9ab92406d6dc90e0e984",
+    "rtl_cosim_sha256": null,
+    "complete_axi_rtl": {
+      "scope": "COMPLETE_GENERATED_DETECTOR_AXI_RTL_TWO_LAUNCHES_NOT_BOARD",
+      "proof_sha256": "e6eef93c15fac42fd932d574471b9d2b50af26722bff54d835176550e95c63e7",
+      "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+      "launches": 2,
+      "checked_words": 13302,
+      "fixture": {
+        "test_model.bin": "892e5b9e6efc5d276fa3cd75190c13207806642354b3cabb1e34164cfe5158fb",
+        "test_rgb.bin": "0c3eec335dc3f27290030c85a6b3162e063736c3c23d7b237dffd0303c83a933",
+        "test_expected.bin": "c009ccb7281f33417d8c37a94ca53cd7352f42dc983c7b18784acc10e23d870b",
+        "test_fa_expected.bin": "e95c5d9666de87d5a3b81d93ce95a521416cc11539064684aba361ef09199775",
+        "test_fb_expected.bin": "6ddf5ff795b0619df41967752bbc19a313ff7dec5936734b526186d77f5e0d86"
+      },
+      "all_generated_rtl_and_rom_bound": true,
+      "board_programmed": false
+    },
+    "hls_dsp": 214,
+    "hls_bram18": 236,
+    "mac_recurrence": {
+      "scope": "GENERATED_RTL_STATIC_RECURRENCE_CHECK_NOT_SIMULATION_OR_BOARD",
+      "hls": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v170_hls76",
+      "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+      "rtl_sha256": "0230f4087d89ae2ff31d8bd0f095c87bcac2edd4975581ecbbf97aaacb9390a9",
+      "slots": 32,
+      "allocated_banks": 32,
+      "minimum_reuse_iterations": 16,
+      "banks": [
+        {
+          "bank": "acc",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_1",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_10",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_11",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_12",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_13",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_14",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_15",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_16",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_17",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_18",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_19",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_2",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_20",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_21",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_22",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_23",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_24",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_25",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_26",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_27",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_28",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_29",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_3",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_30",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_31",
+          "read_stage": 15,
+          "write_stage": 16,
+          "write_minus_read": 1,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_4",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_5",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_6",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_7",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_8",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        },
+        {
+          "bank": "acc_9",
+          "read_stage": 10,
+          "write_stage": 16,
+          "write_minus_read": 6,
+          "safe_before_next_read": true
+        }
+      ],
+      "all_banks_safe": true,
+      "interpretation": "All stages share the flattened loop enable. A preceding write must occur before the same slot is read again; equality is rejected conservatively. Allocated RAM depth alone is insufficient when DW uses a shorter logical span."
+    },
+    "direct_cache_bounds": null,
+    "spatial_coordinate_bounds": {
+      "scope": "MODEL_BOUND_SPATIAL_COORDINATE_PROOF_NOT_RTL_OR_FPS",
+      "passed": true,
+      "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "binary_descriptors_checked": 47,
+      "standard3x3_layers": [
+        {
+          "step": 1,
+          "input_channels": 3,
+          "output_channels": 32
+        }
+      ],
+      "depthwise3x3_steps": [
+        2,
+        5,
+        8,
+        12,
+        15,
+        19,
+        23,
+        26,
+        30,
+        34,
+        38,
+        41,
+        45
+      ],
+      "standard3x3_input_channel_limit": 8,
+      "all_nine_kernel_positions_exact": true,
+      "unsupported_standard3x3_has_runtime_error_guard": true
+    },
+    "centered_packing_weights": null,
+    "operation_decode": {
+      "scope": "GENERATED_HLS_CONTROL_STRUCTURE_NOT_FULL_RTL_SIMULATION_OR_BOARD",
+      "passed": true,
+      "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+      "decoder_rtl_sha256": "6add657f3c768e3f9a9ddede31b317694ab6b3060385eb92fc126692ddfc958a",
+      "top_rtl_sha256": "0d2ca6ed17d4a7217c2b9dacc7496d69061cd8439da56dcc14aefed40d8fa2d9",
+      "decoder_report_sha256": "00582d4054e1b91f1ab59ff41ad6b16940d480076b76318330e7994d26dc0ab1",
+      "raw_bits": 32,
+      "onehot_bits": 3,
+      "latency_cycles": 2,
+      "initiation_interval": 1,
+      "comparison_stage_pairs": [
+        [
+          "icmp_ln85_1_reg_85_pp0_iter1_reg",
+          "icmp_ln85_1_reg_85"
+        ],
+        [
+          "icmp_ln85_2_reg_90_pp0_iter1_reg",
+          "icmp_ln85_2_reg_90"
+        ],
+        [
+          "icmp_ln85_reg_80_pp0_iter1_reg",
+          "icmp_ln85_reg_80"
+        ]
+      ]
+    },
+    "row_address": {
+      "scope": "GENERATED_ROW_ADDRESS_STRUCTURE_NOT_FULL_RTL_TIMING_OR_BOARD",
+      "passed": true,
+      "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+      "helper_rtl_sha256": "6d9af9420c32b7c9af40c63b47ab4acb91fcb1ec45ed4ad3ffc921d4f1b2b022",
+      "multiplier_rtl_sha256": "e8adeff1e2145b84f5d4183310d3d9eb08a98c9dbb30891cf92c6032f947ebbc",
+      "helper_report_sha256": "fb24f9133369ab24a3984122cb1eb66b2bcff7c962df2f5be99c89c1f5858379",
+      "top_rtl_sha256": "0d2ca6ed17d4a7217c2b9dacc7496d69061cd8439da56dcc14aefed40d8fa2d9",
+      "row_bits": 10,
+      "width_bits": 11,
+      "output_bits": 21,
+      "latency_cycles": 3,
+      "initiation_interval": 1,
+      "estimated_helper_dsp": 1,
+      "original_input_validation_before_narrowing": true,
+      "old22x32_multiplier_removed": true,
+      "interpretation": "Width/resource checks are generated-HLS evidence; actual DSP placement/timing and production-frame performance remain unmeasured."
+    },
+    "quarter_pipeline": {
+      "scope": "GENERATED_QUARTER_REGISTERED_STRUCTURE_NOT_FULL_RTL_TIMING_OR_BOARD",
+      "passed": true,
+      "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+      "top_rtl_sha256": "0d2ca6ed17d4a7217c2b9dacc7496d69061cd8439da56dcc14aefed40d8fa2d9",
+      "units": {
+        "quarter_horizontal": {
+          "rtl_sha256": "78ce668f37a20a719a05e590898158eec1d6131dfdc52e4778faf70f656e78f9",
+          "report_sha256": "88ac5e916ebbff922b3ac926389ab5a85f23571a51980a9ed86f2cc03404d8bc",
+          "latency_cycles": 2,
+          "initiation_interval": 1,
+          "estimated_dsp": 0,
+          "instances": 16
+        },
+        "quarter_vertical": {
+          "rtl_sha256": "e69bfcb1c50d3b9c0ea60193a6ad5e2b8a49e619a3cb4f56023ce93afcdb9d90",
+          "report_sha256": "a42cbc22da409347c0831774fafc8cc2df863852c296c36d803a0aa422c0ce4f",
+          "latency_cycles": 2,
+          "initiation_interval": 1,
+          "estimated_dsp": 0,
+          "instances": 16
+        }
+      },
+      "interpretation": "HLS latency/register structure is source-bound; routed timing, actual resource use and board speed still require separate acceptance."
+    },
+    "normal_cache": {
+      "scope": "GENERATED_CACHE_SEPARATION_NOT_FULL_RTL_ROUTING_OR_BOARD",
+      "passed": true,
+      "source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+      "top_rtl_sha256": "0d2ca6ed17d4a7217c2b9dacc7496d69061cd8439da56dcc14aefed40d8fa2d9",
+      "memories": {
+        "normal_line": {
+          "width": 24,
+          "depth": 224,
+          "rtl_sha256": "6911a332a26b1f5624924535c76bbbc57dcd8d4da7a90b9b2b4170c05a06ed3a",
+          "connections": {
+            "clk": "ap_clk",
+            "reset": "ap_rst_n_inv",
+            "address0": "grp_texture_integer_Pipeline_VITIS_LOOP_652_9_fu_1999_normal_line_address0",
+            "ce0": "normal_line_ce0",
+            "q0": "normal_line_q0",
+            "address1": "grp_texture_integer_Pipeline_VITIS_LOOP_639_8_fu_1985_normal_line_address1",
+            "ce1": "normal_line_ce1",
+            "we1": "normal_line_we1",
+            "d1": "grp_texture_integer_Pipeline_VITIS_LOOP_639_8_fu_1985_normal_line_d1"
+          }
+        },
+        "line": {
+          "width": 128,
+          "depth": 2048,
+          "rtl_sha256": "7643ca29e37f52ca5065270f5113de466b4870971fd58001dc0770c80ce165aa",
+          "connections": {
+            "clk": "ap_clk",
+            "reset": "ap_rst_n_inv",
+            "address0": "grp_conv_fu_1723_line_r_address0",
+            "ce0": "grp_conv_fu_1723_line_r_ce0",
+            "we0": "grp_conv_fu_1723_line_r_we0",
+            "d0": "grp_conv_fu_1723_line_r_d0",
+            "q0": "line_q0",
+            "address1": "grp_conv_fu_1723_line_r_address1",
+            "ce1": "grp_conv_fu_1723_line_r_ce1",
+            "q1": "line_q1"
+          }
+        }
+      },
+      "added_logical_bits": 5376,
+      "convolution_controls_direct": true,
+      "normal_rgb_zero_extended_to_128": true,
+      "interpretation": "Dedicated generated storage/control verified; resource/timing/FPS improvement requires routed and physical board evidence."
+    }
+  }
+}

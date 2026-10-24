@@ -1,0 +1,33 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 02:13:25 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/native_mac_test/xsim_script.tcl
+# xsim {native_mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Fatal: NATIVE_SHARED_MAC_RTL_COVERAGE issued=2048 checked=1998 flushed=60
+Time: 26540 ns  Iteration: 0  Process: /tb_native_mac/Initial16_147  Scope: tb_native_mac  File: D:/Vivado/TileLab_RealPhotos_20261020/v189_unit02/tb_native_mac.sv Line: 24
+$finish called at time : 26540 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 02:13:28 2026...
+gical cores  : 24
+# Host memory        : 16944 MB
+# Swap memory        : 18253 MB
+# Total Virtual      : 35198 MB
+# Available Virtual  : 17211 MB
+#-----------------------------------------------------------
+source xsim.dir/native_mac_test/xsim_script.tcl
+# xsim {native_mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Fatal: NATIVE_SHARED_MAC_RTL_COVERAGE issued=2048 checked=1998 flushed=60
+Time: 26540 ns  Iteration: 0  Process: /tb_native_mac/Initial16_147  Scope: tb_native_mac  File: D:/Vivado/TileLab_RealPhotos_20261020/v189_unit02/tb_native_mac.sv Line: 24
+$finish called at time : 26540 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 02:13:28 2026...

@@ -1,0 +1,13 @@
+from pathlib import Path
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');old=P/'experimental/paired_conv_v188';new=P/'experimental/spatial_pair_v190'
+s=(old/'check_generated.py').read_text().replace("'CO=32,CRD=128'","'CO=32;'").replace('PAIRED_GENERATED_STATIC_GATES_NOT_RTL_OR_BOARD','SPATIAL_GENERATED_STATIC_GATES_NOT_RTL_OR_BOARD');(new/'check_generated.py').write_text(s)
+s=(old/'synthesize_detector.py').read_text();(new/'synthesize_detector.py').write_text(s)
+s=(old/'test_generated_mac.py').read_text().replace('texture_paired.cpp','texture_spatial_pair.cpp')
+s=s.replace('count=1,outputs=33),dict(ow=17','count=1,outputs=17),dict(ow=17').replace('count=1,outputs=17),dict(ow=33','count=1,outputs=9),dict(ow=33').replace('count=1,outputs=14)]','count=1,outputs=7)]')
+s=s.replace('if(total!=673','if(total!=642').replace('33+17+33+64+512+14 = 673','17+9+33+64+512+7 = 642')
+s=s.replace("'if(line_r_ce0)line_r_q0<=pixels[line_r_address0];'","'if(line_r_ce0)line_r_q0<=pixels[line_r_address0];if(line_r_ce1)line_r_q1<=pixels[line_r_address1];'")
+s=s.replace('convolution(33,576,1,1,0,false,0);','convolution(33,576,1,1,0,false,0);')
+(new/'test_generated_mac.py').write_text(s)
+s=(old/'test_full_axi.py').read_text().replace('texture_paired.cpp','texture_spatial_pair.cpp');(new/'test_full_axi.py').write_text(s)
+(new/'axi_ram_tb.sv').write_bytes((old/'axi_ram_tb.sv').read_bytes())
+print('SPATIAL_RTL_TESTS_PREPARED')

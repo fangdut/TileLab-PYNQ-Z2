@@ -1,7 +1,11 @@
 # FPGA engineering status — 2026-10-23
 
+<!-- V190_CURRENT_BEGIN -->
+**V190 硬件实验（2026-10-24）：** 相邻像素共享权重，HLS76的117张开发集C输出一致，完整AXI RTL两次启动13302个字一致；当前整机阶段 `hardware`（100 MHz / ExploreArea）。上一版HLS75本体42879 LUT，不能等同于当前整机容量。尚无新版板端FPS；已验收历史基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v190/status.html)。
+<!-- V190_CURRENT_END -->
+
 <!-- V188_CURRENT_BEGIN -->
-**V188 硬件实验（2026-10-24）：** 32路卷积已接入完整检测器，117张开发集C评分/掩膜逐值一致；完整AXI RTL两次启动共13302个字一致。检测器本体实际综合48726 LUT、217 DSP、118 BRAM Tile，完整HDMI系统阶段为 `hardware`。尚无新版板端帧率，持续基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v188/status.html)。
+**V188 硬件实验（2026-10-24）：** 32路卷积已接入完整检测器，117张开发集C评分/掩膜逐值一致；完整AXI RTL两次启动共13302个字一致。检测器本体实际综合48726 LUT、217 DSP、118 BRAM Tile，完整HDMI系统阶段为 `FAILED_NO_PROMOTION`。尚无新版板端帧率，持续基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v188/status.html)。
 <!-- V188_CURRENT_END -->
 
 Historical V186 acceptance04 boot2814040743 passed volatile startup and ALL117 complete physical score/mask comparisons:117/117 correct,0/33normalFP,17/17cracks. Fixed-frame autorestart10.524375FPS. Run status:FAILED_NO_PROMOTION. Full continuous HDMI acceptance is pending; fixed-frame speed is not a video result. The user confirmed Windows restart, USB port changes, USB-only power and no DC adapter, then reported a faulty USB interface. Latest FTDI locations401/402 open successfully. program_board now explicitly checks1MHz and logs stages. Prior USB failures and acceptance03 reset after10 exact images are retained in reports/v186/recovery_after_windows_restart13. Root cause is not established; idle XADC samples are not transient fault captures. Public repeatedly exposed development photos, not blind accuracy, arbitrary painted/mixed materials, camera acquisition or competition-final acceptance. No Flash/EEPROM writes. acceptance04 HDMI failed after35 complete photo observations; post-failure DDR held reset. No complete continuous video acceptance or FPS from this run. CURRENT matched179100MHz control boot1344284584 completed BOTH direct117 and complete HDMI117: 1996frames/244.341seconds=8.168911FPS,117/117correct,0/33normalFP,17/17cracks,119bothARMhaltchecks,zeroCPUperframestarts. Video stopped and ARM0 resumed only after measurement; ten TCP identity/model queries passed. Same-USB comparison does not isolate supply/load versus timing/design causes. See reports/v186/control179_same_usb12/verification.json.
