@@ -5,7 +5,7 @@ set out [file normalize $::env(TILE_PACKED_DETECTOR_HLS)]
 set vectors [file normalize $::env(TILE_PACKED_DETECTOR_VECTORS)]
 if {[file exists $out]} {error "Fresh packed detector output required"}
 file mkdir $out/src
-set kernel $root/experimental/texture_v170/hls/frozen/v170_hls76.cpp
+set kernel $root/experimental/texture_v170/hls/frozen/v170_hls79.cpp
 set f [open $kernel rb];set frozen_source [read $f];close $f
 set f [open $root/experimental/spatial_pair_v190/texture_spatial_pair.cpp rb];set current_source [read $f];close $f
 if {$frozen_source ne $current_source} {error "V176 frozen geometry source differs"}
@@ -39,7 +39,7 @@ csim_design
 csynth_design
 set f [open $out/solution/syn/report/texture_integer_csynth.xml r];set area [read $f];close $f
 if {![regexp {<Resources>(.*?)</Resources>} $area _ resources] || ![regexp {<BRAM_18K>([0-9]+)</BRAM_18K>} $resources _ bram] || ![regexp {<DSP>([0-9]+)</DSP>} $resources _ dsp]} {error "Missing synthesized capacity report"}
-if {$bram>276||$dsp>215} {error "Packed detector exceeds video board budget: BRAM18=$bram DSP=$dsp; RTL/export blocked"}
+if {$bram>276||$dsp>216} {error "Packed detector exceeds video board budget: BRAM18=$bram DSP=$dsp; RTL/export blocked"}
 if {[info exists ::env(TILE_PACKED_SYNTH_ONLY)]} {
  puts "PACKED_FULL_DETECTOR_SYNTHESIS_ONLY_RTL_AND_BOARD_PENDING"
  close_project

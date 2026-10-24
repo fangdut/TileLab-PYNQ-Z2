@@ -1,0 +1,9 @@
+{"stage": "hardware", "state": "started"}
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\run_physical_trial.py", line 100, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\run_physical_trial.py", line 76, in main
+    if not file.exists():raise RuntimeError('Build failed before physical reports; no programming')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Build failed before physical reports; no programming

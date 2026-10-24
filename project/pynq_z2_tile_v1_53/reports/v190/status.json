@@ -1,20 +1,23 @@
 {
-  "scope": "V190_SPATIAL_PAIR_PROGRESS_NOT_ACCEPTED_RELEASE",
-  "candidate_source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+  "scope": "V190_HLS79_SPATIAL_PAIR_BRAM_PROGRESS_NOT_ACCEPTED_RELEASE",
+  "candidate_source_sha256": "490c8af82d9cab7be46b80709081d9c0f8effea84c28582d888a658e9a77d2e0",
   "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
   "c_all117_scores_and_masks_exact": true,
-  "scalar_cases": 158,
-  "scalar_checks": 140903,
-  "mac_rtl_packets": 642,
-  "mac_stall_cycles": 853,
+  "scalar_cases": 159,
+  "scalar_checks": 140955,
+  "mac_rtl_packets": 643,
+  "mac_stall_cycles": 1308,
   "full_axi_launches": 2,
   "full_axi_checked_words": 13302,
-  "previous_hls75_ooc": {
-    "source_sha256": "3fdc545a586db86a5d91bde7be30ee0f384a076e410ca99c0dc3043ec8c98353",
-    "lut": 42879,
-    "ff": 45007,
-    "dsp": 218,
-    "bram36_tiles": 116
+  "detector_only_actual_synthesis": {
+    "lut": 40439,
+    "ff": 43432,
+    "bram36_tiles": 132,
+    "dsp": 218
+  },
+  "hls_estimated": {
+    "bram18": 268,
+    "dsp": 216
   },
   "physical_status": "hardware",
   "opt_directive": "ExploreArea",
@@ -22,8 +25,8 @@
   "new_measured_fps": null,
   "accepted_historical_continuous_hdmi_fps": 8.168911480267331,
   "limitations": [
-    "All117photos are exposed public development images, not blind/camera/generalpaintedtile accuracy",
-    "Prior75 detector-only mapped resources do not establish76 fullsystem fit or timing",
-    "Static half-MAC count and reduced-fixture simulation cycles are not FPGA FPS"
+    "117photos are exposed public development images; not blind/camera/generalpaintedtile accuracy",
+    "Detector-only synthesis does not establish whole-system fit or timing",
+    "Reduced-fixture simulation cycles and static MAC counts are not board FPS"
   ]
 }

@@ -1,0 +1,575 @@
+
+*** Running vivado
+    with args -log system_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 03:03:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 649.047 ; gain = 232.668
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_RealPhotos_20261020/v170_hls76/solution/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2025.2/Vivado/data/ip'.
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 745.551 ; gain = 95.527
+Command: link_design -top system_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_border_0/system_border_0.dcp' for cell 'system_i/border'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/system_capture_fabric_0.dcp' for cell 'system_i/capture_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/system_control_fabric_0.dcp' for cell 'system_i/control_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/system_hdmi_rx_0.dcp' for cell 'system_i/hdmi_rx'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/system_hdmi_tx_0.dcp' for cell 'system_i/hdmi_tx'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hpd_startup_0/system_hpd_startup_0.dcp' for cell 'system_i/hpd_startup'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0.dcp' for cell 'system_i/identity'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_infer_0/system_infer_0.dcp' for cell 'system_i/infer'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/system_memory_fabric_0.dcp' for cell 'system_i/memory_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/system_model_fabric_0.dcp' for cell 'system_i/model_fabric'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_pipeline_0/system_pipeline_0.dcp' for cell 'system_i/pipeline'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.dcp' for cell 'system_i/ps7'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0.dcp' for cell 'system_i/resets'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_video_regs_0/system_video_regs_0.dcp' for cell 'system_i/video_regs'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/system_work_fabric_0.dcp' for cell 'system_i/work_fabric'
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1273.164 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8520 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.xdc] for cell 'system_i/ps7/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_ps7_0/system_ps7_0.xdc] for cell 'system_i/ps7/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0_board.xdc] for cell 'system_i/identity/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_identity_0/system_identity_0_board.xdc] for cell 'system_i/identity/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/ip/ip_1/bd_7dbf_psr_aclk_0_board.xdc] for cell 'system_i/control_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/bd_0/ip/ip_1/bd_7dbf_psr_aclk_0_board.xdc] for cell 'system_i/control_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/smartconnect.xdc] for cell 'system_i/control_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_control_fabric_0/smartconnect.xdc] for cell 'system_i/control_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/ip/ip_1/bd_a99b_psr_aclk_0_board.xdc] for cell 'system_i/memory_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/bd_0/ip/ip_1/bd_a99b_psr_aclk_0_board.xdc] for cell 'system_i/memory_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/smartconnect.xdc] for cell 'system_i/memory_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_memory_fabric_0/smartconnect.xdc] for cell 'system_i/memory_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/ip/ip_1/bd_0b42_psr_aclk_0_board.xdc] for cell 'system_i/work_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/bd_0/ip/ip_1/bd_0b42_psr_aclk_0_board.xdc] for cell 'system_i/work_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/smartconnect.xdc] for cell 'system_i/work_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_work_fabric_0/smartconnect.xdc] for cell 'system_i/work_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/ip/ip_1/bd_1159_psr_aclk_0_board.xdc] for cell 'system_i/model_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/bd_0/ip/ip_1/bd_1159_psr_aclk_0_board.xdc] for cell 'system_i/model_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/smartconnect.xdc] for cell 'system_i/model_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_model_fabric_0/smartconnect.xdc] for cell 'system_i/model_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0_board.xdc] for cell 'system_i/resets/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_resets_0/system_resets_0_board.xdc] for cell 'system_i/resets/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/ip/ip_1/bd_ef65_psr_aclk_0_board.xdc] for cell 'system_i/capture_fabric/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/bd_0/ip/ip_1/bd_ef65_psr_aclk_0_board.xdc] for cell 'system_i/capture_fabric/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/smartconnect.xdc] for cell 'system_i/capture_fabric/inst'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_capture_fabric_0/smartconnect.xdc] for cell 'system_i/capture_fabric/inst'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/src/dvi2rgb.xdc] for cell 'system_i/hdmi_rx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_rx_0/src/dvi2rgb.xdc] for cell 'system_i/hdmi_rx/U0'
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi.xdc] for cell 'system_i/hdmi_tx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi.xdc] for cell 'system_i/hdmi_tx/U0'
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/config.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/config.xdc]
+Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/video.xdc]
+Finished Parsing XDC File [D:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/video.xdc]
+Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/hdmi_tx/U0'
+Finished Parsing XDC File [d:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.gen/sources_1/bd/system/ip/system_hdmi_tx_0/src/rgb2dvi_clocks.xdc] for cell 'system_i/hdmi_tx/U0'
+INFO: [Project 1-1714] 186 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2161.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 845 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 29 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 3 instances
+  RAM16X1S => RAM32X1S (RAMS32): 229 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 416 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 12 instances
+  RAM32X1S => RAM32X1S (RAMS32): 29 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 32 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 93 instances
+
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 2161.742 ; gain = 1416.191
+Command: opt_design -directive ExploreArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreArea
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.663 . Memory (MB): peak = 2161.742 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: ff1e0f43
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.086 . Memory (MB): peak = 2436.770 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: ff1e0f43
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.153 . Memory (MB): peak = 2436.770 ; gain = 0.000
+Phase 1 Initialization | Checksum: ff1e0f43
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.161 . Memory (MB): peak = 2436.770 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: ff1e0f43
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.241 . Memory (MB): peak = 2464.086 ; gain = 27.316
+
+Phase 2.2 Timer Update
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 2.2 Timer Update | Checksum: ff1e0f43
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2563.965 ; gain = 127.195
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: ff1e0f43
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2563.965 ; gain = 127.195
+Phase 2 Timer Update And Timing Data Collection | Checksum: ff1e0f43
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2563.965 ; gain = 127.195
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 11 inverters resulting in an inversion of 112 pins
+INFO: [Opt 31-138] Pushed 39 inverter(s) to 287 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 11ca1af45
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2563.965 ; gain = 127.195
+Retarget | Checksum: 11ca1af45
+INFO: [Opt 31-389] Phase Retarget created 404 cells and removed 504 cells
+INFO: [Opt 31-1021] In phase Retarget, 215 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 8 inverter(s) to 25 load pin(s).
+Phase 4 Constant propagation | Checksum: 167a5bab3
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 2563.965 ; gain = 127.195
+Constant propagation | Checksum: 167a5bab3
+INFO: [Opt 31-389] Phase Constant propagation created 384 cells and removed 1725 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 213 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.071 . Memory (MB): peak = 2563.965 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 2563.965 ; gain = 0.000
+Phase 5 Sweep | Checksum: 148e204fe
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2563.965 ; gain = 127.195
+Sweep | Checksum: 148e204fe
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1578 cells
+INFO: [Opt 31-1021] In phase Sweep, 270 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG system_i/ps7/inst/FCLK_CLK1_BUFG_inst to drive 159 load(s) on clock net system_i/ps7/inst/FCLK_CLK1_BUFG
+INFO: [Opt 31-194] Inserted BUFG system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG_inst to drive 8 load(s) on clock net system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/PixelClk_BUFG
+INFO: [Opt 31-194] Inserted BUFG system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG_inst to drive 8 load(s) on clock net system_i/hdmi_tx/U0/ClockGenInternal.ClockGenX/SerialClk_BUFG
+INFO: [Opt 31-193] Inserted 3 BUFG(s) on clock nets
+Phase 6 BUFG optimization | Checksum: 1aac22d1a
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2563.965 ; gain = 127.195
+BUFG optimization | Checksum: 1aac22d1a
+INFO: [Opt 31-662] Phase BUFG optimization created 3 cells of which 3 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 1042e1f4c
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2563.965 ; gain = 127.195
+Shift Register Optimization | Checksum: 1042e1f4c
+INFO: [Opt 31-389] Phase Shift Register Optimization created 4 cells and removed 0 cells
+INFO: [Opt 31-1555] control_set_opt supports Versal devices only, and device 7z020 is unsupported
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-74] Optimized 74 modules.
+INFO: [Opt 31-75] Optimized module 'system_capture_fabric_0_sc_si_converter_v1_0_16_reduced_area'.
+INFO: [Opt 31-75] Optimized module 'system_capture_fabric_0_sc_util_v1_0_4_axi_reg_stall__parameterized1'.
+INFO: [Opt 31-75] Optimized module 'system_capture_fabric_0_sc_util_v1_0_4_axic_reg_srl_fifo'.
+INFO: [Opt 31-75] Optimized module 'system_capture_fabric_0_sc_util_v1_0_4_counter__parameterized0'.
+INFO: [Opt 31-75] Optimized module 'system_capture_fabric_0_sc_util_v1_0_4_counter__parameterized0_3'.
+INFO: [Opt 31-75] Optimized module 'system_capture_fabric_0_sc_util_v1_0_4_counter__parameterized0_6'.
+INFO: [Opt 31-75] Optimized module 'system_control_fabric_0_sc_mmu_v1_0_16_decerr_slave__parameterized0'.
+INFO: [Opt 31-75] Optimized module 'system_control_fabric_0_sc_si_converter_v1_0_16_axilite_conv'.
+INFO: [Opt 31-75] Optimized module 'system_control_fabric_0_sc_util_v1_0_4_axi_reg_stall__parameterized0'.
+INFO: [Opt 31-75] Optimized module 'system_control_fabric_0_sc_util_v1_0_4_axi_reg_stall__parameterized0_30'.
+INFO: [Opt 31-75] Optimized module 'system_control_fabric_0_sc_util_v1_0_4_axi_reg_stall__parameterized0_37'.
+INFO: [Opt 31-75] Optimized module 'system_control_fabric_0_sc_util_v1_0_4_axi_splitter_39'.
+INFO: [Opt 31-75] Optimized module 'system_hdmi_tx_0_TMDS_Encoder'.
+INFO: [Opt 31-75] Optimized module 'system_hdmi_tx_0_TMDS_Encoder_1'.
+INFO: [Opt 31-75] Optimized module 'system_hdmi_tx_0_TMDS_Encoder_3'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_add'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_cache_pointwise_input_Pipeline_VITIS_LOOP_370_1_VITIS_LOOP_370_2'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_conv'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_conv_Pipeline_VITIS_LOOP_434_8_VITIS_LOOP_434_9'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_fifo_w1024_d16_S'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_inputmem_m_axi_burst_sequential'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_inputmem_m_axi_srl'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_line_RAM_T2P_BRAM_1R1W'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_mac_row'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_modelmem_m_axi_burst_sequential'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_modelmem_m_axi_srl'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_mul_10ns_9ns_18_1_1'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_outmem_m_axi_burst_sequential'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_outmem_m_axi_srl__parameterized1'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_quant_row_Pipeline_VITIS_LOOP_334_2'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_sdiv_22ns_12ns_22_26_seq_1'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_sdiv_22ns_12ns_22_26_seq_1_113'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_t_RAM_AUTO_1R1W'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_texture_integer_Outline_VITIS_LOOP_745_25'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_texture_integer_Outline_VITIS_LOOP_760_28'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_texture_integer_Outline_VITIS_LOOP_768_32'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_texture_integer_Pipeline_VITIS_LOOP_519_1_VITIS_LOOP_519_23'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_texture_integer_Pipeline_VITIS_LOOP_674_13'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_texture_integer_Pipeline_VITIS_LOOP_733_23'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_udiv_15ns_16ns_14_19_seq_1'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_workmem_m_axi_burst_sequential'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_workmem_m_axi_burst_sequential_69'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_workmem_m_axi_reg_slice__parameterized0'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_workmem_m_axi_srl__parameterized0'.
+INFO: [Opt 31-75] Optimized module 'system_infer_0_texture_integer_workmem_m_axi_srl__parameterized0_63'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_si_converter_v1_0_16_reduced_area'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axi_reg_stall'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axi_reg_stall_148'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axi_reg_stall_149'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axi_reg_stall_47'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axi_reg_stall_48'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axi_reg_stall_84'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axic_reg_srl_fifo__parameterized4'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_axic_reg_srl_fifo__parameterized5'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_counter__parameterized1_101'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_counter__parameterized1_114'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_counter__parameterized1_35'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_counter__parameterized1_7'.
+INFO: [Opt 31-75] Optimized module 'system_memory_fabric_0_sc_util_v1_0_4_counter__parameterized1_75'.
+INFO: [Opt 31-75] Optimized module 'system_model_fabric_0_sc_util_v1_0_4_counter__parameterized0'.
+INFO: [Opt 31-75] Optimized module 'system_model_fabric_0_sc_util_v1_0_4_counter__parameterized0_3'.
+INFO: [Opt 31-75] Optimized module 'system_pipeline_0_frame_slot_queue'.
+INFO: [Opt 31-75] Optimized module 'system_pipeline_0_pl_frame_scheduler_overlap'.
+INFO: [Opt 31-75] Optimized module 'system_pipeline_0_roi_ddr_writer'.
+INFO: [Opt 31-75] Optimized module 'system_pipeline_0_video_capture_link'.
+INFO: [Opt 31-75] Optimized module 'system_pipeline_0_video_roi_tokens'.
+INFO: [Opt 31-75] Optimized module 'system_pipeline_0_xpm_fifo_rst'.
+INFO: [Opt 31-75] Optimized module 'system_video_regs_0_video_regs'.
+INFO: [Opt 31-75] Optimized module 'system_work_fabric_0_sc_util_v1_0_4_axi_reg_stall__parameterized1'.
+INFO: [Opt 31-75] Optimized module 'system_work_fabric_0_sc_util_v1_0_4_axi_reg_stall__parameterized1_18'.
+INFO: [Opt 31-75] Optimized module 'system_work_fabric_0_sc_util_v1_0_4_counter__parameterized0'.
+INFO: [Opt 31-75] Optimized module 'system_work_fabric_0_sc_util_v1_0_4_counter__parameterized0_14'.
+INFO: [Opt 31-75] Optimized module 'system_work_fabric_0_sc_util_v1_0_4_counter__parameterized0_9'.
+INFO: [Opt 31-1566] Pulled 814 inverters resulting in an inversion of 1464 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 2932.496 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 2932.496 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Phase 8 Resynthesis | Checksum: 1eb64db7a
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 2932.496 ; gain = 495.727
+Resynthesis | Checksum: 1eb64db7a
+INFO: [Opt 31-389] Phase Resynthesis created 10368 cells and removed 10858 cells
+INFO: [Opt 31-1021] In phase Resynthesis, 278 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Post Processing Netlist
+Phase 9 Post Processing Netlist | Checksum: 1eb64db7a
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:01:24 . Memory (MB): peak = 2932.496 ; gain = 495.727
+Post Processing Netlist | Checksum: 1eb64db7a
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 241 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 10 Finalization
+
+Phase 10.1 Finalizing Design Cores and Updating Shapes
+Phase 10.1 Finalizing Design Cores and Updating Shapes | Checksum: 1b06a06a7
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:01:25 . Memory (MB): peak = 2932.496 ; gain = 495.727
+
+Phase 10.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Phase 10.2 Verifying Netlist Connectivity | Checksum: 1b06a06a7
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:01:25 . Memory (MB): peak = 2932.496 ; gain = 495.727
+Phase 10 Finalization | Checksum: 1b06a06a7
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:01:25 . Memory (MB): peak = 2932.496 ; gain = 495.727
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             404  |             504  |                                            215  |
+|  Constant propagation         |             384  |            1725  |                                            213  |
+|  Sweep                        |               0  |            1578  |                                            270  |
+|  BUFG optimization            |               3  |               0  |                                              0  |
+|  Shift Register Optimization  |               4  |               0  |                                              0  |
+|  Resynthesis                  |           10368  |           10858  |                                            278  |
+|  Post Processing Netlist      |               0  |               0  |                                            241  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1b06a06a7
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:01:25 . Memory (MB): peak = 2932.496 ; gain = 495.727
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2932.496 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+143 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:29 . Memory (MB): peak = 2932.496 ; gain = 770.754
+INFO: [Vivado 12-24828] Executing command : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.165 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.217 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.295 . Memory (MB): peak = 2932.496 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/TileLab_RealPhotos_20261020/v190_hw01/texture_v170.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 178c6305c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2932.496 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 2932.496 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b641a67a
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2932.496 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+WARNING: [Place 30-770] High register utilization is forcing place_design to place up to 8 registers per slice which may impact placement success and/or routing congestion.
+WARNING: [Place 30-34] Design utilization is very high. Please run report_utilization command to see design utilization.
+Phase 1.3 Build Placer Netlist Model | Checksum: 172ca7055
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2938.246 ; gain = 5.750
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 172ca7055
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:28 . Memory (MB): peak = 2938.246 ; gain = 5.750
+Phase 1 Placer Initialization | Checksum: 172ca7055
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:28 . Memory (MB): peak = 2938.246 ; gain = 5.750
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 117a8d66b
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:35 . Memory (MB): peak = 2938.246 ; gain = 5.750
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1667357b6
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:42 . Memory (MB): peak = 3016.906 ; gain = 84.410
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1ae30cb86
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:42 . Memory (MB): peak = 3016.906 ; gain = 84.410
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 13705ceef
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:01:31 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 12a12b388
+
+Time (s): cpu = 00:03:34 ; elapsed = 00:01:37 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 1 LUTNM shape to break, 5212 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 1, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 2439 nets or LUTs. Breaked 0 LUT, combined 2439 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1723/grp_process_row_fu_4094/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3_fu_808/acc_addr_reg_17108_pp0_iter15_reg[0]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1198 to 152 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 152.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1723/grp_process_row_fu_4094/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3_fu_808/acc_addr_reg_17108_pp0_iter15_reg[1]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1198 to 152 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 152.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1723/grp_process_row_fu_4094/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3_fu_808/acc_addr_reg_17108_pp0_iter15_reg[2]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1198 to 152 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 152.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1723/grp_process_row_fu_4094/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3_fu_808/acc_addr_reg_17108_pp0_iter15_reg[3]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1198 to 152 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 152.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1723/grp_process_row_fu_4094/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3_fu_808/acc_addr_reg_17108_pp0_iter15_reg[4]' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1198 to 152 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 152.
+INFO: [Physopt 32-1132] Very high fanout net 'system_i/infer/inst/grp_conv_fu_1723/grp_process_row_fu_4094/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3_fu_808/acc_U/p_0_in' is not considered as a candidate in VHFN optimization. The fanout considered for this optimization is changed from 1196 to 152 due to a timing constraint or macro primitives that prevent optimization on all of the loads. To force replication, set the FORCE_MAX_FANOUT property on the net to a number less than 152.
+INFO: [Physopt 32-1408] Pass 1. Identified 1 candidate net for high-fanout optimization.
+INFO: [Physopt 32-81] Processed net system_i/infer/inst/grp_conv_fu_1723/grp_process_row_fu_4094/mac_row_U0/grp_mac_row_Pipeline_VITIS_LOOP_242_1_VITIS_LOOP_242_2_VITIS_LOOP_242_3_fu_808/nearest_read_reg_13390[0]. Replicated 61 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 61 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 61 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.359 . Memory (MB): peak = 3089.668 ; gain = 0.000
+INFO: [Physopt 32-76] Pass 1. Identified 2 candidate nets for fanout optimization.
+INFO: [Physopt 32-81] Processed net system_i/resets/U0/peripheral_aresetn[0]. Replicated 2 times.
+INFO: [Physopt 32-81] Processed net system_i/infer/inst/grp_conv_fu_1723/iw_reg_6941[0]. Replicated 5 times.
+INFO: [Physopt 32-232] Optimized 2 nets. Created 7 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 2 nets or cells. Created 7 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 3089.668 ; gain = 0.000
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 3089.668 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |           2439  |                  2439  |           0  |           1  |  00:00:03  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |           61  |              0  |                     1  |           0  |           1  |  00:00:03  |
+|  Fanout                                           |            7  |              0  |                     2  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           68  |           2439  |                  2442  |           0  |          10  |  00:00:06  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 18fd5432e
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:01:51 . Memory (MB): peak = 3089.668 ; gain = 157.172
+Phase 2.5 Global Place Phase2 | Checksum: 121eee42c
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:01:54 . Memory (MB): peak = 3089.668 ; gain = 157.172
+Phase 2 Global Placement | Checksum: 121eee42c
+
+Time (s): cpu = 00:04:04 ; elapsed = 00:01:54 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1473f83ad
+
+Time (s): cpu = 00:04:21 ; elapsed = 00:01:59 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 20c5fc7f6
+
+Time (s): cpu = 00:04:54 ; elapsed = 00:02:14 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1efc58444
+
+Time (s): cpu = 00:04:55 ; elapsed = 00:02:14 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1b02b0051
+
+Time (s): cpu = 00:04:56 ; elapsed = 00:02:14 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1b5c76699
+
+Time (s): cpu = 00:05:31 ; elapsed = 00:02:26 . Memory (MB): peak = 3089.668 ; gain = 157.172
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1c5ef4f38
+
+Time (s): cpu = 00:05:47 ; elapsed = 00:02:40 . Memory (MB): peak = 3089.668 ; gain = 157.172
+Phase 3 Detail Placement | Checksum: 1c5ef4f38
+
+Time (s): cpu = 00:05:48 ; elapsed = 00:02:40 . Memory (MB): peak = 3089.668 ; gain = 157.172
+ERROR: [Place 30-487] The packing of instances into the device could not be obeyed. There are a total of 13300 slices in the device, of which 5409 slices are available, however, the unplaced instances require 5765 slices. Please analyze your design to determine if the number of LUTs, FFs, and/or control sets can be reduced.
+
+Number of control sets and instances constrained to the design
+	Control sets: 1108
+	Luts: 54910 (combined) 64813 (total), available capacity: 53200 
+	Flip flops: 54746, available capacity: 106400
+	NOTE: each slice can only accommodate 1 unique control set so FFs cannot be packed to fully fill every slice
+
+
+ERROR: [Place 30-99] Placer failed with error: 'Detail Placement failed please check previous errors for details.'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+
+Phase 4 Add Constraints
+
+Phase 4.1 Add User PBlocks
+Phase 4.1 Add User PBlocks | Checksum: 15144ed12
+
+Time (s): cpu = 00:05:48 ; elapsed = 00:02:40 . Memory (MB): peak = 3089.668 ; gain = 157.172
+Phase 4 Add Constraints | Checksum: 15144ed12
+
+Time (s): cpu = 00:05:48 ; elapsed = 00:02:40 . Memory (MB): peak = 3089.668 ; gain = 157.172
+Ending Placer Task | Checksum: 10dd98862
+
+Time (s): cpu = 00:05:48 ; elapsed = 00:02:40 . Memory (MB): peak = 3089.668 ; gain = 157.172
+192 Infos, 2 Warnings, 0 Critical Warnings and 3 Errors encountered.
+place_design failed
+place_design: Time (s): cpu = 00:05:58 ; elapsed = 00:02:46 . Memory (MB): peak = 3089.668 ; gain = 157.172
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 24 03:09:28 2026...

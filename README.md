@@ -1,7 +1,7 @@
 # TileLab FPGA 实拍瓷砖检测
 
 <!-- V190_CURRENT_BEGIN -->
-**V190 硬件实验（2026-10-24）：** 相邻像素共享权重，HLS76的117张开发集C输出一致，完整AXI RTL两次启动13302个字一致；当前整机阶段 `hardware`（100 MHz / ExploreArea）。上一版HLS75本体42879 LUT，不能等同于当前整机容量。尚无新版板端FPS；已验收历史基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v190/status.html)。
+**V190 硬件实验（2026-10-24）：** HLS79把采用精确24位累加和第四路DSP量化，117张开发集C输出及完整AXI RTL两次启动13302个字一致。本体实际资源见报告；整机阶段 `hardware`（100 MHz / ExploreArea），尚无新版板端FPS。HLS76整机布局超容失败已留档。历史验收基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v190/status.html)。
 <!-- V190_CURRENT_END -->
 
 <!-- V188_CURRENT_BEGIN -->

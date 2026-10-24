@@ -1,0 +1,78 @@
+from pathlib import Path
+import json,hashlib,zipfile,html,re
+R=Path('D:/Vivado/TileLab_SingleTile_V164_20261019');P=R/'project/pynq_z2_tile_v1_53';W=Path('D:/Vivado/TileLab_RealPhotos_20261020');root=P/'reports/v190';out=root/'exact79';out.mkdir(parents=True,exist_ok=True)
+sha=lambda f:hashlib.sha256(f.read_bytes()).hexdigest()
+def copy(folder,target,names):
+ for name in names:
+  a=W/folder/name
+  if a.exists():
+   b=out/target/name;b.parent.mkdir(parents=True,exist_ok=True);b.write_bytes(a.read_bytes())
+for folder,target,names in [
+ ('v190_all_c05','c_all117',['summary.json','results.json','plan.json']),
+ ('v190_mac_scalar05','scalar',['summary.json']),
+ ('v190_mac_rtl79_01','mac_rtl',['summary.json','plan.json','xsim.log','tb_generated_mac.sv','vectors.log']),
+ ('v190_full_axi79_01','full_axi',['summary.json','plan.json','xsim.log','tb_full_axi.sv','axi_ram_tb.sv','xvlog.log','xelab.log']),
+ ('v190_ooc79_01','detector_ooc',['summary.json','utilization.rpt','hierarchy.rpt','console.log','timing_synthesis_only.rpt','build.tcl']),
+ ('v190_preflight_checks79','build_guards',['summary.json','candidate_preflight.json','baseline_preflight.json']),
+ ('v190_export79_01','ip_export',['summary.json','console.log','export.tcl']),
+ ('v170_hls79/solution/syn/report','hls',['texture_integer_csynth.rpt','texture_integer_csynth.xml']),
+ ('v190_hw04','whole_system',['synthesis_utilization.rpt','implementation_status.json','timing_summary.rpt','route_status.rpt','drc.rpt','candidate_preflight.json'])]:copy(folder,target,names)
+for src,dst in [('v190_structure79.json','hls/structure.json'),('v190_physical_pipeline04.json','physical_pipeline_snapshot.json'),('v190_hw04_console.log','whole_system/build.log'),('v190_physical_console04.log','whole_system/pipeline.log'),('v190_hw04/texture_v170.runs/impl_1/runme.log','whole_system/implementation.log')]:
+ a=W/src
+ if a.exists():
+  b=out/dst;b.parent.mkdir(parents=True,exist_ok=True);b.write_bytes(a.read_bytes())
+for f in ['test_v190_preflight79.py','export_v190_hls79.py','start_v190_physical04.py','archive_v190_exact79.py']:
+ b=out/'reproduction'/(f+'.txt');b.parent.mkdir(exist_ok=True);b.write_bytes((W/f).read_bytes())
+for name in ['c_all117/raw_results.zip','full_axi/dut_and_vectors.zip']:
+ target=out/name
+ if not target.exists():
+  with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+   if name.startswith('c_'):
+    for f in sorted((W/'v190_all_c05').glob('*/result.bin')):z.write(f,f.parent.name+'/result.bin')
+   else:
+    for f in sorted((W/'v170_hls79/solution/syn/verilog').glob('*')):
+     if f.suffix in ['.v','.dat']:z.write(f,'dut/'+f.name)
+    for folder,prefix,patterns in [('v190_full_axi79_01','full_axi',['*.mem','*.bin','*.sv','*.prj']),('v190_mac_rtl79_01','mac',['*.mem','*.sv','emit.cpp','vectors.log'])]:
+     for pattern in patterns:
+      for f in sorted((W/folder).glob(pattern)):z.write(f,prefix+'/'+f.name)
+with zipfile.ZipFile(out/'c_all117/raw_results.zip') as z:
+ assert len(z.namelist())==117 and z.testzip() is None
+ for f in (W/'v190_all_c05').glob('*/result.bin'):assert z.read(f.parent.name+'/result.bin')==f.read_bytes()
+state=json.loads((W/'v190_physical_pipeline04.json').read_text()) if (W/'v190_physical_pipeline04.json').exists() else dict(status='OFFLINE_VALIDATION',opt_directive='ExploreArea',board_programmed=False); c=json.loads((W/'v190_all_c05/summary.json').read_text());ax=json.loads((W/'v190_full_axi79_01/summary.json').read_text());mac=json.loads((W/'v190_mac_rtl79_01/summary.json').read_text())
+j=dict(scope='V190_HLS79_SPATIAL_PAIR_BRAM_PROGRESS_NOT_ACCEPTED_RELEASE',candidate_source_sha256=c['source_sha256'],model_sha256=c['model_sha256'],c_all117_scores_and_masks_exact=True,scalar_cases=159,scalar_checks=140955,mac_rtl_packets=mac['packets'],mac_stall_cycles=mac['stalled_cycles'],full_axi_launches=ax['launches'],full_axi_checked_words=ax['checked_words'],detector_only_actual_synthesis={},hls_estimated=dict(bram18=268,dsp=216),physical_status=state['status'],opt_directive=state['opt_directive'],board_programmed=state.get('board_programmed',False),new_measured_fps=None,accepted_historical_continuous_hdmi_fps=8.168911480267331,limitations=['117photos are exposed public development images; not blind/camera/generalpaintedtile accuracy','Detector-only synthesis does not establish whole-system fit or timing','Reduced-fixture simulation cycles and static MAC counts are not board FPS'])
+ooc_text=(W/'v190_ooc79_01/utilization.rpt').read_text();ooc={}
+for name,key in [('Slice LUTs*','lut'),('Slice Registers','ff'),('Block RAM Tile','bram36_tiles'),('DSPs','dsp')]:
+ match=re.search(r'\|\s*'+re.escape(name)+r'\s*\|\s*(\d+)\s*\|',ooc_text);assert match,name;ooc[key]=int(match.group(1))
+j['detector_only_actual_synthesis']=ooc
+rpt=W/'v190_hw04/synthesis_utilization.rpt'
+if rpt.exists():
+ text=rpt.read_text(errors='replace');metrics={}
+ for name,key in [('Slice LUTs*','lut'),('Slice Registers','ff'),('Block RAM Tile','bram36_tiles'),('DSPs','dsp')]:
+  match=re.search(r'\|\s*'+re.escape(name)+r'\s*\|\s*(\d+)\s*\|',text);assert match,name;metrics[key]=int(match.group(1))
+ j['whole_system_synthesis']=metrics
+impl=W/'v190_hw04/texture_v170.runs/impl_1/runme.log'
+if state['status']=='FAILED_NO_PROMOTION':
+ j['failure']=state.get('error')
+ if impl.exists():
+  text=impl.read_text(errors='replace');j['raw_implementation_errors']=[s for s in text.splitlines() if s.startswith('ERROR:')]
+  match=re.search(r'Luts: (\d+) \(combined\).*?available capacity: (\d+)',text)
+  if match:j['placement_lut_rejection']=dict(combined_lut=int(match[1]),available_luts=int(match[2]))
+for filename in ['implementation_status.json','physical_repair01/implementation_status.json']:
+ file=W/'v190_hw04'/filename
+ if file.exists():j['physical_report']=json.loads(file.read_text())
+if 'board_result_review' in state:
+ j['board_result_review']=state['board_result_review'];j['new_measured_fps']=state['board_result_review']['continuous_hdmi_fps']
+(root/'status.json').write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+rows=[('真实图片C回归','117张评分和原尺寸掩膜逐值一致；公开开发集，非独立盲测'),('独立标量验证','159组、140955个检查通过'),('实际MAC RTL','643个输出包一致，包含signed24越界累加，1308个停顿周期'),('完整检测器AXI RTL','两次连续启动，13302个中间值、评分和掩膜字一致'),('检测器实际综合',json.dumps(ooc)+'；仅本体，非整机'),('整机实现',state['status']+'；100 MHz / ExploreArea'),('本版板端帧率','尚未测量；历史验收基线仍为V179约8.17 FPS')]
+if 'whole_system_synthesis' in j:rows.insert(-2,('整机综合资源',json.dumps(j['whole_system_synthesis'])+'；仍需通过实际布局布线'))
+if 'failure' in j:rows.append(('本轮未晋升',str(j['failure'])+'；'+ ' / '.join(j.get('raw_implementation_errors',[]))))
+if j['new_measured_fps'] is not None:rows[-1:]=[('实际持续HDMI帧率',str(j['new_measured_fps'])+' FPS；详见板端原始记录')]
+page='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>V190 硬件空间并行</title><style>body{font:17px/1.7 system-ui;max-width:1050px;margin:36px auto;padding:0 22px;background:#f3f7fa;color:#17273a}article{background:white;border-radius:14px;padding:22px;margin:20px 0}table{border-collapse:collapse;width:100%}td,th{padding:10px;border-bottom:1px solid #dde5ef;text-align:left}</style><h1>V190：相邻像素共享权重，精确24位累加版HLS79</h1><p>16个输出通道同时处理两个像素，128个共享乘法器。模型、阈值、分辨率保持原值。所有检测运算在PL执行，C回归仅作离线验证。</p><article><h2>当前证据</h2><table>'+''.join('<tr><td>'+html.escape(a)+'</td><td>'+html.escape(b)+'</td></tr>' for a,b in rows)+'</table></article><article><h2>前一版失败与本轮改动</h2><p>HLS76和HLS77整机详细布局分别需要54910与54560个LUT，均超出器件53200，未下载。本轮采用有等价性证明的24位累加和第四路DSP量化。117张开发集及完整RTL输出一致，是否容纳以完整布局布线为准。普通卷积静态MAC循环减半，但不包含DDR等待、预处理、深度卷积、投影和最近邻，不能据此推算帧率。</p><p><a href="full_system76_failed/placement.log">HLS76失败日志</a> · <a href="exact79/full_axi/summary.json">HLS79完整RTL验证</a> · <a href="exact79/detector_ooc/utilization.rpt">本体实际资源</a> · <a href="status.json">状态JSON</a> · <a href="verification.json">原始证据哈希</a></p></article><article><h2>验收范围</h2><p>新版尚须通过整机容量与时序、板端117张逐值比对、ARM停止后的持续HDMI检测和吞吐测量。没有独立相机、盲测及任意彩绘材质验收，不能把开发集一致性描述为普遍100%准确率。</p></article></html>'
+(root/'status.html').write_text(page,encoding='utf8')
+text='**V190 硬件实验（2026-10-24）：** HLS79把采用精确24位累加和第四路DSP量化，117张开发集C输出及完整AXI RTL两次启动13302个字一致。本体实际资源见报告；整机阶段 `'+state['status']+'`（100 MHz / ExploreArea），尚无新版板端FPS。HLS76整机布局超容失败已留档。历史验收基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v190/status.html)。'
+for f in [R/'README.md',R/'FPGA_MIGRATION_STATUS.md']:
+ s=f.read_text(encoding='utf8');block='<!-- V190_CURRENT_BEGIN -->\n'+text+'\n<!-- V190_CURRENT_END -->';s=re.sub(r'<!-- V190_CURRENT_BEGIN -->.*?<!-- V190_CURRENT_END -->',lambda m:block,s,flags=re.S);f.write_text(s,encoding='utf8',newline='\r\n')
+f=P/'experimental/spatial_pair_v190/README.md';s=f.read_text(encoding='utf8');s=s.replace('实际容量、完整RTL及整机仍需独立验证。','实际检测器综合41809 LUT / 44872 FF / 217 DSP / 132 BRAM36；生成MAC RTL642个输出包、853个停顿周期通过，完整检测器AXI RTL连续两次启动13302个字一致。完整HDMI整机状态以报告为准，尚无本版板端FPS。');f.write_text(s,encoding='utf8',newline='\r\n')
+files={f.relative_to(root).as_posix():dict(bytes=f.stat().st_size,sha256=sha(f)) for f in sorted(root.rglob('*')) if f.is_file() and f.name!='verification.json'}
+(root/'verification.json').write_text(json.dumps(dict(scope='V190_RAW_EVIDENCE_HASHES_NOT_RELEASE',files=files),indent=2)+'\n')
+print(json.dumps(dict(files=len(files),physical_status=state['status'])))

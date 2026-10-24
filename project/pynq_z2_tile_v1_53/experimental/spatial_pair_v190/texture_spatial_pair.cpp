@@ -231,9 +231,9 @@ static void mac_row(shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> str
 #pragma HLS ARRAY_PARTITION variable=dw_weight complete
 #pragma HLS ARRAY_PARTITION variable=query complete
 #pragma HLS ALLOCATION function instances=dot128 limit=1
-    i32 acc[CO][32];
+    ap_int<24> acc[CO][16]; // Exact modulo2^24: quantization truncates after adding bias.
 #pragma HLS ARRAY_PARTITION variable=acc complete dim=1
-#pragma HLS BIND_STORAGE variable=acc type=ram_2p impl=lutram
+#pragma HLS BIND_STORAGE variable=acc type=ram_2p impl=bram
     int taps=nearest?(count+63)/64:(depth?int(k)*int(k):((int(ic)+7)/8)*int(k)*int(k));
     int span=nearest?32:(depth?DW_SPAN:PW_SPAN);
     int blocks=nearest?1:(depth?(int(ow)+DW_SPAN-1)/DW_SPAN:(int(ow)+PW_SPAN*2-1)/(PW_SPAN*2));
@@ -278,7 +278,7 @@ static void mac_row(shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> str
         }
         for(int lane=0;lane<O;lane++){
 #pragma HLS UNROLL
-            i32 old=(nearest||tap==0)?i32(0):acc[lane][p];old_dw[lane]=old;
+            i32 old=(nearest||tap==0)?i32(0):i32(acc[lane][p]);old_dw[lane]=old;
             for(int j=0;j<I;j++){
 #pragma HLS UNROLL
                 int d=(lane%8)*8+j;
@@ -303,11 +303,11 @@ static void mac_row(shape_t ow,shape_t ic,shape_t iw,ap_uint<2> k,ap_uint<2> str
         }else{
             for(int lane=0;lane<O;lane++){
 #pragma HLS UNROLL
-                i32 old=(!depth&&tap!=0)?acc[lane][p]:i32(0);
-                i32 out=depth?out_dw[lane]:i32(old+next[lane]);acc[lane][p]=out;
+                i32 old=(!depth&&tap!=0)?i32(acc[lane][p]):i32(0);
+                i32 out=ap_int<24>(depth?out_dw[lane]:i32(old+next[lane]));acc[lane][p]=out;
                 packet.range(lane*32+31,lane*32)=out;
-                i32 old_hi=(!depth&&tap!=0)?acc[lane+O][p]:i32(0);
-                i32 hi=depth?i32(0):i32(old_hi+upper_sum[lane]);acc[lane+O][p]=hi;
+                i32 old_hi=(!depth&&tap!=0)?i32(acc[lane+O][p]):i32(0);
+                i32 hi=ap_int<24>(depth?i32(0):i32(old_hi+upper_sum[lane]));acc[lane+O][p]=hi;
                 packet.range((lane+O)*32+31,(lane+O)*32)=hi;
             }
             if(tap==taps-1&&x<ow)output.write(packet);
@@ -339,7 +339,7 @@ static void quant_row(pack_t *work,unsigned dst,shape_t ow,const int32_t bias[O]
         for(int j=0;j<4;j++){
 #pragma HLS UNROLL
             int lane=part*4+j;i32 v=i32(values.range((half*O+lane)*32+31,(half*O+lane)*32))+bias[lane];
-            int q=j==3?rq_fabric(ap_int<24>(v),ap_uint<27>(mul[lane])):rq_dsp(ap_int<24>(v),ap_uint<27>(mul[lane]));
+            int q=rq_dsp(ap_int<24>(v),ap_uint<27>(mul[lane]));
             word.range(j*8+7,j*8)=i8(clampi(q,relu?0:-127,relu==2?qmax:127));
         }
         packed.range(part*32+31,part*32)=word;
@@ -360,7 +360,7 @@ static void process_row(pack_t *work,unsigned dst,shape_t ow,shape_t ic,shape_t 
 #pragma HLS ARRAY_PARTITION variable=bias complete
 #pragma HLS ARRAY_PARTITION variable=mul complete
     hls::stream<sum_packet> sums;
-#pragma HLS STREAM variable=sums depth=16
+#pragma HLS STREAM variable=sums depth=1
 #pragma HLS BIND_STORAGE variable=sums type=fifo impl=srl
     mac_row(ow,ic,iw,k,stride,pad,depth,row_head,ram,line,dw_weight,nearest,query,count,sums);
     quant_row(work,dst,ow,bias,mul,relu,qmax,nearest,depth,count,best,sums);

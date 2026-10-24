@@ -7,7 +7,7 @@ def inspect(hls):
     if len(files)!=1:raise ValueError('Expected one flattened shared MAC RTL module')
     rtl=files[0];text=rtl.read_text();source=hls/'src/texture_integer.cpp'
     code=source.read_text()
-    allocation=re.search(r'i32 acc\[(O|CO)\]\[(\d+)\]',code)
+    allocation=re.search(r'(?:i32|ap_int<24>) acc\[(O|CO)\]\[(\d+)\]',code)
     if not allocation:raise ValueError('Unknown accumulator allocation')
     lanes=int(re.search(r'\b'+allocation[1]+r'=(\d+)',code)[1])
     if lanes not in (16,32):raise ValueError('Unsupported accumulator lane count')

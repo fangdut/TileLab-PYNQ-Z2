@@ -1,0 +1,22 @@
+D:\Vivado\TileLab_RealPhotos_20261020\v190_full_c04\kernel.cpp: In function 'void mac_row(shape_t, shape_t, shape_t, ap_uint<2>, ap_uint<2>, ap_uint<1>, bool, ap_uint<2>, const uint64_t (*)[1024], const pack_t*, const pack_t*, bool, const i16*, int, hls::stream<ap_uint<1024> >&)':
+D:\Vivado\TileLab_RealPhotos_20261020\v190_full_c04\kernel.cpp:281:38: error: operands to ?: have different types 'i32' {aka 'ap_int<32>'} and 'ap_int<24>'
+  281 |             i32 old=(nearest||tap==0)?i32(0):acc[lane][p];old_dw[lane]=old;
+      |                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+D:\Vivado\TileLab_RealPhotos_20261020\v190_full_c04\kernel.cpp:281:38: note:   and each type can be converted to the other
+D:\Vivado\TileLab_RealPhotos_20261020\v190_full_c04\kernel.cpp:306:41: error: operands to ?: have different types 'ap_int<24>' and 'i32' {aka 'ap_int<32>'}
+  306 |                 i32 old=(!depth&&tap!=0)?acc[lane][p]:i32(0);
+      |                         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+D:\Vivado\TileLab_RealPhotos_20261020\v190_full_c04\kernel.cpp:306:41: note:   and each type can be converted to the other
+D:\Vivado\TileLab_RealPhotos_20261020\v190_full_c04\kernel.cpp:309:44: error: operands to ?: have different types 'ap_int<24>' and 'i32' {aka 'ap_int<32>'}
+  309 |                 i32 old_hi=(!depth&&tap!=0)?acc[lane+O][p]:i32(0);
+      |                            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+D:\Vivado\TileLab_RealPhotos_20261020\v190_full_c04\kernel.cpp:309:44: note:   and each type can be converted to the other
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\tools\fpga_texture_v170\check_full_c.py", line 42, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\tools\fpga_texture_v170\check_full_c.py", line 30, in main
+    subprocess.run([compiler,'-O3','-std=c++17','-static','-Wno-unknown-pragmas','-I','D:/2025.2/Vitis/include',str(a.out/'kernel.cpp'),str(a.out/'runner.cpp'),'-o',str(exe)],check=True)
+  File "C:\Users\Fang\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['D:/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt/bin/g++.exe', '-O3', '-std=c++17', '-static', '-Wno-unknown-pragmas', '-I', 'D:/2025.2/Vitis/include', 'D:\\Vivado\\TileLab_RealPhotos_20261020\\v190_full_c04\\kernel.cpp', 'D:\\Vivado\\TileLab_RealPhotos_20261020\\v190_full_c04\\runner.cpp', '-o', 'D:\\Vivado\\TileLab_RealPhotos_20261020\\v190_full_c04\\check.exe']' returned non-zero exit status 1.

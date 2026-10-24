@@ -1,0 +1,14 @@
+In file included from D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\test_mac.cpp:3:
+D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\texture_spatial_pair.cpp: In function 'void mac_row(shape_t, shape_t, shape_t, ap_uint<2>, ap_uint<2>, ap_uint<1>, bool, ap_uint<2>, const uint64_t (*)[1024], const pack_t*, const pack_t*, bool, const i16*, int, hls::stream<ap_uint<1024> >&)':
+D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\texture_spatial_pair.cpp:281:38: error: operands to ?: have different types 'i32' {aka 'ap_int<32>'} and 'ap_int<24>'
+  281 |             i32 old=(nearest||tap==0)?i32(0):acc[lane][p];old_dw[lane]=old;
+      |                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\texture_spatial_pair.cpp:281:38: note:   and each type can be converted to the other
+D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\texture_spatial_pair.cpp:306:41: error: operands to ?: have different types 'ap_int<24>' and 'i32' {aka 'ap_int<32>'}
+  306 |                 i32 old=(!depth&&tap!=0)?acc[lane][p]:i32(0);
+      |                         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\texture_spatial_pair.cpp:306:41: note:   and each type can be converted to the other
+D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\texture_spatial_pair.cpp:309:44: error: operands to ?: have different types 'ap_int<24>' and 'i32' {aka 'ap_int<32>'}
+  309 |                 i32 old_hi=(!depth&&tap!=0)?acc[lane+O][p]:i32(0);
+      |                            ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+D:\Vivado\TileLab_RealPhotos_20261020\v190_mac_scalar04\texture_spatial_pair.cpp:309:44: note:   and each type can be converted to the other

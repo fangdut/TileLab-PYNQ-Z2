@@ -1,0 +1,13 @@
+{
+  "scope": "V190_HLS78_MOD24_AND_DSP_QUANTIZATION_NOT_YET_VALIDATED",
+  "source_sha256": "ea5e0de61ad4cc9d7f790a333ef15d6bfee174e86c73fcd53bf402a949c2fd03",
+  "base_source_sha256": "f8a7dabe4590b7a7e5404ecce24b84ce745adfd4572c3a4a2379d71466e934eb",
+  "changes": [
+    "24bit accumulator modulo proof required; bias addition then signed24 truncation unchanged",
+    "Fourth quantization unit uses2DSP instead of1077LUT fabric unit; actual mapped total must be<=220DSP"
+  ],
+  "model_changed": false,
+  "threshold_changed": false,
+  "resolution_changed": false,
+  "board_programmed": false
+}

@@ -1,0 +1,13 @@
+from pathlib import Path
+import hashlib,json,subprocess,sys
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');W=Path('D:/Vivado/TileLab_RealPhotos_20261020');hls=W/'v170_hls79'
+sys.path.insert(0,str(P/'tools/fpga_texture_v170'));from check_full_axi_proof import verify
+proof=W/'v190_full_axi79_01/summary.json';verified=verify(hls,proof)
+out=W/'v190_export79_01';out.mkdir(exist_ok=False)
+tcl=out/'export.tcl';tcl.write_text('open_project {'+hls.as_posix()+'}\nopen_solution solution\nexport_design -format ip_catalog -rtl verilog\nputs "V190_SOURCE_BOUND_EXPORTED_IP_NOT_BOARD"\nexit\n')
+with (out/'console.log').open('w') as log:r=subprocess.run(['D:/2025.2/Vitis/bin/vitis-run.bat','--mode','hls','--tcl',str(tcl)],stdout=log,stderr=subprocess.STDOUT)
+assert r.returncode==0 and 'V190_SOURCE_BOUND_EXPORTED_IP_NOT_BOARD' in (out/'console.log').read_text(errors='replace')
+assert verify(hls,proof)==verified
+files=list((hls/'solution/impl/ip').glob('*.zip'));assert len(files)==1
+j=dict(scope='FULL_AXI_TESTED_EXPORTED_IP_NOT_BOARD',source_sha256=verified['source_sha256'],ip_sha256=hashlib.sha256(files[0].read_bytes()).hexdigest(),rtl_unchanged_after_export=True,full_axi_proof_sha256=verified['proof_sha256'])
+(out/'summary.json').write_text(json.dumps(j,indent=2)+'\n');print(json.dumps(j))

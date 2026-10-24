@@ -1,0 +1,251 @@
+{
+  "scope": "SPATIAL_GENERATED_STATIC_GATES_NOT_RTL_OR_BOARD",
+  "source_sha256": "490c8af82d9cab7be46b80709081d9c0f8effea84c28582d888a658e9a77d2e0",
+  "rtl_sha256": "e635b880c069f38073f17e68e8186d910d5cf4f9f561da740b449ee0de20fe1d",
+  "resources": {
+    "BRAM_18K": 268,
+    "DSP": 216,
+    "FF": 66397,
+    "LUT": 85769,
+    "URAM": 0
+  },
+  "dot_resources": {
+    "DSP": 128,
+    "FF": 15939,
+    "LUT": 17344,
+    "BRAM_18K": 0,
+    "URAM": 0
+  },
+  "minimum_reuse_iterations": 16,
+  "recurrence": [
+    {
+      "bank": "acc",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_1",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_10",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_11",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_12",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_13",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_14",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_15",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_16",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_17",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_18",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_19",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_2",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_20",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_21",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_22",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_23",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_24",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_25",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_26",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_27",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_28",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_29",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_3",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_30",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_31",
+      "read_stage": 14,
+      "write_stage": 16,
+      "delta": 2,
+      "safe": true
+    },
+    {
+      "bank": "acc_4",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_5",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_6",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_7",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_8",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    },
+    {
+      "bank": "acc_9",
+      "read_stage": 10,
+      "write_stage": 16,
+      "delta": 6,
+      "safe": true
+    }
+  ],
+  "recurrence_safe": true,
+  "shared_dot_128_dsp": true,
+  "capacity_gate": true,
+  "capacity_note": "Reserve4 estimated DSP and4 BRAM18; full mapped system must still fit220 DSP and140 BRAM36. HLS LUT/FF estimates are not routed utilization.",
+  "passed": true
+}

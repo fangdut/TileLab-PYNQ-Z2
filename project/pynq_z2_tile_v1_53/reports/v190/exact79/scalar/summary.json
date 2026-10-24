@@ -1,0 +1,6 @@
+{
+  "scope": "SPATIAL_INTEGRATED_MAC_NATIVE_C_SCALAR_REFERENCE_NOT_RTL_OR_BOARD",
+  "passed": true,
+  "source_sha256": "490c8af82d9cab7be46b80709081d9c0f8effea84c28582d888a658e9a77d2e0",
+  "output": "SPATIAL_INTEGRATED_MAC_SCALAR_PASS cases=159 checks=140955\nINFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 512\n"
+}

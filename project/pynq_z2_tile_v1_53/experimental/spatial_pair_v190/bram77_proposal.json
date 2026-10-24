@@ -1,0 +1,11 @@
+{
+  "scope": "BRAM_ACC_AND_ONE_ENTRY_FIFO_NOT_YET_VALIDATED",
+  "source_sha256": "f8a7dabe4590b7a7e5404ecce24b84ce745adfd4572c3a4a2379d71466e934eb",
+  "base_source_sha256": "775e6c5025bb12c6869a11d840444744cf863471e28dbcbd903800199ae7319f",
+  "reason": "Actual76placement54910combinedLUT vs53200; use freeBRAM for32accumulatorbanks and16validspatialslots; reduce1024bit SRL FIFO to1entry.",
+  "model_changed": false,
+  "threshold_changed": false,
+  "resolution_changed": false,
+  "board_programmed": false,
+  "expected_tradeoff": "ExtraBRAM and potentially more output backpressure; actual capacity/timing/FPS must be measured"
+}

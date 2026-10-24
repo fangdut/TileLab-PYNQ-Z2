@@ -46,6 +46,7 @@ static void convolution(int width,int channels,int kernel,int stride,int pad,boo
                     }
                 }
             }
+            expected=int64_t((uint64_t(expected)+0x800000ULL)&0xffffffULL)-0x800000LL;
             require(int32_t(i32(actual.range(c*32+31,c*32)))==expected);
         }
     }
@@ -76,6 +77,35 @@ static void nearest(int count){
     }
     require(output.empty());
 }
+// The final consumer adds bias and truncates to signed24 before requantizing.
+// This adversarial case crosses the signed24 boundary; nearest keeps64bit distances.
+static void modular_overflow(){
+    ++cases;const int channels=1016,taps=channels/8;
+    pack_t pixel=0;for(int j=0;j<16;j++)pixel.range(j*8+7,j*8)=i8(-128);
+    for(int n=0;n<LD;n++)pixels[n]=pixel;
+    for(int lane=0;lane<O;lane++)for(int t=0;t<taps;t++)memory[lane][t]=0x8080808080808080ULL;
+    hls::stream<sum_packet> output;
+    mac_row(1,channels,1,1,1,0,false,0,memory,pixels,dw,false,query_data,1,output);
+    require(!output.empty());sum_packet packet=output.read();require(output.empty());
+    const int64_t full=int64_t(channels)*16384;
+    const int64_t reduced=int64_t((uint64_t(full)+0x800000ULL)&0xffffffULL)-0x800000LL;
+    require(full>0x7fffff&&reduced<0);
+    for(int lane=0;lane<O;lane++){
+        require(int32_t(i32(packet.range(lane*32+31,lane*32)))==reduced);
+        require(int32_t(i32(packet.range((lane+O)*32+31,(lane+O)*32)))==0);
+    }
+    int32_t bias[O];uint32_t multiplier[O];pack_t result[224];uint64_t best=0;
+    const int32_t biases[]={0,0x7fffff,-0x800000,0x7fffffff,int32_t(0x80000000U),131071,-131073,1};
+    for(int lane=0;lane<O;lane++){bias[lane]=biases[lane%8];multiplier[lane]=(lane&1)?0x7ffffffU:0x100000U;}
+    output.write(packet);quant_row(result,0,1,bias,multiplier,0,127,false,false,1,best,output);require(output.empty());
+    for(int lane=0;lane<O;lane++){
+        int64_t v=int64_t((uint64_t(full+int64_t(bias[lane]))+0x800000ULL)&0xffffffULL)-0x800000LL;
+        int64_t product=v*multiplier[lane];uint64_t mag=product<0?uint64_t(-product):uint64_t(product);
+        int64_t q=int64_t((mag+(1ULL<<27))>>28);if(product<0)q=-q;
+        if(q<-127)q=-127;if(q>127)q=127;
+        require(int(i8(result[0].range(lane*8+7,lane*8)))==q);
+    }
+}
 int main(){
     const int widths[]={1,14,31,32,33,56,112,224};
     const int channels[]={8,16,24,72,576};
@@ -85,5 +115,6 @@ int main(){
         for(int head=0;head<3;head++)convolution(w,16,3,stride,pad,true,head);
     }
     for(int n:{1,2,63,64,65,127,1023,1024})nearest(n);
+    modular_overflow();
     std::printf("SPATIAL_INTEGRATED_MAC_SCALAR_PASS cases=%u checks=%u\n",cases,checks);
 }
