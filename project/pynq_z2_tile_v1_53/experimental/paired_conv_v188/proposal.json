@@ -1,0 +1,15 @@
+{
+  "scope": "PAIRED_CONV_INTEGRATION_NOT_YET_VALIDATED",
+  "source_sha256": "3cfdd429cc7bf05c4bb145a3b30d324f1fec24657b969ddcd6a9a9eb8c9a1da4",
+  "base_source_sha256": "5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4",
+  "model_changed": false,
+  "threshold_changed": false,
+  "input_resolution_changed": false,
+  "conv_outputs": 32,
+  "nearest_outputs": 16,
+  "shared_multipliers": 128,
+  "extra_weight_banks": "16 x 128 x 64bit; actual graph max72",
+  "accumulator_storage": "32 x 32 x 32bit LUTRAM",
+  "schedule_clock_mhz": 100,
+  "board_programmed": false
+}

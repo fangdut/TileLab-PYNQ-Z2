@@ -1,0 +1,30 @@
+from pathlib import Path
+import sys,json,copy
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');W=Path('D:/Vivado/TileLab_RealPhotos_20261020');out=W/'v188_preflight_checks01';out.mkdir(exist_ok=False)
+sys.path[:0]=[str(P/'scripts/texture_v170'),str(P/'tools/fpga_texture_v170')]
+from build_candidate import preflight
+from check_full_axi_proof import verify
+proof=W/'v188_full_axi74_02/summary.json';hls=W/'v170_hls74'
+new=preflight(hls,W/'v188_all_c03',W/'v170_fullint224',proof)
+(out/'candidate_preflight.json').write_text(json.dumps(new,indent=2)+'\n')
+old=preflight(W/'v170_hls62',W/'v179_all_c05',W/'v170_fullint224')
+assert old['rtl_cosim_sha256'] and old['complete_axi_rtl'] is None
+(out/'baseline_preflight.json').write_text(json.dumps(old,indent=2)+'\n')
+reject=[]
+try:preflight(hls,W/'v188_all_c03',W/'v170_fullint224')
+except (ValueError,FileNotFoundError):reject.append('no_implicit_axi_fallback')
+else:raise AssertionError('Unproven fallback accepted')
+original=json.loads(proof.read_text())
+for name in ['failed','missing_launch','source_changed','rtl_changed','driver_changed']:
+ p=copy.deepcopy(original)
+ if name=='failed':p['passed']=False
+ elif name=='missing_launch':p['launches']=1
+ elif name=='source_changed':p['source_sha256']='0'*64
+ elif name=='rtl_changed':p['dut_files']['texture_integer.v']='0'*64
+ elif name=='driver_changed':p['test_driver_sha256']='0'*64
+ f=out/(name+'.json');f.write_text(json.dumps(p))
+ try:verify(hls,f)
+ except (ValueError,FileNotFoundError):reject.append(name)
+ else:raise AssertionError('Invalid proof accepted: '+name)
+j=dict(scope='PHYSICAL_BUILD_EVIDENCE_GUARD_TESTS_NOT_BOARD',passed=len(reject)==6,candidate_valid=True,stable_baseline_still_valid=True,rejected_invalid_proofs=reject)
+(out/'summary.json').write_text(json.dumps(j,indent=2)+'\n');print(json.dumps(j))

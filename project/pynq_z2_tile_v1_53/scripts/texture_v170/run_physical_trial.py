@@ -36,6 +36,7 @@ def main():
     for n in ['hls','regression','profile','dataset','catalog','player','hardware','run','journal']:
         p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--video-rtl-gate',type=Path,required=True)
+    p.add_argument('--full-axi-proof',type=Path)
     p.add_argument('--clock-mhz',type=int,choices=[100,125],required=True)
     p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
     p.add_argument('--ip-cache',type=Path)
@@ -59,14 +60,16 @@ def main():
         j['stages'].append(dict(stage=name,returncode=r.returncode,seconds=time.monotonic()-started,log=str(log)));save()
         return r.returncode
     try:
-        save();j['numerical_preflight']=preflight(a.hls,a.regression,a.profile);save()
+        save();j['numerical_preflight']=preflight(a.hls,a.regression,a.profile,a.full_axi_proof);save()
         env=os.environ.copy()
         if a.ip_cache:env['TILE_TEXTURE_IP_CACHE']=str(a.ip_cache)
         else:env.pop('TILE_TEXTURE_IP_CACHE',None)
-        code=run('hardware',[sys.executable,'-X','utf8',scripts/'build_candidate.py',
+        hardware_args=[sys.executable,'-X','utf8',scripts/'build_candidate.py',
             '--hls',a.hls,'--regression',a.regression,'--profile',a.profile,'--out',a.hardware,
             '--video','--video-variant','overlap_v175','--video-rtl-gate',a.video_rtl_gate,
-            '--clock-mhz',a.clock_mhz,'--opt-directive','Default','--memory-layout',a.memory_layout],5400,env)
+            '--clock-mhz',a.clock_mhz,'--opt-directive','Default','--memory-layout',a.memory_layout]
+        if a.full_axi_proof:hardware_args.extend(['--full-axi-proof',a.full_axi_proof])
+        code=run('hardware',hardware_args,5400,env)
         if code:
             file=a.hardware/'implementation_status.json'
             if not file.exists():raise RuntimeError('Build failed before physical reports; no programming')

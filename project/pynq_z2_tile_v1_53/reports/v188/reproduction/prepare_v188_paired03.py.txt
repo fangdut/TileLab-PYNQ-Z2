@@ -1,0 +1,34 @@
+from pathlib import Path
+import hashlib,json
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');W=Path('D:/Vivado/TileLab_RealPhotos_20261020');b=P/'experimental/paired_conv_v188'
+base=P/'experimental/texture_v170/hls/frozen/v170_hls73.cpp';s=base.read_text();assert hashlib.sha256(base.read_bytes()).hexdigest()=='3bf21d356d3945735bb317e38ef586e220bf2248393c7791ae6ecc68e3997e18'
+def sub(a,c,n=1):
+ global s
+ assert s.count(a)==n,(a,s.count(a),n)
+ s=s.replace(a,c)
+sub('ap_int<36> p[I];ap_int<16> hi[I];','ap_int<36> p[I];ap_int<16> hi[I];ap_uint<1> borrow[I];\n#pragma HLS ARRAY_PARTITION variable=borrow complete')
+sub('hi[k]=upper+ap_int<16>(lo<0);','hi[k]=upper;borrow[k]=lo<0;')
+sub('        high[o]=(ap_int<20>(e)+f)+(ap_int<20>(g)+h);','        ap_uint<2> n0=ap_uint<2>(borrow[0])+borrow[1],n1=ap_uint<2>(borrow[2])+borrow[3],n2=ap_uint<2>(borrow[4])+borrow[5],n3=ap_uint<2>(borrow[6])+borrow[7];\n        ap_uint<4> corrections=(ap_uint<4>(n0)+n1)+(ap_uint<4>(n2)+n3);\n        high[o]=(ap_int<20>(e)+f)+(ap_int<20>(g)+h)+ap_int<20>(corrections);')
+sub('for(int ob=0;ob<(nearest?1:(int(oc)+15)/16);ob+=(depth||nearest)?1:2){','for(ap_uint<7> ob=0;ob<(nearest?1:(int(oc)+15)/16);ob+=(depth||nearest)?1:2){')
+sub('''            for(int tap=0;tap<taps;tap++)for(int lane=0;lane<O;lane++){
+#pragma HLS PIPELINE II=1
+                ram[lane][tap]=model[wo+(ob*taps+tap)*16+lane];
+                ram[lane][CRD+tap]=write_upper?model[wo+((ob+1)*taps+tap)*16+lane]:uint64_t(0);
+            }''','''            // Serialize the two writes through ONE RAM write site. Two source
+            // writes caused HLS to auto-bank all 16x1024 memories and double BRAM.
+            ap_uint<15> group_offset=ob*ap_uint<8>(taps);
+#pragma HLS BIND_OP variable=group_offset op=mul impl=fabric latency=2
+            for(int tap=0;tap<taps;tap++)for(int half=0;half<2;half++)for(int lane=0;lane<O;lane++){
+#pragma HLS PIPELINE II=1
+                unsigned index=wo+(unsigned(group_offset)+tap+(half?taps:0))*16+lane;
+                ram[lane][tap+(half?CRD:0)]=(half==0||write_upper)?model[index]:uint64_t(0);
+            }''')
+source=b/'texture_paired.cpp';source.write_text(s,encoding='utf8',newline='\n')
+f=P/'experimental/texture_v170/hls/frozen/v170_hls74.cpp';assert not f.exists();f.write_bytes(source.read_bytes())
+t=b/'build_hls.tcl';t.write_text(t.read_text().replace('v170_hls73.cpp','v170_hls74.cpp').replace('$dsp>220','$dsp>215'))
+for src,dst,pairs in [('start_v188_hls73_synth.py','start_v188_hls74_synth.py',[('v170_hls73','v170_hls74')]),('start_v188_paired_full_c02.py','start_v188_paired_full_c03.py',[('v188_paired_full_c02.log','v188_paired_full_c03.log'),('v188_full_c02','v188_full_c03'),('v188_all_c02','v188_all_c03')])]:
+ t=(W/src).read_text()
+ for a,c in pairs:assert a in t;t=t.replace(a,c)
+ f=W/dst;assert not f.exists();f.write_text(t)
+proof=dict(scope='PAIRED_CONV_REVISION03_NOT_YET_VALIDATED',source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),changes=['One RAM weight write site avoids automatic bank duplication','Bound7bit output group and15bit fabric group offset','Replace128 signed16 borrow-correction adders with16 four-bit popcounts and post-reduction correction'],board_programmed=False)
+(b/'proposal03.json').write_text(json.dumps(proof,indent=2)+'\n');print(json.dumps(proof))

@@ -1,0 +1,6 @@
+{
+  "scope": "INTEGRATED_MAC_NATIVE_C_SCALAR_REFERENCE_NOT_RTL_OR_BOARD",
+  "passed": true,
+  "source_sha256": "3cfdd429cc7bf05c4bb145a3b30d324f1fec24657b969ddcd6a9a9eb8c9a1da4",
+  "output": "PAIRED_INTEGRATED_MAC_SCALAR_PASS cases=158 checks=200963\nINFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 512\n"
+}

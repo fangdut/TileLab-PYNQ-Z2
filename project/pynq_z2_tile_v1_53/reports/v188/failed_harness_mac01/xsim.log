@@ -1,0 +1,24 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 01:27:35 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/mac_test/xsim_script.tcl
+# xsim {mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+WARNING: File ./texture_integer_spatial_tap_xy_spatial_xy_ROM_1P_LUTRAM_1R.dat referenced on D:/Vivado/TileLab_RealPhotos_20261020/v170_hls74/solution/syn/verilog/texture_integer_mul_8ns_4ns_11_1_1.v at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory or parent directory of xsim.dir location specified via -xsimdir switch.
+MAC_CASE_PASS case=1 outputs=33 cycle=4644
+Fatal: MAC_MISMATCH case=2 output=0 got=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx expected=00000bae0000fc8e0000606f0000969a000110e2ffffaee300003b10ffffdbc6ffffeb7d0001039c0000844b0000f76affffefd1ffff1251fffffd870000a11e00004f00ffffec9affffe579ffffc811fffe756affff853bffff83b500008aadffffb93affff5e840000de66000000f9ffff9c82ffff5f56ffff78f700006175
+Time: 49305 ns  Iteration: 0  Process: /tb_generated_mac/Always202_676  Scope: tb_generated_mac  File: D:/Vivado/TileLab_RealPhotos_20261Fatal: MAC_MISMATCH case=2 output=0 got=xxxxxxxxxxxxx$finish called at time : 49305 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 01:27:40 2026...
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx expected=00000bae0000fc8e0000606f0000969a000110e2ffffaee300003b10ffffdbc6ffffeb7d0001039c0000844b0000f76affffefd1ffff1251fffffd870000a11e00004f00ffffec9affffe579ffffc811fffe756affff853bffff83b500008aadffffb93affff5e840000de66000000f9ffff9c82ffff5f56ffff78f700006175
+Time: 49305 ns  Iteration: 0  Process: /tb_generated_mac/Always202_676  Scope: tb_generated_mac  File: D:/Vivado/TileLab_RealPhotos_20261020/v188_mac_rtl74_01/tb_generated_mac.sv Line: 203
+$finish called at time : 49305 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 01:27:40 2026...

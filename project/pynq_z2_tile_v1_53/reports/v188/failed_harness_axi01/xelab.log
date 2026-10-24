@@ -1,0 +1,16 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe tb_full_axi -s full_test -debug off --mt 2 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-4099] "D:/Vivado/TileLab_RealPhotos_20261020/v188_full_axi74_01/axi_ram_tb.sv" Line 3. Module axi_ram_tb(D=64,WORDS=65536) doesn't have a timescale but at least one module in design has a timescale.
+ERROR: [XSIM 43-4099] "D:/Vivado/TileLab_RealPhotos_20261020/v188_full_axi74_01/axi_ram_tb.sv" Line 3. Module axi_ram_tb(D=128,WORDS=32768) doesn't have a timescale but at least one module in design has a timescale.
+ERROR: [XSIM 43-4099] "D:/Vivado/TileLab_RealPhotos_20261020/v188_full_axi74_01/axi_ram_tb.sv" Line 3. Module axi_ram_tb_default doesn't have a timescale but at least one module in design has a timescale.
+ERROR: [XSIM 43-4099] "D:/Vivado/TileLab_RealPhotos_20261020/v188_full_axi74_01/axi_ram_tb.sv" Line 3. Module axi_ram_tb_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+lation is 1ps

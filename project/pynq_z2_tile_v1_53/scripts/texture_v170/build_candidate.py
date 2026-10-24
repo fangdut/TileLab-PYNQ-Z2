@@ -45,7 +45,7 @@ def packed_weight_proof(source,profile,graph):
         active_channels=active_channels,zero_multiplier_channels=dead_channels)
 
 
-def preflight(hls,regression,profile):
+def preflight(hls,regression,profile,full_axi_proof=None):
     summary=json.loads((regression/'summary.json').read_text())
     graph=json.loads((profile/'graph.json').read_text())
     source=hls/'src/texture_integer.cpp'
@@ -80,8 +80,13 @@ def preflight(hls,regression,profile):
     if not recurrence['all_banks_safe']:
         raise ValueError('Generated MAC feedback is later than its same-slot recurrence')
     cosim=hls/'solution/sim/report/texture_integer_cosim.rpt'
-    if not re.search(r'Verilog\s*\|\s*Pass',cosim.read_text()):
-        raise ValueError('RTL co-simulation did not pass')
+    custom_axi=None
+    if full_axi_proof is None:
+        if not re.search(r'Verilog\s*\|\s*Pass',cosim.read_text()):
+            raise ValueError('RTL co-simulation did not pass')
+    else:
+        from check_full_axi_proof import verify as verify_full_axi
+        custom_axi=verify_full_axi(hls,full_axi_proof)
     xml=ET.parse(hls/'solution/syn/report/texture_integer_csynth.xml')
     resources=xml.find('.//AreaEstimates/Resources')
     dsp=int(resources.findtext('DSP'))
@@ -90,7 +95,7 @@ def preflight(hls,regression,profile):
         raise ValueError('HLS DSP/BRAM estimate exceeds the target device')
     return dict(scope='OFFLINE_CANDIDATE_PREFLIGHT_NOT_BOARD',source_sha256=sha(source),
         model_sha256=graph['sha256'],c_regression_summary_sha256=sha(regression/'summary.json'),
-        rtl_cosim_sha256=sha(cosim),hls_dsp=dsp,hls_bram18=bram,mac_recurrence=recurrence,direct_cache_bounds=cache_bounds,spatial_coordinate_bounds=spatial_bounds,
+        rtl_cosim_sha256=sha(cosim) if custom_axi is None else None,complete_axi_rtl=custom_axi,hls_dsp=dsp,hls_bram18=bram,mac_recurrence=recurrence,direct_cache_bounds=cache_bounds,spatial_coordinate_bounds=spatial_bounds,
         centered_packing_weights=packed_weight_proof(source,profile,graph),operation_decode=operation_decode,row_address=row_address,quarter_pipeline=quarter_pipeline,normal_cache=normal_cache)
 
 
@@ -100,12 +105,13 @@ def main():
     p.add_argument('--video',action='store_true')
     p.add_argument('--video-variant',choices=['serial','overlap_v175'],default='serial')
     p.add_argument('--video-rtl-gate',type=Path)
+    p.add_argument('--full-axi-proof',type=Path)
     p.add_argument('--clock-mhz',type=int,choices=[100,125],default=100)
     p.add_argument('--opt-directive',choices=['Default','ExploreArea','ExploreWithRemap'],default='Default')
     p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
     a=p.parse_args()
     if not a.out.is_absolute() or a.out.exists():raise ValueError('Fresh absolute hardware output required')
-    proof=preflight(a.hls,a.regression,a.profile)
+    proof=preflight(a.hls,a.regression,a.profile,a.full_axi_proof)
     root=Path(__file__).resolve().parents[2]
     if a.video_variant!='serial':
         if not a.video or not a.video_rtl_gate:raise ValueError('Overlap video requires a source-bound RTL gate')
@@ -129,6 +135,8 @@ def main():
     env['TILE_TEXTURE_OPT_DIRECTIVE']=a.opt_directive
     proof['opt_directive']=a.opt_directive
     env['TILE_TEXTURE_MEMORY_LAYOUT']=a.memory_layout
+    if a.full_axi_proof:env['TILE_TEXTURE_COMPLETE_AXI_PROOF']=str(a.full_axi_proof.resolve())
+    else:env.pop('TILE_TEXTURE_COMPLETE_AXI_PROOF',None)
     proof['memory_layout']=a.memory_layout
     if a.video:env['TILE_TEXTURE_VIDEO']='1'
     else:env.pop('TILE_TEXTURE_VIDEO',None)

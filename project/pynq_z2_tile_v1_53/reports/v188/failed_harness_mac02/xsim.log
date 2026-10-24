@@ -1,0 +1,34 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 01:29:01 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/mac_test/xsim_script.tcl
+# xsim {mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+MAC_CASE_PASS case=1 outputs=33 cycle=4644
+MAC_CASE_PASS case=2 outputs=17 cycle=4965
+MAC_CASE_PASS case=3 outputs=33 cycle=5433
+Fatal: MAC_COUNT case=4 got=63 expected=64
+Time: 55430 ns  Iteration: 0  Process: /tb_generated_mac/xilinx_isim_temp_19_ln239_excessive_seqblock_chunk/Block239_685  Scope: tb_generated_mac.xilinx_isim_temp_19_ln239_excessive_seqblock_chunk.Block239_685  File: D:/Vivado/TileLab_RealPhotos_20261020/v188_mac_rtl74_02/tb_generated_mac.sv Line: 673
+$finish called at time : 55430 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 01:29:05 2026...
+
+source xsim.dir/mac_test/xsim_script.tcl
+# xsim {mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+MAC_CASE_PASS case=1 outputs=33 cycle=4644
+MAC_CASE_PASS case=2 outputs=17 cycle=4965
+MAC_CASE_PASS case=3 outputs=33 cycle=5433
+Fatal: MAC_COUNT case=4 got=63 expected=64
+Time: 55430 ns  Iteration: 0  Process: /tb_generated_mac/xilinx_isim_temp_19_ln239_excessive_seqblock_chunk/Block239_685  Scope: tb_generated_mac.xilinx_isim_temp_19_ln239_excessive_seqblock_chunk.Block239_685  File: D:/Vivado/TileLab_RealPhotos_20261020/v188_mac_rtl74_02/tb_generated_mac.sv Line: 673
+$finish called at time : 55430 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 01:29:05 2026...

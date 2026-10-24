@@ -1,0 +1,251 @@
+{
+  "scope": "PAIRED_GENERATED_STATIC_GATES_NOT_RTL_OR_BOARD",
+  "source_sha256": "3cfdd429cc7bf05c4bb145a3b30d324f1fec24657b969ddcd6a9a9eb8c9a1da4",
+  "rtl_sha256": "8b14fd361371cdf73cc8c62c3bf30995f6eafbd4e5cd1114e1d409236fc6c065",
+  "resources": {
+    "BRAM_18K": 272,
+    "DSP": 218,
+    "FF": 110983,
+    "LUT": 111486,
+    "URAM": 0
+  },
+  "dot_resources": {
+    "DSP": 128,
+    "FF": 22228,
+    "LUT": 21120,
+    "BRAM_18K": 0,
+    "URAM": 0
+  },
+  "minimum_reuse_iterations": 16,
+  "recurrence": [
+    {
+      "bank": "acc",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_1",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_10",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_11",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_12",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_13",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_14",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_15",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_16",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_17",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_18",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_19",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_2",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_20",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_21",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_22",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_23",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_24",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_25",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_26",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_27",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_28",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_29",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_3",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_30",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_31",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_4",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_5",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_6",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_7",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_8",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    },
+    {
+      "bank": "acc_9",
+      "read_stage": 1,
+      "write_stage": 17,
+      "delta": 16,
+      "safe": false
+    }
+  ],
+  "recurrence_safe": false,
+  "shared_dot_128_dsp": true,
+  "capacity_gate": false,
+  "capacity_note": "Reserve at least5 DSP and4 BRAM18 for surrounding video design. HLS LUT/FF estimates are not routed utilization.",
+  "passed": false
+}

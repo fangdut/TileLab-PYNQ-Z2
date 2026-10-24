@@ -1,0 +1,29 @@
+{
+  "scope": "V188_OFFLINE_AND_PHYSICAL_PROGRESS_NOT_ACCEPTED_RELEASE",
+  "source_sha256": "fc82e26ac29ab739725df336229fefd52a61a1da1fab25a19f16bac7b8c9cad4",
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "exposed_development_photos": 117,
+  "c_all_scores_and_masks_exact": true,
+  "scalar_cases": 158,
+  "scalar_checks": 200963,
+  "generated_mac_rtl_packets": 673,
+  "generated_mac_rtl_stall_cycles": 1406,
+  "full_axi_launches": 2,
+  "full_axi_checked_words": 13302,
+  "ooc_resources": {
+    "lut": 48726,
+    "ff": 57800,
+    "dsp": 217,
+    "bram36_tiles": 118
+  },
+  "physical_status": "hardware",
+  "board_programmed": false,
+  "new_measured_fps": null,
+  "accepted_continuous_hdmi_fps": 8.168911480267331,
+  "notes": [
+    "OOC utilization is detector only; complete video resources/timing pending",
+    "Full AXI simulation uses a reduced independent fixture, not117photo RTL",
+    "C development set is exposed, not blind or camera collection",
+    "Failed harness01 missed ROM files; harness02 sampled done on a changing half-cycle; both preserved. Third MAC run samples rising-edge completion and passes."
+  ]
+}

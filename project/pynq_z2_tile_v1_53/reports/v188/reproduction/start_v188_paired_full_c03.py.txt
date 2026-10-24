@@ -1,0 +1,9 @@
+from pathlib import Path
+import subprocess
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');W=Path('D:/Vivado/TileLab_RealPhotos_20261020');py='D:/Vivado/TileLab_Runtime_V168/Scripts/python.exe'
+with (W/'v188_paired_full_c03.log').open('w') as f:
+    subprocess.run([py,'-X','utf8',P/'tools/fpga_texture_v170/check_full_c.py','--source',P/'experimental/paired_conv_v188/texture_paired.cpp',
+        '--profile',W/'v170_fullint224','--image',W/'dataset_v168/images/test/crack/6621d769324f6e05d583835f.png','--out',W/'v188_full_c03'],stdout=f,stderr=subprocess.STDOUT,check=True)
+    subprocess.run([py,'-X','utf8',P/'tools/fpga_texture_v170/validate_full_c.py','--dataset',W/'dataset_v168',
+        '--profile',W/'v170_fullint224','--compiled-check',W/'v188_full_c03','--out',W/'v188_all_c03','--workers','4'],stdout=f,stderr=subprocess.STDOUT,check=True)
+print('V188_PAIRED_FULL_C_FINISHED_NOT_RTL_OR_BOARD',flush=True)

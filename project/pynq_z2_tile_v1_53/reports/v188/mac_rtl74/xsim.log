@@ -1,0 +1,38 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Sat Oct 24 01:30:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/mac_test/xsim_script.tcl
+# xsim {mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+MAC_CASE_PASS case=1 outputs=33 cycle=4645
+MAC_CASE_PASS case=2 outputs=17 cycle=4967
+MAC_CASE_PASS case=3 outputs=33 cycle=5437
+MAC_CASE_PASS case=4 outputs=64 cycle=5548
+MAC_CASE_PASS case=5 outputs=512 cycle=6234
+MAC_CASE_PASS case=6 outputs=14 cycle=6363
+GENERATED_PAIRED_MAC_RTL_PASS cases=6 outputs=673 stalled=1406 cycles=6369
+$finish called at time : 63700 ns : File "D:/Vivado/TileLab_RealPhotos_20261020/v188_mac_rtl74_03/tb_generated_mac.sv" Line 896
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 01:30:28 2026...
+---------------------------------------------
+source xsim.dir/mac_test/xsim_script.tcl
+# xsim {mac_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+MAC_CASE_PASS case=1 outputs=33 cycle=4645
+MAC_CASE_PASS case=2 outputs=17 cycle=4967
+MAC_CASE_PASS case=3 outputs=33 cycle=5437
+MAC_CASE_PASS case=4 outputs=64 cycle=5548
+MAC_CASE_PASS case=5 outputs=512 cycle=6234
+MAC_CASE_PASS case=6 outputs=14 cycle=6363
+GENERATED_PAIRED_MAC_RTL_PASS cases=6 outputs=673 stalled=1406 cycles=6369
+$finish called at time : 63700 ns : File "D:/Vivado/TileLab_RealPhotos_20261020/v188_mac_rtl74_03/tb_generated_mac.sv" Line 896
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 24 01:30:28 2026...

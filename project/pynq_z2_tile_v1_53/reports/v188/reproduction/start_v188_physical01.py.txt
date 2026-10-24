@@ -1,0 +1,17 @@
+from pathlib import Path
+import json,subprocess,sys
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53');W=Path('D:/Vivado/TileLab_RealPhotos_20261020')
+for f in ['v188_preflight_checks01/summary.json','v188_mac_rtl74_03/summary.json','v188_full_axi74_02/summary.json']:
+ assert json.loads((W/f).read_text())['passed']
+assert json.loads((W/'v188_export74_01/summary.json').read_text())['rtl_unchanged_after_export']
+args=[sys.executable,'-X','utf8',P/'scripts/texture_v170/run_physical_trial.py',
+ '--hls',W/'v170_hls74','--regression',W/'v188_all_c03','--profile',W/'v170_fullint224',
+ '--dataset',W/'dataset_v168','--catalog',W/'v171_source01/catalog_all117.json',
+ '--player',W/'RealPhotoSource_v171_r7.exe','--hardware',W/'v188_hw01','--run',W/'v188_acceptance01',
+ '--journal',W/'v188_physical_pipeline01.json','--video-rtl-gate',W/'v183_rtl_gate01.json',
+ '--full-axi-proof',W/'v188_full_axi74_02/summary.json',
+ '--clock-mhz','100','--memory-layout','split','--ip-cache',W/'v185_hw01/ip_cache',
+ '--label','V188 Paired Convolution 100MHz','--render-baseline',W/'v172_uncorrected_series02',
+ '--render-previous',W/'v179_acceptance01','--max-repair-deficit-ns','0.5']
+with (W/'v188_physical_console01.log').open('w') as log:r=subprocess.run([str(x) for x in args],stdout=log,stderr=subprocess.STDOUT)
+print('V188_PHYSICAL_PIPELINE_RETURN',r.returncode,flush=True);raise SystemExit(r.returncode)

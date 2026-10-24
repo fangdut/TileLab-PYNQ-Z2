@@ -1,0 +1,10 @@
+{
+  "scope": "PAIRED_CONV_REVISION03_NOT_YET_VALIDATED",
+  "source_sha256": "fc82e26ac29ab739725df336229fefd52a61a1da1fab25a19f16bac7b8c9cad4",
+  "changes": [
+    "One RAM weight write site avoids automatic bank duplication",
+    "Bound7bit output group and15bit fabric group offset",
+    "Replace128 signed16 borrow-correction adders with16 four-bit popcounts and post-reduction correction"
+  ],
+  "board_programmed": false
+}

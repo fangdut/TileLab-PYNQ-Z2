@@ -21,8 +21,17 @@ if {[info exists ::env(TILE_TEXTURE_MEMORY_LAYOUT)]} {set memory_layout $::env(T
 if {$memory_layout ni {shared split}} {error "Unsupported DDR memory layout"}
 if {[file exists $out]} {error "Refusing to overwrite hardware build"}
 set report $hls/solution/sim/report/texture_integer_cosim.rpt
-set f [open $report r];set proof [read $f];close $f
-if {![regexp {Verilog\s*\|\s*Pass} $proof]} {error "RTL co-simulation did not pass"}
+set proof_name hls_cosim.rpt
+if {[info exists ::env(TILE_TEXTURE_COMPLETE_AXI_PROOF)]} {
+ set report [file normalize $::env(TILE_TEXTURE_COMPLETE_AXI_PROOF)]
+ set proof_name complete_axi_rtl_proof.json
+ set f [open $report r];set proof [read $f];close $f
+ if {![regexp {"scope":\s*"COMPLETE_GENERATED_DETECTOR_AXI_RTL_TWO_LAUNCHES_NOT_BOARD"} $proof] || ![regexp {"passed":\s*true} $proof]} {error "Explicit complete AXI RTL proof missing"}
+ # build_candidate.py validates every RTL/ROM byte, fixture and raw transcript.
+} else {
+ set f [open $report r];set proof [read $f];close $f
+ if {![regexp {Verilog\s*\|\s*Pass} $proof]} {error "RTL co-simulation did not pass"}
+}
 set f [open $hls/src/texture_integer.cpp rb];set built [read $f];close $f
 set source $root/experimental/texture_v170/hls/texture_integer.cpp
 # A named, tracked snapshot lets the verified baseline build while the next
@@ -38,7 +47,7 @@ if {[info exists ::env(TILE_TEXTURE_IP_CACHE)]} {
  config_ip_cache -use_cache_location $out/ip_cache
 }
 file copy $hls/src/texture_integer.cpp $out/texture_integer_source.cpp
-file copy $report $out/hls_cosim.rpt
+file copy $report $out/$proof_name
 file copy [info script] $out/build_hardware_source.tcl
 file copy $root/scripts/texture_v170/add_video.tcl $out/add_video_source.tcl
 set f [open $out/optimization_strategy.json w]

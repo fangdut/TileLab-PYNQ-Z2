@@ -1,0 +1,89 @@
+from pathlib import Path
+import hashlib,json
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53')
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020')
+base=P/'experimental/texture_v170/hls/frozen/v170_hls71.cpp'
+assert hashlib.sha256(base.read_bytes()).hexdigest()=='5cb8dc25e511c7cbacc82569f0180e983d35118167285c714a8880f719bba2c4'
+s=base.read_text()
+def sub(a,b,n=1):
+    global s
+    assert s.count(a)==n,(a,s.count(a),n)
+    s=s.replace(a,b)
+sub('static const int O=16,I=8,RD=1024,LD=2048;','static const int O=16,I=8,RD=1024,LD=2048;\nstatic const int CO=32,CRD=128; // Paired convolution only; nearest retains 16 lanes.')
+start=s.index('// Same 128 DSP multipliers')
+end=s.index('static int rq_dsp',start)
+s=s[:start]+'''// One signed25x18 product computes two signed8 products, or one exact square.
+// Upper convolution product restores the borrow from a negative low product.
+static void dot128(const pe_input input[O][I],const ap_int<25> weights[O][I],const pe_sum old[CO],pe_sum out[CO],bool nearest){
+#pragma HLS INLINE off
+#pragma HLS PIPELINE II=1
+#pragma HLS ARRAY_PARTITION variable=input complete
+#pragma HLS ARRAY_PARTITION variable=weights complete
+#pragma HLS ARRAY_PARTITION variable=old complete
+#pragma HLS ARRAY_PARTITION variable=out complete
+    for(int o=0;o<O;o++){
+#pragma HLS UNROLL
+        ap_int<36> p[I];ap_int<16> hi[I];
+#pragma HLS ARRAY_PARTITION variable=p complete
+#pragma HLS ARRAY_PARTITION variable=hi complete
+        for(int k=0;k<I;k++){
+#pragma HLS UNROLL
+            ap_int<43> product=input[o][k]*weights[o][k];
+#pragma HLS BIND_OP variable=product op=mul impl=dsp latency=3
+            ap_int<16> lo=product.range(15,0);
+            ap_int<16> upper=product.range(31,16);
+            p[k]=nearest?ap_int<36>(product):ap_int<36>(lo);
+            hi[k]=upper+ap_int<16>(lo<0);
+        }
+        pe_sum a=pe_sum(p[0])+p[1],b=pe_sum(p[2])+p[3],c=pe_sum(p[4])+p[5],d=pe_sum(p[6])+p[7];
+        pe_sum e=pe_sum(hi[0])+hi[1],f=pe_sum(hi[2])+hi[3],g=pe_sum(hi[4])+hi[5],h=pe_sum(hi[6])+hi[7];
+        out[o]=old[o]+(a+b)+(c+d);
+        out[o+O]=old[o+O]+(e+f)+(g+h);
+    }
+}
+''' + s[end:]
+sub('typedef ap_uint<512> sum_packet;','typedef ap_uint<1024> sum_packet;')
+sub('const uint64_t ram[O][RD],const pack_t line[LD],const pack_t dw_weight[9]', 'const uint64_t ram[O][RD],const uint64_t extra[O][CRD],const pack_t line[LD],const pack_t dw_weight[9]',2)
+sub('    i32 acc[O][32];','    i32 acc[CO][32];')
+sub('#pragma HLS BIND_STORAGE variable=acc type=ram_2p impl=bram','#pragma HLS BIND_STORAGE variable=acc type=ram_2p impl=lutram')
+sub('        pe_input input[O][I],weights[O][I];pe_sum previous[O],next[O];','        pe_input input[O][I];ap_int<25> weights[O][I];pe_sum previous[CO],next[CO];')
+sub('i32 old=(nearest||tap==0)?i32(0):acc[lane][p];previous[lane]=old;old_dw[lane]=old;','i32 old=(nearest||tap==0)?i32(0):acc[lane][p];previous[lane]=old;old_dw[lane]=old;\n            previous[lane+O]=(nearest||tap==0)?i32(0):acc[lane+O][p];\n            uint64_t upper_weights=(!nearest&&!depth)?extra[lane][tap]:uint64_t(0);')
+sub('weights[lane][j]=nearest?difference:pe_input(i8((centers[lane][0]>>(j*8))&255));','i8 low_weight=(centers[lane][0]>>(j*8))&255;\n                i8 high_weight=(upper_weights>>(j*8))&255;\n                ap_int<25> packed_weight=(ap_int<25>(high_weight)<<16)+ap_int<25>(low_weight);\n                weights[lane][j]=nearest?ap_int<25>(difference):packed_weight;')
+sub('else dot128(input,weights,previous,next);','else dot128(input,weights,previous,next,nearest);')
+sub('packet.range(lane*32+31,lane*32)=out;','packet.range(lane*32+31,lane*32)=out;\n                i32 upper=depth?i32(0):i32(next[lane+O]);acc[lane+O][p]=upper;\n                packet.range((lane+O)*32+31,(lane+O)*32)=upper;')
+sub('static void quant_row(pack_t *work,unsigned dst,shape_t ow,const int32_t bias[O],const uint32_t mul[O],','static void quant_row(pack_t *work,unsigned dst,unsigned plane_stride,bool paired,bool write_upper,shape_t ow,const int32_t bias[CO],const uint32_t mul[CO],')
+sub('    pack_t row[224];','    pack_t row[2][224];\n#pragma HLS ARRAY_PARTITION variable=row complete dim=1')
+sub('for(int group=0;group<int(ow)*4;group++){','for(int group=0;group<int(ow)*(paired?8:4);group++){')
+sub('        int part=group&3;\n        if(part==0)values=input.read();','        int part=group&3,half=paired?((group>>2)&1):0;\n        if(part==0&&half==0)values=input.read();')
+sub('int lane=part*4+j;','int lane=half*16+part*4+j;')
+sub('if(part==3)row[group/4]=packed;','if(part==3)row[half][paired?group/8:group/4]=packed;')
+sub('        work[dst+x]=row[x];','        work[dst+x]=row[0][x];\n    }\n    if(write_upper)for(int x=0;x<ow;x++){\n#pragma HLS PIPELINE II=1\n        work[dst+plane_stride+x]=row[1][x];')
+sub('static void process_row(pack_t *work,unsigned dst,shape_t ow,','static void process_row(pack_t *work,unsigned dst,unsigned plane_stride,bool write_upper,shape_t ow,')
+sub('const int32_t bias[O],const uint32_t mul[O],int relu,int qmax,bool nearest,const i16 query[64]','const int32_t bias[CO],const uint32_t mul[CO],int relu,int qmax,bool nearest,const i16 query[64]')
+sub('row_head,ram,line,dw_weight,nearest,query,count,sums);','row_head,ram,extra,line,dw_weight,nearest,query,count,sums);')
+sub('quant_row(work,dst,ow,bias,mul,','quant_row(work,dst,plane_stride,!depth,write_upper,ow,bias,mul,')
+sub('    unsigned src=t[1],dst=t[2],wo=t[4],bo=t[5],mo=t[6];','    uint64_t extra[O][CRD];\n#pragma HLS ARRAY_PARTITION variable=extra complete dim=1\n#pragma HLS BIND_STORAGE variable=extra type=ram_1p impl=bram\n    unsigned src=t[1],dst=t[2],wo=t[4],bo=t[5],mo=t[6];')
+sub('(!depth&&taps>RD)','(!depth&&taps>CRD)')
+sub('for(int ob=0;ob<(nearest?1:(int(oc)+15)/16);ob++){','for(int ob=0;ob<(nearest?1:(int(oc)+15)/16);ob+=(depth||nearest)?1:2){\n        bool write_upper=!nearest&&!depth&&(ob+1)*16<oc;')
+sub('int32_t bias[O];uint32_t mul[O];','int32_t bias[CO];uint32_t mul[CO];')
+sub('for(int lane=0;lane<O;lane++){\n            bias[lane]','for(int lane=0;lane<CO;lane++){\n            bias[lane]')
+sub('ram[lane][tap]=model[wo+(ob*taps+tap)*16+lane];','ram[lane][tap]=model[wo+(ob*taps+tap)*16+lane];\n                extra[lane][tap]=write_upper?model[wo+((ob+1)*taps+tap)*16+lane]:uint64_t(0);')
+sub('process_row(work,dst+(ob*int(oh)+y)*int(ow),packed_ow,','process_row(work,dst+(ob*int(oh)+y)*int(ow),unsigned(oh)*unsigned(ow),write_upper,packed_ow,')
+sub('row_head,ram,line,dw_weight,bias,mul,','row_head,ram,extra,line,dw_weight,bias,mul,')
+# Explicit partition at every hierarchy where the 16 upper banks are passed.
+sub('#pragma HLS ARRAY_PARTITION variable=ram complete dim=1\n#pragma HLS ARRAY_PARTITION variable=dw_weight complete','#pragma HLS ARRAY_PARTITION variable=ram complete dim=1\n#pragma HLS ARRAY_PARTITION variable=extra complete dim=1\n#pragma HLS ARRAY_PARTITION variable=dw_weight complete',2)
+s=s.replace('// Experimental row batches + interleaved exact projection. NOT board accepted.','// V188 paired-output convolution integration. EXPERIMENTAL; NOT board accepted.')
+b=P/'experimental/paired_conv_v188';b.mkdir(exist_ok=False)
+source=b/'texture_paired.cpp';source.write_text(s,encoding='utf8',newline='\n')
+frozen=P/'experimental/texture_v170/hls/frozen/v170_hls72.cpp';assert not frozen.exists();frozen.write_bytes(source.read_bytes())
+tcl=(P/'experimental/cache_split_v186/build_hls.tcl').read_text().replace('v170_hls70.cpp','v170_hls72.cpp').replace('cache_split_v186/texture_cache_split.cpp','paired_conv_v188/texture_paired.cpp').replace('create_clock -period 8','create_clock -period 10').replace('set_clock_uncertainty 0.8','set_clock_uncertainty 1.0')
+(b/'build_hls.tcl').write_text(tcl,encoding='utf8')
+for src,dst,pairs in [
+ ('start_v186_cache_full_c.py','start_v188_paired_full_c.py',[('v186_cache_full_c.log','v188_paired_full_c.log'),('cache_split_v186/texture_cache_split.cpp','paired_conv_v188/texture_paired.cpp'),('v186_full_c01','v188_full_c01'),('v186_all_c01','v188_all_c01')]),
+ ('start_v186_hls70_synth.py','start_v188_hls72_synth.py',[('v170_hls70','v170_hls72'),('cache_split_v186/build_hls.tcl','paired_conv_v188/build_hls.tcl')])]:
+    text=(W/src).read_text()
+    for a,c in pairs:assert a in text;text=text.replace(a,c)
+    text=text.replace('V179_SEGMENTED_FULL_C_FINISHED_NOT_RTL_OR_BOARD','V188_PAIRED_FULL_C_FINISHED_NOT_RTL_OR_BOARD').replace('SEGMENTED_NORMALIZATION_SYNTHESIS_ONLY_NOT_RTL_OR_BOARD','PAIRED_CONV_SYNTHESIS_ONLY_NOT_RTL_OR_BOARD')
+    f=W/dst;assert not f.exists();f.write_text(text)
+proposal=dict(scope='PAIRED_CONV_INTEGRATION_NOT_YET_VALIDATED',source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),base_source_sha256=hashlib.sha256(base.read_bytes()).hexdigest(),model_changed=False,threshold_changed=False,input_resolution_changed=False,conv_outputs=32,nearest_outputs=16,shared_multipliers=128,extra_weight_banks='16 x 128 x 64bit; actual graph max72',accumulator_storage='32 x 32 x 32bit LUTRAM',schedule_clock_mhz=100,board_programmed=False)
+(b/'proposal.json').write_text(json.dumps(proposal,indent=2)+'\n');print(json.dumps(proposal))

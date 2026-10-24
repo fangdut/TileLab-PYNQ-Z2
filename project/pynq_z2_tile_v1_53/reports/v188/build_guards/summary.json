@@ -1,0 +1,14 @@
+{
+  "scope": "PHYSICAL_BUILD_EVIDENCE_GUARD_TESTS_NOT_BOARD",
+  "passed": true,
+  "candidate_valid": true,
+  "stable_baseline_still_valid": true,
+  "rejected_invalid_proofs": [
+    "no_implicit_axi_fallback",
+    "failed",
+    "missing_launch",
+    "source_changed",
+    "rtl_changed",
+    "driver_changed"
+  ]
+}

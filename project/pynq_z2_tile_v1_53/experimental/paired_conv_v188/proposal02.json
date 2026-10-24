@@ -1,0 +1,12 @@
+{
+  "scope": "PAIRED_CONV_REVISION02_NOT_YET_VALIDATED",
+  "source_sha256": "3bf21d356d3945735bb317e38ef586e220bf2248393c7791ae6ecc68e3997e18",
+  "base_source_sha256": "3cfdd429cc7bf05c4bb145a3b30d324f1fec24657b969ddcd6a9a9eb8c9a1da4",
+  "changes": [
+    "Reuse second RAM port with disjoint convolution tap ranges0..127 and128..255; nearest retains0..1023",
+    "Move convolution accumulation after shared multiplier and reduction",
+    "Bound upper reduction to20bits",
+    "New plane-stride product bound20bits, fabric"
+  ],
+  "board_programmed": false
+}
