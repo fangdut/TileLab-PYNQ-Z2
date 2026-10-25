@@ -1,5 +1,10 @@
 # FPGA engineering status — 2026-10-23
 
+<!-- V194_CURRENT_BEGIN -->
+**V194 外部验证与范围联锁（2026-10-25）：** 新来源40张陶瓦原图的冻结配置压力测试失败：20张缺陷检出，但20张良品全部误报；不能当作地砖或任意材质验收。原117张纹理图仍逐值一致。工作站新增未验证输入只显示参考结果、禁止良品放行；13项软件测试与4项实际FPGA界面检查通过。这是流程资格约束，不是检测准确率提升。[完整结果](project/pynq_z2_tile_v1_53/reports/v194/status.html) · [技术报告底稿](project/pynq_z2_tile_v1_53/reports/v194/technical_report_draft.html)。
+[V194本地运行包清单与校验值](deliverables/TileLab_StopInspect_V194_Dev.json)（含未验证输入复核流程；原40张误报结果完整保留）。
+<!-- V194_CURRENT_END -->
+
 <!-- V193_CURRENT_BEGIN -->
 **V193 停驻检测工作站（2026-10-25）：** 已完成“固定输入→FPGA检测→确认良品放行／缺陷隔离”的可操作原型。12张实拍开发样例全流程通过，34次不合规操作被拒绝；平均PL约125 ms、传输与检测约0.54秒。10项软件联锁测试及3项真实FPGA界面检查通过。PC管理流程，检测全部在PL；无实体传送带，当前处置为逻辑指令。10 FPS暂不作为交付前提，下一步独立真图验证和提交材料。[工作站说明](project/pynq_z2_tile_v1_53/host/stop_inspect_station/README.md) · [验收记录](project/pynq_z2_tile_v1_53/reports/v193/status.html)。
 [本地开发包清单与校验值](deliverables/TileLab_StopInspect_V193_Dev_R1.json) · [从仓库生成运行包](project/pynq_z2_tile_v1_53/tools/package_stop_station.py)（319项文件完整性与部署检查通过；已使用包内程序重新上板并复测）。

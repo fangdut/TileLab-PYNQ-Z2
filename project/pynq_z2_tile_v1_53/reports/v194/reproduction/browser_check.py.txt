@@ -1,0 +1,49 @@
+from pathlib import Path
+import sys,json
+sys.path.insert(0,'D:/Vivado/TileLab_RealPhotos_20261020/v193_qa_runtime')
+from playwright.sync_api import sync_playwright
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020');P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53')
+out=W/'v194_browser01';out.mkdir(exist_ok=False)
+catalog=json.loads((P/'data/stop_inspect_demo/catalog.json').read_text(encoding='utf8'))
+errors=[]
+with sync_playwright() as p:
+ browser=p.chromium.launch(channel='msedge',headless=True)
+ page=browser.new_page(viewport={'width':1440,'height':1100})
+ page.on('pageerror',lambda error:errors.append(str(error)))
+ page.goto('http://127.0.0.1:8793/',wait_until='networkidle')
+ page.wait_for_function('document.querySelector("#sample").options.length===12')
+ page.locator('#file').set_input_files(str(P/'data/stop_inspect_demo'/catalog[0]['file']))
+ page.wait_for_function('document.querySelector("#sample").options.length===13')
+ assert page.locator('#sample').input_value().startswith('upload_')
+ page.locator('#load').click();page.wait_for_function('document.querySelector("#phase").textContent==="输入已停驻"')
+ page.locator('#held').check();page.locator('#inspect').click()
+ page.wait_for_function('document.querySelector("#phase").textContent==="配置未验证 · 等待复核"')
+ assert page.locator('#decision').inner_text()=='参考良品'
+ page.locator('#confirmed').check();assert page.locator('#release').is_disabled()
+ assert page.locator('#segregate').is_enabled()
+ state=page.request.get('http://127.0.0.1:8793/api/state').json()
+ assert state['cycle']['result']['pl_image_alarm']==0 and not state['cycle']['result_qualified']
+ # Do not bypass the UI by asserting a browser-supplied scope qualification.
+ rejected=page.request.post('http://127.0.0.1:8793/api/action',data=dict(op='release',session=state['session'],revision=state['revision'],operator_confirmed=True,result_id=state['cycle']['result']['id'],validation_scope='development_examples'))
+ assert rejected.status==409
+ page.screenshot(path=str(out/'unvalidated_good_blocked.png'),full_page=True)
+ page.locator('#segregate').click();page.wait_for_function('document.querySelector("#phase").textContent==="待验证工件已移出"')
+ page.locator('#file').set_input_files(str(W/'v194_external01/originals/20240808_152938_078.jpg'))
+ page.wait_for_function('document.querySelector("#error").textContent.includes("1024")')
+ assert page.locator('#phase').inner_text()=='待验证工件已移出'
+ # Restore a familiar bundled input for the user, with a fresh actual result.
+ page.locator('#sample').select_option(index=0);page.locator('#load').click()
+ page.wait_for_function('document.querySelector("#phase").textContent==="输入已停驻"')
+ page.locator('#held').check();page.locator('#inspect').click()
+ page.wait_for_function('document.querySelector("#phase").textContent==="良品 · 等待确认"')
+ page.screenshot(path=str(out/'qualified_demo_hold.png'),full_page=True)
+ final=page.request.get('http://127.0.0.1:8793/api/state').json()
+ assert not errors,errors
+ (out/'summary.json').write_text(json.dumps(dict(scope='EDGE_UI_AND_PHYSICAL_FPGA_SCOPE_GUARD',
+  unvalidated_raw_good_result_blocked=True,browser_scope_upgrade_rejected=True,
+  oversized_original_rejected_without_resize=True,qualified_development_example_still_operates=True,
+  javascript_errors=errors,physical_actuator_connected=False),indent=2))
+ (out/'unvalidated_state.json').write_text(json.dumps(state,ensure_ascii=False,indent=2),encoding='utf8')
+ (out/'final_state.json').write_text(json.dumps(final,ensure_ascii=False,indent=2),encoding='utf8')
+ browser.close()
+print(json.dumps(dict(checks_passed=4,final_phase=final['phase'])))

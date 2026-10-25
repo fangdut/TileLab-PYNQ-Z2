@@ -24,6 +24,7 @@ class FakeBackend:
         if not self.continue_inference.wait(3):
             raise TimeoutError('Injected inspection timeout')
         return dict(pl_image_alarm=self.alarm, result_sha256='fixture-only',
+                    model_sha256='fixture-model',
                     boot_identity=123, pl_frame_sequence=1)
 
 
@@ -34,7 +35,8 @@ class Interlocks(unittest.TestCase):
         self.image = self.root/'test.png'
         self.image.write_bytes(b'fake backend fixture, not a photograph')
         self.catalog = [dict(id='fixture', file=str(self.image), sha256=sha(self.image),
-                             name='Fake backend fixture', source_url='https://example.invalid')]
+                             name='Fake backend fixture', source_url='https://example.invalid',
+                             validation_scope='development_examples',qualified_model_sha256='fixture-model')]
         self.backend = FakeBackend()
         self.station = Station(self.backend, self.catalog, self.root/'records')
 
@@ -167,6 +169,30 @@ class Interlocks(unittest.TestCase):
             Image.new('RGB', size).save(data, format=format)
             with self.assertRaises(ValueError):
                 self.station.add_image(data.getvalue(), 'fixture')
+
+    def test_unvalidated_good_input_cannot_be_released(self):
+        self.station.catalog['fixture']['validation_scope']='unvalidated'
+        state=self.inspect(0)
+        self.assertEqual(state['phase'],'REVIEW_HOLD')
+        self.assertEqual(state['cycle']['result']['pl_image_alarm'],0)
+        with self.assertRaises(ValueError):
+            self.act('release',operator_confirmed=True,result_id=state['cycle']['result']['id'])
+        final=self.confirm('segregate')
+        self.assertEqual(final['phase'],'REMOVED')
+        self.assertEqual(final['counts']['unvalidated_removed'],1)
+        self.assertEqual(final['counts']['released'],0)
+        self.assertEqual(final['counts']['segregated'],0)
+
+    def test_scope_cannot_be_upgraded_by_browser_action(self):
+        self.station.catalog['fixture']['validation_scope']='unvalidated'
+        self.act('load',sample_id='fixture',validation_scope='development_examples',qualified_model_sha256='fixture-model')
+        self.assertEqual(self.station.cycle['validation_scope'],'unvalidated')
+
+    def test_old_model_qualification_does_not_qualify_new_model(self):
+        self.station.catalog['fixture']['qualified_model_sha256']='different-model'
+        state=self.inspect(0)
+        self.assertEqual(state['phase'],'REVIEW_HOLD')
+        self.assertFalse(state['cycle']['result_qualified'])
 
 
 if __name__ == '__main__':

@@ -35,7 +35,8 @@ class Station:
         self.error = None
         self.connection = None
         self.stop_requested = False
-        self.counts = dict(inspected=0, good=0, defect=0, released=0, segregated=0, faults=0)
+        self.counts = dict(inspected=0, good=0, defect=0, released=0, segregated=0, faults=0,
+                           unvalidated=0, unvalidated_removed=0)
         self.events = []
         self.worker = None
         self._event('session_started', previous_results_reusable=False)
@@ -80,7 +81,7 @@ class Station:
             image.verify()
         digest = hashlib.sha256(raw).hexdigest()
         with self.lock:
-            if self.phase not in ['READY', 'RELEASED', 'SEGREGATED']:
+            if self.phase not in ['READY', 'RELEASED', 'SEGREGATED', 'REMOVED']:
                 raise ValueError('请先完成当前工件的处置，再导入照片')
             folder = self.store/'uploads'
             folder.mkdir(exist_ok=True)
@@ -92,7 +93,7 @@ class Station:
             ident = 'upload_'+digest[:24]
             self.catalog[ident] = dict(id=ident, file=str(file), sha256=digest,
                 name='本地导入 · '+Path(name).name[:80], source_url='', original_unedited=True,
-                user_supplied=True, accuracy_prevalidated=False)
+                user_supplied=True, accuracy_prevalidated=False, validation_scope='unvalidated')
             self._touch()
             self._event('image_imported', sample_id=ident, sha256=digest,
                         accuracy_prevalidated=False)
@@ -107,7 +108,7 @@ class Station:
             self._require(body)
             op = body.get('op')
             if op == 'load':
-                if self.phase not in ['READY', 'RELEASED', 'SEGREGATED']:
+                if self.phase not in ['READY', 'RELEASED', 'SEGREGATED', 'REMOVED']:
                     raise ValueError('请先完成当前工件的检测与处置')
                 row = self.catalog.get(body.get('sample_id'))
                 if row is None:
@@ -125,6 +126,8 @@ class Station:
                     raise ValueError('输入冻结校验失败')
                 self.cycle = dict(id=ident, sample_id=row['id'], name=row['name'],
                     source_sha256=row['sha256'], source_url=row['source_url'],
+                    validation_scope=row.get('validation_scope', 'unvalidated'),
+                    qualified_model_sha256=row.get('qualified_model_sha256'),
                     loaded_utc=utc(), result=None, disposition=None)
                 self.phase = 'STOPPED'
                 self.stop_requested = True
@@ -141,16 +144,17 @@ class Station:
                 ident = self.cycle['id']
                 self._launch(lambda: self._inspect(ident))
             elif op in ['release', 'segregate']:
-                expected = 'GOOD_HOLD' if op == 'release' else 'DEFECT_HOLD'
-                if self.phase != expected or body.get('operator_confirmed') is not True:
+                expected = ['GOOD_HOLD'] if op == 'release' else ['DEFECT_HOLD', 'REVIEW_HOLD']
+                if self.phase not in expected or body.get('operator_confirmed') is not True:
                     raise ValueError('当前状态不允许该处置，请核对结果并确认')
                 if body.get('result_id') != self.cycle['result']['id']:
                     raise ValueError('结果编号过期，禁止处置')
+                disposition = 'remove_unvalidated' if self.phase == 'REVIEW_HOLD' else op
                 self.phase = 'CONFIRMING'
                 self._touch()
-                self._event('disposition_requested', disposition=op)
+                self._event('disposition_requested', disposition=disposition)
                 ident = self.cycle['id']
-                self._launch(lambda: self._confirm(ident, op))
+                self._launch(lambda: self._confirm(ident, disposition))
             elif op == 'reset_fault':
                 if self.phase != 'FAULT' or body.get('operator_confirmed') is not True:
                     raise ValueError('仅故障状态可以复位；请确认当前工件已移走')
@@ -192,12 +196,17 @@ class Station:
                     raise ValueError('FPGA未返回有效判定')
                 result = dict(result, id=uuid.uuid4().hex, completed_utc=utc())
                 self.cycle['result'] = result
-                self.phase = 'DEFECT_HOLD' if alarm else 'GOOD_HOLD'
+                qualified = (self.cycle['validation_scope'] == 'development_examples'
+                    and bool(self.cycle['qualified_model_sha256'])
+                    and self.cycle['qualified_model_sha256'] == result.get('model_sha256'))
+                self.cycle['result_qualified'] = qualified
+                self.phase = ('DEFECT_HOLD' if alarm else 'GOOD_HOLD') if qualified else 'REVIEW_HOLD'
                 self.counts['inspected'] += 1
-                self.counts['defect' if alarm else 'good'] += 1
+                self.counts[('defect' if alarm else 'good') if qualified else 'unvalidated'] += 1
                 self._touch()
                 self._event('inspection_completed', result_id=result['id'],
                     pl_image_alarm=alarm, result_sha256=result['result_sha256'],
+                    result_qualified_for_demo_workflow=qualified,
                     boot_identity=result['boot_identity'], frame_sequence=result['pl_frame_sequence'])
                 self._save_cycle(folder)
         except Exception as error:
@@ -215,9 +224,11 @@ class Station:
                 self.connection = connection
                 self.cycle['disposition'] = dict(command=op, confirmed_utc=utc(),
                     result_id=self.cycle['result']['id'], physical_actuation_verified=False)
-                self.phase = 'RELEASED' if op == 'release' else 'SEGREGATED'
+                self.phase = {'release':'RELEASED', 'segregate':'SEGREGATED',
+                              'remove_unvalidated':'REMOVED'}[op]
                 self.stop_requested = False
-                self.counts['released' if op == 'release' else 'segregated'] += 1
+                self.counts[{'release':'released', 'segregate':'segregated',
+                             'remove_unvalidated':'unvalidated_removed'}[op]] += 1
                 self._touch()
                 self._event('logical_disposition_confirmed', command=op,
                             physical_actuation_verified=False)

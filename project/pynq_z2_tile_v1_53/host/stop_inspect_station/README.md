@@ -8,13 +8,15 @@ Start the local service, open http://127.0.0.1:8793/ and:
 
 1. Select a real photograph or import an original PNG/JPEG with both dimensions <=1024. The station does not resize or edit the inspection input.
 2. Load and freeze the current input. Confirm that the input is held fixed.
-3. Start FPGA inspection. A good result enters `GOOD_HOLD`; a defect enters `DEFECT_HOLD`. Neither releases automatically.
-4. Check the operator confirmation box. Only a good result can be confirmed for release. A defect can only be confirmed as segregated.
+3. Start FPGA inspection. A model-bound, previously verified development example enters `GOOD_HOLD` or `DEFECT_HOLD`. A local import or missing/mismatched qualification enters `REVIEW_HOLD`, retaining the raw FPGA output as a reference result. Neither releases automatically.
+4. Check the operator confirmation box. Only a qualified good result can be confirmed for release. A qualified defect can be confirmed as segregated. An unvalidated input can only be confirmed as removed (`REMOVED`); it cannot become a good-release command even when the raw FPGA alarm is0.
 5. On communication, identity, sequence or source-integrity failure, the state becomes `FAULT`, the prior result is cleared and release is blocked. Fault reset discards the old cycle; the operator must remove the item and start a new cycle.
 
 The current system has no physical conveyor, stop sensor, brake, motor or reject actuator. Load/stop/release/segregate are a truthful photo-input workflow and logical command record, not a verified physical handling cycle. A real installation must add position/standstill feedback and actuator acknowledgment before claiming physical stop or release. It must keep fault handling independent of this demonstration UI.
 
-The 12 bundled real photos are MVTec AD tile samples already used during development. Their labels exist only in `data/stop_inspect_demo/expected_offline_only.json` for the separate acceptance evaluator. The live detector never reads that file. New local imports are explicitly unvalidated. Do not claim arbitrary painted/mixed-material accuracy or precise crack outlines: the current mask is coarse.
+The12 bundled real photos are MVTec AD tile samples already used during development. Their qualification metadata binds this development evidence to the exact model SHA256; it is not a claim that a material family is factory-qualified. Their labels exist only in `data/stop_inspect_demo/expected_offline_only.json` for the separate acceptance evaluator. The live detector never reads that file. Local imports do not inherit qualification by looking similar or matching an example's bytes. Browser requests cannot upgrade validation scope. Do not claim arbitrary painted/mixed-material accuracy or precise crack outlines: the current mask is coarse.
+
+V194 froze a new external40-photo original-image test from a separately authored ceramic dataset. Review showed roof tiles, so it is recorded as cross-material stress, not floor-tile acceptance. The unchanged FPGA model alarmed on all20 source-labeled good and all20 defective inputs. This failure remains visible; the workflow guard does not change its predictions, threshold or reported false-positive rate. Per-pattern reference calibration and independent target-domain validation remain outstanding. See `reports/v194/` for the full protocol and results.
 
 ## Start on this computer
 
@@ -44,7 +46,7 @@ python test_controller.py
 python accept_station.py --expected ../../data/stop_inspect_demo/expected_offline_only.json --store <runtime-store> --out <fresh-output>
 ```
 
-`test_controller.py` uses a clearly labeled fake backend for interlocks and fault injection; it is not board evidence. `accept_station.py` exercises the physical board through the service, checks each real-photo result and tests prohibited actions. The acceptance requires a fresh `READY` session. Operator confirmation is supplied by this test harness for workflow verification only, not as a human physical handling claim. Edge UI checks separately exercised good release, defect segregation and local import with actual FPGA results.
+`test_controller.py` uses a clearly labeled fake backend for13 interlocks/fault tests; it is not board evidence. `accept_station.py` exercises the physical board through the service, checks each real-photo result and tests prohibited actions. The acceptance requires a fresh `READY` session. Operator confirmation is supplied by this test harness for workflow verification only, not as a human physical handling claim. Edge UI checks separately exercise actual raw-good output from an unvalidated local import, refusal of release and browser scope upgrade, removal without counting it as a confirmed defect, and continued operation of the qualified demonstration examples.
 
 ## Preserved hardware pipeline
 

@@ -30,11 +30,14 @@ def main():
                 raise ValueError('Unsafe archive path')
             if name.endswith('/'):dest.mkdir(parents=True,exist_ok=True)
             else:dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(archive.read(name))
-    for rel in ['host/stop_inspect_station','data/stop_inspect_demo','skill','scripts/texture_v170','tools/fpga_texture_v170','reports/v193']:
+    reports=['reports/v193']+(['reports/v194'] if (project/'reports/v194').exists() else [])
+    for rel in ['host/stop_inspect_station','data/stop_inspect_demo','skill','scripts/texture_v170','tools/fpga_texture_v170']+reports:
         shutil.copytree(project/rel,out/'project'/rel,
                         ignore=shutil.ignore_patterns('__pycache__','*.pyc','runtime'))
     for name in ['LICENSE','LICENSE_SCOPE.md','THIRD_PARTY_NOTICES.md']:
         shutil.copy2(repo/name,out/name)
+    if (project/'tools/fetch_external_v194.py').exists():
+        shutil.copy2(project/'tools/fetch_external_v194.py',out/'project/tools/fetch_external_v194.py')
     (out/'requirements.txt').write_text('numpy>=1.26,<3\nPillow>=10,<13\n')
     (out/'README.md').write_text('''# TileLab stopped-input FPGA workstation
 
