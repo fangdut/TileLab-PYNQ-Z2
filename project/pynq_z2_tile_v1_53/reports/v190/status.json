@@ -19,7 +19,7 @@
     "bram18": 268,
     "dsp": 216
   },
-  "physical_status": "hardware",
+  "physical_status": "FAILED_NO_PROMOTION",
   "opt_directive": "ExploreArea",
   "board_programmed": false,
   "new_measured_fps": null,
@@ -28,5 +28,20 @@
     "117photos are exposed public development images; not blind/camera/generalpaintedtile accuracy",
     "Detector-only synthesis does not establish whole-system fit or timing",
     "Reduced-fixture simulation cycles and static MAC counts are not board FPS"
-  ]
+  ],
+  "whole_system_synthesis": {
+    "lut": 50048,
+    "ff": 55045,
+    "bram36_tiles": 136,
+    "dsp": 219
+  },
+  "failure": "TimeoutExpired(['D:\\\\Vivado\\\\TileLab_Runtime_V168\\\\Scripts\\\\python.exe', '-X', 'utf8', 'D:\\\\Vivado\\\\TileLab_SingleTile_V164_20261019\\\\project\\\\pynq_z2_tile_v1_53\\\\scripts\\\\texture_v170\\\\build_candidate.py', '--hls', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v170_hls79', '--regression', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v190_all_c05', '--profile', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v170_fullint224', '--out', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v190_hw04', '--video', '--video-variant', 'overlap_v175', '--video-rtl-gate', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v183_rtl_gate01.json', '--clock-mhz', '100', '--opt-directive', 'ExploreArea', '--memory-layout', 'split', '--full-axi-proof', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v190_full_axi79_01\\\\summary.json'], 5400.0)",
+  "abandoned_route": {
+    "observed_at": "2026-10-24 20:52 America/Denver",
+    "reason": "Parent5400s timeout; router still has79077 overlapping nodes after26669.875 CPU seconds and no log update since11:24. Stop owned CAD processes, preserve all checkpoints; no programming.",
+    "router_pid": 33024,
+    "parent_pid": 23508,
+    "router_cpu_seconds": 26669.875
+  },
+  "raw_implementation_errors": []
 }

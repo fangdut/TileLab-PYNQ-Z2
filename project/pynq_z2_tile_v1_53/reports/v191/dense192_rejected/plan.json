@@ -1,0 +1,15 @@
+{
+  "scope": "OFFLINE_DENSE_NORMAL_REFERENCE_NOT_BOARD",
+  "side": 192,
+  "centers": 1024,
+  "pool": "All existing integer feature positions of180 memory normals; no calibration/test images in center fit",
+  "threshold_rule": "max of50 independent normal calibration image scores +1, fixed before test scoring",
+  "model_training": false,
+  "cnn_and_projection_unchanged": true,
+  "test_labels_used_for_fit": false,
+  "benchmark_is_blind": false,
+  "base_graph_sha256": "0125faf4453ec9fd402fe75fbee9f1185248751928cdd52363093b35f0c6c288",
+  "base_head_sha256": "70ae393d2742ca7a9cd806f744b40ef40c6a2158d58f6d3c3a1741268a8eef27",
+  "manifest_sha256": "b580c6b5009189e67b39f40f1829a1ee8ad28abb3a6586c00ae237b91dd6780d",
+  "source_sha256": "67409b42c891ad4126ec380787116d142c1d7dff89d9312b7ee0325b171dcc62"
+}

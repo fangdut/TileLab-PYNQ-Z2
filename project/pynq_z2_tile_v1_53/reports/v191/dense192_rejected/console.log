@@ -1,0 +1,9 @@
+Normal-only centers 128/1024 pool=103680 elapsed=1.5s
+Normal-only centers 256/1024 pool=103680 elapsed=2.0s
+Normal-only centers 384/1024 pool=103680 elapsed=2.5s
+Normal-only centers 512/1024 pool=103680 elapsed=3.0s
+Normal-only centers 640/1024 pool=103680 elapsed=3.5s
+Normal-only centers 768/1024 pool=103680 elapsed=3.9s
+Normal-only centers 896/1024 pool=103680 elapsed=4.4s
+Normal-only centers 1024/1024 pool=103680 elapsed=4.9s
+{"scope": "OFFLINE_DENSE_NORMAL_REFERENCE_NOT_BOARD", "cases": 117, "tp": 84, "fp": 5, "fn": 0, "tn": 28, "cracks_detected": 17, "threshold": 6752, "side": 192, "centers": 1024, "model_sha256": "4c93840660f32b2e41cf5238252538a4a8075f767838da4191542cbf1c763b77", "benchmark_is_blind": false, "board_verified": false, "rtl_verified": false, "cnn_macs_per_frame": 154183680, "elapsed_seconds": 7.797000000005937}

@@ -1,0 +1,59 @@
+from pathlib import Path
+import json,hashlib,html,shutil,re,zipfile
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020');R=Path('D:/Vivado/TileLab_SingleTile_V164_20261019');P=R/'project/pynq_z2_tile_v1_53'
+out=P/'reports/v192';out.mkdir(parents=True,exist_ok=True)
+def sha(f):return hashlib.sha256(f.read_bytes()).hexdigest()
+def copy(src,dst):
+ dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst)
+for folder,target in [('v186_acceptance05','125mhz_retest_failed'),('v192_control179_01','100mhz_first_attempt'),('v192_control179_hdmi02','100mhz_jtag1mhz_retest')]:
+ src=W/folder;dest=out/target
+ for f in src.rglob('*'):
+  if not f.is_file():continue
+  rel=f.relative_to(src)
+  if any(s in rel.parts for s in ['software.sdk','source']):continue
+  if f.suffix in ['.json','.log','.tcl'] and not f.name.endswith('_source.json'):
+   copy(f,dest/rel)
+ source_files=list((src/'hdmi117').glob('*_source.json'))
+ if source_files:
+  with zipfile.ZipFile(dest/'hdmi117/source_bindings.zip','w',zipfile.ZIP_DEFLATED) as z:
+   for f in source_files:z.write(f,f.name)
+ for name in ['status.json','command.txt']:
+  if (src/'source'/name).exists():copy(src/'source'/name,dest/'source'/name)
+for name in ['retest_v192_hdmi02.py','archive_v192.py']:copy(W/name,out/'reproduction'/(name+'.txt'))
+tests=dict(scope='WINDOWS_PROCESS_TREE_REGRESSION_NOT_BOARD',tests_passed=2,
+ tests=['Nonzero normal exit code preserved','Timeout kills owned descendant and preserves unrelated process'],
+ sources={n:sha(P/'scripts/texture_v170'/n) for n in ['owned_process.py','test_owned_process.py']})
+(out/'process_tree_tests.json').write_text(json.dumps(tests,indent=2))
+retry=json.loads((W/'v192_control179_hdmi02/progress.json').read_text())
+assert retry['status'] in ['DEVELOPMENT_HDMI_RETEST_PASS','FAILED_NO_PROMOTION'], 'Wait for completed retest'
+direct=json.loads((W/'v192_control179_01/board117/summary.json').read_text())
+j=dict(scope='V192_BOARD_RETEST_AND_TEST_TRANSPORT_FIX_NOT_NEW_ACCELERATOR',
+ status=retry['status'],direct117=direct,retest=retry,
+ high_frequency_status='125MHz failed at third direct image; DDR held in reset on inspection; cause not established',
+ first_baseline_video_status='JTAG Invalid context after 11 complete photos; same boot and DDR preserved; FPGA frame count later advanced from429 to1979, no fault',
+ clock_observation='Fresh hw_server JTAG default observed at15MHz; all three video tools now explicitly verify1MHz',
+ route79_status='FAILED_NO_PROMOTION:5400s parent timeout; still79077 overlaps; owned router stopped; no bitstream/programming',
+ rejected_low_resolution_status='Dense192 normal reference has5/33 false alarms; not promoted',
+ historical_sustained_fps=8.168911480267331,ten_fps_accepted=False,flash_written=False,
+ benchmark_is_blind=False,competition_final_acceptance=False)
+if retry['status']=='DEVELOPMENT_HDMI_RETEST_PASS':
+ h=retry['hdmi117'];j['fresh_sustained_fps']=h['autonomous_hdmi_fps_over_photo_series'];j['ten_fps_accepted']=retry['ten_fps_passed']
+(out/'status.json').write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+if 'fresh_sustained_fps' in j:
+ h=retry['hdmi117'];fresh=f"本轮100 MHz完整117图HDMI复测通过：{j['fresh_sustained_fps']:.4f} FPS，{h['continuous_observation_seconds']:.3f}秒内完成{h['autonomous_frames_in_interval']}次检测；119次双ARM停止检查，CPU逐帧启动为0。"
+else:fresh='固定1 MHz后的完整视频复测仍未通过，保留中断记录，不晋升版本。'
+items=[('117图板端逐值回归','评分及原尺寸掩膜完全一致；33张正常零误报，84张缺陷全部检出，包含17张裂纹。'),('持续视频复测',fresh),('125 MHz','成功下载，前两张正确，第三张连接重置；随后DDR控制器处于复位状态，根因未确定。'),('测试链路改进','视频控制、截图、整批测试每次连接均设置并核验1 MHz JTAG，记录此前时钟；保留完整异常栈。'),('构建流程改进','超时先终止本次命令的进程树，再退出；实测父子进程均退出，无关进程仍存活。'),('HLS79空间并行','路由严重拥塞超时，已停止；没有新时序验收或板端帧率。'),('低分辨率备选','192稠密良品参照出现5张误报，未采用。继续保留224模式。')]
+page='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>V192 上板复测与调试链路修复</title><style>body{font:17px/1.7 system-ui;max-width:1050px;margin:36px auto;padding:0 24px;background:#f3f7fa;color:#17273a}article{background:white;padding:24px;border-radius:14px;margin:20px 0}td{padding:12px;border-bottom:1px solid #dae2ed;vertical-align:top}td:first-child{width:160px;font-weight:600}</style><h1>V192：上板复测与调试链路修复</h1><article><p>'+html.escape(fresh)+'</p><p><b>10 FPS持续目标尚未验收。</b>本轮修复的是调试与构建链路，未声称检测架构获得提速。</p><table>'+''.join('<tr><td>'+html.escape(a)+'</td><td>'+html.escape(b)+'</td></tr>' for a,b in items)+'</table></article><article><h2>证据范围</h2><p>117张是反复使用的公开实拍开发集，不是独立盲测，也不能代表任意彩绘或材质。PC仅提供HDMI图片输入、操作与离线核对；持续检测由PL完成。</p><p>第一次100 MHz调试中断后，启动编号未变且硬件计数继续增长；这与125 MHz后的DDR复位是不同现象，不能合并归因于供电或算法。</p><p><a href="status.json">汇总</a> · <a href="100mhz_jtag1mhz_retest/hdmi117/summary.json">完整视频结果</a> · <a href="100mhz_jtag1mhz_retest/hdmi117/experiment.log">逐图原始日志</a> · <a href="verification.json">文件哈希</a></p></article></html>'
+(out/'status.html').write_text(page,encoding='utf8')
+block='<!-- V192_CURRENT_BEGIN -->\n**V192 上板复测（2026-10-24）：** '+fresh+' 125 MHz仍未稳定通过；10 FPS目标尚未验收。修复视频JTAG连接的1 MHz显式设置及CAD超时子进程清理，保留失败和对照记录。[报告](project/pynq_z2_tile_v1_53/reports/v192/status.html)。\n<!-- V192_CURRENT_END -->'
+for f in [R/'README.md',R/'FPGA_MIGRATION_STATUS.md']:
+ s=f.read_text(encoding='utf8')
+ if '<!-- V192_CURRENT_BEGIN -->' in s:s=re.sub(r'<!-- V192_CURRENT_BEGIN -->.*?<!-- V192_CURRENT_END -->',lambda m:block,s,flags=re.S)
+ else:s=s.replace('<!-- V190_CURRENT_BEGIN -->',block+'\n\n<!-- V190_CURRENT_BEGIN -->')
+ f.write_text(s,encoding='utf8',newline='\r\n')
+old=P/'reports/v190/status.html';s=old.read_text(encoding='utf8');banner='<article><b>最新进展：</b><a href="../v192/status.html">V192 上板复测与调试链路修复</a><p>'+html.escape(fresh)+'</p></article>'
+s=s.replace('<article><h2>当前证据',banner+'<article><h2>当前证据');old.write_text(s,encoding='utf8')
+for root,scope in [(out,'V192_RAW_EVIDENCE_HASHES_NOT_RELEASE'),(P/'reports/v190','V190_RAW_EVIDENCE_HASHES_NOT_RELEASE')]:
+ files={f.relative_to(root).as_posix():dict(bytes=f.stat().st_size,sha256=sha(f)) for f in sorted(root.rglob('*')) if f.is_file() and f.name!='verification.json'}
+ (root/'verification.json').write_text(json.dumps(dict(scope=scope,files=files),indent=2)+'\n')
+print(json.dumps({k:v for k,v in j.items() if k not in ['direct117','retest']},ensure_ascii=False))

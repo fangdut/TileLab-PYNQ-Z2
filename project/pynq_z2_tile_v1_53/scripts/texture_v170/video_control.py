@@ -31,6 +31,10 @@ def main():
     a.out.mkdir(parents=True,exist_ok=False)
     script=r'''if {[catch {
 connect -url tcp:127.0.0.1:3121
+jtag targets -set 1
+puts "PREVIOUS_JTAG_CLOCK [jtag frequency]"
+if {[jtag frequency 1000000] != 1000000} {error "Could not select 1MHz JTAG clock"}
+puts "VIDEO_JTAG_CLOCK [jtag frequency]"
 targets -set -filter {name == "APU"}
 loadhw -hw XSA
 if {[expr [lindex [mrd -value 0x05f00008 1] 0]] != BOOT} {error "Unexpected boot identity"}
@@ -86,7 +90,7 @@ puts [targets]
 puts "ARM_FINAL_END"
 puts "PL_VIDEO_OBSERVATION_FINISHED"
 disconnect
-} why opts]} {puts stderr $why;exit 1}
+} why opts]} {puts stderr $why;if {[dict exists $opts -errorinfo]} {puts stderr [dict get $opts -errorinfo]};exit 1}
 exit 0
 '''
     stop=r'''mwr 0x43c20000 0

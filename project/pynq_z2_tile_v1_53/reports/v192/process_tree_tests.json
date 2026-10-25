@@ -1,0 +1,12 @@
+{
+  "scope": "WINDOWS_PROCESS_TREE_REGRESSION_NOT_BOARD",
+  "tests_passed": 2,
+  "tests": [
+    "Nonzero normal exit code preserved",
+    "Timeout kills owned descendant and preserves unrelated process"
+  ],
+  "sources": {
+    "owned_process.py": "248475df9669b8adafe26c19ef55c326c14f7cb3130a3f74d09cc05f54bc3081",
+    "test_owned_process.py": "20850910361cd04e9435271fd125c658069988cd2b6ce0b370c6b3a46a24276c"
+  }
+}

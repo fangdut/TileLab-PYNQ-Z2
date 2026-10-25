@@ -1,0 +1,83 @@
+{
+  "scope": "GUARDED_EXPOSED_DEVELOPMENT_PHYSICAL_ITERATION_NOT_FINAL_ACCEPTANCE",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_hw01",
+  "stages": [
+    {
+      "name": "reuse_checked_transport",
+      "returncode": 0
+    },
+    {
+      "name": "volatile_program",
+      "returncode": 0,
+      "seconds": 46.817410469055176
+    },
+    {
+      "name": "direct117",
+      "returncode": 0,
+      "seconds": 90.89400434494019
+    },
+    {
+      "name": "identity_gray_live",
+      "returncode": 0,
+      "seconds": 13.522972822189331
+    },
+    {
+      "name": "identity_gray_snapshot",
+      "returncode": 0,
+      "seconds": 13.990960836410522
+    },
+    {
+      "name": "derive_color_profile",
+      "returncode": 0,
+      "seconds": 0.2546982765197754
+    },
+    {
+      "name": "good_live",
+      "returncode": 0,
+      "seconds": 10.879565238952637
+    },
+    {
+      "name": "good_snapshot",
+      "returncode": 0,
+      "seconds": 13.930971622467041
+    },
+    {
+      "name": "good_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 5.544397830963135
+    },
+    {
+      "name": "crack_live",
+      "returncode": 0,
+      "seconds": 10.966142892837524
+    },
+    {
+      "name": "crack_snapshot",
+      "returncode": 0,
+      "seconds": 14.160085916519165
+    },
+    {
+      "name": "crack_offline_reference_audit",
+      "returncode": 0,
+      "seconds": 4.336691379547119
+    },
+    {
+      "name": "series_live",
+      "returncode": 0,
+      "seconds": 13.985732793807983
+    },
+    {
+      "name": "hdmi117",
+      "returncode": 1,
+      "seconds": 47.024649143218994
+    }
+  ],
+  "status": "FAILED_NO_PROMOTION",
+  "flash_written": false,
+  "reused_transport": {
+    "source_workspace": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v179_acceptance01\\software.sdk",
+    "whole_artifact_hashes_checked": true,
+    "fresh_programming_and_all_validation_still_required": true
+  },
+  "error": "hdmi117 failed; inspect stage log"
+}

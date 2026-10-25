@@ -1,0 +1,28 @@
+{
+  "scope": "GUARDED_EXPOSED_DEVELOPMENT_PHYSICAL_ITERATION_NOT_FINAL_ACCEPTANCE",
+  "hardware": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_hw01",
+  "stages": [
+    {
+      "name": "reuse_checked_transport",
+      "returncode": 0
+    },
+    {
+      "name": "volatile_program",
+      "returncode": 0,
+      "seconds": 47.012810707092285
+    },
+    {
+      "name": "direct117",
+      "returncode": 1,
+      "seconds": 2.602410078048706
+    }
+  ],
+  "status": "FAILED_NO_PROMOTION",
+  "flash_written": false,
+  "reused_transport": {
+    "source_workspace": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v186_acceptance01\\software.sdk",
+    "whole_artifact_hashes_checked": true,
+    "fresh_programming_and_all_validation_still_required": true
+  },
+  "error": "direct117 failed; inspect stage log"
+}

@@ -1,7 +1,11 @@
 # FPGA engineering status — 2026-10-23
 
+<!-- V192_CURRENT_BEGIN -->
+**V192 上板复测（2026-10-24）：** 本轮100 MHz完整117图HDMI复测通过：8.1714 FPS，243.778秒内完成1992次检测；119次双ARM停止检查，CPU逐帧启动为0。 125 MHz仍未稳定通过；10 FPS目标尚未验收。修复视频JTAG连接的1 MHz显式设置及CAD超时子进程清理，保留失败和对照记录。[报告](project/pynq_z2_tile_v1_53/reports/v192/status.html)。
+<!-- V192_CURRENT_END -->
+
 <!-- V190_CURRENT_BEGIN -->
-**V190 硬件实验（2026-10-24）：** HLS79把采用精确24位累加和第四路DSP量化，117张开发集C输出及完整AXI RTL两次启动13302个字一致。本体实际资源见报告；整机阶段 `hardware`（100 MHz / ExploreArea），尚无新版板端FPS。HLS76整机布局超容失败已留档。历史验收基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v190/status.html)。
+**V190 硬件实验（2026-10-24）：** HLS79把采用精确24位累加和第四路DSP量化，117张开发集C输出及完整AXI RTL两次启动13302个字一致。本体实际资源见报告；整机阶段 `FAILED_NO_PROMOTION`（100 MHz / ExploreArea），尚无新版板端FPS。HLS76整机布局超容失败已留档。历史验收基线仍为V179约8.17 FPS。[实验记录](project/pynq_z2_tile_v1_53/reports/v190/status.html)。
 <!-- V190_CURRENT_END -->
 
 <!-- V188_CURRENT_BEGIN -->

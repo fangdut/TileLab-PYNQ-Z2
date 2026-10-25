@@ -1,0 +1,62 @@
+from pathlib import Path
+import subprocess,sys,json,time,hashlib
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020')
+P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53')
+S=P/'scripts/texture_v170';prior=W/'v192_control179_01';out=W/'v192_control179_hdmi02'
+out.mkdir(exist_ok=False);hw=W/'v179_hw01'
+identity=json.loads((prior/'program/identity.json').read_text())
+direct=json.loads((prior/'board117/summary.json').read_text())
+assert direct['all_integer_outputs_exact'] and direct['correct']==117
+state=dict(scope='FRESH_HDMI_RETEST_SAME_VERIFIED_BOOT_NOT_BLIND_ACCEPTANCE',prior=str(prior),status='preflight',boot_identity=identity['boot_identity'],flash_written=False)
+def save(): (out/'progress.json').write_text(json.dumps(state,indent=2))
+def run(name,args,timeout=300):
+ state['status']=name;save();print(name,flush=True)
+ with (out/(name+'.log')).open('w') as log:
+  subprocess.run([str(v) for v in args],stdout=log,stderr=subprocess.STDOUT,check=True,timeout=timeout)
+tcl='''if {[catch {
+connect -url tcp:127.0.0.1:3121
+jtag targets -set 1
+puts "PREVIOUS_JTAG_CLOCK [jtag frequency]"
+if {[jtag frequency 1000000] != 1000000} {error "JTAG clock mismatch"}
+targets -set -filter {name == "APU"}
+loadhw -hw {D:/Vivado/TileLab_RealPhotos_20261020/v179_hw01/system.xsa}
+if {[expr [lindex [mrd -value 0x05f00008 1] 0]] != @BOOT@} {error "Boot changed; cannot reuse numerical validation"}
+puts "PREFLIGHT_REGISTERS [mrd -value 0x43c20000 14]"
+mwr 0x43c20000 0
+set drained 0
+for {set i 0} {$i<100} {incr i} {
+ if {!([expr [lindex [mrd -value 0x43c20004 1] 0]] & 1)} {set drained 1;break}
+ after 100
+}
+if {!$drained} {error "Previous video did not drain"}
+puts "SAME_BOOT_DRAIN_PASS"
+disconnect
+} why opts]} {puts stderr $why;if {[dict exists $opts -errorinfo]} {puts stderr [dict get $opts -errorinfo]};exit 1}
+exit 0
+'''.replace('@BOOT@',str(identity['boot_identity']))
+(out/'preflight.tcl').write_text(tcl)
+player=None
+try:
+ save();run('same_boot_drain',['D:/2025.2/Vitis/bin/xsdb.bat',out/'preflight.tcl'])
+ source=out/'source';source.mkdir();(source/'command.txt').write_text('photo:6621d769324f6e05d583835f\n')
+ stdout=(source/'stdout.log').open('w');stderr=(source/'stderr.log').open('w')
+ player=subprocess.Popen([str(W/'RealPhotoSource_v171_r7.exe'),str(W/'v171_source01/catalog_all117.json'),str(source/'status.json'),'4',str(source/'command.txt')],stdout=stdout,stderr=stderr)
+ for _ in range(200):
+  if player.poll() is not None:raise RuntimeError('Source exited')
+  try:
+   s=json.loads((source/'status.json').read_text())
+   if s['running'] and s['paused'] and s['physical_window_bounds_verified']:break
+  except (OSError,ValueError):pass
+  time.sleep(.1)
+ else:raise RuntimeError('Source not ready')
+ run('series_live',[sys.executable,S/'video_control.py','--hardware',hw,'--program',prior/'program','--validation',prior/'board117','--out',out/'series_live','--seconds','8','--leave-running','--color-profile',prior/'color_profile.json'])
+ run('hdmi117',[sys.executable,S/'video_photo_series.py','--hardware',hw,'--video',out/'series_live','--catalog',W/'v171_source01/catalog_all117.json','--source-status',source/'status.json','--source-command',source/'command.txt','--out',out/'hdmi117'],1600)
+ hdmi=json.loads((out/'hdmi117/summary.json').read_text())
+ assert hdmi['cases']==117 and hdmi['correct']==117 and hdmi['arm_halt_checks']==119 and hdmi['both_arm_cores_halted']
+ assert hdmi['continuous_observation_seconds']>=180 and hdmi['cpu_per_frame_start_writes']==0 and hdmi['distinct_observed_photo_crcs']==117
+ state.update(status='DEVELOPMENT_HDMI_RETEST_PASS',hdmi117=hdmi,ten_fps_passed=hdmi['autonomous_hdmi_fps_over_photo_series']>=10)
+ save();print(json.dumps(state),flush=True)
+except Exception as e:
+ state.update(status='FAILED_NO_PROMOTION',error=repr(e));save();raise
+finally:
+ if player is not None and player.poll() is None:(out/'source/command.txt').write_text('close\n')

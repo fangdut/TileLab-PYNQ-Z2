@@ -18,6 +18,10 @@ def main():
     def path(p):return '{'+p.resolve().as_posix()+'}'
     script=r'''if {[catch {
 connect -url tcp:127.0.0.1:3121
+jtag targets -set 1
+puts "PREVIOUS_JTAG_CLOCK [jtag frequency]"
+if {[jtag frequency 1000000] != 1000000} {error "Could not select 1MHz JTAG clock"}
+puts "VIDEO_JTAG_CLOCK [jtag frequency]"
 targets -set -filter {name == "APU"}
 loadhw -hw XSA
 proc halt_core {} {if {[catch {stop} why] && $why ne "Already stopped"} {error $why}}

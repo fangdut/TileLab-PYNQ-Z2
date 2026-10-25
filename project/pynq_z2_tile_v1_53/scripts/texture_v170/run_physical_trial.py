@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse,json,os,subprocess,sys,time
 from build_candidate import preflight
 from verify_clock import verify as verify_clock
+from owned_process import run_owned
 
 def programming_state(run):
     """A missing final identity does not prove that no download happened."""
@@ -57,7 +58,7 @@ def main():
         print(json.dumps(dict(stage=name,state='started')),flush=True)
         log=a.journal.with_name(a.journal.stem+'_'+name+'.log')
         with log.open('w') as f:
-            r=subprocess.run([str(x) for x in args],cwd=root,stdout=f,stderr=subprocess.STDOUT,env=env,timeout=timeout)
+            r=run_owned([str(x) for x in args],cwd=root,stdout=f,stderr=subprocess.STDOUT,env=env,timeout=timeout)
         j['stages'].append(dict(stage=name,returncode=r.returncode,seconds=time.monotonic()-started,log=str(log)));save()
         return r.returncode
     try:
@@ -95,6 +96,8 @@ def main():
             raise RuntimeError('Report rendering failed; review physical records')
         j['status']='EXPERIMENT_COMPLETE_REVIEW_ACTUAL_SPEED_BEFORE_PROMOTION';save()
     except Exception as e:
-        j.update(status='FAILED_NO_PROMOTION',error=repr(e));save();raise
+        j.update(status='FAILED_NO_PROMOTION',error=repr(e))
+        if hasattr(e, 'tree_cleanup'):j['timeout_tree_cleanup']=e.tree_cleanup
+        save();raise
     print(json.dumps(j),flush=True)
 if __name__=='__main__':main()

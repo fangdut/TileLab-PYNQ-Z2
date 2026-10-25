@@ -350,12 +350,12 @@
       "sha256": "b1d9ddccae571dc2d2e3597f765b52d112cc6d716e6159d3ea6950741957687b"
     },
     "exact79/physical_pipeline_snapshot.json": {
-      "bytes": 14814,
-      "sha256": "5b45c881ec538f13a0dc17f943d6128db4267fdc21aad309f5f05e3fe8e632ef"
+      "bytes": 16079,
+      "sha256": "24d8f6418f9dd90fd9622c81be88d10725a2e46cf2993f7dfbc85e448ddec674"
     },
     "exact79/reproduction/archive_v190_exact79.py.txt": {
-      "bytes": 10610,
-      "sha256": "31bcdd169f23394d4d897754cbdff88a2dc0de308eaa4987bbffaf3a2017bab1"
+      "bytes": 10892,
+      "sha256": "a3ea678720bdbfad8163f71b8d7a4015cac0f9bb304dbd3113c0d73eb8aed414"
     },
     "exact79/reproduction/export_v190_hls79.py.txt": {
       "bytes": 1340,
@@ -378,12 +378,20 @@
       "sha256": "e13e2e2096c5c8805f385c74861635b6c2d6aca469962ed20148789ebb5cc9f6"
     },
     "exact79/whole_system/build.log": {
-      "bytes": 40949,
-      "sha256": "3adbd683488437b9f56f4dc6c4e5502ac670e1459c41f84da405a70fd882c92d"
+      "bytes": 632486,
+      "sha256": "4c717bd8ba414750820d490219b7ff9642b846d10fda148f7028235eb69a6dae"
+    },
+    "exact79/whole_system/implementation.log": {
+      "bytes": 509436,
+      "sha256": "3de93a9cf2f0fe377ff9a154916e3a9f16eac48630cb1a0880ba49a02cc91e9e"
     },
     "exact79/whole_system/pipeline.log": {
-      "bytes": 43,
-      "sha256": "10b1648dd64bd18eadd9f96e09ba6d29076ef7e416884bc4e589588fe62ca603"
+      "bytes": 2636,
+      "sha256": "6adbc8676715937695fd6dc9f94de3ffad3bedf079265bc492f1153c5a2c43ec"
+    },
+    "exact79/whole_system/synthesis_utilization.rpt": {
+      "bytes": 11161,
+      "sha256": "96635362081795f1be9cf99da307db8df197e6c692b093ff7f036f54a458c655"
     },
     "failed_compile78/full_c_console.log": {
       "bytes": 2749,
@@ -642,12 +650,12 @@
       "sha256": "28d061eee5fd3426a0ed38f1e12b5dffa565ac8337f50c00656ae5298fc5f0f9"
     },
     "status.html": {
-      "bytes": 2514,
-      "sha256": "cbfeb7f494dfc0826b0bd28b551aa34fb4674601c62b69f2d8c4ae79e22d2d3c"
+      "bytes": 4242,
+      "sha256": "07ab5f43c519fa3ba0d1090bd0effb47dcdfade8f5895135ba904c5c479b4330"
     },
     "status.json": {
-      "bytes": 1147,
-      "sha256": "8906e2427f281539465c6a65336161c5ff3fa7abc41a5fbb352e235576f02869"
+      "bytes": 2566,
+      "sha256": "ccf353ba8d308fbcbc494e80df84476264648d716b698af15a0e41d90da1bd33"
     }
   }
 }

@@ -1,0 +1,23 @@
+Model uploaded 751760/751760
+Physical PL image 1/117 crack
+{"scope": "BOARD_FULL_PL_INFERENCE", "input": "D:\\Vivado\\TileLab_RealPhotos_20261020\\dataset_v168\\images\\test\\crack\\6621d769324f6e05d583835f.png", "input_file_sha256": "d10be1f6ec065f83d54c03b4093d7d87dfcc77617d8eb0df9f5a053aece4becf", "rgb_crc32": 2125595710, "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65", "model_crc32": 2781797194, "pl_identity": 385875969, "boot_identity": 3268837728, "width": 840, "height": 840, "pl_image_alarm": 1, "pl_peak": 19030.0, "pl_threshold": 10908.0, "pl_mask_pixels": 245859, "pl_completed_steps": 47, "pl_frame_sequence": 1, "ps_global_timer_ticks": 30903693, "ps_timer_hz": 325000000, "pl_engine_seconds": 0.09508828615384615, "wall_seconds": 0.5187589999986812, "result_crc32": 4262701826, "result_sha256": "a167dbcf894dd5c249ac4e7e25f3af93864a5f9041ceee817020e988b62f5630", "reply_header": [378557016, 0, 5, 2825600, 4262701826, 385875969, 2781797194, 751760, 3268837728, 30903693, 0, 325000000, 2125595710, 840, 840, 3885840749], "cpu_detection": false, "gpu_detection": false}
+Physical PL image 2/117 crack
+{"scope": "BOARD_FULL_PL_INFERENCE", "input": "D:\\Vivado\\TileLab_RealPhotos_20261020\\dataset_v168\\images\\test\\crack\\6621d769324f6e05d583835e.png", "input_file_sha256": "3800ee4d98148c859eb56bd5a9350ce6be768dc24fcd2203e3e36e3414defb5a", "rgb_crc32": 2641597583, "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65", "model_crc32": 2781797194, "pl_identity": 385875969, "boot_identity": 3268837728, "width": 840, "height": 840, "pl_image_alarm": 1, "pl_peak": 20132.0, "pl_threshold": 10908.0, "pl_mask_pixels": 317905, "pl_completed_steps": 47, "pl_frame_sequence": 2, "ps_global_timer_ticks": 30882859, "ps_timer_hz": 325000000, "pl_engine_seconds": 0.09502418153846154, "wall_seconds": 0.5168368000013288, "result_crc32": 3638208513, "result_sha256": "0ec01481733ce38ea0805e388dd53d548231b9c0563afe414bb3471c451f0339", "reply_header": [378557016, 0, 6, 2825600, 3638208513, 385875969, 2781797194, 751760, 3268837728, 30882859, 0, 325000000, 2641597583, 840, 840, 234102331], "cpu_detection": false, "gpu_detection": false}
+Physical PL image 3/117 crack
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\tools\fpga_texture_v170\validate_board.py", line 52, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\tools\fpga_texture_v170\validate_board.py", line 28, in main
+    e=board.infer(image,folder,model);last=e
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\tools\fpga_texture_v170\board_client.py", line 63, in infer
+    h,data,wall=self.request(5,packed,width=width,height=height)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\tools\fpga_texture_v170\board_client.py", line 30, in request
+    wire=exact(s,64);h=struct.unpack('<16I',wire)
+         ^^^^^^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\tools\fpga_texture_v170\board_client.py", line 15, in exact
+    part=sock.recv(min(262144,n-len(b)))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。

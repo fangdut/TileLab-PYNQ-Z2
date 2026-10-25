@@ -53,6 +53,7 @@ if rpt.exists():
 impl=W/'v190_hw04/texture_v170.runs/impl_1/runme.log'
 if state['status']=='FAILED_NO_PROMOTION':
  j['failure']=state.get('error')
+ if 'abandoned_route' in state:j['abandoned_route']=state['abandoned_route']
  if impl.exists():
   text=impl.read_text(errors='replace');j['raw_implementation_errors']=[s for s in text.splitlines() if s.startswith('ERROR:')]
   match=re.search(r'Luts: (\d+) \(combined\).*?available capacity: (\d+)',text)
@@ -66,6 +67,7 @@ if 'board_result_review' in state:
 rows=[('真实图片C回归','117张评分和原尺寸掩膜逐值一致；公开开发集，非独立盲测'),('独立标量验证','159组、140955个检查通过'),('实际MAC RTL','643个输出包一致，包含signed24越界累加，1308个停顿周期'),('完整检测器AXI RTL','两次连续启动，13302个中间值、评分和掩膜字一致'),('检测器实际综合',json.dumps(ooc)+'；仅本体，非整机'),('整机实现',state['status']+'；100 MHz / ExploreArea'),('本版板端帧率','尚未测量；历史验收基线仍为V179约8.17 FPS')]
 if 'whole_system_synthesis' in j:rows.insert(-2,('整机综合资源',json.dumps(j['whole_system_synthesis'])+'；仍需通过实际布局布线'))
 if 'failure' in j:rows.append(('本轮未晋升',str(j['failure'])+'；'+ ' / '.join(j.get('raw_implementation_errors',[]))))
+if 'abandoned_route' in j:rows.append(('路由已停止','主流程5400秒超时后子进程仍在运行；停止时有79077处重叠节点，无最终时序及bitstream。本轮未下载开发板。'))
 if j['new_measured_fps'] is not None:rows[-1:]=[('实际持续HDMI帧率',str(j['new_measured_fps'])+' FPS；详见板端原始记录')]
 page='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>V190 硬件空间并行</title><style>body{font:17px/1.7 system-ui;max-width:1050px;margin:36px auto;padding:0 22px;background:#f3f7fa;color:#17273a}article{background:white;border-radius:14px;padding:22px;margin:20px 0}table{border-collapse:collapse;width:100%}td,th{padding:10px;border-bottom:1px solid #dde5ef;text-align:left}</style><h1>V190：相邻像素共享权重，精确24位累加版HLS79</h1><p>16个输出通道同时处理两个像素，128个共享乘法器。模型、阈值、分辨率保持原值。所有检测运算在PL执行，C回归仅作离线验证。</p><article><h2>当前证据</h2><table>'+''.join('<tr><td>'+html.escape(a)+'</td><td>'+html.escape(b)+'</td></tr>' for a,b in rows)+'</table></article><article><h2>前一版失败与本轮改动</h2><p>HLS76和HLS77整机详细布局分别需要54910与54560个LUT，均超出器件53200，未下载。本轮采用有等价性证明的24位累加和第四路DSP量化。117张开发集及完整RTL输出一致，是否容纳以完整布局布线为准。普通卷积静态MAC循环减半，但不包含DDR等待、预处理、深度卷积、投影和最近邻，不能据此推算帧率。</p><p><a href="full_system76_failed/placement.log">HLS76失败日志</a> · <a href="exact79/full_axi/summary.json">HLS79完整RTL验证</a> · <a href="exact79/detector_ooc/utilization.rpt">本体实际资源</a> · <a href="status.json">状态JSON</a> · <a href="verification.json">原始证据哈希</a></p></article><article><h2>验收范围</h2><p>新版尚须通过整机容量与时序、板端117张逐值比对、ARM停止后的持续HDMI检测和吞吐测量。没有独立相机、盲测及任意彩绘材质验收，不能把开发集一致性描述为普遍100%准确率。</p></article></html>'
 (root/'status.html').write_text(page,encoding='utf8')

@@ -1,6 +1,6 @@
 {
   "scope": "GUARDED_SOURCE_BOUND_PHYSICAL_TRIAL_NOT_FINAL_ACCEPTANCE",
-  "status": "hardware",
+  "status": "FAILED_NO_PROMOTION",
   "stages": [],
   "requested_pl_clock_mhz": 100,
   "memory_layout": "split",
@@ -420,5 +420,13 @@
       "normal_rgb_zero_extended_to_128": true,
       "interpretation": "Dedicated generated storage/control verified; resource/timing/FPS improvement requires routed and physical board evidence."
     }
+  },
+  "error": "TimeoutExpired(['D:\\\\Vivado\\\\TileLab_Runtime_V168\\\\Scripts\\\\python.exe', '-X', 'utf8', 'D:\\\\Vivado\\\\TileLab_SingleTile_V164_20261019\\\\project\\\\pynq_z2_tile_v1_53\\\\scripts\\\\texture_v170\\\\build_candidate.py', '--hls', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v170_hls79', '--regression', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v190_all_c05', '--profile', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v170_fullint224', '--out', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v190_hw04', '--video', '--video-variant', 'overlap_v175', '--video-rtl-gate', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v183_rtl_gate01.json', '--clock-mhz', '100', '--opt-directive', 'ExploreArea', '--memory-layout', 'split', '--full-axi-proof', 'D:\\\\Vivado\\\\TileLab_RealPhotos_20261020\\\\v190_full_axi79_01\\\\summary.json'], 5400.0)",
+  "abandoned_route": {
+    "observed_at": "2026-10-24 20:52 America/Denver",
+    "reason": "Parent5400s timeout; router still has79077 overlapping nodes after26669.875 CPU seconds and no log update since11:24. Stop owned CAD processes, preserve all checkpoints; no programming.",
+    "router_pid": 33024,
+    "parent_pid": 23508,
+    "router_cpu_seconds": 26669.875
   }
 }
