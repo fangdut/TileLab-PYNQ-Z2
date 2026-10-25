@@ -1,6 +1,6 @@
 """Verify matching implemented bitstream/BSP/ELF, then volatile JTAG load."""
 from pathlib import Path
-import argparse,hashlib,json,secrets,subprocess,zipfile
+import argparse,hashlib,json,os,secrets,subprocess,zipfile
 from verify_reset import verify
 from verify_clock import verify as verify_clock
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -74,7 +74,7 @@ exit 0
 '''
     for k,v in [('INIT',tpath(a.out/'ps7_init.tcl')),('BIT',tpath(a.hardware/'system.bit')),('ELF',tpath(elf)),('BOOT',str(boot)),('XSA',tpath(a.hardware/'system.xsa'))]:script=script.replace(k,v)
     tcl=a.out/'program.tcl';tcl.write_text(script)
-    with (a.out/'program.log').open('w') as log:r=subprocess.run(['D:/2025.2/Vitis/bin/xsdb.bat',str(tcl)],stdout=log,stderr=subprocess.STDOUT,timeout=240)
+    with (a.out/'program.log').open('w') as log:r=subprocess.run([os.environ.get('TILELAB_XSDB','D:/2025.2/Vitis/bin/xsdb.bat'),str(tcl)],stdout=log,stderr=subprocess.STDOUT,timeout=240)
     if r.returncode or 'V170_VOLATILE_LOAD_PASSED' not in (a.out/'program.log').read_text():raise RuntimeError('JTAG startup checks failed; inspect program.log')
     (a.out/'identity.json').write_text(json.dumps(dict(boot_identity=boot,build=result,implementation=status,flash_written=False),indent=2))
     print('Volatile PL+ARM startup checked; now verify real-photo inference over TCP.',flush=True)

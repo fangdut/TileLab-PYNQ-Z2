@@ -1,0 +1,15 @@
+{
+  "scope": "HEADLESS_EDGE_UI_WITH_REAL_FPGA",
+  "checks": [
+    "Actual FPGA good result requires operator confirmation before logical release",
+    "Actual FPGA crack result blocks good release and permits confirmed segregation",
+    "Local file upload preserves input and runs physical FPGA inference"
+  ],
+  "js_errors": [],
+  "viewport": [
+    1440,
+    1100
+  ],
+  "cycles": 3,
+  "physical_actuation_verified": false
+}

@@ -1,5 +1,10 @@
 # FPGA engineering status — 2026-10-23
 
+<!-- V193_CURRENT_BEGIN -->
+**V193 停驻检测工作站（2026-10-25）：** 已完成“固定输入→FPGA检测→确认良品放行／缺陷隔离”的可操作原型。12张实拍开发样例全流程通过，34次不合规操作被拒绝；平均PL约125 ms、传输与检测约0.54秒。10项软件联锁测试及3项真实FPGA界面检查通过。PC管理流程，检测全部在PL；无实体传送带，当前处置为逻辑指令。10 FPS暂不作为交付前提，下一步独立真图验证和提交材料。[工作站说明](project/pynq_z2_tile_v1_53/host/stop_inspect_station/README.md) · [验收记录](project/pynq_z2_tile_v1_53/reports/v193/status.html)。
+[本地开发包清单与校验值](deliverables/TileLab_StopInspect_V193_Dev_R1.json) · [从仓库生成运行包](project/pynq_z2_tile_v1_53/tools/package_stop_station.py)（319项文件完整性与部署检查通过；已使用包内程序重新上板并复测）。
+<!-- V193_CURRENT_END -->
+
 <!-- V192_CURRENT_BEGIN -->
 **V192 上板复测（2026-10-24）：** 本轮100 MHz完整117图HDMI复测通过：8.1714 FPS，243.778秒内完成1992次检测；119次双ARM停止检查，CPU逐帧启动为0。 125 MHz仍未稳定通过；10 FPS目标尚未验收。修复视频JTAG连接的1 MHz显式设置及CAD超时子进程清理，保留失败和对照记录。[报告](project/pynq_z2_tile_v1_53/reports/v192/status.html)。
 <!-- V192_CURRENT_END -->

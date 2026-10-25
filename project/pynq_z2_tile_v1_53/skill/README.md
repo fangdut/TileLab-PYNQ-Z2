@@ -44,3 +44,8 @@ python skill/verify_bundle.py --manifest deployment.json --root board
 - “在相同数据上分别报告计算核与端到端耗时，包含失败用例及拒判，不要混用仿真和硬件数据。”
 
 失效条件：参考实现本身错误、标注不可信、输入域不匹配、文件来源未验证，以及模型产生了没有原始证据支撑的结论。必须由独立比对与实测约束模型回答。
+
+
+## V193 stop-inspect workflow additions
+
+See [workflow and deployment checks](stop_inspect_workflow.md) for artifact verification, result-to-cycle binding, per-connection JTAG clocks and bounded CAD process trees. Existing array and XSA/BIT verification tools above remain available.
