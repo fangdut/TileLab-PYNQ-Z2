@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>V196 FPGA区域裁取与真实地砖试验</title>
+<style>body{font:17px/1.75 system-ui;max-width:1100px;margin:30px auto;padding:0 24px;background:#f2f6fa;color:#17283b}article{background:white;padding:24px;border-radius:12px;margin:20px 0}table{border-collapse:collapse;width:100%}td,th{padding:10px;border-bottom:1px solid #d5dfea;text-align:left}.warn{border-left:5px solid #bd7731}a{color:#14677b}code{overflow-wrap:anywhere}</style>
+<h1>V196：输入区域裁取已在FPGA通过上板核对</h1>
+<article><b>2026-10-26 · 本轮是硬件功能进展，尚未通过彩绘／多材质地砖准确率验收。</b><p>新增固定标定ROI：在PL归一化和CNN之前裁取检测区域，检测后把粗粒度掩膜映射回完整输入，区域外为零。默认模型仍保留整图模式。不是自动找砖、视角配准或整片砖覆盖证明。PC发送完整图像，运行时没有CPU／GPU图像检测。</p><p>4张已有实拍原图分别嵌入两种合成外围背景，合计8次板端工程检查全部通过；原始照片像素保持不变。它们不算8张新真实准确率样本。现场仍需固定视角、光照和整片砖进入检测区域。</p></article>
+<article><h2>实际完成的硬件检查</h2><table><tr><th>检查</th><th>实测结果</th><th>范围</th></tr>
+<tr><td>默认整图回归</td><td>117/117判对，0/33良品误报，17/17裂纹；全部评分和掩膜逐值一致</td><td>反复使用的MVTec Tile开发集，不是盲测</td></tr>
+<tr><td>固定ROI板端测试</td><td>8/8评分、掩膜与参考一致；两种背景结果相同；框外掩膜为零</td><td>4张旧照片的合成外围工程测试</td></tr>
+<tr><td>50 MHz完整实现</td><td>建立裕量+0.548 ns，保持+0.050 ns，DRC错误0；218 DSP、127.5 BRAM Tile</td><td>实际布局布线；核内平均241 ms，网口停驻模式</td></tr>
+<tr><td>100 MHz候选</td><td>建立裕量−0.370 ns，失败，未下载</td><td>保留失败报告，不宣传频率达标</td></tr>
+<tr><td>50 MHz HDMI试验</td><td>未观察到自主检测；采集序号0、拒绝计数179</td><td>失败，尚未确定根因，不作为连续视频验收</td></tr></table>
+<p>固定帧自动运行4.15 FPS与核内耗时不代表连续视频或整线放行速度。ROI候选不替换工作站。测试后已恢复原100 MHz稳定版和原始良品参照，重新建立会话；旧版历史视频结果仍见V192，不能转记为本候选结果。恢复后真实样例检测及未确认不可放行的界面核对通过，PL约124.7毫秒；此单次传输加检测约1.74秒，不承诺恒定周期。<a href="restored_stable/qa/summary.json">恢复复核</a>。</p>
+<p><a href="roi/default117_board/summary.json">117张实板汇总</a> · <a href="roi/background8_board/results.json">8次ROI实际结果</a> · <a href="roi/physical50/implementation_status.json">50 MHz时序</a> · <a href="roi/failed100/implementation_status.json">100 MHz失败</a> · <a href="roi/failed_hdmi/progress.json">HDMI失败</a></p></article>
+<article class="warn"><h2>真实地砖数据暴露的问题</h2><p>新增作者公开HFENet工业花纹地砖扫描照片，原文件256×1408、RGB通道相同，按预先固定哈希规则保留一个256×704无损片段。没有添加裂纹；作者标注为打印类缺陷，不应全部叫裂纹。扫描条带并非完整实体砖或彩色实拍，实体工件独立性未建立。</p>
+<table><tr><th>离线方案</th><th>缺陷检出</th><th>良品误报</th><th>结论</th></tr><tr><td>冻结旧纹理配置，首40张</td><td>20/20</td><td>20/20</td><td>全部报警，失败</td></tr><tr><td>同一CNN、混合花纹良品参照，首40张</td><td>0/20</td><td>0/20</td><td>全部判良，失败</td></tr><tr><td>正常特征10组参照消融，新40张</td><td>5/20</td><td>6/20</td><td>不是已知花色标签，失败</td></tr><tr><td>保留原生横向像素的线状单元，后40张</td><td>16/20</td><td>3/20</td><td>仍漏检4张、误报3张，未接入正式检测器</td></tr></table>
+<p>新40张在选定公式和良品阈值后执行，与前232个源文件／裁取像素哈希互斥，但不能推导实体砖独立。现在已经公开为开发结果，不能反复调参后仍称盲测。首轮混合花纹参照的失败不能证明按真实花色标定无效，也不能单凭这些实验把原因归结为缩小分辨率。</p>
+<p>原生列单元用整数有符号一致性与能量做判别，跨度2/4/8，使用乘法比较省去除法。40张HLS-C统计与独立NumPy一致，独立单元RTL三次事务通过；HLS估计2 DSP、10 BRAM18、4882 LUT。这不是完整系统资源、时序或上板准确率，针对近竖直打印细线，也不能覆盖所有走向裂纹。当前不晋升。</p>
+<p><a href="https://github.com/RobotvisionLab/HFENet">作者数据入口</a> · <a href="target_data/rejected_cnn/summary.json">CNN迁移失败</a> · <a href="native/new40/summary.json">线状分支新40张失败</a> · <a href="native/new40/execution_plan.json">预先冻结执行计划</a>。新数据照片仅本地研究保存；作者仓库代码MIT不能自动作为独立数据的再分发许可，本记录及工程包不含这些照片。</p></article>
+<article><h2>固件、身份与工作站</h2><p>修复传输固件重建时沿用旧模型身份头的问题。现在由实际二进制生成长度、CRC及网格，校验JSON、ROI几何和对应已实现内核；ROI模型不能下给旧内核。主机还检查返回ROI、输入尺寸和框外掩膜，拒绝旧内核忽略配置或结果错位。13项工作站、6项ROI通信、8项身份、6项时钟配置检查通过。软件配置检查不能代替时钟的物理测量。</p>
+<p>工作站继续执行：停驻输入 → PL检测 → 人工确认良品放行／缺陷隔离。未验证上传图保留复核联锁，不取得自动放行资格。没有实体传送带、相机或执行器，当前处置是逻辑指令。离线PC标定与C/RTL数值比对均属开发验证，没有加入运行时检测路径。</p>
+<p><a href="http://127.0.0.1:8793/">恢复后的稳定工作站</a> · <a href="restored_stable/program/identity.json">恢复身份</a> · <a href="artifact_binding.json">本轮BIT/XSA/ELF身份</a> · <a href="summary.json">机器可读状态</a> · <a href="verification.json">证据校验值</a></p></article>
+<article><h2>下一步的验收重点</h2><p>先取得能识别实际花色、配对良品参照的固定视角输入，明确整砖覆盖范围；分别统计表面纹理、边缘背景、真实缺陷导致的错误，再冻结每种花色配置，用未参与调整的实体工件验证漏检和误报。在这一步通过前，不通过单独抬高阈值、隐藏失败图片或合并公开开发集数字来宣称高准确率。</p><p>ROI提供了硬件隔离背景的工具，但还没有证明任意新花色可用。10 FPS继续延期；先交付可复现的停驻检测、错误拒绝与确认流程。真实整机／板卡照片、签署授权书和最终提交材料尚未补齐。本轮保存实验工程，不是比赛最终验收版本。</p></article></html>

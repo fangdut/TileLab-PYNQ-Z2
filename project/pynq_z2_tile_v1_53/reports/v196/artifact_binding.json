@@ -1,0 +1,68 @@
+[
+  {
+    "role": "roi_physical50",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_hw50\\system.bit",
+    "bytes": 4045690,
+    "sha256": "5f4fa758f6e938934ad7ca83dbee1ed82b0167f62adb489346c1bfb878dbd854"
+  },
+  {
+    "role": "roi_physical50",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_hw50\\system.xsa",
+    "bytes": 2059549,
+    "sha256": "0934813e23470279d16f2a791d46fd1dab996a3f08edd1c3aacb780d53779c5c"
+  },
+  {
+    "role": "roi_physical50",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_hw50\\texture_integer_source.cpp",
+    "bytes": 36134,
+    "sha256": "bba853b8b7032081439427d9837a0541010777a3b829f2b7e81aaf5efd08fd02"
+  },
+  {
+    "role": "firmware_baseline",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_baseline01.sdk\\texture_platform\\export\\texture_platform\\sw\\boot\\fsbl.elf",
+    "bytes": 586036,
+    "sha256": "598cc6107416238026a0c51e6f522687a2f42b743fb02fd868ddcbbed3917c00"
+  },
+  {
+    "role": "firmware_baseline",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_baseline01.sdk\\texture_platform\\zynq_fsbl\\build\\fsbl.elf",
+    "bytes": 586036,
+    "sha256": "598cc6107416238026a0c51e6f522687a2f42b743fb02fd868ddcbbed3917c00"
+  },
+  {
+    "role": "firmware_baseline",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_baseline01.sdk\\texture_transport\\build\\texture_transport.elf",
+    "bytes": 841976,
+    "sha256": "d7ff6b0bfe6b4b96de3a82d1dca8ba66825f8510cedc822a5655343fb5b7d60e"
+  },
+  {
+    "role": "firmware_baseline",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_baseline01.sdk\\sources\\model_identity.h",
+    "bytes": 84,
+    "sha256": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f"
+  },
+  {
+    "role": "firmware_baseline",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_baseline01.sdk\\texture_transport\\src\\model_identity.h",
+    "bytes": 84,
+    "sha256": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f"
+  },
+  {
+    "role": "firmware_roi",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_roi01.sdk\\texture_transport\\build\\texture_transport.elf",
+    "bytes": 841952,
+    "sha256": "1980317f2a6b6362c7af806e46657d3f9962f9930c73151f5b86070665b62222"
+  },
+  {
+    "role": "firmware_roi",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_roi01.sdk\\sources\\model_identity.h",
+    "bytes": 84,
+    "sha256": "65088634ba8905b016768cd6eb47d0b96c14b540a39cc258af27cc01aa4a7873"
+  },
+  {
+    "role": "firmware_roi",
+    "path": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_roi01.sdk\\texture_transport\\src\\model_identity.h",
+    "bytes": 84,
+    "sha256": "65088634ba8905b016768cd6eb47d0b96c14b540a39cc258af27cc01aa4a7873"
+  }
+]

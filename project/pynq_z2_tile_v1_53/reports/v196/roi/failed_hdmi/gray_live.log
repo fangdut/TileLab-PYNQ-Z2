@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\video_control.py", line 153, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\video_control.py", line 130, in main
+    if len(rows)<2:raise RuntimeError('No autonomous HDMI detections observed')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: No autonomous HDMI detections observed

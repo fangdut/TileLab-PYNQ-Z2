@@ -1,0 +1,192 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 16101,
+    "sha256": "13dd5546f1e08a51aa16e28d17653158a3098638540e8cfda8f1d00a212b046b"
+  },
+  {
+    "path": "FPGA_MIGRATION_STATUS.md",
+    "bytes": 38270,
+    "sha256": "a58278201d0cb2a4558cec8377add6e86741da22fe80fefda1b8b12f61496b76"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/build_candidate.py",
+    "bytes": 9319,
+    "sha256": "52f8d2cd8e9b8cb9bdb76c7274340b5ea6cbbe687777caafe1ce56f45f60f784"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/build_hardware.tcl",
+    "bytes": 13147,
+    "sha256": "3e2d1c7ca6b661ad36c5668fcb2f0eba54931e9bb0dc9379c52021e84753b6b0"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/build_software.py",
+    "bytes": 4629,
+    "sha256": "22ddf69a9585e73fc9b823bc4651a551574b20be5e705896df860658135c0706"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/rebuild_transport.py",
+    "bytes": 2539,
+    "sha256": "ba822699e5f1e128445fc7ecdd103ffd9687eaf5d316f523ee01c80d3b9c7c66"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/repair_postroute.tcl",
+    "bytes": 2993,
+    "sha256": "4fd575a8774222d3aa5cc745d56896c5986a894f7cf96dcb24a06168b9968ced"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/run_physical_trial.py",
+    "bytes": 7794,
+    "sha256": "1457dc312d0b0042bad546bf4fd03d7ff334394c79cec23d17a0fa174453aea8"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/verify_clock.py",
+    "bytes": 3645,
+    "sha256": "d4df3fbdbc15e85fa0ac22fc00632be070f42733f8cdc9fbbd8903d57d57b3ce"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/model_identity.py",
+    "bytes": 2040,
+    "sha256": "120f3818f96f237344a9af110d636db4f1c05a73758f5c73a7bf350cb5e79798"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/test_model_identity.py",
+    "bytes": 2891,
+    "sha256": "7ec224a221987492749ca712d2a42de667eded15a9ce25722d30d49cd19a91f8"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/tools/fpga_texture_v170/board_client.py",
+    "bytes": 8591,
+    "sha256": "96a37bc7c52e0dc7478481d4376e6662d642b53e0cccc5140ea77f6da7db8627"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/tools/fpga_texture_v170/fit_reference_bank.py",
+    "bytes": 6235,
+    "sha256": "a3a4292dd09dba5232eedc45552c6a83bdfc62cda5aa52b422d074ad3dc4440c"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_v170/hls/frozen/v196_hls_roi01.cpp",
+    "bytes": 36134,
+    "sha256": "bba853b8b7032081439427d9837a0541010777a3b829f2b7e81aaf5efd08fd02"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/build_hls.tcl",
+    "bytes": 1104,
+    "sha256": "955695d68a79e709a9ec73a826b7aae8510aac68687365b168e2152cfb986918"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/make_candidate.py",
+    "bytes": 4217,
+    "sha256": "1ed9b487d9cc97fbf2663f46a00e1f3d8d25ef2586712a720e06e10e886015b8"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/make_profile.py",
+    "bytes": 2051,
+    "sha256": "63279dab660d3fbde1e9886cd0afacca780f9a9d0dccf6172a403bf9c80809f2"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/prepare_real_fixtures.py",
+    "bytes": 2148,
+    "sha256": "a92c89f2aeaff37ae60f63374be78e7f2a0119577d70a9b776ff335b9c3ef1da"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/prepare_vectors.py",
+    "bytes": 1820,
+    "sha256": "65ff91eff0d4b12082ee9a7cdaf66de3341f3c30d30919c7751fa7b66a96a4c3"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/README.md",
+    "bytes": 2093,
+    "sha256": "4f71654ba70e28d8c322058a39d0c8db47e5c8f5ba71b8df86e4bfcbbd90ed58"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/test_contract.py",
+    "bytes": 3237,
+    "sha256": "598bdb01ac0effa297fb3730adcb2db87785ee6b165c2dad732d262b8878ca4f"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/test_roi.cpp",
+    "bytes": 2449,
+    "sha256": "f62c52b263fb07fe8cab497f662981fa9147c1c9cd88617a283bcab46dec085a"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/test_slow_clock.py",
+    "bytes": 2803,
+    "sha256": "469440ca5fd958227684b3b1e08e9687ed69e4a7a43f3211429276ab4ecf21a0"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/input_roi_v196/validate.py",
+    "bytes": 4415,
+    "sha256": "bdaa4750152db29e8c58b9e746fd7138502eab1013558f0cfeb37b58977df442"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/build_hls.tcl",
+    "bytes": 935,
+    "sha256": "4fd6c9f00b016db8588eae52ddaaf241fe22f72b88de17e99f3d9f9104540906"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/evaluate.py",
+    "bytes": 5257,
+    "sha256": "9208ee50d9b30abd6324108d2d24b54fc1cd73f4e88f9e1f0c16aa8522bed47d"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/native_line.cpp",
+    "bytes": 3841,
+    "sha256": "368f0e740aeb170ed353e44148451a179ee96eb35d14fae16499e38a1ef96ea3"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/README.md",
+    "bytes": 2043,
+    "sha256": "30deabc00974f4e9e9d9134b521aba63f4abc72ead562589dd6e7f3c99522c04"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/audit_v196_hfenet_pairs.py",
+    "bytes": 1399,
+    "sha256": "452756e9dd7a8128890062b060bcd25e44181ab33e54b3e600b63960a9680990"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/audit_v196_hfenet_transforms.py",
+    "bytes": 1108,
+    "sha256": "97dd52d930883ed6fece71533f39fe62b1b5888a48451a1814fe45781532ea4a"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/explore_v196_grouped_bank.py",
+    "bytes": 4942,
+    "sha256": "976c53859b62af67933470e9b74e5410a25ec36ea80f114091843291b42e4631"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/explore_v196_line_coherence.py",
+    "bytes": 2117,
+    "sha256": "e9bc9ac3a5893847a7750320ffa205048fbc20d1601a98da1fa753d3ad129878"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/fetch_v196_hfenet.py",
+    "bytes": 2618,
+    "sha256": "a4c156d8b1a84ee82c05e32c448ac8e6c5fe935b705835dec716e0b6f3f31052"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/prepare_v196_hfe_holdout.py",
+    "bytes": 3971,
+    "sha256": "6fd463cdd87c5a401dad6fb6309b275cd799f4fdf8a4c8d55c9abc31e1d19e22"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/prepare_v196_hfenet_pilot.py",
+    "bytes": 5483,
+    "sha256": "ed320e3d8a3c457258e6a7b288a7eba4673dafe1b842fa5710cfed198875fc2c"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/prepare_v196_native_vectors.py",
+    "bytes": 929,
+    "sha256": "273a7481301851bd1c363f28ca8fb4aa282867ff5e08dadea2c278458f67810b"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/research/README.md",
+    "bytes": 606,
+    "sha256": "9efe0037536994900a54d7175976fdacff93572d93ca9abe5c05430d79f5eab9"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/native_line_v196/test_native.cpp",
+    "bytes": 1500,
+    "sha256": "1352f91c09e657cb89a43f916a0677a46a0e914bf9e75ac43abcc9cf6020f36e"
+  }
+]

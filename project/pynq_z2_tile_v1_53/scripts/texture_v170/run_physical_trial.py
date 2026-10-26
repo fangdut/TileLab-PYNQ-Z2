@@ -38,7 +38,7 @@ def main():
         p.add_argument('--'+n,type=Path,required=True)
     p.add_argument('--video-rtl-gate',type=Path,required=True)
     p.add_argument('--full-axi-proof',type=Path)
-    p.add_argument('--clock-mhz',type=int,choices=[100,125],required=True)
+    p.add_argument('--clock-mhz',type=int,choices=[50,100,125],required=True)
     p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
     p.add_argument('--opt-directive',choices=['Default','ExploreArea','ExploreWithRemap'],default='Default')
     p.add_argument('--ip-cache',type=Path)

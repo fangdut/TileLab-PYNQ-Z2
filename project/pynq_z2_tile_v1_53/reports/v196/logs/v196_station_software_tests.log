@@ -1,0 +1,18 @@
+test_board_loss_at_confirmation_clears_old_good_result (__main__.Interlocks.test_board_loss_at_confirmation_clears_old_good_result) ... ok
+test_concurrent_duplicate_inspect_starts_only_once (__main__.Interlocks.test_concurrent_duplicate_inspect_starts_only_once) ... ok
+test_corrupt_catalog_image_cannot_be_loaded (__main__.Interlocks.test_corrupt_catalog_image_cannot_be_loaded) ... ok
+test_defect_cannot_be_released_as_good (__main__.Interlocks.test_defect_cannot_be_released_as_good) ... ok
+test_good_never_releases_before_confirmation (__main__.Interlocks.test_good_never_releases_before_confirmation) ... ok
+test_import_preserves_original_png_and_jpeg_bytes (__main__.Interlocks.test_import_preserves_original_png_and_jpeg_bytes) ... ok
+test_import_rejects_unsupported_format_and_oversized_dimensions (__main__.Interlocks.test_import_rejects_unsupported_format_and_oversized_dimensions) ... ok
+test_input_must_remain_fixed_during_inspection (__main__.Interlocks.test_input_must_remain_fixed_during_inspection) ... ok
+test_new_session_never_resumes_old_good_result (__main__.Interlocks.test_new_session_never_resumes_old_good_result) ... ok
+test_old_model_qualification_does_not_qualify_new_model (__main__.Interlocks.test_old_model_qualification_does_not_qualify_new_model) ... ok
+test_old_result_and_old_revision_are_rejected (__main__.Interlocks.test_old_result_and_old_revision_are_rejected) ... ok
+test_scope_cannot_be_upgraded_by_browser_action (__main__.Interlocks.test_scope_cannot_be_upgraded_by_browser_action) ... ok
+test_unvalidated_good_input_cannot_be_released (__main__.Interlocks.test_unvalidated_good_input_cannot_be_released) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.155s
+
+OK

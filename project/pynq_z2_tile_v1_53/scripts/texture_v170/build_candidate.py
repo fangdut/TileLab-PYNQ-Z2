@@ -106,7 +106,7 @@ def main():
     p.add_argument('--video-variant',choices=['serial','overlap_v175'],default='serial')
     p.add_argument('--video-rtl-gate',type=Path)
     p.add_argument('--full-axi-proof',type=Path)
-    p.add_argument('--clock-mhz',type=int,choices=[100,125],default=100)
+    p.add_argument('--clock-mhz',type=int,choices=[50,100,125],default=100)
     p.add_argument('--opt-directive',choices=['Default','ExploreArea','ExploreWithRemap'],default='Default')
     p.add_argument('--memory-layout',choices=['shared','split'],default='shared')
     a=p.parse_args()

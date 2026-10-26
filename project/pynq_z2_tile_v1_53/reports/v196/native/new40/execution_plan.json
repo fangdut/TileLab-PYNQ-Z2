@@ -1,0 +1,13 @@
+{
+  "source_sha256": "368f0e740aeb170ed353e44148451a179ee96eb35d14fae16499e38a1ef96ea3",
+  "dataset_plan_sha256": "0552d289a6e6e4203339d95dbbf91bdbdf8cadde0dd16173ceddaa1fe4aca955",
+  "initial_source_sha256": "0f9115327eddd06fc62f2a3de3b146534824a451f2904b6a300eec8cb2e7ab1c",
+  "source_change": "Explicit int cast resolving ap_int conditional ambiguity only; formula/spans/thresholds fixed before evaluation",
+  "thresholds": [
+    1264,
+    1858,
+    2586
+  ],
+  "scope": "OFFLINE_HLS_C_AND_FROZEN_NUMPY_REFERENCE_NOT_BOARD",
+  "new_test_files_not_used_for_fit": true
+}

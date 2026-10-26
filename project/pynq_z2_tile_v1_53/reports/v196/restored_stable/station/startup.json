@@ -1,0 +1,117 @@
+{
+  "session": "582ee8be9d334de98e4f8301fe5d1ee1",
+  "revision": 0,
+  "phase": "READY",
+  "cycle": null,
+  "error": null,
+  "connection": {
+    "verified_utc": "2026-10-26T09:22:20.918621+00:00",
+    "boot_identity": 1203768234,
+    "model_crc32": 2781797194,
+    "pl_identity": 385875969
+  },
+  "counts": {
+    "inspected": 0,
+    "good": 0,
+    "defect": 0,
+    "released": 0,
+    "segregated": 0,
+    "faults": 0,
+    "unvalidated": 0,
+    "unvalidated_removed": 0
+  },
+  "samples": [
+    {
+      "id": "6621d769324f6e05d5838381",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 01",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-48.png",
+      "sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    },
+    {
+      "id": "6621d769324f6e05d5838380",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 02",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-48.png",
+      "sha256": "770946f93f0ccd8a7595954b0861876c697729cbe05e9fafc57d0f9e8cba5ec8"
+    },
+    {
+      "id": "6621d769324f6e05d583835f",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 03",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/000-46.png",
+      "sha256": "d10be1f6ec065f83d54c03b4093d7d87dfcc77617d8eb0df9f5a053aece4becf"
+    },
+    {
+      "id": "6621d769324f6e05d583835e",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 04",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/001-46.png",
+      "sha256": "3800ee4d98148c859eb56bd5a9350ce6be768dc24fcd2203e3e36e3414defb5a"
+    },
+    {
+      "id": "6621d769324f6e05d58383b1",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 05",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-50.png",
+      "sha256": "789bf3426655aed432ea611d9c62354d6a43d13efb0acaacd27a49de851e65f6"
+    },
+    {
+      "id": "6621d769324f6e05d58383b0",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 06",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-50.png",
+      "sha256": "cb9bffe1fa32c62cec0afcf88fa17add4483b16fa2ce1b17bbd62256c576f0a3"
+    },
+    {
+      "id": "6621d769324f6e05d583839f",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 07",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-49.png",
+      "sha256": "687ee96b4b356dfa87e49b78a807dcdf026f80705801d6e670578648c5d3bba2"
+    },
+    {
+      "id": "6621d769324f6e05d583839e",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 08",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-49.png",
+      "sha256": "e6d931df7005c0e958ec4da16c606546d77e25e41e37f2b83f8135b74770ff26"
+    },
+    {
+      "id": "6621d769324f6e05d58383c3",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 09",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-51.png",
+      "sha256": "cce758df17a18b3d60e54b367bec27639dd48d83cfee1f7546d80058188ba130"
+    },
+    {
+      "id": "6621d769324f6e05d58383c2",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 10",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-51.png",
+      "sha256": "8d47f96cd4437c4848454bd60b46def1a7c470b5ee9e842891f02a346de744d2"
+    },
+    {
+      "id": "6621d769324f6e05d583836d",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 11",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/001-47.png",
+      "sha256": "5508d71470f59e96183a8035fb90d63f050f3324e4884ef03f856528a4107d13"
+    },
+    {
+      "id": "6621d769324f6e05d583836b",
+      "name": "\u5b9e\u62cd\u6837\u4f8b 12",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/002-47.png",
+      "sha256": "92293a662b469d481fc6ee6c57e933b167affe61d82245f24ce0ff17c706bc86"
+    }
+  ],
+  "events": [
+    {
+      "utc": "2026-10-26T09:22:20.905637+00:00",
+      "session": "582ee8be9d334de98e4f8301fe5d1ee1",
+      "revision": 0,
+      "cycle_id": null,
+      "event": "session_started",
+      "phase": "READY",
+      "previous_results_reusable": false
+    }
+  ],
+  "transport": "TCP original-photo input",
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "physical_actuator_connected": false,
+  "physical_tile_present": false,
+  "stop_requested": false,
+  "logical_release_requested": false,
+  "physical_actuation_verified": false,
+  "mask_is_precise_crack_trace": false
+}

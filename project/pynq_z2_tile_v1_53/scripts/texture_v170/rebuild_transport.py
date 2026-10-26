@@ -2,15 +2,19 @@
 from pathlib import Path
 import os,json,hashlib,shutil
 import vitis
+from model_identity import load_identity,require_hardware_support
 root=Path(__file__).resolve().parents[2]
 old=Path(os.environ['TILE_TEXTURE_BSP']);ws=Path(os.environ['TILE_TEXTURE_SW'])
 hw=Path(os.environ['TILE_TEXTURE_HW']);model=Path(os.environ['TILE_TEXTURE_MODEL'])
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-previous=json.loads((old/'BUILD_RESULT.json').read_text());graph=json.loads((model/'graph.json').read_text())
+previous=json.loads((old/'BUILD_RESULT.json').read_text());graph,model_header=load_identity(model)
+model_capability_proof=require_hardware_support(hw,graph)
 if sha(hw/'system.xsa')!=previous['xsa_sha256'] or sha(hw/'system.bit')!=previous['bit_sha256'] or sha(model/'model.bin')!=graph['sha256']:raise ValueError('Reused platform identity mismatch')
 if ws.exists():raise ValueError('Use new workspace')
 ws.mkdir();src=ws/'sources';src.mkdir()
-for name in ['safe_memcpy.c','lscript.ld','model_identity.h']:shutil.copy2(old/'sources'/name,src/name)
+for name in ['safe_memcpy.c','lscript.ld']:shutil.copy2(old/'sources'/name,src/name)
+# A reused BSP says nothing about the new model CRC. Never copy its old header.
+(src/'model_identity.h').write_text(model_header)
 shutil.copy2(root/'experimental/texture_v170/firmware/main.c',src/'main.c');shutil.copy2(hw/'system.xsa',ws/'system.xsa')
 platform=old/'texture_platform/export/texture_platform/texture_platform.xpfm'
 client=vitis.create_client()
@@ -26,6 +30,6 @@ try:
     app.build()
 finally:vitis.dispose()
 elf=ws/'texture_transport/build/texture_transport.elf'
-result=dict(previous);result.update(elf_sha256=sha(elf),model_sha256=graph['sha256'],sources={p.name:sha(p) for p in src.iterdir()},
+result=dict(previous);result.update(elf_sha256=sha(elf),model_sha256=graph['sha256'],model_capability_proof=model_capability_proof,sources={p.name:sha(p) for p in src.iterdir()},
     reused_platform=str(platform),reused_platform_sha256=sha(platform),profiling='PS observes PL progress/timestamps only; no detection math')
 (ws/'BUILD_RESULT.json').write_text(json.dumps(result,indent=2))

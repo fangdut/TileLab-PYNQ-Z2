@@ -1,5 +1,10 @@
 # TileLab FPGA 实拍瓷砖检测
 
+<!-- V196_CURRENT_BEGIN -->
+**V196（2026-10-26）：** FPGA前置固定ROI已在网口停驻模式通过8次坐标／背景工程核对；默认117张实板逐值一致。50 MHz时序通过，但HDMI试验无有效检测，候选不晋升，已恢复100 MHz稳定工作站。新地砖扫描图的线状分支离线只检出16/20，误报3/20，仍失败，尚未集成。不是新花色准确率验收。[完整结果](project/pynq_z2_tile_v1_53/reports/v196/status.html)。
+<!-- V196_CURRENT_END -->
+
+
 <!-- V195_CURRENT_BEGIN -->
 **V195 良品参照标定（2026-10-25）：** 不改变FPGA内核，仅更新良品参照与阈值。第二轮新40张陶瓦实板39/40判对（良品误报1/20、缺陷检出20/20），另40张已公开回归全部判对；80张评分/掩膜逐值一致。不是彩绘地砖或实体独立验收，候选不进入自动放行。[完整结果](project/pynq_z2_tile_v1_53/reports/v195/status.html) · [离线标定与部署](project/pynq_z2_tile_v1_53/tools/fpga_texture_v170/REFERENCE_CALIBRATION.md)。
 <!-- V195_CURRENT_END -->

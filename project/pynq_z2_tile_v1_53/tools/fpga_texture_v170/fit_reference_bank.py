@@ -72,7 +72,7 @@ def main():
          candidate_model_sha256=metadata['sha256'],threshold=threshold,
          only_binary_mutations=['header threshold bytes60:64',f'normal centers bytes{start}:{stop}'],
          unchanged_cnn_and_projection=True,test_scoring_started=False,
-         license_note='Inherited fixed projection from MVTec development calibration retains baseline noncommercial limitations; new normal photos CC BY4.0',
+         license_note='Inherited fixed projection retains baseline MVTec noncommercial limitations; new source terms are recorded in the frozen dataset plan, not relicensed here',
          scope=plan['scope'],physical_specimen_independence=False))
     # Test is opened only after the candidate and threshold have been frozen.
     results=[]; base_centers=torch.from_numpy(np.load(a.base/'integer_head.npz')['centers'].astype('i4'))
@@ -90,7 +90,7 @@ def main():
     summary=dict(candidate=metrics('alarm'),baseline=metrics('baseline_alarm'),threshold=threshold,
         model_sha256=metadata['sha256'],elapsed_seconds=time.monotonic()-started,
         board_verified=False,accuracy_acceptance=False,scope=plan['scope'],
-        note='Exploratory file-disjoint roof ceramic pilot; no floor-tile or independent-specimen claim')
+        note=plan.get('evaluation_note','Exploratory file-disjoint roof ceramic pilot; no floor-tile or independent-specimen claim'))
     save(a.out/'results.json',results); save(a.out/'summary.json',summary)
     print(json.dumps(summary),flush=True)
 

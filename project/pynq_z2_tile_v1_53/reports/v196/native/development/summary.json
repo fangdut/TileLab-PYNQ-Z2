@@ -1,0 +1,51 @@
+{
+  "scope": "OFFLINE_EXPOSED_DEVELOPMENT_NOT_BOARD",
+  "thresholds": {
+    "energy_weighted": [
+      1264,
+      1858,
+      2586
+    ],
+    "ratio_energy_floor": [
+      223,
+      212,
+      188
+    ],
+    "count_contrast2": [
+      160,
+      170,
+      161
+    ],
+    "gate_three_quarters": [
+      1526,
+      2252,
+      1
+    ]
+  },
+  "metrics": {
+    "energy_weighted": {
+      "tp": 18,
+      "fp": 1,
+      "tn": 19,
+      "fn": 2
+    },
+    "ratio_energy_floor": {
+      "tp": 16,
+      "fp": 0,
+      "tn": 20,
+      "fn": 4
+    },
+    "count_contrast2": {
+      "tp": 17,
+      "fp": 2,
+      "tn": 18,
+      "fn": 3
+    },
+    "gate_three_quarters": {
+      "tp": 16,
+      "fp": 0,
+      "tn": 20,
+      "fn": 4
+    }
+  }
+}

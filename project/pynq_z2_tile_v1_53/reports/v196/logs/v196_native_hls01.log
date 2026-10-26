@@ -1,0 +1,126 @@
+
+****** vitis-run v2025.2 (64-bit)
+  **** SW Build 6295257 on 2025-11-13-08:29:27
+  **** Start of session at: Sun Oct 25 22:53:51 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2025.2 6295257
+
+Sourcing Tcl script 'D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/native_line_v196/build_hls.tcl'
+
+INFO: [HLS 200-1510] Running: open_project D:/Vivado/TileLab_RealPhotos_20261020/v196_native_hls01 
+
+WARNING: [HLS 200-2182] The 'v196_native_hls01' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+
+INFO: [HLS 200-10] Creating and opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v196_native_hls01'.
+
+INFO: [HLS 200-1510] Running: open_solution solution -flow_target vivado 
+
+INFO: [HLS 200-10] Creating and opening solution 'D:/Vivado/TileLab_RealPhotos_20261020/v196_native_hls01/solution'.
+
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+
+INFO: [HLS 200-1510] Running: set_top native_line 
+
+INFO: [HLS 200-1510] Running: add_files src/native_line.cpp 
+
+INFO: [HLS 200-10] Adding design file 'src/native_line.cpp' to the project
+
+INFO: [HLS 200-1510] Running: add_files -tb src/test_native.cpp 
+
+INFO: [HLS 200-10] Adding test bench file 'src/test_native.cpp' to the project
+
+INFO: [HLS 200-1510] Running: add_files -tb pixels.bin 
+
+INFO: [HLS 200-10] Adding test bench file 'pixels.bin' to the project
+
+INFO: [HLS 200-1510] Running: add_files -tb expected.bin 
+
+INFO: [HLS 200-10] Adding test bench file 'expected.bin' to the project
+
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+
+INFO: [HLS 200-1510] Running: csim_design 
+
+INFO: [SIM 211-2] *************** CSIM start ***************
+
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+
+   Compiling ../../../src/test_native.cpp in debug mode
+   Compiling ../../../src/native_line.cpp in debug mode
+In file included from ../../../src/test_native.cpp:1:
+In file included from D:/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+1 warning generated.
+In file included from ../../../src/native_line.cpp:5:
+In file included from D:/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/2025.2/Vitis/include\gmp.h:58:9: warning: '__GMP_LIBGMP_DLL' macro redefined [-Wmacro-redefined]
+#define __GMP_LIBGMP_DLL  0
+        ^
+D:/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:142:9: note: previous definition is here
+#define __GMP_LIBGMP_DLL 1
+        ^
+../../../src/native_line.cpp:68:51: error: conditional expression is ambiguous; 'ap_int<12 aka 12>' can be converted to 'ap_int<11>' and vice versa
+                    sum+=r;energy+=ap_uint<11>(r<0?-r:r);
+                                                  ^~~ ~
+1 warning and 1 error generated.
+mingw32-make: *** [csim.mk:97: obj/native_line.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+
+INFO: [SIM 211-3] *************** CSIM finish ***************
+
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.430 MB.
+
+CSIM Failed
+
+    while executing
+
+"source D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53/experimental/native_line_v196/build_hls.tcl"
+
+    ("uplevel" body line 1)
+
+    invoked from within
+
+"uplevel \#0 [list source $tclfile] "
+
+
+
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 15 seconds. Total elapsed time: 26.134 seconds; peak allocated memory: 507.402 MB.
+
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

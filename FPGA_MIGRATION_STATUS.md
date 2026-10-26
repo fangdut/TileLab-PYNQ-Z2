@@ -1,5 +1,10 @@
 # FPGA engineering status — 2026-10-23
 
+<!-- V196_CURRENT_BEGIN -->
+V196: fixed input ROI is implemented before normalization/CNN in PL; 8 board engineering cases exact, default117 board regression exact. Actual50MHz setup+0.548ns/hold+0.050ns;100MHz candidate setup-0.370ns failed.50MHz HDMI has no valid detections; NOT promoted. Stable100MHz workstation restored. New HFENet native-line HLS-C pilot TP16/20 FP3/20, separate unit RTL only, not integrated or accepted. Runtime detection remains PL; manual-confirm stop station retained. See project/pynq_z2_tile_v1_53/reports/v196/status.html.
+<!-- V196_CURRENT_END -->
+
+
 <!-- V195_CURRENT_BEGIN -->
 V195 normal-reference transfer pilot: unchanged 100MHz BIT/XSA and751760-byte model shape; normal-only centers/threshold update. New file-disjoint roof-photo test39/40 correct (FP1/20, TP20/20); exposed40 regression40/40. All80 physical scores/masks exact. Not independent-specimen, floor or painted-material acceptance; no candidate HDMI or release qualification. See project/pynq_z2_tile_v1_53/reports/v195/status.html.
 <!-- V195_CURRENT_END -->

@@ -6,6 +6,7 @@ from verify_reset import verify
 from verify_video import verify as verify_video
 from verify_video import verify_bus_skew_report
 from verify_clock import verify as verify_clock
+from model_identity import load_identity,require_hardware_support
 root=Path(__file__).resolve().parents[2]
 ws=Path(os.environ['TILE_TEXTURE_SW']);hw=Path(os.environ['TILE_TEXTURE_HW'])
 hls=Path(os.environ['TILE_TEXTURE_HLS']);model=Path(os.environ['TILE_TEXTURE_MODEL'])
@@ -25,15 +26,15 @@ header=(hls/'solution/impl/ip/drivers/texture_integer_v1_0/src/xtexture_integer_
 for name,offset in dict(MODEL=0x10,WORK=0x1c,RGB=0x28,RESULT=0x34,WIDTH=0x40,HEIGHT=0x48).items():
     m=re.search(r'XTEXTURE_INTEGER_CONTROL_ADDR_'+name+r'_DATA\s+(0x[0-9a-fA-F]+)',header)
     if not m or int(m[1],16)!=offset:raise ValueError('HLS ABI mismatch: '+name)
-graph=json.loads((model/'graph.json').read_text())
-if sha(model/'model.bin')!=graph['sha256']:raise ValueError('Model SHA mismatch')
+graph,model_header=load_identity(model)
+model_capability_proof=require_hardware_support(hw,graph,hls)
 ws.mkdir();src=ws/'sources';src.mkdir()
 shutil.copy2(root/'experimental/texture_v170/firmware/main.c',src/'main.c')
 seed=root/'pynq_z2_tile_v1_53.sdk/ethernet_sources'
 shutil.copy2(seed/'safe_memcpy.c',src/'safe_memcpy.c')
 ld=(seed/'lscript.ld').read_text().replace('LENGTH = 0x0ff00000','LENGTH = 0x05e00000').replace('/* Tile V1.3 reserves DDR >= 0x10000000 for PL capture. */','/* V170 reserves DDR >= 0x05f00000 for PL inference and status. */')
 (src/'lscript.ld').write_text(ld)
-(src/'model_identity.h').write_text(f'#define MODEL_BYTES {graph["model_bytes"]}u\n#define MODEL_CRC {graph["crc32"]}u\n#define MODEL_GRID {graph["grid"]}u\n')
+(src/'model_identity.h').write_text(model_header)
 shutil.copy2(hw/'system.xsa',ws/'system.xsa')
 client=vitis.create_client()
 try:
@@ -56,4 +57,4 @@ try:
 finally:vitis.dispose()
 elf=ws/'texture_transport/build/texture_transport.elf'
 if not elf.is_file():raise RuntimeError('ELF not built')
-(ws/'BUILD_RESULT.json').write_text(json.dumps(dict(elf_sha256=sha(elf),xsa_sha256=sha(hw/'system.xsa'),bit_sha256=sha(hw/'system.bit'),model_sha256=graph['sha256'],reset_proof=reset_proof,clock_proof=clock_proof,video_proof=video_proof,sources={p.name:sha(p) for p in src.iterdir()},scope='ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE'),indent=2))
+(ws/'BUILD_RESULT.json').write_text(json.dumps(dict(elf_sha256=sha(elf),xsa_sha256=sha(hw/'system.xsa'),bit_sha256=sha(hw/'system.bit'),model_sha256=graph['sha256'],reset_proof=reset_proof,clock_proof=clock_proof,video_proof=video_proof,model_capability_proof=model_capability_proof,sources={p.name:sha(p) for p in src.iterdir()},scope='ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE'),indent=2))

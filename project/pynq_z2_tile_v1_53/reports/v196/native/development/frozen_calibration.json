@@ -1,0 +1,1696 @@
+{
+  "thresholds": {
+    "energy_weighted": [
+      1264,
+      1858,
+      2586
+    ],
+    "ratio_energy_floor": [
+      223,
+      212,
+      188
+    ],
+    "count_contrast2": [
+      160,
+      170,
+      161
+    ],
+    "gate_three_quarters": [
+      1526,
+      2252,
+      1
+    ]
+  },
+  "spans": [
+    2,
+    4,
+    8
+  ],
+  "calibration": [
+    {
+      "id": "cda236e767764e795f70de5a",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          631,
+          693,
+          1313
+        ],
+        "ratio_energy_floor": [
+          191,
+          152,
+          187
+        ],
+        "count_contrast2": [
+          126,
+          139,
+          154
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "0681c04a8dac554d15dea6aa",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          112,
+          212,
+          421
+        ],
+        "ratio_energy_floor": [
+          86,
+          79,
+          95
+        ],
+        "count_contrast2": [
+          97,
+          119,
+          137
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "e96a0c02cea10f2a19e5b5fb",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          113,
+          221,
+          310
+        ],
+        "ratio_energy_floor": [
+          57,
+          67,
+          78
+        ],
+        "count_contrast2": [
+          123,
+          133,
+          130
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "a74c1c3659d8960035db2959",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          561,
+          617,
+          432
+        ],
+        "ratio_energy_floor": [
+          101,
+          99,
+          80
+        ],
+        "count_contrast2": [
+          127,
+          135,
+          132
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "65001ebd8d11d546a588165e",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1038,
+          1857,
+          656
+        ],
+        "ratio_energy_floor": [
+          219,
+          211,
+          125
+        ],
+        "count_contrast2": [
+          159,
+          169,
+          141
+        ],
+        "gate_three_quarters": [
+          1209,
+          2251,
+          0
+        ]
+      }
+    },
+    {
+      "id": "a5dc568e8f85b45dd279eb9a",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          939,
+          841,
+          443
+        ],
+        "ratio_energy_floor": [
+          178,
+          151,
+          102
+        ],
+        "count_contrast2": [
+          137,
+          135,
+          135
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "91eceaf9391c3d44810ea249",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          623,
+          410,
+          656
+        ],
+        "ratio_energy_floor": [
+          108,
+          82,
+          104
+        ],
+        "count_contrast2": [
+          128,
+          128,
+          132
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "f5572470c7dd6e18a6e10ea1",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          793,
+          695,
+          925
+        ],
+        "ratio_energy_floor": [
+          203,
+          168,
+          164
+        ],
+        "count_contrast2": [
+          152,
+          146,
+          147
+        ],
+        "gate_three_quarters": [
+          1000,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "8a4143fd6a984c5299f6722b",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          488,
+          369,
+          482
+        ],
+        "ratio_energy_floor": [
+          150,
+          99,
+          95
+        ],
+        "count_contrast2": [
+          134,
+          134,
+          132
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "6a5eb6ed5c7db79d39265b84",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          488,
+          1438,
+          2581
+        ],
+        "ratio_energy_floor": [
+          93,
+          125,
+          144
+        ],
+        "count_contrast2": [
+          134,
+          140,
+          160
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "7ec27cea928e5428b4627a1c",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          456,
+          360,
+          548
+        ],
+        "ratio_energy_floor": [
+          133,
+          97,
+          114
+        ],
+        "count_contrast2": [
+          133,
+          131,
+          137
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "a6de78b7299a032dd4c7354e",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          195,
+          373,
+          288
+        ],
+        "ratio_energy_floor": [
+          105,
+          107,
+          84
+        ],
+        "count_contrast2": [
+          108,
+          126,
+          119
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "49cad958499ef66d0c333ad2",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          544,
+          837,
+          583
+        ],
+        "ratio_energy_floor": [
+          172,
+          160,
+          120
+        ],
+        "count_contrast2": [
+          135,
+          139,
+          135
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "d88d5ef3a1538ed811a4cd1d",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          422,
+          299,
+          472
+        ],
+        "ratio_energy_floor": [
+          140,
+          95,
+          112
+        ],
+        "count_contrast2": [
+          129,
+          126,
+          135
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "d97836f2efbf655b71c466f1",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          897,
+          1150,
+          1020
+        ],
+        "ratio_energy_floor": [
+          67,
+          80,
+          73
+        ],
+        "count_contrast2": [
+          131,
+          136,
+          132
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "d3a3cfe2abc56432775076d8",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          303,
+          603,
+          812
+        ],
+        "ratio_energy_floor": [
+          128,
+          128,
+          126
+        ],
+        "count_contrast2": [
+          123,
+          139,
+          134
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "a9f82a5a20ba9e574b9b2d43",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          917,
+          1380,
+          1268
+        ],
+        "ratio_energy_floor": [
+          173,
+          162,
+          152
+        ],
+        "count_contrast2": [
+          150,
+          151,
+          152
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "cd0d08b7a87828c02e609da4",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          603,
+          810,
+          1926
+        ],
+        "ratio_energy_floor": [
+          110,
+          104,
+          136
+        ],
+        "count_contrast2": [
+          142,
+          140,
+          151
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "3d960719bd88559ba08b045a",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          369,
+          447,
+          388
+        ],
+        "ratio_energy_floor": [
+          125,
+          108,
+          94
+        ],
+        "count_contrast2": [
+          127,
+          132,
+          127
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "3c441f453c14c80ce9b4b328",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1067,
+          901,
+          653
+        ],
+        "ratio_energy_floor": [
+          222,
+          145,
+          120
+        ],
+        "count_contrast2": [
+          153,
+          147,
+          137
+        ],
+        "gate_three_quarters": [
+          1227,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "a4d1f065064efb751b645291",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          523,
+          483,
+          458
+        ],
+        "ratio_energy_floor": [
+          102,
+          81,
+          77
+        ],
+        "count_contrast2": [
+          135,
+          134,
+          131
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "f636b7b30f0394a2ea313996",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          636,
+          669,
+          1348
+        ],
+        "ratio_energy_floor": [
+          124,
+          98,
+          134
+        ],
+        "count_contrast2": [
+          133,
+          131,
+          150
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "246dcc1b6bef131e130b75fe",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          405,
+          529,
+          412
+        ],
+        "ratio_energy_floor": [
+          151,
+          131,
+          102
+        ],
+        "count_contrast2": [
+          127,
+          136,
+          125
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "b7e377c6651051bf01fce24e",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          285,
+          406,
+          535
+        ],
+        "ratio_energy_floor": [
+          90,
+          93,
+          93
+        ],
+        "count_contrast2": [
+          126,
+          128,
+          129
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "6a66b4eb26a90399b0892bae",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          993,
+          1047,
+          938
+        ],
+        "ratio_energy_floor": [
+          67,
+          73,
+          76
+        ],
+        "count_contrast2": [
+          127,
+          128,
+          133
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "fd7206980bcfbb5af4212db6",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          884,
+          719,
+          693
+        ],
+        "ratio_energy_floor": [
+          172,
+          127,
+          103
+        ],
+        "count_contrast2": [
+          139,
+          136,
+          139
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "ac30a9aad75699bee0ff914a",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          566,
+          555,
+          1213
+        ],
+        "ratio_energy_floor": [
+          170,
+          135,
+          147
+        ],
+        "count_contrast2": [
+          140,
+          132,
+          144
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "b48a928b149368781c66eb80",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          139,
+          259,
+          375
+        ],
+        "ratio_energy_floor": [
+          76,
+          77,
+          86
+        ],
+        "count_contrast2": [
+          116,
+          126,
+          129
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "fa43f085b0438c191462bfbb",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          244,
+          283,
+          416
+        ],
+        "ratio_energy_floor": [
+          99,
+          84,
+          101
+        ],
+        "count_contrast2": [
+          120,
+          127,
+          126
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "4bb723a1bd9daafe01f4e4fe",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          484,
+          517,
+          711
+        ],
+        "ratio_energy_floor": [
+          153,
+          119,
+          127
+        ],
+        "count_contrast2": [
+          127,
+          131,
+          132
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "9d794043a694d2d2379d888a",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          399,
+          596,
+          504
+        ],
+        "ratio_energy_floor": [
+          112,
+          119,
+          103
+        ],
+        "count_contrast2": [
+          123,
+          127,
+          132
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "5e66d0b787c294c8064ea15b",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          627,
+          911,
+          1388
+        ],
+        "ratio_energy_floor": [
+          123,
+          114,
+          114
+        ],
+        "count_contrast2": [
+          133,
+          145,
+          150
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "e0ff268a574282a5fec28cab",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          309,
+          498,
+          460
+        ],
+        "ratio_energy_floor": [
+          142,
+          135,
+          120
+        ],
+        "count_contrast2": [
+          111,
+          130,
+          130
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "37527affe6e02ca566c12df9",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          797,
+          1367,
+          1107
+        ],
+        "ratio_energy_floor": [
+          172,
+          173,
+          133
+        ],
+        "count_contrast2": [
+          143,
+          151,
+          139
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "6b84b2db77497dfd92668fbd",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          458,
+          603,
+          894
+        ],
+        "ratio_energy_floor": [
+          126,
+          111,
+          111
+        ],
+        "count_contrast2": [
+          129,
+          129,
+          136
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "49c55fb128a9afcf78d3ed9d",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          790,
+          733,
+          730
+        ],
+        "ratio_energy_floor": [
+          200,
+          149,
+          140
+        ],
+        "count_contrast2": [
+          143,
+          143,
+          144
+        ],
+        "gate_three_quarters": [
+          1008,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "6ce7f75237485a85f0d2a69d",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          81,
+          148,
+          232
+        ],
+        "ratio_energy_floor": [
+          66,
+          62,
+          69
+        ],
+        "count_contrast2": [
+          103,
+          120,
+          132
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "460e630c1456efd661193eb4",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          967,
+          643,
+          671
+        ],
+        "ratio_energy_floor": [
+          173,
+          118,
+          112
+        ],
+        "count_contrast2": [
+          155,
+          137,
+          136
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "7b2febc891f03dab6867d910",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          502,
+          941,
+          562
+        ],
+        "ratio_energy_floor": [
+          84,
+          105,
+          82
+        ],
+        "count_contrast2": [
+          131,
+          132,
+          136
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "62dff65cfc623efe1e7b0ec9",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          268,
+          400,
+          406
+        ],
+        "ratio_energy_floor": [
+          102,
+          104,
+          105
+        ],
+        "count_contrast2": [
+          123,
+          133,
+          127
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "f761371089bae4f0ee3e215b",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1132,
+          1273,
+          1169
+        ],
+        "ratio_energy_floor": [
+          134,
+          129,
+          124
+        ],
+        "count_contrast2": [
+          142,
+          137,
+          145
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "5ea0cf3480c641f8ecaac834",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          628,
+          608,
+          1034
+        ],
+        "ratio_energy_floor": [
+          180,
+          135,
+          156
+        ],
+        "count_contrast2": [
+          142,
+          138,
+          140
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "c4f6c9b2dbab7c7e7543c24f",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          660,
+          722,
+          1774
+        ],
+        "ratio_energy_floor": [
+          121,
+          96,
+          143
+        ],
+        "count_contrast2": [
+          140,
+          133,
+          148
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "cd6af8c0cbd0bbbcd57b3368",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          90,
+          258,
+          351
+        ],
+        "ratio_energy_floor": [
+          74,
+          87,
+          96
+        ],
+        "count_contrast2": [
+          99,
+          128,
+          126
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "b6e9f1392b4d624c6863da95",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          977,
+          807,
+          848
+        ],
+        "ratio_energy_floor": [
+          180,
+          139,
+          114
+        ],
+        "count_contrast2": [
+          155,
+          139,
+          139
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "2ec542664729c07f4e29a570",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          382,
+          1029,
+          1793
+        ],
+        "ratio_energy_floor": [
+          111,
+          133,
+          137
+        ],
+        "count_contrast2": [
+          126,
+          141,
+          152
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "1a22c03be66797aa37c0089d",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1107,
+          814,
+          474
+        ],
+        "ratio_energy_floor": [
+          202,
+          156,
+          120
+        ],
+        "count_contrast2": [
+          153,
+          145,
+          132
+        ],
+        "gate_three_quarters": [
+          1398,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "21865469445651ed57a94b32",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          82,
+          207,
+          416
+        ],
+        "ratio_energy_floor": [
+          71,
+          81,
+          100
+        ],
+        "count_contrast2": [
+          106,
+          126,
+          131
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "914a5bf5a3e4684120547c69",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1210,
+          1148,
+          1081
+        ],
+        "ratio_energy_floor": [
+          189,
+          164,
+          149
+        ],
+        "count_contrast2": [
+          154,
+          147,
+          140
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "fb97a583b788ab86a6b4b846",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1012,
+          1244,
+          1860
+        ],
+        "ratio_energy_floor": [
+          181,
+          164,
+          165
+        ],
+        "count_contrast2": [
+          146,
+          148,
+          158
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "729d3e48f6277f73b182c07e",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          291,
+          314,
+          297
+        ],
+        "ratio_energy_floor": [
+          133,
+          93,
+          94
+        ],
+        "count_contrast2": [
+          116,
+          128,
+          119
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "3882da9441e83514212db11e",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          594,
+          1392,
+          2585
+        ],
+        "ratio_energy_floor": [
+          100,
+          124,
+          153
+        ],
+        "count_contrast2": [
+          140,
+          138,
+          150
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "e9539632711b49f434426ff4",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          125,
+          199,
+          337
+        ],
+        "ratio_energy_floor": [
+          97,
+          88,
+          92
+        ],
+        "count_contrast2": [
+          100,
+          117,
+          125
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "797a05ab8f3850ef25de80b9",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          507,
+          820,
+          979
+        ],
+        "ratio_energy_floor": [
+          71,
+          102,
+          102
+        ],
+        "count_contrast2": [
+          140,
+          133,
+          138
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "322f9cbe0458e049a9d72c64",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          690,
+          574,
+          605
+        ],
+        "ratio_energy_floor": [
+          116,
+          96,
+          97
+        ],
+        "count_contrast2": [
+          134,
+          134,
+          131
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "e9e78788ca031e56d26c067d",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          106,
+          284,
+          241
+        ],
+        "ratio_energy_floor": [
+          68,
+          87,
+          72
+        ],
+        "count_contrast2": [
+          108,
+          120,
+          129
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "f93f546354d6f30866eb4a02",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          187,
+          324,
+          311
+        ],
+        "ratio_energy_floor": [
+          99,
+          97,
+          81
+        ],
+        "count_contrast2": [
+          108,
+          124,
+          126
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "e420580e6b7a9803d11ef66a",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1187,
+          886,
+          857
+        ],
+        "ratio_energy_floor": [
+          186,
+          137,
+          110
+        ],
+        "count_contrast2": [
+          156,
+          140,
+          135
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "8d211e73595409db0855adf4",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          129,
+          216,
+          302
+        ],
+        "ratio_energy_floor": [
+          81,
+          80,
+          86
+        ],
+        "count_contrast2": [
+          108,
+          121,
+          130
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "ab3d2e1b142937e39e8b3065",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          613,
+          822,
+          1424
+        ],
+        "ratio_energy_floor": [
+          155,
+          139,
+          166
+        ],
+        "count_contrast2": [
+          139,
+          150,
+          152
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "dabe7731ac33c66da1694a63",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          522,
+          1060,
+          1468
+        ],
+        "ratio_energy_floor": [
+          102,
+          120,
+          125
+        ],
+        "count_contrast2": [
+          134,
+          142,
+          148
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "c651654d91f11b777a3e995e",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          1263,
+          841,
+          573
+        ],
+        "ratio_energy_floor": [
+          212,
+          160,
+          125
+        ],
+        "count_contrast2": [
+          158,
+          140,
+          135
+        ],
+        "gate_three_quarters": [
+          1525,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "3f6e4796b12cc51f2c796f1a",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          275,
+          433,
+          458
+        ],
+        "ratio_energy_floor": [
+          135,
+          116,
+          106
+        ],
+        "count_contrast2": [
+          109,
+          127,
+          122
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "07535d3e82e120495969af47",
+      "label": "good",
+      "values": {
+        "energy_weighted": [
+          408,
+          428,
+          556
+        ],
+        "ratio_energy_floor": [
+          134,
+          107,
+          128
+        ],
+        "count_contrast2": [
+          129,
+          130,
+          137
+        ],
+        "gate_three_quarters": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "scope": "Normal-only calibration; test set already exposed during CNN failure, development only"
+}

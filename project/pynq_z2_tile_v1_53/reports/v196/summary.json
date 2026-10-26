@@ -1,0 +1,30 @@
+{
+  "client_date": "2026-10-26",
+  "status": "ENGINEERING_PROGRESS_NOT_NEW_MATERIAL_ACCEPTANCE",
+  "roi_board_cases": 8,
+  "roi_board_scores_masks_exact": true,
+  "roi_new_real_accuracy_cases": 0,
+  "default_development_board_cases": 117,
+  "default_development_correct": 117,
+  "mean_pl_seconds_50mhz": 0.24104648644312954,
+  "clock_50mhz_setup_ns": 0.548,
+  "clock_50mhz_hold_ns": 0.05,
+  "clock_100mhz_setup_ns": -0.37,
+  "candidate_hdmi_passed": false,
+  "candidate_promoted_to_station": false,
+  "target_native_new40": {
+    "tp": 16,
+    "fp": 3,
+    "tn": 17,
+    "fn": 4,
+    "board_verified": false,
+    "integrated": false
+  },
+  "new_material_accuracy_accepted": false,
+  "restored_stable_boot": 1203768234,
+  "cpu_runtime_detection": false,
+  "gpu_runtime_detection": false,
+  "station_disposition": "LOGICAL_COMMANDS_WITH_MANUAL_CONFIRMATION_NO_PHYSICAL_CONVEYOR",
+  "restored_station_ui_qa_passed": true,
+  "restored_station_good_pl_seconds": 0.12469469230769231
+}

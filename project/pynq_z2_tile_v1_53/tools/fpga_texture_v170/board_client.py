@@ -36,7 +36,13 @@ class Board:
         return h,data,time.perf_counter()-start
     def upload(self,model):
         record=json.loads((model/'graph.json').read_text());path=model/'model.bin'
-        if hashlib.sha256(path.read_bytes()).hexdigest()!=record['sha256']:raise RuntimeError('Model SHA failed')
+        blob=path.read_bytes()
+        if hashlib.sha256(blob).hexdigest()!=record['sha256']:raise RuntimeError('Model SHA failed')
+        # Geometry is sealed into the model, not inferred/cropped on the PC.
+        reserved=struct.unpack_from('<7I',blob,80)
+        roi=record.get('input_roi')
+        expected=tuple(roi[k] for k in ['x','y','width','height','source_width','source_height'])+(0x19600001,) if roi else (0,)*7
+        if reserved!=expected:raise RuntimeError('Model/ROI metadata mismatch')
         for attempt in range(3):
             try:
                 h,_,_=self.request(1);break
@@ -59,6 +65,8 @@ class Board:
         with Image.open(path) as image:rgb=np.asarray(image.convert('RGB'),dtype=np.uint32)
         height,width=rgb.shape[:2]
         if not(1<=width<=1024 and 1<=height<=1024):raise ValueError('Input must be at most 1024x1024; no CPU resize fallback')
+        roi=model.get('input_roi')
+        if roi and (width,height)!=(roi['source_width'],roi['source_height']):raise ValueError('Source dimensions differ from fixed ROI calibration')
         packed=((rgb[:,:,0]<<16)|(rgb[:,:,1]<<8)|rgb[:,:,2]).astype('<u4').tobytes()
         h,data,wall=self.request(5,packed,width=width,height=height)
         if h[6]!=model['crc32'] or h[12]!=zlib.crc32(packed) or (h[13],h[14])!=(width,height):raise RuntimeError('Evidence does not match this photo/model')
@@ -67,6 +75,9 @@ class Board:
         scores=result[16:16+model['grid']*model['grid']].astype('<i4').reshape(model['grid'],model['grid'])
         mask=result[16+model['grid']*model['grid']:].reshape(height,width)
         if np.any(mask>1) or int(mask.sum())!=int(meta[6]):raise RuntimeError('PL mask consistency failed')
+        expected_roi=[roi[k] for k in ['x','y','width','height','source_width','source_height']] if roi else [0]*6
+        if list(map(int,meta[10:16]))!=expected_roi:raise RuntimeError('PL did not acknowledge the sealed input ROI')
+        if roi and int(mask.sum())!=int(mask[roi['y']:roi['y']+roi['height'],roi['x']:roi['x']+roi['width']].sum()):raise RuntimeError('PL mask escaped calibrated ROI')
         output.mkdir(parents=True,exist_ok=False)
         (output/'raw_result.bin').write_bytes(data);np.save(output/'scores.npy',scores);Image.fromarray((mask*255).astype('uint8')).save(output/'mask.png')
         original=rgb.astype('uint8');overlay=original.copy();selected=mask.astype(bool)
@@ -78,6 +89,7 @@ class Board:
             width=width,height=height,pl_image_alarm=int(meta[2]),pl_peak=float(score),pl_threshold=float(threshold),
             pl_mask_pixels=int(meta[6]),pl_completed_steps=int(meta[8]),pl_frame_sequence=int(meta[9]),ps_global_timer_ticks=h[9]+(h[10]<<32),ps_timer_hz=h[11],pl_engine_seconds=(h[9]+(h[10]<<32))/h[11] if h[11] else None,wall_seconds=wall,
             result_crc32=h[4],result_sha256=hashlib.sha256(data).hexdigest(),reply_header=list(h),cpu_detection=False,gpu_detection=False)
+        if roi:record['pl_input_roi']=roi
         (output/'evidence.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),encoding='utf8')
         print(json.dumps(record,ensure_ascii=False),flush=True);return record
     def auto_benchmark(self,frames,model,last_photo,output):

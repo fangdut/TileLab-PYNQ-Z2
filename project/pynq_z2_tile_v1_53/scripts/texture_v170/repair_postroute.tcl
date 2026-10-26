@@ -4,7 +4,7 @@ set hw [file normalize $::env(TILE_TEXTURE_HW)]
 set repair [file normalize $::env(TILE_TEXTURE_REPAIR)]
 set pl_clock_mhz 100
 set f [open $hw/implementation_status.json r];set initial_status [read $f];close $f
-if {![regexp {"pl_clock_mhz":\s*([0-9.]+)} $initial_status _ pl_clock_mhz] || $pl_clock_mhz ni {100 100.0 125 125.0}} {error "Unknown initial physical clock"}
+if {![regexp {"pl_clock_mhz":\s*([0-9.]+)} $initial_status _ pl_clock_mhz] || $pl_clock_mhz ni {50 50.0 100 100.0 125 125.0}} {error "Unknown initial physical clock"}
 set_param general.maxThreads 4
 open_project $hw/texture_v170.xpr
 open_checkpoint $hw/texture_v170.runs/impl_1/system_wrapper_routed.dcp

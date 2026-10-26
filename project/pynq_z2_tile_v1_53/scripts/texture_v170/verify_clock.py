@@ -7,7 +7,7 @@ def verify(hardware,bd_only=False):
     ps=components['ps7']['parameters']
     value=lambda name:float(ps[name]['value'])
     mhz=value('PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ')
-    if mhz not in (100,125) or abs(value('PCW_FPGA0_PERIPHERAL_FREQMHZ')-mhz)>.001:
+    if mhz not in (50,100,125) or abs(value('PCW_FPGA0_PERIPHERAL_FREQMHZ')-mhz)>.001:
         raise ValueError('Unrecognized or unrealized PL clock')
     hz=int(mhz*1000000)
     if value('PCW_CLK0_FREQ')!=hz:raise ValueError('PS fabric clock configuration disagrees')
@@ -41,8 +41,8 @@ def verify(hardware,bd_only=False):
             raise ValueError('Actual timing period differs from programmed clock configuration')
         proof=json.loads((hardware/'candidate_preflight.json').read_text())
         if proof.get('requested_pl_clock_mhz',100)!=mhz:raise ValueError('Preflight clock differs from physical implementation')
-        if mhz==125 and proof.get('hls_target_clock_ns',10)>8:
-            raise ValueError('Faster clock has no matching HLS scheduling proof')
+        if proof.get('hls_target_clock_ns',10)>1000/mhz+1e-6:
+            raise ValueError('PL clock has no matching HLS scheduling proof')
     return dict(scope='SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT',
                 pl_clock_mhz=mhz,axi_clocks_hz=checked,hpd_delay_seconds=.2 if 'hpd_startup' in components else None,
                 physical_metadata_checked=not bd_only,legacy_axi_derived_from_checked_clock=legacy_derived,

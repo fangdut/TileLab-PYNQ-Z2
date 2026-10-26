@@ -1,0 +1,62 @@
+{
+  "boot_identity": 3061469737,
+  "build": {
+    "elf_sha256": "1980317f2a6b6362c7af806e46657d3f9962f9930c73151f5b86070665b62222",
+    "xsa_sha256": "0934813e23470279d16f2a791d46fd1dab996a3f08edd1c3aacb780d53779c5c",
+    "bit_sha256": "5f4fa758f6e938934ad7ca83dbee1ed82b0167f62adb489346c1bfb878dbd854",
+    "model_sha256": "9e4485b7d69211b810f0d2fd5120bf15989cf5720463389bd929ea19610daf73",
+    "reset_proof": {
+      "auxiliary_reset_active_high": 0,
+      "auxiliary_level": 1,
+      "debug_reset": 0,
+      "clock_locked": 1,
+      "pl_reset_release_checked": true
+    },
+    "clock_proof": {
+      "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+      "pl_clock_mhz": 50.0,
+      "axi_clocks_hz": {
+        "pipeline/m_axi_control": 50000000,
+        "pipeline/m_axi_capture": 50000000,
+        "pipeline/m_axi_result": 50000000,
+        "video_regs/s_axi": 50000000
+      },
+      "hpd_delay_seconds": 0.2,
+      "physical_metadata_checked": true,
+      "legacy_axi_derived_from_checked_clock": [],
+      "bd_sha256": "5f25591fce6306c25e48680722faa5549bce5156f5fb709824fc31c7683be178"
+    },
+    "video_proof": {
+      "video": true,
+      "ps_and_pl_control_maps_match": true,
+      "memory_layout": "shared",
+      "capture_hp": 1,
+      "result_hp": 0,
+      "all_inference_ddr_maps_verified": true,
+      "read_and_write_gray_bus_skew_passed": true
+    },
+    "model_capability_proof": {
+      "implemented_hls_source_sha256": "bba853b8b7032081439427d9837a0541010777a3b829f2b7e81aaf5efd08fd02",
+      "roi_profile": true
+    },
+    "sources": {
+      "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+      "main.c": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+      "model_identity.h": "65088634ba8905b016768cd6eb47d0b96c14b540a39cc258af27cc01aa4a7873",
+      "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec"
+    },
+    "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE",
+    "reused_platform": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v196_software50_baseline01.sdk\\texture_platform\\export\\texture_platform\\texture_platform.xpfm",
+    "reused_platform_sha256": "a1dd14cd1d70141993cc8d43b5434a3f1ff5e2fca9edb57dc0528d3449f74ec2",
+    "profiling": "PS observes PL progress/timestamps only; no detection math"
+  },
+  "implementation": {
+    "setup_slack_ns": 0.548,
+    "hold_slack_ns": 0.05,
+    "drc_errors": 0,
+    "pl_clock_mhz": 50.0,
+    "pl_clock_period_ns": 20.0,
+    "dsp": 218
+  },
+  "flash_written": false
+}

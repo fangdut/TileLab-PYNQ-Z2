@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_candidate.py", line 158, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\scripts\texture_v170\build_candidate.py", line 122, in main
+    gate=module.inspect(a.video_rtl_gate,base)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Vivado\TileLab_SingleTile_V164_20261019\project\pynq_z2_tile_v1_53\experimental\video_overlap_v175\check_rtl_gate.py", line 10, in inspect
+    if actual!=gate['rtl_sources']:raise ValueError('Overlap HDL changed after passing regression')
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Overlap HDL changed after passing regression

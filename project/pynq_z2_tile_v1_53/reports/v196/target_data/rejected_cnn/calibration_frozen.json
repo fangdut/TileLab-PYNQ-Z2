@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "7845ce7c7026c955a94ff39495f21e76248306ffc3d8ae4eda7577131b6c9c4a",
+  "manifest_sha256": "de050e5858f26a04c3f76775beef9d8912972056cf5e32fcc8a059adb6a43519",
+  "base_model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "candidate_model_sha256": "5e07971833c766ff4d767b88315bffa3b9823405c2be8ade1ff5198fb2a36d32",
+  "threshold": 13964,
+  "only_binary_mutations": [
+    "header threshold bytes60:64",
+    "normal centers bytes620640:751712"
+  ],
+  "unchanged_cnn_and_projection": true,
+  "test_scoring_started": false,
+  "license_note": "Inherited fixed projection retains baseline MVTec noncommercial limitations; new source terms are recorded in the frozen dataset plan, not relicensed here",
+  "scope": "HFENET_REAL_PATTERNED_FLOOR_TILE_LINE_SCAN_CROP_PILOT_NOT_WHOLE_TILE_ACCEPTANCE",
+  "physical_specimen_independence": false
+}

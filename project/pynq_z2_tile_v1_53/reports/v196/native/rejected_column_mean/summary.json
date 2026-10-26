@@ -1,0 +1,44 @@
+{
+  "scope": "EXPOSED_HFENET_DEVELOPMENT_NOT_BOARD_OR_BLIND",
+  "thresholds": [
+    3107,
+    3760,
+    3737,
+    4840
+  ],
+  "combined": {
+    "tp": 14,
+    "fp": 1,
+    "tn": 19,
+    "fn": 6
+  },
+  "per_span": {
+    "1": {
+      "tp": 1,
+      "fp": 1,
+      "tn": 19,
+      "fn": 19
+    },
+    "2": {
+      "tp": 7,
+      "fp": 1,
+      "tn": 19,
+      "fn": 13
+    },
+    "4": {
+      "tp": 14,
+      "fp": 1,
+      "tn": 19,
+      "fn": 6
+    },
+    "8": {
+      "tp": 12,
+      "fp": 1,
+      "tn": 19,
+      "fn": 8
+    }
+  },
+  "cpu_only_offline_design": true,
+  "hardware_deployment": false,
+  "whole_tile_coverage": false
+}

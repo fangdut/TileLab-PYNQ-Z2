@@ -1,0 +1,27 @@
+{
+  "candidate": {
+    "tp": 0,
+    "fp": 0,
+    "tn": 20,
+    "fn": 20,
+    "accuracy": 0.5,
+    "normal_false_positive_rate": 0.0,
+    "defect_recall": 0.0
+  },
+  "baseline": {
+    "tp": 20,
+    "fp": 20,
+    "tn": 0,
+    "fn": 0,
+    "accuracy": 0.5,
+    "normal_false_positive_rate": 1.0,
+    "defect_recall": 1.0
+  },
+  "threshold": 13964,
+  "model_sha256": "5e07971833c766ff4d767b88315bffa3b9823405c2be8ade1ff5198fb2a36d32",
+  "elapsed_seconds": 53.48499999998603,
+  "board_verified": false,
+  "accuracy_acceptance": false,
+  "scope": "HFENET_REAL_PATTERNED_FLOOR_TILE_LINE_SCAN_CROP_PILOT_NOT_WHOLE_TILE_ACCEPTANCE",
+  "note": "Author industrial patterned-tile line scans, printing-defect labels; exact cropped views, not whole physical tiles or independent-specimen validation"
+}

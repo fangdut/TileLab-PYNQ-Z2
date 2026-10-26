@@ -1,0 +1,374 @@
+{
+  "groups": {
+    "0": {
+      "memory": 53,
+      "calibration": 29
+    },
+    "1": {
+      "memory": 5,
+      "calibration": 2
+    },
+    "2": {
+      "memory": 6,
+      "calibration": 8
+    },
+    "3": {
+      "memory": 7,
+      "calibration": 3
+    },
+    "4": {
+      "memory": 6,
+      "calibration": 2
+    },
+    "5": {
+      "memory": 14,
+      "calibration": 5
+    },
+    "6": {
+      "memory": 8,
+      "calibration": 4
+    },
+    "7": {
+      "memory": 11,
+      "calibration": 3
+    },
+    "8": {
+      "memory": 11,
+      "calibration": 3
+    },
+    "9": {
+      "memory": 7,
+      "calibration": 5
+    }
+  },
+  "calibration": [
+    {
+      "group": 0,
+      "normal": [
+        {
+          "id": "0681c04a8dac554d15dea6aa",
+          "score": 8780
+        },
+        {
+          "id": "e96a0c02cea10f2a19e5b5fb",
+          "score": 8489
+        },
+        {
+          "id": "a5dc568e8f85b45dd279eb9a",
+          "score": 8798
+        },
+        {
+          "id": "7ec27cea928e5428b4627a1c",
+          "score": 8055
+        },
+        {
+          "id": "a6de78b7299a032dd4c7354e",
+          "score": 8337
+        },
+        {
+          "id": "49cad958499ef66d0c333ad2",
+          "score": 10520
+        },
+        {
+          "id": "d88d5ef3a1538ed811a4cd1d",
+          "score": 8179
+        },
+        {
+          "id": "d3a3cfe2abc56432775076d8",
+          "score": 10739
+        },
+        {
+          "id": "3d960719bd88559ba08b045a",
+          "score": 8485
+        },
+        {
+          "id": "246dcc1b6bef131e130b75fe",
+          "score": 9579
+        },
+        {
+          "id": "b7e377c6651051bf01fce24e",
+          "score": 10727
+        },
+        {
+          "id": "b48a928b149368781c66eb80",
+          "score": 8462
+        },
+        {
+          "id": "fa43f085b0438c191462bfbb",
+          "score": 8185
+        },
+        {
+          "id": "4bb723a1bd9daafe01f4e4fe",
+          "score": 10973
+        },
+        {
+          "id": "9d794043a694d2d2379d888a",
+          "score": 10165
+        },
+        {
+          "id": "e0ff268a574282a5fec28cab",
+          "score": 10559
+        },
+        {
+          "id": "6ce7f75237485a85f0d2a69d",
+          "score": 8916
+        },
+        {
+          "id": "62dff65cfc623efe1e7b0ec9",
+          "score": 10144
+        },
+        {
+          "id": "cd6af8c0cbd0bbbcd57b3368",
+          "score": 8783
+        },
+        {
+          "id": "21865469445651ed57a94b32",
+          "score": 8805
+        },
+        {
+          "id": "914a5bf5a3e4684120547c69",
+          "score": 8906
+        },
+        {
+          "id": "729d3e48f6277f73b182c07e",
+          "score": 8131
+        },
+        {
+          "id": "e9539632711b49f434426ff4",
+          "score": 9717
+        },
+        {
+          "id": "e9e78788ca031e56d26c067d",
+          "score": 8207
+        },
+        {
+          "id": "f93f546354d6f30866eb4a02",
+          "score": 8357
+        },
+        {
+          "id": "8d211e73595409db0855adf4",
+          "score": 8337
+        },
+        {
+          "id": "ab3d2e1b142937e39e8b3065",
+          "score": 10745
+        },
+        {
+          "id": "3f6e4796b12cc51f2c796f1a",
+          "score": 10956
+        },
+        {
+          "id": "07535d3e82e120495969af47",
+          "score": 8088
+        }
+      ],
+      "threshold": 10974,
+      "centers": 1024
+    },
+    {
+      "group": 1,
+      "normal": [
+        {
+          "id": "d97836f2efbf655b71c466f1",
+          "score": 13326
+        },
+        {
+          "id": "6a66b4eb26a90399b0892bae",
+          "score": 7669
+        }
+      ],
+      "threshold": 13327,
+      "centers": 1024
+    },
+    {
+      "group": 2,
+      "normal": [
+        {
+          "id": "6a5eb6ed5c7db79d39265b84",
+          "score": 10099
+        },
+        {
+          "id": "cd0d08b7a87828c02e609da4",
+          "score": 9972
+        },
+        {
+          "id": "f636b7b30f0394a2ea313996",
+          "score": 9662
+        },
+        {
+          "id": "5e66d0b787c294c8064ea15b",
+          "score": 12663
+        },
+        {
+          "id": "c4f6c9b2dbab7c7e7543c24f",
+          "score": 9749
+        },
+        {
+          "id": "2ec542664729c07f4e29a570",
+          "score": 11276
+        },
+        {
+          "id": "3882da9441e83514212db11e",
+          "score": 9473
+        },
+        {
+          "id": "dabe7731ac33c66da1694a63",
+          "score": 10028
+        }
+      ],
+      "threshold": 12664,
+      "centers": 1024
+    },
+    {
+      "group": 3,
+      "normal": [
+        {
+          "id": "65001ebd8d11d546a588165e",
+          "score": 9216
+        },
+        {
+          "id": "8a4143fd6a984c5299f6722b",
+          "score": 9064
+        },
+        {
+          "id": "3c441f453c14c80ce9b4b328",
+          "score": 10091
+        }
+      ],
+      "threshold": 10092,
+      "centers": 1024
+    },
+    {
+      "group": 4,
+      "normal": [
+        {
+          "id": "7b2febc891f03dab6867d910",
+          "score": 9780
+        },
+        {
+          "id": "797a05ab8f3850ef25de80b9",
+          "score": 10842
+        }
+      ],
+      "threshold": 10843,
+      "centers": 1024
+    },
+    {
+      "group": 5,
+      "normal": [
+        {
+          "id": "fd7206980bcfbb5af4212db6",
+          "score": 11398
+        },
+        {
+          "id": "6b84b2db77497dfd92668fbd",
+          "score": 10088
+        },
+        {
+          "id": "b6e9f1392b4d624c6863da95",
+          "score": 9009
+        },
+        {
+          "id": "fb97a583b788ab86a6b4b846",
+          "score": 9138
+        },
+        {
+          "id": "e420580e6b7a9803d11ef66a",
+          "score": 7846
+        }
+      ],
+      "threshold": 11399,
+      "centers": 1024
+    },
+    {
+      "group": 6,
+      "normal": [
+        {
+          "id": "cda236e767764e795f70de5a",
+          "score": 9152
+        },
+        {
+          "id": "ac30a9aad75699bee0ff914a",
+          "score": 10955
+        },
+        {
+          "id": "49c55fb128a9afcf78d3ed9d",
+          "score": 10893
+        },
+        {
+          "id": "5ea0cf3480c641f8ecaac834",
+          "score": 10794
+        }
+      ],
+      "threshold": 10956,
+      "centers": 1024
+    },
+    {
+      "group": 7,
+      "normal": [
+        {
+          "id": "f5572470c7dd6e18a6e10ea1",
+          "score": 9562
+        },
+        {
+          "id": "1a22c03be66797aa37c0089d",
+          "score": 10825
+        },
+        {
+          "id": "c651654d91f11b777a3e995e",
+          "score": 8947
+        }
+      ],
+      "threshold": 10826,
+      "centers": 1024
+    },
+    {
+      "group": 8,
+      "normal": [
+        {
+          "id": "a9f82a5a20ba9e574b9b2d43",
+          "score": 11057
+        },
+        {
+          "id": "37527affe6e02ca566c12df9",
+          "score": 10425
+        },
+        {
+          "id": "460e630c1456efd661193eb4",
+          "score": 7992
+        }
+      ],
+      "threshold": 11058,
+      "centers": 1024
+    },
+    {
+      "group": 9,
+      "normal": [
+        {
+          "id": "a74c1c3659d8960035db2959",
+          "score": 9323
+        },
+        {
+          "id": "91eceaf9391c3d44810ea249",
+          "score": 7898
+        },
+        {
+          "id": "a4d1f065064efb751b645291",
+          "score": 7577
+        },
+        {
+          "id": "f761371089bae4f0ee3e215b",
+          "score": 8246
+        },
+        {
+          "id": "322f9cbe0458e049a9d72c64",
+          "score": 7434
+        }
+      ],
+      "threshold": 9324,
+      "centers": 1024
+    }
+  ],
+  "scope": "NORMAL_ONLY_REFERENCE_GROUP_DESIGN_NOT_FLOWER_GROUND_TRUTH",
+  "test_scoring_started": false
+}

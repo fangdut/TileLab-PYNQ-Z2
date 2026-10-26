@@ -1,0 +1,20 @@
+{
+  "scope": "FROZEN_CHOICE_NEW_FILE_PILOT_HLS_C_NOT_BOARD_OR_PHYSICAL_TILE_ACCEPTANCE",
+  "cases": 40,
+  "tp": 16,
+  "fp": 3,
+  "tn": 17,
+  "fn": 4,
+  "defect_recall": 0.8,
+  "normal_false_positive_rate": 0.15,
+  "defects_with_strict_gt_column_hit": 16,
+  "all_integer_stats_exact": true,
+  "board_verified": false,
+  "integrated_with_cnn": false,
+  "source_sha256": "368f0e740aeb170ed353e44148451a179ee96eb35d14fae16499e38a1ef96ea3",
+  "thresholds": [
+    1264,
+    1858,
+    2586
+  ]
+}

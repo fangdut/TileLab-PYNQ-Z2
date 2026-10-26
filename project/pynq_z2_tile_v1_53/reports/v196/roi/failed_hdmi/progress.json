@@ -1,0 +1,13 @@
+{
+  "scope": "LIMITED_DEFAULT_MODE_HDMI_SMOKE_NOT_FULL_VIDEO_ACCEPTANCE",
+  "status": "FAILED_NO_VIDEO_PROMOTION",
+  "stages": [
+    {
+      "name": "gray_live",
+      "returncode": 1
+    }
+  ],
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "error": "RuntimeError('gray_live failed')"
+}

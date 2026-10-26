@@ -1,0 +1,23 @@
+{
+  "scope": "OFFLINE_NORMAL_ONLY_ENVELOPE_DEVELOPMENT_BOTH_SETS_ALREADY_OPENED",
+  "metrics": {
+    "original40": {
+      "tp": 12,
+      "fp": 1,
+      "tn": 19,
+      "fn": 8
+    },
+    "opened_holdout40": {
+      "tp": 12,
+      "fp": 1,
+      "tn": 19,
+      "fn": 8
+    }
+  },
+  "margins": [
+    522,
+    0,
+    611
+  ],
+  "hardware_deployed": false
+}
