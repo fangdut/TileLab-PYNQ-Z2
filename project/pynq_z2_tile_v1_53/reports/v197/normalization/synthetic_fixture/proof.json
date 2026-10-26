@@ -1,0 +1,68 @@
+{
+  "scope": "SYNTHETIC_INTEGER_ARITHMETIC_NOT_TILE_ACCURACY",
+  "channels": 4,
+  "pixels_per_channel": 64,
+  "coefficient_cases": 6,
+  "coverage": [
+    "PL moment computation despite poisoned supplied moments",
+    "second frame reset",
+    "constant input",
+    "nearconstant saturating output",
+    "negative affine",
+    "variance above64bits and root above signed64",
+    "nearest-even signed ties",
+    "invalid geometry/configuration rejected"
+  ],
+  "files": [
+    {
+      "file": "coeff.bin",
+      "bytes": 192,
+      "sha256": "9d7a0cf996eeb4c9d9caa455b60ffa94008957ac2b92ed052cac385a34f9f1c5"
+    },
+    {
+      "file": "coeff2.bin",
+      "bytes": 192,
+      "sha256": "8160ddd975c3e9b8d68dae7ace4aba5b8a4f1f7ab8876bfaf5a52829e0ffdf6f"
+    },
+    {
+      "file": "coefficient_expected.bin",
+      "bytes": 288,
+      "sha256": "83d008d86b76edc95fcfcd8046ceeebaf92b5e912922d273ddf400fd67a2129c"
+    },
+    {
+      "file": "coefficient_params.bin",
+      "bytes": 384,
+      "sha256": "d24c0ad90e805b9a255f04ac3f143666cbb1688931fabc585831a69c72cf14c0"
+    },
+    {
+      "file": "output.bin",
+      "bytes": 512,
+      "sha256": "984775f98301bc61a0ea5bc2947b00d16e1bca75134fc1c98c4c8adac643bba0"
+    },
+    {
+      "file": "output2.bin",
+      "bytes": 512,
+      "sha256": "d8656925dfe6f631f59b717e472a736d9bb81bf0f130eb61c2464c3190819b24"
+    },
+    {
+      "file": "params.bin",
+      "bytes": 256,
+      "sha256": "a16e2805dee0118c21d42be31bf8848203eb9389aaf353b680e827a95dbbd15e"
+    },
+    {
+      "file": "params2.bin",
+      "bytes": 256,
+      "sha256": "a16e2805dee0118c21d42be31bf8848203eb9389aaf353b680e827a95dbbd15e"
+    },
+    {
+      "file": "pixels.bin",
+      "bytes": 512,
+      "sha256": "646324014956cec558a52f2aef5c105b401d93db827e9293e7306517d1038b9f"
+    },
+    {
+      "file": "pixels2.bin",
+      "bytes": 512,
+      "sha256": "7aa5b83ef4a18f7887881c1e50df8f7495d5d54672b0d15978ee45aa299849fb"
+    }
+  ]
+}

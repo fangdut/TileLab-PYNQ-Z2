@@ -1,0 +1,18 @@
+{
+  "scope": "STANDALONE_HLS_CSIM_VERILOG_COSIM_IP_EXPORT_NOT_FULL_DETECTOR_OR_BOARD",
+  "top": "norm_integer",
+  "source_sha256": "eb4f6c563e5d1faad28cbec98a9db7a7fe51ea24102a6ad47dd9b46a3fd56f14",
+  "cosim_sha256": "69f953ea12e1912dd04b6f4159d31b880f0f9adf9146ff762f87b114efd2371c",
+  "ip_sha256": "de7d92222cd67eca912639aaede0b9d4e0cd31ffda8e2806dfb09445f91c8e2a",
+  "resources_hls_estimates": {
+    "BRAM_18K": "7",
+    "DSP": "17",
+    "LUT": "15281",
+    "FF": "9761",
+    "EstimatedClockPeriod": "9.000"
+  },
+  "clock_target_ns": 10,
+  "clock_uncertainty_ns": 1,
+  "actual_implementation_timing_verified": false,
+  "hls_estimate_meets_requested_timing_budget": true
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "OFFLINE_INTEGER_MIGRATION_AUTHOR_DATA_NOT_BOARD_OR_INDEPENDENT_ACCEPTANCE",
+  "frozen_utc": "2026-10-26T15:29:46.246992+00:00",
+  "checkpoint_sha256": "a63b13621a2f500dcfdc58d0fc6f17213826a7ba67907aa489af24b9cf83cde8",
+  "integer_source_sha256": "34b7046e2e5434b95192a4e340ded39251ecadf4722f699dc7f05d1cc676759d",
+  "calibration_manifest_sha256": "de050e5858f26a04c3f76775beef9d8912972056cf5e32fcc8a059adb6a43519",
+  "test_manifest_sha256": "bbea16ce53483c8f173fa884536598617b9d13a6f31e0148ab21c4d41accad05",
+  "training": false,
+  "device": "CPU_OFFLINE_ONLY",
+  "activation_bits": 16,
+  "weight_bits": 16,
+  "normalization": "Integer moments; arbitrary-precision variance, integer sqrt, Q30 gamma/beta, dynamic Q36 affine, nearest-even; full graph integer geometry",
+  "mac_oracle": "Float64 exact INTEGER operands, all partial sums bounded<2**53; future RTL must verify integer hardware",
+  "new_geometry": "original256x1408; does not fit existing1024perdim station contract",
+  "margin": 2,
+  "pixel_decision": "integer final logit>0, no sigmoid hardware",
+  "author_validation_data": true
+}

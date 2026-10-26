@@ -1,5 +1,9 @@
 # FPGA engineering status — 2026-10-23
 
+<!-- V197_CURRENT_BEGIN -->
+V197: author HFENet epoch69 reproduction, no new training. Float and integer reference on80author-original scans TP40 FP0;177mask disagreements/28,835,840pixels, no clipping. NOT independent validation or board inference. Preprocessing and integer dynamic InstanceNorm standalone C/Verilog co-sim and IP exports pass. Complete new CNN/DDR engine, firmware geometry and board checks remain. Stable100MHz stop station retained. See project/pynq_z2_tile_v1_53/reports/v197/status.html.
+<!-- V197_CURRENT_END -->
+
 <!-- V196_CURRENT_BEGIN -->
 V196: fixed input ROI is implemented before normalization/CNN in PL; 8 board engineering cases exact, default117 board regression exact. Actual50MHz setup+0.548ns/hold+0.050ns;100MHz candidate setup-0.370ns failed.50MHz HDMI has no valid detections; NOT promoted. Stable100MHz workstation restored. New HFENet native-line HLS-C pilot TP16/20 FP3/20, separate unit RTL only, not integrated or accepted. Runtime detection remains PL; manual-confirm stop station retained. See project/pynq_z2_tile_v1_53/reports/v196/status.html.
 <!-- V196_CURRENT_END -->

@@ -1,0 +1,41 @@
+{
+  "scope": "EXPOSED160_OFFLINE_DEVELOPMENT",
+  "metrics": {
+    "global_ungated": {
+      "tp": 42,
+      "fp": 0,
+      "tn": 80,
+      "fn": 38
+    },
+    "global_narrow2": {
+      "tp": 3,
+      "fp": 2,
+      "tn": 78,
+      "fn": 77
+    },
+    "global_narrow1": {
+      "tp": 0,
+      "fp": 1,
+      "tn": 79,
+      "fn": 80
+    },
+    "group_ungated": {
+      "tp": 75,
+      "fp": 6,
+      "tn": 74,
+      "fn": 5
+    },
+    "group_narrow2": {
+      "tp": 14,
+      "fp": 7,
+      "tn": 73,
+      "fn": 66
+    },
+    "group_narrow1": {
+      "tp": 7,
+      "fp": 10,
+      "tn": 70,
+      "fn": 73
+    }
+  }
+}

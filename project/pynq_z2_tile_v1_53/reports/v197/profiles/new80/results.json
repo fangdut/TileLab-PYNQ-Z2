@@ -1,0 +1,931 @@
+[
+  {
+    "id": "05a7a6195b876bdee50f7090",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "40e6efdc8681a589164d719d",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "4e84c437bf3c66043648254a",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      52,
+      53
+    ]
+  },
+  {
+    "id": "27ec810470ab736a5ef368f3",
+    "label": "good",
+    "alarm": false,
+    "group": 3,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "b16c1d64c64f0fca20531abe",
+    "label": "good",
+    "alarm": true,
+    "group": 1,
+    "strict_gt_column_hit": false,
+    "vote_columns": [
+      65,
+      73
+    ]
+  },
+  {
+    "id": "fe7141648f3aac9c8cd3628d",
+    "label": "good",
+    "alarm": false,
+    "group": 1,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "e4fa4a58fbbe25c909806cfe",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      146,
+      147,
+      153,
+      154,
+      155,
+      156,
+      159,
+      160,
+      162,
+      163,
+      164
+    ]
+  },
+  {
+    "id": "e6be0fcfa8b4c20866f889f9",
+    "label": "good",
+    "alarm": false,
+    "group": 5,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "b7650d23ee05102faf36c231",
+    "label": "good",
+    "alarm": false,
+    "group": 2,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "2d8ccb3688e69cf51f24efd7",
+    "label": "good",
+    "alarm": false,
+    "group": 3,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "c52611a36a087b950f1bb3bd",
+    "label": "good",
+    "alarm": false,
+    "group": 2,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "712ad432c15206049bb0f0c4",
+    "label": "good",
+    "alarm": false,
+    "group": 3,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "55f4a36a7f17d7c7cc9fe150",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "56bba0a596ded91cd4157bed",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "140a8046520f418d770aa46a",
+    "label": "good",
+    "alarm": false,
+    "group": 7,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "6cf8448090007ede0d7de238",
+    "label": "good",
+    "alarm": false,
+    "group": 5,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "b62b0a15c240d1412b0acd44",
+    "label": "good",
+    "alarm": true,
+    "group": 1,
+    "strict_gt_column_hit": false,
+    "vote_columns": [
+      4,
+      17,
+      18,
+      53,
+      67,
+      75,
+      111,
+      119,
+      135,
+      160,
+      211,
+      219,
+      227,
+      233,
+      235
+    ]
+  },
+  {
+    "id": "7ae8ca39716b52b6307732d8",
+    "label": "good",
+    "alarm": false,
+    "group": 2,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "d298fe852f3e02623e9d6fec",
+    "label": "good",
+    "alarm": false,
+    "group": 0,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "8995a55ebdb5d34558654917",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "1bc2cc27058b5d1aa2c133c7",
+    "label": "good",
+    "alarm": false,
+    "group": 7,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "b676635a265ffe78b54dd89f",
+    "label": "good",
+    "alarm": false,
+    "group": 5,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "38fbfc8ca77c66bed9b30ce8",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "ab78c0a58d97bcb7fe1167e3",
+    "label": "good",
+    "alarm": false,
+    "group": 1,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "737b2ee70ab1a5118969b924",
+    "label": "good",
+    "alarm": false,
+    "group": 2,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "b945d160a3057c2d3bf045c7",
+    "label": "good",
+    "alarm": true,
+    "group": 1,
+    "strict_gt_column_hit": false,
+    "vote_columns": [
+      44,
+      143
+    ]
+  },
+  {
+    "id": "30f5def814e2593d317947fd",
+    "label": "good",
+    "alarm": false,
+    "group": 3,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "5adca43623ed2f6714b6a84a",
+    "label": "good",
+    "alarm": false,
+    "group": 5,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "9072c236d74b1676fe8f477d",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "915fc63299d902517afd8f96",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "994b8986d3c3c91e21e9f32a",
+    "label": "good",
+    "alarm": false,
+    "group": 7,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "007c3117d9d156fd741b7401",
+    "label": "good",
+    "alarm": false,
+    "group": 6,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "01f790effd7b2db99cf24e8f",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      98,
+      99,
+      100,
+      101,
+      103,
+      108,
+      202
+    ]
+  },
+  {
+    "id": "758f2df428c119d79c63b6f8",
+    "label": "good",
+    "alarm": false,
+    "group": 6,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "bc328c8a17298ed06efebcbc",
+    "label": "good",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "6320877059c3fae70128b903",
+    "label": "defect",
+    "alarm": true,
+    "group": 6,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      218,
+      219,
+      220
+    ]
+  },
+  {
+    "id": "6fbcc2021dea3e6593ad6c50",
+    "label": "defect",
+    "alarm": true,
+    "group": 0,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      84,
+      85,
+      86,
+      87,
+      88,
+      92
+    ]
+  },
+  {
+    "id": "dffd4dba5b05761a155a2c49",
+    "label": "good",
+    "alarm": false,
+    "group": 7,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "5badf4cd7e6e569e74c17c87",
+    "label": "good",
+    "alarm": false,
+    "group": 3,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "8cd423035576f28bd68c5521",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      36,
+      37,
+      40,
+      41
+    ]
+  },
+  {
+    "id": "9caffd7173c1a4fcd7082758",
+    "label": "good",
+    "alarm": false,
+    "group": 3,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "5a52680cca15d99b01a4729b",
+    "label": "good",
+    "alarm": false,
+    "group": 6,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "44730b04709b48c2aa5804ab",
+    "label": "good",
+    "alarm": false,
+    "group": 7,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "36701eae25ad8ac525a61f91",
+    "label": "good",
+    "alarm": false,
+    "group": 7,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "3b401e8b7dbc80d277eda379",
+    "label": "good",
+    "alarm": false,
+    "group": 3,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "98558c3646aaa56643d048e5",
+    "label": "good",
+    "alarm": false,
+    "group": 2,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "d25970bad9527597eb19d5c6",
+    "label": "defect",
+    "alarm": true,
+    "group": 5,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  {
+    "id": "413b08f65dff9a1d83953630",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      55
+    ]
+  },
+  {
+    "id": "ca9601ba57fffed7813d124d",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      212,
+      213,
+      216,
+      217
+    ]
+  },
+  {
+    "id": "d225d50aeb2e323efa2aa488",
+    "label": "defect",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "803f4b512bece1ccdcd02f9f",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      187,
+      188,
+      189,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      204,
+      205,
+      206,
+      207
+    ]
+  },
+  {
+    "id": "4be59ce6d309f248f0ba4144",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      89,
+      90,
+      91
+    ]
+  },
+  {
+    "id": "80df7dc2c2b21f3f2dde03bf",
+    "label": "defect",
+    "alarm": true,
+    "group": 0,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      166,
+      167,
+      168,
+      169
+    ]
+  },
+  {
+    "id": "4f428b8d7fe5eae3ede73fea",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      33,
+      34,
+      35,
+      36
+    ]
+  },
+  {
+    "id": "601f8b905f78065bdf7525e3",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      135,
+      136,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148
+    ]
+  },
+  {
+    "id": "8c3a30828cbddac3890a08ef",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      93,
+      94,
+      99,
+      100,
+      101,
+      102,
+      103,
+      108,
+      109
+    ]
+  },
+  {
+    "id": "a9ce38fb49d26fcc353a1e03",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      85,
+      219,
+      220,
+      221,
+      222
+    ]
+  },
+  {
+    "id": "23300a4e30d95f3945b6a604",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      28,
+      29
+    ]
+  },
+  {
+    "id": "099218407db8a17329f17fcd",
+    "label": "defect",
+    "alarm": true,
+    "group": 6,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      46,
+      49
+    ]
+  },
+  {
+    "id": "81e49022d6647827b0c43f7d",
+    "label": "defect",
+    "alarm": true,
+    "group": 0,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      56,
+      57,
+      58,
+      59
+    ]
+  },
+  {
+    "id": "2ecb246cac6b4446708d3ab7",
+    "label": "defect",
+    "alarm": true,
+    "group": 6,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      31,
+      32,
+      33,
+      34,
+      36
+    ]
+  },
+  {
+    "id": "79148df3617e1a4851793506",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      52,
+      53,
+      54
+    ]
+  },
+  {
+    "id": "0cdda1a1791d85ec7b1de780",
+    "label": "defect",
+    "alarm": false,
+    "group": 4,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "536f1f156659beaacd7ccc91",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      210,
+      211
+    ]
+  },
+  {
+    "id": "caa10444256ba7e7ec2049b3",
+    "label": "defect",
+    "alarm": true,
+    "group": 0,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      163,
+      167,
+      168,
+      169,
+      170,
+      171
+    ]
+  },
+  {
+    "id": "241ffd890335071b06cbd26f",
+    "label": "defect",
+    "alarm": true,
+    "group": 1,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      119
+    ]
+  },
+  {
+    "id": "c622f460364d6bdb36afe483",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      205,
+      206,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      222,
+      223,
+      224
+    ]
+  },
+  {
+    "id": "3669c2faf1e5a3feaf43aca7",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      96,
+      97,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      114,
+      115,
+      116
+    ]
+  },
+  {
+    "id": "f3789009427f6c4b424b191d",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      210
+    ]
+  },
+  {
+    "id": "b4a818a7214c21b0c57a4af3",
+    "label": "defect",
+    "alarm": true,
+    "group": 4,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      29
+    ]
+  },
+  {
+    "id": "ef3c2e4fe48e6ca717fe656e",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      220,
+      227,
+      228,
+      229,
+      230,
+      231,
+      241
+    ]
+  },
+  {
+    "id": "33fe0375f53a4a2ec1128ba9",
+    "label": "defect",
+    "alarm": true,
+    "group": 0,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      83,
+      84,
+      85,
+      86,
+      90
+    ]
+  },
+  {
+    "id": "e4ba876430db5d7b6a38467e",
+    "label": "defect",
+    "alarm": true,
+    "group": 3,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      20,
+      21,
+      22,
+      35
+    ]
+  },
+  {
+    "id": "e17cbbf66f3af16dbb39e8d3",
+    "label": "defect",
+    "alarm": true,
+    "group": 0,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      166,
+      167,
+      168,
+      169
+    ]
+  },
+  {
+    "id": "f7e028fb5299f8d378ae6f40",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      219,
+      220,
+      221,
+      222
+    ]
+  },
+  {
+    "id": "cf40f9c53805a26dda53bc84",
+    "label": "defect",
+    "alarm": false,
+    "group": 2,
+    "strict_gt_column_hit": false,
+    "vote_columns": []
+  },
+  {
+    "id": "13b97ab47c82cbaccb6edf0e",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      200
+    ]
+  },
+  {
+    "id": "34c97e9b90aa36175d8200df",
+    "label": "defect",
+    "alarm": true,
+    "group": 0,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      136,
+      137,
+      138,
+      140,
+      141,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      151,
+      152,
+      153,
+      154,
+      155
+    ]
+  },
+  {
+    "id": "1cd2418ba213a1abd3f1f761",
+    "label": "defect",
+    "alarm": true,
+    "group": 6,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      205,
+      212,
+      213,
+      214,
+      215
+    ]
+  },
+  {
+    "id": "3cba0ae362da8edc4b45d037",
+    "label": "defect",
+    "alarm": true,
+    "group": 2,
+    "strict_gt_column_hit": true,
+    "vote_columns": [
+      50,
+      51
+    ]
+  }
+]

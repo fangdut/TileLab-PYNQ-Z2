@@ -50,3 +50,6 @@ those candidate sources were not incorporated in the distributed test corpus.
 ## V195 reference calibration pilot
 
 The same CC BY4.0 author attribution as V194 applies to roof-photo derivatives in reports/v195; source originals are fetched separately. Report inputs were resized offline to720x720; overlays/contact sheets add visualization. Frozen base projection/model and their candidate derivatives retain baseline MVTec noncommercial/share-alike restrictions and applicable upstream weight terms. Replacing normal centers does not relicense the inherited model as MIT. Original calibration tools are MIT; vendor firmware retains its notices.
+
+
+V197: HFENet vendor code retains RobotvisionLab2021 MIT notices in experimental/hfenet_v197/vendor/LICENSE. Original TileLab integer-migration code is MIT. The original network/model is attributed to its author; source licensing does not automatically license independent photographs. HFENet photos, labels, weights, fitted binaries and raw activations are not redistributed in this checkpoint.

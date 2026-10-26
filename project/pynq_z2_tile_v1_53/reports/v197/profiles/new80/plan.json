@@ -1,0 +1,12 @@
+{
+  "scope": "FROZEN_NEW_FILE_PILOT_NOT_PHYSICAL_TILE_INDEPENDENT",
+  "freeze_sha256": "d268d4a2a6c2bb1ac820146a9782d27551ab1f856686069ed796cb4f79b98a9b",
+  "counts": {
+    "good": 40,
+    "defect": 40
+  },
+  "source": "https://github.com/RobotvisionLab/HFENet",
+  "selection": "SHA order v197-new-files; one fixed704row half per source by unchanged v196 policy; exact pixels; RGB/crop hashes exclude all prior roles",
+  "physical_specimen_independence": false,
+  "model_changed_after_test": false
+}

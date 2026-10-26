@@ -1,0 +1,88 @@
+{
+  "scope": "AUTHOR_CHECKPOINT_ON_AUTHOR_DATA_REPRODUCTION_NOT_INDEPENDENT_VALIDATION",
+  "source": {
+    "plan": {
+      "repo": "https://github.com/RobotvisionLab/HFENet",
+      "commit": "6edf57293da051a5d9d2164482f88b68ef45c11f",
+      "files": [
+        {
+          "path": "hfenet.py",
+          "sha": "9c92cc5cf1a337a762a7658df19acc4e27ed2bcd",
+          "bytes": 6100
+        },
+        {
+          "path": "main.py",
+          "sha": "81ea4e0223534e1ea4998f9b39e059fc148f3235",
+          "bytes": 8833
+        },
+        {
+          "path": "utils.py",
+          "sha": "a2948056b81b9dcd83c25a4709da036a961c6810",
+          "bytes": 1791
+        },
+        {
+          "path": "LICENSE",
+          "sha": "e4ff17a3d6744c3d42d718d0fe6abec32714d0e9",
+          "bytes": 1071
+        },
+        {
+          "path": "checkpoint/model_epoch_69.pth",
+          "sha": "5ee9e2931903e996761f51df9c68617e0931c319",
+          "bytes": 708579
+        }
+      ],
+      "checkpoint_selection": "Highest numbered published epoch69 chosen before any scores; no new training; evaluate original contract then fixed crop separately.",
+      "purpose": "OFFLINE_REFERENCE_FEASIBILITY_NOT_CPU_DEPLOYMENT"
+    },
+    "verified": [
+      {
+        "path": "hfenet.py",
+        "sha": "9c92cc5cf1a337a762a7658df19acc4e27ed2bcd",
+        "bytes": 6100,
+        "sha256": "3bba98eae8356fa7dc496b5475444bd2338696c933678c7d359500d91ea452b2"
+      },
+      {
+        "path": "main.py",
+        "sha": "81ea4e0223534e1ea4998f9b39e059fc148f3235",
+        "bytes": 8833,
+        "sha256": "4ea8d99d8a8dfdbef9ae0fd261728711c27b773699782ea195178672b2d150a1"
+      },
+      {
+        "path": "utils.py",
+        "sha": "a2948056b81b9dcd83c25a4709da036a961c6810",
+        "bytes": 1791,
+        "sha256": "4f49a1f2f6300f1cb6a62a468371bba4ee7dff2cf89112251dc5a9e2fab2a4bf"
+      },
+      {
+        "path": "LICENSE",
+        "sha": "e4ff17a3d6744c3d42d718d0fe6abec32714d0e9",
+        "bytes": 1071,
+        "sha256": "6c3734a778735029bbf4ec332548fd6d5550a623d0f2b0f44c68df9384019340"
+      },
+      {
+        "path": "checkpoint/model_epoch_69.pth",
+        "sha": "5ee9e2931903e996761f51df9c68617e0931c319",
+        "bytes": 708579,
+        "sha256": "a63b13621a2f500dcfdc58d0fc6f17213826a7ba67907aa489af24b9cf83cde8"
+      }
+    ]
+  },
+  "probability_threshold": 0.5,
+  "primary_image_rule": "any predicted pixel >0.5",
+  "secondary_rule": "predicted positive pixel count > maximum64 good calibration positive pixel counts; separate thresholds for crop and original",
+  "views": [
+    "unchanged256x704_crop",
+    "unchanged256x1408_original"
+  ],
+  "training": false,
+  "gpu_used": false,
+  "runtime_station_modified": false,
+  "checkpoint_chosen_before_smoke": true,
+  "two_crop_smoke_inputs_already_observed": true,
+  "preprocess": "Author: original grayscale, OpenCV equalizeHist, saturated uint8 add; channel stack; float32 0..255, no division by255; no resize",
+  "opencv_version": "4.10.0",
+  "torch_version": "2.14.1+cpu",
+  "author_validation_data": true,
+  "author_checkpoint_selection_overlap_unknown": true,
+  "frozen_utc": "2026-10-26T15:19:29.773831+00:00"
+}

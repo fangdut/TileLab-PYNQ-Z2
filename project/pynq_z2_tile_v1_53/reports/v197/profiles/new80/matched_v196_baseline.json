@@ -1,0 +1,414 @@
+{
+  "scope": "SAME_NEW80_OFFLINE_MATCHED_BASELINE",
+  "thresholds": [
+    1264,
+    1858,
+    2586
+  ],
+  "metrics": {
+    "tp": 38,
+    "fp": 4
+  },
+  "results": [
+    {
+      "id": "05a7a6195b876bdee50f7090",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "40e6efdc8681a589164d719d",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "4e84c437bf3c66043648254a",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "27ec810470ab736a5ef368f3",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "b16c1d64c64f0fca20531abe",
+      "label": "good",
+      "alarm": true
+    },
+    {
+      "id": "fe7141648f3aac9c8cd3628d",
+      "label": "good",
+      "alarm": true
+    },
+    {
+      "id": "e4fa4a58fbbe25c909806cfe",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "e6be0fcfa8b4c20866f889f9",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "b7650d23ee05102faf36c231",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "2d8ccb3688e69cf51f24efd7",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "c52611a36a087b950f1bb3bd",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "712ad432c15206049bb0f0c4",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "55f4a36a7f17d7c7cc9fe150",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "56bba0a596ded91cd4157bed",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "140a8046520f418d770aa46a",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "6cf8448090007ede0d7de238",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "b62b0a15c240d1412b0acd44",
+      "label": "good",
+      "alarm": true
+    },
+    {
+      "id": "7ae8ca39716b52b6307732d8",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "d298fe852f3e02623e9d6fec",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "8995a55ebdb5d34558654917",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "1bc2cc27058b5d1aa2c133c7",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "b676635a265ffe78b54dd89f",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "38fbfc8ca77c66bed9b30ce8",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "ab78c0a58d97bcb7fe1167e3",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "737b2ee70ab1a5118969b924",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "b945d160a3057c2d3bf045c7",
+      "label": "good",
+      "alarm": true
+    },
+    {
+      "id": "30f5def814e2593d317947fd",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "5adca43623ed2f6714b6a84a",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "9072c236d74b1676fe8f477d",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "915fc63299d902517afd8f96",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "994b8986d3c3c91e21e9f32a",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "007c3117d9d156fd741b7401",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "01f790effd7b2db99cf24e8f",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "758f2df428c119d79c63b6f8",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "bc328c8a17298ed06efebcbc",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "6320877059c3fae70128b903",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "6fbcc2021dea3e6593ad6c50",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "dffd4dba5b05761a155a2c49",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "5badf4cd7e6e569e74c17c87",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "8cd423035576f28bd68c5521",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "9caffd7173c1a4fcd7082758",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "5a52680cca15d99b01a4729b",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "44730b04709b48c2aa5804ab",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "36701eae25ad8ac525a61f91",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "3b401e8b7dbc80d277eda379",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "98558c3646aaa56643d048e5",
+      "label": "good",
+      "alarm": false
+    },
+    {
+      "id": "d25970bad9527597eb19d5c6",
+      "label": "defect",
+      "alarm": false
+    },
+    {
+      "id": "413b08f65dff9a1d83953630",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "ca9601ba57fffed7813d124d",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "d225d50aeb2e323efa2aa488",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "803f4b512bece1ccdcd02f9f",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "4be59ce6d309f248f0ba4144",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "80df7dc2c2b21f3f2dde03bf",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "4f428b8d7fe5eae3ede73fea",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "601f8b905f78065bdf7525e3",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "8c3a30828cbddac3890a08ef",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "a9ce38fb49d26fcc353a1e03",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "23300a4e30d95f3945b6a604",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "099218407db8a17329f17fcd",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "81e49022d6647827b0c43f7d",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "2ecb246cac6b4446708d3ab7",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "79148df3617e1a4851793506",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "0cdda1a1791d85ec7b1de780",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "536f1f156659beaacd7ccc91",
+      "label": "defect",
+      "alarm": false
+    },
+    {
+      "id": "caa10444256ba7e7ec2049b3",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "241ffd890335071b06cbd26f",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "c622f460364d6bdb36afe483",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "3669c2faf1e5a3feaf43aca7",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "f3789009427f6c4b424b191d",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "b4a818a7214c21b0c57a4af3",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "ef3c2e4fe48e6ca717fe656e",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "33fe0375f53a4a2ec1128ba9",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "e4ba876430db5d7b6a38467e",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "e17cbbf66f3af16dbb39e8d3",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "f7e028fb5299f8d378ae6f40",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "cf40f9c53805a26dda53bc84",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "13b97ab47c82cbaccb6edf0e",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "34c97e9b90aa36175d8200df",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "1cd2418ba213a1abd3f1f761",
+      "label": "defect",
+      "alarm": true
+    },
+    {
+      "id": "3cba0ae362da8edc4b45d037",
+      "label": "defect",
+      "alarm": true
+    }
+  ]
+}

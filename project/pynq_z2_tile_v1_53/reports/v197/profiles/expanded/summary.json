@@ -1,0 +1,53 @@
+{
+  "scope": "EXPOSED_80_DEVELOPMENT_ONLY",
+  "metrics": {
+    "l2_weighted": {
+      "tp": 33,
+      "fp": 2,
+      "tn": 38,
+      "fn": 7,
+      "unknown_good": 0,
+      "unknown_defect": 0
+    },
+    "l2_ratio": {
+      "tp": 33,
+      "fp": 2,
+      "tn": 38,
+      "fn": 7,
+      "unknown_good": 0,
+      "unknown_defect": 0
+    },
+    "l2_and_ratio": {
+      "tp": 31,
+      "fp": 2,
+      "tn": 38,
+      "fn": 9,
+      "unknown_good": 0,
+      "unknown_defect": 0
+    },
+    "l1_weighted": {
+      "tp": 38,
+      "fp": 3,
+      "tn": 37,
+      "fn": 2,
+      "unknown_good": 0,
+      "unknown_defect": 0
+    },
+    "l1_ratio": {
+      "tp": 32,
+      "fp": 2,
+      "tn": 38,
+      "fn": 8,
+      "unknown_good": 0,
+      "unknown_defect": 0
+    },
+    "l1_and_ratio": {
+      "tp": 32,
+      "fp": 2,
+      "tn": 38,
+      "fn": 8,
+      "unknown_good": 0,
+      "unknown_defect": 0
+    }
+  }
+}

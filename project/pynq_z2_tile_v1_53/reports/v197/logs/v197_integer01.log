@@ -1,0 +1,89 @@
+CALIBRATION 8
+CALIBRATION 16
+CALIBRATION 24
+CALIBRATION 32
+CALIBRATION 40
+CALIBRATION 48
+CALIBRATION 56
+CALIBRATION 64
+INTEGER 1 alarm False clip 0 seconds 2.3104082999925595
+INTEGER 2 alarm False clip 0 seconds 2.3468553999846336
+INTEGER 3 alarm True clip 0 seconds 2.216763600008562
+INTEGER 4 alarm False clip 0 seconds 2.2758727000036743
+INTEGER 5 alarm False clip 0 seconds 2.2830167999782134
+INTEGER 6 alarm False clip 0 seconds 2.2680476999958046
+INTEGER 7 alarm True clip 0 seconds 2.1854357000265736
+INTEGER 8 alarm False clip 0 seconds 2.328173500020057
+INTEGER 9 alarm False clip 0 seconds 2.1755266999825835
+INTEGER 10 alarm False clip 0 seconds 2.205273700004909
+INTEGER 11 alarm False clip 0 seconds 2.1952993999875616
+INTEGER 12 alarm False clip 0 seconds 2.1349330999946687
+INTEGER 13 alarm False clip 0 seconds 2.146247600001516
+INTEGER 14 alarm False clip 0 seconds 2.1557335999968927
+INTEGER 15 alarm False clip 0 seconds 2.162254800001392
+INTEGER 16 alarm False clip 0 seconds 2.0824288000003435
+INTEGER 17 alarm False clip 0 seconds 2.1053196000284515
+INTEGER 18 alarm False clip 0 seconds 2.1682774999935646
+INTEGER 19 alarm False clip 0 seconds 2.14749689999735
+INTEGER 20 alarm False clip 0 seconds 2.3711449000111315
+INTEGER 21 alarm False clip 0 seconds 2.412062599993078
+INTEGER 22 alarm False clip 0 seconds 2.3462584000080824
+INTEGER 23 alarm False clip 0 seconds 2.349847800011048
+INTEGER 24 alarm False clip 0 seconds 2.356215199979488
+INTEGER 25 alarm False clip 0 seconds 2.388762199989287
+INTEGER 26 alarm False clip 0 seconds 2.2888453000050504
+INTEGER 27 alarm False clip 0 seconds 2.2956263000087347
+INTEGER 28 alarm False clip 0 seconds 2.386372700013453
+INTEGER 29 alarm False clip 0 seconds 2.3728994999837596
+INTEGER 30 alarm False clip 0 seconds 2.4294900000095367
+INTEGER 31 alarm False clip 0 seconds 2.22537289999309
+INTEGER 32 alarm False clip 0 seconds 2.184223700023722
+INTEGER 33 alarm True clip 0 seconds 2.1260814999986906
+INTEGER 34 alarm False clip 0 seconds 2.3379906000045594
+INTEGER 35 alarm False clip 0 seconds 2.1845433000125922
+INTEGER 36 alarm True clip 0 seconds 2.1897718000109307
+INTEGER 37 alarm True clip 0 seconds 2.242417800007388
+INTEGER 38 alarm False clip 0 seconds 2.3062352999986615
+INTEGER 39 alarm False clip 0 seconds 2.1878382000140846
+INTEGER 40 alarm True clip 0 seconds 2.2859658999950625
+INTEGER 41 alarm False clip 0 seconds 2.3270226000167895
+INTEGER 42 alarm False clip 0 seconds 2.149370600003749
+INTEGER 43 alarm False clip 0 seconds 2.138708400016185
+INTEGER 44 alarm False clip 0 seconds 2.353004900011001
+INTEGER 45 alarm False clip 0 seconds 2.234219200006919
+INTEGER 46 alarm False clip 0 seconds 2.292345599998953
+INTEGER 47 alarm True clip 0 seconds 2.2682263999886345
+INTEGER 48 alarm True clip 0 seconds 2.201299400010612
+INTEGER 49 alarm True clip 0 seconds 2.3287267000123393
+INTEGER 50 alarm True clip 0 seconds 2.127084800013108
+INTEGER 51 alarm True clip 0 seconds 2.2327647999918554
+INTEGER 52 alarm True clip 0 seconds 2.2261470000084955
+INTEGER 53 alarm True clip 0 seconds 2.1888290000206325
+INTEGER 54 alarm True clip 0 seconds 2.2486500999948476
+INTEGER 55 alarm True clip 0 seconds 2.197441500000423
+INTEGER 56 alarm True clip 0 seconds 2.205033000005642
+INTEGER 57 alarm True clip 0 seconds 2.2898250999860466
+INTEGER 58 alarm True clip 0 seconds 2.3131853000086267
+INTEGER 59 alarm True clip 0 seconds 2.110493799991673
+INTEGER 60 alarm True clip 0 seconds 2.2171070000040345
+INTEGER 61 alarm True clip 0 seconds 2.3637964999943506
+INTEGER 62 alarm True clip 0 seconds 2.4226334000122733
+INTEGER 63 alarm True clip 0 seconds 2.3692355999955907
+INTEGER 64 alarm True clip 0 seconds 2.2920912000117823
+INTEGER 65 alarm True clip 0 seconds 2.3504771999723744
+INTEGER 66 alarm True clip 0 seconds 2.3287076999840792
+INTEGER 67 alarm True clip 0 seconds 2.1028156999964267
+INTEGER 68 alarm True clip 0 seconds 2.1692154000047594
+INTEGER 69 alarm True clip 0 seconds 2.1679027999925893
+INTEGER 70 alarm True clip 0 seconds 2.165324599976884
+INTEGER 71 alarm True clip 0 seconds 2.1991924999747425
+INTEGER 72 alarm True clip 0 seconds 2.219648900005268
+INTEGER 73 alarm True clip 0 seconds 2.158846700011054
+INTEGER 74 alarm True clip 0 seconds 2.1766497000062373
+INTEGER 75 alarm True clip 0 seconds 2.2698806999833323
+INTEGER 76 alarm True clip 0 seconds 2.2209289000020362
+INTEGER 77 alarm True clip 0 seconds 2.114142800011905
+INTEGER 78 alarm True clip 0 seconds 2.203910200012615
+INTEGER 79 alarm True clip 0 seconds 2.2184501999872737
+INTEGER 80 alarm True clip 0 seconds 2.321613099979004
+{"scope": "OFFLINE_INTEGER_MIGRATION_AUTHOR_DATA_NOT_BOARD_OR_INDEPENDENT_ACCEPTANCE", "cases": 80, "tp": 40, "fp": 0, "tn": 40, "fn": 0, "float_image_decisions_unchanged": true, "float_mask_disagreement": 177, "total_pixels": 28835840, "pixel_iou": 0.8167841477360004, "total_clipped_values": 0, "max_variance_bits": 61, "max_affine_coefficient_bits": 48, "board_verified": false, "rtl_full_graph_verified": false, "training": false}

@@ -1,0 +1,3247 @@
+{
+  "clip": 4,
+  "thresholds": {
+    "0": [
+      288,
+      224,
+      234
+    ],
+    "1": [
+      94,
+      95,
+      65
+    ],
+    "2": [
+      814,
+      879,
+      552
+    ],
+    "3": [
+      600,
+      313,
+      280
+    ],
+    "4": [
+      419,
+      491,
+      285
+    ],
+    "5": [
+      608,
+      384,
+      342
+    ],
+    "6": [
+      178,
+      250,
+      251
+    ],
+    "7": [
+      386,
+      293,
+      218
+    ]
+  },
+  "calibration": [
+    {
+      "id": "cda236e767764e795f70de5a",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        276,
+        182,
+        289
+      ]
+    },
+    {
+      "id": "0681c04a8dac554d15dea6aa",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        45,
+        60,
+        90
+      ]
+    },
+    {
+      "id": "e96a0c02cea10f2a19e5b5fb",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        56,
+        69,
+        49
+      ]
+    },
+    {
+      "id": "a74c1c3659d8960035db2959",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        53,
+        56,
+        51
+      ]
+    },
+    {
+      "id": "65001ebd8d11d546a588165e",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        444,
+        383,
+        139
+      ]
+    },
+    {
+      "id": "a5dc568e8f85b45dd279eb9a",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        216,
+        132,
+        77
+      ]
+    },
+    {
+      "id": "91eceaf9391c3d44810ea249",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        64,
+        60,
+        70
+      ]
+    },
+    {
+      "id": "f5572470c7dd6e18a6e10ea1",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        371,
+        236,
+        214
+      ]
+    },
+    {
+      "id": "8a4143fd6a984c5299f6722b",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        214,
+        109,
+        82
+      ]
+    },
+    {
+      "id": "6a5eb6ed5c7db79d39265b84",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        88,
+        98,
+        185
+      ]
+    },
+    {
+      "id": "7ec27cea928e5428b4627a1c",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        143,
+        77,
+        119
+      ]
+    },
+    {
+      "id": "a6de78b7299a032dd4c7354e",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        84,
+        85,
+        43
+      ]
+    },
+    {
+      "id": "49cad958499ef66d0c333ad2",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        244,
+        173,
+        90
+      ]
+    },
+    {
+      "id": "d88d5ef3a1538ed811a4cd1d",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        169,
+        63,
+        103
+      ]
+    },
+    {
+      "id": "d97836f2efbf655b71c466f1",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        41,
+        64,
+        44
+      ]
+    },
+    {
+      "id": "d3a3cfe2abc56432775076d8",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        138,
+        148,
+        112
+      ]
+    },
+    {
+      "id": "a9f82a5a20ba9e574b9b2d43",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        291,
+        171,
+        197
+      ]
+    },
+    {
+      "id": "cd0d08b7a87828c02e609da4",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        103,
+        74,
+        139
+      ]
+    },
+    {
+      "id": "3d960719bd88559ba08b045a",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        102,
+        86,
+        73
+      ]
+    },
+    {
+      "id": "3c441f453c14c80ce9b4b328",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        455,
+        161,
+        104
+      ]
+    },
+    {
+      "id": "a4d1f065064efb751b645291",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        81,
+        60,
+        48
+      ]
+    },
+    {
+      "id": "f636b7b30f0394a2ea313996",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        93,
+        63,
+        152
+      ]
+    },
+    {
+      "id": "246dcc1b6bef131e130b75fe",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        182,
+        122,
+        77
+      ]
+    },
+    {
+      "id": "b7e377c6651051bf01fce24e",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        87,
+        74,
+        62
+      ]
+    },
+    {
+      "id": "6a66b4eb26a90399b0892bae",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        22,
+        27,
+        47
+      ]
+    },
+    {
+      "id": "fd7206980bcfbb5af4212db6",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        210,
+        100,
+        87
+      ]
+    },
+    {
+      "id": "ac30a9aad75699bee0ff914a",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        215,
+        134,
+        143
+      ]
+    },
+    {
+      "id": "b48a928b149368781c66eb80",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        46,
+        57,
+        57
+      ]
+    },
+    {
+      "id": "fa43f085b0438c191462bfbb",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        76,
+        60,
+        79
+      ]
+    },
+    {
+      "id": "4bb723a1bd9daafe01f4e4fe",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        178,
+        98,
+        121
+      ]
+    },
+    {
+      "id": "9d794043a694d2d2379d888a",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        70,
+        74,
+        80
+      ]
+    },
+    {
+      "id": "5e66d0b787c294c8064ea15b",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        119,
+        97,
+        166
+      ]
+    },
+    {
+      "id": "e0ff268a574282a5fec28cab",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        153,
+        129,
+        103
+      ]
+    },
+    {
+      "id": "37527affe6e02ca566c12df9",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        263,
+        216,
+        114
+      ]
+    },
+    {
+      "id": "6b84b2db77497dfd92668fbd",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        104,
+        65,
+        66
+      ]
+    },
+    {
+      "id": "49c55fb128a9afcf78d3ed9d",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        369,
+        183,
+        158
+      ]
+    },
+    {
+      "id": "6ce7f75237485a85f0d2a69d",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        46,
+        35,
+        62
+      ]
+    },
+    {
+      "id": "460e630c1456efd661193eb4",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        264,
+        103,
+        97
+      ]
+    },
+    {
+      "id": "7b2febc891f03dab6867d910",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        55,
+        56,
+        84
+      ]
+    },
+    {
+      "id": "62dff65cfc623efe1e7b0ec9",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        72,
+        98,
+        91
+      ]
+    },
+    {
+      "id": "f761371089bae4f0ee3e215b",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        126,
+        93,
+        120
+      ]
+    },
+    {
+      "id": "5ea0cf3480c641f8ecaac834",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        290,
+        127,
+        168
+      ]
+    },
+    {
+      "id": "c4f6c9b2dbab7c7e7543c24f",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        118,
+        70,
+        133
+      ]
+    },
+    {
+      "id": "cd6af8c0cbd0bbbcd57b3368",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        51,
+        98,
+        76
+      ]
+    },
+    {
+      "id": "b6e9f1392b4d624c6863da95",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        269,
+        142,
+        102
+      ]
+    },
+    {
+      "id": "2ec542664729c07f4e29a570",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        101,
+        132,
+        154
+      ]
+    },
+    {
+      "id": "1a22c03be66797aa37c0089d",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        337,
+        207,
+        104
+      ]
+    },
+    {
+      "id": "21865469445651ed57a94b32",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        51,
+        78,
+        74
+      ]
+    },
+    {
+      "id": "914a5bf5a3e4684120547c69",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        260,
+        182,
+        131
+      ]
+    },
+    {
+      "id": "fb97a583b788ab86a6b4b846",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        246,
+        195,
+        200
+      ]
+    },
+    {
+      "id": "729d3e48f6277f73b182c07e",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        110,
+        70,
+        74
+      ]
+    },
+    {
+      "id": "3882da9441e83514212db11e",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        83,
+        80,
+        135
+      ]
+    },
+    {
+      "id": "e9539632711b49f434426ff4",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        69,
+        53,
+        54
+      ]
+    },
+    {
+      "id": "797a05ab8f3850ef25de80b9",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        67,
+        50,
+        76
+      ]
+    },
+    {
+      "id": "322f9cbe0458e049a9d72c64",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        83,
+        69,
+        68
+      ]
+    },
+    {
+      "id": "e9e78788ca031e56d26c067d",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        47,
+        39,
+        38
+      ]
+    },
+    {
+      "id": "f93f546354d6f30866eb4a02",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        56,
+        48,
+        54
+      ]
+    },
+    {
+      "id": "e420580e6b7a9803d11ef66a",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        336,
+        128,
+        74
+      ]
+    },
+    {
+      "id": "8d211e73595409db0855adf4",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        46,
+        54,
+        80
+      ]
+    },
+    {
+      "id": "ab3d2e1b142937e39e8b3065",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        205,
+        159,
+        233
+      ]
+    },
+    {
+      "id": "dabe7731ac33c66da1694a63",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        77,
+        101,
+        131
+      ]
+    },
+    {
+      "id": "c651654d91f11b777a3e995e",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        399,
+        212,
+        112
+      ]
+    },
+    {
+      "id": "3f6e4796b12cc51f2c796f1a",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        127,
+        93,
+        65
+      ]
+    },
+    {
+      "id": "07535d3e82e120495969af47",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        158,
+        83,
+        123
+      ]
+    },
+    {
+      "id": "8ccea0e88f2068d929932bd9",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        483,
+        162,
+        131
+      ]
+    },
+    {
+      "id": "9f1eeccdcb659123da8d1a7f",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        236,
+        131,
+        75
+      ]
+    },
+    {
+      "id": "e0ff44fd48822770bff062fb",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        212,
+        156,
+        114
+      ]
+    },
+    {
+      "id": "e512bfa080df603b9bbcb9ca",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        172,
+        78,
+        61
+      ]
+    },
+    {
+      "id": "2e80620598d1e91b9c064ca5",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        353,
+        182,
+        151
+      ]
+    },
+    {
+      "id": "e504bf79a3a1e1b03ce71784",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        87,
+        90,
+        77
+      ]
+    },
+    {
+      "id": "a5eccbd7f19c971a90fea0ba",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        241,
+        267,
+        113
+      ]
+    },
+    {
+      "id": "ed8447c0075f0f8c9515484d",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        49,
+        47,
+        46
+      ]
+    },
+    {
+      "id": "088f9d4ea19abe4cac381223",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        36,
+        42,
+        39
+      ]
+    },
+    {
+      "id": "74793d7b9dae79874f9763a1",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        55,
+        63,
+        134
+      ]
+    },
+    {
+      "id": "a7d3650521031c8d9c4bd99b",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        178,
+        92,
+        75
+      ]
+    },
+    {
+      "id": "ddaa8529cd9bc41f536b667b",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        243,
+        278,
+        191
+      ]
+    },
+    {
+      "id": "b3d7965821c0f353b71abe24",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        197,
+        152,
+        114
+      ]
+    },
+    {
+      "id": "3b9570e5a1feb847a22786e3",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        81,
+        65,
+        55
+      ]
+    },
+    {
+      "id": "2abe99c2de871754635b1f5c",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        39,
+        58,
+        53
+      ]
+    },
+    {
+      "id": "6c995ffd8fdd6e9acd32c610",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        115,
+        118,
+        111
+      ]
+    },
+    {
+      "id": "f0694090477cd2c6a633a924",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        332,
+        158,
+        112
+      ]
+    },
+    {
+      "id": "33e1060c9b522a17b00f8520",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        168,
+        156,
+        37
+      ]
+    },
+    {
+      "id": "9f5462bf9e3f7d3d5e4b1cb1",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        58,
+        53,
+        64
+      ]
+    },
+    {
+      "id": "42bbc3a611148f652cb31068",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        107,
+        106,
+        66
+      ]
+    },
+    {
+      "id": "8be5865e4b2b35afcdf2e72a",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        71,
+        91,
+        78
+      ]
+    },
+    {
+      "id": "1aac7592ab6d16414fe04da1",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        418,
+        151,
+        139
+      ]
+    },
+    {
+      "id": "08f214420bfc33444c92934e",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        91,
+        96,
+        56
+      ]
+    },
+    {
+      "id": "a2b939a8de85a286441df398",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        276,
+        163,
+        119
+      ]
+    },
+    {
+      "id": "30d17a25126f23eba979d6ec",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        397,
+        224,
+        193
+      ]
+    },
+    {
+      "id": "911426c00ced546fd9a40b1c",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        69,
+        46,
+        42
+      ]
+    },
+    {
+      "id": "b364ad5923e8a44faff2ddc8",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        425,
+        191,
+        159
+      ]
+    },
+    {
+      "id": "c8e344d305ff55fdc5220ab0",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        188,
+        223,
+        92
+      ]
+    },
+    {
+      "id": "00792fe9435409ac4f1c8e3f",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        276,
+        100,
+        118
+      ]
+    },
+    {
+      "id": "e054ccef42db138ef4f55844",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        67,
+        57,
+        118
+      ]
+    },
+    {
+      "id": "889e5708e8ba4f96004dc5f1",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        70,
+        60,
+        65
+      ]
+    },
+    {
+      "id": "abf0e9d25e1352840738bdc3",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        257,
+        147,
+        119
+      ]
+    },
+    {
+      "id": "3794fcff0ed1135746f951b2",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        48,
+        63,
+        47
+      ]
+    },
+    {
+      "id": "0bcf23fc226ec178e0861ada",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        136,
+        129,
+        69
+      ]
+    },
+    {
+      "id": "118f28ddfadfab5ae75777d8",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        110,
+        144,
+        80
+      ]
+    },
+    {
+      "id": "41e1f65a048b17093ff010ad",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        147,
+        134,
+        90
+      ]
+    },
+    {
+      "id": "a7db82efdca35ce9b0c702c2",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        386,
+        207,
+        160
+      ]
+    },
+    {
+      "id": "e73ad4a7562d4be36c26fcd2",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        55,
+        79,
+        52
+      ]
+    },
+    {
+      "id": "84c575fe0738a3f1ca2b7e59",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        126,
+        84,
+        95
+      ]
+    },
+    {
+      "id": "1648196597a15cd454c1b192",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        58,
+        56,
+        36
+      ]
+    },
+    {
+      "id": "68ff91930348282f1c1ef272",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        229,
+        148,
+        203
+      ]
+    },
+    {
+      "id": "fd48a3ec849681606009d101",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        56,
+        61,
+        93
+      ]
+    },
+    {
+      "id": "788ac8fda914acb0dbec21a6",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        110,
+        140,
+        119
+      ]
+    },
+    {
+      "id": "e98576d0e29bb891f6420e1f",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        392,
+        100,
+        133
+      ]
+    },
+    {
+      "id": "335166c79c60bf4384f09688",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        205,
+        125,
+        58
+      ]
+    },
+    {
+      "id": "4cf29335d7f8f62cd40a400d",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        304,
+        258,
+        205
+      ]
+    },
+    {
+      "id": "3f1228dd3ca520db3d562c36",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        210,
+        112,
+        108
+      ]
+    },
+    {
+      "id": "da5b11f792f66113ec72f30f",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        287,
+        220,
+        167
+      ]
+    },
+    {
+      "id": "9558fa1d054c959f3993ab33",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        663,
+        521,
+        551
+      ]
+    },
+    {
+      "id": "b21c3ecf01f88dc484b79462",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        133,
+        92,
+        95
+      ]
+    },
+    {
+      "id": "d5abd76bc5556f11238ee9e7",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        258,
+        149,
+        221
+      ]
+    },
+    {
+      "id": "31d89f7b46b6564a780895ea",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        117,
+        119,
+        89
+      ]
+    },
+    {
+      "id": "74cfbf1398b4d3c963bff937",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        60,
+        83,
+        138
+      ]
+    },
+    {
+      "id": "12717202038e2226a76e802e",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        174,
+        120,
+        125
+      ]
+    },
+    {
+      "id": "d6193df38b2c3b23b2a55cbd",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        67,
+        86,
+        58
+      ]
+    },
+    {
+      "id": "d8733df9a54f281081d9c78f",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        316,
+        161,
+        122
+      ]
+    },
+    {
+      "id": "99965a7f943ab2aaab10a474",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        385,
+        186,
+        140
+      ]
+    },
+    {
+      "id": "f982411216d947ad88837f9b",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        93,
+        54,
+        45
+      ]
+    },
+    {
+      "id": "5a3405c72e7411a754ffab9f",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        156,
+        115,
+        124
+      ]
+    },
+    {
+      "id": "e99cb5d3f1d0e8548bbae104",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        311,
+        166,
+        138
+      ]
+    },
+    {
+      "id": "f6d0c0550d2adbe50eeaf93f",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        387,
+        177,
+        200
+      ]
+    },
+    {
+      "id": "0b3bbcd6761d62de92e9ae02",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        38,
+        47,
+        41
+      ]
+    },
+    {
+      "id": "c27e37a6c9e4f32a8c0fa149",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        377,
+        292,
+        179
+      ]
+    },
+    {
+      "id": "dbfa81f24feef98398ae595d",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        402,
+        164,
+        65
+      ]
+    },
+    {
+      "id": "11fd669110eaecac729d200d",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        38,
+        37,
+        69
+      ]
+    },
+    {
+      "id": "8d58f18f156e490ac17ae200",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        79,
+        59,
+        51
+      ]
+    },
+    {
+      "id": "de472735743ab74cfad750b0",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        47,
+        51,
+        72
+      ]
+    },
+    {
+      "id": "51981228a1f4ff077a02464a",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        234,
+        102,
+        55
+      ]
+    },
+    {
+      "id": "cb10cabe86064fe4df08fb39",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        72,
+        58,
+        56
+      ]
+    },
+    {
+      "id": "46d0d38e9eed96687468a038",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        130,
+        95,
+        128
+      ]
+    },
+    {
+      "id": "14d71745884ab90638b41dff",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        90,
+        89,
+        80
+      ]
+    },
+    {
+      "id": "b45c6e08a95cc4b0ea35eb66",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        139,
+        114,
+        96
+      ]
+    },
+    {
+      "id": "20ee7201dde5b1e2d6aed39e",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        32,
+        49,
+        33
+      ]
+    },
+    {
+      "id": "d4d4a24f19c49cd8898b55c7",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        599,
+        312,
+        141
+      ]
+    },
+    {
+      "id": "05becc1d4cca566333d588e0",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        98,
+        131,
+        136
+      ]
+    },
+    {
+      "id": "17f55f99c438cea803ab85f4",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        63,
+        59,
+        64
+      ]
+    },
+    {
+      "id": "6ed2d8845258f59232f9dbad",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        46,
+        39,
+        92
+      ]
+    },
+    {
+      "id": "494261bd7683e4bbb8e91926",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        239,
+        112,
+        113
+      ]
+    },
+    {
+      "id": "7407ed5971f44ab4e53ea1e9",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        381,
+        353,
+        236
+      ]
+    },
+    {
+      "id": "a59d4bcc8506bc789ad2540a",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        257,
+        103,
+        268
+      ]
+    },
+    {
+      "id": "84a061767e8433608bee3f61",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        139,
+        95,
+        88
+      ]
+    },
+    {
+      "id": "e2e27beb111625201b46a881",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        385,
+        490,
+        284
+      ]
+    },
+    {
+      "id": "595222f11eb411b9769dad00",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        239,
+        164,
+        116
+      ]
+    },
+    {
+      "id": "19261a4f70655d98c20b9e08",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        340,
+        121,
+        110
+      ]
+    },
+    {
+      "id": "8633402451058a1982d140e6",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        151,
+        88,
+        112
+      ]
+    },
+    {
+      "id": "7a981300e71be7b48a9f812e",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        365,
+        160,
+        127
+      ]
+    },
+    {
+      "id": "d47b424309ec1e6a717b59f6",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        417,
+        208,
+        169
+      ]
+    },
+    {
+      "id": "635329af9f0f06864197b33f",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        256,
+        133,
+        124
+      ]
+    },
+    {
+      "id": "a92b88e48717ecb15068ddb4",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        417,
+        221,
+        241
+      ]
+    },
+    {
+      "id": "ae1749ff2ab4abe7118c2d80",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        79,
+        49,
+        32
+      ]
+    },
+    {
+      "id": "3b274ba84cf292d32faf8ea5",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        33,
+        53,
+        74
+      ]
+    },
+    {
+      "id": "4dfb129fb89a412491e37758",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        264,
+        191,
+        217
+      ]
+    },
+    {
+      "id": "117e5dabe400694be413b89a",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        145,
+        129,
+        130
+      ]
+    },
+    {
+      "id": "9049c174a978914edbad4078",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        196,
+        120,
+        148
+      ]
+    },
+    {
+      "id": "d1a7008939d29cf3aa8b8420",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        526,
+        288,
+        210
+      ]
+    },
+    {
+      "id": "fd51a951c6666a3f279acb5c",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        151,
+        133,
+        83
+      ]
+    },
+    {
+      "id": "3ea0bc97abc7a9a80cedbf50",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        41,
+        35,
+        40
+      ]
+    },
+    {
+      "id": "b9545887088c0510d56778c7",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        408,
+        207,
+        147
+      ]
+    },
+    {
+      "id": "4538ef7fee2b08d2bfd7abe3",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        203,
+        144,
+        122
+      ]
+    },
+    {
+      "id": "1882a82fb33a1aa2800ac1fd",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        101,
+        122,
+        155
+      ]
+    },
+    {
+      "id": "aceab02e246d32104e905a86",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        340,
+        147,
+        104
+      ]
+    },
+    {
+      "id": "0b6a587e825825e255474f87",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        119,
+        174,
+        41
+      ]
+    },
+    {
+      "id": "cf36b8405904d6034ab34907",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        86,
+        88,
+        55
+      ]
+    },
+    {
+      "id": "2c59df0d4cf51493d04c386b",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        182,
+        153,
+        93
+      ]
+    },
+    {
+      "id": "d9c8aba94c12648e61e33b62",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        607,
+        245,
+        341
+      ]
+    },
+    {
+      "id": "48094e75a09abb1f2ae5aae7",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        188,
+        78,
+        76
+      ]
+    },
+    {
+      "id": "38c9138d908657cdb59fb975",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        219,
+        228,
+        118
+      ]
+    },
+    {
+      "id": "7c1415fbaca3fd10a4e7cbab",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        274,
+        124,
+        165
+      ]
+    },
+    {
+      "id": "26afe9a73d974504afc81313",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        260,
+        211,
+        131
+      ]
+    },
+    {
+      "id": "61a48e5539171c38238c1024",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        162,
+        92,
+        76
+      ]
+    },
+    {
+      "id": "5b41a0cca12370f33b2bcba0",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        88,
+        95,
+        96
+      ]
+    },
+    {
+      "id": "d0a27e2f4d4678cce1513800",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        240,
+        115,
+        105
+      ]
+    },
+    {
+      "id": "75e693cd3e5ccaff466c274b",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        69,
+        76,
+        74
+      ]
+    },
+    {
+      "id": "ed926ed88ab4ceae5819631b",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        73,
+        67,
+        51
+      ]
+    },
+    {
+      "id": "f439c251f14eea635761e5f8",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        331,
+        231,
+        164
+      ]
+    },
+    {
+      "id": "c976b58b6882ed54ece85d7a",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        227,
+        180,
+        97
+      ]
+    },
+    {
+      "id": "61befc438fba86468f69c6a1",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        150,
+        87,
+        115
+      ]
+    },
+    {
+      "id": "76103a40f48e225c566c5520",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        350,
+        154,
+        187
+      ]
+    },
+    {
+      "id": "1970dbc1d9523f67c62310b9",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        96,
+        172,
+        65
+      ]
+    },
+    {
+      "id": "5b25a4da6a348deb3c8d1946",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        381,
+        202,
+        212
+      ]
+    },
+    {
+      "id": "6bbc1643cf8c3cecf5919946",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        145,
+        194,
+        178
+      ]
+    },
+    {
+      "id": "81ea78a30a950ed7101bc9ba",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        104,
+        53,
+        109
+      ]
+    },
+    {
+      "id": "3a2383571900cf7992ab3673",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        204,
+        121,
+        73
+      ]
+    },
+    {
+      "id": "31a468c8fe25e1ee58cf199b",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        294,
+        160,
+        123
+      ]
+    },
+    {
+      "id": "2a76ec7e445e2b2477a124a5",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        83,
+        86,
+        54
+      ]
+    },
+    {
+      "id": "5087321204ee16216526aa76",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        44,
+        69,
+        58
+      ]
+    },
+    {
+      "id": "35d5a95bbcd8fb177dade69f",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        245,
+        190,
+        123
+      ]
+    },
+    {
+      "id": "bd566d4cac9e3e1eb042e245",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        77,
+        56,
+        101
+      ]
+    },
+    {
+      "id": "5ece3feae9ac7a5bd8f91e5f",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        130,
+        77,
+        70
+      ]
+    },
+    {
+      "id": "d6fce71c66ed25a7d33c5860",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        97,
+        72,
+        94
+      ]
+    },
+    {
+      "id": "dc4ef44a464062abfac0edfc",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        72,
+        49,
+        36
+      ]
+    },
+    {
+      "id": "151a38acfee28ae07edd9d84",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        84,
+        87,
+        45
+      ]
+    },
+    {
+      "id": "ee7cbacbc7870b13176fded2",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        106,
+        84,
+        94
+      ]
+    },
+    {
+      "id": "15acea95db0f00d05d36517d",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        97,
+        178,
+        134
+      ]
+    },
+    {
+      "id": "430086cdf0f80fc620e55876",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        103,
+        82,
+        98
+      ]
+    },
+    {
+      "id": "083bb8a7b69885c4f1485a8f",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        234,
+        209,
+        113
+      ]
+    },
+    {
+      "id": "2d58f0ccad364ed13c870f91",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        37,
+        43,
+        78
+      ]
+    },
+    {
+      "id": "b1c289bf337e5b0e427f7809",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        124,
+        95,
+        106
+      ]
+    },
+    {
+      "id": "c6c24ef69ed5a3770d91fc90",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        41,
+        46,
+        58
+      ]
+    },
+    {
+      "id": "f48c75a6fe0896de71bd8300",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        301,
+        126,
+        101
+      ]
+    },
+    {
+      "id": "a8c91153030a42c67a19881d",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        170,
+        165,
+        81
+      ]
+    },
+    {
+      "id": "816641c7de489be4672a7b38",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        185,
+        92,
+        132
+      ]
+    },
+    {
+      "id": "39e41c36d7b3ce2c08c94c02",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        177,
+        249,
+        250
+      ]
+    },
+    {
+      "id": "9a47831d86c09be04b504c7a",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        149,
+        74,
+        76
+      ]
+    },
+    {
+      "id": "0a24f25f1d5b685a6fc52b97",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        94,
+        61,
+        75
+      ]
+    },
+    {
+      "id": "317eaf50b42ba19b8fbd3f1b",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        249,
+        273,
+        202
+      ]
+    },
+    {
+      "id": "2fc2228a38355a1080ce0a5b",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        366,
+        238,
+        187
+      ]
+    },
+    {
+      "id": "5ee2050039a7ee83d667f474",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        299,
+        146,
+        166
+      ]
+    },
+    {
+      "id": "fbd41b51ad5637d22f287aa3",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        68,
+        50,
+        52
+      ]
+    },
+    {
+      "id": "5cf57d66880e0183e60ebadd",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        260,
+        216,
+        120
+      ]
+    },
+    {
+      "id": "61e2c276329846dcc731713a",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        278,
+        142,
+        161
+      ]
+    },
+    {
+      "id": "feb3eba19a6f854117e89750",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        297,
+        189,
+        155
+      ]
+    },
+    {
+      "id": "8257ec6f1143fc76f6fd028f",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        358,
+        159,
+        95
+      ]
+    },
+    {
+      "id": "0ae0e97484062c2fd19a3575",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        418,
+        186,
+        279
+      ]
+    },
+    {
+      "id": "525c2c357dc916c7a561886d",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        161,
+        106,
+        60
+      ]
+    },
+    {
+      "id": "80f4a96a00e89c1bec624447",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        105,
+        81,
+        133
+      ]
+    },
+    {
+      "id": "c9f83f8e7af0bd194d701765",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        101,
+        69,
+        91
+      ]
+    },
+    {
+      "id": "2738379df581ac4136315718",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        110,
+        63,
+        92
+      ]
+    },
+    {
+      "id": "af36263a19738bbc28d215b5",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        483,
+        248,
+        180
+      ]
+    },
+    {
+      "id": "7516adaacfb22eedc2776c16",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        42,
+        40,
+        54
+      ]
+    },
+    {
+      "id": "649b588c337269a0f4842e49",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        74,
+        50,
+        55
+      ]
+    },
+    {
+      "id": "aab8675cab2ca7e6462677d3",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        235,
+        180,
+        172
+      ]
+    },
+    {
+      "id": "aa97d59e7381dd2be42643c4",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        194,
+        137,
+        130
+      ]
+    },
+    {
+      "id": "34e3c33a1fef011546ccde2d",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        219,
+        120,
+        122
+      ]
+    },
+    {
+      "id": "9aa9727a05325f11804d0ca4",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        326,
+        166,
+        194
+      ]
+    },
+    {
+      "id": "1c62c31ef4932dfcc7d17b4e",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        106,
+        49,
+        81
+      ]
+    },
+    {
+      "id": "82a3b95e1916226520847ed9",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        160,
+        112,
+        69
+      ]
+    },
+    {
+      "id": "a973d4d6c615d1310c5a6d2a",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        106,
+        61,
+        83
+      ]
+    },
+    {
+      "id": "3e0e2396091ebb206035dbb8",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        97,
+        87,
+        93
+      ]
+    },
+    {
+      "id": "eb3f49fbebded6e8b1d8062a",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        359,
+        195,
+        121
+      ]
+    },
+    {
+      "id": "e59532803cabf5e687196428",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        67,
+        73,
+        79
+      ]
+    },
+    {
+      "id": "508e74ad9009903043ebe6aa",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        153,
+        117,
+        79
+      ]
+    },
+    {
+      "id": "a092445a026f9e636afa977f",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        154,
+        124,
+        165
+      ]
+    },
+    {
+      "id": "4d400e7a95b5dd4c8e8deed5",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        338,
+        232,
+        104
+      ]
+    },
+    {
+      "id": "f0f00792eeb39a7ded194e28",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        201,
+        119,
+        146
+      ]
+    },
+    {
+      "id": "ef02c321ab7846a83189954e",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        368,
+        148,
+        195
+      ]
+    },
+    {
+      "id": "d4f1a7e1ac60cd2c83120dc9",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        255,
+        94,
+        86
+      ]
+    },
+    {
+      "id": "c4e72aa683dc0c5be56bc9d3",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        162,
+        95,
+        73
+      ]
+    },
+    {
+      "id": "ced4071a923df1a4933e04d9",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        89,
+        77,
+        69
+      ]
+    },
+    {
+      "id": "72b100501bda80668e88242a",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        84,
+        142,
+        80
+      ]
+    },
+    {
+      "id": "3709bf20d6f2296d90ba9758",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        35,
+        40,
+        55
+      ]
+    },
+    {
+      "id": "cab0b9e0554f9dcfffbe85bc",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        269,
+        153,
+        173
+      ]
+    },
+    {
+      "id": "88302d278768f6af34e8ea3c",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        48,
+        94,
+        34
+      ]
+    },
+    {
+      "id": "bc2205f6cd435f49d881c541",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        151,
+        162,
+        116
+      ]
+    },
+    {
+      "id": "89e396df763d7f2a926ee01f",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        58,
+        48,
+        29
+      ]
+    },
+    {
+      "id": "5585edd843b4dc66ee1d1238",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        455,
+        145,
+        146
+      ]
+    },
+    {
+      "id": "e5d545533656371d3cfd1666",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        107,
+        92,
+        126
+      ]
+    },
+    {
+      "id": "acd6ec5c9f805aa5e1e073dc",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        60,
+        46,
+        87
+      ]
+    },
+    {
+      "id": "a6456a3bd6de23df51ff090e",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        268,
+        207,
+        160
+      ]
+    },
+    {
+      "id": "e6aad83fd1f36b341b075fd5",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        104,
+        89,
+        48
+      ]
+    },
+    {
+      "id": "8a09798b3aa41cc95cab9678",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        111,
+        121,
+        102
+      ]
+    },
+    {
+      "id": "ec078f2a5c9559b18b7abdb4",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        93,
+        54,
+        72
+      ]
+    },
+    {
+      "id": "1d08a8b198b74d5ecc7b1852",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        44,
+        55,
+        79
+      ]
+    },
+    {
+      "id": "30667af4a85be8e03d294ce4",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        221,
+        100,
+        89
+      ]
+    },
+    {
+      "id": "83cc4e2b7cfce139d4bef4f2",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        36,
+        45,
+        33
+      ]
+    },
+    {
+      "id": "b7aceef712e9b8d2dc523851",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        56,
+        77,
+        48
+      ]
+    },
+    {
+      "id": "0b25d4314cc309c614f57f64",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        377,
+        211,
+        128
+      ]
+    },
+    {
+      "id": "3081a1c6f4fe7e2088af04e4",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        185,
+        139,
+        74
+      ]
+    },
+    {
+      "id": "07a7ad7893a2159b79da0244",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        313,
+        247,
+        150
+      ]
+    },
+    {
+      "id": "b7996fccc8f90213515d75df",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        175,
+        156,
+        149
+      ]
+    },
+    {
+      "id": "6ee80a61a6399acf7d04513f",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        286,
+        140,
+        91
+      ]
+    },
+    {
+      "id": "d41920cda104bb87a44dfe89",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        299,
+        142,
+        105
+      ]
+    },
+    {
+      "id": "c291e79d407d8b2e14cd018f",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        73,
+        71,
+        94
+      ]
+    },
+    {
+      "id": "6e8ebfe98009978fe6fff09f",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        344,
+        133,
+        60
+      ]
+    },
+    {
+      "id": "e274259eca575114ddea47ef",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        182,
+        223,
+        118
+      ]
+    },
+    {
+      "id": "885465e7f4fcd37e5724b8b7",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        140,
+        103,
+        121
+      ]
+    },
+    {
+      "id": "beb5e0a40fbe18f3f414ebdd",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        369,
+        150,
+        154
+      ]
+    },
+    {
+      "id": "c0798ff8e7e1348fbcff2b59",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        135,
+        123,
+        98
+      ]
+    },
+    {
+      "id": "dea5d81d656ca2e155e6735b",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        429,
+        130,
+        172
+      ]
+    },
+    {
+      "id": "46a48f550251dd4eecea79b6",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        125,
+        75,
+        73
+      ]
+    },
+    {
+      "id": "e4cbd3937be18ffd8e581a35",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        232,
+        172,
+        97
+      ]
+    },
+    {
+      "id": "84887d3dbc1e1c7b2ee85f5e",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        374,
+        209,
+        138
+      ]
+    },
+    {
+      "id": "5eba2169e06e63afe4a81efe",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        186,
+        154,
+        130
+      ]
+    },
+    {
+      "id": "82505c1a5b2a4699689b4bfb",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        54,
+        107,
+        119
+      ]
+    },
+    {
+      "id": "dbf8b9cc5fad5e1b9a1feb42",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        86,
+        57,
+        52
+      ]
+    },
+    {
+      "id": "3526287f1b1b2bd90e69b08f",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        55,
+        57,
+        117
+      ]
+    },
+    {
+      "id": "1941aacf7b45bfea2b63240f",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        354,
+        261,
+        192
+      ]
+    },
+    {
+      "id": "7b05f8961f26136375ea7644",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        46,
+        70,
+        58
+      ]
+    },
+    {
+      "id": "0f37ee4a6ed82418c9153028",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        129,
+        133,
+        203
+      ]
+    },
+    {
+      "id": "9b7b598a2f5ed2acb29b82a2",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        813,
+        878,
+        306
+      ]
+    },
+    {
+      "id": "a61e9155784a58001175c32d",
+      "label": "good",
+      "group": 1,
+      "scores": [
+        29,
+        32,
+        47
+      ]
+    },
+    {
+      "id": "e0f9a5780ec53708b306beec",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        468,
+        195,
+        286
+      ]
+    },
+    {
+      "id": "4f8057a554a113cda4bcb5d9",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        284,
+        120,
+        232
+      ]
+    },
+    {
+      "id": "3e557b62219f5bd01e4263c6",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        241,
+        79,
+        91
+      ]
+    },
+    {
+      "id": "9cba662af97c6a4b5578efe9",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        40,
+        53,
+        85
+      ]
+    },
+    {
+      "id": "1430e361dbc0db5cb371d642",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        263,
+        153,
+        162
+      ]
+    },
+    {
+      "id": "cb56939b57a1ab8bb3a74a22",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        233,
+        118,
+        101
+      ]
+    },
+    {
+      "id": "3ef8704c62c22529e7b513dd",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        50,
+        44,
+        47
+      ]
+    },
+    {
+      "id": "b2d3b03f70f542977797ac2f",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        224,
+        82,
+        105
+      ]
+    },
+    {
+      "id": "19f2d6384db57793e67e1f17",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        265,
+        134,
+        91
+      ]
+    },
+    {
+      "id": "168b2f43937a65687278c579",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        69,
+        50,
+        89
+      ]
+    },
+    {
+      "id": "4b409781a428e35dba6dc8bc",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        72,
+        60,
+        91
+      ]
+    },
+    {
+      "id": "8b0a514c47201fd57ceeefd7",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        169,
+        69,
+        176
+      ]
+    },
+    {
+      "id": "5b41c322e4392ea40623ee4b",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        327,
+        211,
+        166
+      ]
+    },
+    {
+      "id": "dc91fa4c79b084652783eb63",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        27,
+        47,
+        42
+      ]
+    },
+    {
+      "id": "3738f0e2f56d75a1c892638b",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        126,
+        93,
+        117
+      ]
+    },
+    {
+      "id": "f6f538c90dc0f2ffb0b695ec",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        108,
+        107,
+        219
+      ]
+    },
+    {
+      "id": "6bf65c3e54774126f8a3db8e",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        161,
+        83,
+        135
+      ]
+    },
+    {
+      "id": "8cfc8b9450adb2663c638bc2",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        47,
+        47,
+        109
+      ]
+    },
+    {
+      "id": "61a9172589dfd8644754a98a",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        42,
+        65,
+        55
+      ]
+    },
+    {
+      "id": "e7f9b1db08a7c77bad2eea26",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        129,
+        127,
+        53
+      ]
+    },
+    {
+      "id": "e5ffa67ea1b69c9611d584b1",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        58,
+        64,
+        101
+      ]
+    },
+    {
+      "id": "c78d15d263b54dbd58a8b5c3",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        117,
+        107,
+        94
+      ]
+    },
+    {
+      "id": "1647d6f8ca37f30e1bdc5ab6",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        80,
+        50,
+        68
+      ]
+    },
+    {
+      "id": "93eb6c0341a38bbad265befb",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        81,
+        104,
+        131
+      ]
+    },
+    {
+      "id": "d438331cddb191174c7a3172",
+      "label": "good",
+      "group": 6,
+      "scores": [
+        112,
+        80,
+        126
+      ]
+    },
+    {
+      "id": "a80cddac6aa6c1f8acebd5e1",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        224,
+        152,
+        143
+      ]
+    },
+    {
+      "id": "4389ada42e154c7b8aa2f5ac",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        415,
+        167,
+        236
+      ]
+    },
+    {
+      "id": "1bd4872ab8277b437c4e4189",
+      "label": "good",
+      "group": 3,
+      "scores": [
+        244,
+        131,
+        193
+      ]
+    },
+    {
+      "id": "2c32db4402ba2fe4291a6378",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        177,
+        96,
+        74
+      ]
+    },
+    {
+      "id": "4de4e47a8c9e6d4252502596",
+      "label": "good",
+      "group": 0,
+      "scores": [
+        109,
+        96,
+        109
+      ]
+    },
+    {
+      "id": "835b7e69e7571acfb2e2612b",
+      "label": "good",
+      "group": 7,
+      "scores": [
+        186,
+        83,
+        149
+      ]
+    },
+    {
+      "id": "d91e73470d3f238064550d17",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        49,
+        48,
+        53
+      ]
+    },
+    {
+      "id": "019e09bfac91146d4bf3c4f9",
+      "label": "good",
+      "group": 5,
+      "scores": [
+        445,
+        349,
+        226
+      ]
+    },
+    {
+      "id": "accf029881382ff29579c3c0",
+      "label": "good",
+      "group": 4,
+      "scores": [
+        133,
+        71,
+        103
+      ]
+    },
+    {
+      "id": "c603e4da970c05088622a4a9",
+      "label": "good",
+      "group": 2,
+      "scores": [
+        405,
+        141,
+        128
+      ]
+    }
+  ]
+}

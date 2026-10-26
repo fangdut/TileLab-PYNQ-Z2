@@ -1,0 +1,14 @@
+{
+  "scope": "FROZEN_NEW80_NUMPY_OFFLINE_NOT_BOARD",
+  "cases": 80,
+  "tp": 37,
+  "fp": 3,
+  "tn": 37,
+  "fn": 3,
+  "defect_recall": 0.925,
+  "normal_false_positive_rate": 0.075,
+  "strict_gt_column_hits": 37,
+  "physical_specimen_independence": false,
+  "board_verified": false,
+  "integrated_with_station": false
+}

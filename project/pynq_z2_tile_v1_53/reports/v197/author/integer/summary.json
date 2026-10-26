@@ -1,0 +1,18 @@
+{
+  "scope": "OFFLINE_INTEGER_MIGRATION_AUTHOR_DATA_NOT_BOARD_OR_INDEPENDENT_ACCEPTANCE",
+  "cases": 80,
+  "tp": 40,
+  "fp": 0,
+  "tn": 40,
+  "fn": 0,
+  "float_image_decisions_unchanged": true,
+  "float_mask_disagreement": 177,
+  "total_pixels": 28835840,
+  "pixel_iou": 0.8167841477360004,
+  "total_clipped_values": 0,
+  "max_variance_bits": 61,
+  "max_affine_coefficient_bits": 48,
+  "board_verified": false,
+  "rtl_full_graph_verified": false,
+  "training": false
+}

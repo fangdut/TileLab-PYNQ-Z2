@@ -1,0 +1,421 @@
+{
+  "scope": "EXPOSED_DEVELOPMENT_OFFLINE_NOT_BOARD",
+  "metrics": {
+    "global_weighted": {
+      "original40": {
+        "tp": 18,
+        "fp": 1,
+        "tn": 19,
+        "fn": 2,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "opened40": {
+        "tp": 16,
+        "fp": 3,
+        "tn": 17,
+        "fn": 4,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "all80": {
+        "tp": 34,
+        "fp": 4,
+        "tn": 36,
+        "fn": 6,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      }
+    },
+    "global_ratio": {
+      "original40": {
+        "tp": 16,
+        "fp": 0,
+        "tn": 20,
+        "fn": 4,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "opened40": {
+        "tp": 16,
+        "fp": 1,
+        "tn": 19,
+        "fn": 4,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "all80": {
+        "tp": 32,
+        "fp": 1,
+        "tn": 39,
+        "fn": 8,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      }
+    },
+    "global_and_ratio": {
+      "original40": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 20,
+        "fn": 5,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "opened40": {
+        "tp": 15,
+        "fp": 1,
+        "tn": 19,
+        "fn": 5,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "all80": {
+        "tp": 30,
+        "fp": 1,
+        "tn": 39,
+        "fn": 10,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      }
+    },
+    "global_and_count": {
+      "original40": {
+        "tp": 16,
+        "fp": 0,
+        "tn": 20,
+        "fn": 4,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "opened40": {
+        "tp": 15,
+        "fp": 1,
+        "tn": 19,
+        "fn": 5,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      },
+      "all80": {
+        "tp": 31,
+        "fp": 1,
+        "tn": 39,
+        "fn": 9,
+        "unknown_good": 0,
+        "unknown_defect": 0
+      }
+    },
+    "group4_weighted": {
+      "original40": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 18,
+        "fn": 2,
+        "unknown_good": 2,
+        "unknown_defect": 3
+      },
+      "opened40": {
+        "tp": 15,
+        "fp": 2,
+        "tn": 17,
+        "fn": 1,
+        "unknown_good": 1,
+        "unknown_defect": 4
+      },
+      "all80": {
+        "tp": 30,
+        "fp": 2,
+        "tn": 35,
+        "fn": 3,
+        "unknown_good": 3,
+        "unknown_defect": 7
+      }
+    },
+    "group4_ratio": {
+      "original40": {
+        "tp": 16,
+        "fp": 1,
+        "tn": 17,
+        "fn": 1,
+        "unknown_good": 2,
+        "unknown_defect": 3
+      },
+      "opened40": {
+        "tp": 16,
+        "fp": 1,
+        "tn": 18,
+        "fn": 0,
+        "unknown_good": 1,
+        "unknown_defect": 4
+      },
+      "all80": {
+        "tp": 32,
+        "fp": 2,
+        "tn": 35,
+        "fn": 1,
+        "unknown_good": 3,
+        "unknown_defect": 7
+      }
+    },
+    "group4_and_ratio": {
+      "original40": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 18,
+        "fn": 2,
+        "unknown_good": 2,
+        "unknown_defect": 3
+      },
+      "opened40": {
+        "tp": 15,
+        "fp": 1,
+        "tn": 18,
+        "fn": 1,
+        "unknown_good": 1,
+        "unknown_defect": 4
+      },
+      "all80": {
+        "tp": 30,
+        "fp": 1,
+        "tn": 36,
+        "fn": 3,
+        "unknown_good": 3,
+        "unknown_defect": 7
+      }
+    },
+    "group4_and_count": {
+      "original40": {
+        "tp": 15,
+        "fp": 0,
+        "tn": 18,
+        "fn": 2,
+        "unknown_good": 2,
+        "unknown_defect": 3
+      },
+      "opened40": {
+        "tp": 15,
+        "fp": 1,
+        "tn": 18,
+        "fn": 1,
+        "unknown_good": 1,
+        "unknown_defect": 4
+      },
+      "all80": {
+        "tp": 30,
+        "fp": 1,
+        "tn": 36,
+        "fn": 3,
+        "unknown_good": 3,
+        "unknown_defect": 7
+      }
+    },
+    "group8_weighted": {
+      "original40": {
+        "tp": 14,
+        "fp": 0,
+        "tn": 17,
+        "fn": 0,
+        "unknown_good": 3,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 2,
+        "tn": 14,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 2,
+        "tn": 31,
+        "fn": 0,
+        "unknown_good": 7,
+        "unknown_defect": 12
+      }
+    },
+    "group8_ratio": {
+      "original40": {
+        "tp": 14,
+        "fp": 1,
+        "tn": 16,
+        "fn": 0,
+        "unknown_good": 3,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 1,
+        "tn": 32,
+        "fn": 0,
+        "unknown_good": 7,
+        "unknown_defect": 12
+      }
+    },
+    "group8_and_ratio": {
+      "original40": {
+        "tp": 14,
+        "fp": 0,
+        "tn": 17,
+        "fn": 0,
+        "unknown_good": 3,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 0,
+        "tn": 33,
+        "fn": 0,
+        "unknown_good": 7,
+        "unknown_defect": 12
+      }
+    },
+    "group8_and_count": {
+      "original40": {
+        "tp": 14,
+        "fp": 0,
+        "tn": 17,
+        "fn": 0,
+        "unknown_good": 3,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 1,
+        "tn": 15,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 1,
+        "tn": 32,
+        "fn": 0,
+        "unknown_good": 7,
+        "unknown_defect": 12
+      }
+    },
+    "group10_weighted": {
+      "original40": {
+        "tp": 14,
+        "fp": 1,
+        "tn": 15,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 5,
+        "tn": 9,
+        "fn": 0,
+        "unknown_good": 6,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 6,
+        "tn": 24,
+        "fn": 0,
+        "unknown_good": 10,
+        "unknown_defect": 12
+      }
+    },
+    "group10_ratio": {
+      "original40": {
+        "tp": 14,
+        "fp": 2,
+        "tn": 14,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 2,
+        "tn": 12,
+        "fn": 0,
+        "unknown_good": 6,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 4,
+        "tn": 26,
+        "fn": 0,
+        "unknown_good": 10,
+        "unknown_defect": 12
+      }
+    },
+    "group10_and_ratio": {
+      "original40": {
+        "tp": 14,
+        "fp": 1,
+        "tn": 15,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 1,
+        "tn": 13,
+        "fn": 0,
+        "unknown_good": 6,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 2,
+        "tn": 28,
+        "fn": 0,
+        "unknown_good": 10,
+        "unknown_defect": 12
+      }
+    },
+    "group10_and_count": {
+      "original40": {
+        "tp": 14,
+        "fp": 0,
+        "tn": 16,
+        "fn": 0,
+        "unknown_good": 4,
+        "unknown_defect": 6
+      },
+      "opened40": {
+        "tp": 14,
+        "fp": 1,
+        "tn": 13,
+        "fn": 0,
+        "unknown_good": 6,
+        "unknown_defect": 6
+      },
+      "all80": {
+        "tp": 28,
+        "fp": 1,
+        "tn": 29,
+        "fn": 0,
+        "unknown_good": 10,
+        "unknown_defect": 12
+      }
+    }
+  }
+}

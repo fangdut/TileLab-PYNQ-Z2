@@ -1,0 +1,162 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 16624,
+    "sha256": "0d2ec15fbbff63e1f1f074252d96e52d9baafa59b6ad31f4aaa678aeba7f215b"
+  },
+  {
+    "path": "FPGA_MIGRATION_STATUS.md",
+    "bytes": 38812,
+    "sha256": "d931cf5cbe64b53414ae16d3d471f168d198296359cf1493d8691392157178ea"
+  },
+  {
+    "path": "LICENSE_SCOPE.md",
+    "bytes": 3888,
+    "sha256": "dc69c834c4bad52e138b4c2895c9b11e017d73716a5cf876e4b64cf9b1796975"
+  },
+  {
+    "path": "THIRD_PARTY_NOTICES.md",
+    "bytes": 2457,
+    "sha256": "64759adcb4873497bb8d39b437e3996650e2718f3364831cb4c198a91e210d1d"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/build_norm.tcl",
+    "bytes": 1033,
+    "sha256": "fe91331643d349ad023df905f324f71cca1a19fe5457ea1b3ec9262619fdab2f"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/build_preprocess.tcl",
+    "bytes": 941,
+    "sha256": "5d3913d8fc8795b624b174eb74fc5dc3583c66589028ad838ffdec3ee3ea4328"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/export_program.py",
+    "bytes": 4713,
+    "sha256": "93216b46699ea79cfa77c04ec63b01b9321e144943d11bbe7e5288b34490ff24"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/fetch_author.py",
+    "bytes": 1909,
+    "sha256": "a991e21d926b45122ffc7844dc04e8bd1f2e478070938c2f045222fcdb4f62be"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/integer_reference.py",
+    "bytes": 8606,
+    "sha256": "34b7046e2e5434b95192a4e340ded39251ecadf4722f699dc7f05d1cc676759d"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/make_norm_vectors.py",
+    "bytes": 3181,
+    "sha256": "d3661d552fceb25b49f5f0e4441b97dd9284111dfe20c8653426bfa11f87b309"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/NEXT_HARDWARE.md",
+    "bytes": 2411,
+    "sha256": "0cf029319be2599ad274b6a9501a6969b778a49d8a835b991d4690ead931a1e1"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/norm_integer.cpp",
+    "bytes": 5555,
+    "sha256": "eb4f6c563e5d1faad28cbec98a9db7a7fe51ea24102a6ad47dd9b46a3fd56f14"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/preprocess_integer.cpp",
+    "bytes": 2503,
+    "sha256": "ec8c59e7a51164c3b4b3f3c0458db9a4b4384dcb7ab06ea960f7b1ee8eedfb04"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/preprocess_reference.py",
+    "bytes": 697,
+    "sha256": "b18f4b4f2c9b953d912e0d1d14314b2309d80a7adb05a4e6820191703a0082bc"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/README.md",
+    "bytes": 3610,
+    "sha256": "3be3751c6295b438eb342fa2c342a9d9e51d3898445ca61661d67203d924eb88"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/research/check_v197_norm_real.py",
+    "bytes": 3377,
+    "sha256": "e569d2f5d2377e2b388037c4d594451f261d70b10e9e14e5142b99b002b8cf20"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/research/check_v197_pre_real.py",
+    "bytes": 3197,
+    "sha256": "a847f7e9601a18b505678bec9ce5933b71c99ae2a2c34a9000cb952aa0f284cb"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/research/evaluate_v197_author.py",
+    "bytes": 6523,
+    "sha256": "3077232447a484d7bceee8a515a027796715f6b2776251a74dbca3079ee2a59b"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/research/plan_v197_memory.py",
+    "bytes": 2147,
+    "sha256": "99cae999f3f2b34bba4ad322db6c9e3f5abbbdd64aef8fa29b1e16f3055ee192"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/research/quantize_v197_author.py",
+    "bytes": 6303,
+    "sha256": "059a28e3cb88532a8ca1923153d838731c3e6def637509d3a7b8adf39e353b24"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/test_integer_geometry.py",
+    "bytes": 1436,
+    "sha256": "cb65f550bf1f84e5ba09cad97477ecf627453f6915b7044d10dd4616835cf958"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/test_norm.cpp",
+    "bytes": 2586,
+    "sha256": "746e10ea172886e632a826da7addaed45a6181ed65084441dad46ca6e9456ba1"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/test_preprocess.cpp",
+    "bytes": 1222,
+    "sha256": "08e18fd37cd7cb05a792af825ec2944e720921e0e256b58313ce57aa7de3a4b0"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/vendor/hfenet.py",
+    "bytes": 6100,
+    "sha256": "3bba98eae8356fa7dc496b5475444bd2338696c933678c7d359500d91ea452b2"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/hfenet_v197/vendor/LICENSE",
+    "bytes": 1071,
+    "sha256": "6c3734a778735029bbf4ec332548fd6d5550a623d0f2b0f44c68df9384019340"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_profiles_v197/README.md",
+    "bytes": 1018,
+    "sha256": "4026a3ac0c37482badb7232fd200ee29871869b32fed4af50e79bcbdff67f7e2"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_profiles_v197/reference.py",
+    "bytes": 1555,
+    "sha256": "8ee1d1f388d08f4c976d962658f2d3d9865d0c463e635c5884d9f23e4f0da06f"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_profiles_v197/research/advance_v197_profiles.py",
+    "bytes": 6081,
+    "sha256": "772b06e75265295937936006d40b89b112bcb1e5c575640aa89bc782f6610ef4"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_profiles_v197/research/clip_replay.py",
+    "bytes": 2008,
+    "sha256": "b333f1f91c313d7a56f5eba47475019e8ade3d3e95a43d66d64de624cc281134"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_profiles_v197/research/evaluate_v197_frozen.py",
+    "bytes": 4968,
+    "sha256": "481da8453d3d8199e3fe11b3eb74e9610e57f6bff42a6be04c40d34abc0a39c9"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_profiles_v197/research/explore_v197_normal_profiles.py",
+    "bytes": 5049,
+    "sha256": "7f4845ead0f58cab1072edd9cb2dcdaa926bd8bac267fb42de22db347f2a4799"
+  },
+  {
+    "path": "project/pynq_z2_tile_v1_53/experimental/texture_profiles_v197/research/explore_v197_width_gate.py",
+    "bytes": 3052,
+    "sha256": "a610d72801f79f654e9ea9716f5b7b32a1043d3dada6d7169d8a9d7ca8b849ef"
+  }
+]

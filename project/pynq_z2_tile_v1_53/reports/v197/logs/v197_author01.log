@@ -1,0 +1,17 @@
+NORMAL 8
+NORMAL 16
+NORMAL 24
+NORMAL 32
+NORMAL 40
+NORMAL 48
+NORMAL 56
+NORMAL 64
+TEST 10
+TEST 20
+TEST 30
+TEST 40
+TEST 50
+TEST 60
+TEST 70
+TEST 80
+{"scope": "AUTHOR_CHECKPOINT_ON_AUTHOR_DATA_REPRODUCTION_NOT_INDEPENDENT_VALIDATION", "metrics": {"crop": {"raw_alarm": {"tp": 40, "fp": 1, "tn": 39, "fn": 0, "n_good": 40, "n_defect": 40}, "calibrated_area_alarm": {"tp": 40, "fp": 1, "tn": 39, "fn": 0, "n_good": 40, "n_defect": 40}, "defect_pixel_iou": 0.8027612681629148}, "original": {"raw_alarm": {"tp": 40, "fp": 0, "tn": 40, "fn": 0, "n_good": 40, "n_defect": 40}, "calibrated_area_alarm": {"tp": 40, "fp": 0, "tn": 40, "fn": 0, "n_good": 40, "n_defect": 40}, "defect_pixel_iou": 0.8168226436216689}}, "normal_only_area_thresholds": {"crop": 0, "original": 0}, "board_verified": false, "training": false, "hardware_migrated": false, "station_modified": false, "author_validation_overlap_not_excluded": true}

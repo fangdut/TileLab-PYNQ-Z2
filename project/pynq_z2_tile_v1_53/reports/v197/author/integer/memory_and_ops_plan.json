@@ -1,0 +1,844 @@
+{
+  "scope": "LOGICAL_TENSOR_LIVENESS_AND_MAC_LOWER_BOUND_NOT_IMPLEMENTED_RESOURCE_OR_FPS",
+  "geometry": [
+    256,
+    1408
+  ],
+  "peak_simultaneous_int16_tensor_bytes": 92274688,
+  "weight_int16_bytes": 317078,
+  "declared_parameters": 174091,
+  "executed_conv_weights": 158539,
+  "macs": 7835779072,
+  "assumptions": [
+    "Separate output tensor allocated before freeing final-use inputs; conservative logical liveness",
+    "No claim of contiguous-memory allocator feasibility, burst bandwidth or clock closure",
+    "Additional padding, accumulators, histogram and transport buffers must be reserved",
+    "16x16 integer DSP MAC, all cycles utilized only in theoretical bounds"
+  ],
+  "ideal_mac_seconds_at_100mhz": {
+    "32": 2.44868096,
+    "64": 1.22434048,
+    "128": 0.61217024
+  },
+  "history": [
+    {
+      "node": "x",
+      "bytes": 2162688,
+      "live_bytes": 2162688,
+      "live_tensors": [
+        "x"
+      ]
+    },
+    {
+      "node": "featurefusion_prewitt_operator",
+      "bytes": 2162688,
+      "live_bytes": 4325376,
+      "live_tensors": [
+        "x",
+        "featurefusion_prewitt_operator"
+      ]
+    },
+    {
+      "node": "cat",
+      "bytes": 4325376,
+      "live_bytes": 8650752,
+      "live_tensors": [
+        "x",
+        "featurefusion_prewitt_operator",
+        "cat"
+      ]
+    },
+    {
+      "node": "first_conv_layer_conv",
+      "bytes": 23068672,
+      "live_bytes": 27394048,
+      "live_tensors": [
+        "cat",
+        "first_conv_layer_conv"
+      ]
+    },
+    {
+      "node": "first_conv_layer_norm",
+      "bytes": 23068672,
+      "live_bytes": 46137344,
+      "live_tensors": [
+        "first_conv_layer_conv",
+        "first_conv_layer_norm"
+      ]
+    },
+    {
+      "node": "first_conv_layer_activate",
+      "bytes": 23068672,
+      "live_bytes": 46137344,
+      "live_tensors": [
+        "first_conv_layer_norm",
+        "first_conv_layer_activate"
+      ]
+    },
+    {
+      "node": "pool",
+      "bytes": 5767168,
+      "live_bytes": 28835840,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "pool"
+      ]
+    },
+    {
+      "node": "resmodule_a_conv1",
+      "bytes": 5767168,
+      "live_bytes": 34603008,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "pool",
+        "resmodule_a_conv1"
+      ]
+    },
+    {
+      "node": "resmodule_a_norm1",
+      "bytes": 5767168,
+      "live_bytes": 40370176,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "pool",
+        "resmodule_a_conv1",
+        "resmodule_a_norm1"
+      ]
+    },
+    {
+      "node": "resmodule_a_activate",
+      "bytes": 5767168,
+      "live_bytes": 40370176,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "pool",
+        "resmodule_a_norm1",
+        "resmodule_a_activate"
+      ]
+    },
+    {
+      "node": "resmodule_a_conv2",
+      "bytes": 5767168,
+      "live_bytes": 40370176,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "pool",
+        "resmodule_a_activate",
+        "resmodule_a_conv2"
+      ]
+    },
+    {
+      "node": "resmodule_a_norm2",
+      "bytes": 5767168,
+      "live_bytes": 40370176,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "pool",
+        "resmodule_a_conv2",
+        "resmodule_a_norm2"
+      ]
+    },
+    {
+      "node": "add",
+      "bytes": 5767168,
+      "live_bytes": 40370176,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "pool",
+        "resmodule_a_norm2",
+        "add"
+      ]
+    },
+    {
+      "node": "resmodule_a_activate_1",
+      "bytes": 5767168,
+      "live_bytes": 34603008,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "add",
+        "resmodule_a_activate_1"
+      ]
+    },
+    {
+      "node": "pool_1",
+      "bytes": 1441792,
+      "live_bytes": 30277632,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "pool_1"
+      ]
+    },
+    {
+      "node": "resmodule_b1_conv1",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "pool_1",
+        "resmodule_b1_conv1"
+      ]
+    },
+    {
+      "node": "resmodule_b1_norm1",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "pool_1",
+        "resmodule_b1_conv1",
+        "resmodule_b1_norm1"
+      ]
+    },
+    {
+      "node": "resmodule_b1_activate",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "pool_1",
+        "resmodule_b1_norm1",
+        "resmodule_b1_activate"
+      ]
+    },
+    {
+      "node": "resmodule_b1_conv2",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "pool_1",
+        "resmodule_b1_activate",
+        "resmodule_b1_conv2"
+      ]
+    },
+    {
+      "node": "resmodule_b1_norm2",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "pool_1",
+        "resmodule_b1_conv2",
+        "resmodule_b1_norm2"
+      ]
+    },
+    {
+      "node": "add_1",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "pool_1",
+        "resmodule_b1_norm2",
+        "add_1"
+      ]
+    },
+    {
+      "node": "resmodule_b1_activate_1",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "add_1",
+        "resmodule_b1_activate_1"
+      ]
+    },
+    {
+      "node": "resmodule_b2_conv1",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b1_activate_1",
+        "resmodule_b2_conv1"
+      ]
+    },
+    {
+      "node": "resmodule_b2_norm1",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b1_activate_1",
+        "resmodule_b2_conv1",
+        "resmodule_b2_norm1"
+      ]
+    },
+    {
+      "node": "resmodule_b2_activate",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b1_activate_1",
+        "resmodule_b2_norm1",
+        "resmodule_b2_activate"
+      ]
+    },
+    {
+      "node": "resmodule_b2_conv2",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b1_activate_1",
+        "resmodule_b2_activate",
+        "resmodule_b2_conv2"
+      ]
+    },
+    {
+      "node": "resmodule_b2_norm2",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b1_activate_1",
+        "resmodule_b2_conv2",
+        "resmodule_b2_norm2"
+      ]
+    },
+    {
+      "node": "add_2",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b1_activate_1",
+        "resmodule_b2_norm2",
+        "add_2"
+      ]
+    },
+    {
+      "node": "resmodule_b2_activate_1",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "add_2",
+        "resmodule_b2_activate_1"
+      ]
+    },
+    {
+      "node": "resmodule_b3_conv1",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b2_activate_1",
+        "resmodule_b3_conv1"
+      ]
+    },
+    {
+      "node": "resmodule_b3_norm1",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b2_activate_1",
+        "resmodule_b3_conv1",
+        "resmodule_b3_norm1"
+      ]
+    },
+    {
+      "node": "resmodule_b3_activate",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b2_activate_1",
+        "resmodule_b3_norm1",
+        "resmodule_b3_activate"
+      ]
+    },
+    {
+      "node": "resmodule_b3_conv2",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b2_activate_1",
+        "resmodule_b3_activate",
+        "resmodule_b3_conv2"
+      ]
+    },
+    {
+      "node": "resmodule_b3_norm2",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b2_activate_1",
+        "resmodule_b3_conv2",
+        "resmodule_b3_norm2"
+      ]
+    },
+    {
+      "node": "add_3",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b2_activate_1",
+        "resmodule_b3_norm2",
+        "add_3"
+      ]
+    },
+    {
+      "node": "resmodule_b3_activate_1",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "add_3",
+        "resmodule_b3_activate_1"
+      ]
+    },
+    {
+      "node": "pool_2",
+      "bytes": 360448,
+      "live_bytes": 30638080,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "pool_2"
+      ]
+    },
+    {
+      "node": "resmodule_b4_conv1",
+      "bytes": 360448,
+      "live_bytes": 30998528,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "pool_2",
+        "resmodule_b4_conv1"
+      ]
+    },
+    {
+      "node": "resmodule_b4_norm1",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "pool_2",
+        "resmodule_b4_conv1",
+        "resmodule_b4_norm1"
+      ]
+    },
+    {
+      "node": "resmodule_b4_activate",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "pool_2",
+        "resmodule_b4_norm1",
+        "resmodule_b4_activate"
+      ]
+    },
+    {
+      "node": "resmodule_b4_conv2",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "pool_2",
+        "resmodule_b4_activate",
+        "resmodule_b4_conv2"
+      ]
+    },
+    {
+      "node": "resmodule_b4_norm2",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "pool_2",
+        "resmodule_b4_conv2",
+        "resmodule_b4_norm2"
+      ]
+    },
+    {
+      "node": "add_4",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "pool_2",
+        "resmodule_b4_norm2",
+        "add_4"
+      ]
+    },
+    {
+      "node": "resmodule_b4_activate_1",
+      "bytes": 360448,
+      "live_bytes": 30998528,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "add_4",
+        "resmodule_b4_activate_1"
+      ]
+    },
+    {
+      "node": "resmodule_b5_conv1",
+      "bytes": 360448,
+      "live_bytes": 30998528,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b4_activate_1",
+        "resmodule_b5_conv1"
+      ]
+    },
+    {
+      "node": "resmodule_b5_norm1",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b4_activate_1",
+        "resmodule_b5_conv1",
+        "resmodule_b5_norm1"
+      ]
+    },
+    {
+      "node": "resmodule_b5_activate",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b4_activate_1",
+        "resmodule_b5_norm1",
+        "resmodule_b5_activate"
+      ]
+    },
+    {
+      "node": "resmodule_b5_conv2",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b4_activate_1",
+        "resmodule_b5_activate",
+        "resmodule_b5_conv2"
+      ]
+    },
+    {
+      "node": "resmodule_b5_norm2",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b4_activate_1",
+        "resmodule_b5_conv2",
+        "resmodule_b5_norm2"
+      ]
+    },
+    {
+      "node": "add_5",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b4_activate_1",
+        "resmodule_b5_norm2",
+        "add_5"
+      ]
+    },
+    {
+      "node": "resmodule_b5_activate_1",
+      "bytes": 360448,
+      "live_bytes": 30998528,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "add_5",
+        "resmodule_b5_activate_1"
+      ]
+    },
+    {
+      "node": "resmodule_b6_conv1",
+      "bytes": 360448,
+      "live_bytes": 30998528,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b5_activate_1",
+        "resmodule_b6_conv1"
+      ]
+    },
+    {
+      "node": "resmodule_b6_norm1",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b5_activate_1",
+        "resmodule_b6_conv1",
+        "resmodule_b6_norm1"
+      ]
+    },
+    {
+      "node": "resmodule_b6_activate",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b5_activate_1",
+        "resmodule_b6_norm1",
+        "resmodule_b6_activate"
+      ]
+    },
+    {
+      "node": "resmodule_b6_conv2",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b5_activate_1",
+        "resmodule_b6_activate",
+        "resmodule_b6_conv2"
+      ]
+    },
+    {
+      "node": "resmodule_b6_norm2",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b5_activate_1",
+        "resmodule_b6_conv2",
+        "resmodule_b6_norm2"
+      ]
+    },
+    {
+      "node": "add_6",
+      "bytes": 360448,
+      "live_bytes": 31358976,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b5_activate_1",
+        "resmodule_b6_norm2",
+        "add_6"
+      ]
+    },
+    {
+      "node": "resmodule_b6_activate_1",
+      "bytes": 360448,
+      "live_bytes": 30998528,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "add_6",
+        "resmodule_b6_activate_1"
+      ]
+    },
+    {
+      "node": "upsample",
+      "bytes": 1441792,
+      "live_bytes": 32079872,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "resmodule_b6_activate_1",
+        "upsample"
+      ]
+    },
+    {
+      "node": "cat_1",
+      "bytes": 2883584,
+      "live_bytes": 34603008,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "resmodule_b3_activate_1",
+        "upsample",
+        "cat_1"
+      ]
+    },
+    {
+      "node": "upsample1_conv_conv",
+      "bytes": 1441792,
+      "live_bytes": 33161216,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "cat_1",
+        "upsample1_conv_conv"
+      ]
+    },
+    {
+      "node": "upsample1_conv_norm",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "upsample1_conv_conv",
+        "upsample1_conv_norm"
+      ]
+    },
+    {
+      "node": "upsample1_conv_activate",
+      "bytes": 1441792,
+      "live_bytes": 31719424,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "upsample1_conv_norm",
+        "upsample1_conv_activate"
+      ]
+    },
+    {
+      "node": "upsample_1",
+      "bytes": 5767168,
+      "live_bytes": 36044800,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "upsample1_conv_activate",
+        "upsample_1"
+      ]
+    },
+    {
+      "node": "cat_2",
+      "bytes": 11534336,
+      "live_bytes": 46137344,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "resmodule_a_activate_1",
+        "upsample_1",
+        "cat_2"
+      ]
+    },
+    {
+      "node": "upsample2_conv_conv",
+      "bytes": 5767168,
+      "live_bytes": 40370176,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "cat_2",
+        "upsample2_conv_conv"
+      ]
+    },
+    {
+      "node": "upsample2_conv_norm",
+      "bytes": 5767168,
+      "live_bytes": 34603008,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "upsample2_conv_conv",
+        "upsample2_conv_norm"
+      ]
+    },
+    {
+      "node": "upsample2_conv_activate",
+      "bytes": 5767168,
+      "live_bytes": 34603008,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "upsample2_conv_norm",
+        "upsample2_conv_activate"
+      ]
+    },
+    {
+      "node": "upsample_2",
+      "bytes": 23068672,
+      "live_bytes": 51904512,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "upsample2_conv_activate",
+        "upsample_2"
+      ]
+    },
+    {
+      "node": "cat_3",
+      "bytes": 46137344,
+      "live_bytes": 92274688,
+      "live_tensors": [
+        "first_conv_layer_activate",
+        "upsample_2",
+        "cat_3"
+      ]
+    },
+    {
+      "node": "upsample3_conv",
+      "bytes": 720896,
+      "live_bytes": 46858240,
+      "live_tensors": [
+        "cat_3",
+        "upsample3_conv"
+      ]
+    },
+    {
+      "node": "sigmoid",
+      "bytes": 360448,
+      "live_bytes": 1081344,
+      "live_tensors": [
+        "upsample3_conv",
+        "sigmoid"
+      ]
+    }
+  ]
+}
