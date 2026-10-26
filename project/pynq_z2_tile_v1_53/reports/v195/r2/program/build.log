@@ -1,0 +1,698 @@
+
+****** Xilinx Vitis Development Environment
+****** Vitis v2025.2 (64-bit)
+****** SW Build 6295257 on 2025-11-13-08:29:30
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Vitis Server started on port '60856'.
+Vitis Server for Embedded Edition. Only embedded component related functions are supported.
+Platform texture_platform creation started.
+SDT generated successfully.
+[INFO]: Validating inputs
+[INFO]: Starting domain creation
+[INFO]: Found HLS driver within SDT, copying the sources
+[INFO]: Generating Domain-specific DTS for ps7_cortexa9_0
+[INFO]: Validating inputs
+[INFO]: Starting domain creation
+[INFO]: Found HLS driver within SDT, copying the sources
+[INFO]: Generating Domain-specific DTS for ps7_cortexa9_0
+[INFO]: Generating required metadata from domain specific DT
+[INFO]: Generating required metadata from domain specific DT
+[INFO]: Successfully created Domain at D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\zynq_fsbl\zynq_fsbl_bsp
+[INFO]: Successfully created Domain at D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp
+Domain standalone_a9 added successfully.
+[INFO]: Validating inputs
+[INFO]: Generating Linker script for zynq_fsbl
+[INFO]: Successfully Created Application sources at D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl
+Platform FSBL Boot domain added successfully.
+Platform creation finished successfully.
+Platform Quick Build initiated.
+Initiating build for the texture_platform component.
+Generating Export directory
+Generated platform metadata for creating application(s) based on platform texture_platform.
+
+Parameter name      :  'proc_extra_compiler_flags'
+Description         :  'Extra Compiler Flags used in BSP and library generation'
+Default value       :  ' -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns'
+Value               :  ' -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns'
+Possible options    :  '[]'
+DataType            :  'string'
+Permission          :  'read_write'
+Initiating build for the texture_platform component.
+[INFO]: Building BSP
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp
+[INFO]: Building BSP
+[1/157] Building C object libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/xcoresightpsdcc.c.obj
+[2/157] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg.c.obj
+[3/157] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_g.c.obj
+[4/157] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_hw.c.obj
+[5/157] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_intr.c.obj
+[6/157] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_selftest.c.obj
+[7/157] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_sinit.c.obj
+[8/157] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_g.c.obj
+[9/157] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_hw.c.obj
+[10/157] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_selftest.c.obj
+[11/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_hw.c.obj
+[12/157] Linking C static library libsrc\coresightps_dcc\src\libcoresightps_dcc.a
+[13/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_g.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/emacps/src/xemacps_g.c:16:9: warning: missing initializer for field 'S1GDiv0' of 'XEmacPs_Config' [-Wmissing-field-initializers]
+   16 |         },
+      |         ^
+In file included from D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/emacps/src/xemacps_g.c:1:
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/emacps/src/xemacps.h:540:13: note: 'S1GDiv0' declared here
+  540 |         u16 S1GDiv0;    /**< 1Gbps Clock Divider 0 */
+      |             ^~~~~~~
+[14/157] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_g.c.obj
+[15/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_sinit.c.obj
+[16/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_bdring.c.obj
+[17/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_pcs.c.obj
+[18/157] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_sinit.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/dmaps/src/xdmaps_sinit.c: In function 'XDmaPs_GetDrvIndex':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/dmaps/src/xdmaps_sinit.c:99:32: warning: unused parameter 'InstancePtr' [-Wunused-parameter]
+   99 | u32 XDmaPs_GetDrvIndex(XDmaPs *InstancePtr, UINTPTR BaseAddress)
+      |                        ~~~~~~~~^~~~~~~~~~~
+[19/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_intr.c.obj
+[20/157] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio.c.obj
+[21/157] Linking C static library libsrc\devcfg\src\libdevcfg.a
+[22/157] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_extra.c.obj
+[23/157] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_selftest.c.obj
+[24/157] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps.c.obj
+[25/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_control.c.obj
+[26/157] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps.c.obj
+[27/157] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_selftest.c.obj
+[28/157] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_g.c.obj
+[29/157] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_sinit.c.obj
+[30/157] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_intr.c.obj
+[31/157] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops.c.obj
+[32/157] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_hw.c.obj
+[33/157] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_sinit.c.obj
+[34/157] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_g.c.obj
+[35/157] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_hw.c.obj
+[36/157] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_intr.c.obj
+[37/157] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips.c.obj
+[38/157] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_selftest.c.obj
+[39/157] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_options.c.obj
+[40/157] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_g.c.obj
+[41/157] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_sinit.c.obj
+[42/157] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_sinit.c.obj
+[43/157] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_intr.c.obj
+[44/157] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_hw.c.obj
+[45/157] ========== BSP Build Information ==========
+Compiler PATH: D:/2025.2/Vitis/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=D:/Vivado/TileL
+ab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/Xilinx.spec -ID:
+/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/inc
+lude  -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DNDEBUG
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[46/157] Linking C static library libsrc\dmaps\src\libdmaps.a
+[47/157] Linking C static library libsrc\emacps\src\libemacps.a
+[48/157] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_selftest.c.obj
+[49/157] Linking C static library libsrc\gpio\src\libgpio.a
+[50/157] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_g.c.obj
+[51/157] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_sinit.c.obj
+[52/157] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_selftest.c.obj
+[53/157] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer.c.obj
+[54/157] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic.c.obj
+[55/157] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt.c.obj
+[56/157] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_g.c.obj
+[57/157] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_selftest.c.obj
+[58/157] Linking C static library libsrc\gpiops\src\libgpiops.a
+[59/157] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_sinit.c.obj
+[60/157] Linking C static library libsrc\qspips\src\libqspips.a
+[61/157] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer_linux.c.obj
+[62/157] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_sinit.c.obj
+[63/157] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_options.c.obj
+[64/157] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_g.c.obj
+[65/157] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps.c.obj
+[66/157] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer_g.c.obj
+[67/157] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_host.c.obj
+[68/157] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer_sinit.c.obj
+[69/157] Linking C static library libsrc\scutimer\src\libscutimer.a
+[70/157] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_sinit.c.obj
+[71/157] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_g.c.obj
+[72/157] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_selftest.c.obj
+[73/157] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_hw.c.obj
+[74/157] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_intr.c.obj
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp
+[0/1] Re-running CMake...
+[1/246] Building C object libsrc/coresightps_dcc/src/CMakeFiles/coresightps_dcc.dir/xcoresightpsdcc.c.obj
+[2/246] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg.c.obj
+[3/246] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_g.c.obj
+[4/246] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_hw.c.obj
+[5/246] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_intr.c.obj
+[6/246] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_selftest.c.obj
+[7/246] Building C object libsrc/devcfg/src/CMakeFiles/devcfg.dir/xdevcfg_sinit.c.obj
+[8/246] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps.c.obj
+[9/246] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_g.c.obj
+[10/246] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_hw.c.obj
+[11/246] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_selftest.c.obj
+[12/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_hw.c.obj
+[13/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps.c.obj
+[14/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_sinit.c.obj
+[15/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_intr.c.obj
+[16/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_pcs.c.obj
+[17/246] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio.c.obj
+[18/246] Linking C static library libsrc\coresightps_dcc\src\libcoresightps_dcc.a
+[19/246] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_extra.c.obj
+[20/246] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_g.c.obj
+[21/246] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_intr.c.obj
+[22/246] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_selftest.c.obj
+[23/246] Building C object libsrc/gpio/src/CMakeFiles/gpio.dir/xgpio_sinit.c.obj
+[24/246] Linking C static library libsrc\devcfg\src\libdevcfg.a
+[25/246] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_g.c.obj
+[26/246] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_selftest.c.obj
+[27/246] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops.c.obj
+[28/246] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_hw.c.obj
+[29/246] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_sinit.c.obj
+[30/246] Building C object libsrc/gpiops/src/CMakeFiles/gpiops.dir/xgpiops_intr.c.obj
+[31/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_bdring.c.obj
+[32/246] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_g.c.obj
+[33/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_control.c.obj
+[34/246] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_hw.c.obj
+[35/246] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_options.c.obj
+[36/246] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_selftest.c.obj
+[37/246] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips_sinit.c.obj
+[38/246] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_g.c.obj
+[39/246] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_sinit.c.obj
+[40/246] Linking C static library libsrc\gpio\src\libgpio.a
+[41/246] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_intr.c.obj
+[42/246] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_selftest.c.obj
+[43/246] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic.c.obj
+[44/246] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer.c.obj
+[45/246] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_g.c.obj
+[46/246] Building C object libsrc/dmaps/src/CMakeFiles/dmaps.dir/xdmaps_sinit.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/dmaps/src/xdmaps_sinit.c: In function 'XDmaPs_GetDrvIndex':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/dmaps/src/xdmaps_sinit.c:99:32: warning: unused parameter 'InstancePtr' [-Wunused-parameter]
+   99 | u32 XDmaPs_GetDrvIndex(XDmaPs *InstancePtr, UINTPTR BaseAddress)
+      |                        ~~~~~~~~^~~~~~~~~~~
+[47/246] Building C object libsrc/emacps/src/CMakeFiles/emacps.dir/xemacps_g.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/emacps/src/xemacps_g.c:16:9: warning: missing initializer for field 'S1GDiv0' of 'XEmacPs_Config' [-Wmissing-field-initializers]
+   16 |         },
+      |         ^
+In file included from D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/emacps/src/xemacps_g.c:1:
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/emacps/src/xemacps.h:540:13: note: 'S1GDiv0' declared here
+  540 |         u16 S1GDiv0;    /**< 1Gbps Clock Divider 0 */
+      |             ^~~~~~~
+[48/246] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_selftest.c.obj
+[49/246] Linking C static library libsrc\gpiops\src\libgpiops.a
+[50/246] Building C object libsrc/scutimer/src/CMakeFiles/scutimer.dir/xscutimer_sinit.c.obj
+[51/246] Building C object libsrc/qspips/src/CMakeFiles/qspips.dir/xqspips.c.obj
+[52/246] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt.c.obj
+[53/246] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_g.c.obj
+[54/246] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_selftest.c.obj
+[55/246] Building C object libsrc/scuwdt/src/CMakeFiles/scuwdt.dir/xscuwdt_sinit.c.obj
+[56/246] Building C object libsrc/scugic/src/CMakeFiles/scugic.dir/xscugic_hw.c.obj
+[57/246] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_sinit.c.obj
+[58/246] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps.c.obj
+[59/246] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_g.c.obj
+[60/246] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer.c.obj
+[61/246] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer_sinit.c.obj
+[62/246] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer_linux.c.obj
+[63/246] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer_g.c.obj
+[64/246] Linking C static library libsrc\dmaps\src\libdmaps.a
+[65/246] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_hw.c.obj
+[66/246] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_selftest.c.obj
+[67/246] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_options.c.obj
+[68/246] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_host.c.obj
+[69/246] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_card.c.obj
+[70/246] Linking C static library libsrc\scutimer\src\libscutimer.a
+[71/246] Linking C static library libsrc\qspips\src\libqspips.a
+[72/246] Linking C static library libsrc\emacps\src\libemacps.a
+[73/246] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_g.c.obj
+[74/246] Linking C static library libsrc\scuwdt\src\libscuwdt.a
+[75/246] Linking C static library libsrc\scugic\src\libscugic.a
+[76/246] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps.c.obj
+[77/246] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_intr.c.obj
+[78/246] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_sinit.c.obj
+[79/246] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_g.c.obj
+[75/157] Building C object libsrc/texture_integer/src/CMakeFiles/texture_integer.dir/xtexture_integer.c.obj
+[76/157] Building C object libsrc/sdps/src/CMakeFiles/sdps.dir/xsdps_card.c.obj
+[77/157] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps.c.obj
+[78/157] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps.c.obj
+[79/157] Linking C static library libsrc\scuwdt\src\libscuwdt.a
+[80/157] Linking C static library libsrc\scugic\src\libscugic.a
+[81/157] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_hw.c.obj
+[82/157] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_options.c.obj
+[83/157] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_g.c.obj
+[84/157] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_sinit.c.obj
+[85/157] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_intr.c.obj
+[86/157] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_intr.c.obj
+[87/157] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_selftest.c.obj
+[88/157] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_g.c.obj
+[89/157] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_endpoint.c.obj
+[90/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/print.c.obj
+[91/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_mem.c.obj
+[92/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_assert.c.obj
+[93/157] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_sinit.c.obj
+[94/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testcache.c.obj
+[95/157] Linking C static library libsrc\texture_integer\src\libtexture_integer.a
+[96/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_printf.c.obj
+[97/157] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps.c.obj
+[98/157] Linking C static library libsrc\sdps\src\libsdps.a
+[99/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testmem.c.obj
+[100/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testio.c.obj
+[101/157] Linking C static library libsrc\uartps\src\libuartps.a
+[102/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xplatform_info.c.obj
+[103/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_util.c.obj
+[104/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_sutil.c.obj
+[105/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj
+[106/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xpm_init.c.obj
+[107/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj
+[108/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xcortexa9_g.c.obj
+[109/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj
+[110/157] Linking C static library libsrc\usbps\src\libusbps.a
+[111/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/read.c.obj
+[112/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/cpputest_time.c.obj
+[113/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/sbrk.c.obj
+[114/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/isatty.c.obj
+[115/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/unlink.c.obj
+[116/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_exit.c.obj
+[117/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_sbrk.c.obj
+[118/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fcntl.c.obj
+[119/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/close.c.obj
+[120/157] Linking C static library libsrc\xadcps\src\libxadcps.a
+[121/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getpid.c.obj
+[122/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/write.c.obj
+[123/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/time.c.obj
+[124/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/putnum.c.obj
+[125/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/vectors.c.obj
+[126/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_exception.c.obj
+[127/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fstat.c.obj
+[128/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_spinlock.c.obj
+[129/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/open.c.obj
+[130/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/errno.c.obj
+[131/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xpm_counter.c.obj
+[132/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_open.c.obj
+[133/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/abort.c.obj
+[134/157] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/asm_vectors.S.obj
+[135/157] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/translation_table.S.obj
+[136/157] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/boot.S.obj
+[137/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getentropy.c.obj
+[138/157] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/cpu_init.S.obj
+[139/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/kill.c.obj
+[140/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/lseek.c.obj
+[141/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/gettimeofday.c.obj
+[142/157] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/xil-crt0.S.obj
+[143/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xl2cc_counter.c.obj
+[144/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_mmu.c.obj
+[145/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_misc_psreset_api.c.obj
+[146/157] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+[147/157] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/globaltimer_sleep_zynq.c.obj
+[148/157] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj
+[149/157] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_cache.c.obj
+[150/157] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/diskio.c.obj
+[151/157] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffsystem.c.obj
+[152/157] Linking C static library libsrc\xilrsa\src\libxilrsa.a
+[153/157] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/ffunicode.c.obj
+[154/157] Linking C static library libsrc\xiltimer\src\libxiltimer.a
+[155/157] Linking C static library libsrc\standalone\src\libxilstandalone.a
+[156/157] Building C object libsrc/xilffs/src/CMakeFiles/xilffs.dir/ff.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/xilffs/src/ff.c: In function 'get_ldnumber':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/xilffs/src/ff.c:4000:13: warning: unused variable 'vol' [-Wunused-variable]
+ 4000 |         int vol = -1;[INFO]: Copying headers and built archives
+[INFO]: Successfully built BSP. Generated libxil.a, libxilffs.a, libxilrsa.a, libxilstandalone.a, libxiltimer.a
+      |             ^~~
+[157/157] Linking C static library libsrc\xilffs\src\libxilffs.a
+[80/246] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps.c.obj
+[81/246] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_hw.c.obj
+[82/246] Building C object libsrc/uartps/src/CMakeFiles/uartps.dir/xuartps_options.c.obj
+[83/246] Linking C static library libsrc\texture_integer\src\libtexture_integer.a
+[84/246] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_sinit.c.obj
+[85/246] Linking C static library libsrc\sdps\src\libsdps.a
+[86/246] ========== BSP Build Information ==========
+Compiler PATH: D:/2025.2/Vitis/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=D:/Vivado/TileL
+ab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/Xilinx.
+spec -ID:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/sta
+ndalone_a9/bsp/include -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DFPU_HARD_FLOAT_ABI_
+ENABLED=1 -DNDEBUG
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[87/246] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_g.c.obj
+[88/246] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_intr.c.obj
+[89/246] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_intr.c.obj
+[90/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/print.c.obj
+[91/246] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_selftest.c.obj
+[92/246] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps_sinit.c.obj
+[93/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_assert.c.obj
+[94/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_mem.c.obj
+[95/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testcache.c.obj
+[96/246] Building C object libsrc/xadcps/src/CMakeFiles/xadcps.dir/xadcps.c.obj
+[97/246] Building C object libsrc/usbps/src/CMakeFiles/usbps.dir/xusbps_endpoint.c.obj
+[98/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_printf.c.obj
+[99/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testio.c.obj
+[100/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_testmem.c.obj
+[101/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xplatform_info.c.obj
+[102/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/xcortexa9_g.c.obj
+[103/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xpm_init.c.obj
+[104/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_util.c.obj
+[105/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/outbyte.c.obj
+[106/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/xil_sutil.c.obj
+[107/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/inbyte.c.obj
+[108/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/unlink.c.obj
+[109/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/cpputest_time.c.obj
+[110/246] Linking C static library libsrc\uartps\src\libuartps.a
+[111/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/sbrk.c.obj
+[112/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/common/intr/xinterrupt_wrap.c.obj
+[113/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/read.c.obj
+[114/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_exit.c.obj
+[115/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/close.c.obj
+[116/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/isatty.c.obj
+[117/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/write.c.obj
+[118/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_sbrk.c.obj
+[119/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fcntl.c.obj
+[120/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getpid.c.obj
+[121/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/time.c.obj
+[122/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/putnum.c.obj
+[123/246] Linking C static library libsrc\usbps\src\libusbps.a
+[124/246] Linking C static library libsrc\xadcps\src\libxadcps.a
+[125/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/open.c.obj
+[126/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/errno.c.obj
+[127/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/fstat.c.obj
+[128/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/vectors.c.obj
+[129/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_exception.c.obj
+[130/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xil_spinlock.c.obj
+[131/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/xpm_counter.c.obj
+[132/246] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/asm_vectors.S.obj
+[133/246] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/translation_table.S.obj
+[134/246] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/boot.S.obj
+[135/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/_open.c.obj
+[136/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/abort.c.obj
+[137/246] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/cpu_init.S.obj
+[138/246] Building ASM object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/gcc/xil-crt0.S.obj
+[139/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/kill.c.obj
+[140/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/gettimeofday.c.obj
+[141/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/lseek.c.obj
+[142/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/common/gcc/getentropy.c.obj
+[143/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_misc_psreset_api.c.obj
+[144/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_mmu.c.obj
+[145/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xl2cc_counter.c.obj
+[146/246] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/core/default_timer/globaltimer_sleep_zynq.c.obj
+[147/246] Building C object libsrc/xiltimer/src/CMakeFiles/xiltimer.dir/xiltimer.c.obj
+[148/246] Building C object libsrc/standalone/src/CMakeFiles/xilstandalone.dir/arm/cortexa9/xil_cache.c.obj
+[149/246] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+[150/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/dns.c.obj
+[151/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/init.c.obj
+[152/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/def.c.obj
+[153/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ip.c.obj
+[154/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/inet_chksum.c.obj
+[155/246] Linking C static library libsrc\xiltimer\src\libxiltimer.a
+[156/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/mem.c.obj
+[157/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/raw.c.obj
+[158/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/memp.c.obj
+[159/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/sys.c.obj
+[160/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/netif.c.obj
+[161/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/altcp_alloc.c.obj
+[162/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/altcp.c.obj
+[163/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/altcp_tcp.c.obj
+[164/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/stats.c.obj
+[165/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/timeouts.c.obj
+[166/246] Linking C static library libsrc\standalone\src\libxilstandalone.a
+[167/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/autoip.c.obj
+[168/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/dhcp.c.obj
+[169/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/pbuf.c.obj
+[170/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/udp.c.obj
+[171/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/icmp.c.obj
+[172/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/tcp_out.c.obj
+[173/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/igmp.c.obj
+[174/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/tcp_in.c.obj
+[175/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/etharp.c.obj
+[176/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/tcp.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/lwip220/src/lwip-2.2.0/src/core/tcp.c: In function 'tcp_recved':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/lwip220/src/lwip-2.2.0/src/core/tcp.c:986:16: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  986 |   if ((rcv_wnd > TCP_WND_MAX(pcb)) || (rcv_wnd < pcb->rcv_wnd)) {
+      |                ^
+[177/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/ip6_frag.c.obj
+[178/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/api_msg.c.obj
+[179/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/dhcp6.c.obj
+[180/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/ip6.c.obj
+[181/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/mld6.c.obj
+[182/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/icmp6.c.obj
+[183/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/nd6.c.obj
+[184/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/ethip6.c.obj
+[185/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/ip4_frag.c.obj
+[186/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/acd.c.obj
+[187/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/ip6_addr.c.obj
+[188/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/ip4.c.obj
+[189/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv4/ip4_addr.c.obj
+[190/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/api_lib.c.obj
+[191/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/core/ipv6/inet6.c.obj
+[192/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/err.c.obj
+[193/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/netbuf.c.obj
+[194/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/if_api.c.obj
+[195/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/netifapi.c.obj
+[196/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/netdb.c.obj
+[197/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/sockets.c.obj
+[198/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/api/tcpip.c.obj
+[199/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ethernet.c.obj
+[200/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/bridgeif.c.obj
+[201/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/lowpan6_common.c.obj
+[202/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/lowpan6_ble.c.obj
+[203/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/lowpan6.c.obj
+[204/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/zepif.c.obj
+[205/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/bridgeif_fdb.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/lwip220/src/lwip-2.2.0/src/netif/bridgeif_fdb.c: In function 'bridgeif_age_tmr':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/lwip220/src/lwip-2.2.0/src/netif/bridgeif_fdb.c:187:3: warning: implicit declaration of function 'sys_timeout' [-Wimplicit-function-declaration]
+  187 |   sys_timeout(BRIDGEIF_AGE_TIMER_MS, bridgeif_age_tmr, arg);
+      |   ^~~~~~~~~~~
+[206/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/slipif.c.obj
+[207/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/auth.c.obj
+[208/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/ccp.c.obj
+[209/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/chap-md5.c.obj
+[210/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/chap-new.c.obj
+[211/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/chap_ms.c.obj
+[212/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/eap.c.obj
+[213/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/demand.c.obj
+[214/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/eui64.c.obj
+[215/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/ecp.c.obj
+[216/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/fsm.c.obj
+[217/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/ipv6cp.c.obj
+[218/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/ipcp.c.obj
+[219/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/lcp.c.obj
+[220/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/magic.c.obj
+[221/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/multilink.c.obj
+[222/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/mppe.c.obj
+[223/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/ppp.c.obj[INFO]: Copying headers and built archives
+CMake Warning (dev) at libsrc/cmake_install.cmake:121 (list):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/cmake_install.cmake:122
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/../include
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:42 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+CMake Warning (dev) at libsrc/cmake_install.cmake:129 (file):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/cmake_install.cmake:129
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/..
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:42 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+CMake Warning (dev) at libsrc/standalone/src/cmake_install.cmake:63 (list):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/cmake_install.cmake:64
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/../include
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:47 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+CMake Warning (dev) at libsrc/standalone/src/cmake_install.cmake:71 (file):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/cmake_install.cmake:71
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/..
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:47 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+CMake Warning (dev) at libsrc/xiltimer/src/cmake_install.cmake:53 (list):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/cmake_install.cmake:54
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/../include
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:52 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+CMake Warning (dev) at libsrc/xiltimer/src/cmake_install.cmake:61 (file):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/xiltimer/src/cmake_install.cmake:61
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/..
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:52 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+CMake Warning (dev) at libsrc/lwip220/src/cmake_install.cmake:53 (list):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/lwip220/src/cmake_install.cmake:54
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/../include
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:57 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+CMake Warning (dev) at libsrc/lwip220/src/cmake_install.cmake:61 (file):
+  Syntax error in cmake code at
+    D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/build_configs/gen_bsp/libsrc/lwip220/src/cmake_install.cmake:61
+  when parsing string
+    D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_platform\ps7_cortexa9_0\standalone_a9\bsp\include/..
+  Invalid escape sequence \V
+  Policy CMP0010 is not set: Bad variable reference syntax is an error.  Run
+  "cmake --help-policy CMP0010" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  cmake_install.cmake:57 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[INFO]: Successfully built BSP. Generated liblwip220.a, libxil.a, libxilstandalone.a, libxiltimer.a
+[224/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/pppapi.c.obj
+[225/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/pppcrypt.c.obj
+[226/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/pppoe.c.obj
+[227/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/pppol2tp.c.obj
+[228/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/pppos.c.obj
+[229/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/sys_arch.c.obj
+[230/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/upap.c.obj
+[231/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/utils.c.obj
+[232/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/polarssl/arc4.c.obj
+[233/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/polarssl/des.c.obj
+[234/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/vj.c.obj
+[235/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/polarssl/md4.c.obj
+[236/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/polarssl/md5.c.obj
+[237/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/src/netif/ppp/polarssl/sha1.c.obj
+[238/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/xtopology_g.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/lwip220/src/xtopology_g.c:11:9: warning: initialization of 'unsigned int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   11 |         NULL
+      |         ^~~~
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/ps7_cortexa9_0/standalone_a9/bsp/libsrc/lwip220/src/xtopology_g.c:11:9: note: (near initialization for 'xtopology[1].emac_baseaddr')
+[239/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/sys_arch_raw.c.obj
+[240/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/netif/xpqueue.c.obj
+[241/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/netif/xemacpsif_hw.c.obj
+[242/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/netif/xadapter.c.obj
+[243/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/netif/xemacpsif.c.obj
+[244/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/netif/xemacpsif_dma.c.obj
+[245/246] Building C object libsrc/lwip220/src/CMakeFiles/lwip220.dir/lwip-2.2.0/contrib/ports/xilinx/netif/xemacpsif_physpeed.c.obj
+[246/246] Linking C static library libsrc\lwip220\src\liblwip220.a
+Generating Boot ELFs
+[INFO]: Starting Application build process
+[INFO]: Building BSP
+[INFO]: Copying headers and built archives
+[INFO]: Successfully built BSP. Generated libxil.a, libxilffs.a, libxilrsa.a, libxilstandalone.a, libxiltimer.a
+[INFO]: Building Application
+[1/2] Archiving C static library libsrc/build_configs/gen_bsp/libxil.a
+[2/2] ========== BSP Build Information ==========
+Compiler PATH: D:/2025.2/Vitis/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc.exe
+Compiler FLAGS:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=D:/Vivado/TileL
+ab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/Xilinx.spec -ID:
+/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/inc
+lude  -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns -DNDEBUG
+===========================================
+** The above flags are BSP level flags. Increase verbosity to see component specific flags **
+===========================================
+[1/14] ==========Application Build Information ==========
+Compiler Flags:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=D:/Vivado/TileL
+ab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/Xilinx.spec -ID:
+/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/inc
+lude -Wall -Wextra      -O0  -g3     -U__clang__  
+Linker Flags:       -Os -Wl,--gc-sections -n -T"D:/Vivado/TileLab_RealPhotos_20261020/v195_software0
+2.sdk/texture_platform/zynq_fsbl/lscript.ld" -L"D:/Vivado/TileLab_RealPhotos_20261020/v195_software0
+2.sdk/texture_platform/zynq_fsbl/zynq_fsbl_bsp/lib/" -L"/" -Wl,--start-group,-lxiltimer,-lxilffs,-lx
+ilrsa,-lxil,-lxilstandalone,-lxiltimer,-lxilffs,-lxilrsa,-lgcc,-lc -Wl,--end-group
+===========================================
+[2/14] Building ASM object CMakeFiles/fsbl.elf.dir/fsbl_handoff.S.obj
+[3/14] Building C object CMakeFiles/fsbl.elf.dir/fsbl_hooks.c.obj
+[4/14] Building C object CMakeFiles/fsbl.elf.dir/md5.c.obj
+[5/14] Building C object CMakeFiles/fsbl.elf.dir/image_mover.c.obj
+[6/14] Building C object CMakeFiles/fsbl.elf.dir/nand.c.obj
+[7/14] Building C object CMakeFiles/fsbl.elf.dir/main.c.obj
+[8/14] Building C object CMakeFiles/fsbl.elf.dir/nor.c.obj
+[9/14] Building C object CMakeFiles/fsbl.elf.dir/rsa.c.obj
+[10/14] Building C object CMakeFiles/fsbl.elf.dir/pcap.c.obj
+[11/14] Building C object CMakeFiles/fsbl.elf.dir/sd.c.obj
+[12/14] Building C object CMakeFiles/fsbl.elf.dir/qspi.c.obj
+[13/14] Building C object CMakeFiles/fsbl.elf.dir/ps7_init.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/ps7_init.c: In function 'ps7_config':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/zynq_fsbl/ps7_init.c:12409:35: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
+12409 |                     while ((*addr < delay)) {
+      |                                   ^
+[14/14] Linking C executable fsbl.elf
+   text	   data	    bss	    dec	    hex	filename
+  91081	  10952	  76300	 178333	  2b89d	fsbl.elf
+Generating Export directory
+Platform Build Finished successfully.
+Initiating build for the texture_transport component.
+Command: cmd.exe /C set CC= && set CXX= && empyro.bat build_app -s D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_transport\src -b D:\Vivado\TileLab_RealPhotos_20261020\v195_software02.sdk\texture_transport\build
+[INFO]: Starting Application build process
+[INFO]: Building Application
+[1/4] ==========Application Build Information ==========
+Compiler Flags:  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=D:/Vivado/TileL
+ab_RealPhotos_20261020/v195_software02.sdk/texture_platform/export/texture_platform/sw/standalone_a9
+/Xilinx.spec -ID:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/export/tex
+ture_platform/sw/standalone_a9/include -Wall -Wextra      -O2  -g3    -fno-builtin-memcpy -U__clang_
+_  
+Linker Flags:       -Wl,-T -Wl,"D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_tr
+ansport/src/lscript.ld" -L"D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transpo
+rt/src/" -L"D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_platform/export/textur
+e_platform/sw/standalone_a9/lib/" -L"/" -Wl,--start-group,-lxilstandalone,-lxiltimer,-llwip220,-lxil
+,-lgcc,-lc -Wl,--end-group
+===========================================
+[2/4] Building C object CMakeFiles/texture_transport.elf.dir/safe_memcpy.c.obj
+[3/4] Building C object CMakeFiles/texture_transport.elf.dir/main.c.obj
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c: In function 'pump':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c:74:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   74 |   if(tcp_write(client,p,n,TCP_WRITE_FLAG_COPY)!=ERR_OK)break;tx_pos+=n;
+      |   ^~
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c:74:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   74 |   if(tcp_write(client,p,n,TCP_WRITE_FLAG_COPY)!=ERR_OK)break;tx_pos+=n;
+      |                                                              ^~~~~~
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c: In function 'start_request':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c:129:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  129 |  if(!req[3])completed();return 1;
+      |  ^~
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c:129:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  129 |  if(!req[3])completed();return 1;
+      |                         ^~~~~~
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c: In function 'received':
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c:139:4: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  139 |    if(n>64-rx_used)n=64-rx_used;pbuf_copy_partial(p,(unsigned char*)req+rx_used,n,pos);rx_used+=n;pos+=n;
+      |    ^~
+D:/Vivado/TileLab_RealPhotos_20261020/v195_software02.sdk/texture_transport/src/main.c:139:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  139 |    if(n>64-rx_used)n=64-rx_used;pbuf_copy_partial(p,(unsigned char*)req+rx_used,n,pos);rx_used+=n;pos+=n;
+      |                                 ^~~~~~~~~~~~~~~~~
+[4/4] Linking C executable texture_transport.elf
+   text	   data	    bss	    dec	    hex	filename
+ 118074	   3476	4290000	4411550	 43509e	texture_transport.elf
+Build Finished successfully
+Shutting down Vitis server running on port '60856'

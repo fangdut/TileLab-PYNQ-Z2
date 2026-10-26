@@ -1,5 +1,9 @@
 # TileLab FPGA 实拍瓷砖检测
 
+<!-- V195_CURRENT_BEGIN -->
+**V195 良品参照标定（2026-10-25）：** 不改变FPGA内核，仅更新良品参照与阈值。第二轮新40张陶瓦实板39/40判对（良品误报1/20、缺陷检出20/20），另40张已公开回归全部判对；80张评分/掩膜逐值一致。不是彩绘地砖或实体独立验收，候选不进入自动放行。[完整结果](project/pynq_z2_tile_v1_53/reports/v195/status.html) · [离线标定与部署](project/pynq_z2_tile_v1_53/tools/fpga_texture_v170/REFERENCE_CALIBRATION.md)。
+<!-- V195_CURRENT_END -->
+
 <!-- V194_CURRENT_BEGIN -->
 **V194 外部验证与范围联锁（2026-10-25）：** 新来源40张陶瓦原图的冻结配置压力测试失败：20张缺陷检出，但20张良品全部误报；不能当作地砖或任意材质验收。原117张纹理图仍逐值一致。工作站新增未验证输入只显示参考结果、禁止良品放行；13项软件测试与4项实际FPGA界面检查通过。这是流程资格约束，不是检测准确率提升。[完整结果](project/pynq_z2_tile_v1_53/reports/v194/status.html) · [技术报告底稿](project/pynq_z2_tile_v1_53/reports/v194/technical_report_draft.html)。
 [V194本地运行包清单与校验值](deliverables/TileLab_StopInspect_V194_Dev.json)（含未验证输入复核流程；原40张误报结果完整保留）。

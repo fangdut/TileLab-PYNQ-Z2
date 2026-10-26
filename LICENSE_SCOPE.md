@@ -46,3 +46,7 @@ those candidate sources were not incorporated in the distributed test corpus.
 ## V170 integer candidate
 
 `project/pynq_z2_tile_v1_53/models/texture_v170_r1/` contains MVTec-derived artifacts under CC BY-NC-SA 4.0 and pretrained-weight derivatives subject to original terms. The same restrictions apply to original photos, masks and derived benchmark evidence in `reports/v169/board_cases/`. Original V169/V170 source code is MIT; AMD/Xilinx sources retain their original notices.
+
+## V195 reference calibration pilot
+
+The same CC BY4.0 author attribution as V194 applies to roof-photo derivatives in reports/v195; source originals are fetched separately. Report inputs were resized offline to720x720; overlays/contact sheets add visualization. Frozen base projection/model and their candidate derivatives retain baseline MVTec noncommercial/share-alike restrictions and applicable upstream weight terms. Replacing normal centers does not relicense the inherited model as MIT. Original calibration tools are MIT; vendor firmware retains its notices.

@@ -1,0 +1,16 @@
+[
+  {
+    "candidate": 1,
+    "sha256": "91bf22039113ddd1300771339fe1f898ea02a97eaa8876646c0c9786fd1dfc7c",
+    "quantized_graph_sha256": "ec43c6ac6a00db1e233aa0d003f641689198f86347ddbf19149c0259bb1232e3",
+    "code_sha256": "452cdf8b12e8ade8d2ed002dcff12143cc1cb0af064ee6bcfdb3e41e79461926",
+    "note": "Tool supports both recorded normal-count plans; first run used fixed32/12 assertions before count generalization, same fitting arithmetic"
+  },
+  {
+    "candidate": 2,
+    "sha256": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+    "quantized_graph_sha256": "ec43c6ac6a00db1e233aa0d003f641689198f86347ddbf19149c0259bb1232e3",
+    "code_sha256": "452cdf8b12e8ade8d2ed002dcff12143cc1cb0af064ee6bcfdb3e41e79461926",
+    "note": "Tool supports both recorded normal-count plans; first run used fixed32/12 assertions before count generalization, same fitting arithmetic"
+  }
+]

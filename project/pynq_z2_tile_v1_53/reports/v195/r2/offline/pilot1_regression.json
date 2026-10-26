@@ -1,0 +1,250 @@
+{
+  "scope": "EXPOSED_FIRST_PILOT_REGRESSION_NOT_NEW_VALIDATION",
+  "tp": 20,
+  "fp": 0,
+  "tn": 20,
+  "fn": 0,
+  "threshold": 13365,
+  "results": [
+    {
+      "id": "66c3f63cb339e3d5d339407a",
+      "label": "good",
+      "score": 11857,
+      "alarm": false
+    },
+    {
+      "id": "77908c3ec36f9edf39c2ec4f",
+      "label": "good",
+      "score": 11695,
+      "alarm": false
+    },
+    {
+      "id": "d7cf2d07382c3ba55dacea2c",
+      "label": "good",
+      "score": 11935,
+      "alarm": false
+    },
+    {
+      "id": "6e4ceb1fcb0063858a0982e8",
+      "label": "good",
+      "score": 12265,
+      "alarm": false
+    },
+    {
+      "id": "c66b68588e494968be7a0992",
+      "label": "good",
+      "score": 11868,
+      "alarm": false
+    },
+    {
+      "id": "c542e3248ce796c58d3c5c37",
+      "label": "good",
+      "score": 11643,
+      "alarm": false
+    },
+    {
+      "id": "237db552ace842a97b6c4b2d",
+      "label": "good",
+      "score": 11743,
+      "alarm": false
+    },
+    {
+      "id": "c712d04b4763176d95a47fc6",
+      "label": "good",
+      "score": 12281,
+      "alarm": false
+    },
+    {
+      "id": "752c053e1a027785bd01fd80",
+      "label": "good",
+      "score": 12037,
+      "alarm": false
+    },
+    {
+      "id": "563e6367cab681c945a7b259",
+      "label": "good",
+      "score": 12158,
+      "alarm": false
+    },
+    {
+      "id": "af7910a0d68a0ef6b809b082",
+      "label": "good",
+      "score": 12368,
+      "alarm": false
+    },
+    {
+      "id": "532fe7cc6da9e1da2babb01c",
+      "label": "good",
+      "score": 11926,
+      "alarm": false
+    },
+    {
+      "id": "48aeaab7ddbea58987ca1b12",
+      "label": "good",
+      "score": 11885,
+      "alarm": false
+    },
+    {
+      "id": "16f29a9d718f34b3b532697f",
+      "label": "good",
+      "score": 12119,
+      "alarm": false
+    },
+    {
+      "id": "11ab53e3d115d769f1f8e691",
+      "label": "good",
+      "score": 11718,
+      "alarm": false
+    },
+    {
+      "id": "47f169bb6e15038552b40c31",
+      "label": "good",
+      "score": 12509,
+      "alarm": false
+    },
+    {
+      "id": "cf75face7b9d2b177fa8e80f",
+      "label": "good",
+      "score": 11691,
+      "alarm": false
+    },
+    {
+      "id": "0272d738ec99d795ba82220b",
+      "label": "good",
+      "score": 11459,
+      "alarm": false
+    },
+    {
+      "id": "64baa4a14798f510474b2847",
+      "label": "good",
+      "score": 11736,
+      "alarm": false
+    },
+    {
+      "id": "d326bc9aba24ccfe1ba09524",
+      "label": "good",
+      "score": 11892,
+      "alarm": false
+    },
+    {
+      "id": "884fb8f0f9c9321b16076ec9",
+      "label": "defect",
+      "score": 17264,
+      "alarm": true
+    },
+    {
+      "id": "c362c64fa575a03b0a7f23c1",
+      "label": "defect",
+      "score": 18696,
+      "alarm": true
+    },
+    {
+      "id": "6a2c086f74a6d560a51ad544",
+      "label": "defect",
+      "score": 16129,
+      "alarm": true
+    },
+    {
+      "id": "81ca8971d854d8235f5ba7f6",
+      "label": "defect",
+      "score": 17533,
+      "alarm": true
+    },
+    {
+      "id": "d246c2d9a08da79e9d76b9bc",
+      "label": "defect",
+      "score": 20758,
+      "alarm": true
+    },
+    {
+      "id": "ec4fc0400820dd79f164f3c2",
+      "label": "defect",
+      "score": 17768,
+      "alarm": true
+    },
+    {
+      "id": "6b9b9532a23483f2bbafdf5d",
+      "label": "defect",
+      "score": 17682,
+      "alarm": true
+    },
+    {
+      "id": "2745d5c0dbe1f62784ddb402",
+      "label": "defect",
+      "score": 20613,
+      "alarm": true
+    },
+    {
+      "id": "7812a51efa9cff87e58615d5",
+      "label": "defect",
+      "score": 17680,
+      "alarm": true
+    },
+    {
+      "id": "5cbfb7c1e91d59801100db0e",
+      "label": "defect",
+      "score": 20225,
+      "alarm": true
+    },
+    {
+      "id": "d394ae12981062d2eb2262bb",
+      "label": "defect",
+      "score": 19053,
+      "alarm": true
+    },
+    {
+      "id": "2c8726ad17588bed0f2c1530",
+      "label": "defect",
+      "score": 16539,
+      "alarm": true
+    },
+    {
+      "id": "8f0381df4f0b6f79e2325bbb",
+      "label": "defect",
+      "score": 18425,
+      "alarm": true
+    },
+    {
+      "id": "f2aa747c93fdfd816752df77",
+      "label": "defect",
+      "score": 19574,
+      "alarm": true
+    },
+    {
+      "id": "cf9ccf3ce01106c632d647d2",
+      "label": "defect",
+      "score": 16681,
+      "alarm": true
+    },
+    {
+      "id": "03b76b9a8ba7106efdf8913d",
+      "label": "defect",
+      "score": 19362,
+      "alarm": true
+    },
+    {
+      "id": "d1009be5b5253088bb352e7a",
+      "label": "defect",
+      "score": 19080,
+      "alarm": true
+    },
+    {
+      "id": "44b8297aabf4a26de5981323",
+      "label": "defect",
+      "score": 19005,
+      "alarm": true
+    },
+    {
+      "id": "a1f1b97aa6d1106dc068506d",
+      "label": "defect",
+      "score": 16650,
+      "alarm": true
+    },
+    {
+      "id": "c895828729532d5032009dff",
+      "label": "defect",
+      "score": 19351,
+      "alarm": true
+    }
+  ]
+}

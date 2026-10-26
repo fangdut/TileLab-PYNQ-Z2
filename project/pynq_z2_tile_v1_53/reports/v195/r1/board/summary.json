@@ -1,0 +1,18 @@
+{
+  "cases": 40,
+  "tp": 20,
+  "fp": 8,
+  "tn": 12,
+  "fn": 0,
+  "all_scores_and_masks_exact": true,
+  "normal_false_positive_rate": 0.4,
+  "defect_recall": 1.0,
+  "accuracy": 0.8,
+  "mean_engine_seconds": 0.12224198199999999,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "arm_transport_running": true,
+  "model_sha256": "91bf22039113ddd1300771339fe1f898ea02a97eaa8876646c0c9786fd1dfc7c",
+  "scope": "ROOF_CERAMIC_REFERENCE_TRANSFER_PILOT_NOT_FLOOR_ACCEPTANCE",
+  "accepted_for_automatic_release": false
+}

@@ -30,7 +30,7 @@ def main():
                 raise ValueError('Unsafe archive path')
             if name.endswith('/'):dest.mkdir(parents=True,exist_ok=True)
             else:dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(archive.read(name))
-    reports=['reports/v193']+(['reports/v194'] if (project/'reports/v194').exists() else [])
+    reports=['reports/v193']+[f'reports/{v}' for v in ['v194','v195'] if (project/f'reports/{v}').exists()]
     for rel in ['host/stop_inspect_station','data/stop_inspect_demo','skill','scripts/texture_v170','tools/fpga_texture_v170']+reports:
         shutil.copytree(project/rel,out/'project'/rel,
                         ignore=shutil.ignore_patterns('__pycache__','*.pyc','runtime'))
@@ -38,6 +38,8 @@ def main():
         shutil.copy2(repo/name,out/name)
     if (project/'tools/fetch_external_v194.py').exists():
         shutil.copy2(project/'tools/fetch_external_v194.py',out/'project/tools/fetch_external_v194.py')
+    if (project/'tools/fetch_reference_v195.py').exists():
+        shutil.copy2(project/'tools/fetch_reference_v195.py',out/'project/tools/fetch_reference_v195.py')
     (out/'requirements.txt').write_text('numpy>=1.26,<3\nPillow>=10,<13\n')
     (out/'README.md').write_text('''# TileLab stopped-input FPGA workstation
 
@@ -52,6 +54,8 @@ Windows, Python3.12, NumPy/Pillow, Vivado/Vitis2025.2 and board USB drivers are 
 XSDB defaults to D:/2025.2/Vitis/bin/xsdb.bat; set TILELAB_XSDB for another path. Deployment is volatile only. The old station/source must be closed before programming.
 
 See project/host/stop_inspect_station/README.md and project/reports/v193/status.html for workflow, evidence and limits. Inference is physical FPGA PL. The PC manages input, transport, display and operator confirmation. There is no physical conveyor or actuator in this demonstrator. Bundled photos are an exposed development set, not blind accuracy validation. Original code MIT; MVTec photos/derived model/evidence CC BY-NC-SA4.0; vendor/upstream terms preserved.
+
+V195 offline reference-calibration tools/evidence are included when present. They do not change the live baseline or qualify arbitrary imports for release. See project/reports/v195/status.html and project/tools/fpga_texture_v170/REFERENCE_CALIBRATION.md. Offline fitting additionally needs the PyTorch/torchvision versions recorded in that report; these are not runtime detector dependencies.
 ''',encoding='utf8')
     files={f.relative_to(out).as_posix():dict(bytes=f.stat().st_size,sha256=digest(f))
            for f in sorted(out.rglob('*')) if f.is_file()}

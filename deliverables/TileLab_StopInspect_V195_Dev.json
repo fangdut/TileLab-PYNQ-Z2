@@ -1,0 +1,12 @@
+{
+  "package": "TileLab_StopInspect_V195_Dev.zip",
+  "bytes": 49878165,
+  "sha256": "6b31cdadbf01b67636e8f59b5c20e3d6b972c37b52ebaaeb344f8a094d0fca51",
+  "manifest_files": 441,
+  "stable_runtime_model": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "pilot_model": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+  "pilot_model_not_qualified_for_release": true,
+  "ready_for_competition_final_submission": false,
+  "source_builder": "project/pynq_z2_tile_v1_53/tools/package_stop_station.py",
+  "notes": "Stable V194 workstation preserved; V195 offline calibration tools, exact candidates and failed/successful pilot evidence added. Original roof-photo files fetched separately. No real conveyor, signed authorization or device photography supplied."
+}

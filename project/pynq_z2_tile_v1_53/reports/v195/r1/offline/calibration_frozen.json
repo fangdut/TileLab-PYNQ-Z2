@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "1c7d5887e3eb184369a32c4414e3388ec73d609d1dcbbefbdc051bfbc3a248cc",
+  "manifest_sha256": "d11ea1f179506b520f86f34c7ce87c18e33663adf29522d7b9e91bfd870fefad",
+  "base_model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "candidate_model_sha256": "91bf22039113ddd1300771339fe1f898ea02a97eaa8876646c0c9786fd1dfc7c",
+  "threshold": 12033,
+  "only_binary_mutations": [
+    "header threshold bytes60:64",
+    "normal centers bytes620640:751712"
+  ],
+  "unchanged_cnn_and_projection": true,
+  "test_scoring_started": false,
+  "license_note": "Inherited fixed projection from MVTec development calibration retains baseline noncommercial limitations; new normal photos CC BY4.0",
+  "scope": "NORMAL_REFERENCE_TRANSFER_PILOT_ROOF_CERAMICS_NOT_FLOOR_QUALIFICATION",
+  "physical_specimen_independence": false
+}

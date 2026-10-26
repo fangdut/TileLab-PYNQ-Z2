@@ -1,5 +1,9 @@
 # FPGA engineering status — 2026-10-23
 
+<!-- V195_CURRENT_BEGIN -->
+V195 normal-reference transfer pilot: unchanged 100MHz BIT/XSA and751760-byte model shape; normal-only centers/threshold update. New file-disjoint roof-photo test39/40 correct (FP1/20, TP20/20); exposed40 regression40/40. All80 physical scores/masks exact. Not independent-specimen, floor or painted-material acceptance; no candidate HDMI or release qualification. See project/pynq_z2_tile_v1_53/reports/v195/status.html.
+<!-- V195_CURRENT_END -->
+
 <!-- V194_CURRENT_BEGIN -->
 **V194 外部验证与范围联锁（2026-10-25）：** 新来源40张陶瓦原图的冻结配置压力测试失败：20张缺陷检出，但20张良品全部误报；不能当作地砖或任意材质验收。原117张纹理图仍逐值一致。工作站新增未验证输入只显示参考结果、禁止良品放行；13项软件测试与4项实际FPGA界面检查通过。这是流程资格约束，不是检测准确率提升。[完整结果](project/pynq_z2_tile_v1_53/reports/v194/status.html) · [技术报告底稿](project/pynq_z2_tile_v1_53/reports/v194/technical_report_draft.html)。
 [V194本地运行包清单与校验值](deliverables/TileLab_StopInspect_V194_Dev.json)（含未验证输入复核流程；原40张误报结果完整保留）。

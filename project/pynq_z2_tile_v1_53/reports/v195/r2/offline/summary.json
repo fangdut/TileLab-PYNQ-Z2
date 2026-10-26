@@ -1,0 +1,27 @@
+{
+  "candidate": {
+    "tp": 20,
+    "fp": 1,
+    "tn": 19,
+    "fn": 0,
+    "accuracy": 0.975,
+    "normal_false_positive_rate": 0.05,
+    "defect_recall": 1.0
+  },
+  "baseline": {
+    "tp": 20,
+    "fp": 20,
+    "tn": 0,
+    "fn": 0,
+    "accuracy": 0.5,
+    "normal_false_positive_rate": 1.0,
+    "defect_recall": 1.0
+  },
+  "threshold": 13365,
+  "model_sha256": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+  "elapsed_seconds": 64.54700000002049,
+  "board_verified": false,
+  "accuracy_acceptance": false,
+  "scope": "NORMAL_REFERENCE_TRANSFER_PILOT_R2_ROOF_CERAMICS_NOT_FLOOR_QUALIFICATION",
+  "note": "Exploratory file-disjoint roof ceramic pilot; no floor-tile or independent-specimen claim"
+}
