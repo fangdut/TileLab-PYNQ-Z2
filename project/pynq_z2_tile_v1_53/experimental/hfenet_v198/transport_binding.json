@@ -7,11 +7,17 @@
   "build_software.py": {
     "base": "scripts\\texture_v170\\build_software.py",
     "base_sha256": "22ddf69a9585e73fc9b823bc4651a551574b20be5e705896df860658135c0706",
-    "candidate_sha256": "161dfa56d4da25c07384d0f4aa996f8da6e8b197c1c39939af3e1eb6ab84187d"
+    "candidate_sha256": "4581a9afb3864cbd5397f4058e7b3e3c87f256affd35981d41da74a3873f0b39",
+    "post_fork_changes": [
+      "Separate25/40/50MHz clock validator and explicit sibling-module import"
+    ]
   },
   "program_board.py": {
     "base": "scripts\\texture_v170\\program_board.py",
     "base_sha256": "ad1324281194edd0b2ed1651f6c3226f0e6a98632a626bb0549025e4b9003d0c",
-    "candidate_sha256": "d4540c5ce3820f0b77a8dcea4df5f4fa7909a1c2dbf1827f42d7641dccfde749"
+    "candidate_sha256": "5eb8a97a8ad18f418be3c8fab7f647d3e676468c605e667bfa6207a90b0fea6c",
+    "post_fork_changes": [
+      "Separate25/40/50MHz clock validator and explicit sibling-module import"
+    ]
   }
 }

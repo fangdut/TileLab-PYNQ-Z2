@@ -1,0 +1,13 @@
+{
+  "scope": "HFENET198_STATION_FAKE_BACKEND_INTERLOCKS_NOT_BOARD",
+  "passed": true,
+  "tests": 13,
+  "original_test_sha256": "97dfaaa5ed279be4f65b7927f52bacbddedcbc8cff9790fff94e114cff69cd6b",
+  "adapted_test_sha256": "e86e1652bc1cbe00a988b2b621507c47260adb0598744962f9e88a30649bf7bf",
+  "controller_sha256": "c044d85a537e4c92a6ccf20eb7c496383910ff7fe79ff8b436971191e2feeb85",
+  "changes": [
+    "Valid upload fixture uses sealed256x1408 geometry",
+    "Rejects old128x128 and256x704 inputs"
+  ],
+  "board_verified": false
+}

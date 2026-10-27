@@ -1,7 +1,7 @@
 # FPGA engineering status — 2026-10-27
 
 <!-- V198_CURRENT_BEGIN -->
-V198 final-frame candidate: feature freeze at stop/inspect/manual-confirm, no new training or10FPS gate. Complete integer frame C matches all72tensors and masks on80original256x1408author scans; complete network RTL passes2frames/49,826checked words plus bad geometry/magic. Shared32PE candidate is in full-system synthesis; no new-network board acceptance or FPS claim. Separate198firmware/client supports original geometry;13fake-backend workflow interlocks pass. Author development data are not independent validation; gray scan strips do not establish whole-tile or painted/material qualification. See reports/v198/status.html and experimental/hfenet_v198/README.md. Stable hardware assets remain available; current Ethernet status request timed out despite USB enumerating normally.
+**2026-10-27工程交付决定：94.6秒HFENet候选已否决，恢复100MHz整数MobileNetV2良品参照检测器。** 本轮117张公开实拍开发图上板逐值复核通过（33正常零误报、84缺陷检出），内核均时0.12473秒；传输加检测均时0.66486秒，包含4次连接建立重试。交付目录重新下载后12次流程和34次非合规操作拒绝通过。所有图像检测计算仍在PL；没有实体输送机构，开发集结果不是独立盲测准确率。工程和10页模板报告已形成，后续实拍、视频及提交由参赛者处理。[最终工程证据](project/pynq_z2_tile_v1_53/reports/delivery_20261027/status.html)。
 <!-- V198_CURRENT_END -->
 
 <!-- V197_CURRENT_BEGIN -->

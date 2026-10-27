@@ -1,0 +1,10 @@
+{
+  "scope": "V198_50MHZ_ROUTED_TIMING_REJECTED_NOT_PROGRAMMED",
+  "setup_slack_ns": -2.666,
+  "source_report_sha256": "1dfcb028467da52f9be3ddd434ef20879fd3db20ce0a0f1f9b7effc73d6e888c",
+  "pl_clock_mhz": 50,
+  "board_programmed": false,
+  "next_candidate_clock_mhz": 40,
+  "reason": "Actual routed setup timing negative; preserve model and integer operators, rebuild matching PS clock/BD/XSA/timing at40MHz",
+  "source_sha256": "787a5872da97ca92f038528c31b421626c66293c9db990de1bbcb90fcf24acb8"
+}

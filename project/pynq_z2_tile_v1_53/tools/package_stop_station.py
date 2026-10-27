@@ -36,6 +36,8 @@ def main():
                         ignore=shutil.ignore_patterns('__pycache__','*.pyc','runtime'))
     for name in ['LICENSE','LICENSE_SCOPE.md','THIRD_PARTY_NOTICES.md']:
         shutil.copy2(repo/name,out/name)
+    shutil.copy2(project/'host/stop_inspect_station/start_station.ps1',out/'start_station.ps1')
+    shutil.copy2(project/'host/stop_inspect_station/start_station.cmd',out/'启动检测.cmd')
     if (project/'tools/fetch_external_v194.py').exists():
         shutil.copy2(project/'tools/fetch_external_v194.py',out/'project/tools/fetch_external_v194.py')
     if (project/'tools/fetch_reference_v195.py').exists():

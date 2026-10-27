@@ -39,12 +39,17 @@ def preflight(hls,regression,rtl,profile):
 def main():
     p=argparse.ArgumentParser()
     for name in ['hls','regression','rtl','profile','out']:p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--clock-mhz',type=int,choices=[25,40,50],default=50)
     a=p.parse_args();assert a.out.is_absolute() and not a.out.exists();proof=preflight(a.hls,a.regression,a.rtl,a.profile)
-    env=os.environ.copy();env.update(TILE_TEXTURE_HW=str(a.out),TILE_TEXTURE_HLS=str(a.hls),TILE_TEXTURE_PL_CLOCK_MHZ='50',TILE_TEXTURE_COMPLETE_AXI_PROOF=str(a.rtl/'summary.json'),TILE_TEXTURE_MEMORY_LAYOUT='shared',TILE_TEXTURE_OPT_DIRECTIVE='Default',TILE_TEXTURE_VIDEO_VARIANT='serial');env.pop('TILE_TEXTURE_VIDEO',None);env.pop('TILE_TEXTURE_PREPARE_ONLY',None)
+    proof['requested_pl_clock_mhz']=a.clock_mhz
+    # A slower physical clock is compatible with the same20ns HLS schedule.
+    # It still requires a matching PS configuration and actual timing closure.
+    assert proof['hls_target_clock_ns']<=1000/a.clock_mhz
+    env=os.environ.copy();env.update(TILE_TEXTURE_HW=str(a.out),TILE_TEXTURE_HLS=str(a.hls),TILE_TEXTURE_PL_CLOCK_MHZ=str(a.clock_mhz),TILE_TEXTURE_COMPLETE_AXI_PROOF=str(a.rtl/'summary.json'),TILE_TEXTURE_MEMORY_LAYOUT='shared',TILE_TEXTURE_OPT_DIRECTIVE='Default',TILE_TEXTURE_VIDEO_VARIANT='serial');env.pop('TILE_TEXTURE_VIDEO',None);env.pop('TILE_TEXTURE_PREPARE_ONLY',None)
     log=a.out.with_name(a.out.name+'_console.log')
     with log.open('w') as f:result=subprocess.run(['D:/2025.2/Vivado/bin/vivado.bat','-mode','batch','-source',str(Path(__file__).with_name('build_hardware.tcl')),'-notrace','-nolog','-nojournal'],env=env,stdout=f,stderr=subprocess.STDOUT)
     if a.out.exists():(a.out/'candidate_preflight.json').write_text(json.dumps(proof,indent=2),encoding='utf8')
     if result.returncode:raise RuntimeError('Physical build rejected; see '+str(log))
-    status=json.loads((a.out/'implementation_status.json').read_text());assert status['setup_slack_ns']>=0 and status['hold_slack_ns']>=0 and status['drc_errors']==0 and status['pl_clock_mhz']==50
+    status=json.loads((a.out/'implementation_status.json').read_text());assert status['setup_slack_ns']>=0 and status['hold_slack_ns']>=0 and status['drc_errors']==0 and status['pl_clock_mhz']==a.clock_mhz
     print(json.dumps(dict(scope='HFENET198_TIMING_CLOSED_NOT_PROGRAMMED',**status)),flush=True)
 if __name__=='__main__':main()

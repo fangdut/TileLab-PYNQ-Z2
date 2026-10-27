@@ -6,7 +6,7 @@ set hls [file normalize $::env(TILE_TEXTURE_HLS)]
 set video [info exists ::env(TILE_TEXTURE_VIDEO)]
 set pl_clock_mhz 100
 if {[info exists ::env(TILE_TEXTURE_PL_CLOCK_MHZ)]} {set pl_clock_mhz $::env(TILE_TEXTURE_PL_CLOCK_MHZ)}
-if {$pl_clock_mhz ni {50 100 125}} {error "Unsupported PL clock; use a rescheduled and verified HLS IP"}
+if {$pl_clock_mhz ni {25 40 50}} {error "HFENet198 frame build supports25/40/50MHz with verified20ns HLS scheduling"}
 set video_variant serial
 if {[info exists ::env(TILE_TEXTURE_VIDEO_VARIANT)]} {set video_variant $::env(TILE_TEXTURE_VIDEO_VARIANT)}
 if {$video_variant ni {serial overlap_v175}} {error "Unsupported video variant"}

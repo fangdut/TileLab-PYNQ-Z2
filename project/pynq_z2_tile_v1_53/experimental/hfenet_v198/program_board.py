@@ -3,8 +3,9 @@ from pathlib import Path
 import argparse,hashlib,json,os,secrets,subprocess,zipfile
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/"scripts/texture_v170"))
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from verify_reset import verify
-from verify_clock import verify as verify_clock
+from clock_contract import verify as verify_clock
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
     p=argparse.ArgumentParser();p.add_argument('--hardware',type=Path,required=True);p.add_argument('--software',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()

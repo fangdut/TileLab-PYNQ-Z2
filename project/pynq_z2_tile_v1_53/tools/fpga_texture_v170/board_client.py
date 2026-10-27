@@ -19,13 +19,21 @@ def exact(sock,n):
 
 class Board:
     def __init__(self,address='192.168.33.10',port=9136,timeout=120):
-        self.address=address;self.port=port;self.timeout=timeout;self.seq=0
+        self.address=address;self.port=port;self.timeout=timeout;self.seq=0;self.connection_retries=0
+    def _connect(self):
+        # Only connection establishment is retried. No request bytes have been
+        # sent at this point, so an inference/auto-restart cannot be duplicated.
+        for attempt in range(3):
+            try:return socket.create_connection((self.address,self.port),timeout=min(3,self.timeout))
+            except OSError:
+                if attempt==2:raise
+                self.connection_retries+=1;time.sleep(.15*(attempt+1))
     def request(self,op,payload=b'',offset=0,width=0,height=0,identity=0):
         self.seq+=1
         header=[0x16905458,op,self.seq,len(payload),offset,width,height,zlib.crc32(payload) if payload else 0,identity,0,0,0,0,0,0,0]
         header[15]=zlib.crc32(struct.pack('<15I',*header[:15]))
         start=time.perf_counter()
-        with socket.create_connection((self.address,self.port),timeout=10) as s:
+        with self._connect() as s:
             s.settimeout(self.timeout);s.sendall(struct.pack('<16I',*header));s.sendall(payload)
             wire=exact(s,64);h=struct.unpack('<16I',wire)
             if h[0]!=0x16905258 or h[2]!=self.seq or h[15]!=zlib.crc32(wire[:60]) or h[5]!=ID:raise RuntimeError('Wrong PL image or corrupt reply header')

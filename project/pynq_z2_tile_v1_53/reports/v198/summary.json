@@ -1,34 +1,104 @@
 {
-  "scope": "V198_COMPLETE_INTEGER_HARDWARE_CANDIDATE_NOT_FINAL_SUBMISSION",
-  "feature_freeze": true,
-  "goal": "STOP_INSPECT_MANUAL_CONFIRM",
-  "new_algorithm_branches": false,
-  "training": false,
-  "c_original80_exact": true,
-  "c_tp": 40,
-  "c_fp": 0,
-  "author_data_not_independent_validation": true,
-  "rtl_synthetic_full_graph_passed": true,
-  "hls_estimates": {
-    "DSP": 104,
-    "BRAM_18K": 146,
-    "LUT": 74681,
-    "FF": 59293
+  "scope": "V198_REJECTED_HFENET_WITH_RESTORED_STABLE_DELIVERY",
+  "final_decision": {
+    "scope": "STOP_INSPECT_ENGINEERING_DELIVERY_NOT_WEBSITE_SUBMISSION",
+    "decision": "REJECT_94_6S_HFENET_RESTORE_VERIFIED100MHZ_MOBILENETV2",
+    "stable_model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "report_sha256": "f434ec676e5a91de7e5eacdc30200021c534a4ac8589d989b01c2198b4f07a19",
+    "all117": {
+      "scope": "PHYSICAL_STABLE117_ARCHIVED_DEVELOPMENT_REPRODUCTION_NOT_BLIND",
+      "completed": 117,
+      "normal_images": 33,
+      "normal_false_alarms": 0,
+      "defect_images": 84,
+      "defects_detected": 84,
+      "all_scores_masks_and_meta_exact_except_sequence": true,
+      "boot_identity": 2911040237,
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "cpu_detection": false,
+      "gpu_detection": false,
+      "mean_engine_seconds": 0.12472640039447731,
+      "mean_transfer_detection_seconds": 0.6648636170937561,
+      "training": false,
+      "independent_validation": false,
+      "connection_establishment_retries": 4
+    },
+    "final_bundle_workflow": {
+      "scope": "PHYSICAL_FPGA_STOP_INSPECT_WORKFLOW_EXPOSED_DEMO",
+      "cycles": 12,
+      "correct": 12,
+      "normal_images": 2,
+      "normal_false_alarms": 0,
+      "defects_detected": 10,
+      "confirmed_good_releases": 2,
+      "confirmed_defect_segregations": 10,
+      "unsafe_actions_rejected": 34,
+      "cpu_detection": false,
+      "gpu_detection": false,
+      "pc_responsibilities": [
+        "original photo decode/transport",
+        "operator workflow",
+        "result display",
+        "audit logging"
+      ],
+      "physical_actuator_connected": false,
+      "physical_actuation_verified": false,
+      "benchmark_is_blind": false,
+      "speed_target_required_for_this_milestone": false,
+      "mean_engine_seconds": 0.1247151476923077,
+      "mean_transfer_and_detection_seconds": 0.6346750500088092
+    },
+    "runtime_vision_on": "FPGA_PL",
+    "pc_and_arm_vision_inference": false,
+    "independent_accuracy_validation": false,
+    "physical_conveyor_or_actuator": false,
+    "user_responsible_for_device_photos_video_and_submission": true,
+    "transport_retry": "AT_MOST_3_CONNECTION_ESTABLISHMENT_ATTEMPTS_BEFORE_REQUEST_BYTES_NO_SENT_REQUEST_REPLAY"
   },
-  "hls_estimated_clock_ns": 18.0,
-  "hls_target_clock_ns": 20,
-  "physical_synthesis": {
-    "actual_synth_luts": 51263,
-    "actual_synth_dsps": 107,
-    "lut_limit": 53200
-  },
-  "physical_timing": null,
-  "new_model_board_verified": false,
-  "final_submission_ready": false,
-  "missing": [
-    "Matching complete-network physical bitstream and board regression",
-    "New station workflow acceptance",
-    "Truthful updated report/video/package",
-    "Signed authorization and real device photographs"
-  ]
+  "candidate_preclosure_snapshot": {
+    "scope": "V198_COMPLETE_INTEGER_HARDWARE_CANDIDATE_NOT_FINAL_SUBMISSION",
+    "feature_freeze": true,
+    "goal": "STOP_INSPECT_MANUAL_CONFIRM",
+    "new_algorithm_branches": false,
+    "training": false,
+    "c_original80_exact": true,
+    "c_tp": 40,
+    "c_fp": 0,
+    "author_data_not_independent_validation": true,
+    "rtl_synthetic_full_graph_passed": true,
+    "hls_estimates": {
+      "DSP": 104,
+      "BRAM_18K": 146,
+      "LUT": 74681,
+      "FF": 59293
+    },
+    "hls_estimated_clock_ns": 18.0,
+    "hls_target_clock_ns": 20,
+    "physical_synthesis": {
+      "actual_synth_luts": 51263,
+      "actual_synth_dsps": 107,
+      "lut_limit": 53200
+    },
+    "physical_timing": null,
+    "new_model_board_verified": false,
+    "final_submission_ready": false,
+    "missing": [
+      "Matching complete-network physical bitstream and board regression",
+      "New station workflow acceptance",
+      "Truthful updated report/video/package",
+      "Signed authorization and real device photographs"
+    ],
+    "active_hardware_directory": "v198_hw40_01",
+    "rejected_50mhz_timing": {
+      "scope": "V198_50MHZ_ROUTED_TIMING_REJECTED_NOT_PROGRAMMED",
+      "setup_slack_ns": -2.666,
+      "source_report_sha256": "1dfcb028467da52f9be3ddd434ef20879fd3db20ce0a0f1f9b7effc73d6e888c",
+      "pl_clock_mhz": 50,
+      "board_programmed": false,
+      "next_candidate_clock_mhz": 40,
+      "reason": "Actual routed setup timing negative; preserve model and integer operators, rebuild matching PS clock/BD/XSA/timing at40MHz",
+      "source_sha256": "787a5872da97ca92f038528c31b421626c66293c9db990de1bbcb90fcf24acb8"
+    },
+    "active_physical_timing_passed": false
+  }
 }

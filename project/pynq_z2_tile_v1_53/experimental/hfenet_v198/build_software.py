@@ -3,11 +3,12 @@ from pathlib import Path
 import os,hashlib,json,shutil,re,zipfile
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/"scripts/texture_v170"))
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 import vitis
 from verify_reset import verify
 from verify_video import verify as verify_video
 from verify_video import verify_bus_skew_report
-from verify_clock import verify as verify_clock
+from clock_contract import verify as verify_clock
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from model_identity import load_identity,require_hardware_support
 root=Path(__file__).resolve().parents[2]

@@ -1,0 +1,18 @@
+{
+  "scope": "PHYSICAL_STABLE117_ARCHIVED_DEVELOPMENT_REPRODUCTION_NOT_BLIND",
+  "completed": 117,
+  "normal_images": 33,
+  "normal_false_alarms": 0,
+  "defect_images": 84,
+  "defects_detected": 84,
+  "all_scores_masks_and_meta_exact_except_sequence": true,
+  "boot_identity": 2911040237,
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "mean_engine_seconds": 0.12472640039447731,
+  "mean_transfer_detection_seconds": 0.6648636170937561,
+  "training": false,
+  "independent_validation": false,
+  "connection_establishment_retries": 4
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "HFENET198_FUNCTIONAL_BOARD_PROTOTYPE_REJECTED_FOR_DELIVERY_LATENCY",
+  "user_scope": "Engineering project and original-template report only; user handles video and submission",
+  "model": "RobotvisionLab pretrained HFENet epoch69; not original TileLab algorithm",
+  "new_training": false,
+  "board_pl_clock_mhz": 40,
+  "pilot_saved_cases": 2,
+  "pilot_full_original_masks_exact": true,
+  "pilot_engine_seconds": [94.58162610461538, 94.58189267384616],
+  "complete80_board_acceptance": false,
+  "batch_stopped": true,
+  "batch_saved_comparisons_at_stop": 3,
+  "reason": "Unacceptable94.6second detection latency; full network is unsuitable for current board and delivery deadline",
+  "next_action": "Restore verified100MHz V179 MobileNetV2 reference-anomaly detector and stopped-input station; retain HFENet only as failed experiment",
+  "hfenet_promoted_as_final": false,
+  "ddr_optimization_candidate_created": false,
+  "photos_weights_activations_published": false
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "HFENET198_SEPARATE_CLOCK_CONTRACT_LEGACY_UNCHANGED",
+  "base_sha256": "d4df3fbdbc15e85fa0ac22fc00632be070f42733f8cdc9fbbd8903d57d57b3ce",
+  "candidate_sha256": "2884438fc45e48342463352cb7eb5ccab97eba1e7a8675f5713a34bfcfc250f2",
+  "changes": [
+    "Only25/40/50MHz for20ns scheduled HFENet198",
+    "All actual BD, physical-period, requested-clock and scheduling checks retained",
+    "Require detector, AXI fabric, PS AXI ports and reset clock on actual FCLK0 and198GPIO identity"
+  ]
+}

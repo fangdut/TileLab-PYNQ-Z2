@@ -1,0 +1,25 @@
+{
+  "scope": "HFENET198_FULL_C_AND_COMPLETE_AXI_RTL_PREFLIGHT_NOT_BOARD",
+  "source_sha256": "787a5872da97ca92f038528c31b421626c66293c9db990de1bbcb90fcf24acb8",
+  "source_components": {
+    "texture_integer.cpp": "787a5872da97ca92f038528c31b421626c66293c9db990de1bbcb90fcf24acb8",
+    "norm_math.hpp": "1181ab55794f555ae4a69c943ae27913d0ca839aaac0a696bfb56e2407ab9ece",
+    "contract.hpp": "b177e87e3506a99629195563f46af85cbabc21e8bdb11fb9ab055eace643a781"
+  },
+  "model_sha256": "05467846b1a735027cd193683e115b25fd31701f16227f81cb7d72e9c72e82de",
+  "full_c_summary_sha256": "96fdea1ea385bc1374899b76f00377c983777d446d7e9b872ed5a24d2be8f1df",
+  "rtl_summary_sha256": "71c2ab555e958447d24302a9e259d805d167b586573aadb8b1f00c871b5411cf",
+  "rtl_transcript_sha256": "149285e3a04e7a44edfaa0bd3b51793ce47df006bef1de024dc047a1ccd03b7e",
+  "testbench_sha256": "3563610d3e154281df487b3b696a59e5730dc1b2c97bf790cbbc888766e4dec3",
+  "hls_resources_estimates": {
+    "DSP": 104,
+    "BRAM_18K": 146,
+    "LUT": 74681,
+    "FF": 59293
+  },
+  "hls_estimated_period_ns": 18.0,
+  "hls_target_clock_ns": 20,
+  "requested_pl_clock_mhz": 50,
+  "identity": 427819009,
+  "video": false
+}

@@ -1,6 +1,6 @@
 """Compare physical PL masks to frozen offline oracles; no host inference."""
 from pathlib import Path
-import argparse,json,hashlib,time
+import argparse,json,hashlib,time,zlib
 import numpy as np
 from PIL import Image
 from board_client import Board
@@ -22,7 +22,9 @@ def main():
         image=a.gallery/row['id']/'original.png';expected=np.load(a.oracle/row['id']/'expected_mask.npy',allow_pickle=False)
         rgb=np.asarray(Image.open(image).convert('RGB'),dtype='u4');packed=((rgb[:,:,0]<<16)|(rgb[:,:,1]<<8)|rgb[:,:,2]).astype('<u4').tobytes()
         assert hashlib.sha256(packed).hexdigest()==sha(a.oracle/row['id']/'rgb.bin'),'Original input changed'
+        sealed_file_sha=sha(image)
         folder=a.out/row['id'];record=board.infer(image,folder,model);raw=np.fromfile(folder/'raw_result.bin',dtype='<u4')
+        assert record['input_file_sha256']==sealed_file_sha and record['rgb_crc32']==zlib.crc32(packed),'Physical request changed from frozen input'
         exact=np.array_equal(raw[17:].reshape(expected.shape),expected);record.update(id=row['id'],label=row['label'],frozen_mask_exact=bool(exact),expected_mask_file_sha256=sha(a.oracle/row['id']/'expected_mask.npy'))
         records.append(record);(a.out/'progress.json').write_text(json.dumps(records,indent=2));assert exact,'Physical PL mask differs from frozen integer oracle'
         print('PHYSICAL_EXACT',i+1,'OF',len(rows),flush=True)
