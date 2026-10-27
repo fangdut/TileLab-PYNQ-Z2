@@ -18,13 +18,18 @@ def exact(sock,n):
     return bytes(b)
 
 class Board:
-    def __init__(self,address='192.168.33.10',port=9136,timeout=120):
-        self.address=address;self.port=port;self.timeout=timeout;self.seq=0;self.connection_retries=0
+    def __init__(self,address='192.168.33.10',port=9136,timeout=120,connect_timeout=0.5):
+        if timeout<=0 or connect_timeout<=0:raise ValueError('Timeouts must be positive')
+        self.address=address;self.port=port;self.timeout=timeout;self.connect_timeout=connect_timeout;self.seq=0;self.connection_retries=0
     def _connect(self):
         # Only connection establishment is retried. No request bytes have been
         # sent at this point, so an inference/auto-restart cannot be duplicated.
         for attempt in range(3):
-            try:return socket.create_connection((self.address,self.port),timeout=min(3,self.timeout))
+            # This is a direct local Ethernet link. A shorter establishment
+            # deadline avoids a3-second stall after a lost SYN. The complete
+            # inference receive deadline remains self.timeout, and remote
+            # links may explicitly pass a larger connect_timeout.
+            try:return socket.create_connection((self.address,self.port),timeout=min(self.connect_timeout,self.timeout))
             except OSError:
                 if attempt==2:raise
                 self.connection_retries+=1;time.sleep(.15*(attempt+1))

@@ -1,0 +1,20 @@
+{
+  "scope": "PUBLIC_ROOF_CERAMIC_FILE_HOLDOUT_NOT_INDEPENDENT_SPECIMEN_OR_FLOOR_ACCEPTANCE",
+  "role": "diagnostic",
+  "cases": 24,
+  "tp": 1,
+  "fp": 0,
+  "tn": 12,
+  "fn": 11,
+  "normal_images": 12,
+  "defect_images": 12,
+  "model_sha256": "3ae37081e6a6f4eb74fb9eb827c09335063ac75f028e38440e80ef9bcf3a203c",
+  "boot_identity": 350588522,
+  "mean_engine_seconds": 0.12222290307692307,
+  "mean_transfer_detection_seconds": 0.43410139166856726,
+  "wall_seconds": 13.59299999999348,
+  "connection_retries": 0,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "physical_specimen_independence": false
+}

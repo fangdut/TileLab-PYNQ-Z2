@@ -1,0 +1,13 @@
+{
+  "scope": "CANDIDATE_TRANSPORT_CRC_ONLY_NOT_ACCEPTED",
+  "source_sha256": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+  "candidate_sha256": "994243a0dd6955e7750ee35e3ce606ef1ac9a604009bb9107b1dccfe3799962b",
+  "helper_sha256": "4ea61db4b4c8bfaafc232f05e6fd4fb55d5a8019258bbee1ed5378b89de18644",
+  "unchanged_wire_protocol": true,
+  "unchanged_pl_and_model": true,
+  "changes": [
+    "replace256-entry byte CRC with4x256-entry slicing-by-four CRC",
+    "CRC table initialization"
+  ],
+  "image_arithmetic_added": false
+}

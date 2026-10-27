@@ -1,0 +1,30 @@
+{
+  "scope": "DEFAULT_STABLE_V199_TRANSPORT_ONLY_PIN",
+  "default_launcher": "启动稳定版检测.cmd",
+  "bundle": "engineering_delivery_20261027/TileLab_Engineering_V199",
+  "archive": "engineering_delivery_20261027/TileLab_Engineering_V199_20261027.zip",
+  "archive_sha256": "63034710e6186e9085eb21e6c14038c5dd35fde9354fa842c1ccdd15fb778723",
+  "pl_identity": "0x17000001",
+  "pl_clock_mhz": 100,
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "model_crc32": 2781797194,
+  "station_url": "http://127.0.0.1:8793/",
+  "hfenet_in_default_runtime": false,
+  "physical_actuator_present": false,
+  "previous_stable": {
+    "scope": "DEFAULT_STABLE_BASELINE_PIN",
+    "default_launcher": "启动稳定版检测.cmd",
+    "bundle": "engineering_delivery_20261027/TileLab_Engineering",
+    "archive": "engineering_delivery_20261027/TileLab_Engineering_20261027.zip",
+    "archive_sha256": "c0d45563355e7de58dd560d28d4d9a3ed015c9abd78dfdc0eb2784d16b9309ae",
+    "pl_identity": "0x17000001",
+    "pl_clock_mhz": 100,
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "model_crc32": 2781797194,
+    "station_url": "http://127.0.0.1:8793/",
+    "rollback_evidence": "D:/Vivado/TileLab_RealPhotos_20261020/rollback_confirm_20261027T145907Z/summary.json",
+    "hfenet_in_default_runtime": false,
+    "physical_actuator_present": false
+  },
+  "validation": "project/pynq_z2_tile_v1_53/reports/v199/status.html"
+}

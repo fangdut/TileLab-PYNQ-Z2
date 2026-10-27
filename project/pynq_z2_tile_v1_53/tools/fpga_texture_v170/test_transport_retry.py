@@ -14,6 +14,7 @@ sock=Fake();board=Board()
 with patch('socket.create_connection',side_effect=[TimeoutError('connect1'),TimeoutError('connect2'),sock]) as connect,patch('time.sleep'):
     board.request(1);assert connect.call_count==3 and board.connection_retries==2
     assert len([x for x in sock.sent if x])==1 and struct.unpack('<16I',sock.sent[0])[2]==1
+    assert all(call.kwargs['timeout']==0.5 for call in connect.call_args_list)
 sock=Fake(corrupt=True);board=Board()
 with patch('socket.create_connection',return_value=sock) as connect:
     try:board.request(1)
@@ -25,4 +26,13 @@ with patch('socket.create_connection',side_effect=TimeoutError('offline')) as co
     except TimeoutError:pass
     else:raise AssertionError('Offline board accepted')
     assert connect.call_count==3
-print(json.dumps(dict(scope='TRANSPORT_MOCK_TESTS_NOT_BOARD',retry_before_send=True,no_replay_after_corrupt_reply=True,attempt_limit=3,passed=True)))
+sock=Fake();board=Board(timeout=15)
+with patch('socket.create_connection',return_value=sock) as connect,patch.object(sock,'recv',side_effect=TimeoutError('reply timeout')):
+    try:board.request(1)
+    except TimeoutError:pass
+    else:raise AssertionError('Sent request replayed after receive timeout')
+    assert connect.call_count==1 and len([x for x in sock.sent if x])==1 and board.connection_retries==0
+sock=Fake()
+with patch('socket.create_connection',return_value=sock) as connect:
+    Board(connect_timeout=3).request(1);assert connect.call_args.kwargs['timeout']==3
+print(json.dumps(dict(scope='TRANSPORT_MOCK_TESTS_NOT_BOARD',retry_before_send=True,no_replay_after_corrupt_reply=True,no_replay_after_receive_timeout=True,local_connect_timeout=0.5,remote_override_supported=True,attempt_limit=3,passed=True)))

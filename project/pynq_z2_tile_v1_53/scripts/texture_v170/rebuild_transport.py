@@ -15,7 +15,11 @@ ws.mkdir();src=ws/'sources';src.mkdir()
 for name in ['safe_memcpy.c','lscript.ld']:shutil.copy2(old/'sources'/name,src/name)
 # A reused BSP says nothing about the new model CRC. Never copy its old header.
 (src/'model_identity.h').write_text(model_header)
-shutil.copy2(root/'experimental/texture_v170/firmware/main.c',src/'main.c');shutil.copy2(hw/'system.xsa',ws/'system.xsa')
+transport_source=Path(os.environ.get('TILE_TEXTURE_TRANSPORT_SOURCE',str(root/'experimental/texture_v170/firmware/main.c')))
+shutil.copy2(transport_source,src/'main.c')
+if b'#include "transport_crc32.h"' in transport_source.read_bytes():
+    shutil.copy2(transport_source.parent/'transport_crc32.h',src/'transport_crc32.h')
+shutil.copy2(hw/'system.xsa',ws/'system.xsa')
 platform=old/'texture_platform/export/texture_platform/texture_platform.xpfm'
 client=vitis.create_client()
 try:

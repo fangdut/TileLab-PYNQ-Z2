@@ -1,0 +1,21 @@
+{
+  "scope": "READONLY_LAST_FRAME_COARSE_PL_TIMING_NOT_AXI_BANDWIDTH_OR_VIDEO_FPS",
+  "boot_identity": 2899333807,
+  "frame_sequence": 183,
+  "sampling_seconds": 0.0001,
+  "cnn_through_task47_seconds": 0.10138882461538462,
+  "projection_nearest_to_first_score_seconds": 0.0154116,
+  "score_to_completion_seconds": 0.007907664615384615,
+  "total_engine_seconds": 0.12470808923076923,
+  "physical": {
+    "setup_slack_ns": 0.013,
+    "hold_slack_ns": 0.024,
+    "drc_errors": 0,
+    "pl_clock_mhz": 100.0,
+    "pl_clock_period_ns": 10.0,
+    "dsp": 218
+  },
+  "trace_sha256": "cfedabb5449c03997a9bd477a0e3a1c92e24a8ecae39997031a3b1e81ecd34cf",
+  "decision": "KEEP_VERIFIED100MHZ_CORE_NO_UNPROVEN_CLOCK_OR_PARALLELISM_CHANGE",
+  "reason": "Only0.013ns setup margin and218of220 DSP already used; stage sampling does not by itself establish a safe new RTL optimization"
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "OFFLINE_NORMAL_ONLY_THRESHOLD_EXTENSION_FPGA_SCORING",
+  "base_model_sha256": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+  "candidate_model_sha256": "3ae37081e6a6f4eb74fb9eb827c09335063ac75f028e38440e80ef9bcf3a203c",
+  "old_threshold": 13365,
+  "new_threshold": 22207,
+  "only_changed_binary_range": [
+    60,
+    64
+  ],
+  "unchanged_cnn_projection_and_reference_centers": true,
+  "calibration_count": 32,
+  "calibration_results_sha256": "d8f689112eadceaa968188c22fdb7982a405ab6076d5042293368d1d3279725a",
+  "manifest_sha256": "9c1cc0270a6580a214b4f26654ef47141e4bc58e687fa42de4c853523afea69e",
+  "reserved_final_scored": false,
+  "physical_specimen_independence": false
+}
