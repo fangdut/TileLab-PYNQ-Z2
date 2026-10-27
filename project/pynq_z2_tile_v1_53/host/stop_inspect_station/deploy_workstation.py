@@ -61,6 +61,8 @@ def main():
         hardware=os.path.relpath(hardware,out),program='program',
         profile=os.path.relpath(profile,out),
         catalog=os.path.relpath(bundle/'project/data/stop_inspect_demo/catalog.json',out),store='station_records')
+    if (bundle/'profiles/index.json').is_file():
+        config['profiles_registry']=os.path.relpath(bundle/'profiles/index.json',out)
     file = out/'station_config.json'
     file.write_text(json.dumps(config,indent=2),encoding='utf8')
     print('CONFIG '+str(file),flush=True)

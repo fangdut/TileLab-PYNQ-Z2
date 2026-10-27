@@ -13,8 +13,11 @@ def main():
     p.add_argument('--zip',type=Path)
     p.add_argument('--transport',type=Path,help='Optional separately verified transport firmware workspace')
     p.add_argument('--transport-proof',type=Path)
+    p.add_argument('--profiles-registry',type=Path)
+    p.add_argument('--catalog-dir',type=Path)
     a=p.parse_args()
     if bool(a.transport)!=bool(a.transport_proof):p.error('--transport and --transport-proof are required together')
+    if a.profiles_registry and not a.transport:p.error('Profile registry requires matching verified transport firmware')
     project=Path(__file__).resolve().parents[1]
     repo=Path(__file__).resolve().parents[3]
     baseline=repo/'deliverables/V179_Verified_HDMI_8p17FPS_Dev.zip'
@@ -52,13 +55,39 @@ def main():
         shutil.copy2(elf,out/'verified_hdmi/software/texture_transport/build/texture_transport.elf')
         shutil.copy2(a.transport/'BUILD_RESULT.json',out/'verified_hdmi/software/BUILD_RESULT.json')
         firmware=out/'verified_hdmi/source/experimental/texture_v170/firmware'
-        for name in ['main.c','transport_crc32.h']:
+        sources=['main.c','transport_crc32.h']
+        if candidate.get('allowed_profiles'):
+            if not a.profiles_registry or digest(a.profiles_registry)!=candidate.get('profile_registry_sha256'):
+                raise ValueError('Closed-loop profile registry differs from firmware binding')
+            sources+=['profile_allowlist.h','profiles_binding.json','xadapter_guarded.c','xemacpsif_physpeed_guarded.c','link_guard_proof.json']
+            registry=json.loads(a.profiles_registry.read_text(encoding='utf8'))
+            root=a.profiles_registry.parent.resolve();target=out/'profiles';target.mkdir()
+            shutil.copy2(a.profiles_registry,target/'index.json')
+            for row in registry['profiles']:
+                profile=(root/row['path']).resolve()
+                if not profile.is_relative_to(root) or Path(row['path']).is_absolute():raise ValueError('Invalid profile location')
+                if digest(profile/'model.bin')!=row['model_sha256'] or digest(profile/'graph.json')!=row['graph_sha256']:raise ValueError('Profile content differs')
+                destination=target/row['path'];destination.mkdir(parents=True,exist_ok=False)
+                for file in ['model.bin','graph.json']:shutil.copy2(profile/file,destination/file)
+        for name in sources:
             source=a.transport/'sources'/name
             if digest(source)!=candidate['sources'][name]:raise ValueError('Transport source differs: '+name)
             shutil.copy2(source,firmware/name)
         shutil.copy2(a.transport_proof,out/'verified_hdmi/software/transport_validation.json')
+    if a.catalog_dir:
+        catalog=a.catalog_dir.resolve();rows=json.loads((catalog/'catalog.json').read_text(encoding='utf8'))
+        dest=out/'project/data/stop_inspect_demo'
+        for row in rows:
+            source=(catalog/row['file']).resolve()
+            if not source.is_relative_to(catalog) or Path(row['file']).is_absolute():raise ValueError('Invalid catalog path')
+            if digest(source)!=row['sha256']:raise ValueError('Photo catalog content differs')
+            target=dest/row['file'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(source,target)
+        for name in ['catalog.json','expected_offline_only.json']:
+            if (catalog/name).is_file():shutil.copy2(catalog/name,dest/name)
     shutil.copy2(project/'host/stop_inspect_station/start_station.ps1',out/'start_station.ps1')
     shutil.copy2(project/'host/stop_inspect_station/start_station.cmd',out/'启动检测.cmd')
+    shutil.copy2(project/'host/stop_inspect_station/stop_station.ps1',out/'stop_station.ps1')
+    shutil.copy2(project/'host/stop_inspect_station/stop_station.cmd',out/'停止工作站.cmd')
     if (project/'tools/fetch_external_v194.py').exists():
         shutil.copy2(project/'tools/fetch_external_v194.py',out/'project/tools/fetch_external_v194.py')
     if (project/'tools/fetch_reference_v195.py').exists():

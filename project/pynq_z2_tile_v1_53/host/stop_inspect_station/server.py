@@ -5,6 +5,7 @@ from urllib.parse import urlparse, parse_qs, unquote
 import argparse
 import json
 import re
+import io,csv
 from controller import FPGABackend, Station
 
 HERE = Path(__file__).resolve().parent
@@ -27,8 +28,20 @@ def handler(station):
                 url = urlparse(self.path)
                 if url.path == '/':
                     return self.send((HERE/'app.html').read_bytes(), 'text/html; charset=utf-8')
+                if url.path=='/closed_app.js':
+                    return self.send((HERE/'closed_app.js').read_bytes(),'application/javascript; charset=utf-8')
                 if url.path == '/api/state':
                     return self.send(station.state())
+                if url.path in ['/api/audit','/api/audit.csv'] and hasattr(station,'audit'):
+                    data=station.audit()
+                    if url.path=='/api/audit':return self.send(data)
+                    output=io.StringIO();rows=data['records']
+                    fields=list(rows[0]) if rows else ['cycle_id','material','purpose','review','disposition']
+                    writer=csv.DictWriter(output,fieldnames=fields);writer.writeheader()
+                    for row in rows:
+                        safe={k:("'"+v if isinstance(v,str) and v[:1] in ['=','+','-','@'] else v) for k,v in row.items()}
+                        writer.writerow(safe)
+                    return self.send(('\ufeff'+output.getvalue()).encode('utf8'),'text/csv; charset=utf-8')
                 if url.path == '/image':
                     args = parse_qs(url.query)
                     ident = args.get('cycle', [''])[0]
@@ -77,6 +90,7 @@ def main():
         p.add_argument('--'+key, type=Path)
     p.add_argument('--board', default='192.168.33.10')
     p.add_argument('--port', type=int, default=8793)
+    p.add_argument('--profiles-registry',type=Path)
     a = p.parse_args()
     if a.config:
         config = json.loads(a.config.read_text(encoding='utf8'))
@@ -85,6 +99,8 @@ def main():
                 setattr(a, key, (a.config.parent/config[key]).resolve())
         a.board = config.get('board', a.board)
         a.port = config.get('port', a.port)
+        if a.profiles_registry is None and config.get('profiles_registry'):
+            a.profiles_registry=(a.config.parent/config['profiles_registry']).resolve()
     for key in ['catalog', 'profile', 'program', 'hardware', 'store']:
         if getattr(a, key) is None:
             p.error('--'+key+' or --config is required')
@@ -94,8 +110,14 @@ def main():
         rows = json.loads(a.catalog.read_text(encoding='utf8'))
         for row in rows:
             row['file'] = str((a.catalog.parent/row['file']).resolve())
-        backend = FPGABackend(a.board, a.profile, a.program, a.hardware)
-        station = Station(backend, rows, a.store)
+        if a.profiles_registry:
+            from profiles_backend import ProfilesBackend
+            from closed_station import ClosedStation
+            backend=ProfilesBackend(a.board,a.profiles_registry,a.program,a.hardware)
+            station=ClosedStation(backend,rows,a.store)
+        else:
+            backend = FPGABackend(a.board, a.profile, a.program, a.hardware)
+            station = Station(backend, rows, a.store)
         station.connection = backend.check()
         server.RequestHandlerClass = handler(station)
         print(json.dumps(dict(url=f'http://127.0.0.1:{a.port}',

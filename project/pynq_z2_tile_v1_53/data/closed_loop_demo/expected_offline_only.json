@@ -1,0 +1,107 @@
+{
+  "6621d769324f6e05d5838381": {
+    "label": "good",
+    "expected_alarm": 0,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d5838380": {
+    "label": "good",
+    "expected_alarm": 0,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d583835f": {
+    "label": "crack",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d583835e": {
+    "label": "crack",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d58383b1": {
+    "label": "glue_strip",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d58383b0": {
+    "label": "glue_strip",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d583839f": {
+    "label": "gray_stroke",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d583839e": {
+    "label": "gray_stroke",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d58383c3": {
+    "label": "oil",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d58383c2": {
+    "label": "oil",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d583836d": {
+    "label": "rough",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d583836b": {
+    "label": "rough",
+    "expected_alarm": 1,
+    "profile_id": "texture"
+  },
+  "6621d769324f6e05d583837a": {
+    "label": "good",
+    "expected_alarm": 0,
+    "profile_id": "texture"
+  },
+  "roof_25bbee9d-0262-4749-bc40-c8a7b46706d5": {
+    "label": "good",
+    "expected_alarm": 0,
+    "profile_id": "roof"
+  },
+  "roof_cf4ae873-0ed2-4f85-8f62-e301cb796e44": {
+    "label": "good",
+    "expected_alarm": 0,
+    "profile_id": "roof"
+  },
+  "roof_d491dd06-0ca9-44c6-bf93-e48f60d65194": {
+    "label": "good",
+    "expected_alarm": 0,
+    "profile_id": "roof"
+  },
+  "roof_d51db8b9-7dd4-45ff-83a7-532d2588d5fc": {
+    "label": "good",
+    "expected_alarm": 0,
+    "profile_id": "roof"
+  },
+  "roof_ba4ce12f-9646-428c-8143-17eece85eb64": {
+    "label": "defect",
+    "expected_alarm": 1,
+    "profile_id": "roof"
+  },
+  "roof_5376c47a-c1eb-423e-a9cc-eebc0d0662d2": {
+    "label": "defect",
+    "expected_alarm": 1,
+    "profile_id": "roof"
+  },
+  "roof_22b8e8db-c7ea-4580-8ab6-78276592db2f": {
+    "label": "defect",
+    "expected_alarm": 1,
+    "profile_id": "roof"
+  },
+  "roof_ee33d46f-30b2-48fc-b21c-f0a9436ddf1f": {
+    "label": "defect",
+    "expected_alarm": 1,
+    "profile_id": "roof"
+  }
+}

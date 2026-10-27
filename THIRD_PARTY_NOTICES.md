@@ -18,3 +18,8 @@ V168使用PyTorch和TorchVision（各自保留上游许可），ImageNet预训�
 ## V197 HFENet source
 
 RobotvisionLab, Copyright2021, MIT. Pinned source6edf57293da051a5d9d2164482f88b68ef45c11f; original module and license preserved under project/pynq_z2_tile_v1_53/experimental/hfenet_v197/vendor. Published epoch69 selected before evaluation, no new training. Checkpoint and data-derived binaries remain local; author photographs/labels are not redistributed under the software license. Author-model evaluation on author validation data is not independent validation.
+
+
+## V200 Ethernet link transition
+
+V200 packages modified copies of the Xilinx/AMD lwIP xadapter.c and xemacpsif_physpeed.c sources. Original copyright, redistribution terms and disclaimers remain verbatim in each generated C file. Modifications avoid a second blocking negotiation for an already negotiated Realtek link and guard invalid MAC speeds; the original vendor clock-setting code is preserved.

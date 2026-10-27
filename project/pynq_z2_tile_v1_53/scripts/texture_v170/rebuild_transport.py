@@ -19,6 +19,19 @@ transport_source=Path(os.environ.get('TILE_TEXTURE_TRANSPORT_SOURCE',str(root/'e
 shutil.copy2(transport_source,src/'main.c')
 if b'#include "transport_crc32.h"' in transport_source.read_bytes():
     shutil.copy2(transport_source.parent/'transport_crc32.h',src/'transport_crc32.h')
+profile_binding=None
+if b'#include "profile_allowlist.h"' in transport_source.read_bytes():
+    shutil.copy2(transport_source.parent/'profile_allowlist.h',src/'profile_allowlist.h')
+    shutil.copy2(transport_source.parent/'profiles_binding.json',src/'profiles_binding.json')
+    profile_binding=json.loads((src/'profiles_binding.json').read_text(encoding='utf8'))
+    if profile_binding['candidate_source_sha256']!=sha(src/'main.c'):
+        raise ValueError('Profile firmware binding source mismatch')
+    if not (transport_source.parent/'xadapter_guarded.c').is_file():raise ValueError('Closed-loop transport requires guarded PHY transition')
+    for name in ['xadapter_guarded.c','xemacpsif_physpeed_guarded.c','link_guard_proof.json']:
+        shutil.copy2(transport_source.parent/name,src/name)
+    guard=json.loads((src/'link_guard_proof.json').read_text())
+    if guard['guarded_source_sha256']!=sha(src/'xadapter_guarded.c'):raise ValueError('PHY guard source mismatch')
+    if guard['phy_guarded_source_sha256']!=sha(src/'xemacpsif_physpeed_guarded.c'):raise ValueError('PHY clock source mismatch')
 shutil.copy2(hw/'system.xsa',ws/'system.xsa')
 platform=old/'texture_platform/export/texture_platform/texture_platform.xpfm'
 client=vitis.create_client()
@@ -36,4 +49,6 @@ finally:vitis.dispose()
 elf=ws/'texture_transport/build/texture_transport.elf'
 result=dict(previous);result.update(elf_sha256=sha(elf),model_sha256=graph['sha256'],model_capability_proof=model_capability_proof,sources={p.name:sha(p) for p in src.iterdir()},
     reused_platform=str(platform),reused_platform_sha256=sha(platform),profiling='PS observes PL progress/timestamps only; no detection math')
+if profile_binding:
+    result.update(allowed_profiles=profile_binding['profiles'],profile_registry_sha256=profile_binding['registry_sha256'],profile_capability=0x2000c001)
 (ws/'BUILD_RESULT.json').write_text(json.dumps(result,indent=2))

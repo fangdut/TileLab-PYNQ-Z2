@@ -53,3 +53,8 @@ The same CC BY4.0 author attribution as V194 applies to roof-photo derivatives i
 
 
 V197: HFENet vendor code retains RobotvisionLab2021 MIT notices in experimental/hfenet_v197/vendor/LICENSE. Original TileLab integer-migration code is MIT. The original network/model is attributed to its author; source licensing does not automatically license independent photographs. HFENet photos, labels, weights, fitted binaries and raw activations are not redistributed in this checkpoint.
+
+
+## V200 Ethernet adapter derivatives
+
+The generated xadapter_guarded.c and xemacpsif_physpeed_guarded.c retain the original Xilinx/AMD BSD-style notices and terms. They are not relicensed by the root MIT license. TileLab workflow code and original additions remain within the original-code MIT scope.

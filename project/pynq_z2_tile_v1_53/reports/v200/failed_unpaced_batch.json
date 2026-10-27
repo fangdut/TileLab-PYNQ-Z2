@@ -1,0 +1,11 @@
+{
+  "scope": "FAILED_UNPACED_REGRESSION_RETAINED",
+  "completed_exact_photos": 39,
+  "total_planned": 117,
+  "error": "Connection reset during receiving40th reply; subsequentJTAG DDR read reported controller held in reset",
+  "root_cause_established": false,
+  "full_pass": false,
+  "log_sha256": "1a9d57e54ae57ea4691df1d7e09a22444a0a755022bc3574afd5aeb71e86a4e8",
+  "progress_sha256": "6342120208e4772e09afd1901d2def6039682d1d67094c3fab817fc8bdbbccdd",
+  "later_stop_cadence_pass_does_not_prove_high_duty_stability": true
+}

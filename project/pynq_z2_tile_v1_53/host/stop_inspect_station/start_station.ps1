@@ -18,10 +18,20 @@ if (!$pythonPath) {
 if ($LASTEXITCODE -ne 0) { throw 'Bundle or deployment pairing verification failed.' }
 if ($VerifyOnly) { return }
 $url = 'http://127.0.0.1:8793/'
+$closedBundle = Test-Path -LiteralPath (Join-Path $bundleRoot 'profiles/index.json')
+$expectedBuild = Get-Content -Raw -LiteralPath (Join-Path $bundleRoot 'verified_hdmi/software/BUILD_RESULT.json') | ConvertFrom-Json
 $listener = @(Get-NetTCPConnection -LocalPort 8793 -State Listen -ErrorAction SilentlyContinue)
 if ($listener.Count -gt 0) {
     $existing = Invoke-RestMethod -Uri ($url + 'api/state') -TimeoutSec 5
-    if ($existing.connection.pl_identity -ne 385875969 -or $existing.connection.model_crc32 -ne 2781797194) {
+    $modelMatches = $existing.connection.model_crc32 -eq 2781797194
+    if ($closedBundle) {
+        $allowed = @($expectedBuild.allowed_profiles | ForEach-Object model_crc32)
+        $modelMatches = $allowed -contains $existing.connection.model_crc32
+        if (!$existing.closed_loop.enabled -or $existing.deployment.elf_sha256 -ne $expectedBuild.elf_sha256) {
+            throw 'A different station version owns port8793. Finish its current item and stop it before starting this bundle.'
+        }
+    }
+    if ($existing.connection.pl_identity -ne 385875969 -or !$modelMatches) {
         throw 'Port 8793 is occupied without the expected TileLab configuration. Close that service before deployment.'
     }
     Write-Host ('Existing TileLab station kept running: ' + $url)
@@ -44,7 +54,7 @@ $ready = $false
 for ($attempt = 0; $attempt -lt 30; $attempt++) {
     try {
         $state = Invoke-RestMethod -Uri ($url + 'api/state') -TimeoutSec 2
-        if ($state.connection.pl_identity -eq 385875969 -and $state.connection.model_crc32 -eq 2781797194) { $ready = $true; break }
+        if ($state.connection.pl_identity -eq 385875969 -and $state.connection.model_crc32 -eq 2781797194 -and (!$closedBundle -or ($state.closed_loop.enabled -and $state.deployment.elf_sha256 -eq $expectedBuild.elf_sha256))) { $ready = $true; break }
     } catch { }
     $service.Refresh()
     if ($service.HasExited) { break }

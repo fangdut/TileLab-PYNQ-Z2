@@ -1,0 +1,28 @@
+{
+  "scope": "PHYSICAL_CONTROL_WORKFLOW_REPLAY_NOT_ACCURACY",
+  "selected_before_inference": {
+    "texture": {
+      "good": [
+        "6621d769324f6e05d583837a",
+        "6621d769324f6e05d5838380",
+        "6621d769324f6e05d5838381"
+      ],
+      "defect": "6621d769324f6e05d583835e",
+      "production_good": "6621d769324f6e05d5838381",
+      "production_defect": "6621d769324f6e05d583835f"
+    },
+    "roof": {
+      "good": [
+        "roof_25bbee9d-0262-4749-bc40-c8a7b46706d5",
+        "roof_cf4ae873-0ed2-4f85-8f62-e301cb796e44",
+        "roof_d491dd06-0ca9-44c6-bf93-e48f60d65194"
+      ],
+      "defect": "roof_22b8e8db-c7ea-4580-8ab6-78276592db2f",
+      "production_good": "roof_d51db8b9-7dd4-45ff-83a7-532d2588d5fc",
+      "production_defect": "roof_5376c47a-c1eb-423e-a9cc-eebc0d0662d2"
+    }
+  },
+  "actor": "自动验收脚本（照片回放，非真实人工）",
+  "real_human_review": false,
+  "physical_actuation": false
+}
