@@ -1,0 +1,10 @@
+{
+  "base_template": "scripts\\texture_v170\\build_hardware.tcl",
+  "sha256": "3e2d1c7ca6b661ad36c5668fcb2f0eba54931e9bb0dc9379c52021e84753b6b0",
+  "changes": [
+    "V198 source/header binding",
+    "Unique198GPIOidentity",
+    "New completeAXIproof scope",
+    "Actual synthesized LUT capacity gate before placement"
+  ]
+}

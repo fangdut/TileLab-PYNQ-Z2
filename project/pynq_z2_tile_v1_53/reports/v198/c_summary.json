@@ -1,0 +1,25 @@
+{
+  "scope": "SHARED_RESOURCE_FRAME_C_80_CONTINUOUS_FRAMES_NOT_BOARD",
+  "source_binding": {
+    "sources": {
+      "texture_integer.cpp": "787a5872da97ca92f038528c31b421626c66293c9db990de1bbcb90fcf24acb8",
+      "native_wrapper.cpp": "fcc8cd150ef75c3e2aa32b7a4677d52dfc46d3f37fe3c76d863d79df5f206d74",
+      "norm_math.hpp": "1181ab55794f555ae4a69c943ae27913d0ca839aaac0a696bfb56e2407ab9ece",
+      "contract.hpp": "b177e87e3506a99629195563f46af85cbabc21e8bdb11fb9ab055eace643a781"
+    },
+    "dll_sha256": "c3641e8ff32321ad60cf52bc2e7f0a2951150acdd655080bda8445f4b605652c"
+  },
+  "model_sha256": "05467846b1a735027cd193683e115b25fd31701f16227f81cb7d72e9c72e82de",
+  "oracle_plan_sha256": "3d4be10725db93c0616034166677f9e93fa5bc1a2849cc71e4e15c0902b3dd7f",
+  "source_sha256": "787a5872da97ca92f038528c31b421626c66293c9db990de1bbcb90fcf24acb8",
+  "workspace_reused_without_clear": true,
+  "training": false,
+  "independent_validation": false,
+  "cases": 80,
+  "all72_tensors_each_image_exact": true,
+  "all_masks_exact": true,
+  "tp": 40,
+  "fp": 0,
+  "elapsed_seconds": 516.0629999999655,
+  "board_verified": false
+}

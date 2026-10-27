@@ -1,0 +1,17 @@
+{
+  "transport.c": {
+    "base": "experimental\\texture_v170\\firmware\\main.c",
+    "base_sha256": "2c6f61bf46e8c49e2bb733878226d0834ef7936be9484a136299924f9cad6e04",
+    "candidate_sha256": "1ce3031aa8d8181aabb89f3cd314480e09d7fd47a5bf099f0c02e6f4dfc502a2"
+  },
+  "build_software.py": {
+    "base": "scripts\\texture_v170\\build_software.py",
+    "base_sha256": "22ddf69a9585e73fc9b823bc4651a551574b20be5e705896df860658135c0706",
+    "candidate_sha256": "161dfa56d4da25c07384d0f4aa996f8da6e8b197c1c39939af3e1eb6ab84187d"
+  },
+  "program_board.py": {
+    "base": "scripts\\texture_v170\\program_board.py",
+    "base_sha256": "ad1324281194edd0b2ed1651f6c3226f0e6a98632a626bb0549025e4b9003d0c",
+    "candidate_sha256": "d4540c5ce3820f0b77a8dcea4df5f4fa7909a1c2dbf1827f42d7641dccfde749"
+  }
+}

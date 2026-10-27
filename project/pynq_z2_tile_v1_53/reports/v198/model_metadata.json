@@ -1,0 +1,20 @@
+{
+  "format": "TILELAB_HFENET_198_ABI1",
+  "kernel_kind": "HFENET198",
+  "pl_identity": 427819009,
+  "sha256": "05467846b1a735027cd193683e115b25fd31701f16227f81cb7d72e9c72e82de",
+  "crc32": 522134928,
+  "model_bytes": 368008,
+  "grid": 1,
+  "steps": 71,
+  "workspace_bytes": 100925440,
+  "width": 256,
+  "height": 1408,
+  "threshold": 0,
+  "tensor_count": 72,
+  "retained_fixture": false,
+  "synthetic_weights": false,
+  "source_program_sha256": "3aeef0e37a65f170992b56c257f9a8dcee7262274e92b5ce30a81e42939d8c8d",
+  "allocation_peak_live_bytes": 92274688,
+  "full_hardware_verified": false
+}

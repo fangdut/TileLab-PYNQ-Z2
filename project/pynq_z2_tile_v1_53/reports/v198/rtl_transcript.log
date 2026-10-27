@@ -1,0 +1,84 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Oct 26 23:42:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/hfe_test/xsim_script.tcl
+# xsim {hfe_test} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+HFE_PROGRESS cycle=0 step=3735928559
+HFE_PROGRESS cycle=100000 step=1
+HFE_PROGRESS cycle=200000 step=2
+HFE_PROGRESS cycle=300000 step=3
+HFE_PROGRESS cycle=400000 step=3
+HFE_PROGRESS cycle=500000 step=5
+HFE_PROGRESS cycle=600000 step=6
+HFE_PROGRESS cycle=700000 step=6
+HFE_PROGRESS cycle=800000 step=9
+HFE_PROGRESS cycle=900000 step=11
+HFE_PROGRESS cycle=1000000 step=15
+HFE_PROGRESS cycle=1100000 step=21
+HFE_PROGRESS cycle=1200000 step=25
+HFE_PROGRESS cycle=1300000 step=31
+HFE_PROGRESS cycle=1400000 step=36
+HFE_PROGRESS cycle=1500000 step=43
+HFE_PROGRESS cycle=1600000 step=50
+HFE_PROGRESS cycle=1700000 step=59
+HFE_PROGRESS cycle=1800000 step=62
+HFE_PROGRESS cycle=1900000 step=64
+HFE_PROGRESS cycle=2000000 step=64
+HFE_PROGRESS cycle=2100000 step=67
+HFE_PROGRESS cycle=2200000 step=68
+HFE_PROGRESS cycle=2300000 step=68
+HFE_PROGRESS cycle=2400000 step=69
+HFE_PROGRESS cycle=2500000 step=69
+HFE_LAUNCH_PASS launch=1 cycle=2566537 checked=24913
+HFE_PROGRESS cycle=2600000 step=0
+HFE_PROGRESS cycle=2700000 step=2
+HFE_PROGRESS cycle=2800000 step=2
+HFE_PROGRESS cycle=2900000 step=3
+HFE_PROGRESS cycle=3000000 step=4
+HFE_PROGRESS cycle=3100000 step=5
+HFE_PROGRESS cycle=3200000 step=6
+HFE_PROGRESS cycle=3300000 step=7
+HFE_PROGRESS cycle=3400000 step=9
+HFE_PROGRESS cycle=3500000 step=12
+HFE_PROGRESS cycle=3600000 step=17
+HFE_PROGRESS cycle=3700000 step=21
+HFE_PROGRESS cycle=3800000 step=28
+HFE_PROGRESS cycle=3900000 step=32
+HFE_PROGRESS cycle=4000000 step=39
+HFE_PROGRESS cycle=4100000 step=46
+HFE_PROGRESS cycle=4200000 step=53
+HFE_PROGRESS cycle=4300000 step=59
+HFE_PROGRESS cycle=4400000 step=63
+HFE_PROGRESS cycle=4500000 step=64
+HFE_PROGRESS cycle=4600000 step=65
+HFE_PROGRESS cycle=4700000 step=67
+HFE_PROGRESS cycle=4800000 step=68
+HFE_PROGRESS cycle=4900000 step=68
+HFE_PROGRESS cycle=5000000 step=69
+HFE_PROGRESS cycle=5100000 step=69
+HFE_LAUNCH_PASS launch=2 cycle=5133018 checked=49826
+HFE_COMPLETE_AXI_PASS checked=49826 cycles=5135062 reads=100736 writes=50624
+$finish called at time : 102701250 ns : File "D:/Vivado/TileLab_RealPhotos_20261020/v198_axi02/tb_hfe.sv" Line 303
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:18:37 . Memory (MB): peak = 233.680 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 52036 KB (Peak: 52036 KB), Simulation CPU Usage: 1096483 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct 27 00:01:42 2026...
+8
+HFE_PROGRESS cycle=4900000 step=68
+HFE_PROGRESS cycle=5000000 step=69
+HFE_PROGRESS cycle=5100000 step=69
+HFE_LAUNCH_PASS launch=2 cycle=5133018 checked=49826
+HFE_COMPLETE_AXI_PASS checked=49826 cycles=5135062 reads=100736 writes=50624
+$finish called at time : 102701250 ns : File "D:/Vivado/TileLab_RealPhotos_20261020/v198_axi02/tb_hfe.sv" Line 303
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:18:37 . Memory (MB): peak = 233.680 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 52036 KB (Peak: 52036 KB), Simulation CPU Usage: 1096483 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct 27 00:01:42 2026...

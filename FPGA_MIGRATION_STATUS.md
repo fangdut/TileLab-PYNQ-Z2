@@ -1,4 +1,8 @@
-# FPGA engineering status — 2026-10-23
+# FPGA engineering status — 2026-10-27
+
+<!-- V198_CURRENT_BEGIN -->
+V198 final-frame candidate: feature freeze at stop/inspect/manual-confirm, no new training or10FPS gate. Complete integer frame C matches all72tensors and masks on80original256x1408author scans; complete network RTL passes2frames/49,826checked words plus bad geometry/magic. Shared32PE candidate is in full-system synthesis; no new-network board acceptance or FPS claim. Separate198firmware/client supports original geometry;13fake-backend workflow interlocks pass. Author development data are not independent validation; gray scan strips do not establish whole-tile or painted/material qualification. See reports/v198/status.html and experimental/hfenet_v198/README.md. Stable hardware assets remain available; current Ethernet status request timed out despite USB enumerating normally.
+<!-- V198_CURRENT_END -->
 
 <!-- V197_CURRENT_BEGIN -->
 V197: author HFENet epoch69 reproduction, no new training. Float and integer reference on80author-original scans TP40 FP0;177mask disagreements/28,835,840pixels, no clipping. NOT independent validation or board inference. Preprocessing and integer dynamic InstanceNorm standalone C/Verilog co-sim and IP exports pass. Complete new CNN/DDR engine, firmware geometry and board checks remain. Stable100MHz stop station retained. See project/pynq_z2_tile_v1_53/reports/v197/status.html.

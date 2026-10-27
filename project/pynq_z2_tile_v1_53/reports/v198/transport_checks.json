@@ -1,0 +1,18 @@
+{
+  "scope": "TRANSPORT_MOCK_AND_ARM_COMPILE_ONLY_NOT_BOARD",
+  "kernel": 427819009,
+  "source_sha256": "1ce3031aa8d8181aabb89f3cd314480e09d7fd47a5bf099f0c02e6f4dfc502a2",
+  "client_sha256": "a1f9b4010a67d93432f4b3a1ac028225619ba83c2b664507b9ddecfd63e51cdc",
+  "arm_syntax_check": true,
+  "bsp": "prior validated standalone A9 BSP; fresh matching XSA BSP still required",
+  "rejected_cases": [
+    "wrong_kernel",
+    "corrupt_header",
+    "reboot",
+    "zero_boot",
+    "oversize",
+    "rejected",
+    "truncated"
+  ],
+  "valid_status_mock": true
+}

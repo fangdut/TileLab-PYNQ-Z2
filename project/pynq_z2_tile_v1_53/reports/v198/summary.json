@@ -1,0 +1,34 @@
+{
+  "scope": "V198_COMPLETE_INTEGER_HARDWARE_CANDIDATE_NOT_FINAL_SUBMISSION",
+  "feature_freeze": true,
+  "goal": "STOP_INSPECT_MANUAL_CONFIRM",
+  "new_algorithm_branches": false,
+  "training": false,
+  "c_original80_exact": true,
+  "c_tp": 40,
+  "c_fp": 0,
+  "author_data_not_independent_validation": true,
+  "rtl_synthetic_full_graph_passed": true,
+  "hls_estimates": {
+    "DSP": 104,
+    "BRAM_18K": 146,
+    "LUT": 74681,
+    "FF": 59293
+  },
+  "hls_estimated_clock_ns": 18.0,
+  "hls_target_clock_ns": 20,
+  "physical_synthesis": {
+    "actual_synth_luts": 51263,
+    "actual_synth_dsps": 107,
+    "lut_limit": 53200
+  },
+  "physical_timing": null,
+  "new_model_board_verified": false,
+  "final_submission_ready": false,
+  "missing": [
+    "Matching complete-network physical bitstream and board regression",
+    "New station workflow acceptance",
+    "Truthful updated report/video/package",
+    "Signed authorization and real device photographs"
+  ]
+}
