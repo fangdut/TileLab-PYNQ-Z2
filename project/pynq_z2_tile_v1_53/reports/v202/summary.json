@@ -1,0 +1,153 @@
+{
+  "scope": "MATCHED100MHZ_RETEST_AFTER_USER_USB_CABLE_CHANGE_NOT_LONG_TERM_OR_INDEPENDENT_ACCURACY",
+  "passed": true,
+  "boot_identity": 2243361847,
+  "runtime": "D:\\Vivado\\TileLab_SingleTile_V164_20261019\\engineering_delivery_20261027\\TileLab_Engineering_V200\\runtime\\run_20261027_223150_3d67dd3b",
+  "elapsed_seconds": 309.787436100014,
+  "stages": [
+    {
+      "stage": "reset_before",
+      "seconds": 13.559846199990716,
+      "passed": true
+    },
+    {
+      "stage": "exact117",
+      "seconds": 110.20118269999512,
+      "passed": true
+    },
+    {
+      "stage": "core200",
+      "seconds": 26.23266009998042,
+      "passed": true
+    },
+    {
+      "stage": "workflow22",
+      "seconds": 29.734557699994184,
+      "passed": true
+    },
+    {
+      "stage": "soak100",
+      "seconds": 122.60440670000389,
+      "passed": true
+    },
+    {
+      "stage": "reset_after",
+      "seconds": 7.432944999949541,
+      "passed": true
+    }
+  ],
+  "error": null,
+  "automatic_reprogram_or_inference_retry": false,
+  "root_cause_proven": false,
+  "exact117": {
+    "scope": "PHYSICAL117_EXPOSED_DEVELOPMENT_RAW_REPRODUCTION_NOT_NEW_ACCURACY",
+    "cases": 117,
+    "normal_images": 33,
+    "normal_false_alarms": 0,
+    "defects_detected": 84,
+    "all_scores_masks_meta_exact_except_sequence": true,
+    "boot_identity": 2243361847,
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "mean_engine_seconds": 0.12471544399737017,
+    "mean_transfer_detection_seconds": 0.5017914923060184,
+    "connection_retries": 0,
+    "transport_guards": {
+      "corrupt_payload_rejected_before_inference": true,
+      "corrupt_header_rejected": true
+    },
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "inter_case_pause_seconds": 0.0,
+    "batch_wall_seconds": 109.89100000000326,
+    "continuous_video_or_uninterrupted_high_duty_claim": false
+  },
+  "core200": {
+    "scope": "PHYSICAL_PL_AUTORESTART_FIXED_FRAME_MICROBENCHMARK",
+    "frames": 201,
+    "requested": 200,
+    "first_sequence": 118,
+    "last_sequence": 319,
+    "elapsed_engine_seconds": 25.059181227692306,
+    "sustained_pl_fps": 8.021012265870828,
+    "wall_seconds": 25.075237799959723,
+    "arm_start_writes": 1,
+    "hardware_auto_restart": true,
+    "new_video_frames": false,
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "source_rgb_crc32": 247634752,
+    "boot_identity": 2243361847,
+    "pl_identity": 385875969,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "limitation": "Repeated fixed DDR frame; not continuous HDMI/video end-to-end throughput"
+  },
+  "workflow22": {
+    "scope": "PHYSICAL_TWO_REFERENCE_CLOSED_LOOP_REPLAY_NOT_INDEPENDENT_ACCURACY",
+    "physical_inferences": 22,
+    "controls_rejected": 38,
+    "certificates_created": 4,
+    "profile_switches_without_new_bitstream": true,
+    "external_profile_change_blocked_release": true,
+    "conflict_blocked_release": true,
+    "legacy_qualification_never_bypassed_review": true,
+    "real_human_review": false,
+    "physical_camera_calibration": false,
+    "physical_actuation": false,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "final_material": "texture",
+    "final_calibrated": true,
+    "counts": {
+      "inspected": 22,
+      "good": 0,
+      "defect": 0,
+      "released": 2,
+      "segregated": 2,
+      "faults": 1,
+      "unvalidated": 6,
+      "unvalidated_removed": 1,
+      "calibration_samples": 16,
+      "calibration_failed": 0,
+      "manual_reviews": 22,
+      "conflicts": 1
+    },
+    "audit_rows": 22,
+    "csv_sha256": "e1f40f0f68ad206a86e9dcd43e52db7a8b5aa7947074eaa09f27827a9f264246"
+  },
+  "soak100": {
+    "scope": "PHYSICAL_FPGA_FULL_LOGICAL_CLOSED_LOOP_SOAK_NOT_INDEPENDENT_ACCURACY_OR_PHYSICAL_ACTUATION",
+    "passed": true,
+    "requested_cycles": 100,
+    "completed_cycles": 100,
+    "elapsed_seconds": 122.42439230001764,
+    "error": null,
+    "serial_errors": [],
+    "review_hold_seconds": 0.25,
+    "extra_intercycle_pause_seconds": 0,
+    "real_human_review": false,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "automatic_recovery": false,
+    "inspection_retries": 0,
+    "pl_seconds": {
+      "mean": 0.12471161587692307,
+      "maximum": 0.12475850153846153,
+      "p95": 0.12475582461538462
+    },
+    "transfer_detection_seconds": {
+      "mean": 0.5017940290021943,
+      "maximum": 0.5187310000183061,
+      "p95": 0.5162021999713033
+    },
+    "cycle_seconds": {
+      "mean": 1.2197211590019288,
+      "maximum": 1.8325976000051014,
+      "p95": 1.4751474999939092
+    },
+    "boot_identity": 2243361847,
+    "released": 50,
+    "segregated": 50,
+    "consecutive_frames": true,
+    "repeated_payloads_identical": true
+  }
+}

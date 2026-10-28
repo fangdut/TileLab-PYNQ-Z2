@@ -1,0 +1,12 @@
+{
+  "scope": "DOCX_RENDER_AND_VISUAL_QA",
+  "pages": 10,
+  "all_pages_visually_inspected": true,
+  "layout_defects_found": false,
+  "renderer": "packaged render_docx.py with documented Windows native Word read-only conversion fallback and bundled Poppler",
+  "default_renderer_unavailable": "LibreOffice not bundled on Windows, soffice.exe unavailable",
+  "fallback_initial_failure": "Windows PowerShell5 lacked imported Get-FileHash; rerun successfully with bundled PowerShell7",
+  "docx_sha256": "6e82df4b3ea2c54e7088fe64593326bc8173eb6e641f2fca5843756f929ac58a",
+  "preserved_original_template": true,
+  "unchanged_v200_report_sha256": "f434ec676e5a91de7e5eacdc30200021c534a4ac8589d989b01c2198b4f07a19"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "stage": "reset_before",
+    "seconds": 13.559846199990716,
+    "passed": true
+  },
+  {
+    "stage": "exact117",
+    "seconds": 110.20118269999512,
+    "passed": true
+  },
+  {
+    "stage": "core200",
+    "seconds": 26.23266009998042,
+    "passed": true
+  },
+  {
+    "stage": "workflow22",
+    "seconds": 29.734557699994184,
+    "passed": true
+  },
+  {
+    "stage": "soak100",
+    "seconds": 122.60440670000389,
+    "passed": true
+  },
+  {
+    "stage": "reset_after",
+    "seconds": 7.432944999949541,
+    "passed": true
+  }
+]

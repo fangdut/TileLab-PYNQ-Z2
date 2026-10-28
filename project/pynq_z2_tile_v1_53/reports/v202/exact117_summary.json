@@ -1,0 +1,22 @@
+{
+  "scope": "PHYSICAL117_EXPOSED_DEVELOPMENT_RAW_REPRODUCTION_NOT_NEW_ACCURACY",
+  "cases": 117,
+  "normal_images": 33,
+  "normal_false_alarms": 0,
+  "defects_detected": 84,
+  "all_scores_masks_meta_exact_except_sequence": true,
+  "boot_identity": 2243361847,
+  "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "mean_engine_seconds": 0.12471544399737017,
+  "mean_transfer_detection_seconds": 0.5017914923060184,
+  "connection_retries": 0,
+  "transport_guards": {
+    "corrupt_payload_rejected_before_inference": true,
+    "corrupt_header_rejected": true
+  },
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "inter_case_pause_seconds": 0.0,
+  "batch_wall_seconds": 109.89100000000326,
+  "continuous_video_or_uninterrupted_high_duty_claim": false
+}
