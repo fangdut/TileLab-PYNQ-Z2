@@ -1,0 +1,44 @@
+{
+  "scope": "FAILED50MHZ_CANDIDATE_NOT_A_STABLE_RELEASE",
+  "core_clock_already_from_ps": true,
+  "baseline100_full_loop_passed": 25,
+  "baseline100_next_cycle_connection_reset": true,
+  "core100_failure_after_reset_reason_cleared": "POR bit22 set; DDR reset; CPU PC0xffffff28",
+  "lower_clock_core_fixed_frame_completed": 201,
+  "lower_clock_full_logical_cycles_passed": 100,
+  "lower_clock_full_loop_seconds": 133.13407650002046,
+  "lower_clock117_photos_completed": 97,
+  "lower_clock117_full_pass": false,
+  "lower_clock_following_failure": "POR bit22 set again; DDR reset; CPU PC0xffffff28",
+  "root_cause": "POR assertion observed; exact electrical or reset-line cause not established; no oscilloscope or stable-source comparison",
+  "rejected_for_default_delivery": true,
+  "default_stays": "V200100MHz functional baseline, not long-stability qualified",
+  "runtime_candidate_sources_archived": [
+    {
+      "path": "project/pynq_z2_tile_v1_53/host/stop_inspect_station/closed_app.js",
+      "candidate_sha256": "23ae08658e17d7ca762fe8ddbe1db9f8434aeaba091d157717f126e8b49fc868",
+      "restored_sha256": "5fe0cac266ca1732131696a8450149c4c34e91e38c887099d5888faec897954b"
+    },
+    {
+      "path": "project/pynq_z2_tile_v1_53/host/stop_inspect_station/closed_station.py",
+      "candidate_sha256": "1f1429a5dae813aa7c05c3feebf6ea50a1a626237d87effb527a0338c6e64e0f",
+      "restored_sha256": "bba5f31f1ce374f330895905000b5a6803c2689c7bcf2baa45c3362bb269c8d7"
+    },
+    {
+      "path": "project/pynq_z2_tile_v1_53/host/stop_inspect_station/deploy_workstation.py",
+      "candidate_sha256": "79975383ff93295daf61d086edef20a8765f06cc1742f747caf904927c6a1bd4",
+      "restored_sha256": "56bcd589e59b16ce6916fa8b4bb0b218fe121b939d87d3e748d83cc821bb0f2f"
+    },
+    {
+      "path": "project/pynq_z2_tile_v1_53/host/stop_inspect_station/start_station.ps1",
+      "candidate_sha256": "b051ca718fe5c4e7a230b406f2676dcd50deb3cfb4345861ff9c9ee655392b32",
+      "restored_sha256": "313aaf1b9dbce19f26c7e9926f7e2d9377ae53e70bd707b2a37b5a00aab98b51"
+    },
+    {
+      "path": "project/pynq_z2_tile_v1_53/scripts/texture_v170/program_board.py",
+      "candidate_sha256": "381014dfd31584cd2ec054c1c1084e12be519adf6fd0bbc87bb512acd12b5e85",
+      "restored_sha256": "ad1324281194edd0b2ed1651f6c3226f0e6a98632a626bb0549025e4b9003d0c"
+    }
+  ],
+  "formal_word_report_changed": false
+}

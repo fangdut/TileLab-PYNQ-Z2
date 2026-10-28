@@ -1,0 +1,64 @@
+{
+  "scope": "MATCHED_DOWNLOADED_BITSTREAM_SAVED_BD_CLOCK_SOURCE_AUDIT",
+  "bit_sha256": "38936ea6894b7393db56f9c0cf11bf6abbe1351af80dc6149fafd402d17c3e07",
+  "core_clock_pin": "infer/ap_clk",
+  "core_clock_source": "ps7/FCLK_CLK0",
+  "axi_and_reset_clock_source": "ps7/FCLK_CLK0",
+  "reset_input_source": "ps7/FCLK_RESET0_N",
+  "nets": {
+    "one_dout": {
+      "ports": [
+        "one/dout",
+        "resets/dcm_locked",
+        "resets/aux_reset_in",
+        "hdmi_rx/pRst_n"
+      ]
+    },
+    "ps7_FCLK_CLK0": {
+      "ports": [
+        "ps7/FCLK_CLK0",
+        "ps7/M_AXI_GP0_ACLK",
+        "ps7/S_AXI_HP0_ACLK",
+        "control_fabric/aclk",
+        "memory_fabric/aclk",
+        "identity/s_axi_aclk",
+        "infer/ap_clk",
+        "resets/slowest_sync_clk",
+        "pipeline/control_clk",
+        "video_regs/clk",
+        "capture_fabric/aclk",
+        "ps7/S_AXI_HP1_ACLK",
+        "hpd_startup/clk"
+      ]
+    },
+    "ps7_FCLK_RESET0_N": {
+      "ports": [
+        "ps7/FCLK_RESET0_N",
+        "resets/ext_reset_in",
+        "hdmi_rx/aRst_n"
+      ]
+    },
+    "zero_dout": {
+      "ports": [
+        "zero/dout",
+        "resets/mb_debug_sys_rst"
+      ]
+    }
+  },
+  "external_clock_ports": {
+    "hdmi_in_clk_p": {
+      "direction": "I"
+    },
+    "hdmi_in_clk_n": {
+      "direction": "I"
+    },
+    "hdmi_out_clk_p": {
+      "direction": "O"
+    },
+    "hdmi_out_clk_n": {
+      "direction": "O"
+    }
+  },
+  "clock_used_external_pl_pin": false,
+  "hdmi_pixel_clock_is_separate": true
+}
