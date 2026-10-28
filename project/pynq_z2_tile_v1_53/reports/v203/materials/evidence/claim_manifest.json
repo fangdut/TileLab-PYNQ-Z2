@@ -1,0 +1,38 @@
+[
+  {
+    "claim": "完整视觉计算在PL",
+    "type": "implemented",
+    "evidence": "V202_acceptance.json CPU/GPU detection=false; matching implemented source and original V202 engineering",
+    "boundary": "电脑与PS仍负责管理和传输"
+  },
+  {
+    "claim": "内核124.72ms 传图加检测501.79ms",
+    "type": "measured_on_exposed_development_photos",
+    "evidence": "V202_acceptance.json exact117",
+    "boundary": "均时，不是最坏时延或真实视频吞吐"
+  },
+  {
+    "claim": "100周期通过 均时1.220秒",
+    "type": "automated_control_workflow_test",
+    "evidence": "V202_acceptance.json soak100",
+    "boundary": "含0.25秒脚本等待，无真实人工或机械产能结论"
+  },
+  {
+    "claim": "传输对照约7.8%改善",
+    "type": "historical_matched_comparison",
+    "evidence": "V199_transport_comparison.json control/candidate",
+    "boundary": "历史传输优化，不是CNN提速或CPU对FPGA加速比"
+  },
+  {
+    "claim": "固定工位复检用途",
+    "type": "proposed_application_with_implemented_modules",
+    "evidence": "implemented parameter/input/result/review audit workflow",
+    "boundary": "相机、光源、机械反馈和现场收益待验证"
+  },
+  {
+    "claim": "已部署参照切换",
+    "type": "implemented_two_slots",
+    "evidence": "V202_acceptance.json workflow22",
+    "boundary": "不在线训练任意花色，陶瓦为实验场景"
+  }
+]
