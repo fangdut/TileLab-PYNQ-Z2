@@ -1,0 +1,27 @@
+{
+  "scope": "V205_DOCUMENTATION_ONLY_ENGINEERING_REMAINS_V202",
+  "official_template": "C:\\Users\\Fang\\Downloads\\2658aa94-81d0-454c-b2ac-fc040ff2c01a.docx",
+  "official_template_sha256": "d15a2aa186f600cb9c234bffd9deff0c4e9b05c569643d8a81d536f66f424f0c",
+  "base_report_sha256": "24a71e01c3f74a1e6b2b466900920365430d185c9f3e8ac1701bcb54d004b1c5",
+  "report_sha256": "4e8790e031771c912fa1620893177b0c8fb3f62956c6b0f990f4e50afe5b2457",
+  "changed_docx_parts": [
+    "word/document.xml"
+  ],
+  "engineering_changed": false,
+  "board_tests_run": false,
+  "poster_changed": false,
+  "actual_video_recorded": false,
+  "changes": [
+    "应用问题与划分依据",
+    "模型与候选取舍",
+    "TCP与结果关联",
+    "V202工程包复现",
+    "指标统一与失败原因",
+    "仓库首页与目录索引"
+  ],
+  "render_method": "Word native read-only PDF export, PNG inspection; packaged render_docx unavailable because LibreOffice absent",
+  "report_pages": 12,
+  "metrics_count": 17,
+  "metrics_source_equal": true,
+  "official_template_unchanged": true
+}
