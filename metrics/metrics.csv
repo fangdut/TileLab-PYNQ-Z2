@@ -16,3 +16,7 @@ cycle_mean_s,1.2197211590019288,s,includes_0.25s_script_review_API_and_disk,proj
 script_review_hold_s,0.25,s,not_real_human_review,project/pynq_z2_tile_v1_53/reports/v202/summary.json,soak100.review_hold_seconds
 finite_test_elapsed_s,309.787436100014,s,not_long_term_stability,project/pynq_z2_tile_v1_53/reports/v202/summary.json,elapsed_seconds
 boot_identity,2243361847,id,finite_test_same_boot,project/pynq_z2_tile_v1_53/reports/v202/summary.json,boot_identity
+v208_zone_seconds,4,s,simulation_configuration,project/pynq_z2_tile_v1_53/reports/v208/conveyor_acceptance.json,zone_seconds
+v208_automatic_passes,2,tiles,development_live_automation,project/pynq_z2_tile_v1_53/reports/v208/conveyor_acceptance.json,automatic_pass_delta
+v208_manual_review_delta,1,reviews,explicit_nonhuman_replay,project/pynq_z2_tile_v1_53/reports/v208/conveyor_acceptance.json,manual_review_delta
+v208_normal_wait_samples,0,samples,two_normal_tiles_only,project/pynq_z2_tile_v1_53/reports/v208/conveyor_acceptance.json,normal_wait_samples

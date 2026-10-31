@@ -29,3 +29,15 @@ __pycache__/
 **/reports/v164/programming/
 **/host/player_instance.json
 **/host/player_status.json
+**/models/texture_v168_r3/*.pth
+
+# Local presentation profiles and recording sessions are never source assets
+**/browser_*/
+**/recording_prep/
+**/tools_vendor/
+**/recording_frames_*/
+**/evidence_continuous/frames_*/
+**/migration_checkpoint.json
+**/gateway_stdout.log
+**/gateway_stderr.log
+**/server_pid.txt

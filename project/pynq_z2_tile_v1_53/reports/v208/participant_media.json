@@ -1,0 +1,47 @@
+{
+  "equipment_photos_received": true,
+  "participant_screenshot_received": true,
+  "raw_video_directory_located": true,
+  "final_video_edited": false,
+  "final_video_verified": false,
+  "photos": [
+    {
+      "name": "equipment_angle.jpg",
+      "sha256": "f0f055ba7b7acf10a676cd7c517607928e5980fb084415198283c8ba95904875",
+      "source": "participant supplied original"
+    },
+    {
+      "name": "equipment_front.jpg",
+      "sha256": "ff79c9d6ea7dc803a4697c5159f5ad5d5b92aaa5c664227edaa76ded6229ffe7",
+      "source": "participant supplied original"
+    },
+    {
+      "name": "board_closeup.jpg",
+      "sha256": "ec491861cf0c225b300bbb958922d4dc0139cbbc73a3b516c7ee1144ad0b1ff7",
+      "source": "participant supplied original"
+    }
+  ],
+  "videos": [
+    {
+      "name": "deb2455dd3dfba706d0f66433b068f16.mp4",
+      "bytes": 8313426,
+      "duration": "00:02:22.50",
+      "status": "raw_unedited",
+      "file_sha256": "a94df8887b02b0e39dd9841b1b25e172959115d9d88f68de06cd456224fbbe6b"
+    },
+    {
+      "name": "efb3ff34b7a90d85b1e583987328c31d.mp4",
+      "bytes": 8895912,
+      "duration": "00:01:14.77",
+      "status": "raw_unedited",
+      "file_sha256": "e9db6aae643a7b7bd20843f8b3880e355159b9c2fc3afcbef642823e9d31d56d"
+    },
+    {
+      "name": "屏幕录制 2026-10-30 173952.mp4",
+      "bytes": 128322798,
+      "duration": "00:02:48.67",
+      "status": "raw_unedited",
+      "file_sha256": "2a6bb66489dc2fa83a765d6a6ee079f85dde7d0468adb828f286903c6757e8cf"
+    }
+  ]
+}

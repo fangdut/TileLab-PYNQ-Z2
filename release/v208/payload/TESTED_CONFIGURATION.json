@@ -1,0 +1,212 @@
+{
+  "scope": "V200_CLOSED_LOOP_FUNCTIONAL_ENGINEERING_RELEASE_NOT_ACCURACY_CERTIFICATION",
+  "firmware": {
+    "elf_sha256": "55a65673077d50c05663efdf65fbbc01acca44bfd081b36251fee43d19241b6c",
+    "xsa_sha256": "93f75a35058eb82fa8a4d3a6db7f115e40e195a207c1df637ee5ecf985fbe184",
+    "bit_sha256": "38936ea6894b7393db56f9c0cf11bf6abbe1351af80dc6149fafd402d17c3e07",
+    "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "reset_proof": {
+      "auxiliary_reset_active_high": 0,
+      "auxiliary_level": 1,
+      "debug_reset": 0,
+      "clock_locked": 1,
+      "pl_reset_release_checked": true
+    },
+    "clock_proof": {
+      "scope": "SAVED_BLOCK_DESIGN_CLOCK_CONFIGURATION_NOT_RUNNING_FREQUENCY_MEASUREMENT",
+      "pl_clock_mhz": 100.0,
+      "axi_clocks_hz": {
+        "pipeline/m_axi_control": 100000000,
+        "pipeline/m_axi_capture": 100000000,
+        "pipeline/m_axi_result": 100000000,
+        "video_regs/s_axi": 100000000
+      },
+      "hpd_delay_seconds": 0.2,
+      "physical_metadata_checked": true,
+      "legacy_axi_derived_from_checked_clock": [],
+      "bd_sha256": "c600266f93f6b464c96010f2959b814101243cf23b8609da6841234c3347e16a"
+    },
+    "video_proof": {
+      "video": true,
+      "ps_and_pl_control_maps_match": true,
+      "memory_layout": "shared",
+      "capture_hp": 1,
+      "result_hp": 0,
+      "all_inference_ddr_maps_verified": true,
+      "read_and_write_gray_bus_skew_passed": true
+    },
+    "sources": {
+      "link_guard_proof.json": "ff1b610aafb4e6928441e54ebfa2d553e92a0269d0212a6bdf34c30557773208",
+      "lscript.ld": "7a727aa5641af06d2ab1f7e5fb9b227f299f44233ca8d2516840bc75a12924d7",
+      "main.c": "140098fe7e795ced019e0d5c6acf0f3222db82a0f420ed9cc48286dd45b18aaa",
+      "model_identity.h": "0d7a418f0a09fd6c91589067d237b8c3a88507d57fd983534f277c5382ffb26f",
+      "profiles_binding.json": "365460b24edb22eefceb7eafe0355c75d3be4a9f217674ef687f0c26e6cedba1",
+      "profile_allowlist.h": "817e3d64e490135ae02819464ad3222d0c2a84f341206ed5b6214aae7a7bf35f",
+      "safe_memcpy.c": "623b1e434e7f7a3c591108e9b4daccafa69617aed12cb3f381262112ec88b9ec",
+      "transport_crc32.h": "4ea61db4b4c8bfaafc232f05e6fd4fb55d5a8019258bbee1ed5378b89de18644",
+      "xadapter_guarded.c": "1d73657f323252ace2a7d139d7547be3578af45bdc437746d155e18e97900acf",
+      "xemacpsif_physpeed_guarded.c": "cee5a5e8524511dabb14efc79ff51e3b023befd166bd7ce1950b52c6d67dbb1f"
+    },
+    "scope": "ARM_TRANSPORT_ONLY_FULL_PL_INFERENCE",
+    "model_capability_proof": {
+      "implemented_hls_source_sha256": "30f6743bc2f1c71359fa2b3d3da3ce7d52b9b86078eea89438162afc9ce5a86a",
+      "roi_profile": false
+    },
+    "reused_platform": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v195_software02.sdk\\texture_platform\\export\\texture_platform\\texture_platform.xpfm",
+    "reused_platform_sha256": "a1dd14cd1d70141993cc8d43b5434a3f1ff5e2fca9edb57dc0528d3449f74ec2",
+    "profiling": "PS observes PL progress/timestamps only; no detection math",
+    "allowed_profiles": [
+      {
+        "id": "texture",
+        "name": "\u7eb9\u7406\u74f7\u7816\u53c2\u7167",
+        "note": "\u539f\u6709\u7eb9\u7406\u74f7\u7816\u5f00\u53d1\u573a\u666f",
+        "path": "texture",
+        "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+        "model_crc32": 2781797194,
+        "model_bytes": 751760,
+        "graph_sha256": "3283e17899f7b69e119cac6d4be11dfd33b4791634d61fef90ba438aae4c4a2a"
+      },
+      {
+        "id": "roof",
+        "name": "\u9676\u74e6\u53c2\u7167\uff08\u5b9e\u9a8c\uff09",
+        "note": "\u4ec5\u516c\u5f00\u9676\u74e6\u7167\u7247\u7684\u8fc1\u79fb\u8bd5\u9a8c\uff0c\u672a\u9a8c\u8bc1\u5f69\u7ed8\u5730\u7816",
+        "path": "roof",
+        "model_sha256": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+        "model_crc32": 2384441772,
+        "model_bytes": 751760,
+        "graph_sha256": "81afb02c2253237e5a43964ef485082ce59850aeadc675361fb5c7e40e0e0a34"
+      }
+    ],
+    "profile_registry_sha256": "5c53c37502900f083c858d5fefeae0744d54c1419ef79b40c5f3c9f16e98f268",
+    "profile_capability": 536920065
+  },
+  "validation": {
+    "scope": "V200_MATERIAL_VERIFICATION_INSPECTION_REVIEW_CLOSED_LOOP_NOT_ACCURACY_CERTIFICATION",
+    "closed_loop": {
+      "scope": "PHYSICAL_TWO_REFERENCE_CLOSED_LOOP_REPLAY_NOT_INDEPENDENT_ACCURACY",
+      "physical_inferences": 22,
+      "controls_rejected": 38,
+      "certificates_created": 4,
+      "profile_switches_without_new_bitstream": true,
+      "external_profile_change_blocked_release": true,
+      "conflict_blocked_release": true,
+      "legacy_qualification_never_bypassed_review": true,
+      "real_human_review": false,
+      "physical_camera_calibration": false,
+      "physical_actuation": false,
+      "cpu_detection": false,
+      "gpu_detection": false,
+      "final_material": "texture",
+      "final_calibrated": true,
+      "counts": {
+        "inspected": 22,
+        "good": 0,
+        "defect": 0,
+        "released": 2,
+        "segregated": 2,
+        "faults": 1,
+        "unvalidated": 6,
+        "unvalidated_removed": 1,
+        "calibration_samples": 16,
+        "calibration_failed": 0,
+        "manual_reviews": 22,
+        "conflicts": 1
+      },
+      "audit_rows": 22,
+      "csv_sha256": "212abadba1a7dd1ffb325ecde985d4068e44c9435896871249cb3e8a98840cc6"
+    },
+    "browser": {
+      "scope": "PHYSICAL_FPGA_BROWSER_WORKFLOW_AUTOMATED_REPLAY_NOT_REAL_HUMAN_REVIEW",
+      "cycles": 2,
+      "good_release": true,
+      "defect_segregate": true,
+      "release_blocked_until_review": true,
+      "js_errors": [],
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65"
+    },
+    "all117_stop_cadence": {
+      "scope": "PHYSICAL117_EXPOSED_DEVELOPMENT_RAW_REPRODUCTION_NOT_NEW_ACCURACY",
+      "cases": 117,
+      "normal_images": 33,
+      "normal_false_alarms": 0,
+      "defects_detected": 84,
+      "all_scores_masks_meta_exact_except_sequence": true,
+      "boot_identity": 3615035379,
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "mean_engine_seconds": 0.1247133855095332,
+      "mean_transfer_detection_seconds": 0.5267328752103285,
+      "connection_retries": 4,
+      "transport_guards": {
+        "corrupt_payload_rejected_before_inference": true,
+        "corrupt_header_rejected": true
+      },
+      "cpu_detection": false,
+      "gpu_detection": false,
+      "inter_case_pause_seconds": 1.0,
+      "batch_wall_seconds": 199.17199999996228,
+      "continuous_video_or_uninterrupted_high_duty_claim": false
+    },
+    "earlier_failed_unpaced_batch": {
+      "scope": "FAILED_UNPACED_REGRESSION_RETAINED",
+      "completed_exact_photos": 39,
+      "total_planned": 117,
+      "error": "Connection reset during receiving40th reply; subsequentJTAG DDR read reported controller held in reset",
+      "root_cause_established": false,
+      "full_pass": false,
+      "log_sha256": "1a9d57e54ae57ea4691df1d7e09a22444a0a755022bc3574afd5aeb71e86a4e8",
+      "progress_sha256": "6342120208e4772e09afd1901d2def6039682d1d67094c3fab817fc8bdbbccdd",
+      "later_stop_cadence_pass_does_not_prove_high_duty_stability": true
+    },
+    "unit_tests": 32,
+    "pl_bitstream_changed": false,
+    "cnn_or_projection_changed": false,
+    "thresholds_learned_online": false,
+    "reference_profiles": [
+      "texture",
+      "roof"
+    ],
+    "arbitrary_material_learning": false,
+    "physical_camera_or_actuator": false,
+    "real_human_review_evidence": false,
+    "packaged_closed_loop": {
+      "scope": "PHYSICAL_TWO_REFERENCE_CLOSED_LOOP_REPLAY_NOT_INDEPENDENT_ACCURACY",
+      "physical_inferences": 22,
+      "controls_rejected": 38,
+      "certificates_created": 4,
+      "profile_switches_without_new_bitstream": true,
+      "external_profile_change_blocked_release": true,
+      "conflict_blocked_release": true,
+      "legacy_qualification_never_bypassed_review": true,
+      "real_human_review": false,
+      "physical_camera_calibration": false,
+      "physical_actuation": false,
+      "cpu_detection": false,
+      "gpu_detection": false,
+      "final_material": "texture",
+      "final_calibrated": true,
+      "counts": {
+        "inspected": 22,
+        "good": 0,
+        "defect": 0,
+        "released": 2,
+        "segregated": 2,
+        "faults": 1,
+        "unvalidated": 6,
+        "unvalidated_removed": 1,
+        "calibration_samples": 16,
+        "calibration_failed": 0,
+        "manual_reviews": 22,
+        "conflicts": 1
+      },
+      "audit_rows": 22,
+      "csv_sha256": "8126350b54bdbe6fd03218da8a150da54280b4b5316ce863331781af394625a7"
+    },
+    "packaged_fresh_volatile_download_verified": true,
+    "independent_accuracy_certified": false
+  },
+  "source_profiles_manifest_sha256": "5c53c37502900f083c858d5fefeae0744d54c1419ef79b40c5f3c9f16e98f268",
+  "physical_camera": false,
+  "physical_actuator": false,
+  "automatic_arbitrary_material_learning": false,
+  "prior_word_report_is_baseline_snapshot": true
+}

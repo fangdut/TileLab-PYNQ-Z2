@@ -1,0 +1,97 @@
+{
+  "scope": "V207_LIVE_FPGA_CONTINUOUS_CONVEYOR_EXPLICIT_AUTOMATION_NOT_HUMAN",
+  "checks": [
+    "two_normal_tiles_never_stopped",
+    "normal_no_human_review_record",
+    "alarmed_tile_stops_at_review_zone",
+    "alarm_waits_for_review",
+    "one_time_ack_retained_for_next_defect",
+    "normal_and_review_audit_distinct",
+    "real_canvas_capture_and_FPGA_inference"
+  ],
+  "zone_seconds": 4,
+  "manual_review_delta": 1,
+  "automatic_pass_delta": 2,
+  "video_seconds": 39.928,
+  "browserErrors": [],
+  "timing_scope": "browser native canvas capture through application result receipt; includes application overhead",
+  "records": [
+    {
+      "kind": "no_alarm_auto_pass",
+      "cycle_id": "56247691e01c4586aa4d23632e51d663",
+      "source_sha256": "9928364bae34093bf6ec864e9ca314c7519f7765db6e01c3b642f4f8d79bde9c",
+      "capture": {
+        "frame_sha256": "9928364bae34093bf6ec864e9ca314c7519f7765db6e01c3b642f4f8d79bde9c",
+        "rgb_sha256": "67432276404478de54f7c4a15bfa0ccee61ca0f2d0b4fa4423f419a275eb0fb6",
+        "source_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+        "capture_utc": "2026-10-30T08:45:27.327346+00:00",
+        "method": "moving_browser_canvas_native_tile_ROI",
+        "camera": false,
+        "hdmi_capture": false,
+        "capture_to_result_seconds": 2.562999999965541
+      },
+      "result": {
+        "pl_image_alarm": 0,
+        "pl_frame_sequence": 12,
+        "pl_engine_seconds": 0.12470927692307693,
+        "wall_seconds": 1.9061889000004157,
+        "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+        "boot_identity": 2462026225,
+        "result_sha256": "f12da3852d2252bbf6dfbb99d4aab3b4c94eb84823e826cc894aa4afd6d850ef"
+      },
+      "human_review_present": false
+    },
+    {
+      "kind": "no_alarm_auto_pass",
+      "cycle_id": "4a6f9f1b3df14f71b9c6c6ebb0f71812",
+      "source_sha256": "7e8b57efcc875214ddf89a3c7cc21d59d4e13ccf93a503d2edcceace783034f5",
+      "capture": {
+        "frame_sha256": "7e8b57efcc875214ddf89a3c7cc21d59d4e13ccf93a503d2edcceace783034f5",
+        "rgb_sha256": "9c77d97e739fbb56ff883846d0c271af9d8c31ba709059dde1c3bac65be8b0c6",
+        "source_sha256": "770946f93f0ccd8a7595954b0861876c697729cbe05e9fafc57d0f9e8cba5ec8",
+        "capture_utc": "2026-10-30T08:45:37.554521+00:00",
+        "method": "moving_browser_canvas_native_tile_ROI",
+        "camera": false,
+        "hdmi_capture": false,
+        "capture_to_result_seconds": 2.4839999999385327
+      },
+      "result": {
+        "pl_image_alarm": 0,
+        "pl_frame_sequence": 13,
+        "pl_engine_seconds": 0.12468921230769231,
+        "wall_seconds": 1.7056502000195906,
+        "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+        "boot_identity": 2462026225,
+        "result_sha256": "ea3eaf284c4b234fdd5dfa1e5040ef0a181d67d7a1fcf67351f4fe893046620c"
+      },
+      "human_review_present": false
+    },
+    {
+      "kind": "next_defect_waiting_ack_retained",
+      "cycle_id": "59ffbd2c43f041aeb90158e1b87f0706",
+      "source_sha256": "3e8e90774c7f35af3b2b98614948add83f21497c5c2c1c0e1f775256b3e62331",
+      "capture": {
+        "frame_sha256": "3e8e90774c7f35af3b2b98614948add83f21497c5c2c1c0e1f775256b3e62331",
+        "rgb_sha256": "13e3970630b7763635ae377356700e584f1edd7b1c6081810a464c9d4ac49a72",
+        "source_sha256": "3800ee4d98148c859eb56bd5a9350ce6be768dc24fcd2203e3e36e3414defb5a",
+        "capture_utc": "2026-10-30T08:45:59.958965+00:00",
+        "method": "moving_browser_canvas_native_tile_ROI",
+        "camera": false,
+        "hdmi_capture": false,
+        "capture_to_result_seconds": 2.530999999959022
+      },
+      "result": {
+        "pl_image_alarm": 1,
+        "pl_frame_sequence": 15,
+        "pl_engine_seconds": 0.12472695692307692,
+        "wall_seconds": 1.7991944000823423,
+        "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+        "boot_identity": 2462026225,
+        "result_sha256": "aa5eb5a8354df9e27e07a159cdb1862917494ffe6fd539e14509dad40247896d"
+      },
+      "human_review_present": false
+    }
+  ],
+  "normal_wait_samples": 0,
+  "test_scope": "public development samples; not independent accuracy, physical camera or mechanical actuation"
+}

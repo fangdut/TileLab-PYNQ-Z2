@@ -20,6 +20,12 @@ In particular:
 
 See THIRD_PARTY_NOTICES.md and the notices preserved in the distributed files.
 
+V208: original conveyor_station application, automatic-pass policy, launchers,
+tests, source-map assembler and documentation are within the MIT scope.
+Compiled FPGA/BSP artifacts retain vendor terms. Public-photo derivatives in
+reports/v208 and release/v208 retain the dataset terms described below;
+publishing them does not turn the entire bundle into MIT-licensed material.
+
 V168 exception: data/texture_v168_examples photographs/masks and the normal
 feature memory under models/texture_v168_r3 retain MVTec AD's CC BY-NC-SA 4.0
 attribution, non-commercial and share-alike terms. They are not MIT material.

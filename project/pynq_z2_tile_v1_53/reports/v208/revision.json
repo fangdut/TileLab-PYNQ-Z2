@@ -1,0 +1,31 @@
+{
+  "scope": "V208_NET_INPUT_CONTINUOUS_CONVEYOR_REPORT",
+  "base_sha256": "4e8790e031771c912fa1620893177b0c8fb3f62956c6b0f990f4e50afe5b2457",
+  "report_sha256": "0efaaba62592bbacabe46bce80067dbb58f83d43c685c12158c8dcbfc4e45884",
+  "changed_parts": [
+    "[Content_Types].xml",
+    "word/_rels/document.xml.rels",
+    "word/document.xml",
+    "word/media/tilelab_1001.png",
+    "word/media/tilelab_1002.png",
+    "word/media/tilelab_1003.png",
+    "word/media/tilelab_1004.png",
+    "word/media/equipment_angle.jpg",
+    "word/media/equipment_front.jpg",
+    "word/media/board_closeup.jpg",
+    "word/media/participant_workstation.png"
+  ],
+  "pl_baseline": "V202",
+  "model_changed": false,
+  "firmware_changed": false,
+  "participant_video_recorded_reported": true,
+  "participant_media_file_received": true,
+  "pdf_sha256": "2d9da2dc098df24e118cce41022e80b49d5cb7b99aecc2e5e55b6c7ab864fbe0",
+  "report_pages": 13,
+  "visual_qa": "13 photo-enriched pages reviewed; final captions reinspected; unchanged pages compared by PNG hashes",
+  "render_method": "packaged render_docx rasterizer with native Word read-only PDF export fallback; LibreOffice unavailable",
+  "equipment_photos_received": true,
+  "participant_raw_video_located": true,
+  "participant_final_video_edited": false,
+  "participant_video_file_verified": false
+}
