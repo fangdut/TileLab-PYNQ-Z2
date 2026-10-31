@@ -1,10 +1,12 @@
-# TileLab 项目入口
+# 多算子低延迟工业视觉检测系统
+
+基于 FPGA 的瓷砖表面缺陷筛查系统，工程代号 TileLab。
 
 **当前匀速模拟流水线、完整工程与技术报告V208请进入 [fpga-real-texture-v170 分支](https://github.com/fangdut/TileLab-PYNQ-Z2/tree/fpga-real-texture-v170)。** 视觉计算核心沿用冻结V202；进入检测区截图经网口送往PL，未报警自动通过，报警到右侧后人工复核。
 
 [报告PDF](https://github.com/fangdut/TileLab-PYNQ-Z2/blob/fpga-real-texture-v170/project/pynq_z2_tile_v1_53/reports/v208/TileLab_比赛技术报告_V208.pdf) · [报告Word](https://github.com/fangdut/TileLab-PYNQ-Z2/blob/fpga-real-texture-v170/project/pynq_z2_tile_v1_53/reports/v208/TileLab_比赛技术报告_V208.docx) · [工程重建与复现](https://github.com/fangdut/TileLab-PYNQ-Z2/blob/fpga-real-texture-v170/docs/reproduction.md) · [指标与证据](https://github.com/fangdut/TileLab-PYNQ-Z2/tree/fpga-real-texture-v170/metrics)
 
-报告已补入设备实拍和现场页面截图。输送由电脑模拟，HDMI用于电脑直连外屏显示；当前不包含板端HDMI取帧检测或物理分选。117图属于公开开发集。原创代码MIT，第三方数据和厂商代码保留原许可。参赛者原始视频尚未剪辑，比赛尚未提交。
+报告已补入设备实拍和现场页面截图。输送由电脑模拟，HDMI用于电脑直连外屏显示；当前不包含板端HDMI取帧检测或物理分选。117图属于公开开发集。原创代码MIT，第三方数据和厂商代码保留原许可。参赛者已提供剪辑后的演示视频用于官网提交，中英文海报已同步当前流程。比赛提交状态另以官网为准。
 
 以下V1.53.1为历史归档；其中算法、720p60及验收描述不代表当前V208流程。
 
