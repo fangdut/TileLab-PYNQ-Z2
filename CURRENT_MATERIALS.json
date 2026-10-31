@@ -2,7 +2,7 @@
   "scope": "V208_CONVEYOR_SOFTWARE_REPORT_ENGINEERING_DELIVERY",
   "report": "project/pynq_z2_tile_v1_53/reports/v208/TileLab_比赛技术报告_V208.docx",
   "pdf": "project/pynq_z2_tile_v1_53/reports/v208/TileLab_比赛技术报告_V208.pdf",
-  "report_sha256": "0efaaba62592bbacabe46bce80067dbb58f83d43c685c12158c8dcbfc4e45884",
+  "report_sha256": "98f01e4ad34d255925d598a2689347a2aee352f0e712783d1b87fd9aa1dc2fa3",
   "report_pages": 13,
   "engineering_version": "V208",
   "pl_baseline": "V202",
@@ -11,11 +11,16 @@
   "participant_video_recorded_reported": true,
   "participant_video_file_verified": false,
   "equipment_photos_received": true,
-  "poster_version": "V204",
+  "poster_version": "V208_20261101_bilingual",
   "bundle": "engineering_delivery_20261031/TileLab_Engineering_V208",
   "source_map": "release/v208/bundle_sources.json",
   "participant_media_file_received": true,
   "participant_raw_video_located": true,
-  "participant_final_video_edited": false,
-  "pdf_sha256": "2d9da2dc098df24e118cce41022e80b49d5cb7b99aecc2e5e55b6c7ab864fbe0"
+  "participant_final_video_edited": true,
+  "pdf_sha256": "a55dfbe24bda86532eef6697f94548737b62bfe8109a206951dc117151317cdb",
+  "project_title": "多算子低延迟工业视觉检测系统",
+  "project_subtitle": "基于 FPGA 的瓷砖表面缺陷筛查系统",
+  "poster": "project/pynq_z2_tile_v1_53/reports/v208/海报.pptx",
+  "poster_sha256": "cbefde79c2658b6533afe837538358550822d98ed53d116160f220050611e809",
+  "participant_final_video_received": true
 }

@@ -16,8 +16,8 @@
     {
       "path": "manifest.json",
       "source": "release/v208/payload/manifest.json",
-      "sha256": "6dad8e1b46d0263c349265881a325da2cb44d6761b8e975a552188681144cc4d",
-      "bytes": 115023
+      "sha256": "f95c9d4277ca29ef623b47bd53997da25d0320bd750f6953f80a445f4b30373c",
+      "bytes": 115169
     },
     {
       "path": "profiles/index.json",
@@ -304,8 +304,8 @@
     {
       "path": "project/host/conveyor_station/README.md",
       "source": "release/v208/payload/project/host/conveyor_station/README.md",
-      "sha256": "0b3985b1aa4cc9b08aea1c843490f1fab664cc954677058a61f1e38cb6d156a8",
-      "bytes": 3147
+      "sha256": "43897a25eba8ab82ab2bf473e818cedaab76b099c9b5f295eb2680235366a9d7",
+      "bytes": 3186
     },
     {
       "path": "project/host/conveyor_station/README_V207.md",
@@ -2410,8 +2410,8 @@
     {
       "path": "README.md",
       "source": "release/v208/payload/README.md",
-      "sha256": "e796ebe19111996576ed76d0f3c2d203ded5688f6ee9c9457c5488ef9b4fe273",
-      "bytes": 1577
+      "sha256": "f61d4d77c50390286bdd2a1cf0b1ae2251acb024f44804fbf4d3dcef16af49ca",
+      "bytes": 1652
     },
     {
       "path": "report/01_正常照片不停顿自动通过.png",
@@ -2446,8 +2446,8 @@
     {
       "path": "report/delivery_qa.json",
       "source": "release/v208/payload/report/delivery_qa.json",
-      "sha256": "83ec2f7fbccd69ea5d26a67fcda2ea47c82af4390bb4b90b3771d9b56a11a2ea",
-      "bytes": 1111
+      "sha256": "ea3a487b0bad297ffbeab8c202b43252fd85c68aad9fee41853324856a94286b",
+      "bytes": 1094
     },
     {
       "path": "report/equipment_angle.jpg",
@@ -2464,8 +2464,8 @@
     {
       "path": "report/participant_media.json",
       "source": "release/v208/payload/report/participant_media.json",
-      "sha256": "f271fdcd1467f6b200ced844f3b032bd59cba1c9cc963603ea5875c7858cea37",
-      "bytes": 1543
+      "sha256": "77660695ddf638c8303ef0fc948151ed33402c2215895194372a35086fa64b93",
+      "bytes": 1871
     },
     {
       "path": "report/participant_workstation.png",
@@ -2476,26 +2476,26 @@
     {
       "path": "report/README.md",
       "source": "release/v208/payload/report/README.md",
-      "sha256": "23901008788fbb8e30e2482e38bccef1e97f00d7d5bd0cb2c5ec67c71ca273b6",
-      "bytes": 963
+      "sha256": "669978a83c80b6f08361270c44df7503112dcc9a5d65019a1355d144010202bc",
+      "bytes": 1185
     },
     {
       "path": "report/revision.json",
       "source": "release/v208/payload/report/revision.json",
-      "sha256": "19988c8df0e4f95672fe07f6d77c36867a42b3c571ca5d52c17241d8af06e0e4",
-      "bytes": 1359
+      "sha256": "b92ded083f4858420b49b6cb33951c70bcd7a1fc256f2bd3b42008676b124740",
+      "bytes": 1497
     },
     {
       "path": "report/TileLab_比赛技术报告_V208.docx",
       "source": "release/v208/payload/report/TileLab_比赛技术报告_V208.docx",
-      "sha256": "0efaaba62592bbacabe46bce80067dbb58f83d43c685c12158c8dcbfc4e45884",
-      "bytes": 21629941
+      "sha256": "98f01e4ad34d255925d598a2689347a2aee352f0e712783d1b87fd9aa1dc2fa3",
+      "bytes": 21629932
     },
     {
       "path": "report/TileLab_比赛技术报告_V208.pdf",
       "source": "release/v208/payload/report/TileLab_比赛技术报告_V208.pdf",
-      "sha256": "2d9da2dc098df24e118cce41022e80b49d5cb7b99aecc2e5e55b6c7ab864fbe0",
-      "bytes": 973940
+      "sha256": "a55dfbe24bda86532eef6697f94548737b62bfe8109a206951dc117151317cdb",
+      "bytes": 973584
     },
     {
       "path": "report/V199_优化验证补充说明.md",
@@ -2508,6 +2508,12 @@
       "source": "project/pynq_z2_tile_v1_53/reports/v200/README.md",
       "sha256": "5216b831d374311731fd2223a2b8718217dfd79f29cdaf7bd56070dbe501aa81",
       "bytes": 4362
+    },
+    {
+      "path": "report/海报.pptx",
+      "source": "release/v208/payload/report/海报.pptx",
+      "sha256": "cbefde79c2658b6533afe837538358550822d98ed53d116160f220050611e809",
+      "bytes": 954989
     },
     {
       "path": "report/视频发言稿.md",

@@ -2,7 +2,7 @@
   "equipment_photos_received": true,
   "participant_screenshot_received": true,
   "raw_video_directory_located": true,
-  "final_video_edited": false,
+  "final_video_edited": true,
   "final_video_verified": false,
   "photos": [
     {
@@ -43,5 +43,13 @@
       "status": "raw_unedited",
       "file_sha256": "2a6bb66489dc2fa83a765d6a6ee079f85dde7d0468adb828f286903c6757e8cf"
     }
-  ]
+  ],
+  "final_video_received": true,
+  "final_video": {
+    "name": "演示视频.mp4",
+    "bytes": 128076840,
+    "duration_seconds": 177.17,
+    "sha256": "a951f4d05b7045adc19cc519b12a4c9895c4ceae5f25ef443f0f43758074bf76",
+    "scope": "user supplied edited file; format metadata checked; content not fully watched"
+  }
 }

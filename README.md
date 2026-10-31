@@ -1,4 +1,6 @@
-# TileLab FPGA瓷砖缺陷筛查与匀速模拟流水线
+# 多算子低延迟工业视觉检测系统
+
+基于 FPGA 的瓷砖表面缺陷筛查系统，工程代号 TileLab。
 
 电脑模拟真实照片输送，进入检测区即截图经网口交给PYNQ-Z2的PL硬件。有效未报警结果匀速自动通过，报警或结果迟到在右侧复核区停下。人工确认方式本次会话保留一次，自动通过与人工意见分别留档。
 
@@ -6,6 +8,7 @@
 
 ## 当前入口
 
+- [中英文海报](project/pynq_z2_tile_v1_53/reports/v208/海报.pptx)
 - [技术报告Word](project/pynq_z2_tile_v1_53/reports/v208/TileLab_比赛技术报告_V208.docx) · [PDF](project/pynq_z2_tile_v1_53/reports/v208/TileLab_比赛技术报告_V208.pdf)
 - [组包与复现](docs/reproduction.md) · [接线](docs/hardware_setup.md) · [流水线源码](project/pynq_z2_tile_v1_53/host/conveyor_station)
 - [计算分工](docs/architecture.md) · [协议和故障处理](docs/interface.md) · [模型](docs/MODEL.md)
@@ -40,7 +43,7 @@ PC/GPU/ARM不执行运行时视觉推理；浏览器渲染可能使用GPU。红�
 
 随附本地V208完整工程ZIP/RAR，含匹配硬件和最新软件。公开仓库另提供[按版本源文件重建同一目录](tools/build_v208_bundle.py)的工具；克隆当前分支后运行 `python tools/build_v208_bundle.py --out ../TileLab_V208`，再按复现文档离线校验和部署。无需依赖开发者D盘目录。
 
-已收到参赛者整机实拍、板卡近照和现场工作站截图，并补入报告。原始视频已在本机定位，尚未剪辑，不能称最终成片已验收。自动回放截图保留非人工标记，参赛者提供的实拍和现场截图另行注明。比赛上传与签署是后续单独步骤，本更新不表示已提交。
+已收到参赛者整机实拍、板卡近照和现场工作站截图，并补入报告。参赛者已提供剪辑后的演示视频用于官网提交，个人视频不随公开仓库发布。自动回放截图保留非人工标记，参赛者提供的实拍和现场截图另行注明。比赛上传与签署是后续单独步骤，本更新不表示已提交。
 
 ![参赛者提供的整机与双屏实拍](project/pynq_z2_tile_v1_53/reports/v208/equipment_front.jpg)
 

@@ -1,6 +1,6 @@
 {
   "report_pages": 13,
-  "visual_review": "All 13 pages reviewed after participant photos; final caption changes on pages 9 and 10 reinspected; remaining final PNGs matched reviewed pages",
+  "visual_review": "All 13 photo-enriched pages reviewed; official title update on page 1 visually reviewed; pages 2-13 match prior reviewed renders",
   "template_structure": "official five parts; headers/footers/styles/numbering preserved",
   "changed_parts": [
     "[Content_Types].xml",
@@ -16,8 +16,8 @@
     "word/media/participant_workstation.png"
   ],
   "tests": 18,
-  "assembled_bundle_files": 660,
-  "manifest_verified_files": 659,
+  "assembled_bundle_files": 661,
+  "manifest_verified_files": 660,
   "offline_deployment_guard": true,
   "hardware_recompiled": false,
   "new_board_run": false,
@@ -25,6 +25,6 @@
   "equipment_photos_received": 3,
   "participant_screenshot_received": 1,
   "raw_video_files_located": 3,
-  "final_video_edited": false,
+  "final_video_edited": true,
   "final_video_verified": false
 }
