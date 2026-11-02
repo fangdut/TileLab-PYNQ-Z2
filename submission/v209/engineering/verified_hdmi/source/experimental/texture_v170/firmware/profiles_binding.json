@@ -1,0 +1,28 @@
+{
+  "profiles": [
+    {
+      "id": "texture",
+      "name": "纹理瓷砖参照",
+      "note": "原有纹理瓷砖开发场景",
+      "path": "texture",
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "model_crc32": 2781797194,
+      "model_bytes": 751760,
+      "graph_sha256": "3283e17899f7b69e119cac6d4be11dfd33b4791634d61fef90ba438aae4c4a2a"
+    },
+    {
+      "id": "roof",
+      "name": "陶瓦参照（实验）",
+      "note": "仅公开陶瓦照片的迁移试验，未验证彩绘地砖",
+      "path": "roof",
+      "model_sha256": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+      "model_crc32": 2384441772,
+      "model_bytes": 751760,
+      "graph_sha256": "81afb02c2253237e5a43964ef485082ce59850aeadc675361fb5c7e40e0e0a34"
+    }
+  ],
+  "registry_sha256": "5c53c37502900f083c858d5fefeae0744d54c1419ef79b40c5f3c9f16e98f268",
+  "base_source_sha256": "994243a0dd6955e7750ee35e3ce606ef1ac9a604009bb9107b1dccfe3799962b",
+  "candidate_source_sha256": "140098fe7e795ced019e0d5c6acf0f3222db82a0f420ed9cc48286dd45b18aaa",
+  "pl_and_cnn_unchanged": true
+}

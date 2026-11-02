@@ -1,0 +1,2346 @@
+{
+  "scope": "NORMAL_REFERENCE_TRANSFER_PILOT_R2_ROOF_CERAMICS_NOT_FLOOR_QUALIFICATION",
+  "frozen_utc": "2026-10-26T02:23:46.631223+00:00",
+  "source": "10.17632/47x6jdbr5j.1",
+  "license": "CC BY4.0",
+  "memory_normals": 128,
+  "calibration_normals": 64,
+  "test_normal": 20,
+  "test_defect": 20,
+  "selected_before_model_fit": [
+    {
+      "id": "4939a80ed49599b27b00dc5d",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151725_033.jpg",
+      "file_id": "c4eb2f8c-99aa-48ab-bcc6-210fafeccf61",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c4eb2f8c-99aa-48ab-bcc6-210fafeccf61/file_downloaded",
+      "sha256": "2ef4cae66bcaa491e8b584c68cce2203703d24421d084d4f2d6dcf1accb6aac9",
+      "bytes": 3892715
+    },
+    {
+      "id": "bf73f58b47dbf1b87f4a9a55",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152050_061.jpg",
+      "file_id": "67eaa952-ee3c-4a6c-ace1-205c8f84dcb6",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/67eaa952-ee3c-4a6c-ace1-205c8f84dcb6/file_downloaded",
+      "sha256": "94e50042be3ff476883b787defd440f4f6113c42ce1384e1c5e1f4a5eddb7054",
+      "bytes": 4097081
+    },
+    {
+      "id": "562bae0600f40f121fabafd1",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_060.jpg",
+      "file_id": "9e677e89-806b-4b86-9f8d-8737ef44dad6",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9e677e89-806b-4b86-9f8d-8737ef44dad6/file_downloaded",
+      "sha256": "70c16a89489fdfe777e1f7573330c2e8834fd5b5a2b9b8a9e4fafae3919fed18",
+      "bytes": 3428400
+    },
+    {
+      "id": "2477d1adabb8252fa025ea6e",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152050_013.jpg",
+      "file_id": "92c25fed-9592-40d6-8925-3c74be2e34dc",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/92c25fed-9592-40d6-8925-3c74be2e34dc/file_downloaded",
+      "sha256": "b8fb7706d317de2bbe7f9fb137df175e9f2c1b23f3001b69bc92a7cc45e39b5a",
+      "bytes": 4212664
+    },
+    {
+      "id": "0ede88799785abb1762ec55a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_034.jpg",
+      "file_id": "1e328e23-86a7-4543-9bb0-fc17fc5fef55",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/1e328e23-86a7-4543-9bb0-fc17fc5fef55/file_downloaded",
+      "sha256": "5bf7de2a04b606d193cc128cb172d5bbc46b95b58b4e9697cab5ed299bf5987b",
+      "bytes": 3967450
+    },
+    {
+      "id": "e78e44270dce99814b657efb",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151854_097.jpg",
+      "file_id": "fc0aa08c-6ba0-40a6-bba9-dcab97a59524",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/fc0aa08c-6ba0-40a6-bba9-dcab97a59524/file_downloaded",
+      "sha256": "705b3b9ea2f1618fe53a4c6486fc2b796279e62b3b364de1fdc09048a78e826b",
+      "bytes": 4187063
+    },
+    {
+      "id": "b83d49a735241c72e38240f2",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152621_040.jpg",
+      "file_id": "d869875a-e1f9-40fb-b3ce-900d9b619d0c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d869875a-e1f9-40fb-b3ce-900d9b619d0c/file_downloaded",
+      "sha256": "c6cb69267a632ee14ac295a2ec9d80185c234d1c994230b89bd29f38b2085770",
+      "bytes": 3452323
+    },
+    {
+      "id": "423cde4c2177ca1af5b19fce",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152932_063.jpg",
+      "file_id": "6db9a4a2-6e13-4fdf-8446-6f1fe565daa3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/6db9a4a2-6e13-4fdf-8446-6f1fe565daa3/file_downloaded",
+      "sha256": "e9a384c0c87576c3eec6c9b95911e5cf9d85ce10d83cb096df32a0573cc8bb34",
+      "bytes": 4105722
+    },
+    {
+      "id": "16b896a3b5499d04d5585459",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_061.jpg",
+      "file_id": "9fae8ffd-6183-4c08-9621-355d7926cbf3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9fae8ffd-6183-4c08-9621-355d7926cbf3/file_downloaded",
+      "sha256": "784b584d78f808a903e2f6a87728ebd6347b98448a8c5c05b56a1e69be21c7c3",
+      "bytes": 3262204
+    },
+    {
+      "id": "3e050f7a5d95fba21924044d",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152113_056.jpg",
+      "file_id": "8f97a80f-3c0a-4c3b-861b-cbfecfafa79c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8f97a80f-3c0a-4c3b-861b-cbfecfafa79c/file_downloaded",
+      "sha256": "66891c417e73383b4ba4ca01bc9c40978d8aed85ac64c6b258dfa3a5317a3aa2",
+      "bytes": 3648309
+    },
+    {
+      "id": "b0925aee4de511ac33d01a09",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152621_012.jpg",
+      "file_id": "90d01133-9490-4190-8c44-fb56cc628355",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/90d01133-9490-4190-8c44-fb56cc628355/file_downloaded",
+      "sha256": "ccaf3bacbea5fca60a2955e81b10063c7adc15576db30c8c752276f2364198d2",
+      "bytes": 3448544
+    },
+    {
+      "id": "7f199d707061e2936ea2a648",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_074.jpg",
+      "file_id": "36e0055d-38ea-4656-8764-b17bbb9a55cc",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/36e0055d-38ea-4656-8764-b17bbb9a55cc/file_downloaded",
+      "sha256": "ba2ef886e286e04cceb88d350f2b693684ce62107dc8266d3b3d47af66c93b7c",
+      "bytes": 4181558
+    },
+    {
+      "id": "9b80e99681bfd0e4fc9e660a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152811_008.jpg",
+      "file_id": "a19750ba-eaa7-4c0b-ae42-32ebcee49162",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a19750ba-eaa7-4c0b-ae42-32ebcee49162/file_downloaded",
+      "sha256": "620d7e322cc9d8555dec2f2a4b9087db0eb24464a3c647f436586185df816123",
+      "bytes": 4037237
+    },
+    {
+      "id": "6b8fed7c89de11d10c2c4ad4",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152938_081.jpg",
+      "file_id": "e0893a36-391a-40be-aec7-51fd5ff21b57",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e0893a36-391a-40be-aec7-51fd5ff21b57/file_downloaded",
+      "sha256": "8e563bcc885dbc5df9e08561a52d3c0b55d4fa070ead5d5d4711ad0a2d2bc341",
+      "bytes": 3359534
+    },
+    {
+      "id": "3645e01532aca52c50d6fa42",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152925_037.jpg",
+      "file_id": "e7548e4e-c790-41b4-b3c1-02d58b968bde",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e7548e4e-c790-41b4-b3c1-02d58b968bde/file_downloaded",
+      "sha256": "872c1f789cf9d1425b7e6f1acc85bbf4041ea5ae539498b0111b8138c9f7fd25",
+      "bytes": 4172005
+    },
+    {
+      "id": "2355db9ad5050fd982a8c75f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152811_090.jpg",
+      "file_id": "3f49d05b-f5a9-4ed1-8b4f-523701ed41fc",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/3f49d05b-f5a9-4ed1-8b4f-523701ed41fc/file_downloaded",
+      "sha256": "907a293b8bd521fd0c0b838ad5a405576bc8d68b3351684b6adbae578804354e",
+      "bytes": 3458550
+    },
+    {
+      "id": "0af101bd7ae9b630fc984e0a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_084.jpg",
+      "file_id": "f1e2b8ef-cdd4-44a3-b766-dac7efd6a27f",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f1e2b8ef-cdd4-44a3-b766-dac7efd6a27f/file_downloaded",
+      "sha256": "ec2cf46b4d4f5c64699231771fb471112bff637d09b44726436f04c1ca6899ce",
+      "bytes": 3251971
+    },
+    {
+      "id": "cec8ded57aeccf3922f81704",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152106_022.jpg",
+      "file_id": "ff1834f5-ecfc-4db6-9d17-d06647f76b0c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ff1834f5-ecfc-4db6-9d17-d06647f76b0c/file_downloaded",
+      "sha256": "29beebad5138d330adf432507fd1d40ef9424d5770ba68b420a52cd42fec991f",
+      "bytes": 4181707
+    },
+    {
+      "id": "10622a83f659bacbc64a37e5",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152825_042.jpg",
+      "file_id": "06060d14-3542-40f1-a518-ed0352958e3c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/06060d14-3542-40f1-a518-ed0352958e3c/file_downloaded",
+      "sha256": "7850760c40ecc215312cc862f6f38996ca5c92c79de538963d2d806586b26419",
+      "bytes": 3281923
+    },
+    {
+      "id": "da70c3e6591c135c92755342",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151854_027.jpg",
+      "file_id": "5e60a3f4-c7dd-441f-bada-78ee2198695c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5e60a3f4-c7dd-441f-bada-78ee2198695c/file_downloaded",
+      "sha256": "a594180d427b00b5a762f2e5f4f6b0f39bd1db6ff13aa7f2ca3ae7bd4b557a0f",
+      "bytes": 4017202
+    },
+    {
+      "id": "30b694d09cfa4b30cc5fc7c3",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_050.jpg",
+      "file_id": "29bc83f6-4501-4bbc-af93-31512d0a6e5d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/29bc83f6-4501-4bbc-af93-31512d0a6e5d/file_downloaded",
+      "sha256": "624c15a5b7612bbdaa8bce0e699179540c448cae30310b38e33ffacf011769b6",
+      "bytes": 3381534
+    },
+    {
+      "id": "8fdf10d9472cc1874ffadb27",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152629_021.jpg",
+      "file_id": "7c92c1d0-6450-4bbe-b21d-14a61768d0ae",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7c92c1d0-6450-4bbe-b21d-14a61768d0ae/file_downloaded",
+      "sha256": "7e636bedeedc6eec011f4c01bc608330914b9a5a0208c870a4188ade090c704a",
+      "bytes": 4125571
+    },
+    {
+      "id": "1792d228b1783eedc72d05d2",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_020.jpg",
+      "file_id": "03d41064-2d5b-40aa-8cba-ca0c66e75192",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/03d41064-2d5b-40aa-8cba-ca0c66e75192/file_downloaded",
+      "sha256": "8414b8228d4ebb741c9c67f068eead584f1580781976789c672c6bfc14bb7fcd",
+      "bytes": 3281827
+    },
+    {
+      "id": "5d8bf4109dfbf5ef6bf4952e",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152825_066.jpg",
+      "file_id": "2188bafc-e4de-4835-a945-1f0f1922e8a0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2188bafc-e4de-4835-a945-1f0f1922e8a0/file_downloaded",
+      "sha256": "6555c39dcfba75a7dfc5342a9b526e5499bf0c38deda77b910acf238aa15099c",
+      "bytes": 3253747
+    },
+    {
+      "id": "ab6320f32eb875f70e219c8f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151725_040.jpg",
+      "file_id": "c4373a83-65cd-423b-83c5-ee15f93f8e4a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c4373a83-65cd-423b-83c5-ee15f93f8e4a/file_downloaded",
+      "sha256": "4b3ba4a5bc97ee3a1ed5f4fcc76d1bb23c78fe3db7defebb81e095cf1077992c",
+      "bytes": 3908902
+    },
+    {
+      "id": "37253c3fcfc0372f488c60ca",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152558_044.jpg",
+      "file_id": "2266b1e7-e6a9-4095-85d6-5bf88b997f84",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2266b1e7-e6a9-4095-85d6-5bf88b997f84/file_downloaded",
+      "sha256": "0e010076c457000287721be2e29c29119da9619066e0b9f8f5ae2f4a3a107c32",
+      "bytes": 4132348
+    },
+    {
+      "id": "08f24eeca20424bb91db1784",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_037.jpg",
+      "file_id": "7d5da420-4ddd-498a-9991-33527fe2bf3d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7d5da420-4ddd-498a-9991-33527fe2bf3d/file_downloaded",
+      "sha256": "2222da3aadfed89e66f8a39e59033be559b28e4df92421f27102c0624ff4f041",
+      "bytes": 4177309
+    },
+    {
+      "id": "9ede29d13a242a08f09b1438",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151512_010.jpg",
+      "file_id": "19f1d40c-ee87-4dbd-b161-24025fec90de",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/19f1d40c-ee87-4dbd-b161-24025fec90de/file_downloaded",
+      "sha256": "267240034b16e2e839e7f0e999800289388a466e390a5f69d0191b06c8809ccf",
+      "bytes": 3199881
+    },
+    {
+      "id": "5975fea01a6a09c7da9314c0",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_084.jpg",
+      "file_id": "8f0089b0-8d69-4710-806f-c3b3e45855d3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8f0089b0-8d69-4710-806f-c3b3e45855d3/file_downloaded",
+      "sha256": "6cd7ae122b7341c12e625a296d8dbc54f31af8fc59ddb2d5fd31b445afbb5547",
+      "bytes": 4146185
+    },
+    {
+      "id": "a54395cc598ba3bd07748cde",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152938_004.jpg",
+      "file_id": "7790b9a1-2006-4a0e-8366-ff3a89450f48",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7790b9a1-2006-4a0e-8366-ff3a89450f48/file_downloaded",
+      "sha256": "046798bb528b86171408d883acd447a31018f0f012259e77bde83dcefddebee2",
+      "bytes": 4082539
+    },
+    {
+      "id": "f2c0b264c60446f65d0c23ab",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152558_100.jpg",
+      "file_id": "4eb6385c-369e-4c0a-a9a2-1553124802e7",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/4eb6385c-369e-4c0a-a9a2-1553124802e7/file_downloaded",
+      "sha256": "df99b2c531fec493cf7508b4581302b6c5b1b165f77b78a46639000856d509f4",
+      "bytes": 4244260
+    },
+    {
+      "id": "b43c46c691e365d0aabb07b6",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_085.jpg",
+      "file_id": "645db432-b59b-4990-971b-cb823368d0e0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/645db432-b59b-4990-971b-cb823368d0e0/file_downloaded",
+      "sha256": "c94401c48c7d45e52adc0fdf3bdc7d8e9ecdb005c01fb3b362ee68277aef965c",
+      "bytes": 3385591
+    },
+    {
+      "id": "cfe6fddc25291f825b3b603e",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_048.jpg",
+      "file_id": "4b11c5d5-796d-4b46-a0cf-b6f363fe1388",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/4b11c5d5-796d-4b46-a0cf-b6f363fe1388/file_downloaded",
+      "sha256": "a6508871cde7ac10f74c9a71da0462344eb5318422dbd4f01c0fca62570cee74",
+      "bytes": 3420547
+    },
+    {
+      "id": "4d75563892f6c5720f8af36b",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_012.jpg",
+      "file_id": "d77971a6-db57-429c-9cb2-69e3ce0548d7",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d77971a6-db57-429c-9cb2-69e3ce0548d7/file_downloaded",
+      "sha256": "ffd0c9f7ec9fa42df5341d0882934710b0602a0f4676852e1f53fcfb0da23079",
+      "bytes": 3286517
+    },
+    {
+      "id": "c744a815b82efc8427100898",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152825_069.jpg",
+      "file_id": "257ed182-48ea-473f-a6c6-a9405b0b5eef",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/257ed182-48ea-473f-a6c6-a9405b0b5eef/file_downloaded",
+      "sha256": "d120aa20bb37f67e7ba21e81cc3cd70479eea751b27e13093e6a6cc5aa4a5225",
+      "bytes": 3265555
+    },
+    {
+      "id": "66a7f356333eda3fe32bfb56",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152629_056.jpg",
+      "file_id": "010dba6a-f53a-49a9-a8fd-7d9373935178",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/010dba6a-f53a-49a9-a8fd-7d9373935178/file_downloaded",
+      "sha256": "76de15fe7c92405e31aad840ba186b4547f3436f1e6d0c11acde08f0d5438942",
+      "bytes": 4084382
+    },
+    {
+      "id": "aeda34e8d53d39f5a5dabff7",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_029.jpg",
+      "file_id": "90cda96d-1457-4e55-b7b8-a02f4e250968",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/90cda96d-1457-4e55-b7b8-a02f4e250968/file_downloaded",
+      "sha256": "9ee48dd3c219e44471092625d8284d451e30d5325c8ae79e734693cff89f6d6d",
+      "bytes": 3975019
+    },
+    {
+      "id": "0debe2b82d80679472fc0207",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151854_039.jpg",
+      "file_id": "74a4f2c1-1fc3-4a79-86b4-7ff02adc53e7",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/74a4f2c1-1fc3-4a79-86b4-7ff02adc53e7/file_downloaded",
+      "sha256": "b7cf6268fe9019546f873cc8ea51667b7db883f70fa3508b9a29e2752f733c4a",
+      "bytes": 4045715
+    },
+    {
+      "id": "dd245462d5c7cc5adb1d83ee",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152938_082.jpg",
+      "file_id": "e0c6f2bf-e9de-423a-bc4f-bf6882c475b6",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e0c6f2bf-e9de-423a-bc4f-bf6882c475b6/file_downloaded",
+      "sha256": "e3a0e996c50c64b1bc03fae83da2518c9a2120a9eeae82eb25027f6cc10f547a",
+      "bytes": 3365704
+    },
+    {
+      "id": "c8ff937c4a3dc9def121065a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151354_031.jpg",
+      "file_id": "efca8a99-ff9d-4880-84bf-dabe1c7fa4a1",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/efca8a99-ff9d-4880-84bf-dabe1c7fa4a1/file_downloaded",
+      "sha256": "ad69d683283b8ad3f6962f4ad070a662bbc3e24818be8c1ab61171f28cc7709b",
+      "bytes": 3255164
+    },
+    {
+      "id": "44fb501f6f9b43023ad5edf7",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_095.jpg",
+      "file_id": "69472bb5-f0a2-4f93-a953-fbf6b86eec82",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/69472bb5-f0a2-4f93-a953-fbf6b86eec82/file_downloaded",
+      "sha256": "499ce518b28d2023db671af1e75fc1fc29b0f78cff9b930e62d177cb4b09408a",
+      "bytes": 3240809
+    },
+    {
+      "id": "cc14071a6b10b44a9c43b467",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152629_028.jpg",
+      "file_id": "d1bab7e4-d8fa-4dab-8146-f486886777f0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d1bab7e4-d8fa-4dab-8146-f486886777f0/file_downloaded",
+      "sha256": "fc0bc267c734034d3da1a06ae245509970526eb09c887de32f40c7d479977b14",
+      "bytes": 4127680
+    },
+    {
+      "id": "0e2acfd453c6bf937dec4f95",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151512_002.jpg",
+      "file_id": "8e670a83-7294-453a-9708-0cf88e459425",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8e670a83-7294-453a-9708-0cf88e459425/file_downloaded",
+      "sha256": "5457fa1951bca54a9186d3923e93777a81f096df40e42b4b93e4c989e0d3d62a",
+      "bytes": 3214489
+    },
+    {
+      "id": "5a6d50cffecc7e0be531175c",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_052.jpg",
+      "file_id": "92fdc503-7a07-4cb7-8839-57a6476b486c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/92fdc503-7a07-4cb7-8839-57a6476b486c/file_downloaded",
+      "sha256": "9407a2a85feed403cc02ee60eb59c6ea205df3a358506fe172ffa30672758015",
+      "bytes": 3260043
+    },
+    {
+      "id": "080e1910dba1a4d27767994b",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_005.jpg",
+      "file_id": "5115efcd-095d-4130-82aa-b38c4de24550",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5115efcd-095d-4130-82aa-b38c4de24550/file_downloaded",
+      "sha256": "c74494800f3b64940e90eb9c393d6e0a5d37341ab6a6ad846919ded99c33c05f",
+      "bytes": 3456524
+    },
+    {
+      "id": "197653d7ea726a93b2c257ff",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_043.jpg",
+      "file_id": "f73c6624-e365-4650-8fca-db427d873cce",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f73c6624-e365-4650-8fca-db427d873cce/file_downloaded",
+      "sha256": "5ef9f8df26bf1159e5e366dceee3232d5f8e3c8fd5c97304f9144458ee95185f",
+      "bytes": 4181737
+    },
+    {
+      "id": "c2cbbad4ec5f34381fe2bcf4",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151854_076.jpg",
+      "file_id": "e593d7c9-11c4-414f-9c1e-82272f581679",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e593d7c9-11c4-414f-9c1e-82272f581679/file_downloaded",
+      "sha256": "d3132297630ed8eb60aa4b6e617da05b96e12f05e8e5c144f5c808c6d23735b1",
+      "bytes": 4146437
+    },
+    {
+      "id": "921c6d586373e2e1ae9932f3",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152621_073.jpg",
+      "file_id": "45f5a779-651a-4c87-837a-3bbe05a7cce8",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/45f5a779-651a-4c87-837a-3bbe05a7cce8/file_downloaded",
+      "sha256": "192d994d8efd00f71d655245826e6aaa14f744df383da63bd631bbc29245a96f",
+      "bytes": 3485260
+    },
+    {
+      "id": "600c6bf7cae79caa0337bf30",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151908_034.jpg",
+      "file_id": "b7e9b64f-f9f6-4cc0-8a1c-de81d41113a8",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/b7e9b64f-f9f6-4cc0-8a1c-de81d41113a8/file_downloaded",
+      "sha256": "73838cd177c97ec9dd5bf26f74e29e654225e34a5772ff06722dfa499493cbac",
+      "bytes": 3307909
+    },
+    {
+      "id": "f82cc2f526d42a5fa2866068",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152932_072.jpg",
+      "file_id": "701abbf1-88d2-4c73-916e-973d690cfe03",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/701abbf1-88d2-4c73-916e-973d690cfe03/file_downloaded",
+      "sha256": "ed1d74dad6687d6f70a36f073c373342ab00acb9dee5c5e68bbf0588f396d2db",
+      "bytes": 4080087
+    },
+    {
+      "id": "fc698db2eb9c176d7a1b0121",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151908_047.jpg",
+      "file_id": "11a4e8e7-67b6-4c05-9b69-ec213d904bcb",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/11a4e8e7-67b6-4c05-9b69-ec213d904bcb/file_downloaded",
+      "sha256": "e1e4c8ce6751d9bc91ebd8dc9eb126208fffdcd592276d8f34d5a292d62909fb",
+      "bytes": 3326616
+    },
+    {
+      "id": "a7b18237afb5f227e3c3fd35",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152925_004.jpg",
+      "file_id": "ffb23558-25c0-4681-a6f5-2a2cb953ef9f",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ffb23558-25c0-4681-a6f5-2a2cb953ef9f/file_downloaded",
+      "sha256": "4b4c4542aa0503d9863b47deb9ae067b6b10e9d5f1e9192f4c59493316dd5c73",
+      "bytes": 4103390
+    },
+    {
+      "id": "cac87803e3ba68ec7b61d67f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152621_024.jpg",
+      "file_id": "0ccff428-45ef-4470-9a2f-30d89bcb3504",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/0ccff428-45ef-4470-9a2f-30d89bcb3504/file_downloaded",
+      "sha256": "c4912f1c0c0f9984a65aa23e48f0fe830ffe1e6d7045bb971426c5060e53a9f9",
+      "bytes": 3426777
+    },
+    {
+      "id": "48569c18dd73fef8d6597a42",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152050_023.jpg",
+      "file_id": "0bf34c8a-0ec7-4ffc-aabe-eaaabaaf05b1",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/0bf34c8a-0ec7-4ffc-aabe-eaaabaaf05b1/file_downloaded",
+      "sha256": "71f76d148fbed24106639bc65be957c7f7d50db233b06c14edf7fb151f056301",
+      "bytes": 4189804
+    },
+    {
+      "id": "c7eeea98d236c9abfc048c45",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152106_007.jpg",
+      "file_id": "f46ca352-2627-43e9-850a-b747ea3c17c4",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f46ca352-2627-43e9-850a-b747ea3c17c4/file_downloaded",
+      "sha256": "f647356a2ffb56f87bc0ce669f1aa8706f0b85c2df8d754c34ba4c106e3a253a",
+      "bytes": 3635867
+    },
+    {
+      "id": "10bea17f9566ec5f9a7aac13",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152050_051.jpg",
+      "file_id": "0f4ab759-e4b1-4a06-ae11-5d8d7ae97709",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/0f4ab759-e4b1-4a06-ae11-5d8d7ae97709/file_downloaded",
+      "sha256": "1d32fd28a08303e70c9f34146d57b20f0a5f098e41764f6c16e492d9c2b9a385",
+      "bytes": 4164464
+    },
+    {
+      "id": "19184da2f1d0760d0b506913",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152932_008.jpg",
+      "file_id": "92c6611d-1ab7-4ada-b017-7043db21d10d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/92c6611d-1ab7-4ada-b017-7043db21d10d/file_downloaded",
+      "sha256": "0590aee8c765aa55d2d3a7a47e76f95609a5f4fc6fa5921b7cedc2840c96b8f5",
+      "bytes": 3506636
+    },
+    {
+      "id": "2ad1d1ac60cbb4e2453963cd",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_100.jpg",
+      "file_id": "ad4e41c1-60b9-453b-93a7-8da21c6e2c2e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ad4e41c1-60b9-453b-93a7-8da21c6e2c2e/file_downloaded",
+      "sha256": "a03f3d7660a4477ad7852095c1db6ed510fcc789d714485a409c1da94fb87100",
+      "bytes": 3437249
+    },
+    {
+      "id": "a18830933a936212b2c596c0",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_039.jpg",
+      "file_id": "ee12c8b2-7f6e-4b07-91e1-2ac2731b83da",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ee12c8b2-7f6e-4b07-91e1-2ac2731b83da/file_downloaded",
+      "sha256": "c5ebab42719bf425e7dea89d4f5d9d4ae61f7b2e59d9be380bd0ebe3115b74b3",
+      "bytes": 4178852
+    },
+    {
+      "id": "99b440d1cabe5784b3a55d16",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152113_018.jpg",
+      "file_id": "fcd5a3eb-661f-4630-b002-c66dc2287f1d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/fcd5a3eb-661f-4630-b002-c66dc2287f1d/file_downloaded",
+      "sha256": "29c164c9dc320f826022cdef15cab2efb5bc776c2849d272ac0c85b3c1808110",
+      "bytes": 3597489
+    },
+    {
+      "id": "3ff49793d3ccc8eed70d586d",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152925_039.jpg",
+      "file_id": "93d8bf0f-a652-4c57-9c9b-84412a1367d0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/93d8bf0f-a652-4c57-9c9b-84412a1367d0/file_downloaded",
+      "sha256": "8239d3be736eb793f879d3c38d1ca1e9f77e4bc5a5442746d9a73bd12ff69f7a",
+      "bytes": 4189577
+    },
+    {
+      "id": "baaa43275f85259785d430de",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152621_031.jpg",
+      "file_id": "164dbed9-8ac7-4ad5-aca4-e7efbd1c9acf",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/164dbed9-8ac7-4ad5-aca4-e7efbd1c9acf/file_downloaded",
+      "sha256": "ee0a99ef707954d418579f324518df339c0ea0c2362d8bd8e059b85424593f94",
+      "bytes": 3479539
+    },
+    {
+      "id": "a4084a7e8189627c85f6afa6",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152629_031.jpg",
+      "file_id": "66fdf78c-0399-4429-917c-ebdd0f30a637",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/66fdf78c-0399-4429-917c-ebdd0f30a637/file_downloaded",
+      "sha256": "ccb4fcbe836517e26c37af8b0ad35dc9e5249deaaa6f806ac76ffdcfc6b84b41",
+      "bytes": 4135052
+    },
+    {
+      "id": "0bf59a2e1559619a7ed70f39",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152825_071.jpg",
+      "file_id": "307f13bb-52ec-4428-af4c-61ea72fee798",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/307f13bb-52ec-4428-af4c-61ea72fee798/file_downloaded",
+      "sha256": "0f222cc38ccc6f3abc876589a6267597827b03bc0c962478460ce1a816da8188",
+      "bytes": 3270731
+    },
+    {
+      "id": "ccdc063261c5fb10fd546f30",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151854_003.jpg",
+      "file_id": "07f71e40-0654-4f05-8f89-489f6ee16a36",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/07f71e40-0654-4f05-8f89-489f6ee16a36/file_downloaded",
+      "sha256": "75ec1d53351921e16601eac27bc1a5bdc268650fa5ce98917fb1851dced5e2fa",
+      "bytes": 4042095
+    },
+    {
+      "id": "1924fd197eae8c0b77269342",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_072.jpg",
+      "file_id": "cbc7b483-3a0c-4cbb-9aad-6cf9ee49fd28",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/cbc7b483-3a0c-4cbb-9aad-6cf9ee49fd28/file_downloaded",
+      "sha256": "c4f77b62eb2fca87005de20536156fcf6d4cef1248f04c9f404d6fc1a75bf026",
+      "bytes": 3435497
+    },
+    {
+      "id": "9e6886a6103184cd3fe7498e",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_011.jpg",
+      "file_id": "35f82cd5-af75-42b8-b4a5-17c8f416de21",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/35f82cd5-af75-42b8-b4a5-17c8f416de21/file_downloaded",
+      "sha256": "0a6d256bb74a31dd0afe148a454b1449e00fb635f1815d09ac79089cf5360fb4",
+      "bytes": 4137782
+    },
+    {
+      "id": "b6ba0f3595ca72e190f46df5",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_007.jpg",
+      "file_id": "8311c95c-dbc8-4b56-ac73-81168e4233c9",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8311c95c-dbc8-4b56-ac73-81168e4233c9/file_downloaded",
+      "sha256": "f666b143f20f705440fb82677c1aef6f644f677dd6eb7e9eb25e99b4f7cc2f40",
+      "bytes": 3459162
+    },
+    {
+      "id": "5da83821e608f818da274a9a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151908_071.jpg",
+      "file_id": "54f4d2fc-1a1c-43fe-8698-19d0c62b5b21",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/54f4d2fc-1a1c-43fe-8698-19d0c62b5b21/file_downloaded",
+      "sha256": "f84ba843fb7fd17235c1c34f9ec44ea1ed5d3166b624d4ee38812614e62007e6",
+      "bytes": 3328231
+    },
+    {
+      "id": "2bc289f786e4d9dd9c10122f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_027.jpg",
+      "file_id": "c4b9d576-76a5-44d9-bc69-b26086f4fcf2",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c4b9d576-76a5-44d9-bc69-b26086f4fcf2/file_downloaded",
+      "sha256": "99b0eb65c21ae2932ad7e6fb4c9da537de96ca05fcbb1137f2e00fc25809eb50",
+      "bytes": 3430177
+    },
+    {
+      "id": "c7d3e04a5162ab70e08a5cb2",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152629_037.jpg",
+      "file_id": "c4bd47ee-3124-47cd-af26-a6b72420d853",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c4bd47ee-3124-47cd-af26-a6b72420d853/file_downloaded",
+      "sha256": "9f4557246f3f89728fdaa34553c5dd1937cdda8c3ecfea7031d769acf83a72a5",
+      "bytes": 4141276
+    },
+    {
+      "id": "821410ee43efaab2cb38694c",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_017.jpg",
+      "file_id": "d3848fb2-9a72-4eee-9af0-6e78c46d91ec",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d3848fb2-9a72-4eee-9af0-6e78c46d91ec/file_downloaded",
+      "sha256": "57e8c227f6bd9998054d8aa07d0a4c49b6ce26c285582668f7e8282d7a9fc036",
+      "bytes": 3285180
+    },
+    {
+      "id": "f45249d7c8476de2af455e8e",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151354_026.jpg",
+      "file_id": "b3b187e2-4b6a-4e3f-a71f-2d41bb807b26",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/b3b187e2-4b6a-4e3f-a71f-2d41bb807b26/file_downloaded",
+      "sha256": "724e6529d7ba63ccb40abebbfc67ccc4fde0b2e9f08f70d6a9249a4ae7828d02",
+      "bytes": 3261610
+    },
+    {
+      "id": "a57c267eb68f9b186dde1c47",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152811_001.jpg",
+      "file_id": "522d63d9-53b9-4f8b-81ee-b43baebced94",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/522d63d9-53b9-4f8b-81ee-b43baebced94/file_downloaded",
+      "sha256": "d815ccdd6270c656bb1f06804d8410b10e6916095a5ccbc251393d816b522c81",
+      "bytes": 4045673
+    },
+    {
+      "id": "d05e626caa311aca6197d7c5",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_021.jpg",
+      "file_id": "a7220b71-3f62-49e5-ba00-4535931dfcb3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a7220b71-3f62-49e5-ba00-4535931dfcb3/file_downloaded",
+      "sha256": "01b08994b54f2aeebe5b0c8b513be4240d419de0b4bcf956b1f39f3c5ebf11ff",
+      "bytes": 3979361
+    },
+    {
+      "id": "2806ea8f2aeba2481b9d3c2e",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_024.jpg",
+      "file_id": "5617eac1-1008-4d34-b002-304f92b6a25e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5617eac1-1008-4d34-b002-304f92b6a25e/file_downloaded",
+      "sha256": "175fedcca65565f8896fd83ad7c27e7e77df2f74ee8408fc26e0cccdce84a58a",
+      "bytes": 4157427
+    },
+    {
+      "id": "ebccb50df0a3e6f246e5acab",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151725_053.jpg",
+      "file_id": "1d2672aa-53e0-43d2-a1fa-d43ad266e938",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/1d2672aa-53e0-43d2-a1fa-d43ad266e938/file_downloaded",
+      "sha256": "b63800bad10c8c6514d4c11b18cf2ec65aa5060256f4f0c90313b98da4146737",
+      "bytes": 3209483
+    },
+    {
+      "id": "5ee782e99e3783f5418726bf",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152938_047.jpg",
+      "file_id": "4e92abe5-6ab6-4258-baa9-6535200e8009",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/4e92abe5-6ab6-4258-baa9-6535200e8009/file_downloaded",
+      "sha256": "c08f20328c3c3207d87b50110334e5a47dc9cbc21629ebd138226a594ccec5e2",
+      "bytes": 3352944
+    },
+    {
+      "id": "fee391be552d551c08d75610",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_023.jpg",
+      "file_id": "09a420bf-01c1-4368-9048-1d5528ee76db",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/09a420bf-01c1-4368-9048-1d5528ee76db/file_downloaded",
+      "sha256": "939a5c695191f5bf5c318efa4d3116fdff6719c1d5d02c46820a432338d20d99",
+      "bytes": 3276076
+    },
+    {
+      "id": "14068f7a42bfc0130c29661a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_100.jpg",
+      "file_id": "ebd77110-36b8-49db-ab47-aa1c037e8ccf",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ebd77110-36b8-49db-ab47-aa1c037e8ccf/file_downloaded",
+      "sha256": "2d1d9e55664f88a70b9b5e9929ee2af6596b67c51c10e1d67db12de9c6d19aa7",
+      "bytes": 3235459
+    },
+    {
+      "id": "657ed05ce687c335c152a6df",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152551_097.jpg",
+      "file_id": "9b031b5a-b44d-4334-ad3e-5eb1fbfc5a23",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9b031b5a-b44d-4334-ad3e-5eb1fbfc5a23/file_downloaded",
+      "sha256": "12b5c2ad9a955dd0d9a2c7c051eb428ed01fd18da39beea84eb8a0b233a29e96",
+      "bytes": 4287908
+    },
+    {
+      "id": "545d4e1f1d5f4900328296e6",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152621_081.jpg",
+      "file_id": "13cf4ac6-340c-4073-b706-ed72c6ef4413",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/13cf4ac6-340c-4073-b706-ed72c6ef4413/file_downloaded",
+      "sha256": "6382ddb0ccbc75289d5326f509382c753f923ff20df530b16feaf55291aee2ad",
+      "bytes": 3481437
+    },
+    {
+      "id": "a9c9b2ff8110647609332eb6",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152932_064.jpg",
+      "file_id": "72f2f3bf-a0dd-4055-bc7e-f82ac4c7250e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/72f2f3bf-a0dd-4055-bc7e-f82ac4c7250e/file_downloaded",
+      "sha256": "176d9407ad329f5184d189e3ecf62617507d2954b6a5c892afd429e92b430869",
+      "bytes": 4069731
+    },
+    {
+      "id": "c2f18cb79440e50f4cad574a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152938_066.jpg",
+      "file_id": "345569dc-086b-4ab5-857b-88b6aae48422",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/345569dc-086b-4ab5-857b-88b6aae48422/file_downloaded",
+      "sha256": "ab1445d666801345075c4fd16adaf19071993c135a564a838e3fd9aa44284bae",
+      "bytes": 3382544
+    },
+    {
+      "id": "cf6fe2d794ac5404157962fb",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152925_019.jpg",
+      "file_id": "49e1f660-8f13-43e4-a2e3-f3a28de962df",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/49e1f660-8f13-43e4-a2e3-f3a28de962df/file_downloaded",
+      "sha256": "259e35b1c69915edde621ee186a3db6dc5ea709f82603ab34949ef20d48dd109",
+      "bytes": 4138756
+    },
+    {
+      "id": "5e3e57722386ac1101741814",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151854_002.jpg",
+      "file_id": "f264d6c6-8b4c-43c5-822e-efa564229ea3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f264d6c6-8b4c-43c5-822e-efa564229ea3/file_downloaded",
+      "sha256": "343e64c5307f3240fdec38d5032750aa44593ac27ca4518e5c2ff2b49fa3e717",
+      "bytes": 4042956
+    },
+    {
+      "id": "cfd82a2cdf5f8b37626f9aee",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_017.jpg",
+      "file_id": "e9d34c87-65b5-4232-a427-0b1cbc535724",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e9d34c87-65b5-4232-a427-0b1cbc535724/file_downloaded",
+      "sha256": "24fcd646d20d7e5992ea40f12045305e4e09ff6ff946a70fba46f4182d8bf9c9",
+      "bytes": 3334026
+    },
+    {
+      "id": "0a1b0a7c7a13869671469198",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_075.jpg",
+      "file_id": "397b5097-0f62-48ff-b8dd-6de9975b5109",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/397b5097-0f62-48ff-b8dd-6de9975b5109/file_downloaded",
+      "sha256": "34f0940439ba785bb53dd2bb70912e50fcebea051746f99afa873d627b405ed6",
+      "bytes": 4054224
+    },
+    {
+      "id": "0f392d70599f6f0ce8ba1b8f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151908_058.jpg",
+      "file_id": "9d5c9e2b-5e1a-4847-ac6e-2c159bb4cef8",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9d5c9e2b-5e1a-4847-ac6e-2c159bb4cef8/file_downloaded",
+      "sha256": "14b0c2f123e57ee0a6adfa2bba4885f1e66a6c47f2a6dcc623109263dd6550df",
+      "bytes": 3339185
+    },
+    {
+      "id": "eaba59577aeb2b41dbc20c15",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_004.jpg",
+      "file_id": "3dd2dee2-acaa-42b3-aa6f-8a46409bc669",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/3dd2dee2-acaa-42b3-aa6f-8a46409bc669/file_downloaded",
+      "sha256": "5fac4151b6021db24a45de4d748f40be830da7fb3897ac5def2e0470eaadb5b5",
+      "bytes": 3463393
+    },
+    {
+      "id": "8cb40b41b35e55c50ab115f8",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152932_023.jpg",
+      "file_id": "7478ed07-d162-45e9-8ed6-21a94792eb61",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7478ed07-d162-45e9-8ed6-21a94792eb61/file_downloaded",
+      "sha256": "8ff32b52c27db1af80028486773c224f9d14ad85ab523d7e7035b7298b11b782",
+      "bytes": 3504843
+    },
+    {
+      "id": "26f478e3d29fd8a7dcf3651b",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152551_067.jpg",
+      "file_id": "71df969f-96a7-4a36-bdbc-93afc8925413",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/71df969f-96a7-4a36-bdbc-93afc8925413/file_downloaded",
+      "sha256": "1f6d3fd038250d13a7ad855f2ba491ad10e4ad5074a645392adb18f5ea705930",
+      "bytes": 4224249
+    },
+    {
+      "id": "f39b44a71ff2014ea58842bf",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152621_001.jpg",
+      "file_id": "1897b298-aee1-4260-9fa4-47f39097260e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/1897b298-aee1-4260-9fa4-47f39097260e/file_downloaded",
+      "sha256": "f49fb54b69cce22fde16aa928135bdfc43bb09fd4d3e224d0969bc36053dd09d",
+      "bytes": 3503655
+    },
+    {
+      "id": "835a8aa33b16f0a888565589",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_057.jpg",
+      "file_id": "fe8a309f-33a0-40cb-bedf-421b00b37b97",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/fe8a309f-33a0-40cb-bedf-421b00b37b97/file_downloaded",
+      "sha256": "98cb0786a2d3df446df99c5ad4b1b82edec42c938f9995eb31af016d1b17f90d",
+      "bytes": 4001381
+    },
+    {
+      "id": "817b0644294067ace2b7104c",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152938_009.jpg",
+      "file_id": "bc2fbe9a-0e19-4332-b953-e048dd5cd906",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/bc2fbe9a-0e19-4332-b953-e048dd5cd906/file_downloaded",
+      "sha256": "cea398aa22bcb1f41af590028e44f8b50d70e7ce3213a47570918e2d91f2dc8a",
+      "bytes": 4076832
+    },
+    {
+      "id": "896c172e1eb20f47880c3f65",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152113_024.jpg",
+      "file_id": "89ac6b68-df51-4f1c-9d0f-524016dc004e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/89ac6b68-df51-4f1c-9d0f-524016dc004e/file_downloaded",
+      "sha256": "a09f3a4449abe544a4b407006199f6f6bd2c89f05f5e1a21eab5ecf082999cec",
+      "bytes": 3627887
+    },
+    {
+      "id": "7f40aad3344f635973ec893e",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151908_048.jpg",
+      "file_id": "e6dfcd32-fbc9-4f57-9684-d45a34bf8ff0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e6dfcd32-fbc9-4f57-9684-d45a34bf8ff0/file_downloaded",
+      "sha256": "063c486e630f2004b9e6b3ac2d6dba15cb8a26b096da0759f608a5303da4333a",
+      "bytes": 3329839
+    },
+    {
+      "id": "9ee0688b175d6dc4b185953f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_087.jpg",
+      "file_id": "6760d9b6-51be-465b-bf5c-c16142c7499b",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/6760d9b6-51be-465b-bf5c-c16142c7499b/file_downloaded",
+      "sha256": "7b80e93522cdb2adc66b5e7bc8fab5143ca172ae73a03f23774c76cac41fdff5",
+      "bytes": 3401761
+    },
+    {
+      "id": "e6c0155415d22852df6292ef",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_098.jpg",
+      "file_id": "205d5c3a-e11e-4a92-b2e6-628514f5e7e8",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/205d5c3a-e11e-4a92-b2e6-628514f5e7e8/file_downloaded",
+      "sha256": "91f617bf2c694d72bed03f74ab493928102e1f904947c8e40495d83cab23eb61",
+      "bytes": 3436306
+    },
+    {
+      "id": "03982b2755a0bbf3f9875f74",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152050_040.jpg",
+      "file_id": "dd4abc2c-19c8-4a19-991d-6f20bf4adb71",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/dd4abc2c-19c8-4a19-991d-6f20bf4adb71/file_downloaded",
+      "sha256": "97c0c56a9e65982fa4a96441da7968d7e1ccc0cc9fbc237a8de18197a62c699b",
+      "bytes": 4161084
+    },
+    {
+      "id": "2117e9742b370e4bc97df136",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_086.jpg",
+      "file_id": "eaaab7f2-e463-404c-8207-1c9706352bce",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/eaaab7f2-e463-404c-8207-1c9706352bce/file_downloaded",
+      "sha256": "52da4659642c118e64ad32fad5c207550e8baabd3161b04d05a419ba7e8b9c85",
+      "bytes": 3402195
+    },
+    {
+      "id": "d506f39a92fa11a9d9ee7409",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_074.jpg",
+      "file_id": "9a59abc1-fda0-4d65-bcc7-138755eeea43",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9a59abc1-fda0-4d65-bcc7-138755eeea43/file_downloaded",
+      "sha256": "333639ccf0707b66cab3606ca5e70f41d22dc6eb70339f9038061138febbd0c4",
+      "bytes": 4088031
+    },
+    {
+      "id": "efbd46c22fede3c91a44d73f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152041_090.jpg",
+      "file_id": "91fa38f4-f292-43d4-815d-ea7a6ba3f429",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/91fa38f4-f292-43d4-815d-ea7a6ba3f429/file_downloaded",
+      "sha256": "c8e18fb62f1e412879619fecd039f058388716c1ef6c5fd7f65744f99347dc6c",
+      "bytes": 4187552
+    },
+    {
+      "id": "e292262f94ed67ac8056662a",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152932_079.jpg",
+      "file_id": "44820c6c-ae74-4b07-9397-238ac05bdf97",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/44820c6c-ae74-4b07-9397-238ac05bdf97/file_downloaded",
+      "sha256": "0189d89b788e01cd5446974242a798eb67ac3041eb059785ec8a21588e85c95b",
+      "bytes": 4071198
+    },
+    {
+      "id": "b3bcaf9df19bc56a893cf488",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152825_057.jpg",
+      "file_id": "3e3bf018-8f46-4fda-ae20-f96d0a961b32",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/3e3bf018-8f46-4fda-ae20-f96d0a961b32/file_downloaded",
+      "sha256": "d81b5052d7961b369faadcd239d1767076689818cb3d0ccc6e353e8d919edc6a",
+      "bytes": 3260070
+    },
+    {
+      "id": "2ffc07ab7f3893dd019a015c",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_071.jpg",
+      "file_id": "f023c909-c297-42f8-8630-71e82a7dbafe",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f023c909-c297-42f8-8630-71e82a7dbafe/file_downloaded",
+      "sha256": "1c3e1519e1c1ec3be3361f1f602535c1ad5c14be6f8c7ac5abb3f77e28b23ea8",
+      "bytes": 3429830
+    },
+    {
+      "id": "66ca63cc03b1537fd715f695",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152113_085.jpg",
+      "file_id": "8875ab51-ee84-4c59-9b52-8f5d512427f0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8875ab51-ee84-4c59-9b52-8f5d512427f0/file_downloaded",
+      "sha256": "54e9fa5c59f63229b199b729d9beaff613467a163a18fd51f34ad617e5874405",
+      "bytes": 4152944
+    },
+    {
+      "id": "39f3679c9c0dc4f98f05b893",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152558_005.jpg",
+      "file_id": "b8b2eec9-3c99-4762-83f0-045461d78274",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/b8b2eec9-3c99-4762-83f0-045461d78274/file_downloaded",
+      "sha256": "30bdf15911a543b7fd9d63280659c972fa44618118663b0ba7bcef746271826e",
+      "bytes": 4127731
+    },
+    {
+      "id": "a9c74c2241790b04482dc196",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_086.jpg",
+      "file_id": "99434d97-ad01-4aec-9b06-5a71cb5b0d94",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/99434d97-ad01-4aec-9b06-5a71cb5b0d94/file_downloaded",
+      "sha256": "90642f0f82c63e697777d214cc20a863cd5fb75b4b480df7a9d68af8bb3842b5",
+      "bytes": 4148222
+    },
+    {
+      "id": "47d625d7979011ad3a2d52e2",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152610_088.jpg",
+      "file_id": "815b2b71-85ae-4690-9570-a9200cb16614",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/815b2b71-85ae-4690-9570-a9200cb16614/file_downloaded",
+      "sha256": "6c884176f599c9b85577ecc9bde5d17c344d191c2c19b92591b29d82521743cb",
+      "bytes": 3438855
+    },
+    {
+      "id": "0078b3a32276d8526c768b05",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152925_017.jpg",
+      "file_id": "3f958412-d8df-45a6-8aa1-7521a0b6aaf9",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/3f958412-d8df-45a6-8aa1-7521a0b6aaf9/file_downloaded",
+      "sha256": "579029b0c1822d87e1bbb6a5dc9ecbb381cfc1e72b80da795a4df07dec57a7b3",
+      "bytes": 4118061
+    },
+    {
+      "id": "c5c90e1e4206866e0a6fc5cb",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151854_042.jpg",
+      "file_id": "9f7317ac-9694-43d9-987f-ac3e7fa8e6af",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9f7317ac-9694-43d9-987f-ac3e7fa8e6af/file_downloaded",
+      "sha256": "ecf4e5478d0e81b8eee54b9c9356ab85319921fd67654f7d6a367705fcbd98fa",
+      "bytes": 4013796
+    },
+    {
+      "id": "8107b523afbc2d05cf8f9396",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151641_007.jpg",
+      "file_id": "e78049b7-dfbe-40eb-aa02-6f780a6593f0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e78049b7-dfbe-40eb-aa02-6f780a6593f0/file_downloaded",
+      "sha256": "b704af069ef50cf15614ca2858896ea3368cf58e814145f34fb488df1eed9917",
+      "bytes": 3393436
+    },
+    {
+      "id": "11a16f4ffc0ff967d02dd9c5",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152558_099.jpg",
+      "file_id": "6fe37578-c4f1-4983-9546-3d4d82591eca",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/6fe37578-c4f1-4983-9546-3d4d82591eca/file_downloaded",
+      "sha256": "5faaa84fd41df0bd746f2670d51deb62ddc9dfc93a1caab5d96ad4f274616b00",
+      "bytes": 4250272
+    },
+    {
+      "id": "e8987ae5abb1e0bdd0772edf",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_054.jpg",
+      "file_id": "2bfccef5-a096-4311-897e-54f59ef7428e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2bfccef5-a096-4311-897e-54f59ef7428e/file_downloaded",
+      "sha256": "a532a2030b5c9bbd1e1b69562e6250fa510523823e71b6a763aabb5131bf0835",
+      "bytes": 3423191
+    },
+    {
+      "id": "db4499bd5b08c79c1d62d4f7",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151354_027.jpg",
+      "file_id": "2ef1ddcb-da20-417e-a189-f68ebf00ea64",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2ef1ddcb-da20-417e-a189-f68ebf00ea64/file_downloaded",
+      "sha256": "4fca940e113fbb50ddb218dbd89a3e824141202430a8ef8435a1d83824e646e8",
+      "bytes": 3254690
+    },
+    {
+      "id": "27714c4131813fbef0657f2f",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152113_042.jpg",
+      "file_id": "e62a1250-8810-490c-a02f-157bce1c3366",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e62a1250-8810-490c-a02f-157bce1c3366/file_downloaded",
+      "sha256": "f578fa66eca12592c0682f849ecf32dc42428cbc148d12bde204c25797e2a410",
+      "bytes": 3643725
+    },
+    {
+      "id": "2158f1733e16cb34917ecd05",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152254_061.jpg",
+      "file_id": "7302617b-804c-47e2-97ea-6850310136c7",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7302617b-804c-47e2-97ea-6850310136c7/file_downloaded",
+      "sha256": "92e808a5cfab62355b47fd50d058f475918005db1497d4793e436e699a8b180c",
+      "bytes": 3423593
+    },
+    {
+      "id": "5d3e30ddeaaeaa0cc2257d59",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152629_071.jpg",
+      "file_id": "583cb2bf-1e52-44b6-80e9-0008ad5b859c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/583cb2bf-1e52-44b6-80e9-0008ad5b859c/file_downloaded",
+      "sha256": "6997f49e207a096ba2b1f07ca6f2781dceb96cf943540a4f64466054aceca9ab",
+      "bytes": 4089971
+    },
+    {
+      "id": "42b91e8891148ce2bfc9bc55",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151915_073.jpg",
+      "file_id": "6ee7c8e5-b9a4-4b8d-83ae-d2ea3ef0c672",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/6ee7c8e5-b9a4-4b8d-83ae-d2ea3ef0c672/file_downloaded",
+      "sha256": "56e032f45a88c67977d5375f8197a96911b71acc9646043f346a4c721e01bb42",
+      "bytes": 3255882
+    },
+    {
+      "id": "7c200ffc41110048ee78d917",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151908_065.jpg",
+      "file_id": "d07442d1-d8e1-46b2-bdb7-36e24c2882a3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d07442d1-d8e1-46b2-bdb7-36e24c2882a3/file_downloaded",
+      "sha256": "9a1bed33618d192cc15e9d5476f90ae7c7e7a49bb64f1ddc1fd99d2afaeb0711",
+      "bytes": 3325002
+    },
+    {
+      "id": "e40facdcebfd92e578f9874b",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152830_086.jpg",
+      "file_id": "cfb40c0f-2bc6-4fa8-884a-1640f4e0b78d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/cfb40c0f-2bc6-4fa8-884a-1640f4e0b78d/file_downloaded",
+      "sha256": "74e3d8cf845d7de741123b02ca479f8e09ce30fa918480486f2e78f29a7a75b8",
+      "bytes": 4159771
+    },
+    {
+      "id": "8ddcff219235b59951d6beb7",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_151908_010.jpg",
+      "file_id": "c230f611-3950-4ef8-89a2-ea2c4def6bbf",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c230f611-3950-4ef8-89a2-ea2c4def6bbf/file_downloaded",
+      "sha256": "0b9a63290f3518793a77e42b53dd3220c4ed7bf4c7d356ae0c7d12bf0f9f6581",
+      "bytes": 3307356
+    },
+    {
+      "id": "26b8c54a7235ed264b247791",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152558_043.jpg",
+      "file_id": "5ffa9fd1-73c6-4c44-89c5-fb47ae96e5a6",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5ffa9fd1-73c6-4c44-89c5-fb47ae96e5a6/file_downloaded",
+      "sha256": "fcd71560c3158169177ce3dea0ec5dd5dea300ec82e2d0980801561c5e79ef3b",
+      "bytes": 4129250
+    },
+    {
+      "id": "167dcacefa714947b8418263",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152938_059.jpg",
+      "file_id": "d122e574-4c95-4275-8326-8f8333aab95c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d122e574-4c95-4275-8326-8f8333aab95c/file_downloaded",
+      "sha256": "608cfb51a929e1165c09e7544e09d532f464283a7f7a53e6600d67c807af949a",
+      "bytes": 3350273
+    },
+    {
+      "id": "c568daad9ee8b37a16e62da7",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152811_066.jpg",
+      "file_id": "b7c02cd0-a791-4a3c-9f27-95135e659571",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/b7c02cd0-a791-4a3c-9f27-95135e659571/file_downloaded",
+      "sha256": "4614e68228b50e27fe6ce84ffbcddc76edbeaa436a60f9125636239c7f169276",
+      "bytes": 3421449
+    },
+    {
+      "id": "75c5b7ce2decbb41317cdb89",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152932_100.jpg",
+      "file_id": "67588d99-78e6-4cbd-9240-899653bedc11",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/67588d99-78e6-4cbd-9240-899653bedc11/file_downloaded",
+      "sha256": "cc387ffa7d4c2fa0adcab7a5d9420001bd0e92271418bf009f2d10c86626c263",
+      "bytes": 4097612
+    },
+    {
+      "id": "59486a9695d9d46f9b4500da",
+      "role": "memory",
+      "label": "good",
+      "filename": "20240808_152637_089.jpg",
+      "file_id": "3470cb67-4c93-4734-90af-08f9df1e5a90",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/3470cb67-4c93-4734-90af-08f9df1e5a90/file_downloaded",
+      "sha256": "da2984cb0b983b236a836bb384f78d750511aacd5e55a0f419db1e9ca3ad6348",
+      "bytes": 4124603
+    },
+    {
+      "id": "abe632f38670da0b7bb70984",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152925_027.jpg",
+      "file_id": "2c11dfd4-f7fd-4948-bc4b-3d384bfd119a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2c11dfd4-f7fd-4948-bc4b-3d384bfd119a/file_downloaded",
+      "sha256": "20e2b647ece2b524d5270b4cdf2964d764e8ed54c91c207607104053e98a5d1a",
+      "bytes": 4158666
+    },
+    {
+      "id": "b45389e26004a48fa987e0af",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151512_007.jpg",
+      "file_id": "2985b9f7-ef0b-4a49-b531-03b3263112de",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2985b9f7-ef0b-4a49-b531-03b3263112de/file_downloaded",
+      "sha256": "4e69ab9071f443681cdbd41663e602c5f05c133610722bae6b359d292e92d9e2",
+      "bytes": 3209801
+    },
+    {
+      "id": "0bae9a8eea0ffdd29a188410",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152629_022.jpg",
+      "file_id": "455fd411-69c0-48fc-98ef-b67882460103",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/455fd411-69c0-48fc-98ef-b67882460103/file_downloaded",
+      "sha256": "29ff60261d6e3bb79084a5766730da15c6699dc40d38829baa97e94578210f53",
+      "bytes": 4120910
+    },
+    {
+      "id": "d72d751500596fd00ca1b7c9",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152050_016.jpg",
+      "file_id": "a93cda80-4a32-4c99-89ca-147170812cc6",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a93cda80-4a32-4c99-89ca-147170812cc6/file_downloaded",
+      "sha256": "149b72b802c26a4afc56eac85f814f5d8b7fb93a4a544a00e44099f4dd295041",
+      "bytes": 4201318
+    },
+    {
+      "id": "6d5c7594b328f45f32ef5ecd",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152811_077.jpg",
+      "file_id": "116ed217-c17c-4032-a465-afd06e328c12",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/116ed217-c17c-4032-a465-afd06e328c12/file_downloaded",
+      "sha256": "4256c17135a348f4b7999d4493ce1a87ed2a2b3eff88a0923053d26619b1b89a",
+      "bytes": 3425701
+    },
+    {
+      "id": "44b8c5d5d205f9d9b4e3e52b",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152551_030.jpg",
+      "file_id": "5871ff3a-68f3-4a03-ab72-360e9fda0e53",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5871ff3a-68f3-4a03-ab72-360e9fda0e53/file_downloaded",
+      "sha256": "3a25f35a5c4ac7afa8d308777601031da7114e42a1e918317d7c0b5d299cf365",
+      "bytes": 4097265
+    },
+    {
+      "id": "88db03347a7d9e597da04d41",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152113_093.jpg",
+      "file_id": "27e85319-5afe-4512-8a47-c7131328cdd3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/27e85319-5afe-4512-8a47-c7131328cdd3/file_downloaded",
+      "sha256": "b2185c19ad62d47862314eee96803b27e0a2a8144b932c810f52f3d00825452f",
+      "bytes": 4212509
+    },
+    {
+      "id": "33a38d6ca63e5e96239bf1e7",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152811_018.jpg",
+      "file_id": "df373e41-631a-493e-a8e7-a4af28c58002",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/df373e41-631a-493e-a8e7-a4af28c58002/file_downloaded",
+      "sha256": "93209d7fdec0ce1ae2fc31f1c10dfd5b97ed88c2ecae4a17b1c7cc5c11723919",
+      "bytes": 4022559
+    },
+    {
+      "id": "d3873b12a063ee25af3f4f7f",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152811_087.jpg",
+      "file_id": "a084d14b-ed81-4d62-b5b3-4b1b6a62c30d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a084d14b-ed81-4d62-b5b3-4b1b6a62c30d/file_downloaded",
+      "sha256": "daf873a8b5877a55c18ca8e9e537b9516a50fbe0b686e0253c4e74c083812b5f",
+      "bytes": 3455689
+    },
+    {
+      "id": "fe8580ef10f9fc8770fb808a",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152637_032.jpg",
+      "file_id": "acfc0d9e-c9b3-43c1-bd25-80921aee954b",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/acfc0d9e-c9b3-43c1-bd25-80921aee954b/file_downloaded",
+      "sha256": "541f019c19960f71f824021d9d6f7782eacd2bdf40cf33fd83ef4d94a0ed9a45",
+      "bytes": 4173174
+    },
+    {
+      "id": "3fe99bfe54fe1b719e890fcc",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152558_096.jpg",
+      "file_id": "72f0a375-a069-4743-8806-5f731cef8b15",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/72f0a375-a069-4743-8806-5f731cef8b15/file_downloaded",
+      "sha256": "c5e43f4a9bfee98164287e1641a99e85b63ebe436306570aaec64498d1119b98",
+      "bytes": 4245192
+    },
+    {
+      "id": "ddb63419a01f7307c8807e58",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152558_076.jpg",
+      "file_id": "721039e3-a32b-4198-936e-59f87b689ecd",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/721039e3-a32b-4198-936e-59f87b689ecd/file_downloaded",
+      "sha256": "17f953db19d9994a34d5dc6618e45654a3b7b1f7d42f95f106f5791ccc5f195e",
+      "bytes": 4227511
+    },
+    {
+      "id": "5290213b1dacca4f11569aa0",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152932_049.jpg",
+      "file_id": "e2be3504-22ec-48b9-a989-6b4bc008b94b",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e2be3504-22ec-48b9-a989-6b4bc008b94b/file_downloaded",
+      "sha256": "9de97c4d06577419935fe74561e0622049f53db2e1621da5192168d21d1e3809",
+      "bytes": 3481548
+    },
+    {
+      "id": "130ddc783fc104630591dedc",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152551_009.jpg",
+      "file_id": "8372e00e-f6b4-4808-92d7-114465dae1de",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8372e00e-f6b4-4808-92d7-114465dae1de/file_downloaded",
+      "sha256": "72a6ce53ade976cad745af50619a1df447e09c3c0f584adc2932633eec41c22b",
+      "bytes": 3487728
+    },
+    {
+      "id": "e4828c33e1182040e82d9881",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152932_097.jpg",
+      "file_id": "5f872fdb-fc1d-4ccb-b0c5-392aaa441e78",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5f872fdb-fc1d-4ccb-b0c5-392aaa441e78/file_downloaded",
+      "sha256": "50cb6dce62059de64c67c08fe15556862e32b5cb262316537640a8431f5cd872",
+      "bytes": 4085677
+    },
+    {
+      "id": "ca59dd17edcd6437d8b8b4b9",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152637_095.jpg",
+      "file_id": "05474230-30ea-486d-aeb0-98b6287cc812",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/05474230-30ea-486d-aeb0-98b6287cc812/file_downloaded",
+      "sha256": "505aa821fc3606fc24fb6a5eb4139df7e2e5b1e0949a47b172397287ec747ede",
+      "bytes": 4114033
+    },
+    {
+      "id": "83a1b1c1290850abd41d5590",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152621_049.jpg",
+      "file_id": "95c13e92-1667-4b0f-8518-5fa2c07c50c7",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/95c13e92-1667-4b0f-8518-5fa2c07c50c7/file_downloaded",
+      "sha256": "bab674f6fa9b6e88a62f8a2c815996e2d5d13eee432b12432336cad6736218b9",
+      "bytes": 3437963
+    },
+    {
+      "id": "81ebbf0203aee6379b46bdfe",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152041_047.jpg",
+      "file_id": "c675fb9f-0356-4669-ab16-1c72aa6a2184",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c675fb9f-0356-4669-ab16-1c72aa6a2184/file_downloaded",
+      "sha256": "78dacfae744eb4f5ecfcf8693d9d69bbfe7df02969de61dd54769afa88d35dc5",
+      "bytes": 3944181
+    },
+    {
+      "id": "85d35a941b5ec115b3990991",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151854_053.jpg",
+      "file_id": "08281505-234b-4c3b-9d67-75a8a57db6d3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/08281505-234b-4c3b-9d67-75a8a57db6d3/file_downloaded",
+      "sha256": "60b0375a9e3782ccd9c0a98baa3c9cdcb9b4ffec79f13926af1d4375532b942b",
+      "bytes": 4088508
+    },
+    {
+      "id": "bbfabd00fabbdc9e435f6951",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152830_001.jpg",
+      "file_id": "d273ee9e-c765-448c-989a-df62b0c13436",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d273ee9e-c765-448c-989a-df62b0c13436/file_downloaded",
+      "sha256": "a5a34915df7b0df13d176a408505e4fea38be50f2121bb752cf575f5e00604a2",
+      "bytes": 4064815
+    },
+    {
+      "id": "b7c09c28a9f27e2fc3bc162b",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152811_091.jpg",
+      "file_id": "3441722e-8b85-4232-9cdf-873505dd92b1",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/3441722e-8b85-4232-9cdf-873505dd92b1/file_downloaded",
+      "sha256": "dc768478dc718cbb64352fee3c0371a83b89c2e46cc92359d79d00a1e6e994b8",
+      "bytes": 3460937
+    },
+    {
+      "id": "8cbc88a192911451725c3cf2",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152558_036.jpg",
+      "file_id": "d57ed661-ae5f-4c00-b7c8-fc25ff9a3963",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d57ed661-ae5f-4c00-b7c8-fc25ff9a3963/file_downloaded",
+      "sha256": "3940885ee39d1df093f15e9bf875157a990bd948d09a72d43edc461edee20ccb",
+      "bytes": 4121424
+    },
+    {
+      "id": "de1870bcbb54bc7f052cbbe3",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152050_002.jpg",
+      "file_id": "e4580e56-70a4-4333-a3a4-d95a5eba83f2",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e4580e56-70a4-4333-a3a4-d95a5eba83f2/file_downloaded",
+      "sha256": "4d2b46c5a9b8e0085db50eeb5bb72812f62e0dc8be13351959532e7b86cff4ac",
+      "bytes": 4155896
+    },
+    {
+      "id": "9aebce38116b0b9f660b7ede",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152825_094.jpg",
+      "file_id": "e42f6096-7b43-4bfd-ab25-00b73ffa518a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e42f6096-7b43-4bfd-ab25-00b73ffa518a/file_downloaded",
+      "sha256": "22045e7ae3902f46e4b12b303f730e38f18a675793f2ae27c0aeb691775f1820",
+      "bytes": 3322771
+    },
+    {
+      "id": "a48646ddd1c36dd25fa472e0",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151908_084.jpg",
+      "file_id": "f65ceb7a-dfc9-4242-b3c4-3e6527fbbc0d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f65ceb7a-dfc9-4242-b3c4-3e6527fbbc0d/file_downloaded",
+      "sha256": "d004f283ca599cdd2f7e9862a46e4f9aefcf22d73eeffe3b71d84dd084d93ef4",
+      "bytes": 3321413
+    },
+    {
+      "id": "6a1bb2d510aba411db01d3d4",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151854_041.jpg",
+      "file_id": "6193dff5-3177-4957-bc16-2a8c079abcec",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/6193dff5-3177-4957-bc16-2a8c079abcec/file_downloaded",
+      "sha256": "4dad989666d2c20adeb910595c04847404428ae0d8426b005d90ed41a5a6c379",
+      "bytes": 4041982
+    },
+    {
+      "id": "1771de6f02aae05b84139fa5",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152113_005.jpg",
+      "file_id": "8a85ce7e-f493-411f-b774-55602ad2271f",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8a85ce7e-f493-411f-b774-55602ad2271f/file_downloaded",
+      "sha256": "79b4683db58756646c7a035576febd910b39e9f90fe66dbad66007362f9dd5dc",
+      "bytes": 3602883
+    },
+    {
+      "id": "15ee418d11a02c97b8cdfb38",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151854_016.jpg",
+      "file_id": "5b290313-9c91-4628-a13c-c993b497c9b1",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5b290313-9c91-4628-a13c-c993b497c9b1/file_downloaded",
+      "sha256": "d4089dff73d1fa42a0153072c9a4d7c3ba5f8702bf504db265ff188c08253203",
+      "bytes": 4053836
+    },
+    {
+      "id": "2ead94edd52116fab52f0d5c",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152621_074.jpg",
+      "file_id": "56cec93d-df51-47d0-a06e-083559d0ab73",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/56cec93d-df51-47d0-a06e-083559d0ab73/file_downloaded",
+      "sha256": "bcd7e8c098b227878e23a5935afb508edd31ecb34ed66d42eae215bc1e949bbd",
+      "bytes": 3483498
+    },
+    {
+      "id": "e51c726a2d510c3199c64664",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151854_012.jpg",
+      "file_id": "bfde76cd-8fe9-4934-abb6-737060393a5a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/bfde76cd-8fe9-4934-abb6-737060393a5a/file_downloaded",
+      "sha256": "e9a2486af9dc8d5693cface3aa63537fab26b5190692a8820901ed3b86851735",
+      "bytes": 4077289
+    },
+    {
+      "id": "f6cff9ae7ecb415ee94afceb",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152629_032.jpg",
+      "file_id": "427b59f7-b61d-424d-a154-04d81c464c1c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/427b59f7-b61d-424d-a154-04d81c464c1c/file_downloaded",
+      "sha256": "232222fef22e261a0bf2fa461b19e9744c9857323fbd9805593ca6772e167139",
+      "bytes": 4140943
+    },
+    {
+      "id": "62963446263a7c979a5c0771",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152113_084.jpg",
+      "file_id": "af414789-7ff4-492c-a1c3-6cc7f2970fa3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/af414789-7ff4-492c-a1c3-6cc7f2970fa3/file_downloaded",
+      "sha256": "27c98aa4d429667ae0aae0f7afcac5bbcb4374ec5f9af26bf51fdd4174bd730b",
+      "bytes": 4172413
+    },
+    {
+      "id": "025b2e34b5aaef7e092a946b",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152041_023.jpg",
+      "file_id": "c4c1c2fb-7e71-4669-87cf-18792cb219de",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c4c1c2fb-7e71-4669-87cf-18792cb219de/file_downloaded",
+      "sha256": "dd510d994ea39451a1fba41eb84a82ce4345e973a1d49e7a89f823dd796fa68d",
+      "bytes": 3978513
+    },
+    {
+      "id": "5d26b9b95c88b4e7def76742",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152938_025.jpg",
+      "file_id": "8de43e98-6381-48b3-8874-a026e9175d10",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8de43e98-6381-48b3-8874-a026e9175d10/file_downloaded",
+      "sha256": "a47dd117cfa3287da9dea0df50a992c33bee27263f20ef21ab9730baa5b57bcb",
+      "bytes": 4064700
+    },
+    {
+      "id": "982a31ca86673316eea7f00e",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152254_038.jpg",
+      "file_id": "9ce93ec3-1fed-43de-b245-81a2240ffa04",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9ce93ec3-1fed-43de-b245-81a2240ffa04/file_downloaded",
+      "sha256": "badb07987495d8db65218d4e3d42d49d8817969fce836c8ac02a6e02c45ff3ed",
+      "bytes": 3365311
+    },
+    {
+      "id": "9d1af7f733e07e98964e9236",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152621_069.jpg",
+      "file_id": "7ea1981c-a3cf-461f-9f38-d14d035f51d0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7ea1981c-a3cf-461f-9f38-d14d035f51d0/file_downloaded",
+      "sha256": "5259e1848099f7ac72481ae34808748a4bac7b56c62d7068d856a0c2f78df470",
+      "bytes": 3467948
+    },
+    {
+      "id": "5f6e61e3d13c0f26a1e6b1d6",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152113_094.jpg",
+      "file_id": "8231c806-4315-431b-abcf-3e59bd3a9bc5",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8231c806-4315-431b-abcf-3e59bd3a9bc5/file_downloaded",
+      "sha256": "afd8cef3884f49125c79ef3578623b625d355d42e0dbf8f9116f2899e6ebdb95",
+      "bytes": 4219535
+    },
+    {
+      "id": "d1ad3fdbd2dee0901c21badd",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152610_046.jpg",
+      "file_id": "a623002d-8ed4-4f0d-b0c6-c0a2f4a4aedd",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a623002d-8ed4-4f0d-b0c6-c0a2f4a4aedd/file_downloaded",
+      "sha256": "fba0677318009f0a0480eaf0eb80ce77fb52743f2386f9908e75dcfc906133a2",
+      "bytes": 3420583
+    },
+    {
+      "id": "46b812a5388f8989e945d7ae",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152629_042.jpg",
+      "file_id": "215df053-093f-40d6-848f-529484d2c6e9",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/215df053-093f-40d6-848f-529484d2c6e9/file_downloaded",
+      "sha256": "fc0b78c89392059924142deb1bddb51d8d93a505f3d206d3715f73b3aa88d746",
+      "bytes": 4126619
+    },
+    {
+      "id": "136cb7374ec2f115c24a11a3",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152041_096.jpg",
+      "file_id": "c8dbe080-9e92-4bb3-8fb9-59a03af28f9a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c8dbe080-9e92-4bb3-8fb9-59a03af28f9a/file_downloaded",
+      "sha256": "e03bf76e4e2f5d0a3c3f2b1b2b5027ac01e9a9440de601c0d79a3d4d8713aef7",
+      "bytes": 4208172
+    },
+    {
+      "id": "bd86c4e8a91f8bec04c04e24",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152629_087.jpg",
+      "file_id": "3c948f1e-087e-420f-98e7-6ce08be03eb1",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/3c948f1e-087e-420f-98e7-6ce08be03eb1/file_downloaded",
+      "sha256": "0cd65764aec3e77f0f5ce5f7552541df00278ae93e85f38b265192c3790d48ea",
+      "bytes": 4100683
+    },
+    {
+      "id": "0eb37137652b619fb206effe",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152551_091.jpg",
+      "file_id": "269bd623-aedb-45ed-b5c7-120db4143049",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/269bd623-aedb-45ed-b5c7-120db4143049/file_downloaded",
+      "sha256": "9821bbd296489e344a4bee7bf5de91432030d17406a4c812c94cb8e777b4fa96",
+      "bytes": 4264101
+    },
+    {
+      "id": "a5a9ed72669f2084ea5c2691",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152637_016.jpg",
+      "file_id": "84f72606-37db-4dc3-b007-3d2aa2d17619",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/84f72606-37db-4dc3-b007-3d2aa2d17619/file_downloaded",
+      "sha256": "2db8e6c9cb32f137002ee6b2dcbe216d5705b4de302544765142f3ccc7391873",
+      "bytes": 4156758
+    },
+    {
+      "id": "7eab1dc32a4a8171446edbf1",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151908_030.jpg",
+      "file_id": "1d4f1c4c-e762-4bb7-88df-a33b048e1aa9",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/1d4f1c4c-e762-4bb7-88df-a33b048e1aa9/file_downloaded",
+      "sha256": "55bece1be87b52102754713ca63e997f08be8e5c0006d4db609054f79e22b128",
+      "bytes": 3311645
+    },
+    {
+      "id": "9b1066191343735bdee29419",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152106_052.jpg",
+      "file_id": "acd02263-bc56-41ec-b23e-82cac7264f0d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/acd02263-bc56-41ec-b23e-82cac7264f0d/file_downloaded",
+      "sha256": "8e4570b9af41522faf647c856a9e7e14a6ad9ac66d777c34ca3e0619114547c5",
+      "bytes": 4211116
+    },
+    {
+      "id": "9f845561f66d15ef70201321",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152811_007.jpg",
+      "file_id": "8f9e6bec-7bd8-45db-8689-d42d16436bb0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8f9e6bec-7bd8-45db-8689-d42d16436bb0/file_downloaded",
+      "sha256": "059697e2b5881e093932ee8a2124ac5e1073013eff26c9d127af1d46ed6b80e4",
+      "bytes": 4039276
+    },
+    {
+      "id": "3e16a8341cafa5dd0471a318",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151915_011.jpg",
+      "file_id": "c41b37fd-51ef-4d18-8f47-d15856f2b4c8",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c41b37fd-51ef-4d18-8f47-d15856f2b4c8/file_downloaded",
+      "sha256": "5c45b6edbb0ab760f01ed9a5ae4da3fd0a2edfdafe1a95c38b0b322511f80063",
+      "bytes": 3283683
+    },
+    {
+      "id": "0bc18d69f2fb67a95a8bdbe3",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151854_056.jpg",
+      "file_id": "dbd021ed-efd7-406b-aac1-fd31b00e53b1",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/dbd021ed-efd7-406b-aac1-fd31b00e53b1/file_downloaded",
+      "sha256": "7d5e5b66ab4859f508048c54143edc6a908d22540aa966251796fcbbbd8ee6ab",
+      "bytes": 4083585
+    },
+    {
+      "id": "9a68d300adb6e50d1196674f",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152041_028.jpg",
+      "file_id": "37ce0ace-95ea-4aa4-a874-d5700234f282",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/37ce0ace-95ea-4aa4-a874-d5700234f282/file_downloaded",
+      "sha256": "60aed6acdeb48d9c085cda024616077b5569b326d8bbfec42fd912e86bc74688",
+      "bytes": 3975210
+    },
+    {
+      "id": "f47305ee47092671836bd930",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151915_060.jpg",
+      "file_id": "07ac8410-8b70-45bb-b61a-6b15843d8af2",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/07ac8410-8b70-45bb-b61a-6b15843d8af2/file_downloaded",
+      "sha256": "600cce3f31245ed66d5bf333b017ae427c7f25d1861a725148b0e11f9c000425",
+      "bytes": 3262143
+    },
+    {
+      "id": "cf6866106e42a5dc0b21ddae",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151512_049.jpg",
+      "file_id": "ffa25818-844e-4a56-b5b5-793fe35b56ce",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ffa25818-844e-4a56-b5b5-793fe35b56ce/file_downloaded",
+      "sha256": "66f153138693d955c93456c1c14c818e709967a767faa3948c443756d4b63224",
+      "bytes": 3195076
+    },
+    {
+      "id": "df4f446cbc3dcb70a75ebd9e",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152825_033.jpg",
+      "file_id": "21058549-f66c-4fbf-9215-127229167a0f",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/21058549-f66c-4fbf-9215-127229167a0f/file_downloaded",
+      "sha256": "290d3ce50387cb83b4c909d944f4017a30d9031f27a8122d42672c80ebe0b067",
+      "bytes": 3300806
+    },
+    {
+      "id": "b0ffbb749a79a864516f025e",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151915_028.jpg",
+      "file_id": "2a638741-9928-4168-a530-93fc45049486",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2a638741-9928-4168-a530-93fc45049486/file_downloaded",
+      "sha256": "cdb09b66b5b3191760d9d3d0f1c0a5757c3a74d3d2feac3c7c4133e14c520094",
+      "bytes": 3272903
+    },
+    {
+      "id": "d14ba8684a5f7f3425b9cd70",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152558_032.jpg",
+      "file_id": "009286e0-0dbe-4bfe-a3a3-5119b1e46c5e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/009286e0-0dbe-4bfe-a3a3-5119b1e46c5e/file_downloaded",
+      "sha256": "d0cc5c6ead27791958e27ea74b20b3a3c2d0629cba21ca391fd2b42e94c808a3",
+      "bytes": 4119238
+    },
+    {
+      "id": "e67a0ee0e2d85d49c03e2789",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152629_082.jpg",
+      "file_id": "20f41ff5-6a19-4ad3-9be3-74d426219ee6",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/20f41ff5-6a19-4ad3-9be3-74d426219ee6/file_downloaded",
+      "sha256": "0d83bbc8cedb0a2d1329046e7b7b44d6c349c81a75ce837bef257764bd960141",
+      "bytes": 4092092
+    },
+    {
+      "id": "98da9c0367b9860e5829fecf",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152558_057.jpg",
+      "file_id": "46dd932c-b538-4f4f-9183-767955a20e74",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/46dd932c-b538-4f4f-9183-767955a20e74/file_downloaded",
+      "sha256": "4c9d225b016ebefa3deeefcab00732b717c0ea125fac03360d2e15709cca228a",
+      "bytes": 4170444
+    },
+    {
+      "id": "9e00daff69b9f26bd2b279bc",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152551_014.jpg",
+      "file_id": "d318be9a-d167-47ad-9b33-e2af88140d0a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d318be9a-d167-47ad-9b33-e2af88140d0a/file_downloaded",
+      "sha256": "82ef41f64d182e36c7b3f8ea1282f9b63676ccc7e591e5544b8ba96fd8b520b2",
+      "bytes": 3489852
+    },
+    {
+      "id": "e64186673a4f713d948c130b",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152811_022.jpg",
+      "file_id": "c6c1fab9-7e15-4433-aebf-0a1ca4a07695",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c6c1fab9-7e15-4433-aebf-0a1ca4a07695/file_downloaded",
+      "sha256": "cf82b0844aff07ff7ed299d9b20d80f552fff9212f6b475cfe7ff2f3f183e772",
+      "bytes": 4031141
+    },
+    {
+      "id": "19f730b696cd49467c756fb6",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151854_044.jpg",
+      "file_id": "5df92d25-97da-4c63-9178-8d3418eec7ad",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/5df92d25-97da-4c63-9178-8d3418eec7ad/file_downloaded",
+      "sha256": "0b4a27e345d59173110c7d82a9129aad6be16dda325dcd9cd822aafdfe2d3981",
+      "bytes": 4047696
+    },
+    {
+      "id": "5646b664b97dc6db23a01b31",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152825_040.jpg",
+      "file_id": "763bb481-c0a5-432f-b9f8-b51352176f41",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/763bb481-c0a5-432f-b9f8-b51352176f41/file_downloaded",
+      "sha256": "a1261f1479f36eb4cd5f712b4c836bcd563a006bc87fd3f3dcffb33668360b1a",
+      "bytes": 3281855
+    },
+    {
+      "id": "8b27b1653b3d24fe8a46f2af",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_151641_005.jpg",
+      "file_id": "eb603822-4b04-44c5-a530-7cc3e0ec574e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/eb603822-4b04-44c5-a530-7cc3e0ec574e/file_downloaded",
+      "sha256": "b021535416f16cd774517283569da415aae1e48219cc1cd660931525acda5a56",
+      "bytes": 3391721
+    },
+    {
+      "id": "4adcc9c12f7a07e8dcfc26cc",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152637_083.jpg",
+      "file_id": "623387aa-009b-4e6f-9023-b9be1a3a9e3b",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/623387aa-009b-4e6f-9023-b9be1a3a9e3b/file_downloaded",
+      "sha256": "7575f49feb8ab529d2b8e66cf006d9b62932ada2bbe7fce65f73cf5b5c113e69",
+      "bytes": 4106950
+    },
+    {
+      "id": "b4fc9182867b680646f81275",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152925_052.jpg",
+      "file_id": "03bf46d5-864b-4432-9237-de8aa4ff4492",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/03bf46d5-864b-4432-9237-de8aa4ff4492/file_downloaded",
+      "sha256": "ca347cc9479f2d2d7c7a07082a7d3a719674eb673a8a7a6b3af3aa0410ce8fff",
+      "bytes": 4184348
+    },
+    {
+      "id": "2efc906672ed073d5e591f95",
+      "role": "calibration",
+      "label": "good",
+      "filename": "20240808_152932_060.jpg",
+      "file_id": "02d895f3-d007-4a52-a66c-1fe4f1ee57dd",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/02d895f3-d007-4a52-a66c-1fe4f1ee57dd/file_downloaded",
+      "sha256": "12f7c2853166f3fdd6ba49eb7d3c4a64950b6fd918b6ae88372f73135d2f3952",
+      "bytes": 4096921
+    },
+    {
+      "id": "1ce5c7a3fa0ee6d8cdc568d8",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152610_020.jpg",
+      "file_id": "e8779cfa-a4e4-4e88-a3b8-d2875894ac9e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e8779cfa-a4e4-4e88-a3b8-d2875894ac9e/file_downloaded",
+      "sha256": "168cedd0ca682b92e63dee40acf65f0c966bb50006ea9cb81cdd7862c57cae79",
+      "bytes": 3436131
+    },
+    {
+      "id": "378b301ef3abd1aec0930da8",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_145057.jpg",
+      "file_id": "b826b7f4-da98-4a96-baa1-179b9c90b09e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/b826b7f4-da98-4a96-baa1-179b9c90b09e/file_downloaded",
+      "sha256": "ddcd41d568432cd49acbd934c63c0af2049e9610cac8bc652d061286b0593517",
+      "bytes": 4759413
+    },
+    {
+      "id": "01a68c7db340f3e7085babe9",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152629_054.jpg",
+      "file_id": "e078f180-44ad-4313-b616-3350fcc05619",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e078f180-44ad-4313-b616-3350fcc05619/file_downloaded",
+      "sha256": "95fb569a811fb3b05ec0d69946226f7104a4e7f6fd0c1344ce3d466d51b11be5",
+      "bytes": 4088371
+    },
+    {
+      "id": "3b021ec57f49a7663f9f441b",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152811_064.jpg",
+      "file_id": "dba54ce5-39f5-4061-ab37-92dda16ff33e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/dba54ce5-39f5-4061-ab37-92dda16ff33e/file_downloaded",
+      "sha256": "9f107336d5bb855d206487f5be19744c8b876f269d400afdda9321679ba9cb93",
+      "bytes": 3418062
+    },
+    {
+      "id": "cbb0341ab64472b863154524",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152050_009.jpg",
+      "file_id": "f9802bdd-d30d-4cac-ad76-3a98a76ea8a2",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f9802bdd-d30d-4cac-ad76-3a98a76ea8a2/file_downloaded",
+      "sha256": "bca6ab7c4546e18dca58e8a94bbad3ab0b2cb1ed155078781e91b5f4d35e14fd",
+      "bytes": 4172996
+    },
+    {
+      "id": "ff9a4a236069289d94849458",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152041_062.jpg",
+      "file_id": "e5f58f04-20b4-4842-92bc-5ad17c8f3f86",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e5f58f04-20b4-4842-92bc-5ad17c8f3f86/file_downloaded",
+      "sha256": "6f351e8480c2aa756e356cbd2e9198980564f82b057fe89d5caf857dee0ace74",
+      "bytes": 4023153
+    },
+    {
+      "id": "78c64ab18c510aaaded2df8a",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152041_082.jpg",
+      "file_id": "98cd6b2b-b4b3-4797-a7ee-97e2f8cd6471",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/98cd6b2b-b4b3-4797-a7ee-97e2f8cd6471/file_downloaded",
+      "sha256": "b14fa165a40c4c559b2b05ae5e836e911e25f937514fab171e16f0798bb0d08f",
+      "bytes": 4118474
+    },
+    {
+      "id": "71590f0eb0dcb9155eaa1b57",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_151854_022.jpg",
+      "file_id": "9e281bf5-d90a-4ae1-b533-09618fde5110",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/9e281bf5-d90a-4ae1-b533-09618fde5110/file_downloaded",
+      "sha256": "5c38e030e69c04b1777da8a5c91aa56e30ebce371ad4d8b7b2a2a983869cc749",
+      "bytes": 4049879
+    },
+    {
+      "id": "d313f31a436ce45271cf2be6",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152932_028.jpg",
+      "file_id": "a2adb98b-cad1-44a6-8d8a-d794e5752f49",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a2adb98b-cad1-44a6-8d8a-d794e5752f49/file_downloaded",
+      "sha256": "8571116c408e9f35105cfb64f8355575398a0f704c8b0d035b4d40029de73ac9",
+      "bytes": 3506467
+    },
+    {
+      "id": "7a070bc79b4b42370acfec4d",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152925_079.jpg",
+      "file_id": "7cd2415d-48f7-4074-a43b-a876b4725807",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7cd2415d-48f7-4074-a43b-a876b4725807/file_downloaded",
+      "sha256": "cff4a2e2d9d223b44330b85da8983ded4a9c5d44e61513b5c4d8288f752e68ee",
+      "bytes": 4197707
+    },
+    {
+      "id": "84a0010edf2a66a6e234e91c",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152932_019.jpg",
+      "file_id": "79191834-b74d-4e6d-b6c1-2e35bce91059",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/79191834-b74d-4e6d-b6c1-2e35bce91059/file_downloaded",
+      "sha256": "ebadaa87e26762709694c62659b5b30eb993469064c53f5537eeb5252810ba13",
+      "bytes": 3507563
+    },
+    {
+      "id": "db60b958a302a32c247aa035",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_151512_018.jpg",
+      "file_id": "b2467894-831f-4e56-878f-e0d2ded230c2",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/b2467894-831f-4e56-878f-e0d2ded230c2/file_downloaded",
+      "sha256": "864a93def6f564e807a458421d944b4ba12e21f0b61822a56c20198aef7c21ed",
+      "bytes": 3205359
+    },
+    {
+      "id": "7ff1617b097a79e3f6c8564d",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152254_047.jpg",
+      "file_id": "afb7cfa7-e5b9-41b6-bd40-efd6979e16c0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/afb7cfa7-e5b9-41b6-bd40-efd6979e16c0/file_downloaded",
+      "sha256": "f80cb017327a9a0c1752fc32f8fc22f03b4c6c995323c11f3ddf89692be0908a",
+      "bytes": 3360834
+    },
+    {
+      "id": "2ade3aaf5e05204e37d14dca",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152113_064.jpg",
+      "file_id": "d05057d7-0385-4c4b-afe4-09b006ec403e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/d05057d7-0385-4c4b-afe4-09b006ec403e/file_downloaded",
+      "sha256": "4e58427f4f06a82ace28f67dbc676b75219db4636a295f42a8faaa8a9bca60b5",
+      "bytes": 4107045
+    },
+    {
+      "id": "b4d2cd54d459b80c2f7bd8d8",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152551_011.jpg",
+      "file_id": "17c97f86-3d99-47ae-8f09-f3ce1fdcf8aa",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/17c97f86-3d99-47ae-8f09-f3ce1fdcf8aa/file_downloaded",
+      "sha256": "56a9aaaf244dc0184fd6638d82656fcb2eb434f7efc7b7007e519b316ba25790",
+      "bytes": 3487576
+    },
+    {
+      "id": "d3b994c12c20004dfaa08f43",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152254_032.jpg",
+      "file_id": "ee17750b-53f7-4885-add5-dd826cf83d5d",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ee17750b-53f7-4885-add5-dd826cf83d5d/file_downloaded",
+      "sha256": "7863f76e092ecd45daa728093c15115788ed5fe32d8f5d88bcc46b8288dea2de",
+      "bytes": 3345892
+    },
+    {
+      "id": "4f1ff66c7f672c7433eaf676",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_151512_004.jpg",
+      "file_id": "ea28a7bc-54eb-447a-b126-303cc1143a30",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/ea28a7bc-54eb-447a-b126-303cc1143a30/file_downloaded",
+      "sha256": "e68ebdfa4e37b3c3da8ba99d5444f4c1565fdcad0b3ddf0b3e47d76370427df0",
+      "bytes": 3206420
+    },
+    {
+      "id": "d23d718bf1a889652da8bfdc",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152050_031.jpg",
+      "file_id": "7a8e2010-c71e-48b4-87f6-678cd56683c0",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7a8e2010-c71e-48b4-87f6-678cd56683c0/file_downloaded",
+      "sha256": "696e12127341c7641650ae9afe6140893b5a7c5cce3a86070c0274abe598c6f0",
+      "bytes": 4159557
+    },
+    {
+      "id": "6e610ff9989210454692c920",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152551_035.jpg",
+      "file_id": "a41ac92f-1002-4420-80ef-689cc355c298",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a41ac92f-1002-4420-80ef-689cc355c298/file_downloaded",
+      "sha256": "bc7a7de669a8a264959384cbefbf2c9f406e7eea48ca55a31204ef21943b11b6",
+      "bytes": 4111544
+    },
+    {
+      "id": "f7e29518ea1df74837b7dbf6",
+      "role": "test",
+      "label": "good",
+      "filename": "20240808_152637_099.jpg",
+      "file_id": "f16dc2dd-f0c0-47f9-a97c-798519114c57",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f16dc2dd-f0c0-47f9-a97c-798519114c57/file_downloaded",
+      "sha256": "b7112338a63217aec08c7f5d3405f2717fc652a0aee78e211f9d2f8f51278f7c",
+      "bytes": 4116822
+    },
+    {
+      "id": "0a8d924947891c4a4515a1b6",
+      "role": "test",
+      "label": "defect",
+      "filename": "20240716_160423.jpg",
+      "file_id": "359ef238-b99d-4be3-87c9-f9ac991b0590",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/359ef238-b99d-4be3-87c9-f9ac991b0590/file_downloaded",
+      "sha256": "68e4f9e5a3070f3794b7cb8fb825197d7df326b8c59abfb17b615b345723b231",
+      "bytes": 1587458
+    },
+    {
+      "id": "a01d157b461421d5f5899c35",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_160406826.jpg",
+      "file_id": "87f7bcac-ead6-40d2-a983-17aa5156e17a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/87f7bcac-ead6-40d2-a983-17aa5156e17a/file_downloaded",
+      "sha256": "4f6f49ba1adacb492d87ab0e97551966d5d13d9956d39cce29b6362094aebffe",
+      "bytes": 2579825
+    },
+    {
+      "id": "5ea7259f590e5eefad1ae4b1",
+      "role": "test",
+      "label": "defect",
+      "filename": "photo_6_2024-11-20_10-52-11.jpg",
+      "file_id": "7fc2157f-c4e3-4573-938f-700fadd5a8f3",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7fc2157f-c4e3-4573-938f-700fadd5a8f3/file_downloaded",
+      "sha256": "a01facedc1dcfd0dde41d2546ae74c3be8f7c7fa728fee03023d7a38472129c2",
+      "bytes": 161477
+    },
+    {
+      "id": "3f51f211be9e755c2a8d0bd5",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_161841242.jpg",
+      "file_id": "56336a39-f729-413b-978e-b340c980f67e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/56336a39-f729-413b-978e-b340c980f67e/file_downloaded",
+      "sha256": "9ff95becf279c5347513bc83f907eb2749fa3431600a85e2620bcfeffe869cb2",
+      "bytes": 2799704
+    },
+    {
+      "id": "4c1f66fe1e0afb35d8db20b7",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_152802143.jpg",
+      "file_id": "dd735ffa-c137-452b-b91d-5dbad7089c52",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/dd735ffa-c137-452b-b91d-5dbad7089c52/file_downloaded",
+      "sha256": "8ac67f010dd435872b9090f42697f629641625b1791beeaab7e0788388dcfd3d",
+      "bytes": 2368072
+    },
+    {
+      "id": "90ad9c00e2829c24a2d214e6",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_161720424.jpg",
+      "file_id": "7acca7f2-055c-4835-8005-7c130760794e",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7acca7f2-055c-4835-8005-7c130760794e/file_downloaded",
+      "sha256": "8c36edb2b1e614d88cd5808ce7deddbb48ffeefd89cb94c6eb2912a162d9fd64",
+      "bytes": 2966978
+    },
+    {
+      "id": "be8239bb5241ee7aff21dae8",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_161746351.jpg",
+      "file_id": "2ff7c5cb-4f5c-4093-92a0-53ccc0aced46",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/2ff7c5cb-4f5c-4093-92a0-53ccc0aced46/file_downloaded",
+      "sha256": "aa9dfc54997a44f8dd30de8081417a25b6d9a9c742aee444b6155c86a86323a3",
+      "bytes": 2951413
+    },
+    {
+      "id": "d2909a76ac46a96a5cc4015c",
+      "role": "test",
+      "label": "defect",
+      "filename": "photo_45_2024-11-20_10-52-38.jpg",
+      "file_id": "915a968a-5c0c-4680-bf0a-8ea0bb3d760a",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/915a968a-5c0c-4680-bf0a-8ea0bb3d760a/file_downloaded",
+      "sha256": "0226574a5226f0ebe46ef1241f361379a2016960eb02350f377187115da476ee",
+      "bytes": 168171
+    },
+    {
+      "id": "4f954c91c58e0e271c24bb7d",
+      "role": "test",
+      "label": "defect",
+      "filename": "photo_14_2024-11-20_10-54-06.jpg",
+      "file_id": "c469f2fc-5c0a-47db-9679-9a52c8c98d55",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/c469f2fc-5c0a-47db-9679-9a52c8c98d55/file_downloaded",
+      "sha256": "1d25fd3d4da746f445616a293d1e33afbdf26a31a11f8bf85324ab8c9b2f72b9",
+      "bytes": 112596
+    },
+    {
+      "id": "8a678606f81d2afda124fd1c",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240716_145148451.jpg",
+      "file_id": "0e4e221a-3b11-457e-8b33-1bd80a2f9a5f",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/0e4e221a-3b11-457e-8b33-1bd80a2f9a5f/file_downloaded",
+      "sha256": "5d649cd9a2b6a0174230133296c64559abd0e4f492bd495cb61dd344d73da7cf",
+      "bytes": 1722882
+    },
+    {
+      "id": "4232eb886ae217a21e6afbb9",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_155935541.jpg",
+      "file_id": "e7794af7-153e-43df-9f42-d222441b5b69",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/e7794af7-153e-43df-9f42-d222441b5b69/file_downloaded",
+      "sha256": "af0c2e09aa3123c22b912da399c888ecd5536955da1df660cd0917f975f7825d",
+      "bytes": 2696938
+    },
+    {
+      "id": "70e12691e7111ecbb35895c2",
+      "role": "test",
+      "label": "defect",
+      "filename": "20241105_153355.jpg",
+      "file_id": "71fa2f02-b263-4151-b087-ef0f54f4db5c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/71fa2f02-b263-4151-b087-ef0f54f4db5c/file_downloaded",
+      "sha256": "7a0edc1aefa011d17e80388014c6b9e93e7a10c1b242d1ffa6c5ed7fef0e2e88",
+      "bytes": 12225627
+    },
+    {
+      "id": "e5e0203f9480a080a903b1cd",
+      "role": "test",
+      "label": "defect",
+      "filename": "photo_16_2024-11-20_10-53-18.jpg",
+      "file_id": "4f754f56-858f-4350-8cc1-2ae797eafe94",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/4f754f56-858f-4350-8cc1-2ae797eafe94/file_downloaded",
+      "sha256": "34f5da2760171ee40713b103980164ab09dde2a006cb418bb665276aa54c295f",
+      "bytes": 105188
+    },
+    {
+      "id": "1fafdf951e321d2122329512",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_153529855.jpg",
+      "file_id": "7ff008ce-afd2-4694-ba2a-a1f6110b8c6c",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/7ff008ce-afd2-4694-ba2a-a1f6110b8c6c/file_downloaded",
+      "sha256": "68b2a71f05bdd138b9f76e02af6fee2181d1d80bc2de92935090c59e82521df3",
+      "bytes": 2501684
+    },
+    {
+      "id": "0af356fd2f2314454858fe38",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_155341539.jpg",
+      "file_id": "daa31fc9-2fc9-4e7c-8503-54208f1c6ee7",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/daa31fc9-2fc9-4e7c-8503-54208f1c6ee7/file_downloaded",
+      "sha256": "43c3d3cb4d66d6dd3ac3887b0ad2acfd554fb4ef17fa8b90d93ac9bbf4b12f5f",
+      "bytes": 1630237
+    },
+    {
+      "id": "b60317d0661adb6a7e2d5ff0",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240716_143755112.jpg",
+      "file_id": "1322fb14-c43b-43dd-aed2-f72160d347ac",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/1322fb14-c43b-43dd-aed2-f72160d347ac/file_downloaded",
+      "sha256": "9df76c9314374b5e1645d5efa3965f4b9c43cf82fa4590a7c29ccb6b4ec7e576",
+      "bytes": 1788637
+    },
+    {
+      "id": "79d24bbc58fe0f210ccf0e1b",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_150725560.jpg",
+      "file_id": "a25d992c-13f3-4e1a-bb2a-72a559473aa9",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/a25d992c-13f3-4e1a-bb2a-72a559473aa9/file_downloaded",
+      "sha256": "0237de762144217c5a8b5d4412b651a1a7bb363cc3a7af4ce80fead3c7edbe57",
+      "bytes": 2437892
+    },
+    {
+      "id": "20214393b5050fba36103205",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_161745837.jpg",
+      "file_id": "8021a40d-6219-4a95-a851-cdee941ed707",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/8021a40d-6219-4a95-a851-cdee941ed707/file_downloaded",
+      "sha256": "0a3b538a15520347d18d3c213e4cbe0a9e490e97a944b2505c09c263c1a2c656",
+      "bytes": 2940708
+    },
+    {
+      "id": "18de6df36122bccf04e5b308",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_161501028.jpg",
+      "file_id": "f473c140-01e7-4179-bd83-d8ed832faf48",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/f473c140-01e7-4179-bd83-d8ed832faf48/file_downloaded",
+      "sha256": "96f69db829d89c02921b6f8ed0eaba1913c31613463e882e5806de3cd5426a10",
+      "bytes": 2595998
+    },
+    {
+      "id": "3c9bb3a824fbe778805aff7d",
+      "role": "test",
+      "label": "defect",
+      "filename": "IMG_20240722_160200952.jpg",
+      "file_id": "4a7975fd-aa49-4cab-a580-c5c930a66870",
+      "url": "https://data.mendeley.com/public-files/datasets/47x6jdbr5j/files/4a7975fd-aa49-4cab-a580-c5c930a66870/file_downloaded",
+      "sha256": "792aea341eb6e40c03c9f56661b7034bcadf9a2197067d7fad43b162d5a15286",
+      "bytes": 2308841
+    }
+  ],
+  "cnn_and_projection_fixed": true,
+  "center_rule": "1024 deterministic farthest-first centers from all128 normal memory projected positions; initial index0",
+  "threshold_rule": "maximum over64 separate good calibration image scores plus1; freeze before test scoring",
+  "preprocessing": "Offline fixed bilinear whole-photo720x720 PNG derivative; not bit-identical to WPF HDMI rasterization",
+  "reason_for_expansion": "First file-disjoint pilot had8/20 false alarms; increase only normal reference/calibration coverage",
+  "earlier_exposed_test80_excluded_from_fit_and_new_test": true,
+  "old_memory_and_calibration_roles_preserved": true,
+  "runtime_detection": "FPGA only; offline preparation and normal calibration separate",
+  "physical_piece_disjointness_established": false,
+  "limitations": [
+    "Roof ceramic transfer only; not target floor or painted material acceptance",
+    "File-disjoint does not establish independent physical specimens",
+    "No threshold/center selection using defect test scores"
+  ]
+}

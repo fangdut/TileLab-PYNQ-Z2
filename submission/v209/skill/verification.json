@@ -1,0 +1,140 @@
+{
+  "schema": "generic_skill_reuse_v1",
+  "python_version": "3.12.14",
+  "platform": "Windows",
+  "independent_temporary_directory": true,
+  "contexts": [
+    "integer_fir",
+    "communication_frames",
+    "artifact_deployment"
+  ],
+  "checks": [
+    {
+      "name": "dsp_exact",
+      "scenario": "integer_fir_fixture_no_hardware",
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "result": {
+        "equal": true,
+        "elements": 8,
+        "mismatches": 0,
+        "first_mismatch": null,
+        "shape": [
+          8
+        ],
+        "dtype": "int32",
+        "expected_sha256": "5670ddb6c8fa82684a19b8bb5133f53950a7a75c4807d7b08ead0c1e373d584a",
+        "actual_sha256": "5670ddb6c8fa82684a19b8bb5133f53950a7a75c4807d7b08ead0c1e373d584a"
+      }
+    },
+    {
+      "name": "dsp_one_error",
+      "scenario": "integer_fir_fixture_no_hardware",
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true,
+      "result": {
+        "equal": false,
+        "elements": 8,
+        "mismatches": 1,
+        "first_mismatch": [
+          2
+        ],
+        "shape": [
+          8
+        ],
+        "dtype": "int32",
+        "expected_sha256": "5670ddb6c8fa82684a19b8bb5133f53950a7a75c4807d7b08ead0c1e373d584a",
+        "actual_sha256": "f386278cd4c8b50f3e648894f147a16a1092b85193893cbd524478ad3b75ca98"
+      }
+    },
+    {
+      "name": "dtype_mismatch",
+      "scenario": "integer_fir_fixture_no_hardware",
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "shape_mismatch",
+      "scenario": "integer_fir_fixture_no_hardware",
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "packet_manifest_valid",
+      "scenario": "communication_frame_fixture_no_hardware",
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "result": {
+        "verified_files": 1,
+        "scope": "INTEGRITY_AGAINST_LOCAL_MANIFEST_NOT_AUTHENTICITY"
+      }
+    },
+    {
+      "name": "packet_tamper_rejected",
+      "scenario": "communication_frame_fixture_no_hardware",
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "escape_path_rejected",
+      "scenario": "communication_frame_fixture_no_hardware",
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "synthetic_pair_valid",
+      "scenario": "synthetic_deployment_fixture_not_real_bit",
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "result": {
+        "integrity_verified": true,
+        "files": 2,
+        "actual_hardware_verified": false
+      }
+    },
+    {
+      "name": "synthetic_pair_mismatch",
+      "scenario": "synthetic_deployment_fixture_not_real_bit",
+      "expected_success": false,
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "name": "restored_bundle_manifest",
+      "scenario": "actual_frozen_bundle_files_no_board",
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "result": {
+        "verified_files": 660,
+        "scope": "INTEGRITY_AGAINST_LOCAL_MANIFEST_NOT_AUTHENTICITY"
+      }
+    },
+    {
+      "name": "actual_xsa_bit_pair",
+      "scenario": "actual_frozen_artifact_pair_no_board",
+      "expected_success": true,
+      "exit_code": 0,
+      "passed": true,
+      "result": {
+        "integrity_verified": true,
+        "files": 2,
+        "actual_hardware_verified": false
+      }
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "cross_machine_tested": false,
+  "cross_board_deployment_tested": false,
+  "pynq_overlay_dma_tested": false,
+  "board_operation": false
+}

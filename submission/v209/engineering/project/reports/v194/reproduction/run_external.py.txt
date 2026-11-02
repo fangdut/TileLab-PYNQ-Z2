@@ -1,0 +1,67 @@
+from pathlib import Path
+import json,subprocess,sys,time
+W=Path('D:/Vivado/TileLab_RealPhotos_20261020');P=Path('D:/Vivado/TileLab_SingleTile_V164_20261019/project/pynq_z2_tile_v1_53')
+S=P/'scripts/texture_v170';T=P/'tools/fpga_texture_v170';O=W/'v194_hdmi01';O.mkdir(exist_ok=False)
+hardware=W/'v179_hw01';program=W/'v193_packaged_deployment01/program';validation=W/'v194_direct11701';profile=W/'v170_fullint224'
+state=dict(scope='FROZEN_REFERENCE_EXTERNAL_ROOF_TILE_DOMAIN_STRESS_NOT_FLOOR_TILE_ACCEPTANCE',
+ status='PREFLIGHT',stages=[],flash_written=False,model_adaptation=False,threshold_adaptation=False,
+ benchmark_is_blind=False,source_photo_set='v194_external01/plan.json')
+def save():(O/'progress.json').write_text(json.dumps(state,indent=2))
+def run(name,args,timeout=300):
+ state['status']=name;save();print(name,flush=True);start=time.monotonic()
+ with (O/(name+'.log')).open('w') as log:r=subprocess.run([str(x) for x in args],stdout=log,stderr=subprocess.STDOUT,timeout=timeout)
+ state['stages'].append(dict(name=name,returncode=r.returncode,seconds=time.monotonic()-start));save()
+ if r.returncode:raise RuntimeError(name+' failed')
+def video(name,color=None,leave=False):
+ args=[sys.executable,'-X','utf8',S/'video_control.py','--hardware',hardware,'--program',program,
+       '--validation',validation,'--out',O/name,'--seconds','8' if leave else '5']
+ if color:args+=['--color-profile',color]
+ if leave:args+=['--leave-running']
+ run(name,args,180)
+def snap(name,live):run(name,[sys.executable,'-X','utf8',S/'video_snapshot.py','--hardware',hardware,'--video',O/live,'--out',O/name],240)
+def select(ident):
+ (source/'command.txt').write_text('photo:'+ident+'\n')
+ for _ in range(200):
+  try:
+   s=json.loads((source/'status.json').read_text())
+   if s['running'] and s['paused'] and s['image_id']==ident and s['physical_window_bounds_verified']:
+    time.sleep(.7);return
+  except (OSError,ValueError):pass
+  time.sleep(.1)
+ raise RuntimeError('Source did not acknowledge selected original')
+player=None;source=O/'source'
+try:
+ direct=json.loads((validation/'summary.json').read_text())
+ assert direct['correct']==117 and direct['all_integer_outputs_exact']
+ source.mkdir();(source/'command.txt').write_text('calibrate\n')
+ out=(source/'stdout.log').open('w');err=(source/'stderr.log').open('w')
+ player=subprocess.Popen([str(W/'RealPhotoSource_v171_r7.exe'),str(W/'v194_external01/catalog.json'),str(source/'status.json'),'4',str(source/'command.txt')],stdout=out,stderr=err)
+ (source/'pid.txt').write_text(str(player.pid))
+ for _ in range(600):
+  if player.poll() is not None:raise RuntimeError('Source exited during preload')
+  try:
+   status=json.loads((source/'status.json').read_text())
+   if status['running'] and status['calibration_pattern'] and status['physical_window_bounds_verified']:break
+  except (OSError,ValueError):pass
+  time.sleep(.1)
+ else:raise RuntimeError('Source not ready')
+ video('gray_live');snap('gray_snapshot','gray_live')
+ color=O/'color_profile.json'
+ run('calibrate',[sys.executable,'-X','utf8',T/'calibrate_hdmi_color.py','--snapshot',O/'gray_snapshot','--model',profile/'model.bin','--out',color])
+ rows=json.loads((W/'v194_external01/catalog.json').read_text())
+ for group in ['good','defect']:
+  row=next(r for r in rows if r['label']==group);select(row['id']);video(group+'_live',color);snap(group+'_snapshot',group+'_live')
+  run(group+'_reference_audit',[sys.executable,'-X','utf8',T/'audit_captured_reference.py','--profile',profile,
+      '--image',O/(group+'_snapshot/actual_hdmi_input.png'),'--result',O/(group+'_snapshot/raw_result.bin'),
+      '--out',O/(group+'_audit')])
+ video('series_live',color,True)
+ run('external40',[sys.executable,'-X','utf8',S/'video_photo_series.py','--hardware',hardware,
+    '--video',O/'series_live','--catalog',W/'v194_external01/catalog.json','--source-status',source/'status.json',
+    '--source-command',source/'command.txt','--out',O/'external40','--limit','40'],900)
+ result=json.loads((O/'external40/summary.json').read_text())
+ state.update(status='EXTERNAL_STRESS_COMPLETED_ACCURACY_REVIEW_REQUIRED',results=result)
+ save();print(json.dumps(state),flush=True)
+except Exception as error:
+ state.update(status='FAILED_NO_ACCURACY_ACCEPTANCE',error=repr(error));save();raise
+finally:
+ if player is not None and player.poll() is None:(source/'command.txt').write_text('close\n')

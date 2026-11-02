@@ -1,0 +1,16 @@
+{
+  "scope": "FINAL_R1_EXECUTABLE_PAIRING_WITH_TESTED_VOLATILE_DEPLOYMENT",
+  "identical_files": {
+    "verified_hdmi/hardware/system.bit": "38936ea6894b7393db56f9c0cf11bf6abbe1351af80dc6149fafd402d17c3e07",
+    "verified_hdmi/hardware/system.xsa": "93f75a35058eb82fa8a4d3a6db7f115e40e195a207c1df637ee5ecf985fbe184",
+    "verified_hdmi/software/texture_transport/build/texture_transport.elf": "8f9cf94ed91eaf3380ec6591bd1f286e8c1379d8afa493abe86429c09a104370",
+    "verified_hdmi/model/model.bin": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "project/host/stop_inspect_station/controller.py": "5dd9dbdd0e8667e60ff2f20031088c1e12af074ae3295141a0fa863d84a18166",
+    "project/host/stop_inspect_station/server.py": "fd7d02746810c196b0256a80aae1f98cb1e0d56d4f6d8acab72fcf2db4b62c34",
+    "project/host/stop_inspect_station/deploy_workstation.py": "25b1fe26369b1cb2cfffb7d17a5f8fa83e544b2da8189dff372332857b06c6a3"
+  },
+  "html_change": "Session refresh clears stale selection and operator confirmations",
+  "fresh_volatile_deployment": "packaged_program/identity.json",
+  "physical_workflow": "packaged_workflow/summary.json",
+  "cold_power_cycle_tested": false
+}

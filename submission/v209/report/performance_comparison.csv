@@ -1,0 +1,7 @@
+metric,before,after,unit,scope,source
+transfer_detection_mean,540.8367250020092,498.65300000419666,ms,matched_32_original840_images_historical_v199,engineering/project/reports/v199/summary.json
+pl_engine_mean,124.72693576923077,124.71472557692308,ms,same_32_images_hardware_core_unchanged,engineering/project/reports/v199/summary.json
+lut,42482,42482,count,same_frozen_bit,engineering/verified_hdmi/hardware/utilization.rpt
+register,60203,60203,count,same_frozen_bit,engineering/verified_hdmi/hardware/utilization.rpt
+bram_36kb,127.5,127.5,blocks,same_frozen_bit,engineering/verified_hdmi/hardware/utilization.rpt
+dsp,218,218,count,same_frozen_bit,engineering/verified_hdmi/hardware/utilization.rpt

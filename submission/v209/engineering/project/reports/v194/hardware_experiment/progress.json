@@ -1,0 +1,93 @@
+{
+  "scope": "FROZEN_REFERENCE_EXTERNAL_ROOF_TILE_DOMAIN_STRESS_NOT_FLOOR_TILE_ACCEPTANCE",
+  "status": "EXTERNAL_STRESS_COMPLETED_ACCURACY_REVIEW_REQUIRED",
+  "stages": [
+    {
+      "name": "gray_live",
+      "returncode": 0,
+      "seconds": 14.344000000011874
+    },
+    {
+      "name": "gray_snapshot",
+      "returncode": 0,
+      "seconds": 70.56299999999464
+    },
+    {
+      "name": "calibrate",
+      "returncode": 0,
+      "seconds": 0.23399999999674037
+    },
+    {
+      "name": "good_live",
+      "returncode": 0,
+      "seconds": 11.21899999998277
+    },
+    {
+      "name": "good_snapshot",
+      "returncode": 0,
+      "seconds": 70.68700000000536
+    },
+    {
+      "name": "good_reference_audit",
+      "returncode": 0,
+      "seconds": 5.437999999994645
+    },
+    {
+      "name": "defect_live",
+      "returncode": 0,
+      "seconds": 11.26600000000326
+    },
+    {
+      "name": "defect_snapshot",
+      "returncode": 0,
+      "seconds": 70.96799999999348
+    },
+    {
+      "name": "defect_reference_audit",
+      "returncode": 0,
+      "seconds": 4.469000000011874
+    },
+    {
+      "name": "series_live",
+      "returncode": 0,
+      "seconds": 14.905999999988126
+    },
+    {
+      "name": "external40",
+      "returncode": 0,
+      "seconds": 88.79699999999139
+    }
+  ],
+  "flash_written": false,
+  "model_adaptation": false,
+  "threshold_adaptation": false,
+  "benchmark_is_blind": false,
+  "source_photo_set": "v194_external01/plan.json",
+  "results": {
+    "scope": "PHYSICAL_CONTROLLED_ORIGINAL_PHOTO_HDMI_SERIES",
+    "cases": 40,
+    "correct": 20,
+    "normal_images": 20,
+    "normal_false_alarms": 20,
+    "anomalies": 20,
+    "anomalies_detected": 20,
+    "cracks": 0,
+    "cracks_detected": 0,
+    "both_arm_cores_halted": true,
+    "arm_halt_checks": 42,
+    "cpu_per_frame_start_writes": 0,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "benchmark_is_blind": false,
+    "threshold_adaptation": false,
+    "continuous_observation_seconds": 81.495,
+    "autonomous_frames_in_interval": 666,
+    "autonomous_hdmi_fps_over_photo_series": 8.172280508006626,
+    "distinct_observed_photo_crcs": 40,
+    "plan_sha256": "0dd1b4ea914abe540dc7b745a3f752873808cd5c87a81e013df18ac9d62a2e6f",
+    "results_sha256": "b7247ba34dc95eeaeb57548752229e722a2f10d33e24bfb19d0db04202f3865e",
+    "source_status_read_retries": 3,
+    "limitations": "Owned HDMI input player SHA/status plus settled stable PL completions; selected photos require separate DDR snapshot inspection/audit",
+    "left_running": false
+  }
+}

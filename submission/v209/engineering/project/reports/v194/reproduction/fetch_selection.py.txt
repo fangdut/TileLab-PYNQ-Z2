@@ -1,0 +1,46 @@
+"""Freeze a balanced external pilot before any detector outputs are observed."""
+from pathlib import Path
+import hashlib,json,urllib.request,datetime
+from concurrent.futures import ThreadPoolExecutor
+from PIL import Image
+ROOT=Path(__file__).resolve().parent;OUT=ROOT.parent/'v194_external01';OUT.mkdir(exist_ok=False)
+profile=ROOT.parent/'v193_delivery02/tilelab_stop_inspect_v193/verified_hdmi/model'
+graph=json.loads((profile/'graph.json').read_text())
+selected=[]
+for label in ['normal','defect']:
+ rows=json.loads((ROOT/(label+'_original_test_files.json')).read_text())
+ # Metadata hashes determine order; neither pixels nor detector results select
+ # a successful-looking subset. No augmented amostra_processada files allowed.
+ rows.sort(key=lambda r:hashlib.sha256(('tilelab-external-pilot-v194|'+r['id']).encode()).hexdigest())
+ for r in rows[:20]:
+  content=r['content_details']
+  selected.append(dict(id=hashlib.sha256(('47x6jdbr5j|'+r['id']).encode()).hexdigest()[:24],
+    file_id=r['id'],filename=r['filename'],label='good' if label=='normal' else 'defect',
+    url=content['download_url'],sha256=content['sha256_hash'],bytes=content['size']))
+plan=dict(scope='NEW_EXTERNAL_CERAMIC_TEST_PILOT_BEFORE_DETECTOR_OUTPUTS',
+ frozen_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+ dataset='ceramics-defects-detection',doi='10.17632/47x6jdbr5j.1',
+ primary_source='https://data.mendeley.com/datasets/47x6jdbr5j/1',license='CC BY 4.0',
+ authors=['Lucileide Aquino do Nascimento','Otilio Paulo','Gilvan Moreira da Paz','Micherlane Rodrigues Machado da Silva'],
+ source_split='database/amostra/Teste, ORIGINALS ONLY',
+ selected_before_outputs=selected,model_sha256=graph['sha256'],threshold=graph['threshold'],
+ no_threshold_or_model_adaptation=True,photos_previously_used_in_tilelab=False,
+ source_images_unedited=True,acquisition='Desktop HDMI display of whole source photo into720x720 ROI; scaling is display transport, PL does detection',
+ limitations=['Limited distinct physical tiles according to authors','External source pilot, not own-camera/factory or physical-piece-disjoint blind validation','Whole-photo display downsampling can suppress tiny defects'])
+(OUT/'plan.json').write_text(json.dumps(plan,indent=2),encoding='utf8')
+(OUT/'originals').mkdir()
+def fetch(r):
+ file=OUT/'originals'/r['filename']
+ req=urllib.request.Request(r['url'],headers={'User-Agent':'Mozilla/5.0'})
+ with urllib.request.urlopen(req,timeout=45) as stream:raw=stream.read()
+ if len(raw)!=r['bytes'] or hashlib.sha256(raw).hexdigest()!=r['sha256']:raise ValueError('Source integrity failed')
+ file.write_bytes(raw)
+ with Image.open(file) as im:size=list(im.size)
+ return dict(id=r['id'],file=str(file),sha256=r['sha256'],label=r['label'],
+   source_url=r['url'],original_unedited=True,benchmark_is_blind=False,
+   source_dimensions=size,source_file_id=r['file_id'],source_dataset=plan['doi'])
+rows=list(ThreadPoolExecutor(max_workers=5).map(fetch,selected))
+assert len({r['sha256'] for r in rows})==40
+(OUT/'catalog.json').write_text(json.dumps(rows,indent=2))
+print(json.dumps(dict(downloaded=len(rows),source_dimensions=sorted({tuple(r['source_dimensions']) for r in rows}),
+ total_bytes=sum(r['bytes'] for r in selected),plan_sha256=hashlib.sha256((OUT/'plan.json').read_bytes()).hexdigest())))

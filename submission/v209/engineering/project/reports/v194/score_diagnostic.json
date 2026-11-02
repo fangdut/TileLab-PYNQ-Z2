@@ -1,0 +1,15 @@
+{
+  "scope": "POSTHOC_DIAGNOSTIC_NOT_THRESHOLD_SELECTION",
+  "normal_score_range": [
+    24458,
+    27454
+  ],
+  "defect_score_range": [
+    24214,
+    26770
+  ],
+  "max_normal_score": 27454,
+  "min_defect_score": 24214,
+  "perfect_single_threshold_separation_possible": false,
+  "deployed_threshold_unchanged": 10908
+}

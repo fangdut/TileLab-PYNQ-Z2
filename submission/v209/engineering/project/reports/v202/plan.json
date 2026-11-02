@@ -1,0 +1,22 @@
+{
+  "scope": "USER_REPLACED_USB_CABLE100MHZ_MATCHED_BASELINE_RETEST_NOT_ELECTRICAL_MEASUREMENT",
+  "created_utc": "2026-10-28T04:33:36.613548+00:00",
+  "user_reported_usb_cable_replaced": true,
+  "board_boot_identity": 2243361847,
+  "runtime": "D:\\Vivado\\TileLab_SingleTile_V164_20261019\\engineering_delivery_20261027\\TileLab_Engineering_V200\\runtime\\run_20261027_223150_3d67dd3b",
+  "unchanged_bit_sha256": "38936ea6894b7393db56f9c0cf11bf6abbe1351af80dc6149fafd402d17c3e07",
+  "unchanged_elf_sha256": "55a65673077d50c05663efdf65fbbc01acca44bfd081b36251fee43d19241b6c",
+  "unchanged_model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+  "pl_clock_mhz": 100,
+  "stages": [
+    "clear_old_reset_reason_and_verify_clock",
+    "117_original_photos_no_extra_pause",
+    "200_requested_fixed_frame_hardware_autorestarts",
+    "22_reference_workflows_and38_rejections",
+    "100_full_cycles_with250ms_automated_review_hold",
+    "verify_no_reset_flags_or_boot_change"
+  ],
+  "physical_actuation": false,
+  "real_human_review": false,
+  "independent_accuracy": false
+}

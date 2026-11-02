@@ -1,0 +1,8 @@
+{
+  "vendor_source_sha256": "0cde5ad72758bbe005a3f1ccdada6e9b53de91d284f4580b2500c626b348f67f",
+  "guarded_source_sha256": "1d73657f323252ace2a7d139d7547be3578af45bdc437746d155e18e97900acf",
+  "phy_vendor_source_sha256": "75d67be50c00d046ffa5e713ae3f1306de3595248569d0449ba3de757ce55198",
+  "phy_guarded_source_sha256": "cee5a5e8524511dabb14efc79ff51e3b023befd166bd7ce1950b52c6d67dbb1f",
+  "change": "Read already negotiated Realtek speed without blocking renegotiation; export unchanged vendor clock helper; reject invalid speed before MAC assertion and retry later",
+  "vendor_license_preserved": true
+}

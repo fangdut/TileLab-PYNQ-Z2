@@ -1,0 +1,278 @@
+{
+  "session": "4c54273048df4c0d9a8b1aa69340d56c",
+  "revision": 9,
+  "phase": "GOOD_HOLD",
+  "cycle": {
+    "id": "aa79833bfddf489e96d5b19311640d97",
+    "sample_id": "6621d769324f6e05d5838381",
+    "name": "实拍样例 01",
+    "source_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+    "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-48.png",
+    "validation_scope": "development_examples",
+    "qualified_model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+    "loaded_utc": "2026-10-25T15:16:12.037902+00:00",
+    "result": {
+      "scope": "BOARD_FULL_PL_INFERENCE",
+      "input": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v194_station02\\runtime\\cycles\\aa79833bfddf489e96d5b19311640d97\\source.png",
+      "input_file_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+      "rgb_crc32": 2316138246,
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "model_crc32": 2781797194,
+      "pl_identity": 385875969,
+      "boot_identity": 3579349851,
+      "width": 840,
+      "height": 840,
+      "pl_image_alarm": 0,
+      "pl_peak": 9732.0,
+      "pl_threshold": 10908.0,
+      "pl_mask_pixels": 0,
+      "pl_completed_steps": 47,
+      "pl_frame_sequence": 1121,
+      "ps_global_timer_ticks": 40526800,
+      "ps_timer_hz": 325000000,
+      "pl_engine_seconds": 0.12469784615384616,
+      "wall_seconds": 0.5575471000047401,
+      "result_crc32": 959901203,
+      "result_sha256": "4f76461c77dc7d5620391020b1d87d00bc1230d92f023df490f37501a5743459",
+      "reply_header": [
+        378557016,
+        0,
+        6,
+        2825600,
+        959901203,
+        385875969,
+        2781797194,
+        751760,
+        3579349851,
+        40526800,
+        0,
+        325000000,
+        2316138246,
+        840,
+        840,
+        1529736348
+      ],
+      "cpu_detection": false,
+      "gpu_detection": false,
+      "id": "39e24586fb0d4193acc3fd9849022cb9",
+      "completed_utc": "2026-10-25T15:16:13.100998+00:00"
+    },
+    "disposition": null,
+    "result_qualified": true
+  },
+  "error": null,
+  "connection": {
+    "verified_utc": "2026-10-25T15:16:11.953851+00:00",
+    "boot_identity": 3579349851,
+    "model_crc32": 2781797194,
+    "pl_identity": 385875969
+  },
+  "counts": {
+    "inspected": 2,
+    "good": 1,
+    "defect": 0,
+    "released": 0,
+    "segregated": 0,
+    "faults": 0,
+    "unvalidated": 1,
+    "unvalidated_removed": 1
+  },
+  "samples": [
+    {
+      "id": "6621d769324f6e05d5838381",
+      "name": "实拍样例 01",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-48.png",
+      "sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    },
+    {
+      "id": "6621d769324f6e05d5838380",
+      "name": "实拍样例 02",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-48.png",
+      "sha256": "770946f93f0ccd8a7595954b0861876c697729cbe05e9fafc57d0f9e8cba5ec8"
+    },
+    {
+      "id": "6621d769324f6e05d583835f",
+      "name": "实拍样例 03",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/000-46.png",
+      "sha256": "d10be1f6ec065f83d54c03b4093d7d87dfcc77617d8eb0df9f5a053aece4becf"
+    },
+    {
+      "id": "6621d769324f6e05d583835e",
+      "name": "实拍样例 04",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/001-46.png",
+      "sha256": "3800ee4d98148c859eb56bd5a9350ce6be768dc24fcd2203e3e36e3414defb5a"
+    },
+    {
+      "id": "6621d769324f6e05d58383b1",
+      "name": "实拍样例 05",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-50.png",
+      "sha256": "789bf3426655aed432ea611d9c62354d6a43d13efb0acaacd27a49de851e65f6"
+    },
+    {
+      "id": "6621d769324f6e05d58383b0",
+      "name": "实拍样例 06",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-50.png",
+      "sha256": "cb9bffe1fa32c62cec0afcf88fa17add4483b16fa2ce1b17bbd62256c576f0a3"
+    },
+    {
+      "id": "6621d769324f6e05d583839f",
+      "name": "实拍样例 07",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-49.png",
+      "sha256": "687ee96b4b356dfa87e49b78a807dcdf026f80705801d6e670578648c5d3bba2"
+    },
+    {
+      "id": "6621d769324f6e05d583839e",
+      "name": "实拍样例 08",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-49.png",
+      "sha256": "e6d931df7005c0e958ec4da16c606546d77e25e41e37f2b83f8135b74770ff26"
+    },
+    {
+      "id": "6621d769324f6e05d58383c3",
+      "name": "实拍样例 09",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-51.png",
+      "sha256": "cce758df17a18b3d60e54b367bec27639dd48d83cfee1f7546d80058188ba130"
+    },
+    {
+      "id": "6621d769324f6e05d58383c2",
+      "name": "实拍样例 10",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-51.png",
+      "sha256": "8d47f96cd4437c4848454bd60b46def1a7c470b5ee9e842891f02a346de744d2"
+    },
+    {
+      "id": "6621d769324f6e05d583836d",
+      "name": "实拍样例 11",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/001-47.png",
+      "sha256": "5508d71470f59e96183a8035fb90d63f050f3324e4884ef03f856528a4107d13"
+    },
+    {
+      "id": "6621d769324f6e05d583836b",
+      "name": "实拍样例 12",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/002-47.png",
+      "sha256": "92293a662b469d481fc6ee6c57e933b167affe61d82245f24ce0ff17c706bc86"
+    },
+    {
+      "id": "upload_179ff21a9d65e9e6371c6383",
+      "name": "本地导入 · 6621d769324f6e05d5838381.png",
+      "source_url": "",
+      "sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    }
+  ],
+  "events": [
+    {
+      "utc": "2026-10-25T15:15:55.557927+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 0,
+      "cycle_id": null,
+      "event": "session_started",
+      "phase": "READY",
+      "previous_results_reusable": false
+    },
+    {
+      "utc": "2026-10-25T15:16:10.236267+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 1,
+      "cycle_id": null,
+      "event": "image_imported",
+      "phase": "READY",
+      "sample_id": "upload_179ff21a9d65e9e6371c6383",
+      "sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+      "accuracy_prevalidated": false
+    },
+    {
+      "utc": "2026-10-25T15:16:10.276281+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 2,
+      "cycle_id": "f6363955f5ea493691db03b474a63ec5",
+      "event": "input_frozen",
+      "phase": "STOPPED",
+      "physical_motion_verified": false,
+      "source_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    },
+    {
+      "utc": "2026-10-25T15:16:10.334194+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 3,
+      "cycle_id": "f6363955f5ea493691db03b474a63ec5",
+      "event": "inspection_started",
+      "phase": "INSPECTING",
+      "cpu_detection": false,
+      "gpu_detection": false
+    },
+    {
+      "utc": "2026-10-25T15:16:11.294042+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 4,
+      "cycle_id": "f6363955f5ea493691db03b474a63ec5",
+      "event": "inspection_completed",
+      "phase": "REVIEW_HOLD",
+      "result_id": "d8da1322548b419491ed09308e9c1f87",
+      "pl_image_alarm": 0,
+      "result_sha256": "f57545d1977b1e4f60da34c7688aefbcec4e9a98cb659a8e75c6b4c9c53b3ae7",
+      "result_qualified_for_demo_workflow": false,
+      "boot_identity": 3579349851,
+      "frame_sequence": 1120
+    },
+    {
+      "utc": "2026-10-25T15:16:11.948843+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 5,
+      "cycle_id": "f6363955f5ea493691db03b474a63ec5",
+      "event": "disposition_requested",
+      "phase": "CONFIRMING",
+      "disposition": "remove_unvalidated"
+    },
+    {
+      "utc": "2026-10-25T15:16:11.953851+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 6,
+      "cycle_id": "f6363955f5ea493691db03b474a63ec5",
+      "event": "logical_disposition_confirmed",
+      "phase": "REMOVED",
+      "command": "remove_unvalidated",
+      "physical_actuation_verified": false
+    },
+    {
+      "utc": "2026-10-25T15:16:12.037902+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 7,
+      "cycle_id": "aa79833bfddf489e96d5b19311640d97",
+      "event": "input_frozen",
+      "phase": "STOPPED",
+      "physical_motion_verified": false,
+      "source_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    },
+    {
+      "utc": "2026-10-25T15:16:12.096984+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 8,
+      "cycle_id": "aa79833bfddf489e96d5b19311640d97",
+      "event": "inspection_started",
+      "phase": "INSPECTING",
+      "cpu_detection": false,
+      "gpu_detection": false
+    },
+    {
+      "utc": "2026-10-25T15:16:13.100998+00:00",
+      "session": "4c54273048df4c0d9a8b1aa69340d56c",
+      "revision": 9,
+      "cycle_id": "aa79833bfddf489e96d5b19311640d97",
+      "event": "inspection_completed",
+      "phase": "GOOD_HOLD",
+      "result_id": "39e24586fb0d4193acc3fd9849022cb9",
+      "pl_image_alarm": 0,
+      "result_sha256": "4f76461c77dc7d5620391020b1d87d00bc1230d92f023df490f37501a5743459",
+      "result_qualified_for_demo_workflow": true,
+      "boot_identity": 3579349851,
+      "frame_sequence": 1121
+    }
+  ],
+  "transport": "TCP original-photo input",
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "physical_actuator_connected": false,
+  "physical_tile_present": false,
+  "stop_requested": true,
+  "logical_release_requested": false,
+  "physical_actuation_verified": false,
+  "mask_is_precise_crack_trace": false
+}

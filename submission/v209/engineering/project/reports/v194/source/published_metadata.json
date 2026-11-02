@@ -1,0 +1,153 @@
+{
+  "archive": {
+    "data": {
+      "status": "PENDING"
+    },
+    "error": null,
+    "loading": false
+  },
+  "articles": {
+    "list": [],
+    "loading": true
+  },
+  "citations": {
+    "data": {},
+    "count": 0,
+    "error": false,
+    "loading": true
+  },
+  "configClient": {
+    "environment": "live",
+    "recaptchaV3SiteKey": "6LcEHc8ZAAAAAMenhT9jO_B-EJAoGq_v29B7HaCf",
+    "adobeAnalytics": {
+      "newPage": {
+        "page": {
+          "businessUnit": "els:rp:st",
+          "language": "en",
+          "productName": "md",
+          "environment": "dev",
+          "noTracking": "false",
+          "sectionName": "md:data",
+          "type": "cp-ca"
+        },
+        "content": {
+          "type": "md:datasets",
+          "format": "MIME-HTML"
+        }
+      }
+    },
+    "apiBaseUrl": "/api/datasets-v2",
+    "publicApiBaseUrl": "/public-api",
+    "baseUrl": "/datasets",
+    "baseAssetsUrl": "/datasets"
+  },
+  "customer": {
+    "customer": null,
+    "institution": null
+  },
+  "dataset": {
+    "snapshot": {
+      "id": "47x6jdbr5j",
+      "version": 1,
+      "name": "ceramics-defects-detection",
+      "description": "The dataset used in this study comprises 1,600 RGB images of ceramic tiles, each with a resolution of 4,096 \u00d7 3,072 pixels. The images are divided into two categories: normal (800 samples) and defective (800 samples). Normal tiles meet quality standards without visible imperfections, whereas defective tiles present flaws such as cracks or deformations.\n\nNote: The images were collected from a limited number of physical samples. Therefore, while the total number of images is 1,600, the variability may be restricted. Users should consider this limitation when using the dataset for training or evaluation purposes.\n\nThe original dataset is stored in the folder database/amostra/. For model training, the dataset was split into training (80%) and test (20%) sets, resulting in 1,280 images for training and 320 for testing, with balanced class distributions.\n\nTo enhance model generalization and reduce overfitting, data augmentation was applied using the Albumentations library. Transformations included horizontal and vertical flips, rotations, shifts, scaling, brightness/contrast adjustments, gamma correction, and adaptive histogram equalization (CLAHE), applied with controlled probabilities to preserve structural features.\n\nAfter augmentation, the training set was expanded fivefold, totaling 7,000 images. The augmented dataset is stored in the folder database/amostra_processada/, providing increased variability for robust model training.\n",
+      "doi": "10.17632/47x6jdbr5j.1",
+      "publish_date": "2025-08-18T22:04:47.615Z",
+      "last_modification_date": "2025-08-18T20:28:54.242Z",
+      "is_confidential": false,
+      "customer": {
+        "id": "7377952c-6404-4428-bbfc-77242cfc301e",
+        "name": "Mendeley Guests",
+        "chief_id": 810289,
+        "config": {
+          "repository_id": "MENDELEY_DATA",
+          "dataset_size_limit": 10737418240,
+          "doi_prefix": "10.17632"
+        },
+        "is_user_mendeley_admin": false,
+        "customer_roles": [],
+        "is_guest": true,
+        "is_user_customer_moderator": false
+      },
+      "owner": {
+        "id": "757ded2f-a38d-4a5b-ac46-28c902a5e1da",
+        "first_name": "Micherlane",
+        "last_name": "Rodrigues Machado da Silva",
+        "display_name": "Micherlane Rodrigues Machado da Silva",
+        "$ref": "/profiles/757ded2f-a38d-4a5b-ac46-28c902a5e1da"
+      },
+      "categories": [
+        {
+          "id": "data.elsevier.com/vocabulary/OmniScience/Concept-253136491",
+          "label": "Engineering Material"
+        }
+      ],
+      "licence": {
+        "id": "01d9c749-3c4d-4431-9df3-620b2dcfe144",
+        "short_name": "CC BY 4.0",
+        "full_name": "Creative Commons Attribution 4.0 International",
+        "description": "You can share, copy and modify this dataset so long as you give appropriate credit, provide a link to the CC BY license, and indicate if changes were made, but you may not do so in a way that suggests the rights holder has endorsed you or your use of the dataset. Note that further permission may be required for any content within the dataset that is identified as belonging to a third party.",
+        "url": "http://creativecommons.org/licenses/by/4.0",
+        "category": "Creative",
+        "customer_id": null
+      },
+      "institutions": [],
+      "funders": [],
+      "organisational_unit_names": [],
+      "contributors": [
+        {
+          "first_name": "Lucileide",
+          "last_name": "Aquino do Nascimento"
+        },
+        {
+          "id": "dab8634e-be60-3b6c-8a24-8a3d6ad74af9",
+          "first_name": "Otilio",
+          "last_name": "Paulo",
+          "$ref": "/profiles/dab8634e-be60-3b6c-8a24-8a3d6ad74af9"
+        },
+        {
+          "first_name": "Gilvan",
+          "last_name": " Moreira da Paz"
+        },
+        {
+          "id": "757ded2f-a38d-4a5b-ac46-28c902a5e1da",
+          "first_name": "Micherlane",
+          "last_name": "Rodrigues Machado da Silva",
+          "$ref": "/profiles/757ded2f-a38d-4a5b-ac46-28c902a5e1da"
+        }
+      ],
+      "related_links": [],
+      "custom_metadata": {},
+      "is_metadata_only": false
+    },
+    "contributors": [],
+    "doi": "",
+    "status": 200,
+    "loading": false
+  },
+  "environment": "live",
+  "files": {
+    "list": [],
+    "currentFile": {},
+    "folders": [],
+    "currentFolder": {},
+    "filesLoading": true,
+    "foldersLoading": true
+  },
+  "fileViewer": {
+    "navigationLoaded": false,
+    "metadataLoaded": false
+  },
+  "hostname": "data.mendeley.com",
+  "idToken": null,
+  "orcidDomain": "https://orcid.org",
+  "repository": {
+    "repository": null,
+    "loading": true
+  },
+  "s3": "https://static.data.mendeley.com",
+  "versions": {
+    "list": [],
+    "loading": true
+  }
+}

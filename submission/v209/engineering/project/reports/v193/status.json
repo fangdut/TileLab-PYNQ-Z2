@@ -1,0 +1,105 @@
+{
+  "scope": "V193_STOP_INSPECT_OPERATOR_WORKSTATION_DEVELOPMENT_MILESTONE",
+  "status": "PHYSICAL_WORKFLOW_AND_BROWSER_VERIFIED",
+  "hardware": "V179/HLS62/100MHz",
+  "hardware_rebuilt": false,
+  "fpga_detection": true,
+  "pc_detection": false,
+  "gpu_detection": false,
+  "cpu_controls_workflow": true,
+  "arm_transport_running_in_this_mode": true,
+  "photo_input": "original PNG/JPEG over TCP",
+  "physical_actuator_connected": false,
+  "physical_motion_verified": false,
+  "physical_workflow": {
+    "scope": "PHYSICAL_FPGA_STOP_INSPECT_WORKFLOW_EXPOSED_DEMO",
+    "cycles": 12,
+    "correct": 12,
+    "normal_images": 2,
+    "normal_false_alarms": 0,
+    "defects_detected": 10,
+    "confirmed_good_releases": 2,
+    "confirmed_defect_segregations": 10,
+    "unsafe_actions_rejected": 34,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "pc_responsibilities": [
+      "original photo decode/transport",
+      "operator workflow",
+      "result display",
+      "audit logging"
+    ],
+    "physical_actuator_connected": false,
+    "physical_actuation_verified": false,
+    "benchmark_is_blind": false,
+    "speed_target_required_for_this_milestone": false,
+    "mean_engine_seconds": 0.12473588358974359,
+    "mean_transfer_and_detection_seconds": 0.5423479333330761
+  },
+  "browser_checks": {
+    "scope": "HEADLESS_EDGE_UI_WITH_REAL_FPGA",
+    "checks": [
+      "Actual FPGA good result requires operator confirmation before logical release",
+      "Actual FPGA crack result blocks good release and permits confirmed segregation",
+      "Local file upload preserves input and runs physical FPGA inference"
+    ],
+    "js_errors": [],
+    "viewport": [
+      1440,
+      1100
+    ],
+    "cycles": 3,
+    "physical_actuation_verified": false
+  },
+  "software_interlock_tests": 10,
+  "benchmark_is_blind": false,
+  "ten_fps_required_for_current_milestone": false,
+  "priority": "stable stop-inspect-confirm workflow, independent accuracy validation, competition materials",
+  "preserved_hdmi_pipeline": true,
+  "prior_hdmi_sustained_fps": 8.171369032480372,
+  "limitations": [
+    "No physical conveyor/standstill sensor/actuator feedback",
+    "Exposed demonstration photos, not independent blind accuracy",
+    "Coarse anomaly mask, not precise crack tracing",
+    "Arbitrary painted/mixed materials unvalidated",
+    "Signed authorization and physical system photos pending"
+  ],
+  "packaged_volatile_deployment_verified": true,
+  "packaged_workflow": {
+    "scope": "PHYSICAL_FPGA_STOP_INSPECT_WORKFLOW_EXPOSED_DEMO",
+    "cycles": 12,
+    "correct": 12,
+    "normal_images": 2,
+    "normal_false_alarms": 0,
+    "defects_detected": 10,
+    "confirmed_good_releases": 2,
+    "confirmed_defect_segregations": 10,
+    "unsafe_actions_rejected": 34,
+    "cpu_detection": false,
+    "gpu_detection": false,
+    "pc_responsibilities": [
+      "original photo decode/transport",
+      "operator workflow",
+      "result display",
+      "audit logging"
+    ],
+    "physical_actuator_connected": false,
+    "physical_actuation_verified": false,
+    "benchmark_is_blind": false,
+    "speed_target_required_for_this_milestone": false,
+    "mean_engine_seconds": 0.12471659641025641,
+    "mean_transfer_and_detection_seconds": 0.5491035250088316
+  },
+  "package": {
+    "package": "D:\\Vivado\\TileLab_SingleTile_V164_20261019\\deliverables\\TileLab_StopInspect_V193_Dev_R1.zip",
+    "bytes": 32535378,
+    "sha256": "6033f2d1ccc2d2a14967f1795e5fff9629d2a1db6c2b545c441ef6afb7b1ada4",
+    "files": 319,
+    "all_archive_files_verified": true,
+    "offline_deployment_guards_passed": true,
+    "fresh_volatile_deployment_verified": true,
+    "cold_power_cycle_tested": false,
+    "physical_workflow_acceptance": "reports/v193",
+    "competition_submission": false
+  }
+}

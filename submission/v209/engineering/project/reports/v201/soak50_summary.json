@@ -1,0 +1,36 @@
+{
+  "scope": "PHYSICAL_FPGA_FULL_LOGICAL_CLOSED_LOOP_SOAK_NOT_INDEPENDENT_ACCURACY_OR_PHYSICAL_ACTUATION",
+  "passed": true,
+  "requested_cycles": 100,
+  "completed_cycles": 100,
+  "elapsed_seconds": 133.13407650002046,
+  "error": null,
+  "serial_errors": [],
+  "review_hold_seconds": 0.25,
+  "extra_intercycle_pause_seconds": 0,
+  "real_human_review": false,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "automatic_recovery": false,
+  "inspection_retries": 0,
+  "pl_seconds": {
+    "mean": 0.24358392618461538,
+    "maximum": 0.24363089538461538,
+    "p95": 0.2436230153846154
+  },
+  "transfer_detection_seconds": {
+    "mean": 0.6203419289988232,
+    "maximum": 0.6359456999925897,
+    "p95": 0.6346302999882028
+  },
+  "cycle_seconds": {
+    "mean": 1.3267667329969117,
+    "maximum": 1.9760093999793753,
+    "p95": 1.3947454000008292
+  },
+  "boot_identity": 611307163,
+  "released": 50,
+  "segregated": 50,
+  "consecutive_frames": true,
+  "repeated_payloads_identical": true
+}

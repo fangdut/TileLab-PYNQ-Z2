@@ -1,0 +1,33 @@
+{
+  "scope": "PHYSICAL_TWO_REFERENCE_CLOSED_LOOP_REPLAY_NOT_INDEPENDENT_ACCURACY",
+  "physical_inferences": 22,
+  "controls_rejected": 38,
+  "certificates_created": 4,
+  "profile_switches_without_new_bitstream": true,
+  "external_profile_change_blocked_release": true,
+  "conflict_blocked_release": true,
+  "legacy_qualification_never_bypassed_review": true,
+  "real_human_review": false,
+  "physical_camera_calibration": false,
+  "physical_actuation": false,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "final_material": "texture",
+  "final_calibrated": true,
+  "counts": {
+    "inspected": 22,
+    "good": 0,
+    "defect": 0,
+    "released": 2,
+    "segregated": 2,
+    "faults": 1,
+    "unvalidated": 6,
+    "unvalidated_removed": 1,
+    "calibration_samples": 16,
+    "calibration_failed": 0,
+    "manual_reviews": 22,
+    "conflicts": 1
+  },
+  "audit_rows": 22,
+  "csv_sha256": "8126350b54bdbe6fd03218da8a150da54280b4b5316ce863331781af394625a7"
+}

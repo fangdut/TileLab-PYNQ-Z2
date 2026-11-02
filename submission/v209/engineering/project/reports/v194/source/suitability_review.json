@@ -1,0 +1,22 @@
+{
+  "source": "10.17632/47x6jdbr5j.1",
+  "actual_visual_scope": "Complete ceramic ROOF tiles with background; not floor-tile closeups",
+  "original_count": 40,
+  "original_images_hash_disjoint_from_prior347": true,
+  "physical_specimen_independence": false,
+  "explanation": "Authors explicitly note limited physical samples; file-disjoint is not specimen-disjoint",
+  "candidate_sources_excluded": [
+    {
+      "source": "gerivansantos/ceramic-cracks-dataset",
+      "reason": "Facade/wall mosaics, mainly cracked samples; no suitable normal-image FP evaluation"
+    },
+    {
+      "source": "riffatsiddiqui/ceramic-tiles-defects-crackspotspinhole",
+      "reason": "Downloaded candidate sample is a binary crack mask, no normal class and Unknown license; not treated as new real-photo accuracy evidence"
+    },
+    {
+      "source": "spencerworkspace/ceramic-tile-surface-defects",
+      "reason": "Automated access blocked by security verification; no bypass or inferred dataset result"
+    }
+  ]
+}

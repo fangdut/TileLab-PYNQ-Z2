@@ -1,0 +1,35 @@
+{
+  "cases": 80,
+  "groups": {
+    "exposed_regression": {
+      "cases": 40,
+      "tp": 20,
+      "fp": 0,
+      "tn": 20,
+      "fn": 0,
+      "accuracy": 1.0,
+      "normal_false_positive_rate": 0.0,
+      "defect_recall": 1.0
+    },
+    "new_test": {
+      "cases": 40,
+      "tp": 20,
+      "fp": 1,
+      "tn": 19,
+      "fn": 0,
+      "accuracy": 0.975,
+      "normal_false_positive_rate": 0.05,
+      "defect_recall": 1.0
+    }
+  },
+  "all_scores_and_masks_exact": true,
+  "model_sha256": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+  "boot_identity": 241067747,
+  "mean_engine_seconds": 0.12222632696153846,
+  "wall_seconds": 47.39100000000326,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "arm_transport_running": true,
+  "scope": "ROOF_CERAMIC_REFERENCE_TRANSFER_PILOT_NOT_FLOOR_ACCEPTANCE",
+  "accepted_for_automatic_release": false
+}

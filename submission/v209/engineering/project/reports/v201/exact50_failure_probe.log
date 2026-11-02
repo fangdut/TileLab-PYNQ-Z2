@@ -1,0 +1,63 @@
+attempting to launch hw_server
+
+****** Xilinx hw_server v2025.2
+  **** Build date : Oct 28 2025 at 10:03:13
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+****** Xilinx hw_server v2025.2
+
+  **** Build date : Oct 28 2025 at 10:03:13
+
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+INFO: hw_server application started
+
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+
+INFO: To connect to this hw_server instance use url: TCP:127.0.0.1:3121
+
+
+
+INFO: [Hsi 55-2053] elapsed time for repository (D:/2025.2/Vitis/data/embeddedsw) loading 0 seconds
+READ 0xf8000200 0 0 0 0 0 0 0 0
+READ 0xf8000204 0 0 0 0 0 0 0 0
+READ 0xf8000244 0 0 0 0 0 4202506 5 0
+READ 0xf8000258 4202506 5 0 0 0 0 0 0
+READ 0xf8000600 0 0 0 0 0 0 0 0
+READ 0xf8007000 234938495 26 1288 2818703386 4294967295 1073744432 0 0
+READ 0xe000b000 0 524288 4 0 132996 0 0 0
+READ_ERROR 0x05f00000 Memory read error at 0x5F00000. Blocked address 0x05F00000. Cannot access DDR: the controller is held in reset
+r0 r0: f8007028
+
+r1 r1: ffffffff
+
+r2 r2: 0e00e07f
+
+r3 r3: f8007000
+
+sp sp: e5801000
+
+lr lr: ffffff20
+
+pc pc: ffffff28
+
+cpsr cpsr: 200001df
+       n (Bits [31]):  0      z (Bits [30]):  0      c (Bits [29]):  1
+       v (Bits [28]):  0      q (Bits [27]):  0  it (Bits [15:25]):  0
+       j (Bits [24]):  0  ge (Bits [19:16]):  0       e (Bits [9]):  0
+        a (Bits [8]):  1       i (Bits [7]):  1       f (Bits [6]):  1
+        t (Bits [5]):  0     m (Bits [4:0]): 1f
+

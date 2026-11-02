@@ -1,0 +1,25 @@
+{
+  "scope": "PHYSICAL_FPGA_STOP_INSPECT_WORKFLOW_EXPOSED_DEMO",
+  "cycles": 12,
+  "correct": 12,
+  "normal_images": 2,
+  "normal_false_alarms": 0,
+  "defects_detected": 10,
+  "confirmed_good_releases": 2,
+  "confirmed_defect_segregations": 10,
+  "unsafe_actions_rejected": 34,
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "pc_responsibilities": [
+    "original photo decode/transport",
+    "operator workflow",
+    "result display",
+    "audit logging"
+  ],
+  "physical_actuator_connected": false,
+  "physical_actuation_verified": false,
+  "benchmark_is_blind": false,
+  "speed_target_required_for_this_milestone": false,
+  "mean_engine_seconds": 0.12471682794871795,
+  "mean_transfer_and_detection_seconds": 0.6078567833319539
+}

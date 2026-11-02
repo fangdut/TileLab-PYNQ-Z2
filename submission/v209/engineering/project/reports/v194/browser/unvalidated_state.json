@@ -1,0 +1,365 @@
+{
+  "session": "f930bc09b61047699aa81498b4efbdaf",
+  "revision": 64,
+  "phase": "REVIEW_HOLD",
+  "cycle": {
+    "id": "af136050b0fb4a3bbc68eb88d6cd10f1",
+    "sample_id": "upload_179ff21a9d65e9e6371c6383",
+    "name": "本地导入 · 6621d769324f6e05d5838381.png",
+    "source_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+    "source_url": "",
+    "validation_scope": "unvalidated",
+    "qualified_model_sha256": null,
+    "loaded_utc": "2026-10-25T15:03:56.132746+00:00",
+    "result": {
+      "scope": "BOARD_FULL_PL_INFERENCE",
+      "input": "D:\\Vivado\\TileLab_RealPhotos_20261020\\v194_station01\\runtime\\cycles\\af136050b0fb4a3bbc68eb88d6cd10f1\\source.png",
+      "input_file_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+      "rgb_crc32": 2316138246,
+      "model_sha256": "1501e32e733b566e17d125613d0989c04291b658459d63b826e418f6f713ed65",
+      "model_crc32": 2781797194,
+      "pl_identity": 385875969,
+      "boot_identity": 3579349851,
+      "width": 840,
+      "height": 840,
+      "pl_image_alarm": 0,
+      "pl_peak": 9732.0,
+      "pl_threshold": 10908.0,
+      "pl_mask_pixels": 0,
+      "pl_completed_steps": 47,
+      "pl_frame_sequence": 1118,
+      "ps_global_timer_ticks": 40540111,
+      "ps_timer_hz": 325000000,
+      "pl_engine_seconds": 0.12473880307692307,
+      "wall_seconds": 0.541512399999192,
+      "result_crc32": 1984186530,
+      "result_sha256": "4c0ef5c7db84959e1b8646839bb62767f7169065f103ba919892bcca80a259b8",
+      "reply_header": [
+        378557016,
+        0,
+        39,
+        2825600,
+        1984186530,
+        385875969,
+        2781797194,
+        751760,
+        3579349851,
+        40540111,
+        0,
+        325000000,
+        2316138246,
+        840,
+        840,
+        2279184924
+      ],
+      "cpu_detection": false,
+      "gpu_detection": false,
+      "id": "ec4e611bcb944be5b6571cbc5f568823",
+      "completed_utc": "2026-10-25T15:03:56.996077+00:00"
+    },
+    "disposition": null,
+    "result_qualified": false
+  },
+  "error": null,
+  "connection": {
+    "verified_utc": "2026-10-25T15:02:38.709416+00:00",
+    "boot_identity": 3579349851,
+    "model_crc32": 2781797194,
+    "pl_identity": 385875969
+  },
+  "counts": {
+    "inspected": 13,
+    "good": 2,
+    "defect": 10,
+    "released": 2,
+    "segregated": 10,
+    "faults": 0,
+    "unvalidated": 1,
+    "unvalidated_removed": 0
+  },
+  "samples": [
+    {
+      "id": "6621d769324f6e05d5838381",
+      "name": "实拍样例 01",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-48.png",
+      "sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    },
+    {
+      "id": "6621d769324f6e05d5838380",
+      "name": "实拍样例 02",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-48.png",
+      "sha256": "770946f93f0ccd8a7595954b0861876c697729cbe05e9fafc57d0f9e8cba5ec8"
+    },
+    {
+      "id": "6621d769324f6e05d583835f",
+      "name": "实拍样例 03",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/000-46.png",
+      "sha256": "d10be1f6ec065f83d54c03b4093d7d87dfcc77617d8eb0df9f5a053aece4becf"
+    },
+    {
+      "id": "6621d769324f6e05d583835e",
+      "name": "实拍样例 04",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/001-46.png",
+      "sha256": "3800ee4d98148c859eb56bd5a9350ce6be768dc24fcd2203e3e36e3414defb5a"
+    },
+    {
+      "id": "6621d769324f6e05d58383b1",
+      "name": "实拍样例 05",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-50.png",
+      "sha256": "789bf3426655aed432ea611d9c62354d6a43d13efb0acaacd27a49de851e65f6"
+    },
+    {
+      "id": "6621d769324f6e05d58383b0",
+      "name": "实拍样例 06",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-50.png",
+      "sha256": "cb9bffe1fa32c62cec0afcf88fa17add4483b16fa2ce1b17bbd62256c576f0a3"
+    },
+    {
+      "id": "6621d769324f6e05d583839f",
+      "name": "实拍样例 07",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-49.png",
+      "sha256": "687ee96b4b356dfa87e49b78a807dcdf026f80705801d6e670578648c5d3bba2"
+    },
+    {
+      "id": "6621d769324f6e05d583839e",
+      "name": "实拍样例 08",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-49.png",
+      "sha256": "e6d931df7005c0e958ec4da16c606546d77e25e41e37f2b83f8135b74770ff26"
+    },
+    {
+      "id": "6621d769324f6e05d58383c3",
+      "name": "实拍样例 09",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/000-51.png",
+      "sha256": "cce758df17a18b3d60e54b367bec27639dd48d83cfee1f7546d80058188ba130"
+    },
+    {
+      "id": "6621d769324f6e05d58383c2",
+      "name": "实拍样例 10",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_24/001-51.png",
+      "sha256": "8d47f96cd4437c4848454bd60b46def1a7c470b5ee9e842891f02a346de744d2"
+    },
+    {
+      "id": "6621d769324f6e05d583836d",
+      "name": "实拍样例 11",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/001-47.png",
+      "sha256": "5508d71470f59e96183a8035fb90d63f050f3324e4884ef03f856528a4107d13"
+    },
+    {
+      "id": "6621d769324f6e05d583836b",
+      "name": "实拍样例 12",
+      "source_url": "https://huggingface.co/datasets/Voxel51/mvtec-ad/resolve/30a183a3b96e3aef953f230784b123b719b09d97/data/data_23/002-47.png",
+      "sha256": "92293a662b469d481fc6ee6c57e933b167affe61d82245f24ce0ff17c706bc86"
+    },
+    {
+      "id": "upload_179ff21a9d65e9e6371c6383",
+      "name": "本地导入 · 6621d769324f6e05d5838381.png",
+      "source_url": "",
+      "sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    }
+  ],
+  "events": [
+    {
+      "utc": "2026-10-25T15:02:35.652551+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 47,
+      "cycle_id": "67d0cf28b9b3413fa51ff53350a3333a",
+      "event": "inspection_started",
+      "phase": "INSPECTING",
+      "cpu_detection": false,
+      "gpu_detection": false
+    },
+    {
+      "utc": "2026-10-25T15:02:36.409094+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 48,
+      "cycle_id": "67d0cf28b9b3413fa51ff53350a3333a",
+      "event": "inspection_completed",
+      "phase": "DEFECT_HOLD",
+      "result_id": "9380453546ba4119b712ff4b27832f8b",
+      "pl_image_alarm": 1,
+      "result_sha256": "62d999150f701f2e8cdcb079fa582878d114d07a61b0a74906d59429885d4e9a",
+      "result_qualified_for_demo_workflow": true,
+      "boot_identity": 3579349851,
+      "frame_sequence": 1115
+    },
+    {
+      "utc": "2026-10-25T15:02:36.549052+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 49,
+      "cycle_id": "67d0cf28b9b3413fa51ff53350a3333a",
+      "event": "disposition_requested",
+      "phase": "CONFIRMING",
+      "disposition": "segregate"
+    },
+    {
+      "utc": "2026-10-25T15:02:36.565685+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 50,
+      "cycle_id": "67d0cf28b9b3413fa51ff53350a3333a",
+      "event": "logical_disposition_confirmed",
+      "phase": "SEGREGATED",
+      "command": "segregate",
+      "physical_actuation_verified": false
+    },
+    {
+      "utc": "2026-10-25T15:02:36.651600+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 51,
+      "cycle_id": "c4644bbd8107464c9ccda4db6cebd864",
+      "event": "input_frozen",
+      "phase": "STOPPED",
+      "physical_motion_verified": false,
+      "source_sha256": "5508d71470f59e96183a8035fb90d63f050f3324e4884ef03f856528a4107d13"
+    },
+    {
+      "utc": "2026-10-25T15:02:36.730078+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 52,
+      "cycle_id": "c4644bbd8107464c9ccda4db6cebd864",
+      "event": "inspection_started",
+      "phase": "INSPECTING",
+      "cpu_detection": false,
+      "gpu_detection": false
+    },
+    {
+      "utc": "2026-10-25T15:02:37.506198+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 53,
+      "cycle_id": "c4644bbd8107464c9ccda4db6cebd864",
+      "event": "inspection_completed",
+      "phase": "DEFECT_HOLD",
+      "result_id": "ecf7d7200ea7458488b9f998eebea2c6",
+      "pl_image_alarm": 1,
+      "result_sha256": "e858f4a705f273636e590fb6c0883da9c42aef08e121f3d2e6202872cd7ce70d",
+      "result_qualified_for_demo_workflow": true,
+      "boot_identity": 3579349851,
+      "frame_sequence": 1116
+    },
+    {
+      "utc": "2026-10-25T15:02:37.611452+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 54,
+      "cycle_id": "c4644bbd8107464c9ccda4db6cebd864",
+      "event": "disposition_requested",
+      "phase": "CONFIRMING",
+      "disposition": "segregate"
+    },
+    {
+      "utc": "2026-10-25T15:02:37.636150+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 55,
+      "cycle_id": "c4644bbd8107464c9ccda4db6cebd864",
+      "event": "logical_disposition_confirmed",
+      "phase": "SEGREGATED",
+      "command": "segregate",
+      "physical_actuation_verified": false
+    },
+    {
+      "utc": "2026-10-25T15:02:37.723121+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 56,
+      "cycle_id": "f68fbbcb4af549f68d04bfc9048b01b2",
+      "event": "input_frozen",
+      "phase": "STOPPED",
+      "physical_motion_verified": false,
+      "source_sha256": "92293a662b469d481fc6ee6c57e933b167affe61d82245f24ce0ff17c706bc86"
+    },
+    {
+      "utc": "2026-10-25T15:02:37.784443+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 57,
+      "cycle_id": "f68fbbcb4af549f68d04bfc9048b01b2",
+      "event": "inspection_started",
+      "phase": "INSPECTING",
+      "cpu_detection": false,
+      "gpu_detection": false
+    },
+    {
+      "utc": "2026-10-25T15:02:38.560472+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 58,
+      "cycle_id": "f68fbbcb4af549f68d04bfc9048b01b2",
+      "event": "inspection_completed",
+      "phase": "DEFECT_HOLD",
+      "result_id": "faec09d5fe6b4a3580def50243623e5d",
+      "pl_image_alarm": 1,
+      "result_sha256": "eb3704c8eb91bdc1acaef7a296fc3c13b7d9e68928de0fb49816a61f98609f74",
+      "result_qualified_for_demo_workflow": true,
+      "boot_identity": 3579349851,
+      "frame_sequence": 1117
+    },
+    {
+      "utc": "2026-10-25T15:02:38.707646+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 59,
+      "cycle_id": "f68fbbcb4af549f68d04bfc9048b01b2",
+      "event": "disposition_requested",
+      "phase": "CONFIRMING",
+      "disposition": "segregate"
+    },
+    {
+      "utc": "2026-10-25T15:02:38.709416+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 60,
+      "cycle_id": "f68fbbcb4af549f68d04bfc9048b01b2",
+      "event": "logical_disposition_confirmed",
+      "phase": "SEGREGATED",
+      "command": "segregate",
+      "physical_actuation_verified": false
+    },
+    {
+      "utc": "2026-10-25T15:03:56.083198+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 61,
+      "cycle_id": "f68fbbcb4af549f68d04bfc9048b01b2",
+      "event": "image_imported",
+      "phase": "SEGREGATED",
+      "sample_id": "upload_179ff21a9d65e9e6371c6383",
+      "sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781",
+      "accuracy_prevalidated": false
+    },
+    {
+      "utc": "2026-10-25T15:03:56.132746+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 62,
+      "cycle_id": "af136050b0fb4a3bbc68eb88d6cd10f1",
+      "event": "input_frozen",
+      "phase": "STOPPED",
+      "physical_motion_verified": false,
+      "source_sha256": "179ff21a9d65e9e6371c6383ffa970adfa04502725a3c4d654e08d8377c0b781"
+    },
+    {
+      "utc": "2026-10-25T15:03:56.192058+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 63,
+      "cycle_id": "af136050b0fb4a3bbc68eb88d6cd10f1",
+      "event": "inspection_started",
+      "phase": "INSPECTING",
+      "cpu_detection": false,
+      "gpu_detection": false
+    },
+    {
+      "utc": "2026-10-25T15:03:56.996077+00:00",
+      "session": "f930bc09b61047699aa81498b4efbdaf",
+      "revision": 64,
+      "cycle_id": "af136050b0fb4a3bbc68eb88d6cd10f1",
+      "event": "inspection_completed",
+      "phase": "REVIEW_HOLD",
+      "result_id": "ec4e611bcb944be5b6571cbc5f568823",
+      "pl_image_alarm": 0,
+      "result_sha256": "4c0ef5c7db84959e1b8646839bb62767f7169065f103ba919892bcca80a259b8",
+      "result_qualified_for_demo_workflow": false,
+      "boot_identity": 3579349851,
+      "frame_sequence": 1118
+    }
+  ],
+  "transport": "TCP original-photo input",
+  "cpu_detection": false,
+  "gpu_detection": false,
+  "physical_actuator_connected": false,
+  "physical_tile_present": false,
+  "stop_requested": true,
+  "logical_release_requested": false,
+  "physical_actuation_verified": false,
+  "mask_is_precise_crack_trace": false
+}

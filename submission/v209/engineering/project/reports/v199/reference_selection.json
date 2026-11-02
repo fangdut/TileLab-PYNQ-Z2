@@ -1,0 +1,14 @@
+{
+  "scope": "FROZEN_REFERENCE_SELECTION_BEFORE_RESERVED_FINAL_SCORING",
+  "selected_model_sha256": "0b54cea7f92572b31ae0667c74e3f29a3efef4a4fca2ec4fa50be71567fab485",
+  "selected_threshold": 13365,
+  "selection_basis": "preexisting normal-only reference bank correctly classified the24 diagnostic photos; no new CNN training",
+  "rejected_candidate_sha256": "3ae37081e6a6f4eb74fb9eb827c09335063ac75f028e38440e80ef9bcf3a203c",
+  "rejected_threshold": 22207,
+  "rejected_reason": "11 of12 diagnostic defects missed after raising threshold to cover one extreme normal calibration image",
+  "reserved_final_images": 40,
+  "reserved_final_scoring_started": false,
+  "physical_specimen_independence": false,
+  "floor_tile_or_painted_material_qualification": false,
+  "generic_station_default_changed": false
+}

@@ -1,0 +1,648 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Thu Oct 22 13:21:15 2026
+| Host         : LAPTOP-UOC8IVHM running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -file D:/Vivado/TileLab_RealPhotos_20261020/v179_hw01/bus_skew.rpt
+| Design       : system_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   146       [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             10.000       1.206      8.794
+2   148       [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             10.000       1.245      8.755
+3   154       [get_cells [list {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[0]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[10]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[11]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[12]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[13]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[14]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[15]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[16]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[17]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[18]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[19]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[1]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[20]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[21]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[22]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[23]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[24]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[25]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[26]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[27]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[28]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[29]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[2]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[30]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[31]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[32]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[33]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[34]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[35]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[36]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[37]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[38]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[39]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[3]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[40]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[41]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[42]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[43]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[44]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[45]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[46]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[47]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[48]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[49]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[4]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[50]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[51]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[52]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[53]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[5]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[6]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[7]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[8]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[9]}]]
+                                              [get_cells [list {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[0]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[10]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[11]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[12]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[13]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[14]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[15]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[16]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[17]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[18]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[19]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[1]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[20]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[21]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[22]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[23]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[24]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[25]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[26]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[27]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[28]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[29]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[2]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[30]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[31]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[32]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[33]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[34]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[35]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[36]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[37]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[38]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[39]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[3]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[40]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[41]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[42]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[43]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[44]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[45]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[46]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[47]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[48]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[49]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[4]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[50]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[51]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[52]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[53]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[5]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[6]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[7]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[8]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[9]}]]
+                                                                              Slow             40.404       1.826     38.578
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 11
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_fpga_0            PixelClk_int          system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+                                                                                                            Slow         1.206      8.794
+
+
+Slack (MET) :             8.794ns  (requirement - actual skew)
+  Endpoint Source:        system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Endpoint Destination:   system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                            (rising edge-triggered cell FDRE clocked by PixelClk_int)
+  Reference Source:       system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Reference Destination:  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+                            (rising edge-triggered cell FDRE clocked by PixelClk_int)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:   -1.767ns
+  Reference Relative Delay:  -3.801ns
+  Relative CRPR:              0.829ns
+  Actual Bus Skew:            1.206ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=64529, routed)       1.755     3.049    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X17Y7          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y7          FDRE (Prop_fdre_C_Q)         0.419     3.468 r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           1.027     4.495    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
+    SLICE_X25Y3          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock PixelClk_int rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  hdmi_in_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    system_i/hdmi_rx/U0/TMDS_ClockingX/TMDS_Clk_p
+    N18                  IBUFDS (Prop_ibufds_I_O)     0.887     0.887 r  system_i/hdmi_rx/U0/TMDS_ClockingX/InputBuffer/O
+                         net (fo=1, routed)           1.162     2.049    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_IN_hdmi_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.084     2.133 r  system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0
+                         net (fo=2, routed)           0.960     3.093    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk
+    BUFR_X1Y5            BUFR (Prop_bufr_I_O)         0.918     4.011 r  system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O
+                         net (fo=365, routed)         0.858     4.869    system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG_0
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091     4.960 r  system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O
+                         net (fo=777, routed)         1.572     6.532    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X25Y3          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.000     6.532    
+    SLICE_X25Y3          FDRE (Setup_fdre_C_D)       -0.270     6.262    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+  -------------------------------------------------------------------
+                         data arrival                           4.495    
+                         clock arrival                          6.262    
+  -------------------------------------------------------------------
+                         relative delay                        -1.767    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=64529, routed)       1.573     2.752    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X26Y0          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X26Y0          FDRE (Prop_fdre_C_Q)         0.418     3.170 r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[8]/Q
+                         net (fo=1, routed)           0.391     3.561    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[8]
+    SLICE_X31Y0          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock PixelClk_int rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  hdmi_in_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    system_i/hdmi_rx/U0/TMDS_ClockingX/TMDS_Clk_p
+    N18                  IBUFDS (Prop_ibufds_I_O)     0.930     0.930 r  system_i/hdmi_rx/U0/TMDS_ClockingX/InputBuffer/O
+                         net (fo=1, routed)           1.285     2.215    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_IN_hdmi_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.089     2.304 r  system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0
+                         net (fo=2, routed)           1.063     3.367    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk
+    BUFR_X1Y5            BUFR (Prop_bufr_I_O)         1.031     4.398 r  system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O
+                         net (fo=365, routed)         0.945     5.343    system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG_0
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     5.444 r  system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O
+                         net (fo=777, routed)         1.748     7.192    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X31Y0          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]/C
+                         clock pessimism              0.000     7.192    
+    SLICE_X31Y0          FDRE (Hold_fdre_C_D)         0.170     7.362    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]
+  -------------------------------------------------------------------
+                         data arrival                           3.561    
+                         clock arrival                          7.362    
+  -------------------------------------------------------------------
+                         relative delay                        -3.801    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 11
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+PixelClk_int          clk_fpga_0            system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                                                                                                            Slow         1.245      8.755
+
+
+Slack (MET) :             8.755ns  (requirement - actual skew)
+  Endpoint Source:        system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by PixelClk_int)
+  Endpoint Destination:   system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Reference Source:       system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by PixelClk_int)
+  Reference Destination:  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    6.244ns
+  Reference Relative Delay:   4.171ns
+  Relative CRPR:              0.829ns
+  Actual Bus Skew:            1.245ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock PixelClk_int rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  hdmi_in_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    system_i/hdmi_rx/U0/TMDS_ClockingX/TMDS_Clk_p
+    N18                  IBUFDS (Prop_ibufds_I_O)     0.930     0.930 r  system_i/hdmi_rx/U0/TMDS_ClockingX/InputBuffer/O
+                         net (fo=1, routed)           1.285     2.215    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_IN_hdmi_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.089     2.304 r  system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0
+                         net (fo=2, routed)           1.063     3.367    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk
+    BUFR_X1Y5            BUFR (Prop_bufr_I_O)         1.031     4.398 r  system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O
+                         net (fo=365, routed)         0.945     5.343    system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG_0
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     5.444 r  system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O
+                         net (fo=777, routed)         1.749     7.193    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X25Y3          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X25Y3          FDRE (Prop_fdre_C_Q)         0.419     7.612 r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           1.163     8.775    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
+    SLICE_X14Y1          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=64529, routed)       1.581     2.760    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X14Y1          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.000     2.760    
+    SLICE_X14Y1          FDRE (Setup_fdre_C_D)       -0.229     2.531    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+  -------------------------------------------------------------------
+                         data arrival                           8.775    
+                         clock arrival                          2.531    
+  -------------------------------------------------------------------
+                         relative delay                         6.244    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock PixelClk_int rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  hdmi_in_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    system_i/hdmi_rx/U0/TMDS_ClockingX/TMDS_Clk_p
+    N18                  IBUFDS (Prop_ibufds_I_O)     0.887     0.887 r  system_i/hdmi_rx/U0/TMDS_ClockingX/InputBuffer/O
+                         net (fo=1, routed)           1.162     2.049    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_IN_hdmi_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.084     2.133 r  system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0
+                         net (fo=2, routed)           0.960     3.093    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk
+    BUFR_X1Y5            BUFR (Prop_bufr_I_O)         0.918     4.011 r  system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O
+                         net (fo=365, routed)         0.858     4.869    system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG_0
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091     4.960 r  system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O
+                         net (fo=777, routed)         1.495     6.455    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X37Y4          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y4          FDRE (Prop_fdre_C_Q)         0.337     6.792 r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[7]/Q
+                         net (fo=1, routed)           0.434     7.227    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[7]
+    SLICE_X36Y2          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=64529, routed)       1.670     2.964    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X36Y2          FDRE                                         r  system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/C
+                         clock pessimism              0.000     2.964    
+    SLICE_X36Y2          FDRE (Hold_fdre_C_D)         0.092     3.056    system_i/pipeline/inst/capture/fifo/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]
+  -------------------------------------------------------------------
+                         data arrival                           7.227    
+                         clock arrival                          3.056    
+  -------------------------------------------------------------------
+                         relative delay                         4.171    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells [list {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[0]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[10]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[11]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[12]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[13]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[14]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[15]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[16]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[17]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[18]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[19]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[1]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[20]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[21]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[22]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[23]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[24]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[25]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[26]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[27]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[28]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[29]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[2]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[30]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[31]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[32]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[33]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[34]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[35]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[36]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[37]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[38]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[39]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[3]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[40]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[41]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[42]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[43]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[44]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[45]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[46]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[47]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[48]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[49]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[4]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[50]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[51]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[52]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[53]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[5]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[6]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[7]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[8]} \
+          {system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[9]}]] -to [get_cells [list {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[0]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[10]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[11]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[12]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[13]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[14]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[15]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[16]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[17]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[18]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[19]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[1]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[20]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[21]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[22]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[23]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[24]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[25]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[26]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[27]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[28]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[29]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[2]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[30]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[31]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[32]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[33]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[34]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[35]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[36]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[37]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[38]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[39]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[3]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[40]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[41]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[42]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[43]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[44]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[45]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[46]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[47]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[48]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[49]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[4]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[50]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[51]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[52]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[53]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[5]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[6]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[7]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[8]} \
+          {system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[9]}]] 40.404
+Requirement: 40.404ns
+Endpoints: 54
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_fpga_0            PixelClk_int          system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[14]/D
+                                                                            system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[21]/D
+                                                                                                            Slow         1.826     38.578
+
+
+Slack (MET) :             38.578ns  (requirement - actual skew)
+  Endpoint Source:        system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Endpoint Destination:   system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by PixelClk_int)
+  Reference Source:       system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[21]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0)
+  Reference Destination:  system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[21]/D
+                            (rising edge-triggered cell FDRE clocked by PixelClk_int)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            40.404ns
+  Endpoint Relative Delay:   -1.243ns
+  Reference Relative Delay:  -3.797ns
+  Relative CRPR:              0.728ns
+  Actual Bus Skew:            1.826ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=64529, routed)       1.831     3.125    system_i/pipeline/inst/color/config_bridge/src_clk
+    SLICE_X52Y104        FDRE                                         r  system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y104        FDRE (Prop_fdre_C_Q)         0.456     3.581 r  system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[14]/Q
+                         net (fo=1, routed)           1.564     5.145    system_i/pipeline/inst/color/config_bridge/src_hsdata_ff[14]
+    SLICE_X55Y99         FDRE                                         r  system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock PixelClk_int rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  hdmi_in_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    system_i/hdmi_rx/U0/TMDS_ClockingX/TMDS_Clk_p
+    N18                  IBUFDS (Prop_ibufds_I_O)     0.887     0.887 r  system_i/hdmi_rx/U0/TMDS_ClockingX/InputBuffer/O
+                         net (fo=1, routed)           1.162     2.049    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_IN_hdmi_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.084     2.133 r  system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0
+                         net (fo=2, routed)           0.960     3.093    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk
+    BUFR_X1Y5            BUFR (Prop_bufr_I_O)         0.918     4.011 r  system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O
+                         net (fo=365, routed)         0.858     4.869    system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG_0
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.091     4.960 r  system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O
+                         net (fo=777, routed)         1.537     6.496    system_i/pipeline/inst/color/config_bridge/dest_clk
+    SLICE_X55Y99         FDRE                                         r  system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[14]/C
+                         clock pessimism              0.000     6.496    
+    SLICE_X55Y99         FDRE (Setup_fdre_C_D)       -0.109     6.387    system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[14]
+  -------------------------------------------------------------------
+                         data arrival                           5.145    
+                         clock arrival                          6.387    
+  -------------------------------------------------------------------
+                         relative delay                        -1.243    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=64529, routed)       1.475     2.654    system_i/pipeline/inst/color/config_bridge/src_clk
+    SLICE_X47Y88         FDRE                                         r  system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X47Y88         FDRE (Prop_fdre_C_Q)         0.367     3.021 r  system_i/pipeline/inst/color/config_bridge/src_hsdata_ff_reg[21]/Q
+                         net (fo=1, routed)           0.494     3.515    system_i/pipeline/inst/color/config_bridge/src_hsdata_ff[21]
+    SLICE_X50Y88         FDRE                                         r  system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock PixelClk_int rise edge)
+                                                      0.000     0.000 r  
+    N18                                               0.000     0.000 r  hdmi_in_clk_p (IN)
+                         net (fo=0)                   0.000     0.000    system_i/hdmi_rx/U0/TMDS_ClockingX/TMDS_Clk_p
+    N18                  IBUFDS (Prop_ibufds_I_O)     0.930     0.930 r  system_i/hdmi_rx/U0/TMDS_ClockingX/InputBuffer/O
+                         net (fo=1, routed)           1.285     2.215    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_IN_hdmi_clk
+    MMCME2_ADV_X1Y1      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.089     2.304 r  system_i/hdmi_rx/U0/TMDS_ClockingX/DVI_ClkGenerator/CLKOUT0
+                         net (fo=2, routed)           1.063     3.367    system_i/hdmi_rx/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk
+    BUFR_X1Y5            BUFR (Prop_bufr_I_O)         1.031     4.398 r  system_i/hdmi_rx/U0/TMDS_ClockingX/PixelClkBuffer/O
+                         net (fo=365, routed)         0.945     5.343    system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG_0
+    BUFGCTRL_X0Y18       BUFG (Prop_bufg_I_O)         0.101     5.444 r  system_i/hdmi_rx/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG/O
+                         net (fo=777, routed)         1.636     7.080    system_i/pipeline/inst/color/config_bridge/dest_clk
+    SLICE_X50Y88         FDRE                                         r  system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[21]/C
+                         clock pessimism              0.000     7.080    
+    SLICE_X50Y88         FDRE (Hold_fdre_C_D)         0.231     7.311    system_i/pipeline/inst/color/config_bridge/dest_hsdata_ff_reg[21]
+  -------------------------------------------------------------------
+                         data arrival                           3.515    
+                         clock arrival                          7.311    
+  -------------------------------------------------------------------
+                         relative delay                        -3.797    
+
+
+
