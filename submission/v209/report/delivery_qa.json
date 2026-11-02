@@ -17,9 +17,13 @@
   "skill_reuse_checks": 11,
   "skill_reuse_passed": 11,
   "report_pages": 15,
-  "report_visual_qa": "pages1-11 PNG-identical to reviewed prior; pages12-15 visually inspected",
+  "report_visual_qa": "Participant-supplied final reports copied byte-for-byte on 2026-11-03; content and layout not modified or re-reviewed in this operation.",
   "new_synthesis": false,
   "new_board_run": false,
   "cross_board_pynq_skill_verified": false,
-  "full_original_chat_export": false
+  "full_original_chat_export": false,
+  "report_sha256": "6b6cab74882493d9ccea772275210389b4161266194d738a45dff62947947048",
+  "pdf_sha256": "61256868fd895ca75c4fcd324b2c58f4c039b8efb86b40c664116987364c27bb",
+  "report_origin": "participant_desktop_final",
+  "report_copy_verification": "byte_exact_sha256_match"
 }

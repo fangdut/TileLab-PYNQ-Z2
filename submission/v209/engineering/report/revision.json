@@ -1,7 +1,7 @@
 {
   "scope": "V208_NET_INPUT_CONTINUOUS_CONVEYOR_REPORT",
   "base_sha256": "4e8790e031771c912fa1620893177b0c8fb3f62956c6b0f990f4e50afe5b2457",
-  "report_sha256": "98f01e4ad34d255925d598a2689347a2aee352f0e712783d1b87fd9aa1dc2fa3",
+  "report_sha256": "6b6cab74882493d9ccea772275210389b4161266194d738a45dff62947947048",
   "changed_parts": [
     "[Content_Types].xml",
     "word/_rels/document.xml.rels",
@@ -20,14 +20,16 @@
   "firmware_changed": false,
   "participant_video_recorded_reported": true,
   "participant_media_file_received": true,
-  "pdf_sha256": "a55dfbe24bda86532eef6697f94548737b62bfe8109a206951dc117151317cdb",
-  "report_pages": 13,
-  "visual_qa": "13 photo-enriched pages reviewed; final captions reinspected; unchanged pages compared by PNG hashes",
+  "pdf_sha256": "61256868fd895ca75c4fcd324b2c58f4c039b8efb86b40c664116987364c27bb",
+  "report_pages": 15,
+  "visual_qa": "Participant-supplied final reports copied byte-for-byte on 2026-11-03; content and layout not modified or re-reviewed in this operation.",
   "render_method": "packaged render_docx rasterizer with native Word read-only PDF export fallback; LibreOffice unavailable",
   "equipment_photos_received": true,
   "participant_raw_video_located": true,
   "participant_final_video_edited": false,
   "participant_video_file_verified": false,
   "project_title": "多算子低延迟工业视觉检测系统",
-  "project_subtitle": "基于 FPGA 的瓷砖表面缺陷筛查系统"
+  "project_subtitle": "基于 FPGA 的瓷砖表面缺陷筛查系统",
+  "report_origin": "participant_desktop_final",
+  "report_copy_verification": "byte_exact_sha256_match"
 }
